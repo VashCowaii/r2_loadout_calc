@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033024,
   "trimCharacterName": 4033024,
   "abilityList": [
+    "4033024_Modifiers",
     "4033024_Monster_W4_Claymore_01_AbilityP01",
     "4033024_Monster_W4_Claymore_01_Ability04_Part02",
     "4033024_Monster_W4_Claymore_01_Ability04_Part01",
@@ -13,740 +14,9 @@ const compositeAbilityObject = {
     "4033024_Monster_W4_Claymore_01_Ability02_Part02",
     "4033024_Monster_W4_Claymore_01_Ability02_Part01",
     "4033024_Monster_W4_Claymore_01_Ability01_Part02",
-    "4033024_Monster_W4_Claymore_01_Ability01_Part01",
-    "4033024_Modifiers"
+    "4033024_Monster_W4_Claymore_01_Ability01_Part01"
   ],
   "abilityObject": {
-    "4033024_Monster_W4_Claymore_01_AbilityP01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_AbilityP01",
-      "childAbilityList": [
-        "4033024_Monster_W4_Claymore_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"709550235\">W4_Claymore_01_BattleScore1</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability04_Part02": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.25,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Snapshot Target List}}.[[getPlayerTeam]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-304685094\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Snapshot</a>",
-          "onlyRemoveOwnersInstance": true
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability04_Part01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability04_Part01",
-      "childAbilityList": [
-        "4033024_Monster_W4_Claymore_01_Ability04_Camera",
-        "4033024_Monster_W4_Claymore_01_Ability04_Part01",
-        "4033024_Monster_W4_Claymore_01_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability03_Part02": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (_ReadyToCharge) || RETURN",
-            "displayLines": "_ReadyToCharge",
-            "constants": [],
-            "variables": [
-              "_ReadyToCharge"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 4
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 5
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 6,
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2144224307\">Enemy_W4_Claymore_01_Ability04_Ready</a>"
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability03_Part01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability03_Part01",
-      "childAbilityList": [
-        "4033024_Monster_W4_Claymore_01_Ability03_Camera",
-        "4033024_Monster_W4_Claymore_01_Ability03_Part01",
-        "4033024_Monster_W4_Claymore_01_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part02": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Snapshot Target List}}.[[getPlayerTeam]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-304685094\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Snapshot</a>",
-          "onlyRemoveOwnersInstance": true
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2009401658\">Enemy_W4_Claymore_01_Ability02_DeadLock_Win</a>[<span class=\"descriptionNumberColor\">Honor</span>]",
-          "duration": 2,
-          "valuePerStack": {
-            "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
-              "displayLines": "{[Skill02[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[5]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_Ability02_InsertAbility_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability02_Part02": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
-          "valuePerStack": {
-            "MDF_DeadLock_HPRatio": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "MDF_DamageReduce": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            },
-            "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
-            },
-            "MDF_PowerUp_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
-          "valuePerStack": {
-            "MDF_DamageReduce": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            },
-            "MDF_SpeedAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
-            },
-            "MDF_PowerUp_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability02_Part01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_Part01",
-      "childAbilityList": [
-        "4033024_Monster_W4_Claymore_01_Ability02_Camera",
-        "4033024_Monster_W4_Claymore_01_Ability02_Part01",
-        "4033024_Monster_W4_Claymore_01_Ability02_Part02",
-        "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
-        "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part02",
-        "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability01_Part02": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{ST and Blast}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-              "displayLines": "{[SkillP01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[2]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-              "displayLines": "{[SkillP01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[3]]}"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033024_Monster_W4_Claymore_01_Ability01_Part01": {
-      "fileName": "4033024_Monster_W4_Claymore_01_Ability01_Part01",
-      "childAbilityList": [
-        "4033024_Monster_W4_Claymore_01_Ability01_Camera",
-        "4033024_Monster_W4_Claymore_01_Ability01_Part01",
-        "4033024_Monster_W4_Claymore_01_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
     "4033024_Modifiers": {
       "fileName": "4033024_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -796,12 +66,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2009401658\">Enemy_W4_Claymore_01_Ability02_DeadLock_Win</a>[<span class=\"descriptionNumberColor\">Honor</span>]",
           "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_AllDamageTypeAddedRatio"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>.",
           "type": "Buff",
           "effectName": "DMG Boost",
@@ -1034,11 +298,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "stackData": [
-            "MDF_DamageReduce",
-            "MDF_SpeedAddedRatio",
-            "MDF_PowerUp_AllDamageTypeAddedRatio"
-          ],
           "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span>. When receiving DMG from targets outside the Duel state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack.",
           "type": "Other",
           "effectName": "Duel",
@@ -1244,12 +503,6 @@ const compositeAbilityObject = {
           "targetRestrictionFor": "EnemySelect",
           "modifierFlags": [
             "Taunt"
-          ],
-          "stackData": [
-            "MDF_DeadLock_HPRatio",
-            "MDF_DamageReduce",
-            "MDF_SpeedAddedRatio",
-            "MDF_PowerUp_AllDamageTypeAddedRatio"
           ],
           "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio</span> and when receiving DMG from targets outside the Showdown state, reduces DMG by <span class=\"descriptionNumberColor\">MDF_DamageReduce</span>. Obtains 1 stack of \"Morale\" after each attack. DMG taken from Duel target will reduce the Duel's progress bar based on the DMG. When the Duel's progress bar is at 0, the Duel is lost and the Duel state is dispelled. Still requires <span class=\"descriptionNumberColor\">DeadLock_HP_CurrentValue</span> DMG to dispel Duel state.",
           "type": "Other",
@@ -2638,6 +1891,736 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_AbilityP01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_AbilityP01",
+      "childAbilityList": [
+        "4033024_Monster_W4_Claymore_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"709550235\">W4_Claymore_01_BattleScore1</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability04_Part02": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+              "displayLines": "{[SkillP01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+              "displayLines": "{[SkillP01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+              "displayLines": "{[SkillP01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[3]]}"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.25,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Snapshot Target List}}.[[getPlayerTeam]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-304685094\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Snapshot</a>",
+          "onlyRemoveOwnersInstance": true
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability04_Part01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability04_Part01",
+      "childAbilityList": [
+        "4033024_Monster_W4_Claymore_01_Ability04_Camera",
+        "4033024_Monster_W4_Claymore_01_Ability04_Part01",
+        "4033024_Monster_W4_Claymore_01_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability03_Part02": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+              "displayLines": "{[SkillP01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+              "displayLines": "{[SkillP01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+              "displayLines": "{[SkillP01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[3]]}"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (_ReadyToCharge) || RETURN",
+            "displayLines": "_ReadyToCharge",
+            "constants": [],
+            "variables": [
+              "_ReadyToCharge"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 4
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 5
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 6,
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2144224307\">Enemy_W4_Claymore_01_Ability04_Ready</a>"
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability03_Part01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability03_Part01",
+      "childAbilityList": [
+        "4033024_Monster_W4_Claymore_01_Ability03_Camera",
+        "4033024_Monster_W4_Claymore_01_Ability03_Part01",
+        "4033024_Monster_W4_Claymore_01_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part02": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1632906191\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Servant</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Snapshot Target List}}.[[getPlayerTeam]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-304685094\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target_Snapshot</a>",
+          "onlyRemoveOwnersInstance": true
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2009401658\">Enemy_W4_Claymore_01_Ability02_DeadLock_Win</a>[<span class=\"descriptionNumberColor\">Honor</span>]",
+          "duration": 2,
+          "valuePerStack": {
+            "MDF_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[5]]}) || RETURN",
+              "displayLines": "{[Skill02[5]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[5]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_Ability02_InsertAbility_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability02_Part02": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1906405018\">Enemy_W4_Claymore_01_Ability02_DeadLock_Self</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
+          "valuePerStack": {
+            "MDF_DeadLock_HPRatio": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "MDF_DamageReduce": {
+              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+              "displayLines": "{[Skill02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[1]]}"
+              ]
+            },
+            "MDF_SpeedAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
+              "displayLines": "{[Skill02[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[2]]}"
+              ]
+            },
+            "MDF_PowerUp_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
+              "displayLines": "{[Skill02[4]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-34378787\">Enemy_W4_Claymore_01_Ability02_DeadLock_Target</a>[<span class=\"descriptionNumberColor\">Duel</span>]",
+          "valuePerStack": {
+            "MDF_DamageReduce": {
+              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+              "displayLines": "{[Skill02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[1]]}"
+              ]
+            },
+            "MDF_SpeedAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
+              "displayLines": "{[Skill02[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[3]]}"
+              ]
+            },
+            "MDF_PowerUp_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
+              "displayLines": "{[Skill02[4]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability02_Part01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability02_Part01",
+      "childAbilityList": [
+        "4033024_Monster_W4_Claymore_01_Ability02_Camera",
+        "4033024_Monster_W4_Claymore_01_Ability02_Part01",
+        "4033024_Monster_W4_Claymore_01_Ability02_Part02",
+        "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part01",
+        "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Part02",
+        "4033024_Monster_W4_Claymore_01_Ability02_InsertAbility_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability01_Part02": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+              "displayLines": "{[SkillP01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[1]]}"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+              "displayLines": "{[SkillP01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[2]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+              "displayLines": "{[SkillP01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[3]]}"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+              "displayLines": "{[Skill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033024_Monster_W4_Claymore_01_Ability01_Part01": {
+      "fileName": "4033024_Monster_W4_Claymore_01_Ability01_Part01",
+      "childAbilityList": [
+        "4033024_Monster_W4_Claymore_01_Ability01_Camera",
+        "4033024_Monster_W4_Claymore_01_Ability01_Part01",
+        "4033024_Monster_W4_Claymore_01_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     }
   }
