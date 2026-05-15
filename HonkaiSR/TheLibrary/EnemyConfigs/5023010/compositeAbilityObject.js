@@ -3035,7 +3035,8 @@ const compositeAbilityObject = {
                     },
                     "Toughness": null,
                     "Tags": null,
-                    "attackType": "Basic ATK"
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "{[Skill02[2]]}* 100%"
                   }
                 },
                 {
@@ -3104,7 +3105,8 @@ const compositeAbilityObject = {
                         },
                         "Toughness": null,
                         "Tags": null,
-                        "attackType": "Basic ATK"
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "{[Skill02[2]]}* 100%"
                       }
                     },
                     {

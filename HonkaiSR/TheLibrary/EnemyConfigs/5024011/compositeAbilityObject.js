@@ -2862,7 +2862,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
@@ -2912,7 +2913,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
@@ -2962,7 +2964,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
@@ -3012,7 +3015,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
@@ -3062,7 +3066,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
@@ -3112,7 +3117,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
@@ -3162,7 +3168,8 @@ const compositeAbilityObject = {
                 "dmgFormulaFinal": "Converted DMG Base",
                 "Toughness": null,
                 "Tags": null,
-                "attackType": "Basic ATK"
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "SplitRatio* 100%"
               }
             }
           ]
