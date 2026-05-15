@@ -87,9 +87,6 @@ const configAbility = {
         "MuteHitH",
         "STAT_SuperArmor"
       ],
-      "stackData": [
-        "MDF_AllDamageTypeResistance"
-      ],
       "description": "In this state, DMG taken from attacks is reduced. When action advances, HP will be consumed. Summons \"Mirage Fizzle Kid\" and slightly delays \"Incubation\" action. When \"Incubation\" takes action, all remaining \"Mirage Fizzle Kid\" will be summoned.",
       "type": "Other",
       "effectName": "Incubation",
@@ -225,9 +222,6 @@ const configAbility = {
         "BlockDamageExcludeDot",
         "MuteBreak"
       ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Immune to all DMG except DoTs. This status is dispelled after being attacked.",
       "type": "Buff",
       "effectName": "Barrier",
@@ -280,10 +274,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1300638915\">Enemy_W4_Unicorn_01_SummonMonsterWeak</a>[<span class=\"descriptionNumberColor\">Weakling</span>]",
-      "stackData": [
-        "MDF_InitHP",
-        "MDF_DefenceAddedRatio"
-      ],
       "description": "Due to premature hatching, decreases DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
       "type": "Debuff",
       "effectName": "Weakened",
@@ -337,9 +327,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1713527003\">Enemy_W4_Unicorn_01_UltraReady</a>[<span class=\"descriptionNumberColor\">Fetal Movement of the Ocean</span>]",
       "modifierFlags": [
         "MuteBreak"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "description": "In this state, \"Cyclonic Swarm Mother's\" Toughness cannot be reduced. \"Cyclonic Swarm Mother\" will use \"Rain Is Born to Fall\". Eliminate all \"Mirage Fizzle Kids\" to dispel this state.",
       "type": "Other",
