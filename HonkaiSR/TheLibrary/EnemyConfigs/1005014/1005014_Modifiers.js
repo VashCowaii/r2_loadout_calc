@@ -157,11 +157,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__155177783\">Monster_W1_CocoliaP2_IF_BOSS_PowerUp</a>",
-      "stackData": [
-        "MDF_Cocolia_IF_BOSS_AllDamageReduce",
-        "MDF_Cocolia_IF_BOSS_AllDamageTypeAddedRatio",
-        "MDF_Cocolia_IF_BOSS_SpeedAddedRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1169,10 +1164,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
-      "stackData": [
-        "MDF_TokenDamageReduceRatio",
-        "MDF_TokenDamageAddRatioPerlayer"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2308,10 +2299,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__222390491\">Enemy_W2_Cocolia_IF_ExtraStance</a>",
-      "stackData": [
-        "MDF_ExtraStanceRatio",
-        "MDF_StanceDMGPerTeamMate"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2421,9 +2408,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1783900265\">Enemy_W2_Cocolia_IF_ExtraFrozenDamageRatio</a>",
-      "stackData": [
-        "MDF_ExtraFrozenDamageRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3131,10 +3115,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
-      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -3150,10 +3130,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2030503230\">Enemy_W1_CocoliaP2_EnvironmentEffect_ALL</a>",
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
