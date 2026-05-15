@@ -187,9 +187,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-680453013\">Enemy_W5_Ranger_Main_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_SpeedUp"
-      ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",

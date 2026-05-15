@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 1003011,
   "trimCharacterName": 1003011,
   "abilityList": [
+    "1003011_Modifiers",
     "1003011_Monster_W1_Soldier03_PassiveAbilityInsert2",
     "1003011_Monster_W1_Soldier03_PassiveAbilityInsert",
     "1003011_Monster_W1_Soldier03_PassiveAbilityInitiate",
@@ -17,10 +18,776 @@ const compositeAbilityObject = {
     "1003011_Monster_W1_Soldier03_Ability06_Part02",
     "1003011_Monster_W1_Soldier03_Ability06_Part01",
     "1003011_Monster_W1_Soldier03_Ability01_Part02",
-    "1003011_Monster_W1_Soldier03_Ability01_Part01",
-    "1003011_Modifiers"
+    "1003011_Monster_W1_Soldier03_Ability01_Part01"
   ],
   "abilityObject": {
+    "1003011_Modifiers": {
+      "fileName": "1003011_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-35846482\">Enemy_W1_Soldier03_BattleScore1</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "W1_Soldier03_00_BattleScore2_Flag"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W1_Soldier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "W1_Soldier03_00_BattleScore2_Flag",
+                      "context": "TargetEntity",
+                      "value": 1,
+                      "max": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "value1": "W1_Soldier03_00_BattleScore1_Flag",
+                    "compareType": ">=",
+                    "value2": 4,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Achievement",
+                      "matchTags": true,
+                      "relatedAchievements": [
+                        {
+                          "title": "Attack! No Matter the Cost!",
+                          "desc": "Trigger Silvermane Lieutenant's Shield Reflect at least #1[i] time(s) and defeat it",
+                          "rarity": "Low",
+                          "params": [
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "W1_Soldier03_00_BattleScore2_Flag",
+                    "compareType": "=",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Achievement",
+                      "matchTags": true,
+                      "relatedAchievements": [
+                        {
+                          "title": "Decapitation Strike",
+                          "desc": "Defeat the Silvermane Lieutenant without defeating any Silvermane Guards",
+                          "rarity": "Mid"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "DisableAction",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
+                      "priorityTag": "EnemyChangeState",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
+          "modifierFlags": [
+            "MuteHitH",
+            "ListenBattleEventSkill"
+          ],
+          "description": "Uses a Powerful Counter on the attacker after being attacked.",
+          "type": "Buff",
+          "effectName": "Counter",
+          "statusName": "Counter",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Set Hit-Class"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "ReturnAttackCounter"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Set Hit-Class",
+                  "reset": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 1003011,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Silvermane Lieutenant (Bug)"
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Modifier Description",
+                      "popUpText": "When attacked, performs a powerful Counter on the attacker. Remains in the Counter state as long as there are other enemy targets on the field."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "ReturnAttackCounter",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "Break",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
+                        "value1": "W1_Soldier03_00_BattleScore1_Flag",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "W1_Soldier03_00_BattleScore1_Flag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "W1_Soldier03_00_BattleScore1_Flag",
+                      "context": "TargetEntity",
+                      "value": 1,
+                      "max": 4
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": 1003011,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Silvermane Lieutenant (Bug)"
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "W1_Soldier03_00_InsertAttackFlag",
+                                "compareType": "=",
+                                "value2": 0,
+                                "contextScope": "TargetEntity"
+                              },
+                              {
+                                "name": "NOT",
+                                "condition": {
+                                  "name": "Has Param Flag",
+                                  "flagName": "IsFakeAvatarAttack"
+                                }
+                              },
+                              {
+                                "name": "Is Part Of",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Currency Wars Full OffFieldList}}"
+                                },
+                                "mustBeAlive2": true,
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "W1_Soldier03_00_InsertAttackFlag",
+                              "value": 1
+                            },
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W1_Soldier03_AbilityP06_Part01",
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "priorityTag": "EnemyAttackFromSelf",
+                              "showInActionOrder": true,
+                              "abortFlags": [
+                                "STAT_CTRL",
+                                "DisableAction",
+                                "Break"
+                              ],
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "NOT",
+                                "condition": {
+                                  "name": "Has Param Flag",
+                                  "flagName": "IsFakeAvatarAttack"
+                                }
+                              },
+                              {
+                                "name": "Is Part Of",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Currency Wars Full OffFieldList}}"
+                                },
+                                "mustBeAlive2": true,
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "ReturnAttackCounter",
+                              "value": 1
+                            },
+                            {
+                              "name": "Inject Ability Use",
+                              "condition": {
+                                "name": "Insert Ability Condition",
+                                "type": "AbilityOwnerInsertUnusedCount",
+                                "typeValue": 1
+                              },
+                              "abilityName": "Monster_W1_Soldier03_Ability06_Insert_Part01",
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "priorityTag": "EnemyAttackFromSelf",
+                              "showInActionOrder": true,
+                              "abortFlags": [
+                                "STAT_CTRL",
+                                "DisableAction",
+                                "Break"
+                              ],
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "ReturnAttackCounter"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase1"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 1003011,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Silvermane Lieutenant (Bug)"
+                  },
+                  "failed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "W1_Soldier03_00_AICounter",
+                      "value": 1
+                    }
+                  ]
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1398382688\">Monster_W1_Soldier03_HoldShield</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "W1_Soldier03_00_AICounter",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "W1_Soldier03_00_InsertAttackFlag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "W1_Soldier03_00_InsertFlag",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Teammate",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "W1_Soldier03_00_InsertFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
+                            },
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
+                              "priorityTag": "EnemyChangeState",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "allowAbilityTriggers": false
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "W1_Soldier03_00_AICounter",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Left Battle [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "W1_Soldier03_00_InsertFlag",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Teammate",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "W1_Soldier03_00_InsertFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
+                            },
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
+                              "priorityTag": "EnemyChangeState",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "allowAbilityTriggers": false
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Declare Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "scope": "TargetEntity",
+                              "variableName": "W1_Soldier03_00_AICounter",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "1003011_Monster_W1_Soldier03_PassiveAbilityInsert2": {
       "fileName": "1003011_Monster_W1_Soldier03_PassiveAbilityInsert2",
       "abilityType": null,
@@ -1517,777 +2284,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "1003011_Modifiers": {
-      "fileName": "1003011_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-35846482\">Enemy_W1_Soldier03_BattleScore1</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_Soldier03_00_BattleScore2_Flag"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Check Boolean Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value": "W1_Soldier"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "W1_Soldier03_00_BattleScore2_Flag",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 1
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value1": "W1_Soldier03_00_BattleScore1_Flag",
-                    "compareType": ">=",
-                    "value2": 4,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Achievement",
-                      "matchTags": true,
-                      "relatedAchievements": [
-                        {
-                          "title": "Attack! No Matter the Cost!",
-                          "desc": "Trigger Silvermane Lieutenant's Shield Reflect at least #1[i] time(s) and defeat it",
-                          "rarity": "Low",
-                          "params": [
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "W1_Soldier03_00_BattleScore2_Flag",
-                    "compareType": "=",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Achievement",
-                      "matchTags": true,
-                      "relatedAchievements": [
-                        {
-                          "title": "Decapitation Strike",
-                          "desc": "Defeat the Silvermane Lieutenant without defeating any Silvermane Guards",
-                          "rarity": "Mid"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__291277050\">Monster_W1_Soldier03_LoseShieldInCtrl</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "DisableAction",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
-                      "priorityTag": "EnemyChangeState",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-387357924\">Enemy_W1_Soldier03_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
-          "modifierFlags": [
-            "MuteHitH",
-            "ListenBattleEventSkill"
-          ],
-          "description": "Uses a Powerful Counter on the attacker after being attacked.",
-          "type": "Buff",
-          "effectName": "Counter",
-          "statusName": "Counter",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Set Hit-Class"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "ReturnAttackCounter"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Set Hit-Class",
-                  "reset": true
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 1003011,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Silvermane Lieutenant (Bug)"
-                  },
-                  "passed": [
-                    {
-                      "name": "Update Modifier Description",
-                      "popUpText": "When attacked, performs a powerful Counter on the attacker. Remains in the Counter state as long as there are other enemy targets on the field."
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Attacked End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Player Team"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "ReturnAttackCounter",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "Break",
-                        "invertCondition": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Level Entity}}"
-                        },
-                        "value1": "W1_Soldier03_00_BattleScore1_Flag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Level Entity}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "W1_Soldier03_00_BattleScore1_Flag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "W1_Soldier03_00_BattleScore1_Flag",
-                      "context": "TargetEntity",
-                      "value": 1,
-                      "max": 4
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Enemy ID",
-                        "ID": 1003011,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "characterName": "Silvermane Lieutenant (Bug)"
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Variable",
-                                "value1": "W1_Soldier03_00_InsertAttackFlag",
-                                "compareType": "=",
-                                "value2": 0,
-                                "contextScope": "TargetEntity"
-                              },
-                              {
-                                "name": "NOT",
-                                "condition": {
-                                  "name": "Has Param Flag",
-                                  "flagName": "IsFakeAvatarAttack"
-                                }
-                              },
-                              {
-                                "name": "Is Part Of",
-                                "of": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Currency Wars Full OffFieldList}}"
-                                },
-                                "mustBeAlive2": true,
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "W1_Soldier03_00_InsertAttackFlag",
-                              "value": 1
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Monster_W1_Soldier03_AbilityP06_Part01",
-                              "abilityTarget": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "priorityTag": "EnemyAttackFromSelf",
-                              "showInActionOrder": true,
-                              "abortFlags": [
-                                "STAT_CTRL",
-                                "DisableAction",
-                                "Break"
-                              ],
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "NOT",
-                                "condition": {
-                                  "name": "Has Param Flag",
-                                  "flagName": "IsFakeAvatarAttack"
-                                }
-                              },
-                              {
-                                "name": "Is Part Of",
-                                "of": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Currency Wars Full OffFieldList}}"
-                                },
-                                "mustBeAlive2": true,
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "ReturnAttackCounter",
-                              "value": 1
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "condition": {
-                                "name": "Insert Ability Condition",
-                                "type": "AbilityOwnerInsertUnusedCount",
-                                "typeValue": 1
-                              },
-                              "abilityName": "Monster_W1_Soldier03_Ability06_Insert_Part01",
-                              "abilityTarget": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "priorityTag": "EnemyAttackFromSelf",
-                              "showInActionOrder": true,
-                              "abortFlags": [
-                                "STAT_CTRL",
-                                "DisableAction",
-                                "Break"
-                              ],
-                              "allowAbilityTriggers": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "ReturnAttackCounter"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 1003011,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Silvermane Lieutenant (Bug)"
-                  },
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "W1_Soldier03_00_AICounter",
-                      "value": 1
-                    }
-                  ]
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1398382688\">Monster_W1_Soldier03_HoldShield</a>",
-          "modifierFlags": [
-            "ListenBattleEventSkill"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_Soldier03_00_AICounter",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: Start",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_Soldier03_00_InsertAttackFlag"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
-          "latentQueue": [
-            "W1_Soldier03_00_SummonCounter",
-            "W1_Soldier03_00_AICounter"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Entity Death [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W1_Soldier03_00_InsertFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members(Exclude Self)}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "W1_Soldier03_00_InsertFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
-                              "priorityTag": "EnemyChangeState",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "W1_Soldier03_00_AICounter",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Entity Left Battle [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "W1_Soldier03_00_InsertFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members(Exclude Self)}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Is Teammate",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "W1_Soldier03_00_InsertFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
-                          },
-                          "passed": [
-                            {
-                              "name": "Remove Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-1398382688\">Monster_W1_Soldier03_HoldShield</a>"
-                            },
-                            {
-                              "name": "Inject Ability Use",
-                              "abilityName": "Monster_W1_Soldier03_PassiveAbilityInsert",
-                              "priorityTag": "EnemyChangeState",
-                              "canHitNonTargets": true,
-                              "showInActionOrder": true,
-                              "allowAbilityTriggers": false
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "W1_Soldier03_00_AICounter",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

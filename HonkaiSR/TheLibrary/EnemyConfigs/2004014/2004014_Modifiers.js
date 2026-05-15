@@ -11,10 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__694374710\">Monster_W2_Kafka_RL_Part03WeaponEnhanceEffect</a>",
-      "latentQueue": [
-        "MDF_Right",
-        "MDF_Left"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -24,10 +20,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1988286038\">Monster_W2_Kafka_RL_Part03EnhanceEffect</a>",
-      "latentQueue": [
-        "MDF_Right",
-        "MDF_Left"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -503,12 +495,6 @@ const configAbility = {
         "DispelPriorityHigh",
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "BattleEventFlag",
-        "MindControlCount",
-        "ShowHint04",
-        "FinalPhase"
-      ],
       "description": "Triggered at the next Revelation. Can be removed before that action.",
       "type": "Debuff",
       "effectName": "Psychological Suggestion",
@@ -562,9 +548,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "duration": 1,
       "execute": [
         {
@@ -1428,9 +1411,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-471232771\">Monster_W2_Kafka_IF03_MonsterAssistControl</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1501,9 +1481,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1742511370\">Monster_W2_Kafka_IF03_PartController</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {
@@ -1821,9 +1798,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1977361532\">Monster_W2_Kafka_IF03_Summon</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2593,10 +2567,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1727559793\">Enemy_W2_Kafka_IF_EnemyCount</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_ShowValue2"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2759,9 +2729,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-605990657\">Monster_W2_Kafka_IF03_SummonKillBonus04</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-      "stackData": [
-        "MDF_KillBonus"
-      ],
       "description": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
       "type": "Other",
       "effectName": "Madden",
@@ -2784,9 +2751,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-656323514\">Monster_W2_Kafka_IF03_SummonKillBonus03</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-      "stackData": [
-        "MDF_KillBonus"
-      ],
       "description": "Enhanced by Boss Mirage, enters Charging state, and is dispelled upon being Weakness Broken.",
       "type": "Other",
       "effectName": "Madden",
@@ -2824,9 +2788,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-639545895\">Monster_W2_Kafka_IF03_SummonKillBonus02</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-      "stackData": [
-        "MDF_KillBonus"
-      ],
       "description": "Enhanced by Boss Mirage, enters Freezing Point state, and is dispelled upon being Weakness Broken.",
       "type": "Other",
       "effectName": "Madden",
@@ -2849,9 +2810,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-689878752\">Monster_W2_Kafka_IF03_SummonKillBonus01</a>[<span class=\"descriptionNumberColor\">Madden</span>]",
-      "stackData": [
-        "MDF_KillBonus"
-      ],
       "description": "Enhanced by Boss Mirage, enters Spontaneous Combustion state, and is dispelled upon being Weakness Broken.",
       "type": "Other",
       "effectName": "Madden",
@@ -3137,20 +3095,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1808450599\">Monster_W2_Kafka_IF03_SummonControl</a>",
-      "stackData": [
-        "MDF_WeakDMGReduceRatio",
-        "MDF_WeakStatusProbReduceRatio",
-        "MDF_WeakStanceSliceRatio",
-        "MDF_BreakDMGTokenAddRatio",
-        "MDF_BreakDelayRatio",
-        "MDF_FrenzyDMGTokenAddRatio",
-        "MDF_FrenzySpeedAddRatio",
-        "MDF_FrenzyStanceSliceRatio",
-        "MDF_StanceDMGPerTeamMate"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -3569,9 +3513,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
@@ -3711,9 +3652,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1510857703\">Monster_W2_Kafka_IF_Part03WeaponEnhanceEffect</a>",
-      "latentQueue": [
-        "ElectricFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -4596,7 +4534,6 @@ const configAbility = {
         "Endurance"
       ],
       "latentQueue": [
-        "DisPelCount",
         "AIFlag",
         "AI_SkillIF01",
         "CD_SkillIF01",
@@ -4858,11 +4795,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>",
-      "latentQueue": [
-        "MDF_HasTarget",
-        "JustinBreak"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1155608240\">Monster_W2_Kafka_IF02_ContainJXDTag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -5193,18 +5126,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>",
-      "latentQueue": [
-        "MDF_HasTarget"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-98989183\">Monster_W2_Kafka_IF02_Ability08_ExecuteTag</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>",
-      "latentQueue": [
-        "MDF_Right",
-        "MDF_Left"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1769956032\">Monster_W2_Kafka_IF02_SecondMonsterTag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -5721,11 +5647,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>",
-      "latentQueue": [
-        "MDF_Right",
-        "MDF_Left"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__364934476\">Monster_W2_Kafka_EnhanceElectricMark</a>"
     },
     {
       "name": "Modifier Construction",

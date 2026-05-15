@@ -127,10 +127,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1072054994\">MModifier_Monster_W3_Theater_DamageSharePhase2</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -227,9 +223,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "In Tutoring mode, this unit will not change its channel when attacked.",
       "type": "Other",
       "effectName": "Being Tutored",
@@ -440,9 +433,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
       "type": "Other",
       "statusName": "Classroom Channel",
@@ -483,9 +473,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
       "type": "Other",
       "statusName": "Off-Class Channel",
@@ -1201,10 +1188,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>",
-      "latentQueue": [
-        "AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-685472168\">MModifier_W3_Theater_IF_UltraDamageReduce_TriggerFlag</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1287,12 +1271,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__890205763\">Enemy_W3_Theater_IF_BattleEvent</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_BEBreakDamageReduce"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1619,18 +1597,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>",
-      "latentQueue": [
-        "InsertCheck"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__168509453\">Enemy_W3_Theater_IF_DuringChangePhase</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-831498858\">MModifier_Monster_W3_Theater_IF_Part2</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1885,12 +1856,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1242309858\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmor</a>[<span class=\"descriptionNumberColor\">Homework In-Class</span>]",
       "modifierFlags": [],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": [
-        "BreakEndFlag"
-      ],
       "description": "When Blaznana Monkey Trick is in the \"Steadfast Safeguard\" state, reduces this unit's DMG received by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>.",
       "type": "Buff",
       "effectName": "Homework In-Class",
@@ -2292,14 +2257,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1013818127\">MModifier_Monster_W3_Theater_IF_HourglassCharge</a>[<span class=\"descriptionNumberColor\">Regular Examination</span>]",
-      "stackData": [
-        "MDF_DamageStanceValue_Dinosaur",
-        "MDF_DamageStanceValue_TV",
-        "MDF_DamageStanceValue_Mecha",
-        "MDF_DamageStanceValue_Clock",
-        "MDF_DamageStanceValue_2",
-        "MDF_DamageStanceValue_All"
-      ],
       "description": "When enemy units in the \"Classroom Channel\" state are switched to \"Off-Class Channel\" via either Breaking their Weaknesses or accumulating the tally, reduces the Toughness of \"Blaznana Monkey Trick\". When all enemy units are Weakness Broken, attacking any enemy units can reduce the Toughness of \"Blaznana Monkey Trick\" by a minor amount. When \"Blaznana Monkey Trick\" is Weakness Broken, all enemy targets will be Broken, and the \"Blaznana Monkey Trick\" will enter the \"Safeguard Breach\" state.",
       "type": "Other",
       "statusName": "Regular Examination",
@@ -4165,10 +4122,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2042117256\">MModifier_Monster_W3_Theater_IF_Side_Negative_Count</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

@@ -3,55 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 3012032,
   "trimCharacterName": 3012032,
   "abilityList": [
+    "3012032_Modifiers",
     "3012032_Monster_W3_DeathPart_Ability02_Part02",
-    "3012032_Monster_W3_DeathPart_Ability02_Part01",
-    "3012032_Modifiers"
+    "3012032_Monster_W3_DeathPart_Ability02_Part01"
   ],
   "abilityObject": {
-    "3012032_Monster_W3_DeathPart_Ability02_Part02": {
-      "fileName": "3012032_Monster_W3_DeathPart_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012032_Monster_W3_DeathPart_Ability02_Part01": {
-      "fileName": "3012032_Monster_W3_DeathPart_Ability02_Part01",
-      "childAbilityList": [
-        "3012032_Monster_W3_DeathPart_Ability02_Part01",
-        "3012032_Monster_W3_DeathPart_Ability02_Part02",
-        "3012032_Monster_W3_DeathPart_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_DeathPart_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "3012032_Modifiers": {
       "fileName": "3012032_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -421,6 +377,50 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "3012032_Monster_W3_DeathPart_Ability02_Part02": {
+      "fileName": "3012032_Monster_W3_DeathPart_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012032_Monster_W3_DeathPart_Ability02_Part01": {
+      "fileName": "3012032_Monster_W3_DeathPart_Ability02_Part01",
+      "childAbilityList": [
+        "3012032_Monster_W3_DeathPart_Ability02_Part01",
+        "3012032_Monster_W3_DeathPart_Ability02_Part02",
+        "3012032_Monster_W3_DeathPart_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_DeathPart_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     }
   }

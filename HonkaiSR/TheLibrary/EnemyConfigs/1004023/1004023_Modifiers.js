@@ -15,14 +15,6 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -363,20 +355,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>",
-      "latentQueue": [
-        "SPRLCount",
-        "Strike_SPRLCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-243818097\">SPRL_Flag</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-508706525\">Gepard_RL_Break</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ],
       "execute": [
         {
@@ -405,9 +390,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1185722758\">Gepard_RL_ShieldIcon2</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "description": "Before the Collective Shield ends, enemy targets' Toughness cannot be reduced.",
       "type": "Buff",
       "effectName": "Weakness Protected",
@@ -416,9 +398,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1788931056\">Gepard_RL_ShieldIcon</a>[<span class=\"descriptionNumberColor\">Collective Shield</span>]",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "description": "A Shield that absorbs DMG taken by all enemies. While the Shield persists, allies' attacks will not reduce the Shielded enemies' HP.",
       "type": "Buff",
       "effectName": "Collective Shield",
@@ -430,9 +409,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ],
       "execute": [
         {
@@ -460,14 +436,6 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
       ],
       "execute": [
         {
@@ -778,9 +746,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "description": "Toughness cannot be reduced.",
       "type": "Other",
       "effectName": "Toughness Protection",
@@ -837,9 +802,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -885,9 +847,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1955091143\">Enemy_W1_Gepard_RL_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
       "modifierFlags": [
         "MuteHitH"
-      ],
-      "latentQueue": [
-        "ReturnAttackCounter"
       ],
       "description": "Uses a Powerful Counter on the attacker after being attacked.",
       "type": "Buff",
@@ -1163,9 +1122,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__802362263\">Monster_W1_Gepard_RL_AIWatcher</a>",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

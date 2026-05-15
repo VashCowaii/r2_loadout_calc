@@ -2363,11 +2363,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1636257193\">Enemy_W4_PolluxPart_IF_MinionsSuperArmorController</a>",
-      "stackData": [
-        "MDF_MinionsSuperArmor_AllDamageReduce",
-        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-        "MDF_SetActionDelayValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -149,9 +146,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__725097673\">W3_Sunday_BattleScore1</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -246,9 +240,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1543685529\">Enemy_W3_Sunday_PartDestroyController</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -281,10 +272,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1283356455\">Enemy_W3_Sunday_FinalPhase</a>",
-      "latentQueue": [
-        "AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1283356455\">Enemy_W3_Sunday_FinalPhase</a>"
     },
     {
       "name": "Modifier Construction",
@@ -350,9 +338,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1594566188\">Enemy_W3_Sunday_LightTeam_Shield_Stack</a>",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_ShieldPercentage_Add"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -458,9 +443,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "Shield"
-      ],
-      "stackData": [
-        "MDF_ShieldPercentage"
       ],
       "execute": [
         {
@@ -672,9 +654,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1419566195\">Enemy_W3_Sunday_01_Tutorial</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -786,9 +765,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__896746501\">Enemy_W3_Sunday_AudioReset</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Leave Battle"
@@ -807,9 +783,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-812390261\">Enemy_W3_Sunday_01_CharacterChangePhase</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1285,9 +1258,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__868485684\">Enemy_W3_Sunday_HitReact</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage End [Owner]: Hit"
@@ -1456,9 +1426,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__83954247\">Enemy_W3_Sunday_Part1FloatingMessage</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1858,9 +1825,6 @@ const configAbility = {
         "DispelPriorityHigh"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_AllDamageAddedRatio"
-      ],
       "description": "Cannot take action within a certain number of turns and regenerates minor amounts of HP at the start of every turn. When this unit is attacked, greatly increase the DMG it takes. Getting attacked dispels the Alien Dream state.",
       "type": "Debuff",
       "effectName": "Alien Dream",
@@ -3167,9 +3131,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1919757203\">Enemy_W3_Sunday_01_PassiveAbilityInitiate_EnterBattle</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",

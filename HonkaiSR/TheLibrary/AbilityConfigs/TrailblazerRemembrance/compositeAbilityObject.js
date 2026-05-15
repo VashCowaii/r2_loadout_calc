@@ -4163,7 +4163,8 @@ const compositeAbilityObject = {
                       ]
                     },
                     "Tags": null,
-                    "attackType": "Memosprite"
+                    "attackType": "Memosprite",
+                    "EnergyGainPercent": "(1 / (4 + 1))* 100%"
                   },
                   "attackType": "Memosprite"
                 }
@@ -4197,7 +4198,8 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": null,
-            "attackType": "Memosprite"
+            "attackType": "Memosprite",
+            "EnergyGainPercent": "(1 / (4 + 1))* 100%"
           },
           "attackType": "Memosprite"
         },

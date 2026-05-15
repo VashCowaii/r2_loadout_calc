@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4013017,
   "trimCharacterName": 4013017,
   "abilityList": [
+    "4013017_Modifiers",
     "4013017_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
     "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbility_Insert",
     "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbilityInitiate",
@@ -10,1449 +11,9 @@ const compositeAbilityObject = {
     "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01",
     "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02",
     "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01",
-    "4013017_Modifiers",
     "4013017_Functions"
   ],
   "abilityObject": {
-    "4013017_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover": {
-      "fileName": "4013017_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] (_HealHPRatio) || RETURN",
-            "displayLines": "_HealHPRatio",
-            "constants": [],
-            "variables": [
-              "_HealHPRatio"
-            ]
-          },
-          "formula": "Heal from Target MaxHP"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260100,
-                "compareType": ">=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260106,
-                "compareType": "<=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variableName": "_BattleTarget_LocalLegend_S4_2_Check",
-              "context": "TargetEntity",
-              "value": 1
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variableName": "_BattleTarget_LocalLegend_S4_3_Check",
-              "context": "TargetEntity",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Stage ID",
-            "ID": 426011,
-            "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variableName": "_BattleTarget_LocalLegend_S4_6_Check",
-              "context": "TargetEntity",
-              "value": 1
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variableName": "_BattleTarget_LocalLegend_S4_7_Check",
-              "context": "TargetEntity",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "_MonsterChangeCnt",
-          "context": "TargetEntity",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbility_Insert": {
-      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Use Custom Character Function",
-              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
-            },
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Heal",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "healPercent": 1,
-              "formula": "Heal from Target MaxHP"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
-          },
-          "passed": [
-            {
-              "name": "Set Battle Track Progress",
-              "progress": 0,
-              "count": 100,
-              "ID": "#1%"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1616431833\">Monster_W4_Claymore_01_LocalLegend_LockHP_Revive</a>[<span class=\"descriptionNumberColor\">Indomitable Battle</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1121280189\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1767801569\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP02</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1919435705\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP02</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Current Turn Owner}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Assign Advance/Delay to Current Ability Use",
-              "adjustmentValue": 0,
-              "adjustmentType": "="
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbilityInitiate": {
-      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            },
-            "MDF_CrackedEffect": {
-              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[5]]}"
-              ]
-            },
-            "MDF_DamageResistance": {
-              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[2]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[3]]}"
-              ]
-            },
-            "MDF_ModifySP": {
-              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_DelayAddedRatio",
-          "value": {
-            "operator": "Variables[0] ({[PassiveSkill03[15]]}) || RETURN",
-            "displayLines": "{[PassiveSkill03[15]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill03[15]]}"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Stage ID",
-            "ID": 426011,
-            "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[2]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260100,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260101,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260120,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260121,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[6]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[6]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[13]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[13]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[13]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[14]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[14]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[14]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260102,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260122,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[5]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[11]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[11]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[11]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[12]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[12]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[12]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260103,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260123,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[9]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[9]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[9]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[10]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[10]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[10]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260104,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260124,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[7]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[7]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[8]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[8]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[8]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260105,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260125,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[5]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[6]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[6]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260106,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260126,
-                "compareType": "=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[4]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260120,
-                "compareType": ">=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260126,
-                "compareType": "<=",
-                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "InsertCheck",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
-              "displayLines": "_DamageReduceRatio",
-              "constants": [],
-              "variables": [
-                "_DamageReduceRatio"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2062098307\">Enemy_Heaven_ModelController_Claymore</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2062098307\">Enemy_Heaven_ModelController_Claymore</a>",
-          "modifierFlags": [
-            "STAT_AITargetHigherPriority"
-          ],
-          "latentQueue": [
-            "InsertCheck"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Stage ID",
-                    "ID": 426011,
-                    "compareType": "=",
-                    "characterName": "Synergy Duo: Bloodbound Dark Duelist"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
-                      "valuePerStack": {
-                        "MDF_DamageAdded": {
-                          "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill02[7]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill02[7]]}"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Living State",
-                        "state": "Mask_AliveOnly",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                        "compareType": "=",
-                        "value2": 0,
-                        "valueType": "Layer"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Living State",
-                            "state": "Mask_AliveOnly",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            }
-                          },
-                          {
-                            "name": "Has Turn-State",
-                            "invertCondition": true,
-                            "states": [
-                              "InsertAbilityActionPhase"
-                            ]
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "MaxLayer",
-                  "variableName": "MDF_MaxLayer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                  "multiplier": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Was",
-                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                        "compareType": "=",
-                        "value2": {
-                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
-                          "displayLines": "MDF_MaxLayer",
-                          "constants": [],
-                          "variables": [
-                            "MDF_MaxLayer"
-                          ]
-                        },
-                        "valueType": "Layer"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MDF_LastLayer",
-                        "compareType": "=",
-                        "value2": 0
-                      }
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_LastLayer",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-                  "multiplier": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
-                      "valuePerStack": {
-                        "MDF_PropertyValue": {
-                          "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
-                          "displayLines": "_DamageReduceRatio",
-                          "constants": [],
-                          "variables": [
-                            "_DamageReduceRatio"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part02": {
-      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID02) || RETURN",
-                      "displayLines": "SummonID02",
-                      "constants": [],
-                      "variables": [
-                        "SummonID02"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
-              },
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
-                  },
-                  "locationType": "KeepOnFirst"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
-            },
-            {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "refPoint": "After",
-              "isStartingAV": true
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Every Battle Entity}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID01) || RETURN",
-                      "displayLines": "SummonID01",
-                      "constants": [],
-                      "variables": [
-                        "SummonID01"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                "displayLines": "{[Skill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}"
-                ]
-              },
-              "refreshPositions": false,
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
-                  },
-                  "locationType": "KeepOnLast"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
-            },
-            {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "refPoint": "After",
-              "isStartingAV": true
-            }
-          ]
-        },
-        {
-          "name": "Create AV Link",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Light Praetor: Light Summons}}"
-          },
-          "linkOrder": 1,
-          "isStart": true,
-          "linkFollowerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          },
-          "linkOwnerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01": {
-      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01",
-      "childAbilityList": [
-        "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Camera",
-        "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01",
-        "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_LocalLegend03_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02": {
-      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01": {
-      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01",
-      "childAbilityList": [
-        "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Camera",
-        "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01",
-        "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_LocalLegend03_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
     "4013017_Modifiers": {
       "fileName": "4013017_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3923,9 +2484,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>",
-          "latentQueue": [
-            "InsertCheck"
-          ],
           "execute": [
             {
               "eventTrigger": "Waiting for Healing in Limbo",
@@ -6194,6 +4752,1445 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4013017_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover": {
+      "fileName": "4013017_Monster_W4_Claymore_01_LocalLegend_PassiveAbility_Recover",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] (_HealHPRatio) || RETURN",
+            "displayLines": "_HealHPRatio",
+            "constants": [],
+            "variables": [
+              "_HealHPRatio"
+            ]
+          },
+          "formula": "Heal from Target MaxHP"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260100,
+                "compareType": ">=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260106,
+                "compareType": "<=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variableName": "_BattleTarget_LocalLegend_S4_2_Check",
+              "context": "TargetEntity",
+              "value": 1
+            },
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variableName": "_BattleTarget_LocalLegend_S4_3_Check",
+              "context": "TargetEntity",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Stage ID",
+            "ID": 426011,
+            "compareType": "=",
+            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variableName": "_BattleTarget_LocalLegend_S4_6_Check",
+              "context": "TargetEntity",
+              "value": 1
+            },
+            {
+              "name": "Define Custom Variable with Added Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variableName": "_BattleTarget_LocalLegend_S4_7_Check",
+              "context": "TargetEntity",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "variableName": "_MonsterChangeCnt",
+          "context": "TargetEntity",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbility_Insert": {
+      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+          },
+          "searchRandom": true,
+          "ifTargetFound": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "<a class=\"gTempYellow\" id=\"-1902031976\">Monster_ChangePhase_ParamEntity</a>"
+            },
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "silent": true
+            },
+            {
+              "name": "Heal",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "healPercent": 1,
+              "formula": "Heal from Target MaxHP"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
+          },
+          "passed": [
+            {
+              "name": "Set Battle Track Progress",
+              "progress": 0,
+              "count": 100,
+              "ID": "#1%"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1616431833\">Monster_W4_Claymore_01_LocalLegend_LockHP_Revive</a>[<span class=\"descriptionNumberColor\">Indomitable Battle</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1121280189\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Dark Praetor: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1767801569\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP02</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1919435705\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP02</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Current Turn Owner}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Assign Advance/Delay to Current Ability Use",
+              "adjustmentValue": 0,
+              "adjustmentType": "="
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbilityInitiate": {
+      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
+          "valuePerStack": {
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            },
+            "MDF_CrackedEffect": {
+              "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[1]]}"
+              ]
+            },
+            "MDF_CrackedDamage": {
+              "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[5]]}"
+              ]
+            },
+            "MDF_DamageResistance": {
+              "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[2]]}"
+              ]
+            },
+            "MDF_CrackedDamageAfter": {
+              "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[3]]}"
+              ]
+            },
+            "MDF_ModifySP": {
+              "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_DelayAddedRatio",
+          "value": {
+            "operator": "Variables[0] ({[PassiveSkill03[15]]}) || RETURN",
+            "displayLines": "{[PassiveSkill03[15]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill03[15]]}"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Stage ID",
+            "ID": 426011,
+            "compareType": "=",
+            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[2]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260100,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260101,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260120,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260121,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[6]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[6]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[13]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[13]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[13]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[14]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[14]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[14]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260102,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260122,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[5]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[11]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[11]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[11]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[12]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[12]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[12]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260103,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260123,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[9]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[9]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[9]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[10]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[10]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[10]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260104,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260124,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[7]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[7]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[8]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[8]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[8]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260105,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260125,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[5]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[6]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[6]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260106,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260126,
+                "compareType": "=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DamageReduceRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_DelayRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_HealHPRatio",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[4]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260120,
+                "compareType": ">=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260126,
+                "compareType": "<=",
+                "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "InsertCheck",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
+              "displayLines": "_DamageReduceRatio",
+              "constants": [],
+              "variables": [
+                "_DamageReduceRatio"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2062098307\">Enemy_Heaven_ModelController_Claymore</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2062098307\">Enemy_Heaven_ModelController_Claymore</a>",
+          "modifierFlags": [
+            "STAT_AITargetHigherPriority"
+          ],
+          "latentQueue": [
+            "InsertCheck"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Stage ID",
+                    "ID": 426011,
+                    "compareType": "=",
+                    "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
+                      "valuePerStack": {
+                        "MDF_DamageAdded": {
+                          "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill02[7]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill02[7]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Living State",
+                        "state": "Mask_AliveOnly",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                        "compareType": "=",
+                        "value2": 0,
+                        "valueType": "Layer"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Living State",
+                            "state": "Mask_AliveOnly",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            }
+                          },
+                          {
+                            "name": "Has Turn-State",
+                            "invertCondition": true,
+                            "states": [
+                              "InsertAbilityActionPhase"
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "MaxLayer",
+                  "variableName": "MDF_MaxLayer",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                        "compareType": "=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        },
+                        "valueType": "Layer"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MDF_LastLayer",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_LastLayer",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+                  "multiplier": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
+                          "displayLines": "_DamageReduceRatio",
+                          "constants": [],
+                          "variables": [
+                            "_DamageReduceRatio"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part02": {
+      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID02) || RETURN",
+                      "displayLines": "SummonID02",
+                      "constants": [],
+                      "variables": [
+                        "SummonID02"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                "displayLines": "{[Skill04[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[0]]}"
+                ]
+              },
+              "refreshPositions": false,
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID02) || RETURN",
+                    "displayLines": "SummonID02",
+                    "constants": [],
+                    "variables": [
+                      "SummonID02"
+                    ]
+                  },
+                  "locationType": "KeepOnFirst"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
+            },
+            {
+              "name": "Advance/Delay up to Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "targetRef": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "refPoint": "After",
+              "isStartingAV": true
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Every Battle Entity}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID01) || RETURN",
+                      "displayLines": "SummonID01",
+                      "constants": [],
+                      "variables": [
+                        "SummonID01"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+                "displayLines": "{[Skill04[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[1]]}"
+                ]
+              },
+              "refreshPositions": false,
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID01) || RETURN",
+                    "displayLines": "SummonID01",
+                    "constants": [],
+                    "variables": [
+                      "SummonID01"
+                    ]
+                  },
+                  "locationType": "KeepOnLast"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1733208615\">Enemy_W4_Claymore_01_LocalLegend_WhiteSummon</a>"
+            },
+            {
+              "name": "Advance/Delay up to Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "targetRef": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "refPoint": "After",
+              "isStartingAV": true
+            }
+          ]
+        },
+        {
+          "name": "Create AV Link",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Light Praetor: Light Summons}}"
+          },
+          "linkOrder": 1,
+          "isStart": true,
+          "linkFollowerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          },
+          "linkOwnerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01": {
+      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01",
+      "childAbilityList": [
+        "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Camera",
+        "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01",
+        "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_LocalLegend03_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02": {
+      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01": {
+      "fileName": "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01",
+      "childAbilityList": [
+        "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Camera",
+        "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01",
+        "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_LocalLegend03_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
       "references": []
     },
     "4013017_Functions": {

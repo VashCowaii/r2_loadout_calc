@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8033012,
   "trimCharacterName": 8033012,
   "abilityList": [
+    "8033012_Modifiers",
     "8033012_Monster_W1_Mecha03_02_Passive01",
     "8033012_Monster_W1_Mecha03_02_Ability06_Part02",
     "8033012_Monster_W1_Mecha03_02_Ability06_Part01",
@@ -15,1380 +16,9 @@ const compositeAbilityObject = {
     "8033012_Monster_W1_Mecha03_02_Ability02_Part02",
     "8033012_Monster_W1_Mecha03_02_Ability02_Part01",
     "8033012_Monster_W1_Mecha03_02_Ability01_Part02",
-    "8033012_Monster_W1_Mecha03_02_Ability01_Part01",
-    "8033012_Modifiers"
+    "8033012_Monster_W1_Mecha03_02_Ability01_Part01"
   ],
   "abilityObject": {
-    "8033012_Monster_W1_Mecha03_02_Passive01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Passive01",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"908704672\">W1_Mecha03_02_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2065276551\">Monster_W1_Mecha03_02_ResetAI</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1161336022\">Monster_W1_Mecha03_02_CoinPassive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1215936421\">Monster_W1_Mecha03_02_EffectController</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2065276551\">Monster_W1_Mecha03_02_ResetAI</a>",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "AIFlag",
-                    "compareType": "<=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 9
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 10
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability06_Part02": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.3,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.3,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-              "displayLines": "{[Skill06[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill06[0]]}"
-              ]
-            },
-            "HitSplit": 0.4,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability06_Part01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability06_Part01",
-      "childAbilityList": [
-        "8033012_Monster_W1_Mecha03_02_Ability06_Camera",
-        "8033012_Monster_W1_Mecha03_02_Ability06_Part01",
-        "8033012_Monster_W1_Mecha03_02_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_02_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability05_Part02": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 803301000,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonID1",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonID1",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                    "displayLines": "{[Skill05[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[0]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonID0",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": {
-                    "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                    "displayLines": "{[Skill05[0]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[0]]}"
-                    ]
-                  },
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "SummonID0",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Random Chance",
-                "chance": 0.5
-              },
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team Location",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "team": "Enemy Team",
-                    "location": "Left"
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                        "displayLines": "{[Skill05[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[0]]}"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Create Enemy from Custom",
-                          "value": "SummonID0",
-                          "summonLocation": "First"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                        "displayLines": "{[Skill05[0]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[0]]}"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Create Enemy from Custom",
-                          "value": "SummonID0",
-                          "summonLocation": "Last"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team Location",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "team": "Enemy Team",
-                    "location": "Left"
-                  },
-                  "passed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Create Enemy from Custom",
-                          "value": "SummonID1",
-                          "summonLocation": "First"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Create Enemies",
-                      "delayPercent": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
-                      },
-                      "enemyList": [
-                        {
-                          "name": "Create Enemy from Custom",
-                          "value": "SummonID1",
-                          "summonLocation": "Last"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Check Boolean Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value": "WMonster_W1_Mecha_02_PhaseFlag"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-                "invertCondition": true
-              },
-              {
-                "name": "Compare: Monster Rank",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "compareType": "<",
-                "value2": 3
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[0]]}"
-                  ]
-                }
-              },
-              "casterAssign": "TargetSelf"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability05_Part01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability05_Part01",
-      "childAbilityList": [
-        "8033012_Monster_W1_Mecha03_02_Ability05_Camera",
-        "8033012_Monster_W1_Mecha03_02_Ability05_Part01",
-        "8033012_Monster_W1_Mecha03_02_Ability05_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_02_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability04_Part02": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
-                "invertCondition": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Shot Fired"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
-                  "displayLines": "{[PassiveSkillInitiate[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[PassiveSkillInitiate[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-            "compareType": "=",
-            "value2": 3,
-            "valueType": "Layer"
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-                "compareType": "=",
-                "value2": 2,
-                "valueType": "Layer"
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-                    "compareType": "=",
-                    "value2": 1,
-                    "valueType": "Layer"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability04_Part01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability04_Part01",
-      "childAbilityList": [
-        "8033012_Monster_W1_Mecha03_02_Ability04_Camera",
-        "8033012_Monster_W1_Mecha03_02_Ability04_Part01",
-        "8033012_Monster_W1_Mecha03_02_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_02_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability03_Part02": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]"
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 7,
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Physical",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "HitSplit": 0.125,
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "HitSplit": 0.125,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability03_Part01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability03_Part01",
-      "childAbilityList": [
-        "8033012_Monster_W1_Mecha03_02_Ability03_Camera",
-        "8033012_Monster_W1_Mecha03_02_Ability03_Part01",
-        "8033012_Monster_W1_Mecha03_02_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_02_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability02_Part02": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
-            }
-          ]
-        },
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability02_Part01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability02_Part01",
-      "childAbilityList": [
-        "8033012_Monster_W1_Mecha03_02_Ability02_Camera",
-        "8033012_Monster_W1_Mecha03_02_Ability02_Part01",
-        "8033012_Monster_W1_Mecha03_02_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_02_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability01_Part02": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8033012_Monster_W1_Mecha03_02_Ability01_Part01": {
-      "fileName": "8033012_Monster_W1_Mecha03_02_Ability01_Part01",
-      "childAbilityList": [
-        "8033012_Monster_W1_Mecha03_02_Ability01_Camera",
-        "8033012_Monster_W1_Mecha03_02_Ability01_Part01",
-        "8033012_Monster_W1_Mecha03_02_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W1_Mecha03_02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "8033012_Modifiers": {
       "fileName": "8033012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3994,6 +2624,1376 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Passive01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Passive01",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"908704672\">W1_Mecha03_02_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2065276551\">Monster_W1_Mecha03_02_ResetAI</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1161336022\">Monster_W1_Mecha03_02_CoinPassive</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1215936421\">Monster_W1_Mecha03_02_EffectController</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1791558255\">Monster_W1_Mecha03_02_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2065276551\">Monster_W1_Mecha03_02_ResetAI</a>",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "AIFlag",
+                    "compareType": "<=",
+                    "value2": 5,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 9
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability06_Part02": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.3,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.3,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+              "displayLines": "{[Skill06[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill06[0]]}"
+              ]
+            },
+            "HitSplit": 0.4,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability06_Part01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability06_Part01",
+      "childAbilityList": [
+        "8033012_Monster_W1_Mecha03_02_Ability06_Camera",
+        "8033012_Monster_W1_Mecha03_02_Ability06_Part01",
+        "8033012_Monster_W1_Mecha03_02_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_02_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability05_Part02": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 803301000,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                    "displayLines": "{[Skill05[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[1]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonID1",
+                      "summonLocation": "First"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                    "displayLines": "{[Skill05[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[1]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonID1",
+                      "summonLocation": "Last"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                    "displayLines": "{[Skill05[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[0]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonID0",
+                      "summonLocation": "First"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": {
+                    "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                    "displayLines": "{[Skill05[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[0]]}"
+                    ]
+                  },
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "SummonID0",
+                      "summonLocation": "Last"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Random Chance",
+                "chance": 0.5
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Enemy Team",
+                    "location": "Left"
+                  },
+                  "passed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                        "displayLines": "{[Skill05[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill05[0]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Create Enemy from Custom",
+                          "value": "SummonID0",
+                          "summonLocation": "First"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                        "displayLines": "{[Skill05[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill05[0]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Create Enemy from Custom",
+                          "value": "SummonID0",
+                          "summonLocation": "Last"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team Location",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "team": "Enemy Team",
+                    "location": "Left"
+                  },
+                  "passed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                        "displayLines": "{[Skill05[1]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill05[1]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Create Enemy from Custom",
+                          "value": "SummonID1",
+                          "summonLocation": "First"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                        "displayLines": "{[Skill05[1]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill05[1]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Create Enemy from Custom",
+                          "value": "SummonID1",
+                          "summonLocation": "Last"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "WMonster_W1_Mecha_02_PhaseFlag"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "invertCondition": true
+              },
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "<",
+                "value2": 3
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio": {
+                  "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
+                  "displayLines": "{[PassiveSkillInitiate[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkillInitiate[0]]}"
+                  ]
+                }
+              },
+              "casterAssign": "TargetSelf"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability05_Part01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability05_Part01",
+      "childAbilityList": [
+        "8033012_Monster_W1_Mecha03_02_Ability05_Camera",
+        "8033012_Monster_W1_Mecha03_02_Ability05_Part01",
+        "8033012_Monster_W1_Mecha03_02_Ability05_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_02_Ability05_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability04_Part02": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>",
+                "invertCondition": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Shot Fired"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
+                  "displayLines": "{[PassiveSkillInitiate[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[PassiveSkillInitiate[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+            "compareType": "=",
+            "value2": 3,
+            "valueType": "Layer"
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                "compareType": "=",
+                "value2": 2,
+                "valueType": "Layer"
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                    "compareType": "=",
+                    "value2": 1,
+                    "valueType": "Layer"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-442192004\">Monster_W1_Mecha03_02_Ability04Mark</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability04_Part01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability04_Part01",
+      "childAbilityList": [
+        "8033012_Monster_W1_Mecha03_02_Ability04_Camera",
+        "8033012_Monster_W1_Mecha03_02_Ability04_Part01",
+        "8033012_Monster_W1_Mecha03_02_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_02_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability03_Part02": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]"
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 7,
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "HitSplit": 0.125,
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "HitSplit": 0.125,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-83633087\">Monster_W1_Mecha03_02_Effect</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability03_Part01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability03_Part01",
+      "childAbilityList": [
+        "8033012_Monster_W1_Mecha03_02_Ability03_Camera",
+        "8033012_Monster_W1_Mecha03_02_Ability03_Part01",
+        "8033012_Monster_W1_Mecha03_02_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_02_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability02_Part02": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1080547453\">Monster_W1_Mecha03_02_Ability04After</a>"
+            }
+          ]
+        },
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1515004059\">Monster_W1_Mecha03_02_ChargeEffect</a>[<span class=\"descriptionNumberColor\">In Training</span>]"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability02_Part01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability02_Part01",
+      "childAbilityList": [
+        "8033012_Monster_W1_Mecha03_02_Ability02_Camera",
+        "8033012_Monster_W1_Mecha03_02_Ability02_Part01",
+        "8033012_Monster_W1_Mecha03_02_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_02_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability01_Part02": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8033012_Monster_W1_Mecha03_02_Ability01_Part01": {
+      "fileName": "8033012_Monster_W1_Mecha03_02_Ability01_Part01",
+      "childAbilityList": [
+        "8033012_Monster_W1_Mecha03_02_Ability01_Camera",
+        "8033012_Monster_W1_Mecha03_02_Ability01_Part01",
+        "8033012_Monster_W1_Mecha03_02_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W1_Mecha03_02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

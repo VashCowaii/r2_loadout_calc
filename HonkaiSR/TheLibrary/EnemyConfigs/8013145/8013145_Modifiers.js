@@ -148,10 +148,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>",
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1178360880\">Enemy_AML_Boss_Part2_IF_Ability13_Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -485,9 +482,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>",
       "useEntitySnapshot": true,
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

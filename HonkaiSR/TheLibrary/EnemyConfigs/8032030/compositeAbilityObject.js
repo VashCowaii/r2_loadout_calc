@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8032030,
   "trimCharacterName": 8032030,
   "abilityList": [
+    "8032030_Modifiers",
     "8032030_Monster_W3_AventurinePart_Passive01",
     "8032030_Monster_W3_AventurinePart_Ability04_Part02",
     "8032030_Monster_W3_AventurinePart_Ability04_Part01",
@@ -11,930 +12,9 @@ const compositeAbilityObject = {
     "8032030_Monster_W3_AventurinePart_Ability02_Part02",
     "8032030_Monster_W3_AventurinePart_Ability02_Part01",
     "8032030_Monster_W3_AventurinePart_Ability01_Part02",
-    "8032030_Monster_W3_AventurinePart_Ability01_Part01",
-    "8032030_Modifiers"
+    "8032030_Monster_W3_AventurinePart_Ability01_Part01"
   ],
   "abilityObject": {
-    "8032030_Monster_W3_AventurinePart_Passive01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Passive01",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability04_Part02": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Reset Toughness",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "AvatarDiceResult",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>"
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "AvatarDiceResult",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
-                  "multiplier": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Add Target by Unique Identifier",
-              "identifier": "W3_Aventurine_00"
-            },
-            "value1": "DiceResult",
-            "compareType": "<",
-            "value2": {
-              "operator": "Variables[0] (AvatarDiceResult) || RETURN",
-              "displayLines": "AvatarDiceResult",
-              "constants": [],
-              "variables": [
-                "AvatarDiceResult"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "SpecialDie",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "SpecialDie",
-              "value": 0
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>"
-              },
-              "noTargetFound": [
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "WaitInsert",
-                  "value": 0
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Summoner}}"
-                    },
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "searchRandom": true,
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Mark Entity For Immediate Death",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        },
-                        {
-                          "name": "Force Entity Death",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"949876985\">Monster_W3_Aventurine_Result</a>"
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster's Summoner}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1868976135\">Monster_W3_Aventurine_WeakProtect</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"549807086\">Monster_W3_Aventurine_Ability04_NoGambling</a>[<span class=\"descriptionNumberColor\">Look, Don't Speak</span>]"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "variableName": "DiceResult",
-                  "value": 0
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1639857943\">Monster_W3_Aventurine_GlobalMainIntensity</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1871436959\">Monster_W3_Aventurine_Unselectable</a>"
-                },
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "phase": "Phase1"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability04_Part01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability04_Part01",
-      "childAbilityList": [
-        "8032030_Monster_W3_AventurinePart_Ability04_Camera",
-        "8032030_Monster_W3_AventurinePart_Ability04_Part01",
-        "8032030_Monster_W3_AventurinePart_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_AventurinePart_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability03_Part02": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Reset Toughness",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability03_Part01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability03_Part01",
-      "childAbilityList": [
-        "8032030_Monster_W3_AventurinePart_Ability03_Part01",
-        "8032030_Monster_W3_AventurinePart_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_AventurinePart_Ability03_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability02_Part02": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"718327308\">Monster_W3_AventurinePart_Speed</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Dispel Debuffs",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "silent": true
-            },
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-34127136\">Monster_W3_AventurinePart_Result</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1604729097\">Monster_W3_AventurinePart_ResultTarget</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-34127136\">Monster_W3_AventurinePart_Result</a>"
-            },
-            {
-              "name": "Change Character Transformation",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "phase": "Phase1"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>[<span class=\"descriptionNumberColor\">Influx of Fortuity</span>]"
-              },
-              "passed": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "phase": "Phase3"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1604729097\">Monster_W3_AventurinePart_ResultTarget</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Aventurine: Self and Team Members}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "DiceGamblingInsertCheck",
-              "value": 0
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability02_Part01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability02_Part01",
-      "childAbilityList": [
-        "8032030_Monster_W3_AventurinePart_Ability02_Camera",
-        "8032030_Monster_W3_AventurinePart_Ability02_Part01",
-        "8032030_Monster_W3_AventurinePart_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              },
-              {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "DiceGamblingInsertCheck",
-                    "compareType": "=",
-                    "value2": 1
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_AventurinePart_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability01_Part02": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8032030_Monster_W3_AventurinePart_Ability01_Part01": {
-      "fileName": "8032030_Monster_W3_AventurinePart_Ability01_Part01",
-      "childAbilityList": [
-        "8032030_Monster_W3_AventurinePart_Ability01_Camera",
-        "8032030_Monster_W3_AventurinePart_Ability01_Part01",
-        "8032030_Monster_W3_AventurinePart_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_AventurinePart_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8032030_Modifiers": {
       "fileName": "8032030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2500,9 +1580,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3773,10 +2850,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-          "latentQueue": [
-            "DiceGamblingInsertCheck"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>"
         },
         {
           "name": "Modifier Construction",
@@ -4003,6 +3077,926 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Passive01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Passive01",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability04_Part02": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Reset Toughness",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "AvatarDiceResult",
+          "value": 0
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "AvatarDiceResult",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
+                  "multiplier": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Add Target by Unique Identifier",
+              "identifier": "W3_Aventurine_00"
+            },
+            "value1": "DiceResult",
+            "compareType": "<",
+            "value2": {
+              "operator": "Variables[0] (AvatarDiceResult) || RETURN",
+              "displayLines": "AvatarDiceResult",
+              "constants": [],
+              "variables": [
+                "AvatarDiceResult"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "SpecialDie",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "SpecialDie",
+              "value": 0
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>"
+              },
+              "noTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "WaitInsert",
+                  "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Summoner}}"
+                    },
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "searchRandom": true,
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Mark Entity For Immediate Death",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        },
+                        {
+                          "name": "Force Entity Death",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Summoner}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"949876985\">Monster_W3_Aventurine_Result</a>"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Summoner}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1868976135\">Monster_W3_Aventurine_WeakProtect</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"549807086\">Monster_W3_Aventurine_Ability04_NoGambling</a>[<span class=\"descriptionNumberColor\">Look, Don't Speak</span>]"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "variableName": "DiceResult",
+                  "value": 0
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1639857943\">Monster_W3_Aventurine_GlobalMainIntensity</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1871436959\">Monster_W3_Aventurine_Unselectable</a>"
+                },
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "phase": "Phase1"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability04_Part01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability04_Part01",
+      "childAbilityList": [
+        "8032030_Monster_W3_AventurinePart_Ability04_Camera",
+        "8032030_Monster_W3_AventurinePart_Ability04_Part01",
+        "8032030_Monster_W3_AventurinePart_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_AventurinePart_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability03_Part02": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Reset Toughness",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability03_Part01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability03_Part01",
+      "childAbilityList": [
+        "8032030_Monster_W3_AventurinePart_Ability03_Part01",
+        "8032030_Monster_W3_AventurinePart_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_AventurinePart_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability02_Part02": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"718327308\">Monster_W3_AventurinePart_Speed</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Dispel Debuffs",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "silent": true
+            },
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-34127136\">Monster_W3_AventurinePart_Result</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1604729097\">Monster_W3_AventurinePart_ResultTarget</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-34127136\">Monster_W3_AventurinePart_Result</a>"
+            },
+            {
+              "name": "Change Character Transformation",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "phase": "Phase1"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"288143778\">Monster_W3_AventurinePart_DeathRattle_RL</a>[<span class=\"descriptionNumberColor\">Influx of Fortuity</span>]"
+              },
+              "passed": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "phase": "Phase3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1604729097\">Monster_W3_AventurinePart_ResultTarget</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Aventurine: Self and Team Members}}"
+          },
+          "searchRandom": true,
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "DiceGamblingInsertCheck",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Active: Fast-Forward Animations"
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+              }
+            ]
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability02_Part01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability02_Part01",
+      "childAbilityList": [
+        "8032030_Monster_W3_AventurinePart_Ability02_Camera",
+        "8032030_Monster_W3_AventurinePart_Ability02_Part01",
+        "8032030_Monster_W3_AventurinePart_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              },
+              {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "DiceGamblingInsertCheck",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_AventurinePart_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability01_Part02": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8032030_Monster_W3_AventurinePart_Ability01_Part01": {
+      "fileName": "8032030_Monster_W3_AventurinePart_Ability01_Part01",
+      "childAbilityList": [
+        "8032030_Monster_W3_AventurinePart_Ability01_Camera",
+        "8032030_Monster_W3_AventurinePart_Ability01_Part01",
+        "8032030_Monster_W3_AventurinePart_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_AventurinePart_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     }
   }

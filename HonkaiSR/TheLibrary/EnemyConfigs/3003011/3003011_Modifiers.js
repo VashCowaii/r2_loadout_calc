@@ -92,9 +92,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2093476766\">MModifier_Monster_W3_Dinosaur_Effect_Fire3</a>",
-      "latentQueue": [
-        "Crazy_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -123,9 +120,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2076699147\">MModifier_Monster_W3_Dinosaur_Effect_Fire2</a>",
-      "latentQueue": [
-        "Crazy_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -154,9 +148,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2127032004\">MModifier_Monster_W3_Dinosaur_Effect_Fire1</a>",
-      "latentQueue": [
-        "Crazy_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2292,9 +2283,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]",
-      "latentQueue": [
-        "Crazy_Flag"
-      ],
       "description": "When this unit is attacked or takes DoT, gain 1 stack of Stove Heating.",
       "type": "Other",
       "statusName": "Boil"
@@ -2447,9 +2435,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "STAT_SpeedDown"
-      ],
-      "stackData": [
-        "MDF_PropertyValue"
       ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

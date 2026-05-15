@@ -104,9 +104,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__196132555\">Enemy_W4_DawnsEye_01_MainStoryLockHP</a>",
-      "stackData": [
-        "MDF_DeathSPAdd"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -159,9 +156,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-459185506\">Enemy_W4_DawnsEye_01_StandbyEffect</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -178,12 +172,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_Speed"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1033,13 +1021,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_TotalDamageRatioAdd",
-        "MDF_TotalDamageRatioCut"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -1247,9 +1228,6 @@ const configAbility = {
       "stackType": "Replace",
       "stackData": [
         "MDF_TotalDamageRatioAdd"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
       "type": "Other",
@@ -1538,12 +1516,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
       "modifierFlags": [
         "ForceHitH"
-      ],
-      "stackData": [
-        "StanceDamage"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "execute": [
         {
@@ -1919,9 +1891,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1480712068\">W4_DawnsEye_BattleScore3</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -2079,10 +2048,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
-      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
@@ -2179,9 +2144,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__357250261\">Enemy_W4_DawnsEye_Part02Effect</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2274,9 +2236,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Currently unselectable.",
       "type": "Other",
       "statusName": "Marine Layer",
@@ -2368,13 +2327,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_SunnyBreakCold",
-        "MDF_SunnyBreakColdRatio"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "description": "When receiving DMG, \"Sublime, Radiant, Avatar of the Sky\" loses an equal amount of HP.",
       "type": "Other",
@@ -3314,12 +3266,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_SunnyBreakCold"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3383,12 +3329,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_ThunderDark"
-      ],
-      "latentQueue": [
-        "WeatherPhase02Flag"
-      ],
       "description": "Uses \"Wrath, Rend of Eternal Sky\" in the next action and additionally deals DMG based on the number of Thunderclouds possessed. Current Thundercloud(s): <span class=\"descriptionNumberColor\">MDF_ThunderDark</span>.",
       "type": "Buff",
       "statusName": "Ionization",
@@ -3402,9 +3342,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-526594563\">Modifier_Monster_W4_DawnsEye_WheaterRainChargeBreak</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "WeatherPhase02Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -3871,19 +3808,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1923265590\">Modifier_Monster_W4_DawnsEye_WheaterRain</a>",
-      "stackData": [
-        "Weather_Thunder",
-        "Weather_ThunderChange",
-        "Weather_ThunderDamageLight",
-        "Weather_ThunderDamageDark",
-        "Weather_ThunderCount",
-        "Weather_ThunderChance",
-        "Weather_ThunderKillCount",
-        "Weather_Skill05MaxCount"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -5488,10 +5412,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1803162686\">Enemy_W4_DawnsEye_SoundController</a>",
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
-      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle"
@@ -5529,10 +5449,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-283400185\">Enemy_W4_DawnsEye_DisableLookAt</a>",
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn Start [Anyone]"
@@ -5577,13 +5493,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-440353918\">Enemy_W4_DawnsEye_BreakController</a>",
       "modifierFlags": [
         "ForceHitH"
-      ],
-      "stackData": [
-        "StanceDamage"
-      ],
-      "latentQueue": [
-        "AIFlag",
-        "PauseLevelForCameraPerform"
       ],
       "execute": [
         {
@@ -6056,9 +5965,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1987146522\">Enemy_W4_DawnsEye_PartController</a>",
       "counter": 1,
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

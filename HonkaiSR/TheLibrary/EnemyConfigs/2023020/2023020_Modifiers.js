@@ -214,10 +214,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1692594642\">Monster_Standard_Layer_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageAddedRatio",
-        "MDF_MaxLayer"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span> for up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stacks.",
       "type": "Buff",
       "effectName": "DMG Boost",

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2013011,
   "trimCharacterName": 2013011,
   "abilityList": [
+    "2013011_Modifiers",
     "2013011_Monster_W2_Mecha03_PassiveAbilityInitiate",
     "2013011_Monster_W2_Mecha03_AbilityP01_Insert",
     "2013011_Monster_W2_Mecha03_AbilityP01",
@@ -11,853 +12,9 @@ const compositeAbilityObject = {
     "2013011_Monster_W2_Mecha03_Ability02_Part02",
     "2013011_Monster_W2_Mecha03_Ability02_Part01",
     "2013011_Monster_W2_Mecha03_Ability01_Part02",
-    "2013011_Monster_W2_Mecha03_Ability01_Part01",
-    "2013011_Modifiers"
+    "2013011_Monster_W2_Mecha03_Ability01_Part01"
   ],
   "abilityObject": {
-    "2013011_Monster_W2_Mecha03_PassiveAbilityInitiate": {
-      "fileName": "2013011_Monster_W2_Mecha03_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1528696767\">W2_Mecha03_BattleScore1</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_AICounter",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_State"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_AbilityP01_Insert": {
-      "fileName": "2013011_Monster_W2_Mecha03_AbilityP01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "W2_Mecha03_BattleSore2_Flag",
-          "context": "TargetEntity",
-          "value": 1,
-          "max": 3
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "W2_Mecha03_BattleSore2_Flag",
-            "compareType": ">=",
-            "value2": 3,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Achievement",
-              "matchTags": true,
-              "relatedAchievements": [
-                {
-                  "title": "Wrathful Aurumaton",
-                  "desc": "In a single battle, cause Aurumaton Gatekeeper to enter the Wrath state 3 times",
-                  "rarity": "Mid"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 2013011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Aurumaton Gatekeeper (Bug)"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 201301100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 2013011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Aurumaton Gatekeeper (Bug)"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 201301100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 2013011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Aurumaton Gatekeeper (Bug)"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 201301100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
-              "duration": 3,
-              "valuePerStack": {
-                "MDF_SpeedUpRatio": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
-              "valuePerStack": {
-                "MDF_SpeedAddedValue": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Mecha03_00_SummonID",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Mecha03_00_SummonID",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "team": "Enemy Team",
-                "location": "Right"
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Mecha03_00_SummonID",
-                      "summonLocation": "Last"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "refreshPositions": false,
-                  "enemyList": [
-                    {
-                      "name": "Create Enemy from Custom",
-                      "value": "W2_Mecha03_00_SummonID",
-                      "summonLocation": "First"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 2013011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Aurumaton Gatekeeper (Bug)"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 201301100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 3,
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_AbilityP01": {
-      "fileName": "2013011_Monster_W2_Mecha03_AbilityP01",
-      "childAbilityList": [
-        "2013011_Monster_W2_Mecha03_AbilityP01",
-        "2013011_Monster_W2_Mecha03_AbilityP01_Insert",
-        "2013011_Monster_W2_Mecha03_AbilityP01_Camera",
-        "2013011_Monster_W2_Mecha03_AbilityP02_Camera"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1970609621\">Enemy_W2_Mecha03_Overdrive_Controller</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"516569012\">Enemy_W2_Mecha03_Overdrive_Hint</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_Ability03_Part02": {
-      "fileName": "2013011_Monster_W2_Mecha03_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.2)",
-              "constants": [
-                0.2
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "20%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.8) || MUL || RETURN",
-              "displayLines": "({[Skill03[0]]} * 0.8)",
-              "constants": [
-                0.8
-              ],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "80%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
-            "displayLines": "{[Skill03[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[2]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-            "displayLines": "{[Skill03[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill03[1]]}"
-            ]
-          },
-          "immediateEffect": true,
-          "valuePerStack": {
-            "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
-              "displayLines": "{[Skill03[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[3]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
-            "compareType": "=",
-            "value2": 1,
-            "valueType": "LifeTime"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_Ability03_Part01": {
-      "fileName": "2013011_Monster_W2_Mecha03_Ability03_Part01",
-      "childAbilityList": [
-        "2013011_Monster_W2_Mecha03_Ability03_Camera",
-        "2013011_Monster_W2_Mecha03_Ability03_Part01",
-        "2013011_Monster_W2_Mecha03_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Mecha03_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_Ability02_Part02": {
-      "fileName": "2013011_Monster_W2_Mecha03_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_Ability02_Part01": {
-      "fileName": "2013011_Monster_W2_Mecha03_Ability02_Part01",
-      "childAbilityList": [
-        "2013011_Monster_W2_Mecha03_Ability02_Camera",
-        "2013011_Monster_W2_Mecha03_Ability02_Part01",
-        "2013011_Monster_W2_Mecha03_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Mecha03_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_Ability01_Part02": {
-      "fileName": "2013011_Monster_W2_Mecha03_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
-          "stackLimit": 3,
-          "addStacksPerTrigger": 1
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2013011_Monster_W2_Mecha03_Ability01_Part01": {
-      "fileName": "2013011_Monster_W2_Mecha03_Ability01_Part01",
-      "childAbilityList": [
-        "2013011_Monster_W2_Mecha03_Ability01_Camera",
-        "2013011_Monster_W2_Mecha03_Ability01_Part01",
-        "2013011_Monster_W2_Mecha03_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Mecha03_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "2013011_Modifiers": {
       "fileName": "2013011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -925,10 +82,6 @@ const compositeAbilityObject = {
             "RemoveWhenCasterDead",
             "AttackSign"
           ],
-          "latentQueue": [
-            "W2_Mecha03_BattleSore2_Flag",
-            "W2_Mecha03_00_Overdrive_InsertFlag"
-          ],
           "description": "%CasterName will focus attacks on this target.",
           "type": "Other",
           "effectName": "Lock On",
@@ -939,12 +92,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
           "modifierFlags": [
             "MuteBreak"
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio"
-          ],
-          "latentQueue": [
-            "W2_Mecha03_BattleSore2_Flag"
           ],
           "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and it activates the ability Track Down.",
           "type": "Buff",
@@ -1054,12 +201,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
           "modifierFlags": [
             "MuteBreak"
-          ],
-          "stackData": [
-            "MDF_SpeedAddedValue"
-          ],
-          "latentQueue": [
-            "W2_Mecha03_BattleSore2_Flag"
           ],
           "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedValue</span> and it activates the abilities Restraint and Enchainment.",
           "type": "Buff",
@@ -2216,6 +1357,849 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_PassiveAbilityInitiate": {
+      "fileName": "2013011_Monster_W2_Mecha03_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1528696767\">W2_Mecha03_BattleScore1</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_AICounter",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_Overdrive_State"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_AbilityP01_Insert": {
+      "fileName": "2013011_Monster_W2_Mecha03_AbilityP01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-286697001\">Enemy_W2_Mecha03_Overdrive_DelayActive_Controller</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"255287671\">Enemy_W2_Mecha03_Overdrive_Accumulate_Display3</a>[<span class=\"descriptionNumberColor\">Sanction Rate</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "W2_Mecha03_BattleSore2_Flag",
+          "context": "TargetEntity",
+          "value": 1,
+          "max": 3
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "W2_Mecha03_BattleSore2_Flag",
+            "compareType": ">=",
+            "value2": 3,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Achievement",
+              "matchTags": true,
+              "relatedAchievements": [
+                {
+                  "title": "Wrathful Aurumaton",
+                  "desc": "In a single battle, cause Aurumaton Gatekeeper to enter the Wrath state 3 times",
+                  "rarity": "Mid"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 2013011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Aurumaton Gatekeeper (Bug)"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 201301100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 2013011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Aurumaton Gatekeeper (Bug)"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 201301100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 2013011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Aurumaton Gatekeeper (Bug)"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 201301100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
+              "duration": 3,
+              "valuePerStack": {
+                "MDF_SpeedUpRatio": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+              "valuePerStack": {
+                "MDF_SpeedAddedValue": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "<=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Mecha03_00_SummonID",
+                      "summonLocation": "First"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Mecha03_00_SummonID",
+                      "summonLocation": "Last"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "<=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Right"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Mecha03_00_SummonID",
+                      "summonLocation": "Last"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Mecha03_00_SummonID",
+                      "summonLocation": "First"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 2013011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Aurumaton Gatekeeper (Bug)"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 201301100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 3,
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_AbilityP01": {
+      "fileName": "2013011_Monster_W2_Mecha03_AbilityP01",
+      "childAbilityList": [
+        "2013011_Monster_W2_Mecha03_AbilityP01",
+        "2013011_Monster_W2_Mecha03_AbilityP01_Insert",
+        "2013011_Monster_W2_Mecha03_AbilityP01_Camera",
+        "2013011_Monster_W2_Mecha03_AbilityP02_Camera"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1970609621\">Enemy_W2_Mecha03_Overdrive_Controller</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"516569012\">Enemy_W2_Mecha03_Overdrive_Hint</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_Ability03_Part02": {
+      "fileName": "2013011_Monster_W2_Mecha03_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.2) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.2)",
+              "constants": [
+                0.2
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "20%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.8) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.8)",
+              "constants": [
+                0.8
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "80%"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill03[2]]}) || RETURN",
+            "displayLines": "{[Skill03[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[2]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+            "displayLines": "{[Skill03[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill03[1]]}"
+            ]
+          },
+          "immediateEffect": true,
+          "valuePerStack": {
+            "MDF_ActionDelayRatio": {
+              "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
+              "displayLines": "{[Skill03[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[3]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1235993006\">Monster_W2_Mecha03_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
+            "compareType": "=",
+            "value2": 1,
+            "valueType": "LifeTime"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_Ability03_Part01": {
+      "fileName": "2013011_Monster_W2_Mecha03_Ability03_Part01",
+      "childAbilityList": [
+        "2013011_Monster_W2_Mecha03_Ability03_Camera",
+        "2013011_Monster_W2_Mecha03_Ability03_Part01",
+        "2013011_Monster_W2_Mecha03_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Mecha03_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_Ability02_Part02": {
+      "fileName": "2013011_Monster_W2_Mecha03_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_Ability02_Part01": {
+      "fileName": "2013011_Monster_W2_Mecha03_Ability02_Part01",
+      "childAbilityList": [
+        "2013011_Monster_W2_Mecha03_Ability02_Camera",
+        "2013011_Monster_W2_Mecha03_Ability02_Part01",
+        "2013011_Monster_W2_Mecha03_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Mecha03_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_Ability01_Part02": {
+      "fileName": "2013011_Monster_W2_Mecha03_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"618418511\">Enemy_W2_Mecha03_Overdrive_Accumulate</a>",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1941111631\">Enemy_W2_Mecha03_Overdrive_Accumulate_Toast</a>",
+          "stackLimit": 3,
+          "addStacksPerTrigger": 1
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1887773470\">Standard_FatigueRatio</a>[<span class=\"descriptionNumberColor\">Weaken</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+            "displayLines": "{[Skill01[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+            "displayLines": "{[Skill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+              "displayLines": "{[Skill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[2]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2013011_Monster_W2_Mecha03_Ability01_Part01": {
+      "fileName": "2013011_Monster_W2_Mecha03_Ability01_Part01",
+      "childAbilityList": [
+        "2013011_Monster_W2_Mecha03_Ability01_Camera",
+        "2013011_Monster_W2_Mecha03_Ability01_Part01",
+        "2013011_Monster_W2_Mecha03_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Mecha03_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     }
   }

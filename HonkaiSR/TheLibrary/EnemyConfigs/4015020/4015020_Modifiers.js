@@ -104,9 +104,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__196132555\">Enemy_W4_DawnsEye_01_MainStoryLockHP</a>",
-      "stackData": [
-        "MDF_DeathSPAdd"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -175,12 +172,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_Speed"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1030,13 +1021,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_TotalDamageRatioAdd",
-        "MDF_TotalDamageRatioCut"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",
@@ -1244,9 +1228,6 @@ const configAbility = {
       "stackType": "Replace",
       "stackData": [
         "MDF_TotalDamageRatioAdd"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "description": "The current Charge ratio of \"Eye of Twilight\" is <span class=\"descriptionNumberColor\">MDF_ChargePercentage</span>.",
       "type": "Other",
@@ -1535,12 +1516,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
       "modifierFlags": [
         "ForceHitH"
-      ],
-      "stackData": [
-        "StanceDamage"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "execute": [
         {

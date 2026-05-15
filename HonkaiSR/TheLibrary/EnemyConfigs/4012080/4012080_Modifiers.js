@@ -56,9 +56,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteSpeed"
       ],
-      "stackData": [
-        "MDF_Weather"
-      ],
       "description": "\"Daythunder Raven\" enters Enhanced state. Dispelled upon being Weakness Broken.",
       "type": "Other",
       "effectName": "Enhance",

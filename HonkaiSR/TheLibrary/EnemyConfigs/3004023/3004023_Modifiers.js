@@ -127,13 +127,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1072054994\">MModifier_Monster_W3_Theater_DamageSharePhase2</a>",
-      "latentQueue": [
-        "BreakEndFlag",
-        "InsertCheck",
-        "LockCount",
-        "AI_HeiShengBei_SpecialAI",
-        "AI_HeiShengBei_Need"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -230,9 +223,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__579019848\">MModifier_Monster_W3_TV_02_FaceLock</a>[<span class=\"descriptionNumberColor\">Tutoring</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "In Tutoring mode, this unit will not change its channel when attacked.",
       "type": "Other",
       "effectName": "Being Tutored",
@@ -443,9 +433,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__665202517\">MModifier_Monster_W3_TV_02_Side2</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Banacademic Office members can use \"Classroom Channel\" abilities. After they are attacked, they switch to \"Off-Class Channel\" mode.",
       "type": "Other",
       "statusName": "Classroom Channel",
@@ -486,9 +473,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__614869660\">MModifier_Monster_W3_TV_02_Side1</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Banacademic Office members can use \"Off-Class Channel\" abilities. After they are attacked, they will not switch channels.",
       "type": "Other",
       "statusName": "Off-Class Channel",

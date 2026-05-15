@@ -3,439 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032031,
   "trimCharacterName": 4032031,
   "abilityList": [
+    "4032031_Modifiers",
     "4032031_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
     "4032031_Monster_W2_Valkyrie01_02_LocalLegend_AbilityP01",
     "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
     "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01",
     "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02",
-    "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01",
-    "4032031_Modifiers"
+    "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01"
   ],
   "abilityObject": {
-    "4032031_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter": {
-      "fileName": "4032031_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              }
-            ]
-          }
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Reset Toughness",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4032031_Monster_W2_Valkyrie01_02_LocalLegend_AbilityP01": {
-      "fileName": "4032031_Monster_W2_Valkyrie01_02_LocalLegend_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"511962638\">Enemy_W2_Valkyrie01_02_LocalLegend_AbilityP01</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__511962638\">Enemy_W2_Valkyrie01_02_LocalLegend_AbilityP01</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "MDF_IsNegative"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "HP Change [Owner]",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_NegativeHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "MDF_NegativeHP",
-                    "compareType": ">",
-                    "value2": 0
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "flagName": "STAT_CTRL",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "flagName": "Break",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Has Flag",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "flagName": "DisableAction",
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Compare: Variable",
-                            "value1": "MDF_IsNegative",
-                            "compareType": "=",
-                            "value2": 0
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_IsNegative",
-                      "value": 1
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "MDF_IsNegative",
-                      "value": 0
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "MDF_IsNegative",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 0,
-                  "maxValue": 0,
-                  "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 1,
-                  "maxValue": 1,
-                  "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Change Character Transformation",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "phase": "Phase2"
-                    },
-                    {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "priorityTag": "EnemyReviveSelf",
-                      "canHitNonTargets": true,
-                      "showInActionOrder": true,
-                      "allowAbilityTriggers": false
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02": {
-      "fileName": "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "TargetCount",
-          "livingTargets": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (TargetCount) || DIV || RETURN",
-              "displayLines": "({[Skill02[0]]} / TargetCount)",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}",
-                "TargetCount"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01": {
-      "fileName": "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01",
-      "childAbilityList": [
-        "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01",
-        "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
-        "4032031_Monster_W2_Valkyrie01_02_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02": {
-      "fileName": "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01": {
-      "fileName": "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01",
-      "childAbilityList": [
-        "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01",
-        "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02",
-        "4032031_Monster_W2_Valkyrie01_02_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Valkyrie01_02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "4032031_Modifiers": {
       "fileName": "4032031_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1012,6 +588,430 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4032031_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter": {
+      "fileName": "4032031_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Reset Toughness",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4032031_Monster_W2_Valkyrie01_02_LocalLegend_AbilityP01": {
+      "fileName": "4032031_Monster_W2_Valkyrie01_02_LocalLegend_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"511962638\">Enemy_W2_Valkyrie01_02_LocalLegend_AbilityP01</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__511962638\">Enemy_W2_Valkyrie01_02_LocalLegend_AbilityP01</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_IsNegative"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1258915271\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_LockHP</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "MDF_NegativeHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_NegativeHP",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "flagName": "Break",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "flagName": "DisableAction",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_IsNegative",
+                            "compareType": "=",
+                            "value2": 0
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_IsNegative",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_IsNegative",
+                      "value": 0
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "MDF_IsNegative",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 0,
+                  "maxValue": 0,
+                  "includeMaxValueInRange": true,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 1,
+                  "maxValue": 1,
+                  "includeMaxValueInRange": true,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Change Character Transformation",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "phase": "Phase2"
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "priorityTag": "EnemyReviveSelf",
+                      "canHitNonTargets": true,
+                      "showInActionOrder": true,
+                      "allowAbilityTriggers": false
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1972420771\">Enemy_XP_Elite01_02_LocalLegend_Ability03_Mark</a>[<span class=\"descriptionNumberColor\">Overloadable</span>]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02": {
+      "fileName": "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "variableName": "TargetCount",
+          "livingTargets": true
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (TargetCount) || DIV || RETURN",
+              "displayLines": "({[Skill02[0]]} / TargetCount)",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}",
+                "TargetCount"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01": {
+      "fileName": "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01",
+      "childAbilityList": [
+        "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part01",
+        "4032031_Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
+        "4032031_Monster_W2_Valkyrie01_02_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Valkyrie01_02_LocalLegend_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02": {
+      "fileName": "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01": {
+      "fileName": "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01",
+      "childAbilityList": [
+        "4032031_Monster_W2_Valkyrie01_02_Ability01_Part01",
+        "4032031_Monster_W2_Valkyrie01_02_Ability01_Part02",
+        "4032031_Monster_W2_Valkyrie01_02_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Valkyrie01_02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

@@ -786,7 +786,8 @@ const configAbility = {
               ]
             },
             "instanceTag": "Anaxa_00_BP",
-            "Tags": null
+            "Tags": null,
+            "EnergyGainPercent": "check(value:(_count <= 4), then:1, else:0)* 100%"
           }
         },
         {

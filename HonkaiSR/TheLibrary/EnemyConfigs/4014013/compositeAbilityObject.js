@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014013,
   "trimCharacterName": 4014013,
   "abilityList": [
+    "4014013_Modifiers",
     "4014013_Monster_W4_Nikadory_IF_PassiveAbility_Insert",
     "4014013_Monster_W4_Nikadory_IF_AbilityEX05",
     "4014013_Monster_W4_Nikadory_IF_AbilityEX04",
@@ -40,3634 +41,9 @@ const compositeAbilityObject = {
     "4014013_Monster_W4_Nikadory_Ability01_Part01",
     "4014013_Monster_W4_Nikadory_IF_Ability00_Part02",
     "4014013_Monster_W4_Nikadory_IF_Ability00_Part01",
-    "4014013_Monster_W4_Nikadory_PassiveAbility_BGM",
-    "4014013_Modifiers"
+    "4014013_Monster_W4_Nikadory_PassiveAbility_BGM"
   ],
   "abilityObject": {
-    "4014013_Monster_W4_Nikadory_IF_PassiveAbility_Insert": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Monster Rank",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "compareType": "<=",
-                "value2": 2
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"261985089\">Monster_W4_Nikadory_Energy</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1597888221\">Enemy_W4_Hearse_IF_BreakState</a>"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 4
-          },
-          "ifTargetFound": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "ChangePhase_MaxHPValue"
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "variableName": "ChangePhase_MaxHPValue",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-            },
-            {
-              "name": "Set HP Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "setPercent": 1
-            },
-            {
-              "name": "Set Enemy Phase",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "mode": "Inc"
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "AIFlag",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
-          "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-              "displayLines": "{[SkillP03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
-              "stackLimit": {
-                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                "displayLines": "{[SkillEX03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[0]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                "displayLines": "{[SkillEX03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillEX03[0]]}"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
-              "stackLimit": {
-                "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                "displayLines": "{[SkillP02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[0]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                "displayLines": "{[SkillP02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP02[0]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-907515616\">MoreOneMorePerTurn_4</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1324450026\">Enemy_W4_Hearse_IF_LockHP</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "W4_Hearse_00"
-        },
-        {
-          "name": "Force-Sync AV Link",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          }
-        },
-        {
-          "name": "Create AV Link",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "linkOrder": 1,
-          "isStart": true,
-          "linkFollowerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          },
-          "linkOwnerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-482936145\">Enemy_W4_Nikadory_IF_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityEX05": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX05",
-      "skillTrigger": "SkillEX05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityEX04": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX04",
-      "skillTrigger": "SkillEX04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 4
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1178138918\">Enemy_W4_Nikadory_IF_AbilityEX04</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"264648512\">Enemy_W4_Nikadory_IF_AbilityEX04_EMY</a>",
-              "valuePerStack": {
-                "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX04[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX04[0]]}"
-                  ]
-                },
-                "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX04[1]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityEX03": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX03",
-      "skillTrigger": "SkillEX03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityEX02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX02",
-      "skillTrigger": "SkillEX02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1278804632\">Enemy_W4_Nikadory_IF_AbilityEX02</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityEX01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX01",
-      "skillTrigger": "SkillEX01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HardLevel",
-            "compareType": ">=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP05": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP05",
-      "skillTrigger": "SkillP05",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP04": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP04",
-      "skillTrigger": "SkillP04",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP03": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP03",
-      "skillTrigger": "SkillP03",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP02",
-      "skillTrigger": "SkillP02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
-              "valuePerStack": {
-                "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[2]]}"
-                  ]
-                },
-                "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[1]]}"
-                  ]
-                },
-                "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX01[0]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
-              "valuePerStack": {
-                "MDF_FrenzyStartDelay": {
-                  "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[0]]}"
-                  ]
-                },
-                "MDF_FrenzyIntervalDelay": {
-                  "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[1]]}"
-                  ]
-                },
-                "MDF_MaxFrenzyLayer": {
-                  "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[2]]}"
-                  ]
-                },
-                "MDF_TokenDMGAddRatioPerLayer": {
-                  "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
-                  "displayLines": "{[SkillEX05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX05[3]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
-              "valuePerStack": {
-                "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
-                },
-                "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
-                },
-                "MDF_CrackedDamage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
-                },
-                "MDF_BPRecoverValue": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
-                },
-                "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
-                },
-                "MDF_CrackedDamageAfter": {
-                  "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-                  "displayLines": "{[SkillP01[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[5]]}"
-                  ]
-                },
-                "MDF_DamageStanceValue": {
-                  "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-                  "displayLines": "{[SkillP01[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[6]]}"
-                  ]
-                },
-                "MDF_SuperShield_MaxLayer": {
-                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
-                  "displayLines": "{[SkillEX03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillEX03[0]]}"
-                  ]
-                },
-                "MDF_SuperShield_BPRecoverValue": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
-                },
-                "MDF_BraveBonusLayer": {
-                  "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                  "displayLines": "{[SkillP02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[2]]}"
-                  ]
-                },
-                "MDF_SuperShield_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[SkillP02[3]]}) || RETURN",
-                  "displayLines": "{[SkillP02[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[3]]}"
-                  ]
-                },
-                "MDF_SuperShield_DamageStanceValue": {
-                  "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-                  "displayLines": "{[SkillP02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[4]]}"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
-              "valuePerStack": {
-                "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
-                },
-                "MDF_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-                  "displayLines": "{[SkillP01[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[1]]}"
-                  ]
-                },
-                "MDF_CrackedDamage": {
-                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
-                  "displayLines": "{[SkillP01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[2]]}"
-                  ]
-                },
-                "MDF_BPRecoverValue": {
-                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
-                  "displayLines": "{[SkillP01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[3]]}"
-                  ]
-                },
-                "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
-                  "displayLines": "{[SkillP01[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[4]]}"
-                  ]
-                },
-                "MDF_CrackedDamageAfter": {
-                  "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
-                  "displayLines": "{[SkillP01[5]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[5]]}"
-                  ]
-                },
-                "MDF_DamageStanceValue": {
-                  "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
-                  "displayLines": "{[SkillP01[6]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[6]]}"
-                  ]
-                },
-                "MDF_SuperShield_MaxLayer": {
-                  "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
-                  "displayLines": "{[SkillP02[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[0]]}"
-                  ]
-                },
-                "MDF_SuperShield_BPRecoverValue": {
-                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
-                  "displayLines": "{[SkillP02[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[1]]}"
-                  ]
-                },
-                "MDF_BraveBonusLayer": {
-                  "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
-                  "displayLines": "{[SkillP02[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[2]]}"
-                  ]
-                },
-                "MDF_SuperShield_ActionDelayRatio": {
-                  "operator": "Variables[0] ({[SkillP02[3]]}) || RETURN",
-                  "displayLines": "{[SkillP02[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[3]]}"
-                  ]
-                },
-                "MDF_SuperShield_DamageStanceValue": {
-                  "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
-                  "displayLines": "{[SkillP02[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP02[4]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2069911522\">Enemy_W4_Nikadory_IF_EnterBattle</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"551472509\">Enemy_W4_Nikadory_IF_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"281623476\">Enemy_W4_Nikadory_IF_BraveController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1928829713\">Enemy_W4_Nikadory_IF_RemoveOneMore</a>"
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID01",
-              "summonLocation": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1423347162\">Enemy_W4_Nikadory_IF_WithHearse</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador - The Giver: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"159012087\">Enemy_W4_Nikadory_IF_Passive</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-491014298\">Enemy_W4_Nikadory_IF_HintToastController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-863627586\">Enemy_W4_Nikadory_IF_BPMax</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability14_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability14_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill04Damage"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill04Damage",
-          "value": {
-            "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
-            "displayLines": "{[Skill14[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill14[0]]}"
-            ]
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 1,
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemies by Aggro OR Random}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] (Skill04Damage) || RETURN",
-                      "displayLines": "Skill04Damage",
-                      "constants": [],
-                      "variables": [
-                        "Skill04Damage"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill04Count",
-          "value": {
-            "operator": "Variables[0] ({[Skill14[1]]}) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "({[Skill14[1]]} - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill14[1]]}"
-            ]
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (Skill04Count) || RETURN",
-            "displayLines": "Skill04Count",
-            "constants": [],
-            "variables": [
-              "Skill04Count"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Random Chance",
-                    "chance": 0.5
-                  },
-                  "passed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Imaginary",
-                        "Damage": {
-                          "operator": "Variables[0] (Skill04Damage) || RETURN",
-                          "displayLines": "Skill04Damage",
-                          "constants": [],
-                          "variables": [
-                            "Skill04Damage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Imaginary",
-                        "Damage": {
-                          "operator": "Variables[0] (Skill04Damage) || RETURN",
-                          "displayLines": "Skill04Damage",
-                          "constants": [],
-                          "variables": [
-                            "Skill04Damage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Random Chance",
-                        "chance": 0.5
-                      },
-                      "passed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "canPhase": true,
-                          "AttackScaling": {
-                            "DamageType": "Imaginary",
-                            "Damage": {
-                              "operator": "Variables[0] (Skill04Damage) || RETURN",
-                              "displayLines": "Skill04Damage",
-                              "constants": [],
-                              "variables": [
-                                "Skill04Damage"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "attackType": "Basic ATK",
-                            "EnergyGainPercent": "100%"
-                          }
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "ATK Scaling DMG",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "canPhase": true,
-                          "AttackScaling": {
-                            "DamageType": "Imaginary",
-                            "Damage": {
-                              "operator": "Variables[0] (Skill04Damage) || RETURN",
-                              "displayLines": "Skill04Damage",
-                              "constants": [],
-                              "variables": [
-                                "Skill04Damage"
-                              ]
-                            },
-                            "Toughness": null,
-                            "Tags": null,
-                            "attackType": "Basic ATK",
-                            "EnergyGainPercent": "100%"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "{[Skill14[2]]}"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability14_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability14_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability14_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability14_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability14_Part02"
-      ],
-      "skillTrigger": "Skill14",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability14_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability13_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability13_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
-              "displayLines": "{[Skill13[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill13[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill13[1]]}"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability13_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability13_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_Ability13_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability13_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability13_Part02"
-      ],
-      "skillTrigger": "Skill13",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability13_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability12_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability12_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-              "displayLines": "{[Skill12[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill12[0]]}"
-              ]
-            },
-            "HitSplit": 0.4,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
-              "displayLines": "{[Skill12[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill12[0]]}"
-              ]
-            },
-            "HitSplit": 0.6,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill12[1]]}"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability12_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability12_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability12_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability12_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability12_Part02"
-      ],
-      "skillTrigger": "Skill12",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability12_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability11_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability11_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Target Left of Ability Target(ST)}}"
-          },
-          "maxTargets": 1
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Target Right of Ability Target(ST)}}"
-          },
-          "maxTargets": 1
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
-            },
-            {
-              "name": "Shot Fired"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Targets Adjacent(Blast)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "=",
-            "value2": 1,
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
-              "invertCondition": true
-            }
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
-                },
-                {
-                  "name": "Shot Fired"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
-                  "displayLines": "{[Skill11[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Targets Adjacent(Blast)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
-                  "displayLines": "{[Skill11[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill11[1]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Basic ATK",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            "Trigger: Attack End",
-            {
-              "name": "Action Advance/Delay",
-              "target": {
-                "name": "Target Name",
-                "target": "{{ST and Blast}}"
-              },
-              "advanceType": "Set",
-              "multiAdd": "{[Skill11[2]]}"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability11_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability11_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_Ability11_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability11_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability11_Part02"
-      ],
-      "skillTrigger": "Skill11",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability11_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_Ability10_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_Ability10_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_Ability10_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_Ability10_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability10_Camera",
-        "4014013_Monster_W4_Nikadory_Ability10_Part01",
-        "4014013_Monster_W4_Nikadory_Ability10_Part02"
-      ],
-      "skillTrigger": "Skill10",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_Ability10_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability06_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill06Count",
-          "value": 0
-        },
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Skill06Count",
-              "value": {
-                "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(Skill06Count + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "Skill06Count"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill06Damage",
-          "value": {
-            "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
-            "displayLines": "({[Skill06[0]]} / Skill06Count)",
-            "constants": [],
-            "variables": [
-              "{[Skill06[0]]}",
-              "Skill06Count"
-            ]
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (Skill06Damage) || RETURN",
-              "displayLines": "Skill06Damage",
-              "constants": [],
-              "variables": [
-                "Skill06Damage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
-          "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-              "displayLines": "{[SkillP03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability06_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability06_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_Ability06_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability06_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
-          "valuePerStack": {
-            "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-              "displayLines": "{[SkillP03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP03[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}.[[getMemosprite]]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
-                "invertCondition": true
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
-                      "displayLines": "{[SkillP03[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[SkillP03[0]]}"
-                      ]
-                    }
-                  },
-                  "casterAssign": "TargetSelf"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability05_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
-              "stackLimit": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                  "displayLines": "{[Skill05[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[2]]}"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
-              "valuePerStack": {
-                "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
-                }
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability05_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability05_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_Ability05_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability05_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability05_Part02",
-        "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part01",
-        "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability04_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Skill04Damage"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Skill04Damage",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11574) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11574",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_11574"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "Skill04Damage",
-              "value": {
-                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                "displayLines": "{[Skill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[0]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": 1,
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemies by Aggro OR Random}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Random Chance",
-                    "chance": 0.55
-                  }
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] (Skill04Damage) || RETURN",
-                      "displayLines": "Skill04Damage",
-                      "constants": [],
-                      "variables": [
-                        "Skill04Damage"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                    "invertCondition": true
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill04Count",
-          "value": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "({[Skill04[1]]} - 1)",
-            "constants": [
-              1
-            ],
-            "variables": [
-              "{[Skill04[1]]}"
-            ]
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (Skill04Count) || RETURN",
-            "displayLines": "Skill04Count",
-            "constants": [],
-            "variables": [
-              "Skill04Count"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "searchRandom": true,
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                "invertCondition": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "canPhase": true,
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] (Skill04Damage) || RETURN",
-                      "displayLines": "Skill04Damage",
-                      "constants": [],
-                      "variables": [
-                        "Skill04Damage"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                    "invertCondition": true
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Player Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "canPhase": true,
-                      "AttackScaling": {
-                        "DamageType": "Imaginary",
-                        "Damage": {
-                          "operator": "Variables[0] (Skill04Damage) || RETURN",
-                          "displayLines": "Skill04Damage",
-                          "constants": [],
-                          "variables": [
-                            "Skill04Damage"
-                          ]
-                        },
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
-                        "invertCondition": true
-                      }
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability04_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability04_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability04_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability04_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_Ability03_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
-          },
-          "passed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13258) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13258",
-                  "constants": [],
-                  "variables": [
-                    "UnusedUnderThisBase_13258"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Imaginary",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "EnergyGainPercent": "100%"
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability03_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability03_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability03_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability03_Part01",
-        "4014013_Monster_W4_Nikadory_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability02_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability02_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability02_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability02_Camera",
-        "4014013_Monster_W4_Nikadory_IF_Ability02_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_Ability01_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "Shot Fired",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
-              },
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13107) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13107",
-                      "constants": [],
-                      "variables": [
-                        "UnusedUnderThisBase_13107"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            "Trigger: Attack End"
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All(with Unselectable)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "Enemy ID",
-              "ID": 401402,
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "characterName": null,
-              "isCompareUniqueID": true
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_Ability01_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_Ability01_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_Ability01_Camera",
-        "4014013_Monster_W4_Nikadory_Ability01_Part01",
-        "4014013_Monster_W4_Nikadory_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability00_Part02": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability00_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Modifier-Specific Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Nikador: Self}}"
-          },
-          "modifierName": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>",
-          "variableName": "_FinalCheck",
-          "value": 1
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_IF_Ability00_Part01": {
-      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability00_Part01",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_IF_Ability00_Part01",
-        "4014013_Monster_W4_Nikadory_IF_Ability00_Part02"
-      ],
-      "skillTrigger": "Skill00",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Nikadory_IF_Ability00_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014013_Monster_W4_Nikadory_PassiveAbility_BGM": {
-      "fileName": "4014013_Monster_W4_Nikadory_PassiveAbility_BGM",
-      "childAbilityList": [
-        "4014013_Monster_W4_Nikadory_PassiveAbility_BGM"
-      ],
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All(with Unselectable)}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": ">=",
-                "value2": 1,
-                "conditions": {
-                  "name": "Enemy ID",
-                  "ID": 401402,
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "characterName": null,
-                  "isCompareUniqueID": true
-                }
-              },
-              "failed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": 4014015,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Savage God, Mad King, Incarnation of Strife (Complete)",
-                    "isBaseCompare": true
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1564473981\">Enemy_W4_Nikadory_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1564473981\">Enemy_W4_Nikadory_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Enemy Team All(with Unselectable)}}"
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1,
-                        "conditions": {
-                          "name": "Enemy ID",
-                          "ID": 401402,
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "characterName": null,
-                          "isCompareUniqueID": true
-                        }
-                      },
-                      "failed": [
-                        "Modifier Deletes Itself"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "4014013_Modifiers": {
       "fileName": "4014013_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -4739,10 +1115,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__264648512\">Enemy_W4_Nikadory_IF_AbilityEX04_EMY</a>",
-          "stackData": [
-            "MDF_AllDamageReduce",
-            "MDF_AllDamageTypeAddedRatio"
-          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5430,9 +1802,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
-          "stackData": [
-            "MDF_AllDamageTypeAddedRatio"
-          ],
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This state is removed when \"War Armor\" stacks are reduced to 0.",
           "type": "Other",
           "effectName": "Ready for Battle",
@@ -6990,12 +3359,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
           "stackType": "Replace",
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
-          "latentQueue": [
-            "AIFlag"
-          ],
           "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"Centirefined War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of their Toughness, greatly delaying their action, restoring Skill Points to targets, and grants the attacker a certain number of stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" stack is 0 at the end of this unit's turn, it will be restored to maximum stacks.",
           "type": "Other",
           "statusName": "Centirefined War Armor",
@@ -7181,9 +3544,6 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
           "stackType": "Replace",
-          "stackData": [
-            "MDF_AllDamageReduce"
-          ],
           "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
           "type": "Other",
           "statusName": "War Armor",
@@ -7471,20 +3831,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
-          ],
-          "stackData": [
-            "MDF_MaxLayer",
-            "MDF_ActionDelayRatio",
-            "MDF_CrackedDamage",
-            "MDF_BPRecoverValue",
-            "MDF_AllDamageReduce",
-            "MDF_CrackedDamageAfter",
-            "MDF_DamageStanceValue",
-            "MDF_SuperShield_MaxLayer",
-            "MDF_SuperShield_BPRecoverValue",
-            "MDF_BraveBonusLayer",
-            "MDF_SuperShield_ActionDelayRatio",
-            "MDF_SuperShield_DamageStanceValue"
           ],
           "execute": [
             {
@@ -13931,6 +10277,3630 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_PassiveAbility_Insert": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "<=",
+                "value2": 2
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"261985089\">Monster_W4_Nikadory_Energy</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1597888221\">Enemy_W4_Hearse_IF_BreakState</a>"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "=",
+            "value2": 4
+          },
+          "ifTargetFound": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "ChangePhase_MaxHPValue"
+            },
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "variableName": "ChangePhase_MaxHPValue",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+            },
+            {
+              "name": "Set HP Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "setPercent": 1
+            },
+            {
+              "name": "Set Enemy Phase",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "mode": "Inc"
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "AIFlag",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
+          "valuePerStack": {
+            "MDF_DamageUpRatio_PerLayer": {
+              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
+              "displayLines": "{[SkillP03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP03[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
+              "stackLimit": {
+                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
+                "displayLines": "{[SkillEX03[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillEX03[0]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
+                  "displayLines": "{[SkillP01[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[4]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
+                "displayLines": "{[SkillEX03[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillEX03[0]]}"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
+              "stackLimit": {
+                "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
+                "displayLines": "{[SkillP02[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP02[0]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
+                  "displayLines": "{[SkillP01[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[4]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
+                "displayLines": "{[SkillP02[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP02[0]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-907515616\">MoreOneMorePerTurn_4</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1324450026\">Enemy_W4_Hearse_IF_LockHP</a>"
+        },
+        {
+          "name": "Set Action-State",
+          "on": null,
+          "stateName": "W4_Hearse_00"
+        },
+        {
+          "name": "Force-Sync AV Link",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          }
+        },
+        {
+          "name": "Create AV Link",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "linkOrder": 1,
+          "isStart": true,
+          "linkFollowerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          },
+          "linkOwnerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-482936145\">Enemy_W4_Nikadory_IF_Endurance</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityEX05": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX05",
+      "skillTrigger": "SkillEX05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityEX04": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX04",
+      "skillTrigger": "SkillEX04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1178138918\">Enemy_W4_Nikadory_IF_AbilityEX04</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"264648512\">Enemy_W4_Nikadory_IF_AbilityEX04_EMY</a>",
+              "valuePerStack": {
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX04[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX04[0]]}"
+                  ]
+                },
+                "MDF_AllDamageTypeAddedRatio": {
+                  "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
+                  "displayLines": "{[SkillEX04[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX04[1]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityEX03": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX03",
+      "skillTrigger": "SkillEX03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityEX02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX02",
+      "skillTrigger": "SkillEX02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1278804632\">Enemy_W4_Nikadory_IF_AbilityEX02</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityEX01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityEX01",
+      "skillTrigger": "SkillEX01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HardLevel",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP05": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP05",
+      "skillTrigger": "SkillP05",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP04": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP04",
+      "skillTrigger": "SkillP04",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP03": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP03",
+      "skillTrigger": "SkillP03",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP02",
+      "skillTrigger": "SkillP02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1228471775\">Enemy_W4_Nikadory_IF_AbilityEX01</a>"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
+              "valuePerStack": {
+                "MDF_IF_BOSS_BreakDelay": {
+                  "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
+                  "displayLines": "{[SkillEX01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX01[2]]}"
+                  ]
+                },
+                "MDF_IF_BOSS_WeaknessDMGUpRatio": {
+                  "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+                  "displayLines": "{[SkillEX01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX01[1]]}"
+                  ]
+                },
+                "MDF_IF_BOSS_Standard_Defence": {
+                  "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX01[0]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
+              "valuePerStack": {
+                "MDF_FrenzyStartDelay": {
+                  "operator": "Variables[0] ({[SkillEX05[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX05[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX05[0]]}"
+                  ]
+                },
+                "MDF_FrenzyIntervalDelay": {
+                  "operator": "Variables[0] ({[SkillEX05[1]]}) || RETURN",
+                  "displayLines": "{[SkillEX05[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX05[1]]}"
+                  ]
+                },
+                "MDF_MaxFrenzyLayer": {
+                  "operator": "Variables[0] ({[SkillEX05[2]]}) || RETURN",
+                  "displayLines": "{[SkillEX05[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX05[2]]}"
+                  ]
+                },
+                "MDF_TokenDMGAddRatioPerLayer": {
+                  "operator": "Variables[0] ({[SkillEX05[3]]}) || RETURN",
+                  "displayLines": "{[SkillEX05[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX05[3]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1262027013\">Enemy_W4_Nikadory_IF_AbilityEX03</a>"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
+              "valuePerStack": {
+                "MDF_MaxLayer": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                },
+                "MDF_ActionDelayRatio": {
+                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                  "displayLines": "{[SkillP01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[1]]}"
+                  ]
+                },
+                "MDF_CrackedDamage": {
+                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+                  "displayLines": "{[SkillP01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[2]]}"
+                  ]
+                },
+                "MDF_BPRecoverValue": {
+                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+                  "displayLines": "{[SkillP01[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[3]]}"
+                  ]
+                },
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
+                  "displayLines": "{[SkillP01[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[4]]}"
+                  ]
+                },
+                "MDF_CrackedDamageAfter": {
+                  "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
+                  "displayLines": "{[SkillP01[5]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[5]]}"
+                  ]
+                },
+                "MDF_DamageStanceValue": {
+                  "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
+                  "displayLines": "{[SkillP01[6]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[6]]}"
+                  ]
+                },
+                "MDF_SuperShield_MaxLayer": {
+                  "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
+                  "displayLines": "{[SkillEX03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillEX03[0]]}"
+                  ]
+                },
+                "MDF_SuperShield_BPRecoverValue": {
+                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
+                  "displayLines": "{[SkillP02[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[1]]}"
+                  ]
+                },
+                "MDF_BraveBonusLayer": {
+                  "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
+                  "displayLines": "{[SkillP02[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[2]]}"
+                  ]
+                },
+                "MDF_SuperShield_ActionDelayRatio": {
+                  "operator": "Variables[0] ({[SkillP02[3]]}) || RETURN",
+                  "displayLines": "{[SkillP02[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[3]]}"
+                  ]
+                },
+                "MDF_SuperShield_DamageStanceValue": {
+                  "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
+                  "displayLines": "{[SkillP02[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[4]]}"
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
+              "valuePerStack": {
+                "MDF_MaxLayer": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                },
+                "MDF_ActionDelayRatio": {
+                  "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                  "displayLines": "{[SkillP01[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[1]]}"
+                  ]
+                },
+                "MDF_CrackedDamage": {
+                  "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+                  "displayLines": "{[SkillP01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[2]]}"
+                  ]
+                },
+                "MDF_BPRecoverValue": {
+                  "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+                  "displayLines": "{[SkillP01[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[3]]}"
+                  ]
+                },
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
+                  "displayLines": "{[SkillP01[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[4]]}"
+                  ]
+                },
+                "MDF_CrackedDamageAfter": {
+                  "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
+                  "displayLines": "{[SkillP01[5]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[5]]}"
+                  ]
+                },
+                "MDF_DamageStanceValue": {
+                  "operator": "Variables[0] ({[SkillP01[6]]}) || RETURN",
+                  "displayLines": "{[SkillP01[6]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[6]]}"
+                  ]
+                },
+                "MDF_SuperShield_MaxLayer": {
+                  "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
+                  "displayLines": "{[SkillP02[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[0]]}"
+                  ]
+                },
+                "MDF_SuperShield_BPRecoverValue": {
+                  "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
+                  "displayLines": "{[SkillP02[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[1]]}"
+                  ]
+                },
+                "MDF_BraveBonusLayer": {
+                  "operator": "Variables[0] ({[SkillP02[2]]}) || RETURN",
+                  "displayLines": "{[SkillP02[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[2]]}"
+                  ]
+                },
+                "MDF_SuperShield_ActionDelayRatio": {
+                  "operator": "Variables[0] ({[SkillP02[3]]}) || RETURN",
+                  "displayLines": "{[SkillP02[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[3]]}"
+                  ]
+                },
+                "MDF_SuperShield_DamageStanceValue": {
+                  "operator": "Variables[0] ({[SkillP02[4]]}) || RETURN",
+                  "displayLines": "{[SkillP02[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP02[4]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2069911522\">Enemy_W4_Nikadory_IF_EnterBattle</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"551472509\">Enemy_W4_Nikadory_IF_PartController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"281623476\">Enemy_W4_Nikadory_IF_BraveController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1928829713\">Enemy_W4_Nikadory_IF_RemoveOneMore</a>"
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": 0,
+          "enemyList": [
+            {
+              "name": "Create Enemy from Custom",
+              "value": "SummonID01",
+              "summonLocation": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1423347162\">Enemy_W4_Nikadory_IF_WithHearse</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador - The Giver: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"159012087\">Enemy_W4_Nikadory_IF_Passive</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-491014298\">Enemy_W4_Nikadory_IF_HintToastController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-863627586\">Enemy_W4_Nikadory_IF_BPMax</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability14_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability14_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Skill04Damage"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill04Damage",
+          "value": {
+            "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
+            "displayLines": "{[Skill14[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill14[0]]}"
+            ]
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 1,
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemies by Aggro OR Random}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] (Skill04Damage) || RETURN",
+                      "displayLines": "Skill04Damage",
+                      "constants": [],
+                      "variables": [
+                        "Skill04Damage"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill04Count",
+          "value": {
+            "operator": "Variables[0] ({[Skill14[1]]}) || Constants[0] (1) || SUB || RETURN",
+            "displayLines": "({[Skill14[1]]} - 1)",
+            "constants": [
+              1
+            ],
+            "variables": [
+              "{[Skill14[1]]}"
+            ]
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (Skill04Count) || RETURN",
+            "displayLines": "Skill04Count",
+            "constants": [],
+            "variables": [
+              "Skill04Count"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Random Chance",
+                    "chance": 0.5
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Imaginary",
+                        "Damage": {
+                          "operator": "Variables[0] (Skill04Damage) || RETURN",
+                          "displayLines": "Skill04Damage",
+                          "constants": [],
+                          "variables": [
+                            "Skill04Damage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Imaginary",
+                        "Damage": {
+                          "operator": "Variables[0] (Skill04Damage) || RETURN",
+                          "displayLines": "Skill04Damage",
+                          "constants": [],
+                          "variables": [
+                            "Skill04Damage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Random Chance",
+                        "chance": 0.5
+                      },
+                      "passed": [
+                        {
+                          "name": "ATK Scaling DMG",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "canPhase": true,
+                          "AttackScaling": {
+                            "DamageType": "Imaginary",
+                            "Damage": {
+                              "operator": "Variables[0] (Skill04Damage) || RETURN",
+                              "displayLines": "Skill04Damage",
+                              "constants": [],
+                              "variables": [
+                                "Skill04Damage"
+                              ]
+                            },
+                            "Toughness": null,
+                            "Tags": null,
+                            "attackType": "Basic ATK",
+                            "EnergyGainPercent": "100%"
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "ATK Scaling DMG",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "canPhase": true,
+                          "AttackScaling": {
+                            "DamageType": "Imaginary",
+                            "Damage": {
+                              "operator": "Variables[0] (Skill04Damage) || RETURN",
+                              "displayLines": "Skill04Damage",
+                              "constants": [],
+                              "variables": [
+                                "Skill04Damage"
+                              ]
+                            },
+                            "Toughness": null,
+                            "Tags": null,
+                            "attackType": "Basic ATK",
+                            "EnergyGainPercent": "100%"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "advanceType": "Set",
+              "multiAdd": "{[Skill14[2]]}"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1367674935\">Enemy_W4_Nikadory_IF_Ability14Target</a>"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability14_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability14_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability14_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability14_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability14_Part02"
+      ],
+      "skillTrigger": "Skill14",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability14_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability13_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability13_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+              "displayLines": "{[Skill13[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill13[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+              "displayLines": "{[Skill13[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill13[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+              "displayLines": "{[Skill13[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill13[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+              "displayLines": "{[Skill13[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill13[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill13[0]]}) || RETURN",
+              "displayLines": "{[Skill13[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill13[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill13[1]]}"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability13_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability13_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_Ability13_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability13_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability13_Part02"
+      ],
+      "skillTrigger": "Skill13",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability13_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability12_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability12_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
+              "displayLines": "{[Skill12[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill12[0]]}"
+              ]
+            },
+            "HitSplit": 0.4,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill12[0]]}) || RETURN",
+              "displayLines": "{[Skill12[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill12[0]]}"
+              ]
+            },
+            "HitSplit": 0.6,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill12[1]]}"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability12_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability12_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability12_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability12_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability12_Part02"
+      ],
+      "skillTrigger": "Skill12",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability12_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability11_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability11_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Target Left of Ability Target(ST)}}"
+          },
+          "maxTargets": 1
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Target Right of Ability Target(ST)}}"
+          },
+          "maxTargets": 1
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
+            },
+            {
+              "name": "Shot Fired"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Targets Adjacent(Blast)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "=",
+            "value2": 1,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
+              "invertCondition": true
+            }
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
+                },
+                {
+                  "name": "Shot Fired"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill11[0]]}) || RETURN",
+                  "displayLines": "{[Skill11[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            },
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill11[1]]}) || RETURN",
+                  "displayLines": "{[Skill11[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill11[1]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            },
+            "Trigger: Attack End",
+            {
+              "name": "Action Advance/Delay",
+              "target": {
+                "name": "Target Name",
+                "target": "{{ST and Blast}}"
+              },
+              "advanceType": "Set",
+              "multiAdd": "{[Skill11[2]]}"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1781350564\">Monster_W4_Nikadory_Ability11Already</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability11_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability11_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_Ability11_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability11_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability11_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_Ability10_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_Ability10_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_Ability10_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_Ability10_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability10_Camera",
+        "4014013_Monster_W4_Nikadory_Ability10_Part01",
+        "4014013_Monster_W4_Nikadory_Ability10_Part02"
+      ],
+      "skillTrigger": "Skill10",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_Ability10_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability06_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill06Count",
+          "value": 0
+        },
+        "Ability Start",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Skill06Count",
+              "value": {
+                "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(Skill06Count + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "Skill06Count"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill06Damage",
+          "value": {
+            "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
+            "displayLines": "({[Skill06[0]]} / Skill06Count)",
+            "constants": [],
+            "variables": [
+              "{[Skill06[0]]}",
+              "Skill06Count"
+            ]
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (Skill06Damage) || RETURN",
+              "displayLines": "Skill06Damage",
+              "constants": [],
+              "variables": [
+                "Skill06Damage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)}}.[[removeBattleEvents]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
+          "valuePerStack": {
+            "MDF_DamageUpRatio_PerLayer": {
+              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
+              "displayLines": "{[SkillP03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP03[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability06_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability06_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_Ability06_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability06_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
+          "valuePerStack": {
+            "MDF_DamageUpRatio_PerLayer": {
+              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
+              "displayLines": "{[SkillP03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP03[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}.[[getMemosprite]]"
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageUpRatio_PerLayer": {
+                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
+                      "displayLines": "{[SkillP03[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[SkillP03[0]]}"
+                      ]
+                    }
+                  },
+                  "casterAssign": "TargetSelf"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability05_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
+        },
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-698443266\">Enemy_W4_Nikadory_IF_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
+              "stackLimit": {
+                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                "displayLines": "{[Skill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[1]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_AllDamageReduce": {
+                  "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+                  "displayLines": "{[Skill05[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill05[2]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                "displayLines": "{[Skill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[1]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
+              "valuePerStack": {
+                "MDF_AllDamageTypeAddedRatio": {
+                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+                  "displayLines": "{[Skill05[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill05[3]]}"
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability05_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability05_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_Ability05_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability05_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability05_Part02",
+        "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part01",
+        "4014013_Monster_W4_Nikadory_IF_AbilityP01_Insert01_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability05_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability04_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Skill04Damage"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Skill04Damage",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_11574) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11574",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_11574"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Skill04Damage",
+              "value": {
+                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                "displayLines": "{[Skill04[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[0]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": 1,
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemies by Aggro OR Random}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Random Chance",
+                    "chance": 0.55
+                  }
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] (Skill04Damage) || RETURN",
+                      "displayLines": "Skill04Damage",
+                      "constants": [],
+                      "variables": [
+                        "Skill04Damage"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                    "invertCondition": true
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill04Count",
+          "value": {
+            "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (1) || SUB || RETURN",
+            "displayLines": "({[Skill04[1]]} - 1)",
+            "constants": [
+              1
+            ],
+            "variables": [
+              "{[Skill04[1]]}"
+            ]
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (Skill04Count) || RETURN",
+            "displayLines": "Skill04Count",
+            "constants": [],
+            "variables": [
+              "Skill04Count"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                "invertCondition": true
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] (Skill04Damage) || RETURN",
+                      "displayLines": "Skill04Damage",
+                      "constants": [],
+                      "variables": [
+                        "Skill04Damage"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                    "invertCondition": true
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Imaginary",
+                        "Damage": {
+                          "operator": "Variables[0] (Skill04Damage) || RETURN",
+                          "displayLines": "Skill04Damage",
+                          "constants": [],
+                          "variables": [
+                            "Skill04Damage"
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>",
+                        "invertCondition": true
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1916138422\">Monster_W4_Nikadory_Ability04AlreadyAttack</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability04_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability04_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability04_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability04_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_Ability03_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
+          },
+          "passed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (UnusedUnderThisBase_13258) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13258",
+                  "constants": [],
+                  "variables": [
+                    "UnusedUnderThisBase_13258"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability03_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability03_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability03_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability03_Part01",
+        "4014013_Monster_W4_Nikadory_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability02_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability02_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability02_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability02_Camera",
+        "4014013_Monster_W4_Nikadory_IF_Ability02_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_Ability01_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1947729446\">Enemy_W4_Nikadory_FT_SpecialAction</a>"
+              },
+              "passed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] (UnusedUnderThisBase_13107) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13107",
+                      "constants": [],
+                      "variables": [
+                        "UnusedUnderThisBase_13107"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            "Trigger: Attack End"
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "Enemy ID",
+              "ID": 401402,
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "characterName": null,
+              "isCompareUniqueID": true
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_Ability01_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_Ability01_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_Ability01_Camera",
+        "4014013_Monster_W4_Nikadory_Ability01_Part01",
+        "4014013_Monster_W4_Nikadory_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability00_Part02": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability00_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Modifier-Specific Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Nikador: Self}}"
+          },
+          "modifierName": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>",
+          "variableName": "_FinalCheck",
+          "value": 1
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_IF_Ability00_Part01": {
+      "fileName": "4014013_Monster_W4_Nikadory_IF_Ability00_Part01",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_IF_Ability00_Part01",
+        "4014013_Monster_W4_Nikadory_IF_Ability00_Part02"
+      ],
+      "skillTrigger": "Skill00",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Nikadory_IF_Ability00_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014013_Monster_W4_Nikadory_PassiveAbility_BGM": {
+      "fileName": "4014013_Monster_W4_Nikadory_PassiveAbility_BGM",
+      "childAbilityList": [
+        "4014013_Monster_W4_Nikadory_PassiveAbility_BGM"
+      ],
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": ">=",
+                "value2": 1,
+                "conditions": {
+                  "name": "Enemy ID",
+                  "ID": 401402,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": null,
+                  "isCompareUniqueID": true
+                }
+              },
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": 4014015,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Savage God, Mad King, Incarnation of Strife (Complete)",
+                    "isBaseCompare": true
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1564473981\">Enemy_W4_Nikadory_ResetStageBGM</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1564473981\">Enemy_W4_Nikadory_ResetStageBGM</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All(with Unselectable)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 1,
+                        "conditions": {
+                          "name": "Enemy ID",
+                          "ID": 401402,
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "characterName": null,
+                          "isCompareUniqueID": true
+                        }
+                      },
+                      "failed": [
+                        "Modifier Deletes Itself"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }

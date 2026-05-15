@@ -2436,9 +2436,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedDown"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Slow",
@@ -2961,9 +2958,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-396183840\">Enemy_W3_Dinosaur_02_IF_StanceBreakRatioUp</a>[<span class=\"descriptionNumberColor\">Weakness Break Efficiency Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Weakness Break Efficiency increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "Weakness Break Efficiency Boost",
@@ -3442,11 +3436,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
-      "stackData": [
-        "MDF_MinionsSuperArmor_AllDamageReduce",
-        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-        "MDF_SetActionDelayValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -6404,9 +6393,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1792784435\">Enemy_W3_Dinosaur_02_AttackRatioUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect can stack.",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -6453,9 +6439,6 @@ const configAbility = {
         "STAT_DOT_Burn"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Burn_DamagePercentage"
-      ],
       "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
       "type": "Debuff",
       "effectName": "Burn",

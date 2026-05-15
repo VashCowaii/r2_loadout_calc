@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
       "description": "Toughness cannot be reduced before the Nightfall state ends.",
       "type": "Other",
       "statusName": "Weakness Protected",
@@ -176,11 +173,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2051878613\">Monster_W3_Death_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Elegy</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer",
-        "MDF_DeathPartMaxHPCount",
-        "MDF_DeathPartAddHPCount"
-      ],
       "description": "Deals <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> more DMG and increases Sombrous Sepulcher's HP by <span class=\"descriptionNumberColor\">MDF_DeathPartAddHPCount</span> bar(s). This effect is stackable. The initial HP for Sombrous Sepulcher is currently <span class=\"descriptionNumberColor\">MDF_DeathPartMaxHPCount</span> bars.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -220,12 +212,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__91362459\">Modifier_W3_Death_RLBoss_PartController_LockHP</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -435,13 +421,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1087767431\">Enemy_W3_Deathpart_Appear</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -490,9 +469,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__721704074\">Monster_W3_Death_Ability06_Charge_CharacterChangePhase</a>",
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -543,10 +519,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1728469043\">Death_UseAbility07_Modifier</a>",
-      "latentQueue": [
-        "Skill07_EffectFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1728469043\">Death_UseAbility07_Modifier</a>"
     },
     {
       "name": "Modifier Construction",
@@ -558,9 +531,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_ShowValue1"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This effect is removed when this unit becomes Weakness Broken.",
       "type": "Buff",
       "effectName": "Biting Obituary",
@@ -1043,10 +1013,6 @@ const configAbility = {
         "STAT_CTRL_UnOperable"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealHPPercentage",
-        "MDF_AddSPValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1161,10 +1127,6 @@ const configAbility = {
         "STAT_CTRL_UnOperable"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealHPPercentage",
-        "MDF_AddSPValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1367,10 +1329,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1091581769\">Monster_W3_Death_ListenBreak</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2103,23 +2061,11 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-314968673\">Enemy_W3_Death_Minions_Mark_PartChange</a>",
       "modifierFlags": [
         "DisableHealHP"
-      ],
-      "latentQueue": [
-        "Bullet_Flag",
-        "UsedSkill08_Flag",
-        "Effect_Flag",
-        "DeathPart_AppearSkill_Flag"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-745487733\">Modifier_W3_Death_PartController_LockHP</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

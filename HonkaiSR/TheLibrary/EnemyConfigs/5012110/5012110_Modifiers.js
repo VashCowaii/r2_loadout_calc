@@ -20,9 +20,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1340998593\">Monster_W5_Limao_BattleScore1Count</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "_RankRatio"
       ]
     },
     {
@@ -144,9 +141,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__873012820\">Enemy_W5_Limao_RankB</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "_RankRatio"
       ]
     },
     {
@@ -154,9 +148,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__923345677\">Enemy_W5_Limao_RankA</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "_RankRatio"
       ]
     },
     {
@@ -164,21 +155,12 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__621348535\">Enemy_W5_Limao_RankS</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "_RankRatio"
       ]
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1492528010\">Enemy_W5_Limao_ElationDamageUp</a>[<span class=\"descriptionNumberColor\">Make Headlines, Please!</span>]",
       "stackType": "Multiple",
-      "stackData": [
-        "MDF_ElationDamageAddedRatio"
-      ],
-      "latentQueue": [
-        "_RankRatio"
-      ],
       "description": "Elation increases by <span class=\"descriptionNumberColor\">MDF_ElationDamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "Elation Boost",
@@ -314,13 +296,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "_IsPhase1",
-        "#CL_PhotoCheck",
-        "MDF_IsTogetherAttack",
-        "MDF_IsTogetherAttackLock",
-        "MDF_IsDying"
       ]
     }
   ],

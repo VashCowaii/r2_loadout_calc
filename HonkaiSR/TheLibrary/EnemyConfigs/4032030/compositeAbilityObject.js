@@ -3,221 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032030,
   "trimCharacterName": 4032030,
   "abilityList": [
+    "4032030_Modifiers",
     "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
     "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
     "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01",
     "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02",
-    "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01",
-    "4032030_Modifiers"
+    "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01"
   ],
   "abilityObject": {
-    "4032030_Monster_W2_Valkyrie01_02_AbilityP01": {
-      "fileName": "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
-      "childAbilityList": [
-        "4032030_Monster_W2_Valkyrie01_02_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-855496844\">Enemy_W2_Valkyrie01_02_EffectController</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02": {
-      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Flag_RevengeTrigger",
-              "value": 0
-            }
-          ]
-        },
-        "Ability Start",
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "TargetCount",
-          "livingTargets": true
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (TargetCount) || DIV || RETURN",
-              "displayLines": "({[Skill02[0]]} / TargetCount)",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}",
-                "TargetCount"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01": {
-      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01",
-      "childAbilityList": [
-        "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01",
-        "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
-        "4032030_Monster_W2_Valkyrie01_02_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Valkyrie01_02_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02": {
-      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01": {
-      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01",
-      "childAbilityList": [
-        "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01",
-        "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02",
-        "4032030_Monster_W2_Valkyrie01_02_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Valkyrie01_02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "4032030_Modifiers": {
       "fileName": "4032030_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -711,6 +504,213 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4032030_Monster_W2_Valkyrie01_02_AbilityP01": {
+      "fileName": "4032030_Monster_W2_Valkyrie01_02_AbilityP01",
+      "childAbilityList": [
+        "4032030_Monster_W2_Valkyrie01_02_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-855496844\">Enemy_W2_Valkyrie01_02_EffectController</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02": {
+      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1227649077\">Enemy_W2_Valkyrie01_02_AbilityP01</a>[<span class=\"descriptionNumberColor\">Bitter Fracture</span>]"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "Flag_RevengeTrigger",
+              "value": 0
+            }
+          ]
+        },
+        "Ability Start",
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "variableName": "TargetCount",
+          "livingTargets": true
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || Variables[1] (TargetCount) || DIV || RETURN",
+              "displayLines": "({[Skill02[0]]} / TargetCount)",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}",
+                "TargetCount"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01": {
+      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01",
+      "childAbilityList": [
+        "4032030_Monster_W2_Valkyrie01_02_Ability02_Part01",
+        "4032030_Monster_W2_Valkyrie01_02_Ability02_Part02",
+        "4032030_Monster_W2_Valkyrie01_02_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Valkyrie01_02_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02": {
+      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01": {
+      "fileName": "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01",
+      "childAbilityList": [
+        "4032030_Monster_W2_Valkyrie01_02_Ability01_Part01",
+        "4032030_Monster_W2_Valkyrie01_02_Ability01_Part02",
+        "4032030_Monster_W2_Valkyrie01_02_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Valkyrie01_02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

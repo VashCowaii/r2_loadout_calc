@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002016,
   "trimCharacterName": 3002016,
   "abilityList": [
+    "3002016_Modifiers",
     "3002016_Monster_W3_TV_02_PassiveAbilityInitiate",
     "3002016_Monster_W3_TV_02_Ultimate_Part02",
     "3002016_Monster_W3_TV_02_Ultimate_Part01",
@@ -11,10 +12,21 @@ const compositeAbilityObject = {
     "3002016_Monster_W3_TV_02_Ability02_Part02",
     "3002016_Monster_W3_TV_02_Ability02_Part01",
     "3002016_Monster_W3_TV_02_Ability01_Part02",
-    "3002016_Monster_W3_TV_02_Ability01_Part01",
-    "3002016_Modifiers"
+    "3002016_Monster_W3_TV_02_Ability01_Part01"
   ],
   "abilityObject": {
+    "3002016_Modifiers": {
+      "fileName": "3002016_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "references": []
+    },
     "3002016_Monster_W3_TV_02_PassiveAbilityInitiate": {
       "fileName": "3002016_Monster_W3_TV_02_PassiveAbilityInitiate",
       "skillTrigger": "SkillP01",
@@ -744,18 +756,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "3002016_Modifiers": {
-      "fileName": "3002016_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
       "references": []
     }
   }

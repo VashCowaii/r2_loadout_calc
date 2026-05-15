@@ -3,14 +3,90 @@ const compositeAbilityObject = {
   "fullCharacterName": 3022010,
   "trimCharacterName": 3022010,
   "abilityList": [
+    "3022010_Modifiers",
     "3022010_Monster_W3_SundayPart_Ability06_Part01",
     "3022010_Monster_W3_SundayPart_Ability04_Part01",
     "3022010_Monster_W3_SundayPart_AbilityP01",
     "3022010_Monster_W3_SundayPart_Ability01_Part02",
     "3022010_Monster_W3_SundayPart_Ability01_Part01",
-    "3022010_Modifiers"
+    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
+    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02"
   ],
   "abilityObject": {
+    "3022010_Modifiers": {
+      "fileName": "3022010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1222159240\">Enemy_W3_SundayPart_Part1Camera</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Set Mapping Point",
+                  "point": "CameraRoot",
+                  "mapTo": "HighCameraRoot"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1396454665\">Enemy_W3_SundayPart_EntityFollowController</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1257223640\">Monster_W3_SundayPart_LittleChorus</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Monster_W3_SundayPart_Ability01_Assist_Part02_01"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Monster_W3_SundayPart_Ability01_Assist_Part02_02"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AssistSkill02_DamagePercentage",
+                  "value": {
+                    "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
+                    "displayLines": "MDF_Assist_DamagePercentage",
+                    "constants": [],
+                    "variables": [
+                      "MDF_Assist_DamagePercentage"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "3022010_Monster_W3_SundayPart_Ability06_Part01": {
       "fileName": "3022010_Monster_W3_SundayPart_Ability06_Part01",
       "abilityType": null,
@@ -273,78 +349,74 @@ const compositeAbilityObject = {
       },
       "references": []
     },
-    "3022010_Modifiers": {
-      "fileName": "3022010_Modifiers",
-      "abilityType": "Char. Modifiers",
+    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01": {
+      "fileName": "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
+      "abilityType": null,
       "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
+      "toughnessList": null,
       "parse": [
         {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1222159240\">Enemy_W3_SundayPart_Part1Camera</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Set Mapping Point",
-                  "point": "CameraRoot",
-                  "mapTo": "HighCameraRoot"
-                }
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
               ]
-            }
-          ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
         },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1396454665\">Enemy_W3_SundayPart_EntityFollowController</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1257223640\">Monster_W3_SundayPart_LittleChorus</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_W3_SundayPart_Ability01_Assist_Part02_01"
-                },
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_W3_SundayPart_Ability01_Assist_Part02_02"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AssistSkill02_DamagePercentage",
-                  "value": {
-                    "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
-                    "displayLines": "MDF_Assist_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "MDF_Assist_DamagePercentage"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
+        "Trigger: Attack End"
       ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02": {
+      "fileName": "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
       "references": []
     }
   }

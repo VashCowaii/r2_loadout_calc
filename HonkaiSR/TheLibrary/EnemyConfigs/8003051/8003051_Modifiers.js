@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1859460834\">Enemy_AML_Elite01_01_AttackAdd</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "PassiveSkillInitiate_P1_AttackAddedRatio"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">ModifierAttackAddedRatio</span>, stacking up to <span class=\"descriptionNumberColor\">ModifierMaxLayer</span> time(s).",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -136,11 +133,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__60428755\">Monster_AML_Elite01_01_PoisonCount</a>",
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_LifeTime",
-        "MDF_DamagePercentage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

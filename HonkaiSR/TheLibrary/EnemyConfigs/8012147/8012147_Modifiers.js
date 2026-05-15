@@ -15,9 +15,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

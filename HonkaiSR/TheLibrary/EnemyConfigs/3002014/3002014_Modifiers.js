@@ -268,9 +268,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-533767533\">MModifier_Monster_W3_TV_Side2</a>[<span class=\"descriptionNumberColor\">Fright Channel</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Mr. Domescreen can use the \"Startling Broadcast\" ability. After it has been attacked, switches to the Surprise Channel state.",
       "type": "Other",
       "statusName": "Fright Channel",
@@ -427,9 +424,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-823586997\">Enemy_W3_TV_Flop</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "FaceChangeFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

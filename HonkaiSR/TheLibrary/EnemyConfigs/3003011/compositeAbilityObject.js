@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 3003011,
   "trimCharacterName": 3003011,
   "abilityList": [
+    "3003011_Modifiers",
     "3003011_Monster_W3_Dinosaur_ActivityTelevision_PassiveAbilityInitiate",
     "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate",
     "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
@@ -20,1832 +21,9 @@ const compositeAbilityObject = {
     "3003011_Monster_W3_Dinosaur_Ability02_Part02",
     "3003011_Monster_W3_Dinosaur_Ability02_Part01",
     "3003011_Monster_W3_Dinosaur_Ability01_Part02",
-    "3003011_Monster_W3_Dinosaur_Ability01_Part01",
-    "3003011_Modifiers"
+    "3003011_Monster_W3_Dinosaur_Ability01_Part01"
   ],
   "abilityObject": {
-    "3003011_Monster_W3_Dinosaur_ActivityTelevision_PassiveAbilityInitiate": {
-      "fileName": "3003011_Monster_W3_Dinosaur_ActivityTelevision_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate2",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
-          "valuePerStack": {
-            "MDF_DamageTypeResistance": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[4]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[4]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"781775856\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-802972910\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceFromDog</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
-          "modifierFlags": [
-            "MuteBreak"
-          ],
-          "stackData": [
-            "MDF_DamageTypeResistance"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DamageTypeResistance) || RETURN",
-                    "displayLines": "MDF_DamageTypeResistance",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DamageTypeResistance"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__781775856\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceListener</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking Modifier Instance [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
-                      "valuePerStack": {
-                        "MDF_DamageTypeResistance": {
-                          "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
-                          "displayLines": "{[PassiveSkillInitiate[4]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkillInitiate[4]]}"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-802972910\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceFromDog</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier is Added [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1066196333\">Monster_W2_Beast01_03_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "target2": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Modifier-Specific Variable",
-                          "modifierName": "<a class=\"gModGreen\" id=\"-1066196333\">Monster_W2_Beast01_03_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
-                          "variableName": "Modifier_Bleed_DamagePercentage",
-                          "value": 0.01
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
-        }
-      ]
-    },
-    "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate": {
-      "fileName": "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate"
-      ],
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-689930966\">MModifier_Monster_W3_Dinosaur_Attack_Listener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-286852615\">MModifier_Monster_W3_Dinosaur_DOT_Listener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"578972033\">MModifier_Monster_W3_Dinosaur_Break_Listener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1710207042\">W3_Dinosaur_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
-    },
-    "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
-          },
-          "passed": [
-            {
-              "name": "UI Display Event",
-              "popUpText": "Stove Detonation"
-            }
-          ],
-          "failed": [
-            {
-              "name": "UI Display Event",
-              "popUpText": "Ignite Stove"
-            }
-          ]
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Crazy_Flag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "Vibrate_Count",
-          "value": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-          "valuePerStack": {
-            "MDF_MaxCount": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "MDF_PartFlag": 1
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": {
-            "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-            "displayLines": "{[Skill06[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[0]]}"
-            ]
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 8
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability06_Part02Crazy": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Part02Crazy",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Crazy_Flag",
-          "value": 1
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "Vibrate_Count",
-          "value": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-          "valuePerStack": {
-            "MDF_MaxCount": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "MDF_PartFlag": 1
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
-        },
-        {
-          "name": "Assign Advance/Delay to Current Ability Use",
-          "adjustmentValue": {
-            "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-            "displayLines": "{[Skill06[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill06[0]]}"
-            ]
-          },
-          "adjustmentType": "="
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability06_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Part01",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_Ability06_Camera",
-        "3003011_Monster_W3_Dinosaur_Ability06_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability06_Part02Crazy",
-        "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
-        "3003011_Monster_W3_Dinosaur_Ability06_Insert_Camera"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability06_Part02Crazy",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "entityClass": "Enemy",
-          "assignState": "False"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Vibrate_Count"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "dmgFormulaFinal": "Converted DMG Base",
-            "Toughness": null,
-            "Tags": null
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "dmgFormulaFinal": "Converted DMG Base",
-            "Toughness": null,
-            "Tags": null
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"244013415\">MModifier_Monster_W3_Dinosaur_ExplodeMark</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Level Entity}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
-            "invertCondition": true
-          }
-        },
-        {
-          "name": "Assign Advance/Delay to Current Ability Use",
-          "adjustmentValue": {
-            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-            "displayLines": "{[Skill05[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[4]]}"
-            ]
-          },
-          "adjustmentType": "="
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value1": "CurrentHP",
-            "compareType": "<=",
-            "value2": 0
-          },
-          "passed": [
-            "Trigger: Ability End"
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1775080957\">MModifier_Monster_W3_Dinosaur_Effect_Smoke3</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-              "valuePerStack": {
-                "MDF_MaxCount": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                  "displayLines": "{[Skill05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}"
-                  ]
-                },
-                "MDF_PartFlag": 1
-              }
-            },
-            "Trigger: Ability End"
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part01",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_Ability05_Insert_Camera",
-        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02",
-        "3003011_Monster_W3_Dinosaur_Ability05_Camera",
-        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Kitchen Mishap"
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "entityClass": "Enemy",
-          "assignState": "False"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Vibrate_Count"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-              "displayLines": "{[Skill05[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[2]]}"
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "dmgFormulaFinal": "Converted DMG Base",
-            "Toughness": null,
-            "Tags": null
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-              "displayLines": "{[Skill05[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[1]]}"
-              ]
-            },
-            "dmgFormula": "Max HP Scaling",
-            "dmgFormulaFinal": "Converted DMG Base",
-            "Toughness": null,
-            "Tags": null
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value1": "CurrentHP",
-            "compareType": "<=",
-            "value2": 0
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"244013415\">MModifier_Monster_W3_Dinosaur_ExplodeMark</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
-                "invertCondition": true
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"244013415\">MModifier_Monster_W3_Dinosaur_ExplodeMark</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
-                "invertCondition": true
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Current Turn Is",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                }
-              },
-              "passed": [
-                {
-                  "name": "Action Advance/Delay",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "advanceType": "Delay",
-                  "multiAdd": 1
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"171728887\">FixDelay</a>"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-              "duration": -1,
-              "valuePerStack": {
-                "MDF_PropertyValue": {
-                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-                  "displayLines": "{[Skill05[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[3]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1775080957\">MModifier_Monster_W3_Dinosaur_Effect_Smoke3</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-              "valuePerStack": {
-                "MDF_MaxCount": {
-                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                  "displayLines": "{[Skill05[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill05[0]]}"
-                  ]
-                },
-                "MDF_PartFlag": 1
-              }
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__171728887\">FixDelay</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Action-End Phase]",
-              "execute": [
-                {
-                  "name": "Action Advance/Delay",
-                  "advanceType": "Set",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "multiBase": {
-                    "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-                    "displayLines": "{[Skill05[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[4]]}"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02": {
-      "fileName": "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.2,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.3,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.5,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-          "valuePerStack": {
-            "MDF_MaxCount": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "MDF_PartFlag": 1
-          }
-        },
-        {
-          "name": "Assign Advance/Delay to Current Ability Use",
-          "adjustmentValue": {
-            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-            "displayLines": "{[Skill05[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[4]]}"
-            ]
-          },
-          "adjustmentType": "="
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "AIFlag",
-          "value": 8
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part01",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_Ability04_Camera",
-        "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part01",
-        "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability03_Part02": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Crazy_Flag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2127032004\">MModifier_Monster_W3_Dinosaur_Effect_Fire1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2076699147\">MModifier_Monster_W3_Dinosaur_Effect_Fire2</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2093476766\">MModifier_Monster_W3_Dinosaur_Effect_Fire3</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "Vibrate_Count",
-          "value": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
-          "valuePerStack": {
-            "MDF_MaxCount": {
-              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-              "displayLines": "{[Skill05[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill05[0]]}"
-              ]
-            },
-            "MDF_PartFlag": 1
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "advanceType": "Set",
-          "multiAdd": "{[Skill06[0]]}"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability03_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability03_Part01",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_Ability03_Camera",
-        "3003011_Monster_W3_Dinosaur_Ability03_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability02_Part02": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability02_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability02_Part01",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_Ability02_Camera",
-        "3003011_Monster_W3_Dinosaur_Ability02_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability01_Part02": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Fire",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[3]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkillInitiate[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkillInitiate[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkillInitiate[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkillInitiate[2]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3003011_Monster_W3_Dinosaur_Ability01_Part01": {
-      "fileName": "3003011_Monster_W3_Dinosaur_Ability01_Part01",
-      "childAbilityList": [
-        "3003011_Monster_W3_Dinosaur_Ability01_Camera",
-        "3003011_Monster_W3_Dinosaur_Ability01_Part01",
-        "3003011_Monster_W3_Dinosaur_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Dinosaur_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "3003011_Modifiers": {
       "fileName": "3003011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1940,9 +118,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2093476766\">MModifier_Monster_W3_Dinosaur_Effect_Fire3</a>",
-          "latentQueue": [
-            "Crazy_Flag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1971,9 +146,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2076699147\">MModifier_Monster_W3_Dinosaur_Effect_Fire2</a>",
-          "latentQueue": [
-            "Crazy_Flag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -2002,9 +174,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2127032004\">MModifier_Monster_W3_Dinosaur_Effect_Fire1</a>",
-          "latentQueue": [
-            "Crazy_Flag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4140,9 +2309,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]",
-          "latentQueue": [
-            "Crazy_Flag"
-          ],
           "description": "When this unit is attacked or takes DoT, gain 1 stack of Stove Heating.",
           "type": "Other",
           "statusName": "Boil"
@@ -4296,9 +2462,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_SpeedDown"
           ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
           "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
           "effectName": "Slow",
@@ -4340,6 +2503,1828 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_ActivityTelevision_PassiveAbilityInitiate": {
+      "fileName": "3003011_Monster_W3_Dinosaur_ActivityTelevision_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate2",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
+          "valuePerStack": {
+            "MDF_DamageTypeResistance": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[4]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[4]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"781775856\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceListener</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-802972910\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceFromDog</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1754480095\">Monster_Standard_WeakControl</a>[<span class=\"descriptionNumberColor\">Toughness Protection</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
+          "modifierFlags": [
+            "MuteBreak"
+          ],
+          "stackData": [
+            "MDF_DamageTypeResistance"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageTypeResistance) || RETURN",
+                    "displayLines": "MDF_DamageTypeResistance",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageTypeResistance"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__781775856\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceListener</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>",
+                      "valuePerStack": {
+                        "MDF_DamageTypeResistance": {
+                          "operator": "Variables[0] ({[PassiveSkillInitiate[4]]}) || RETURN",
+                          "displayLines": "{[PassiveSkillInitiate[4]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkillInitiate[4]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2072820088\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistance</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-802972910\">MModifier_Monster_W3_Dinosaur_AllDamageTypeResistanceFromDog</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"-1066196333\">Monster_W2_Beast01_03_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "modifierName": "<a class=\"gModGreen\" id=\"-1066196333\">Monster_W2_Beast01_03_Bleed</a>[<span class=\"descriptionNumberColor\">Bleed</span>]",
+                          "variableName": "Modifier_Bleed_DamagePercentage",
+                          "value": 0.01
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
+        }
+      ]
+    },
+    "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate": {
+      "fileName": "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_PassiveAbilityInitiate"
+      ],
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-689930966\">MModifier_Monster_W3_Dinosaur_Attack_Listener</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-286852615\">MModifier_Monster_W3_Dinosaur_DOT_Listener</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"578972033\">MModifier_Monster_W3_Dinosaur_Break_Listener</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1710207042\">W3_Dinosaur_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-567237122\">MModifier_Monster_W3_Dinosaur_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
+    },
+    "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
+          },
+          "passed": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "Stove Detonation"
+            }
+          ],
+          "failed": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "Ignite Stove"
+            }
+          ]
+        },
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Crazy_Flag",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "Vibrate_Count",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
+          "valuePerStack": {
+            "MDF_MaxCount": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "MDF_PartFlag": 1
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": {
+            "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+            "displayLines": "{[Skill06[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill06[0]]}"
+            ]
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 8
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability06_Part02Crazy": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Part02Crazy",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Crazy_Flag",
+          "value": 1
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "Vibrate_Count",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
+          "valuePerStack": {
+            "MDF_MaxCount": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "MDF_PartFlag": 1
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
+        },
+        {
+          "name": "Assign Advance/Delay to Current Ability Use",
+          "adjustmentValue": {
+            "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+            "displayLines": "{[Skill06[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill06[0]]}"
+            ]
+          },
+          "adjustmentType": "="
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability06_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability06_Part01",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_Ability06_Camera",
+        "3003011_Monster_W3_Dinosaur_Ability06_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability06_Part02Crazy",
+        "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability06_Insert_Part02Crazy",
+        "3003011_Monster_W3_Dinosaur_Ability06_Insert_Camera"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability06_Part02Crazy",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "entityClass": "Enemy",
+          "assignState": "False"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Vibrate_Count"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+              "displayLines": "{[Skill05[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[2]]}"
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+              "displayLines": "{[Skill05[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"244013415\">MModifier_Monster_W3_Dinosaur_ExplodeMark</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
+            "invertCondition": true
+          }
+        },
+        {
+          "name": "Assign Advance/Delay to Current Ability Use",
+          "adjustmentValue": {
+            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
+            "displayLines": "{[Skill05[4]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[4]]}"
+            ]
+          },
+          "adjustmentType": "="
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value1": "CurrentHP",
+            "compareType": "<=",
+            "value2": 0
+          },
+          "passed": [
+            "Trigger: Ability End"
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+              "duration": -1,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+                  "displayLines": "{[Skill05[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill05[3]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1775080957\">MModifier_Monster_W3_Dinosaur_Effect_Smoke3</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
+              "valuePerStack": {
+                "MDF_MaxCount": {
+                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                  "displayLines": "{[Skill05[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill05[0]]}"
+                  ]
+                },
+                "MDF_PartFlag": 1
+              }
+            },
+            "Trigger: Ability End"
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part01",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_Ability05_Insert_Camera",
+        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02",
+        "3003011_Monster_W3_Dinosaur_Ability05_Camera",
+        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability05_ActivityTelevision_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Kitchen Mishap"
+        },
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "entityClass": "Enemy",
+          "assignState": "False"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Vibrate_Count"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+              "displayLines": "{[Skill05[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[2]]}"
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+              "displayLines": "{[Skill05[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormula": "Max HP Scaling",
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value1": "CurrentHP",
+            "compareType": "<=",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"244013415\">MModifier_Monster_W3_Dinosaur_ExplodeMark</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
+                "invertCondition": true
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"244013415\">MModifier_Monster_W3_Dinosaur_ExplodeMark</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"230893383\">Modifier_BattleEventAbility_ActivityTelevision_EliteWaveMark</a>",
+                "invertCondition": true
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Current Turn Is",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
+              "passed": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "advanceType": "Delay",
+                  "multiAdd": 1
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"171728887\">FixDelay</a>"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
+              "duration": -1,
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+                  "displayLines": "{[Skill05[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill05[3]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1775080957\">MModifier_Monster_W3_Dinosaur_Effect_Smoke3</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
+              "valuePerStack": {
+                "MDF_MaxCount": {
+                  "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                  "displayLines": "{[Skill05[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill05[0]]}"
+                  ]
+                },
+                "MDF_PartFlag": 1
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__171728887\">FixDelay</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Action-End Phase]",
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "multiBase": {
+                    "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
+                    "displayLines": "{[Skill05[4]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill05[4]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability05_ActivityTelevision_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02": {
+      "fileName": "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.2,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.3,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.5,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[3]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[2]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
+          "valuePerStack": {
+            "MDF_MaxCount": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "MDF_PartFlag": 1
+          }
+        },
+        {
+          "name": "Assign Advance/Delay to Current Ability Use",
+          "adjustmentValue": {
+            "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
+            "displayLines": "{[Skill05[4]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[4]]}"
+            ]
+          },
+          "adjustmentType": "="
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "AIFlag",
+          "value": 8
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part01",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_Ability04_Camera",
+        "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part01",
+        "3003011_Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Dinosaur_ActivityTelevision_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability03_Part02": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Crazy_Flag",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2127032004\">MModifier_Monster_W3_Dinosaur_Effect_Fire1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2076699147\">MModifier_Monster_W3_Dinosaur_Effect_Fire2</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2093476766\">MModifier_Monster_W3_Dinosaur_Effect_Fire3</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-23950311\">MModifier_Monster_W3_Dinosaur_ATMark</a>"
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1600241954\">MModifier_Monster_W3_Dinosaur_RLElite</a>"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "Vibrate_Count",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
+          "valuePerStack": {
+            "MDF_MaxCount": {
+              "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+              "displayLines": "{[Skill05[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill05[0]]}"
+              ]
+            },
+            "MDF_PartFlag": 1
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1583693402\">MModifier_Monster_W3_Dinosaur_Calm</a>[<span class=\"descriptionNumberColor\">Simmer</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1287806639\">MModifier_Monster_W3_Dinosaur_Fury</a>[<span class=\"descriptionNumberColor\">Boil</span>]"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "{[Skill06[0]]}"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability03_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability03_Part01",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_Ability03_Camera",
+        "3003011_Monster_W3_Dinosaur_Ability03_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability02_Part02": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+              "displayLines": "{[Skill02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[3]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[2]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[3]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[2]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability02_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability02_Part01",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_Ability02_Camera",
+        "3003011_Monster_W3_Dinosaur_Ability02_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability01_Part02": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[3]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[3]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[PassiveSkillInitiate[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkillInitiate[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkillInitiate[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkillInitiate[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkillInitiate[2]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3003011_Monster_W3_Dinosaur_Ability01_Part01": {
+      "fileName": "3003011_Monster_W3_Dinosaur_Ability01_Part01",
+      "childAbilityList": [
+        "3003011_Monster_W3_Dinosaur_Ability01_Camera",
+        "3003011_Monster_W3_Dinosaur_Ability01_Part01",
+        "3003011_Monster_W3_Dinosaur_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Dinosaur_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

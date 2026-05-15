@@ -39,9 +39,6 @@ const configAbility = {
         "STAT_DOT_Electric"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Electric_DamagePercentage"
-      ],
       "description": "Takes Lightning DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
       "type": "Debuff",
       "effectName": "Carousal of Revelry",
@@ -164,9 +161,6 @@ const configAbility = {
         "STAT_DOT_Poison"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Poison_DamagePercentage"
-      ],
       "description": "Takes Wind DMG at the start of each turn for a certain number of turns. This effect can be stacked.",
       "type": "Debuff",
       "effectName": "Carousal of Wantonness",

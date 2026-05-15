@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002040,
   "trimCharacterName": 8002040,
   "abilityList": [
+    "8002040_Modifiers",
     "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial",
     "8002040_Monster_XP_Minion04_PassiveAbilityInitiate",
     "8002040_Monster_XP_Minion04_Ability03_Part02",
@@ -10,10 +11,109 @@ const compositeAbilityObject = {
     "8002040_Monster_XP_Minion04_Ability02_Part02",
     "8002040_Monster_XP_Minion04_Ability02_Part01",
     "8002040_Monster_XP_Minion04_Ability01_Part02",
-    "8002040_Monster_XP_Minion04_Ability01_Part01",
-    "8002040_Modifiers"
+    "8002040_Monster_XP_Minion04_Ability01_Part01"
   ],
   "abilityObject": {
+    "8002040_Modifiers": {
+      "fileName": "8002040_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
+          "modifierFlags": [
+            "MuteHitFly",
+            "Endurance",
+            "MuteBreak"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Charge02"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Modify Weaknesses",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "action": "Protected",
+                  "valueList": [
+                    "Physical",
+                    "Fire",
+                    "Ice",
+                    "Thunder",
+                    "Wind",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "phase": "Charge01"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "phase": "Normal"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial": {
       "fileName": "8002040_Monster_XP_Minion04_PassiveAbility_Tutorial",
       "skillTrigger": "PassiveSkill_Tutorial",
@@ -243,106 +343,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "8002040_Modifiers": {
-      "fileName": "8002040_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__222306094\">Enemy_XP_Minion04_EscapingCharge02</a>",
-          "modifierFlags": [
-            "MuteHitFly",
-            "Endurance",
-            "MuteBreak"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Charge02"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Modify Weaknesses",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "action": "Protected",
-                  "valueList": [
-                    "Physical",
-                    "Fire",
-                    "Ice",
-                    "Thunder",
-                    "Wind",
-                    "Quantum",
-                    "Imaginary"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__205528475\">Enemy_XP_Minion04_EscapingCharge01</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "phase": "Charge01"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "phase": "Normal"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

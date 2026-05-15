@@ -295,10 +295,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1397396521\">Enemy_W2_Argenti_IF_EX_EnemyCount</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_ShowValue2"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1145,12 +1141,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1249,12 +1239,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1028252906\">W2_Argenti_BattleScore1</a>",
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -2044,12 +2028,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1334735657\">Enemy_W2_Argenti_IF_Boss_Enhance</a>",
-      "latentQueue": [
-        "Monster_IF_InsertCount",
-        "Monster_IF_InsertCameraFlag",
-        "Monster_IF_InsertCount02",
-        "Monster_IF_InsertCameraFlag02"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

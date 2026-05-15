@@ -3,12 +3,67 @@ const compositeAbilityObject = {
   "fullCharacterName": 8032010,
   "trimCharacterName": 8032010,
   "abilityList": [
+    "8032010_Modifiers",
     "8032010_Monster_W1_Soldier02_01_Passive01",
     "8032010_Monster_W1_Soldier02_01_Ability01_Part02",
-    "8032010_Monster_W1_Soldier02_01_Ability01_Part01",
-    "8032010_Modifiers"
+    "8032010_Monster_W1_Soldier02_01_Ability01_Part01"
   ],
   "abilityObject": {
+    "8032010_Modifiers": {
+      "fileName": "8032010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-288523596\">Monster_W1_Soldier02_01_CoinPassive</a>",
+          "execute": [
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
+                      "valuePerStack": {
+                        "MDF_DamageUpRatio": {
+                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                          "displayLines": "{[PassiveSkill01[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[PassiveSkill01[0]]}"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8032010_Monster_W1_Soldier02_01_Passive01": {
       "fileName": "8032010_Monster_W1_Soldier02_01_Passive01",
       "skillTrigger": "PassiveSkill02",
@@ -102,61 +157,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8032010_Modifiers": {
-      "fileName": "8032010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-288523596\">Monster_W1_Soldier02_01_CoinPassive</a>",
-          "execute": [
-            {
-              "eventTrigger": "Attack DMG End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]"
-                  },
-                  "failed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-995385853\">Monster_Company_Coin</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
-                      "valuePerStack": {
-                        "MDF_DamageUpRatio": {
-                          "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                          "displayLines": "{[PassiveSkill01[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[PassiveSkill01[0]]}"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

@@ -12,11 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__514811508\">Enemy_W1_Gepard_IF_03_Part2EnhanceInti</a>",
       "stackType": "Refresh",
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag",
-        "isMainAttack"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -428,13 +423,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "Bronya_LimboFlag",
-        "isMainAttack",
-        "AIFlag",
-        "PhaseFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -461,11 +449,6 @@ const configAbility = {
       "stackData": [
         "MDF_SpeedUpPerLayer",
         "MDF_AttackUpPerLayer"
-      ],
-      "latentQueue": [
-        "isMainAttack",
-        "PhaseFlag",
-        "AIFlag"
       ],
       "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
       "type": "Buff",
@@ -604,15 +587,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1430608043\">Enemy_W1_Gepard_IF_03_Enhance</a>[<span class=\"descriptionNumberColor\">Thick and Thin</span>]",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_SpeedUp"
-      ],
-      "latentQueue": [
-        "ReturnAttackCounter",
-        "PhaseFlag",
-        "Bronya_LimboFlag",
-        "AIFlag"
-      ],
       "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Frigid Waterfall has a slight chance to Freeze the attacked target.",
       "type": "Buff",
       "effectName": "Enhance",
@@ -2007,11 +1981,6 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "Bronya_LimboFlag",
-        "isMainAttack"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2078,9 +2047,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1955091143\">Enemy_W1_Gepard_RL_ListenBeingAttacked</a>[<span class=\"descriptionNumberColor\">Counter</span>]",
       "modifierFlags": [
         "MuteHitH"
-      ],
-      "latentQueue": [
-        "ReturnAttackCounter"
       ],
       "description": "Uses a Powerful Counter on the attacker after being attacked.",
       "type": "Buff",

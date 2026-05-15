@@ -45,14 +45,6 @@ const configAbility = {
       "modifierFlags": [
         "Shield"
       ],
-      "stackData": [
-        "MDF_ShieldPercentage",
-        "MDF_MaxHPHitPercentage1",
-        "MDF_MaxHPHitPercentage2"
-      ],
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -414,9 +406,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1831540372\">Enemy_W1_Gepard_IF_ListenBeingAttacked</a>",
       "modifierFlags": [
         "MuteHitH"
-      ],
-      "latentQueue": [
-        "ReturnAttackCounter"
       ],
       "execute": [
         {
@@ -911,9 +900,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1185722758\">Gepard_RL_ShieldIcon2</a>[<span class=\"descriptionNumberColor\">Weakness Protected</span>]",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "description": "Before the Collective Shield ends, enemy targets' Toughness cannot be reduced.",
       "type": "Buff",
       "effectName": "Weakness Protected",
@@ -922,9 +908,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1788931056\">Gepard_RL_ShieldIcon</a>[<span class=\"descriptionNumberColor\">Collective Shield</span>]",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "description": "A Shield that absorbs DMG taken by all enemies. While the Shield persists, allies' attacks will not reduce the Shielded enemies' HP.",
       "type": "Buff",
       "effectName": "Collective Shield",
@@ -1329,9 +1312,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -1379,7 +1359,6 @@ const configAbility = {
         "MuteHitH"
       ],
       "latentQueue": [
-        "ReturnAttackCounter",
         "MDF_AttackFlag"
       ],
       "description": "Uses a Powerful Counter on the attacker after being attacked.",
@@ -1506,9 +1485,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__321901706\">Monster_W1_Gepard_RL_Revive</a>",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -1659,9 +1635,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__802362263\">Monster_W1_Gepard_RL_AIWatcher</a>",
-      "latentQueue": [
-        "UsedShieldFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

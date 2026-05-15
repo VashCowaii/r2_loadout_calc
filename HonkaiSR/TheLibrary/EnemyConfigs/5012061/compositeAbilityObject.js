@@ -3,12 +3,29 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012061,
   "trimCharacterName": 5012061,
   "abilityList": [
+    "5012061_Modifiers",
     "5012061_Monster_W2_Mecha01_05_Passive",
     "5012061_Monster_W2_Mecha01_05_Ability01_Part02",
-    "5012061_Monster_W2_Mecha01_05_Ability01_Part01",
-    "5012061_Modifiers"
+    "5012061_Monster_W2_Mecha01_05_Ability01_Part01"
   ],
   "abilityObject": {
+    "5012061_Modifiers": {
+      "fileName": "5012061_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1707357339\">Enemy_W2_Mecha01_05_Resistance_Thunder</a>"
+        }
+      ],
+      "references": []
+    },
     "5012061_Monster_W2_Mecha01_05_Passive": {
       "fileName": "5012061_Monster_W2_Mecha01_05_Passive",
       "skillTrigger": "PassiveSkill02",
@@ -242,23 +259,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "5012061_Modifiers": {
-      "fileName": "5012061_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1707357339\">Enemy_W2_Mecha01_05_Resistance_Thunder</a>"
-        }
-      ],
       "references": []
     }
   }

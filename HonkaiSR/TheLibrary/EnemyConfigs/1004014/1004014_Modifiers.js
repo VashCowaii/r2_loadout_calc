@@ -2873,12 +2873,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -3209,9 +3203,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-883410937\">Monster_W1_CocoliaP1_RL_Ability05_Bonus</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-      "stackData": [
-        "ModifierDamageUpValue"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -3763,10 +3754,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-146543153\">Enemy_W2_Cocolia_IF_WeaknessCount</a>",
-      "stackData": [
-        "MDF_TokenDamageReduceRatio",
-        "MDF_TokenDamageAddRatioPerlayer"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -4902,10 +4889,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__222390491\">Enemy_W2_Cocolia_IF_ExtraStance</a>",
-      "stackData": [
-        "MDF_ExtraStanceRatio",
-        "MDF_StanceDMGPerTeamMate"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -5015,9 +4998,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1783900265\">Enemy_W2_Cocolia_IF_ExtraFrozenDamageRatio</a>",
-      "stackData": [
-        "MDF_ExtraFrozenDamageRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -958,12 +958,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_RallyTransferRatio",
-        "MDF_Rally_HealPercentage",
-        "MDF_Rally_HealUpRatio",
-        "MDF_Rally_Strongth_AllDamageTypeAddedRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",

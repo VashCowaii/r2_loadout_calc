@@ -7,7 +7,7 @@ const configAbility = {
     0,
     0
   ],
-  "length": 7,
+  "length": 9,
   "parse": [
     {
       "name": "CharacterFunctions",
@@ -868,6 +868,16 @@ const configAbility = {
           ]
         }
       ]
+    },
+    {
+      "name": "CharacterFunctions",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1173935247\">DeathCamera_First</a>",
+      "parse": []
+    },
+    {
+      "name": "CharacterFunctions",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1667812127\">CocoliaP2_Position</a>",
+      "parse": []
     }
   ],
   "references": []

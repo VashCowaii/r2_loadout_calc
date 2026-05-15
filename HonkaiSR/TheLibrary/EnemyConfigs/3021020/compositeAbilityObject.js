@@ -3,14 +3,71 @@ const compositeAbilityObject = {
   "fullCharacterName": 3021020,
   "trimCharacterName": 3021020,
   "abilityList": [
+    "3021020_Modifiers",
     "3021020_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate",
     "3021020_Monster_W2_ArgentiTotem_01_AbilityP01_Part01",
     "3021020_Monster_W2_ArgentiTotem_01_AbilityP01_Insert",
     "3021020_Monster_W2_ArgentiTotem_01_Ability01_Part02",
-    "3021020_Monster_W2_ArgentiTotem_01_Ability01_Part01",
-    "3021020_Modifiers"
+    "3021020_Monster_W2_ArgentiTotem_01_Ability01_Part01"
   ],
   "abilityObject": {
+    "3021020_Modifiers": {
+      "fileName": "3021020_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_ShowValue2",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
+                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ShowValue2",
+                      "MDF_ShowValue1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "3021020_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate": {
       "fileName": "3021020_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate",
       "skillTrigger": "SkillP01",
@@ -805,66 +862,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3021020_Modifiers": {
-      "fileName": "3021020_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-          "stackType": "Replace",
-          "stackData": [
-            "MDF_ShowValue1"
-          ],
-          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "DMG Boost",
-          "addStacksPerTrigger": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "valueType": "Layer",
-                  "variableName": "MDF_ShowValue2",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
-                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_ShowValue2",
-                      "MDF_ShowValue1"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2033021,
   "trimCharacterName": 2033021,
   "abilityList": [
+    "2033021_Modifiers",
     "2033021_Monster_W2_FeixiaoPart_PassiveAbility_Insert2",
     "2033021_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
     "2033021_Monster_W2_FeixiaoPart_Ability06_Part02",
@@ -13,772 +14,9 @@ const compositeAbilityObject = {
     "2033021_Monster_W2_FeixiaoPart_Ability04_Part01",
     "2033021_Monster_W2_FeixiaoPart_Ability03_Part01",
     "2033021_Monster_W2_FeixiaoPart_Ability02_Part01",
-    "2033021_Monster_W2_FeixiaoPart_Ability01_Part01",
-    "2033021_Modifiers"
+    "2033021_Monster_W2_FeixiaoPart_Ability01_Part01"
   ],
   "abilityObject": {
-    "2033021_Monster_W2_FeixiaoPart_PassiveAbility_Insert2": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_PassiveAbility_Insert2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_PassiveAbilityInitiate": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2121118445\">Monster_W2_FeixiaoPart_PartController</a>"
-        },
-        {
-          "name": "Set Enemy Phase",
-          "phase": 2,
-          "applyOverride": false
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"637793327\">Monster_W2_FeixiaoPart_Formation</a>"
-        },
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "FeixiaoPart",
-          "state": false
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 2033021,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
-          }
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Head",
-          "value": {
-            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
-            "displayLines": "PartEntity1_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity1_MonsterID"
-            ]
-          },
-          "offset": 2,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Limb",
-          "value": {
-            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
-            "displayLines": "PartEntity2_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity2_MonsterID"
-            ]
-          },
-          "offset": -1,
-          "type": 2,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Create Enemy as Body Part",
-          "partName": "Tail",
-          "value": {
-            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
-            "displayLines": "PartEntity3_MonsterID",
-            "constants": [],
-            "variables": [
-              "PartEntity3_MonsterID"
-            ]
-          },
-          "offset": -2,
-          "type": 3,
-          "linkHitByPart": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1365495312\">Monster_W2_FeixiaoPart_HeadNormalEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-31609686\">Monster_W2_FeixiaoPart_LimbNormalEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"506782608\">Monster_W2_FeixiaoPart_TailNormalEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1095211474\">Monster_W2_FeixiaoPart_Part2ResidentEffect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1236954137\">Monster_W2_FeixiaoPart_Unselectable</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1306733131\">Monster_W2_Feixiao_Stop</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability06_Part02": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
-              "displayLines": "Skill06DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill06DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability06_Part01": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability06_Part01",
-      "childAbilityList": [
-        "2033021_Monster_W2_FeixiaoPart_Ability06_Camera",
-        "2033021_Monster_W2_FeixiaoPart_Ability06_Part01",
-        "2033021_Monster_W2_FeixiaoPart_Ability06_Part02"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_FeixiaoPart_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability05_Part02": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Feixiao: Skill05 Target}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "=",
-            "value2": 3
-          },
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Enemy Feixiao: Skill05 Target}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "=",
-                "value2": 2
-              }
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
-              "displayLines": "Skill05DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill05DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
-              "displayLines": "Skill05DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill05DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability05_Part01": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability05_Part01",
-      "childAbilityList": [
-        "2033021_Monster_W2_FeixiaoPart_Ability05_Camera",
-        "2033021_Monster_W2_FeixiaoPart_Ability05_Part01",
-        "2033021_Monster_W2_FeixiaoPart_Ability05_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{ST and Blast}}"
-          },
-          "ability": "Monster_W2_FeixiaoPart_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability04_Part02": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
-              "displayLines": "Skill04DamagePercentage",
-              "constants": [],
-              "variables": [
-                "Skill04DamagePercentage"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability04_Part01": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability04_Part01",
-      "childAbilityList": [
-        "2033021_Monster_W2_FeixiaoPart_Ability04_Camera",
-        "2033021_Monster_W2_FeixiaoPart_Ability04_Part01",
-        "2033021_Monster_W2_FeixiaoPart_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_FeixiaoPart_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability03_Part01": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability03_Part01",
-      "childAbilityList": [
-        "2033021_Monster_W2_FeixiaoPart_Ability03_Part01"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_FeixiaoPart_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability02_Part01": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability02_Part01",
-      "childAbilityList": [
-        "2033021_Monster_W2_FeixiaoPart_Ability02_Part01"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_FeixiaoPart_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "2033021_Monster_W2_FeixiaoPart_Ability01_Part01": {
-      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability01_Part01",
-      "childAbilityList": [
-        "2033021_Monster_W2_FeixiaoPart_Ability01_Part01"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_FeixiaoPart_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "2033021_Modifiers": {
       "fileName": "2033021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1767,6 +1005,768 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_PassiveAbility_Insert2": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_PassiveAbility_Insert2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_PassiveAbilityInitiate": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_PassiveAbilityInitiate",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2121118445\">Monster_W2_FeixiaoPart_PartController</a>"
+        },
+        {
+          "name": "Set Enemy Phase",
+          "phase": 2,
+          "applyOverride": false
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"637793327\">Monster_W2_FeixiaoPart_Formation</a>"
+        },
+        {
+          "name": "Set Action-State",
+          "on": null,
+          "stateName": "FeixiaoPart",
+          "state": false
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 2033021,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Ecliptic Inner Beast & Shadow of \"Feixiao\""
+          }
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Head",
+          "value": {
+            "operator": "Variables[0] (PartEntity1_MonsterID) || RETURN",
+            "displayLines": "PartEntity1_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity1_MonsterID"
+            ]
+          },
+          "offset": 2,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Limb",
+          "value": {
+            "operator": "Variables[0] (PartEntity2_MonsterID) || RETURN",
+            "displayLines": "PartEntity2_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity2_MonsterID"
+            ]
+          },
+          "offset": -1,
+          "type": 2,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Create Enemy as Body Part",
+          "partName": "Tail",
+          "value": {
+            "operator": "Variables[0] (PartEntity3_MonsterID) || RETURN",
+            "displayLines": "PartEntity3_MonsterID",
+            "constants": [],
+            "variables": [
+              "PartEntity3_MonsterID"
+            ]
+          },
+          "offset": -2,
+          "type": 3,
+          "linkHitByPart": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1365495312\">Monster_W2_FeixiaoPart_HeadNormalEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-31609686\">Monster_W2_FeixiaoPart_LimbNormalEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"506782608\">Monster_W2_FeixiaoPart_TailNormalEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1095211474\">Monster_W2_FeixiaoPart_Part2ResidentEffect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1236954137\">Monster_W2_FeixiaoPart_Unselectable</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1306733131\">Monster_W2_Feixiao_Stop</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability06_Part02": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] (Skill06DamagePercentage) || RETURN",
+              "displayLines": "Skill06DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill06DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability06_Part01": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability06_Part01",
+      "childAbilityList": [
+        "2033021_Monster_W2_FeixiaoPart_Ability06_Camera",
+        "2033021_Monster_W2_FeixiaoPart_Ability06_Part01",
+        "2033021_Monster_W2_FeixiaoPart_Ability06_Part02"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_FeixiaoPart_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability05_Part02": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Feixiao: Skill05 Target}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "=",
+            "value2": 3
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Enemy Feixiao: Skill05 Target}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": "=",
+                "value2": 2
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
+              "displayLines": "Skill05DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill05DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] (Skill05DamagePercentage) || RETURN",
+              "displayLines": "Skill05DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill05DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1683392657\">Monster_W2_Feixiao_Ability05_Target</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability05_Part01": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability05_Part01",
+      "childAbilityList": [
+        "2033021_Monster_W2_FeixiaoPart_Ability05_Camera",
+        "2033021_Monster_W2_FeixiaoPart_Ability05_Part01",
+        "2033021_Monster_W2_FeixiaoPart_Ability05_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
+          "ability": "Monster_W2_FeixiaoPart_Ability05_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability04_Part02": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] (Skill04DamagePercentage) || RETURN",
+              "displayLines": "Skill04DamagePercentage",
+              "constants": [],
+              "variables": [
+                "Skill04DamagePercentage"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-255389438\">Monster_W2_FeixiaoPart_Part2Effect</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-452452552\">Monster_W2_FeixiaoPart_Part3EffectSpecial</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability04_Part01": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability04_Part01",
+      "childAbilityList": [
+        "2033021_Monster_W2_FeixiaoPart_Ability04_Camera",
+        "2033021_Monster_W2_FeixiaoPart_Ability04_Part01",
+        "2033021_Monster_W2_FeixiaoPart_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_FeixiaoPart_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability03_Part01": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability03_Part01",
+      "childAbilityList": [
+        "2033021_Monster_W2_FeixiaoPart_Ability03_Part01"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_FeixiaoPart_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability02_Part01": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability02_Part01",
+      "childAbilityList": [
+        "2033021_Monster_W2_FeixiaoPart_Ability02_Part01"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_FeixiaoPart_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "2033021_Monster_W2_FeixiaoPart_Ability01_Part01": {
+      "fileName": "2033021_Monster_W2_FeixiaoPart_Ability01_Part01",
+      "childAbilityList": [
+        "2033021_Monster_W2_FeixiaoPart_Ability01_Part01"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_FeixiaoPart_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     }
   }

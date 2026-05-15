@@ -51,13 +51,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-826240284\">Monster_W3_Figure_02_RLElite_ChargeLayer</a>",
-      "stackData": [
-        "#Skill04_P1_DamageUPLayer",
-        "#Skill04_P2_DamageUPRatio"
-      ],
-      "latentQueue": [
-        "MarkCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -195,9 +188,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2034637668\">Monster_W3_Figure_02_RLElite_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "MarkCount"
-      ],
       "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
       "type": "Other",
       "effectName": "Target Locked On",
@@ -548,7 +538,6 @@ const configAbility = {
         "AttackSign"
       ],
       "latentQueue": [
-        "MarkCount",
         "MDF_DangerLevel",
         "End_Flag"
       ],

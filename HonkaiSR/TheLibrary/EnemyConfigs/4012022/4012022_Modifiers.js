@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_SpeedUpRatio"
-      ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
       "type": "Buff",
       "effectName": "Gleaned Instruction",
@@ -304,10 +301,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_SpeedUpRatio",
-        "MDF_LifeTime"
       ],
       "execute": [
         {

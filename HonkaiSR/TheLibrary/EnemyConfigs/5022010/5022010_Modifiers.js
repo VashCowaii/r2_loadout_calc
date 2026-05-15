@@ -285,9 +285,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1271467699\">Monster_W5_RipperPart_Bonus</a>[<span class=\"descriptionNumberColor\">Wicked Grin</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
       "type": "Buff",
       "effectName": "DMG Boost",

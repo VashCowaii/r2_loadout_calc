@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-630308982\">Monster_AML_Boss_IF_BattleAlert</a>",
-      "latentQueue": [
-        "SkillEX03_P4_ActionDelayRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: End",
@@ -1618,9 +1615,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2419,9 +2413,6 @@ const configAbility = {
       "modifierFlags": [
         "Endurance"
       ],
-      "latentQueue": [
-        "SkillEX03_P4_ActionDelayRatio"
-      ],
       "duration": 1,
       "execute": [
         {
@@ -2550,9 +2541,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
-      "stackData": [
-        "MDF_PartReviveDelay"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -2683,9 +2671,6 @@ const configAbility = {
         "Endurance"
       ],
       "useEntitySnapshot": true,
-      "latentQueue": [
-        "SkillEX03_P4_ActionDelayRatio"
-      ],
       "description": "Cannot be targeted until Disaster's Right Hand, Dawn's Left Hand, and Antimatter Engine have all been destroyed.",
       "type": "Buff",
       "statusName": "Vestige Valor",

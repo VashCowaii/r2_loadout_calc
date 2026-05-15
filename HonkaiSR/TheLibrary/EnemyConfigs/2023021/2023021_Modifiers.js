@@ -119,9 +119,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>",
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -230,9 +227,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>",
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -288,9 +282,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__329970269\">Enemy_W2_Beast02_RLElite_GennkiMark</a>[<span class=\"descriptionNumberColor\">Gather Courage</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "Beast02RL_Num_Flag"
-      ],
       "description": "<span class=\"descriptionNumberColor\">MDF_PropertyValue</span> stacks of Gusto accumulated.",
       "type": "Other",
       "effectName": "Gather Courage",

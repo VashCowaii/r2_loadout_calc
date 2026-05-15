@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__223685370\">Monster_W5_Pam_SummonedMinions_Appear</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_BEAlive"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -394,12 +391,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-94545998\">Monster_W5_Pam_MainStory_ActionImmediately</a>",
-      "stackData": [
-        "MDF_Lock_Radio"
-      ],
-      "latentQueue": [
-        "MDF_FirstUltraSkill"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -983,12 +974,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
       ],
-      "stackData": [
-        "MDF_PropertyValue01",
-        "MDF_PropertyValue02",
-        "MDF_PropertyValue03",
-        "MDF_PropertyValue04"
-      ],
       "description": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span> of the target's Max HP, and gains <span class=\"descriptionNumberColor\">MDF_PropertyValue03</span> Punchline(s). After using Skill, triggers the \"Pristine\" effect and recovers <span class=\"descriptionNumberColor\">MDF_PropertyValue04</span> Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active.",
       "type": "Other",
       "effectName": "Deep Clean",
@@ -1162,12 +1147,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1556520356\">Modifier_Monster_W5_Pam_Rage</a>[<span class=\"descriptionNumberColor\">Steam Wash</span>]",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MDF_IsAngry"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -1599,9 +1578,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-458099336\">Monster_W5_Pam_zangshui_layer_display_02</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_IsAngry"
-      ],
       "addStacksPerTrigger": 1,
       "execute": [
         {
@@ -2157,9 +2133,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "MDF_FirstUltraSkill"
-      ],
       "description": "When \"Alloy Mechatron: King Pom-Pom\" is in the \"Raring to Go\" state, this unit's Toughness cannot be reduced.",
       "type": "Other",
       "effectName": "Weakness Protected",
@@ -2223,12 +2196,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-983171602\">Modifier_Monster_W5_Pam_DefenceUp</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
-      "latentQueue": [
-        "MDF_IsAngry"
-      ],
       "description": "Each stack decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
       "type": "Buff",
       "effectName": "DMG Received Reduction",

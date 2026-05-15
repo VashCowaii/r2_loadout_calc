@@ -3,14 +3,26 @@ const compositeAbilityObject = {
   "fullCharacterName": 3021031,
   "trimCharacterName": 3021031,
   "abilityList": [
+    "3021031_Modifiers",
     "3021031_Monster_W2_ArgentiTotem_PassiveAbilityInitiate",
     "3021031_Monster_W2_ArgentiTotem_AbilityP01_Part01",
     "3021031_Monster_W2_ArgentiTotem_AbilityP01_Insert",
     "3021031_Monster_W2_ArgentiTotem_Ability01_Part02",
-    "3021031_Monster_W2_ArgentiTotem_Ability01_Part01",
-    "3021031_Modifiers"
+    "3021031_Monster_W2_ArgentiTotem_Ability01_Part01"
   ],
   "abilityObject": {
+    "3021031_Modifiers": {
+      "fileName": "3021031_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "references": []
+    },
     "3021031_Monster_W2_ArgentiTotem_PassiveAbilityInitiate": {
       "fileName": "3021031_Monster_W2_ArgentiTotem_PassiveAbilityInitiate",
       "skillTrigger": "SkillP01",
@@ -624,18 +636,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
-      "references": []
-    },
-    "3021031_Modifiers": {
-      "fileName": "3021031_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
       "references": []
     }
   }

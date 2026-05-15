@@ -15,9 +15,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "TeamAction"
       ],
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "%CasterName will focus attacks on this target.",
       "type": "Other",
       "effectName": "Lock On",

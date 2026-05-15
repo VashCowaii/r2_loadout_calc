@@ -65,10 +65,6 @@ const configAbility = {
         "RemoveWhenCasterDead",
         "AttackSign"
       ],
-      "latentQueue": [
-        "W2_Mecha03_BattleSore2_Flag",
-        "W2_Mecha03_00_Overdrive_InsertFlag"
-      ],
       "description": "%CasterName will focus attacks on this target.",
       "type": "Other",
       "effectName": "Lock On",
@@ -79,12 +75,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1974297403\">Monster_W2_Mecha03_Overdrive_On_RLElite</a>[<span class=\"descriptionNumberColor\">Sanction Mode: Punisher</span>]",
       "modifierFlags": [
         "MuteBreak"
-      ],
-      "stackData": [
-        "MDF_SpeedUpRatio"
-      ],
-      "latentQueue": [
-        "W2_Mecha03_BattleSore2_Flag"
       ],
       "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>, and it activates the ability Track Down.",
       "type": "Buff",
@@ -194,12 +184,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1192309436\">Enemy_W2_Mecha03_Overdrive_On</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
       "modifierFlags": [
         "MuteBreak"
-      ],
-      "stackData": [
-        "MDF_SpeedAddedValue"
-      ],
-      "latentQueue": [
-        "W2_Mecha03_BattleSore2_Flag"
       ],
       "description": "The Aurumaton Gatekeeper's Toughness cannot be reduced. Its SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedAddedValue</span> and it activates the abilities Restraint and Enchainment.",
       "type": "Buff",

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8022011,
   "trimCharacterName": 8022011,
   "abilityList": [
+    "8022011_Modifiers",
     "8022011_Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01",
     "8022011_Monster_SW_Minion01_IF_AbilityP01",
     "8022011_Monster_SW_Minion01_Ability03_Part02",
@@ -10,817 +11,9 @@ const compositeAbilityObject = {
     "8022011_Monster_SW_Minion01_Ability02_Part02",
     "8022011_Monster_SW_Minion01_Ability02_Part01",
     "8022011_Monster_SW_Minion01_Ability01_Part02",
-    "8022011_Monster_SW_Minion01_Ability01_Part01",
-    "8022011_Modifiers"
+    "8022011_Monster_SW_Minion01_Ability01_Part01"
   ],
   "abilityObject": {
-    "8022011_Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01": {
-      "fileName": "8022011_Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "performAccFlag",
-            "compareType": "=",
-            "value2": 1
-          },
-          "failed": [
-            {
-              "name": "UI Display Event",
-              "popUpText": "Entomon Eulogy"
-            },
-            "Deleted bullshit"
-          ]
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Animation Event",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "state": "PassiveSkill01",
-          "passed": [
-            {
-              "name": "Animation Task",
-              "passed": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Wind",
-                    "Damage": {
-                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[0]]}"
-                      ]
-                    },
-                    "dmgFormula": "Max HP Scaling",
-                    "Toughness": {
-                      "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[5]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[5]]}"
-                      ]
-                    },
-                    "ToughnessDMGType": {
-                      "DamageType": "Wind"
-                    },
-                    "Tags": null,
-                    "attackType": "Basic ATK"
-                  }
-                },
-                "Trigger: Attack End",
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[3]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[3]]}"
-                    ]
-                  },
-                  "stackLimit": {
-                    "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[4]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DamageTakenUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                      "displayLines": "{[PassiveSkill01[2]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[PassiveSkill01[2]]}"
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill01[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill01[1]]}"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Enemy Team All}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "performAccFlag",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Heal",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "healPercent": {
-            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-            "displayLines": "{[SkillP01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[SkillP01[0]]}"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">=",
-            "value2": 1,
-            "conditions": {
-              "name": "AND",
-              "conditionList": [
-                {
-                  "name": "OR",
-                  "conditionList": [
-                    {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1150081091\">Enemy_SW_Minion01_IF_Deathrattle</a>"
-                    },
-                    {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"526943540\">Enemy_SW_Minion01_01_IF_Deathrattle</a>"
-                    },
-                    {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-938003569\">Enemy_SW_Minion01_02_IF_Deathrattle</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Compare: Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "value1": "CurrentHP%",
-                  "compareType": "<=",
-                  "value2": 0
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_IF_AbilityP01": {
-      "fileName": "8022011_Monster_SW_Minion01_IF_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1780753426\">Monster_SW_Minion01_Split</a>[<span class=\"descriptionNumberColor\">Mitosis: Warning</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1150081091\">Enemy_SW_Minion01_IF_Deathrattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_Ability03_Part02": {
-      "fileName": "8022011_Monster_SW_Minion01_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "canPhase": true,
-              "AttackScaling": {
-                "DamageType": "Wind",
-                "Damage": {
-                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-                  "displayLines": "{[Skill03[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill03[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null,
-                "attackType": "Additional DMG",
-                "EnergyGainPercent": "100%"
-              }
-            },
-            "Trigger: Attack End",
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                "displayLines": "{[Skill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[3]]}"
-                ]
-              },
-              "baseChance": 1,
-              "stackLimit": {
-                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-                "displayLines": "{[Skill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[4]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Poison_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                  "displayLines": "{[Skill01[2]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[2]]}"
-                  ]
-                }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
-                "displayLines": "{[Skill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill03[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_Ability03_Part01": {
-      "fileName": "8022011_Monster_SW_Minion01_Ability03_Part01",
-      "childAbilityList": [
-        "8022011_Monster_SW_Minion01_Ability03_Camera",
-        "8022011_Monster_SW_Minion01_Ability03_Part01",
-        "8022011_Monster_SW_Minion01_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_SW_Minion01_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_Ability02_Part02": {
-      "fileName": "8022011_Monster_SW_Minion01_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Meiotic Division"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-157441217\">Monster_SW_Minion01_SplitEffect</a>[<span class=\"descriptionNumberColor\">Propagation</span>]"
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0.5,
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"976017528\">Monster_SW_Minion01_Split_Old</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Shot Fired"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Modifier Values",
-              "valueType": "Layer",
-              "variableName": "DamageUpLayer",
-              "modifierName": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-              "multiplier": 1
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Minions}}"
-              },
-              "searchRandom": true,
-              "conditions": {
-                "name": "NOT",
-                "condition": {
-                  "name": "Has Modifier",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
-                }
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (DamageUpRatio) || RETURN",
-                      "displayLines": "DamageUpRatio",
-                      "constants": [],
-                      "variables": [
-                        "DamageUpRatio"
-                      ]
-                    }
-                  },
-                  "addStacksPerTrigger": {
-                    "operator": "Variables[0] (DamageUpLayer) || RETURN",
-                    "displayLines": "DamageUpLayer",
-                    "constants": [],
-                    "variables": [
-                      "DamageUpLayer"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "BossCount",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "searchRandom": true,
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 8024010,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": "Swarm: True Sting (Complete)",
-                "isBaseCompare": true
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 8024012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": "Swarm: True Sting (Complete)",
-                "isBaseCompare": true
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "scope": "TargetEntity",
-              "variableName": "BossCount",
-              "value": {
-                "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(BossCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "BossCount"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "BossCount",
-            "compareType": ">",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (DamageUpRatio) || RETURN",
-                  "displayLines": "DamageUpRatio",
-                  "constants": [],
-                  "variables": [
-                    "DamageUpRatio"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"976017528\">Monster_SW_Minion01_Split_Old</a>"
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "DamageUpRatio",
-          "value": {
-            "operator": "Variables[0] (DamageUpRatio) || RETURN",
-            "displayLines": "DamageUpRatio",
-            "constants": [],
-            "variables": [
-              "DamageUpRatio"
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_Ability02_Part01": {
-      "fileName": "8022011_Monster_SW_Minion01_Ability02_Part01",
-      "childAbilityList": [
-        "8022011_Monster_SW_Minion01_Ability02_Camera",
-        "8022011_Monster_SW_Minion01_Ability02_Part01",
-        "8022011_Monster_SW_Minion01_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_SW_Minion01_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_Ability01_Part02": {
-      "fileName": "8022011_Monster_SW_Minion01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Wind",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-            "displayLines": "{[Skill01[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[3]]}"
-            ]
-          },
-          "baseChance": 1,
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-            "displayLines": "{[Skill01[4]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[4]]}"
-            ]
-          },
-          "valuePerStack": {
-            "Modifier_Poison_DamagePercentage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            }
-          },
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-            "displayLines": "{[Skill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[1]]}"
-            ]
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "8022011_Monster_SW_Minion01_Ability01_Part01": {
-      "fileName": "8022011_Monster_SW_Minion01_Ability01_Part01",
-      "childAbilityList": [
-        "8022011_Monster_SW_Minion01_Ability01_Camera",
-        "8022011_Monster_SW_Minion01_Ability01_Part01",
-        "8022011_Monster_SW_Minion01_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_SW_Minion01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "8022011_Modifiers": {
       "fileName": "8022011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3013,6 +2206,813 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01": {
+      "fileName": "8022011_Monster_SW_Minion01_IF_PassiveAbility_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "performAccFlag",
+            "compareType": "=",
+            "value2": 1
+          },
+          "failed": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "Entomon Eulogy"
+            },
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Animation Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "state": "PassiveSkill01",
+          "passed": [
+            {
+              "name": "Animation Task",
+              "passed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Wind",
+                    "Damage": {
+                      "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[0]]}"
+                      ]
+                    },
+                    "dmgFormula": "Max HP Scaling",
+                    "Toughness": {
+                      "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[5]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[5]]}"
+                      ]
+                    },
+                    "ToughnessDMGType": {
+                      "DamageType": "Wind"
+                    },
+                    "Tags": null,
+                    "attackType": "Basic ATK"
+                  }
+                },
+                "Trigger: Attack End",
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[3]]}"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[4]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[4]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_DamageTakenUpRatio_PerLayer": {
+                      "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                      "displayLines": "{[PassiveSkill01[2]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[PassiveSkill01[2]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[1]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "performAccFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Heal",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "healPercent": {
+            "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+            "displayLines": "{[SkillP01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[SkillP01[0]]}"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">=",
+            "value2": 1,
+            "conditions": {
+              "name": "AND",
+              "conditionList": [
+                {
+                  "name": "OR",
+                  "conditionList": [
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1150081091\">Enemy_SW_Minion01_IF_Deathrattle</a>"
+                    },
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"526943540\">Enemy_SW_Minion01_01_IF_Deathrattle</a>"
+                    },
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-938003569\">Enemy_SW_Minion01_02_IF_Deathrattle</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "value1": "CurrentHP%",
+                  "compareType": "<=",
+                  "value2": 0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_IF_AbilityP01": {
+      "fileName": "8022011_Monster_SW_Minion01_IF_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1780753426\">Monster_SW_Minion01_Split</a>[<span class=\"descriptionNumberColor\">Mitosis: Warning</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1150081091\">Enemy_SW_Minion01_IF_Deathrattle</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_Ability03_Part02": {
+      "fileName": "8022011_Monster_SW_Minion01_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Wind",
+                "Damage": {
+                  "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+                  "displayLines": "{[Skill03[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill03[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null,
+                "attackType": "Additional DMG",
+                "EnergyGainPercent": "100%"
+              }
+            },
+            "Trigger: Attack End",
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                "displayLines": "{[Skill01[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill01[3]]}"
+                ]
+              },
+              "baseChance": 1,
+              "stackLimit": {
+                "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
+                "displayLines": "{[Skill01[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill01[4]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Poison_DamagePercentage": {
+                  "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+                  "displayLines": "{[Skill01[2]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[2]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
+                "displayLines": "{[Skill03[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill03[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_Ability03_Part01": {
+      "fileName": "8022011_Monster_SW_Minion01_Ability03_Part01",
+      "childAbilityList": [
+        "8022011_Monster_SW_Minion01_Ability03_Camera",
+        "8022011_Monster_SW_Minion01_Ability03_Part01",
+        "8022011_Monster_SW_Minion01_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_SW_Minion01_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1440005\">WMonster_TY_Elite01_Ability07_Mark</a>"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_Ability02_Part02": {
+      "fileName": "8022011_Monster_SW_Minion01_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Meiotic Division"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-157441217\">Monster_SW_Minion01_SplitEffect</a>[<span class=\"descriptionNumberColor\">Propagation</span>]"
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": 0.5,
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                "displayLines": "SummonList_ADF_1",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_1"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"976017528\">Monster_SW_Minion01_Split_Old</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Shot Fired"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "valueType": "Layer",
+              "variableName": "DamageUpLayer",
+              "modifierName": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "multiplier": 1
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Minions}}"
+              },
+              "searchRandom": true,
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                }
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageUpRatio_PerLayer": {
+                      "operator": "Variables[0] (DamageUpRatio) || RETURN",
+                      "displayLines": "DamageUpRatio",
+                      "constants": [],
+                      "variables": [
+                        "DamageUpRatio"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (DamageUpLayer) || RETURN",
+                    "displayLines": "DamageUpLayer",
+                    "constants": [],
+                    "variables": [
+                      "DamageUpLayer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "BossCount",
+          "value": 0
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "searchRandom": true,
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 8024010,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": "Swarm: True Sting (Complete)",
+                "isBaseCompare": true
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 8024012,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": "Swarm: True Sting (Complete)",
+                "isBaseCompare": true
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "scope": "TargetEntity",
+              "variableName": "BossCount",
+              "value": {
+                "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(BossCount + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "BossCount"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "BossCount",
+            "compareType": ">",
+            "value2": 0,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] (DamageUpRatio) || RETURN",
+                  "displayLines": "DamageUpRatio",
+                  "constants": [],
+                  "variables": [
+                    "DamageUpRatio"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"976017528\">Monster_SW_Minion01_Split_Old</a>"
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "DamageUpRatio",
+          "value": {
+            "operator": "Variables[0] (DamageUpRatio) || RETURN",
+            "displayLines": "DamageUpRatio",
+            "constants": [],
+            "variables": [
+              "DamageUpRatio"
+            ]
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_Ability02_Part01": {
+      "fileName": "8022011_Monster_SW_Minion01_Ability02_Part01",
+      "childAbilityList": [
+        "8022011_Monster_SW_Minion01_Ability02_Camera",
+        "8022011_Monster_SW_Minion01_Ability02_Part01",
+        "8022011_Monster_SW_Minion01_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_SW_Minion01_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_Ability01_Part02": {
+      "fileName": "8022011_Monster_SW_Minion01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"603194622\">Monster_SW_Boss_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+            "displayLines": "{[Skill01[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[3]]}"
+            ]
+          },
+          "baseChance": 1,
+          "stackLimit": {
+            "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
+            "displayLines": "{[Skill01[4]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[4]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+              "displayLines": "{[Skill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[2]]}"
+              ]
+            }
+          },
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+            "displayLines": "{[Skill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[1]]}"
+            ]
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "8022011_Monster_SW_Minion01_Ability01_Part01": {
+      "fileName": "8022011_Monster_SW_Minion01_Ability01_Part01",
+      "childAbilityList": [
+        "8022011_Monster_SW_Minion01_Ability01_Camera",
+        "8022011_Monster_SW_Minion01_Ability01_Part01",
+        "8022011_Monster_SW_Minion01_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_SW_Minion01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

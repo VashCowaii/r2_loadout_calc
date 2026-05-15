@@ -3,16 +3,114 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002040,
   "trimCharacterName": 3002040,
   "abilityList": [
+    "3002040_Modifiers",
     "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
     "3002040_Monster_W3_Clock_Ability03_Part02",
     "3002040_Monster_W3_Clock_Ability03_Part01",
     "3002040_Monster_W3_Clock_Ability02_Part02",
     "3002040_Monster_W3_Clock_Ability02_Part01",
     "3002040_Monster_W3_Clock_Ability01_Part02",
-    "3002040_Monster_W3_Clock_Ability01_Part01",
-    "3002040_Modifiers"
+    "3002040_Monster_W3_Clock_Ability01_Part01"
   ],
   "abilityObject": {
+    "3002040_Modifiers": {
+      "fileName": "3002040_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-13441669\">Enemy_W3_Clock_Ability01_Charge_Effect</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2064893309\">Enemy_W3_Clock_Ability01_Charge</a>[<span class=\"descriptionNumberColor\">Set Alarm</span>]",
+          "description": "Uses Wake-Up Alarm for the next action.",
+          "type": "Other",
+          "effectName": "Set Alarm",
+          "statusName": "Set Alarm",
+          "execute": [
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1952577261\">Enemy_W3_Clock_RemoveOneMore</a>",
+          "execute": [
+            {
+              "eventTrigger": "Action End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AIFlag",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "AIFlag",
+                  "value": 1
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "3002040_Monster_W3_Clock_PassiveAbilityInitiate": {
       "fileName": "3002040_Monster_W3_Clock_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -298,104 +396,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3002040_Modifiers": {
-      "fileName": "3002040_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-13441669\">Enemy_W3_Clock_Ability01_Charge_Effect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2064893309\">Enemy_W3_Clock_Ability01_Charge</a>[<span class=\"descriptionNumberColor\">Set Alarm</span>]",
-          "description": "Uses Wake-Up Alarm for the next action.",
-          "type": "Other",
-          "effectName": "Set Alarm",
-          "statusName": "Set Alarm",
-          "execute": [
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1952577261\">Enemy_W3_Clock_RemoveOneMore</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "AIFlag",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

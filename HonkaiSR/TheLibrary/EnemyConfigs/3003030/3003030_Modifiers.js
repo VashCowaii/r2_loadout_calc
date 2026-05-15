@@ -195,9 +195,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-596409662\">Monster_W3_Figure_02_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "MarkCount"
-      ],
       "description": "About to use Desmios Evangelion. The current DMG level is <span class=\"descriptionNumberColor\">MDF_DangerLevel</span>.",
       "type": "Other",
       "effectName": "Target Locked On",
@@ -402,7 +399,6 @@ const configAbility = {
         "AttackSign"
       ],
       "latentQueue": [
-        "MarkCount",
         "MDF_DangerLevel"
       ],
       "description": "%CasterName will focus attacks on this target.",

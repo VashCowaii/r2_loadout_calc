@@ -1655,11 +1655,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1053900391\">Enemy_W4_Manta_Virus_Transfer</a>",
-      "stackData": [
-        "MDF_TransferRatio",
-        "MDF_LifeTime",
-        "MDF_TriggerRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2162,12 +2157,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-431422946\">Enemy_W4_Manta_PassiveUp</a>",
-      "stackData": [
-        "MDF_NewMaxLayer",
-        "MDF_TransferRatio",
-        "MDF_LifeTime",
-        "MDF_TriggerRatio"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -2336,9 +2325,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_MaxLayer"
-      ],
       "description": "Advances action after taking a certain number of attacks from Basic ATK, Skill, Ultimate, or Memosprite Skill.",
       "type": "Other",
       "statusName": "Respite By The Waters",

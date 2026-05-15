@@ -3,13 +3,88 @@ const compositeAbilityObject = {
   "fullCharacterName": 8012202,
   "trimCharacterName": 8012202,
   "abilityList": [
+    "8012202_Modifiers",
     "8012202_Monster_W2_HuanlongPart_PassiveAbility_Insert_Part01",
     "8012202_Monster_W2_HuanlongPart_Passive01",
     "8012202_Monster_W2_HuanlongPart_Ability01_Part02",
-    "8012202_Monster_W2_HuanlongPart_Ability01_Part01",
-    "8012202_Modifiers"
+    "8012202_Monster_W2_HuanlongPart_Ability01_Part01"
   ],
   "abilityObject": {
+    "8012202_Modifiers": {
+      "fileName": "8012202_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1471440713\">Monster_W2_HuanlongPart_Heal</a>[<span class=\"descriptionNumberColor\">Vigor</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Every action taken restores <span class=\"descriptionNumberColor\">MDF_HealRatio</span> HP.",
+          "type": "Buff",
+          "effectName": "Vigor",
+          "statusName": "Vigor",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Flag",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "BreakRecover",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Heal",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "healPercent": {
+                        "operator": "Variables[0] (MDF_HealRatio) || RETURN",
+                        "displayLines": "MDF_HealRatio",
+                        "constants": [],
+                        "variables": [
+                          "MDF_HealRatio"
+                        ]
+                      },
+                      "formula": "Heal from Healer's MaxHP"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8012202_Monster_W2_HuanlongPart_PassiveAbility_Insert_Part01": {
       "fileName": "8012202_Monster_W2_HuanlongPart_PassiveAbility_Insert_Part01",
       "abilityType": null,
@@ -365,84 +440,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
-      "references": []
-    },
-    "8012202_Modifiers": {
-      "fileName": "8012202_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1471440713\">Monster_W2_HuanlongPart_Heal</a>[<span class=\"descriptionNumberColor\">Vigor</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [
-            "MDF_HealRatio"
-          ],
-          "description": "Every action taken restores <span class=\"descriptionNumberColor\">MDF_HealRatio</span> HP.",
-          "type": "Buff",
-          "effectName": "Vigor",
-          "statusName": "Vigor",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "flagName": "STAT_CTRL",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "BreakRecover",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Heal",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "healPercent": {
-                        "operator": "Variables[0] (MDF_HealRatio) || RETURN",
-                        "displayLines": "MDF_HealRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_HealRatio"
-                        ]
-                      },
-                      "formula": "Heal from Healer's MaxHP"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

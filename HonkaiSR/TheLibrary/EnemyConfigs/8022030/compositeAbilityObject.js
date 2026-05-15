@@ -3,13 +3,38 @@ const compositeAbilityObject = {
   "fullCharacterName": 8022030,
   "trimCharacterName": 8022030,
   "abilityList": [
+    "8022030_Modifiers",
     "8022030_Monster_SW_Minion01_02_PassiveAbility_Insert_Part01",
     "8022030_Monster_SW_Minion01_02_Passive01",
     "8022030_Monster_SW_Minion01_02_Ability01_Part02",
-    "8022030_Monster_SW_Minion01_02_Ability01_Part01",
-    "8022030_Modifiers"
+    "8022030_Monster_SW_Minion01_02_Ability01_Part01"
   ],
   "abilityObject": {
+    "8022030_Modifiers": {
+      "fileName": "8022030_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-670541105\">Monster_SW_Minion01_02_Ability01Target</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8022030_Monster_SW_Minion01_02_PassiveAbility_Insert_Part01": {
       "fileName": "8022030_Monster_SW_Minion01_02_PassiveAbility_Insert_Part01",
       "abilityType": null,
@@ -341,31 +366,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8022030_Modifiers": {
-      "fileName": "8022030_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-670541105\">Monster_SW_Minion01_02_Ability01Target</a>",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

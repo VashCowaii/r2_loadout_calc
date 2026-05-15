@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002012,
   "trimCharacterName": 3002012,
   "abilityList": [
+    "3002012_Modifiers",
     "3002012_Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget",
     "3002012_Monster_W3_TV_02_IF_AbilityEX01",
     "3002012_Monster_W3_TV_02_IF_PassiveAbilityInitiate",
@@ -15,709 +16,9 @@ const compositeAbilityObject = {
     "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02",
     "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01",
     "3002012_Monster_W3_TV_02_Ability01_Part02",
-    "3002012_Monster_W3_TV_02_Ability01_Part01",
-    "3002012_Modifiers"
+    "3002012_Monster_W3_TV_02_Ability01_Part01"
   ],
   "abilityObject": {
-    "3002012_Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 1,
-          "ifTargetFound": [
-            {
-              "name": "Inject Ability Use",
-              "conditionActive": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
-                  }
-                ]
-              },
-              "checkOverride": {
-                "name": "Condition Priority",
-                "overridePriority": "MonsterForceKill",
-                "condition": {
-                  "name": "Compare: Ability Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                  "compareType": "<=",
-                  "value2": 0
-                }
-              },
-              "abilityName": "Monster_W3_TV_02_IF_Ability01_Insert_Part01",
-              "abilitySource": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "priorityTag": "EnemyBuffOthers_Elation",
-              "ownerState": "Mask_AliveOrLimbo",
-              "targetState": "Mask_AliveOrLimbo",
-              "canHitNonTargets": true,
-              "allowAbilityTriggers": false
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_IF_AbilityEX01": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_AbilityEX01",
-      "skillTrigger": "SkillEX01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_IF_PassiveAbilityInitiate": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"268137515\">MModifier_Monster_W3_Theater_IF_FlopHandler_TV</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "FlopSide",
-            "compareType": "=",
-            "value2": 1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Animator Variable",
-                "paramType": "Int",
-                "paramName": "Side",
-                "compareType": "=",
-                "compareValue": 1
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-541813617\">W3_TV_BattleScore1</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1262827161\">MModifier_Monster_W3_TV_02_SideCheck</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
-          "valuePerStack": {
-            "MDF_MinionsSuperArmor_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
-              "displayLines": "{[SkillEX01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[0]]}"
-              ]
-            },
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
-              "displayLines": "{[SkillEX01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[1]]}"
-              ]
-            },
-            "MDF_SetActionDelayValue": {
-              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
-              "displayLines": "{[SkillEX01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillEX01[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_Ultimate_Part02": {
-      "fileName": "3002012_Monster_W3_TV_02_Ultimate_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "ability": "Monster_W3_TV_02_Ultimate_Part01",
-          "isTrigger": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)v2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1732782012\">MModifier_Monster_W3_TV_ReduceSPEffect</a>"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)v2}}"
-          },
-          "value": {
-            "operator": "Variables[0] ({[Skill08[0]]}) || INVERT || RETURN",
-            "displayLines": "-{[Skill08[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill08[0]]}"
-            ]
-          },
-          "isFixed": "(Fixed)"
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)v2}}"
-          },
-          "popUpText": "Energy Reduced",
-          "living": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "tag": "DOT",
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_Ultimate_Part01": {
-      "fileName": "3002012_Monster_W3_TV_02_Ultimate_Part01",
-      "childAbilityList": [
-        "3002012_Monster_W3_TV_02_Ultimate_Part01",
-        "3002012_Monster_W3_TV_02_Ultimate_Part02"
-      ],
-      "skillTrigger": "Skill08",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1990801725\">Enemy_W3_Theater_TV1Mark</a>"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_IF_Ability03_Part02": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Define Custom Variable",
-          "scope": "TargetEntity",
-          "variableName": "FlopSide",
-          "value": {
-            "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
-            "displayLines": "-FlopSide",
-            "constants": [],
-            "variables": [
-              "FlopSide"
-            ]
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "FlopSide",
-            "compareType": "=",
-            "value2": -1,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_IF_Ability03_Part01": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_Ability03_Part01",
-      "childAbilityList": [
-        "3002012_Monster_W3_TV_02_IF_Ability03_Part01",
-        "3002012_Monster_W3_TV_02_IF_Ability03_Part02",
-        "3002012_Monster_W3_TV_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_TV_02_IF_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_Ability02_Part02": {
-      "fileName": "3002012_Monster_W3_TV_02_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "canPhase": true,
-          "AttackScaling": {
-            "DamageType": "Quantum",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)v2}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1732782012\">MModifier_Monster_W3_TV_ReduceSPEffect</a>"
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)v2}}"
-          },
-          "value": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || INVERT || RETURN",
-            "displayLines": "-{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
-          },
-          "isFixed": "(Fixed)"
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)v2}}"
-          },
-          "popUpText": "Energy Reduced",
-          "living": true
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_Ability02_Part01": {
-      "fileName": "3002012_Monster_W3_TV_02_Ability02_Part01",
-      "childAbilityList": [
-        "3002012_Monster_W3_TV_02_Ability02_Part01",
-        "3002012_Monster_W3_TV_02_Ability02_Part02",
-        "3002012_Monster_W3_TV_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_TV_02_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "valuePercent": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "popUpText": "Energy Regenerated",
-          "living": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "MonsterType_W3_Theater"
-          }
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01": {
-      "fileName": "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W3_TV_02_IF_Ability01_Insert_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              }
-            ]
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_Ability01_Part02": {
-      "fileName": "3002012_Monster_W3_TV_02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Check Boolean Value",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "value": "MonsterType_W3_Theater"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-720232452\">MModifier_Monster_W3_Theater_RLBoss_StanceDamage</a>"
-            }
-          ]
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "valuePercent": {
-            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-            "displayLines": "{[Skill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill01[0]]}"
-            ]
-          },
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "popUpText": "Energy Regenerated",
-          "living": true
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3002012_Monster_W3_TV_02_Ability01_Part01": {
-      "fileName": "3002012_Monster_W3_TV_02_Ability01_Part01",
-      "childAbilityList": [
-        "3002012_Monster_W3_TV_02_Ability01_Part01",
-        "3002012_Monster_W3_TV_02_Ability01_Part02",
-        "3002012_Monster_W3_TV_Ability01_Camera",
-        "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01",
-        "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02",
-        "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_TV_02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "3002012_Modifiers": {
       "fileName": "3002012_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1688,11 +989,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
-          "stackData": [
-            "MDF_MinionsSuperArmor_AllDamageReduce",
-            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio",
-            "MDF_SetActionDelayValue"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4529,6 +3825,705 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_Ability01_Insert_SelectTarget",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "Inject Ability Use",
+              "conditionActive": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+                  }
+                ]
+              },
+              "checkOverride": {
+                "name": "Condition Priority",
+                "overridePriority": "MonsterForceKill",
+                "condition": {
+                  "name": "Compare: Ability Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                  "compareType": "<=",
+                  "value2": 0
+                }
+              },
+              "abilityName": "Monster_W3_TV_02_IF_Ability01_Insert_Part01",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "priorityTag": "EnemyBuffOthers_Elation",
+              "ownerState": "Mask_AliveOrLimbo",
+              "targetState": "Mask_AliveOrLimbo",
+              "canHitNonTargets": true,
+              "allowAbilityTriggers": false
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_AbilityEX01": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_AbilityEX01",
+      "skillTrigger": "SkillEX01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_PassiveAbilityInitiate": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"268137515\">MModifier_Monster_W3_Theater_IF_FlopHandler_TV</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "FlopSide",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-521198824\">MModifier_Monster_W3_Theater_IF_Flop</a>"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Animator Variable",
+                "paramType": "Int",
+                "paramName": "Side",
+                "compareType": "=",
+                "compareValue": 1
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-541813617\">W3_TV_BattleScore1</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1262827161\">MModifier_Monster_W3_TV_02_SideCheck</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1954613914\">MModifier_Monster_W3_Theater_IF_MinionsSuperArmorController</a>",
+          "valuePerStack": {
+            "MDF_MinionsSuperArmor_AllDamageReduce": {
+              "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+              "displayLines": "{[SkillEX01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[0]]}"
+              ]
+            },
+            "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
+              "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+              "displayLines": "{[SkillEX01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[1]]}"
+              ]
+            },
+            "MDF_SetActionDelayValue": {
+              "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
+              "displayLines": "{[SkillEX01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillEX01[2]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_Ultimate_Part02": {
+      "fileName": "3002012_Monster_W3_TV_02_Ultimate_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "ability": "Monster_W3_TV_02_Ultimate_Part01",
+          "isTrigger": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)v2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1732782012\">MModifier_Monster_W3_TV_ReduceSPEffect</a>"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)v2}}"
+          },
+          "value": {
+            "operator": "Variables[0] ({[Skill08[0]]}) || INVERT || RETURN",
+            "displayLines": "-{[Skill08[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill08[0]]}"
+            ]
+          },
+          "isFixed": "(Fixed)"
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)v2}}"
+          },
+          "popUpText": "Energy Reduced",
+          "living": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "tag": "DOT",
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_Ultimate_Part01": {
+      "fileName": "3002012_Monster_W3_TV_02_Ultimate_Part01",
+      "childAbilityList": [
+        "3002012_Monster_W3_TV_02_Ultimate_Part01",
+        "3002012_Monster_W3_TV_02_Ultimate_Part02"
+      ],
+      "skillTrigger": "Skill08",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1990801725\">Enemy_W3_Theater_TV1Mark</a>"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_Ability03_Part02": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Define Custom Variable",
+          "scope": "TargetEntity",
+          "variableName": "FlopSide",
+          "value": {
+            "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
+            "displayLines": "-FlopSide",
+            "constants": [],
+            "variables": [
+              "FlopSide"
+            ]
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "FlopSide",
+            "compareType": "=",
+            "value2": -1,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1974471772\">MModifier_Monster_W3_Theater_IF_Side_Positive</a>[<span class=\"descriptionNumberColor\">Off-Class Channel</span>]"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-373657900\">MModifier_Monster_W3_Theater_IF_Side_Negative</a>[<span class=\"descriptionNumberColor\">Classroom Channel</span>]"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_Ability03_Part01": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_Ability03_Part01",
+      "childAbilityList": [
+        "3002012_Monster_W3_TV_02_IF_Ability03_Part01",
+        "3002012_Monster_W3_TV_02_IF_Ability03_Part02",
+        "3002012_Monster_W3_TV_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_TV_02_IF_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_Ability02_Part02": {
+      "fileName": "3002012_Monster_W3_TV_02_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)v2}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1732782012\">MModifier_Monster_W3_TV_ReduceSPEffect</a>"
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)v2}}"
+          },
+          "value": {
+            "operator": "Variables[0] ({[Skill02[1]]}) || INVERT || RETURN",
+            "displayLines": "-{[Skill02[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill02[1]]}"
+            ]
+          },
+          "isFixed": "(Fixed)"
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)v2}}"
+          },
+          "popUpText": "Energy Reduced",
+          "living": true
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_Ability02_Part01": {
+      "fileName": "3002012_Monster_W3_TV_02_Ability02_Part01",
+      "childAbilityList": [
+        "3002012_Monster_W3_TV_02_Ability02_Part01",
+        "3002012_Monster_W3_TV_02_Ability02_Part02",
+        "3002012_Monster_W3_TV_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_TV_02_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "valuePercent": {
+            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+            "displayLines": "{[Skill01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[0]]}"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "popUpText": "Energy Regenerated",
+          "living": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "MonsterType_W3_Theater"
+          }
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2083560746\">MModifier_W3_Theater_IF_HourglassTrigger_Flop</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01": {
+      "fileName": "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W3_TV_02_IF_Ability01_Insert_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              }
+            ]
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_Ability01_Part02": {
+      "fileName": "3002012_Monster_W3_TV_02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "MonsterType_W3_Theater"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-720232452\">MModifier_Monster_W3_Theater_RLBoss_StanceDamage</a>"
+            }
+          ]
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "valuePercent": {
+            "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+            "displayLines": "{[Skill01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[0]]}"
+            ]
+          },
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "popUpText": "Energy Regenerated",
+          "living": true
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3002012_Monster_W3_TV_02_Ability01_Part01": {
+      "fileName": "3002012_Monster_W3_TV_02_Ability01_Part01",
+      "childAbilityList": [
+        "3002012_Monster_W3_TV_02_Ability01_Part01",
+        "3002012_Monster_W3_TV_02_Ability01_Part02",
+        "3002012_Monster_W3_TV_Ability01_Camera",
+        "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part01",
+        "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Part02",
+        "3002012_Monster_W3_TV_02_IF_Ability01_Insert_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_TV_02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033010,
   "trimCharacterName": 4033010,
   "abilityList": [
+    "4033010_Modifiers",
     "4033010_Monster_XP_Elite01_02_PassiveAbility01",
     "4033010_Monster_XP_Elite01_02_Ability06_Part02",
     "4033010_Monster_XP_Elite01_02_Ability06_Part01",
@@ -15,10 +16,34 @@ const compositeAbilityObject = {
     "4033010_Monster_XP_Elite01_02_Ability02_Part02",
     "4033010_Monster_XP_Elite01_02_Ability02_Part01",
     "4033010_Monster_XP_Elite01_02_Ability01_Part02",
-    "4033010_Monster_XP_Elite01_02_Ability01_Part01",
-    "4033010_Modifiers"
+    "4033010_Monster_XP_Elite01_02_Ability01_Part01"
   ],
   "abilityObject": {
+    "4033010_Modifiers": {
+      "fileName": "4033010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1810848072\">Enemy_XP_Elite01_02_Charge</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "4033010_Monster_XP_Elite01_02_PassiveAbility01": {
       "fileName": "4033010_Monster_XP_Elite01_02_PassiveAbility01",
       "childAbilityList": [
@@ -1495,31 +1520,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "4033010_Modifiers": {
-      "fileName": "4033010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1810848072\">Enemy_XP_Elite01_02_Charge</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4053013,
   "trimCharacterName": 4053013,
   "abilityList": [
+    "4053013_Modifiers",
     "4053013_Monster_W4_Manta_LocalLegend_PassiveAbility_Insert",
     "4053013_Monster_W4_Manta_LocalLegend_PassiveAbilityInitiate",
     "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02",
@@ -13,1011 +14,10 @@ const compositeAbilityObject = {
     "4053013_Monster_W4_Manta_Ability02_Part01",
     "4053013_Monster_W4_Manta_Ability01_Part02",
     "4053013_Monster_W4_Manta_Ability01_Part01",
-    "4053013_Modifiers",
+    "4053013_Monster_W4_Manta_Passive_Insert",
     "4053013_BE_BattleEvents"
   ],
   "abilityObject": {
-    "4053013_Monster_W4_Manta_LocalLegend_PassiveAbility_Insert": {
-      "fileName": "4053013_Monster_W4_Manta_LocalLegend_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]"
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[0]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[1]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                "displayLines": "SummonList_ADF_3",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_3"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                "displayLines": "SummonList_ADF_3",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_3"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 3
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"668717750\">Enemy_W4_Manta_LocalLegend_PartController_LockHP</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Current Turn Owner}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Assign Advance/Delay to Current Ability Use",
-              "adjustmentValue": 0,
-              "adjustmentType": "="
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_LocalLegend_PassiveAbilityInitiate": {
-      "fileName": "4053013_Monster_W4_Manta_LocalLegend_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-630222072\">W4_Manta_LocalLegend_BattleScore1</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Neutral Team",
-          "eventID": 20035,
-          "variables": null,
-          "whenCreated": [
-            {
-              "name": "Assign Unique Name",
-              "uniqueName": "SelectTarget",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-909971584\">Enemy_W4_Manta_LocalLegend_PickUpMessage</a>"
-            },
-            "Show BattleEvent Button"
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill01[0]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_DotDamageRatio",
-          "value": {
-            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[1]]}"
-            ]
-          }
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[0]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
-                "displayLines": "SummonList_ADF_1",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_1"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[1]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                "displayLines": "SummonList_ADF_3",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_3"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-            "displayLines": "{[PassiveSkill02[2]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill02[2]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
-                "displayLines": "SummonList_ADF_3",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_3"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4053011,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Elegy Siren: Insatiable Leviathan"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 405301100,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"668717750\">Enemy_W4_Manta_LocalLegend_PartController_LockHP</a>"
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02": {
-      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "value": 10,
-          "isFixed": "* ERR"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1266162428\">AvatarChange_W2_Mecha02_02_ResetCameraDither</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-733472219\">AvatarChange_W2_Mecha02_02_SheepStatus</a>[<span class=\"descriptionNumberColor\">Phantom Illusion</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Added Value",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variableName": "_MonsterChangeCnt02",
-          "context": "TargetEntity",
-          "value": 1
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01": {
-      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01",
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W4_Manta_LocalLegend_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02": {
-      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team(Exclude Memosprites)}}.[[removeCharChange]]"
-          },
-          "variableName": "_CharacterCount",
-          "livingTargets": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_CharacterCount",
-            "compareType": ">",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Player Team All(with Unselectable)V2}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "MDF_Count",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "InsertCheck02",
-          "value": 0
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 0,
-          "entityClass": "Enemy",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "maximum": {
-            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-            "displayLines": "{[PassiveSkill01[0]]}",
-            "constants": [],
-            "variables": [
-              "{[PassiveSkill01[0]]}"
-            ]
-          },
-          "assignState": "True",
-          "state": "Normal"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "_CharacterCount",
-            "compareType": ">",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Inject Extra-Turn",
-              "actionTag": null,
-              "skillType": "ControlSkill03",
-              "target": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "SelectTarget"
-              },
-              "afterInjection": []
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>",
-          "latentQueue": [
-            "InsertCheck02"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Update Target Selected(UI) [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Player's Aim Target List}}"
-                    },
-                    "team": "Player Team"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part01": {
-      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part01",
-      "childAbilityList": [
-        "4053013_Monster_W4_Manta_LocalLegend_Ability03_Camera",
-        "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part01",
-        "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02",
-        "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01",
-        "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02",
-        "4053013_Monster_W4_Manta_LocalLegend_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Manta_LocalLegend_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_Ability02_Part02": {
-      "fileName": "4053013_Monster_W4_Manta_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-1670308834\">Enemy_W4_Manta_TimeSlow</a>"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1240691682\">Enemy_W4_Manta_DefenseDown</a>[<span class=\"descriptionNumberColor\">Inebriated Daze</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-            "displayLines": "{[Skill02[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[3]]}"
-            ]
-          },
-          "baseChance": {
-            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-            "displayLines": "{[Skill02[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill02[1]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_PropertyValue": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
-            },
-            "MDF_PropertyValue2": {
-              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
-              "displayLines": "{[Skill02[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[4]]}"
-              ]
-            }
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1240691682\">Enemy_W4_Manta_DefenseDown</a>[<span class=\"descriptionNumberColor\">Inebriated Daze</span>]",
-          "stackType": "Replace",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "stackData": [
-            "MDF_PropertyValue",
-            "MDF_PropertyValue2"
-          ],
-          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
-          "type": "Debuff",
-          "effectName": "Inebriated Daze",
-          "statusName": "Inebriated Daze",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "4053013_Monster_W4_Manta_Ability02_Part01": {
-      "fileName": "4053013_Monster_W4_Manta_Ability02_Part01",
-      "childAbilityList": [
-        "4053013_Monster_W4_Manta_Ability02_Camera",
-        "4053013_Monster_W4_Manta_Ability02_Part01",
-        "4053013_Monster_W4_Manta_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Manta_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_Ability01_Part02": {
-      "fileName": "4053013_Monster_W4_Manta_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Ice",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4053013_Monster_W4_Manta_Ability01_Part01": {
-      "fileName": "4053013_Monster_W4_Manta_Ability01_Part01",
-      "childAbilityList": [
-        "4053013_Monster_W4_Manta_Ability01_Camera",
-        "4053013_Monster_W4_Manta_Ability01_Part01",
-        "4053013_Monster_W4_Manta_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Manta_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
     "4053013_Modifiers": {
       "fileName": "4053013_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1608,9 +608,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
-          "stackData": [
-            "MDF_MaxLayer"
-          ],
           "description": "After receiving a certain number of attacks from the targets, immediately uses \"Psychedelic Elegy.\"",
           "type": "Other",
           "statusName": "Respite By The Waters",
@@ -5201,6 +4198,1255 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_LocalLegend_PassiveAbility_Insert": {
+      "fileName": "4053013_Monster_W4_Manta_LocalLegend_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-643353377\">Enemy_W4_Manta_LocalLegend_Virus_Monster</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]"
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[0]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[0]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                "displayLines": "SummonList_ADF_1",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_1"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[1]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
+                "displayLines": "SummonList_ADF_2",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_2"
+                ]
+              },
+              "locationType": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[2]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[2]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
+                "displayLines": "SummonList_ADF_3",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_3"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[2]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[2]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
+                "displayLines": "SummonList_ADF_3",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_3"
+                ]
+              },
+              "locationType": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 3
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"668717750\">Enemy_W4_Manta_LocalLegend_PartController_LockHP</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Current Turn Owner}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Assign Advance/Delay to Current Ability Use",
+              "adjustmentValue": 0,
+              "adjustmentType": "="
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_LocalLegend_PassiveAbilityInitiate": {
+      "fileName": "4053013_Monster_W4_Manta_LocalLegend_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-630222072\">W4_Manta_LocalLegend_BattleScore1</a>",
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Set Enemy Phase"
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Neutral Team",
+          "eventID": 20035,
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Assign Unique Name",
+              "uniqueName": "SelectTarget",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-909971584\">Enemy_W4_Manta_LocalLegend_PickUpMessage</a>"
+            },
+            "Show BattleEvent Button"
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
+          "valuePerStack": {
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill01[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_DotDamageRatio",
+          "value": {
+            "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[1]]}"
+            ]
+          }
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[0]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[0]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                "displayLines": "SummonList_ADF_1",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_1"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[1]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[1]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
+                "displayLines": "SummonList_ADF_3",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_3"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+            "displayLines": "{[PassiveSkill02[2]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill02[2]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_3) || RETURN",
+                "displayLines": "SummonList_ADF_3",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_3"
+                ]
+              },
+              "locationType": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4053011,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Elegy Siren: Insatiable Leviathan"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 405301100,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"668717750\">Enemy_W4_Manta_LocalLegend_PartController_LockHP</a>"
+            }
+          ]
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02": {
+      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+              "displayLines": "{[Skill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[2]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "value": 10,
+          "isFixed": "* ERR"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1266162428\">AvatarChange_W2_Mecha02_02_ResetCameraDither</a>",
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-733472219\">AvatarChange_W2_Mecha02_02_SheepStatus</a>[<span class=\"descriptionNumberColor\">Phantom Illusion</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Added Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "variableName": "_MonsterChangeCnt02",
+          "context": "TargetEntity",
+          "value": 1
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01": {
+      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01",
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W4_Manta_LocalLegend_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02": {
+      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team(Exclude Memosprites)}}.[[removeCharChange]]"
+          },
+          "variableName": "_CharacterCount",
+          "livingTargets": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_CharacterCount",
+            "compareType": ">",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"833181750\">Enemy_W2_LycanKing_IF_MuteUltra</a>"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "MDF_Count",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "InsertCheck02",
+          "value": 0
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 0,
+          "entityClass": "Enemy",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "maximum": {
+            "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+            "displayLines": "{[PassiveSkill01[0]]}",
+            "constants": [],
+            "variables": [
+              "{[PassiveSkill01[0]]}"
+            ]
+          },
+          "assignState": "True",
+          "state": "Normal"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_CharacterCount",
+            "compareType": ">",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Inject Extra-Turn",
+              "actionTag": null,
+              "skillType": "ControlSkill03",
+              "target": {
+                "name": "Add Target by Unique Identifier",
+                "identifier": "SelectTarget"
+              },
+              "afterInjection": []
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1318648029\">Monster_W4_Manta_LocalLegend_Locking</a>",
+          "latentQueue": [
+            "InsertCheck02"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
+                    "team": "Player Team"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part01": {
+      "fileName": "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part01",
+      "childAbilityList": [
+        "4053013_Monster_W4_Manta_LocalLegend_Ability03_Camera",
+        "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part01",
+        "4053013_Monster_W4_Manta_LocalLegend_Ability03_Part02",
+        "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part01",
+        "4053013_Monster_W4_Manta_LocalLegend_Ability01_Part02",
+        "4053013_Monster_W4_Manta_LocalLegend_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Manta_LocalLegend_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_Ability02_Part02": {
+      "fileName": "4053013_Monster_W4_Manta_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1670308834\">Enemy_W4_Manta_TimeSlow</a>"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1240691682\">Enemy_W4_Manta_DefenseDown</a>[<span class=\"descriptionNumberColor\">Inebriated Daze</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
+            "displayLines": "{[Skill02[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill02[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+            "displayLines": "{[Skill02[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill02[1]]}"
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
+              "displayLines": "{[Skill02[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[2]]}"
+              ]
+            },
+            "MDF_PropertyValue2": {
+              "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
+              "displayLines": "{[Skill02[4]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[4]]}"
+              ]
+            }
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1240691682\">Enemy_W4_Manta_DefenseDown</a>[<span class=\"descriptionNumberColor\">Inebriated Daze</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyValue2"
+          ],
+          "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and All-Type RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
+          "type": "Debuff",
+          "effectName": "Inebriated Daze",
+          "statusName": "Inebriated Daze",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
+                    "displayLines": "-MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue2) || INVERT || RETURN",
+                    "displayLines": "-MDF_PropertyValue2",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue2"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "4053013_Monster_W4_Manta_Ability02_Part01": {
+      "fileName": "4053013_Monster_W4_Manta_Ability02_Part01",
+      "childAbilityList": [
+        "4053013_Monster_W4_Manta_Ability02_Camera",
+        "4053013_Monster_W4_Manta_Ability02_Part01",
+        "4053013_Monster_W4_Manta_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Manta_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_Ability01_Part02": {
+      "fileName": "4053013_Monster_W4_Manta_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Ice",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+              "displayLines": "{[Skill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_Ability01_Part01": {
+      "fileName": "4053013_Monster_W4_Manta_Ability01_Part01",
+      "childAbilityList": [
+        "4053013_Monster_W4_Manta_Ability01_Camera",
+        "4053013_Monster_W4_Manta_Ability01_Part01",
+        "4053013_Monster_W4_Manta_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Manta_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "4053013_Monster_W4_Manta_Passive_Insert": {
+      "fileName": "4053013_Monster_W4_Manta_Passive_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "Manta_Passive"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable with Copy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
+              "variable": "MDF_Trigger",
+              "target2": null,
+              "variable2": "Manta_Passive"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Manta_Passive",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "BattleScore_Manta"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"233383223\">Enemy_W4_Manta_PassiveUp_Sub</a>[<span class=\"descriptionNumberColor\">Revel in Destruction</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1829701863\">W4_Manta_BattleScore1</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1079670411\">Enemy_W4_Manta_Passive_Insert_Mark</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "=",
+                    "value2": 3
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "RLElite"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Current Turn Is",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "set": 0
+                        },
+                        {
+                          "name": "Assign Advance/Delay to Current Ability Use",
+                          "adjustmentValue": 0,
+                          "adjustmentType": "="
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "set": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "SW_Minion01_03"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "value": "SW_Minion01_03"
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Current Turn Is",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "set": 0
+                        },
+                        {
+                          "name": "Assign Advance/Delay to Current Ability Use",
+                          "adjustmentValue": 0,
+                          "adjustmentType": "="
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "set": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1823230905\">Enemy_W4_Manta_Passive_Insert</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-1500090502\">Enemy_W4_Unicorn_01_HitSummonMark1</a>"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     },
     "4053013_BE_BattleEvents": {

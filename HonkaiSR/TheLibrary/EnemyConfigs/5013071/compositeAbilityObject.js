@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 5013071,
   "trimCharacterName": 5013071,
   "abilityList": [
+    "5013071_Modifiers",
     "5013071_Monster_W5_Ranger_Ability04_Camera_Main",
     "5013071_Monster_W5_Ranger_Ability04_Part02_Main",
     "5013071_Monster_W5_Ranger_Ability04_Part01_Main",
@@ -13,1641 +14,9 @@ const compositeAbilityObject = {
     "5013071_Monster_W5_Ranger_Ability02_Part01",
     "5013071_Monster_W5_Ranger_Ability01_Part02",
     "5013071_Monster_W5_Ranger_Ability01_Part01",
-    "5013071_Monster_W5_RangerGroup_Revive",
-    "5013071_Modifiers"
+    "5013071_Monster_W5_RangerGroup_Revive"
   ],
   "abilityObject": {
-    "5013071_Monster_W5_Ranger_Ability04_Camera_Main": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability04_Camera_Main",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability04_Part02_Main": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part02_Main",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2082758660\">Enemy_W5_RangerGroup_MainEnd</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1823743995\">AvatarChange_W5_Ranger_Shield</a>[<span class=\"descriptionNumberColor\">Daybreak Temperance</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1811426878\">Enemy_W5_Ranger_Main_Revive</a>"
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.05,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
-              "displayLines": "({[Skill04[0]]} * 20)",
-              "constants": [
-                20
-              ],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "HitSplit": 0.55,
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Inject Ability Use",
-          "abilityName": "Monster_W5_RangerGroup_Revive",
-          "abilitySource": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "priorityTag": "CharacterReviveSelf",
-          "allowAbilityTriggers": false
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1811426878\">Enemy_W5_Ranger_Main_Revive</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Add Ability",
-                  "abilityName": "Monster_W5_RangerGroup_Revive"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "5013071_Monster_W5_Ranger_Ability04_Part01_Main": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part01_Main",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Shadow Dance of the Daybreak Blade"
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability04_Part02_Main",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Main_PassiveAbility01": {
-      "fileName": "5013071_Monster_W5_Ranger_Main_PassiveAbility01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
-          "modifierFlags": [
-            "MuteHitFly"
-          ]
-        }
-      ]
-    },
-    "5013071_Monster_W5_Ranger_Ability04_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 0
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3
-            }
-          ],
-          "defaultEvents": []
-        },
-        "Ability Start",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 0
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3
-            }
-          ],
-          "defaultEvents": []
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
-        },
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 0,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.55,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.55,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.55,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                      "displayLines": "{[Skill04[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill04[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.55,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ],
-          "defaultEvents": []
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__134483810\">Monster_W5_Ranger_Ability04_Attack</a>",
-          "parse": [
-            {
-              "name": "SWITCH",
-              "switchValue": {
-                "operator": "Variables[0] (CurrentRanger) || RETURN",
-                "displayLines": "CurrentRanger",
-                "constants": [],
-                "variables": [
-                  "CurrentRanger"
-                ]
-              },
-              "caseEvents": [
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 0,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Quantum",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                          "displayLines": "{[Skill04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.05,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 1,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Fire",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                          "displayLines": "{[Skill04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.05,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 2,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Imaginary",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                          "displayLines": "{[Skill04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.05,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 3,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-                          "displayLines": "{[Skill04[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill04[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.05,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "defaultEvents": []
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability04_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part01",
-      "childAbilityList": [
-        "5013071_Monster_W5_Ranger_Ability04_Camera",
-        "5013071_Monster_W5_Ranger_Ability04_Part01",
-        "5013071_Monster_W5_Ranger_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability02_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
-        },
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 0,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Targets Adjacent(Blast)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Targets Adjacent(Blast)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Targets Adjacent(Blast)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                      "displayLines": "{[Skill02[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[0]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                },
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Targets Adjacent(Blast)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                      "displayLines": "{[Skill02[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill02[1]]}"
-                      ]
-                    },
-                    "HitSplit": 0.3,
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ],
-          "defaultEvents": []
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "functions": [
-        {
-          "name": "CharacterFunctions",
-          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>",
-          "parse": [
-            {
-              "name": "SWITCH",
-              "switchValue": {
-                "operator": "Variables[0] (CurrentRanger) || RETURN",
-                "displayLines": "CurrentRanger",
-                "constants": [],
-                "variables": [
-                  "CurrentRanger"
-                ]
-              },
-              "caseEvents": [
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 0,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Quantum",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Targets Adjacent(Blast)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Quantum",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 1,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Fire",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Targets Adjacent(Blast)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Fire",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 2,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Imaginary",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Targets Adjacent(Blast)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Imaginary",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 3,
-                  "execute": [
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Target(ST)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-                          "displayLines": "{[Skill02[0]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[0]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    },
-                    {
-                      "name": "ATK Scaling DMG",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Ability Targets Adjacent(Blast)}}"
-                      },
-                      "AttackScaling": {
-                        "DamageType": "Physical",
-                        "Damage": {
-                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-                          "displayLines": "{[Skill02[1]]}",
-                          "constants": [],
-                          "variables": [
-                            "{[Skill02[1]]}"
-                          ]
-                        },
-                        "HitSplit": 0.175,
-                        "Toughness": null,
-                        "Tags": null,
-                        "attackType": "Basic ATK",
-                        "EnergyGainPercent": "100%"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "defaultEvents": []
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability02_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability02_Part01",
-      "childAbilityList": [
-        "5013071_Monster_W5_Ranger_Ability02_Camera",
-        "5013071_Monster_W5_Ranger_Ability02_Part01",
-        "5013071_Monster_W5_Ranger_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability01_Part02": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "SWITCH",
-          "switchValue": {
-            "operator": "Variables[0] (CurrentRanger) || RETURN",
-            "displayLines": "CurrentRanger",
-            "constants": [],
-            "variables": [
-              "CurrentRanger"
-            ]
-          },
-          "caseEvents": [
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 0,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Quantum",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 1,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 2,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Imaginary",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            },
-            {
-              "name": "SWITCH CONDITON",
-              "caseValueIs": 3,
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Physical",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "Basic ATK",
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ],
-          "defaultEvents": []
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_Ranger_Ability01_Part01": {
-      "fileName": "5013071_Monster_W5_Ranger_Ability01_Part01",
-      "childAbilityList": [
-        "5013071_Monster_W5_Ranger_Ability01_Camera",
-        "5013071_Monster_W5_Ranger_Ability01_Part01",
-        "5013071_Monster_W5_Ranger_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_Ranger_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "5013071_Monster_W5_RangerGroup_Revive": {
-      "fileName": "5013071_Monster_W5_RangerGroup_Revive",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-488756959\">Enemy_W5_RangerGroup_SpecialWin</a>"
-        },
-        {
-          "name": "Update Energy",
-          "on": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "valuePercent": 1,
-          "isFixed": "(Fixed)"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "multiBase": 1
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "Assign Advance/Delay to Current Ability Use",
-          "adjustmentValue": 0,
-          "adjustmentType": "="
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>",
-          "execute": [
-            {
-              "eventTrigger": "Enter View-Mode [Anyone]"
-            },
-            {
-              "eventTrigger": "Exit View-Mode [Anyone]"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
-          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
-          "type": "Buff",
-          "effectName": "Ultimate Daybreak",
-          "statusName": "Ultimate Daybreak",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: Start",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ability Use [Owner]: End",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "invertCondition": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Ultimate Prep-Phase [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>"
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": 10
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "5013071_Modifiers": {
       "fileName": "5013071_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3491,6 +1860,1637 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability04_Camera_Main": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability04_Camera_Main",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability04_Part02_Main": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part02_Main",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2082758660\">Enemy_W5_RangerGroup_MainEnd</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1823743995\">AvatarChange_W5_Ranger_Shield</a>[<span class=\"descriptionNumberColor\">Daybreak Temperance</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1811426878\">Enemy_W5_Ranger_Main_Revive</a>"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.05,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || Constants[0] (20) || MUL || RETURN",
+              "displayLines": "({[Skill04[0]]} * 20)",
+              "constants": [
+                20
+              ],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "HitSplit": 0.55,
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Inject Ability Use",
+          "abilityName": "Monster_W5_RangerGroup_Revive",
+          "abilitySource": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "priorityTag": "CharacterReviveSelf",
+          "allowAbilityTriggers": false
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1811426878\">Enemy_W5_Ranger_Main_Revive</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Monster_W5_RangerGroup_Revive"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "5013071_Monster_W5_Ranger_Ability04_Part01_Main": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part01_Main",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Shadow Dance of the Daybreak Blade"
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W5_Ranger_Ability04_Part02_Main",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Main_PassiveAbility01": {
+      "fileName": "5013071_Monster_W5_Ranger_Main_PassiveAbility01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1534116188\">Enemy_W5_Ranger_MuteHitFly</a>",
+          "modifierFlags": [
+            "MuteHitFly"
+          ]
+        }
+      ]
+    },
+    "5013071_Monster_W5_Ranger_Ability04_Part02": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (CurrentRanger) || RETURN",
+            "displayLines": "CurrentRanger",
+            "constants": [],
+            "variables": [
+              "CurrentRanger"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 0
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 3
+            }
+          ],
+          "defaultEvents": []
+        },
+        "Ability Start",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (CurrentRanger) || RETURN",
+            "displayLines": "CurrentRanger",
+            "constants": [],
+            "variables": [
+              "CurrentRanger"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 0
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 3
+            }
+          ],
+          "defaultEvents": []
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"134483810\">Monster_W5_Ranger_Ability04_Attack</a>"
+        },
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (CurrentRanger) || RETURN",
+            "displayLines": "CurrentRanger",
+            "constants": [],
+            "variables": [
+              "CurrentRanger"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 0,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Quantum",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                      "displayLines": "{[Skill04[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.55,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                      "displayLines": "{[Skill04[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.55,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                      "displayLines": "{[Skill04[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.55,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 3,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                      "displayLines": "{[Skill04[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.55,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ],
+          "defaultEvents": []
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__134483810\">Monster_W5_Ranger_Ability04_Attack</a>",
+          "parse": [
+            {
+              "name": "SWITCH",
+              "switchValue": {
+                "operator": "Variables[0] (CurrentRanger) || RETURN",
+                "displayLines": "CurrentRanger",
+                "constants": [],
+                "variables": [
+                  "CurrentRanger"
+                ]
+              },
+              "caseEvents": [
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 0,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Quantum",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                          "displayLines": "{[Skill04[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill04[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.05,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 1,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Fire",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                          "displayLines": "{[Skill04[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill04[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.05,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 2,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Imaginary",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                          "displayLines": "{[Skill04[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill04[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.05,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 3,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Physical",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                          "displayLines": "{[Skill04[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill04[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.05,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "defaultEvents": []
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability04_Part01": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability04_Part01",
+      "childAbilityList": [
+        "5013071_Monster_W5_Ranger_Ability04_Camera",
+        "5013071_Monster_W5_Ranger_Ability04_Part01",
+        "5013071_Monster_W5_Ranger_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Ranger_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability02_Part02": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>"
+        },
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (CurrentRanger) || RETURN",
+            "displayLines": "CurrentRanger",
+            "constants": [],
+            "variables": [
+              "CurrentRanger"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 0,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Quantum",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                      "displayLines": "{[Skill02[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Quantum",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                      "displayLines": "{[Skill02[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[1]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                      "displayLines": "{[Skill02[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                      "displayLines": "{[Skill02[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[1]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                      "displayLines": "{[Skill02[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                      "displayLines": "{[Skill02[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[1]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 3,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                      "displayLines": "{[Skill02[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[0]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                },
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                      "displayLines": "{[Skill02[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill02[1]]}"
+                      ]
+                    },
+                    "HitSplit": 0.3,
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ],
+          "defaultEvents": []
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1864908120\">Monster_W5_Ranger_Ability02_Attack</a>",
+          "parse": [
+            {
+              "name": "SWITCH",
+              "switchValue": {
+                "operator": "Variables[0] (CurrentRanger) || RETURN",
+                "displayLines": "CurrentRanger",
+                "constants": [],
+                "variables": [
+                  "CurrentRanger"
+                ]
+              },
+              "caseEvents": [
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 0,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Quantum",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                          "displayLines": "{[Skill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Targets Adjacent(Blast)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Quantum",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                          "displayLines": "{[Skill02[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[1]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 1,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Fire",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                          "displayLines": "{[Skill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Targets Adjacent(Blast)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Fire",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                          "displayLines": "{[Skill02[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[1]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 2,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Imaginary",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                          "displayLines": "{[Skill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Targets Adjacent(Blast)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Imaginary",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                          "displayLines": "{[Skill02[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[1]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 3,
+                  "execute": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Physical",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+                          "displayLines": "{[Skill02[0]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[0]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    },
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Targets Adjacent(Blast)}}"
+                      },
+                      "AttackScaling": {
+                        "DamageType": "Physical",
+                        "Damage": {
+                          "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+                          "displayLines": "{[Skill02[1]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill02[1]]}"
+                          ]
+                        },
+                        "HitSplit": 0.175,
+                        "Toughness": null,
+                        "Tags": null,
+                        "attackType": "Basic ATK",
+                        "EnergyGainPercent": "100%"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "defaultEvents": []
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability02_Part01": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability02_Part01",
+      "childAbilityList": [
+        "5013071_Monster_W5_Ranger_Ability02_Camera",
+        "5013071_Monster_W5_Ranger_Ability02_Part01",
+        "5013071_Monster_W5_Ranger_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Ranger_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability01_Part02": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (CurrentRanger) || RETURN",
+            "displayLines": "CurrentRanger",
+            "constants": [],
+            "variables": [
+              "CurrentRanger"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 0,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Quantum",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 2,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 3,
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Physical",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Basic ATK",
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ],
+          "defaultEvents": []
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_Ranger_Ability01_Part01": {
+      "fileName": "5013071_Monster_W5_Ranger_Ability01_Part01",
+      "childAbilityList": [
+        "5013071_Monster_W5_Ranger_Ability01_Camera",
+        "5013071_Monster_W5_Ranger_Ability01_Part01",
+        "5013071_Monster_W5_Ranger_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_Ranger_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "5013071_Monster_W5_RangerGroup_Revive": {
+      "fileName": "5013071_Monster_W5_RangerGroup_Revive",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-488756959\">Enemy_W5_RangerGroup_SpecialWin</a>"
+        },
+        {
+          "name": "Update Energy",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "valuePercent": 1,
+          "isFixed": "(Fixed)"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "multiBase": 1
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "Assign Advance/Delay to Current Ability Use",
+          "adjustmentValue": 0,
+          "adjustmentType": "="
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter View-Mode [Anyone]"
+            },
+            {
+              "eventTrigger": "Exit View-Mode [Anyone]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1761388509\">Enemy_W5_Ranger_Main_Ultra</a>[<span class=\"descriptionNumberColor\">Ultimate Daybreak</span>]",
+          "description": "Cannot be knocked down. Ultimate DMG greatly increases.",
+          "type": "Buff",
+          "effectName": "Ultimate Daybreak",
+          "statusName": "Ultimate Daybreak",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate",
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate",
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ultimate Prep-Phase [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1577274573\">Enemy_W5_Ranger_Main_UltraViewMode</a>"
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }

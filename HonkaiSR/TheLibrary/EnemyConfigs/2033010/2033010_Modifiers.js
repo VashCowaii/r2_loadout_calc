@@ -265,9 +265,6 @@ const configAbility = {
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_LoseSP"
-      ],
       "description": "Enters the \"Terrified\" state at the start of the second turn. Attacking the %CasterName 1 time before then can dispel \"Terror Grip.\"",
       "type": "Debuff",
       "effectName": "Terror Grip",
@@ -451,9 +448,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1246058342\">Enemy_W2_LycanMecha_BattleCry</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -483,9 +477,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-645995038\">Enemy_W2_LycanMecha_BattleCryTag</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Losing Modifier [Owner]",

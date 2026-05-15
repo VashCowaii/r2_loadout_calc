@@ -15,12 +15,6 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [
-        "Insert_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

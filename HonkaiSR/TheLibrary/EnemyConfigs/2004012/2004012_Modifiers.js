@@ -29,12 +29,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1555277593\">Monster_W2_Kafka_RL_LowHP</a>",
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -501,12 +495,6 @@ const configAbility = {
         "DispelPriorityHigh",
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "BattleEventFlag",
-        "MindControlCount",
-        "ShowHint04",
-        "FinalPhase"
-      ],
       "description": "Triggered at the next Revelation. Can be removed before that action.",
       "type": "Debuff",
       "effectName": "Psychological Suggestion",
@@ -560,9 +548,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "duration": 1,
       "execute": [
         {
@@ -714,12 +699,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__688364152\">Monster_W2_Kafka_RL_Power</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -827,9 +806,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__108137779\">Monster_W2_Kafka_RL_Pursuit</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "latentQueue": [
-        "DisPelCount"
       ],
       "execute": [
         {
@@ -1019,9 +995,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1041839558\">Monster_W2_Kafka_RL_PartController</a>",
-      "latentQueue": [
-        "DisPelCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

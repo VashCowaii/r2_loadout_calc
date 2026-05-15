@@ -14,10 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "_FirstProgressInfo",
-        "_EnterBattle"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: End",
@@ -132,10 +128,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1358856185\">Enemy_W4_Claymore_01_LocalLegend_TargetSelectPrepare</a>",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "InsertCheck03",
-        "_SelectTimes"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -301,10 +293,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>",
-      "latentQueue": [
-        "_FirstProgressInfo",
-        "_EnterBattle"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -345,10 +333,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>",
-      "latentQueue": [
-        "_FirstProgressInfo",
-        "_EnterBattle"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -427,11 +411,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1386282109\">Enemy_W4_Claymore_01_LocalLegend_AllMonst</a>[<span class=\"descriptionNumberColor\">Fight in Unity</span>]",
-      "latentQueue": [
-        "_EnterBattle",
-        "InsertCheck04",
-        "_BossUI"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span> and DMG received reduces by <span class=\"descriptionNumberColor\">MDF_ShowValue2</span>.",
       "type": "Other",
       "statusName": "Fight in Unity",
@@ -501,12 +480,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>",
-      "latentQueue": [
-        "_EnterBattle",
-        "InsertCheck04",
-        "_BossUI"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1216174202\">Enemy_W4_Claymore_01_LocalLegend_AllCurse</a>"
     },
     {
       "name": "Modifier Construction",
@@ -542,10 +516,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
-      ],
-      "latentQueue": [
-        "_FirstProgressInfo",
-        "_EnterBattle"
       ],
       "execute": [
         {
@@ -759,10 +729,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "RemoveWhenCasterUnstage"
-      ],
-      "latentQueue": [
-        "_FirstProgressInfo",
-        "_EnterBattle"
       ],
       "execute": [
         {
@@ -1943,9 +1909,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1121280189\">Monster_W4_Claymore_01_LocalLegend_PartController_LockHP</a>",
-      "latentQueue": [
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

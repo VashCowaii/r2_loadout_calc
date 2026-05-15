@@ -3,252 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 4033023,
   "trimCharacterName": 4033023,
   "abilityList": [
+    "4033023_Modifiers",
     "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02",
     "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01",
     "4033023_Monster_W4_Claymore_01_AbilityP01",
     "4033023_Monster_W4_Claymore_01_Ability01_Part02",
-    "4033023_Monster_W4_Claymore_01_Ability01_Part01",
-    "4033023_Modifiers"
+    "4033023_Monster_W4_Claymore_01_Ability01_Part01"
   ],
   "abilityObject": {
-    "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02": {
-      "fileName": "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
-              "displayLines": "{[Skill03[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill03[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01": {
-      "fileName": "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01",
-      "childAbilityList": [
-        "4033023_Monster_W4_Claymore_01_Ability03_Camera",
-        "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01",
-        "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
-    "4033023_Monster_W4_Claymore_01_AbilityP01": {
-      "fileName": "4033023_Monster_W4_Claymore_01_AbilityP01",
-      "childAbilityList": [
-        "4033023_Monster_W4_Claymore_01_AbilityP01"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"709550235\">W4_Claymore_01_BattleScore1</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4033023_Monster_W4_Claymore_01_Ability01_Part02": {
-      "fileName": "4033023_Monster_W4_Claymore_01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{ST and Blast}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12272) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12272",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12272"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12270) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12270",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12270"
-              ]
-            },
-            "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12273) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12273",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12273"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12274) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12274",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12274"
-              ]
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13250) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13250",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_13250"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10638) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10638",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_10638"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4033023_Monster_W4_Claymore_01_Ability01_Part01": {
-      "fileName": "4033023_Monster_W4_Claymore_01_Ability01_Part01",
-      "childAbilityList": [
-        "4033023_Monster_W4_Claymore_01_Ability01_Camera",
-        "4033023_Monster_W4_Claymore_01_Ability01_Part01",
-        "4033023_Monster_W4_Claymore_01_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
     "4033023_Modifiers": {
       "fileName": "4033023_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2123,6 +1885,244 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02": {
+      "fileName": "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
+              "displayLines": "{[Skill03[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01": {
+      "fileName": "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01",
+      "childAbilityList": [
+        "4033023_Monster_W4_Claymore_01_Ability03_Camera",
+        "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part01",
+        "4033023_Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_LocalLegend03_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "4033023_Monster_W4_Claymore_01_AbilityP01": {
+      "fileName": "4033023_Monster_W4_Claymore_01_AbilityP01",
+      "childAbilityList": [
+        "4033023_Monster_W4_Claymore_01_AbilityP01"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"709550235\">W4_Claymore_01_BattleScore1</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4033023_Monster_W4_Claymore_01_Ability01_Part02": {
+      "fileName": "4033023_Monster_W4_Claymore_01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] (UnusedUnderThisBase_12272) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12272",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_12272"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] (UnusedUnderThisBase_12270) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12270",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_12270"
+              ]
+            },
+            "MDF_Rally_HealUpRatio": {
+              "operator": "Variables[0] (UnusedUnderThisBase_12273) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12273",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_12273"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] (UnusedUnderThisBase_12274) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12274",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_12274"
+              ]
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (UnusedUnderThisBase_13250) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13250",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_13250"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (UnusedUnderThisBase_10638) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10638",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_10638"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4033023_Monster_W4_Claymore_01_Ability01_Part01": {
+      "fileName": "4033023_Monster_W4_Claymore_01_Ability01_Part01",
+      "childAbilityList": [
+        "4033023_Monster_W4_Claymore_01_Ability01_Camera",
+        "4033023_Monster_W4_Claymore_01_Ability01_Part01",
+        "4033023_Monster_W4_Claymore_01_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     }
   }

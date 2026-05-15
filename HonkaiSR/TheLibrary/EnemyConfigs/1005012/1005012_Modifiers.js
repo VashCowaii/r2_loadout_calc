@@ -100,10 +100,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1780808632\">Enemy_W1_CocoliaP2_MarkPlayer10_Controller</a>",
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -297,10 +293,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
-      ],
       "execute": [
         {
           "eventTrigger": "When Put in Deathstate Limbo"
@@ -316,10 +308,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2030503230\">Enemy_W1_CocoliaP2_EnvironmentEffect_ALL</a>",
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -338,10 +326,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-856191872\">Enemy_W1_CocoliaP2_EnvironmentEffect_01</a>",
-      "latentQueue": [
-        "Cocolia_AICounter",
-        "Cocolia_Tips_Taunt"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"

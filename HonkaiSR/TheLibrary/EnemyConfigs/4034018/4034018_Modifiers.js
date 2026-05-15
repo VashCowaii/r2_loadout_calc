@@ -742,9 +742,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-781486647\">Enemy_W4_FireProwler_11_Main03_NextWave</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -866,11 +863,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1047244331\">Enemy_W4_FireProwler_10_Main03_ListenPartDieLoseHP_Mark</a>",
-      "stackType": "Multiple",
-      "latentQueue": [
-        "HPBack_TimePowerCount",
-        "HPBack"
-      ]
+      "stackType": "Multiple"
     },
     {
       "name": "Modifier Construction",
@@ -1399,9 +1392,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2020371850\">Enemy_W4_FireProwler_10_Main03_NormalState</a>",
-      "stackData": [
-        "MDF_CurrentStance"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1483,15 +1473,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1844358773\">Enemy_W4_FireProwler_11_Main03_Activated03</a>",
-      "stackData": [
-        "SummonIndex",
-        "MDF_ActionDelay1_Weight",
-        "MDF_ActionDelay1",
-        "MDF_ActionDelay2_Weight",
-        "MDF_ActionDelay2",
-        "MDF_ActionDelay3_Weight",
-        "MDF_ActionDelay3"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1580,9 +1561,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1810803535\">Enemy_W4_FireProwler_11_Main03_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
       "type": "Other",
       "effectName": "Simultaneously use \"Demise's Storm\"",
@@ -2004,9 +1982,6 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle"
       ],
-      "stackData": [
-        "MDF_LoseHPRatio"
-      ],
       "description": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
       "type": "Other",
       "effectName": "Shackled",
@@ -2172,13 +2147,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__917444423\">Enemy_W4_FireProwler_10_Main03_Limit_EffectBody</a>",
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout",
-        "AIFlag",
-        "SkillFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2188,11 +2156,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1240010895\">Enemy_W4_FireProwler_10_Main03_Limit_EnvirEffect</a>",
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2334,16 +2297,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__670740905\">Enemy_W4_FireProwler_10_Main03_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_SpeedAddedRatio",
-        "MDF_LM_DamageStanceValue"
-      ],
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout"
-      ],
       "description": "Alternates between using \"Silent Sorrow\" and \"Cry Not for the Discarded.\" Defeat \"Long-Shattered Vessel\" to reduce Toughness and \"Calamity Power\" stacks.",
       "type": "Other",
       "effectName": "Shackle Shatter",

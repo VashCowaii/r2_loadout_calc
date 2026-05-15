@@ -293,10 +293,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
       "modifierFlags": [],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealPercentage_BeAttacked",
-        "MDF_ElementDamageTakenUp"
-      ],
       "description": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
       "type": "Other",
       "effectName": "Deception's Crown",

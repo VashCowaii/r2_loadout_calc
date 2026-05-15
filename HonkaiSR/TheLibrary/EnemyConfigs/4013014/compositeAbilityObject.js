@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 4013014,
   "trimCharacterName": 4013014,
   "abilityList": [
+    "4013014_Modifiers",
     "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbility_Insert",
     "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbilityInitiate",
     "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02",
@@ -16,2026 +17,9 @@ const compositeAbilityObject = {
     "4013014_Monster_W4_Claymore_Ability02_Part02",
     "4013014_Monster_W4_Claymore_Ability02_Part01",
     "4013014_Monster_W4_Claymore_Ability01_Part02",
-    "4013014_Monster_W4_Claymore_Ability01_Part01",
-    "4013014_Modifiers"
+    "4013014_Monster_W4_Claymore_Ability01_Part01"
   ],
   "abilityObject": {
-    "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbility_Insert": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "FirstRound",
-          "value": 1
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          }
-        },
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]"
-        },
-        "Deleted bullshit",
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
-          "valuePerStack": {
-            "MDF_EntityScore": {
-              "operator": "Variables[0] (_SelfP1_LifeCount) || RETURN",
-              "displayLines": "_SelfP1_LifeCount",
-              "constants": [],
-              "variables": [
-                "_SelfP1_LifeCount"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-479922792\">Monster_W4_Claymore_LocalLegend_PartController_LockHP</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Current Turn Owner}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Assign Advance/Delay to Current Ability Use",
-              "adjustmentValue": 0,
-              "adjustmentType": "="
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "set": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbilityInitiate": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"983561949\">W4_Claymore_LocalLegend_BattleScore1</a>",
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Set Enemy Phase"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Stage ID",
-            "ID": 426005,
-            "compareType": "=",
-            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill06[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill06[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill06[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill06[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill06[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill06[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill06[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill06[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill06[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill06[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill06[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill06[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill06[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill06[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill06[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill06[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill06[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill06[5]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Avatar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill07[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill07[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill07[0]]}"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Avatar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
-                "displayLines": "{[Skill05[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[4]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260010,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260011,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260040,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260041,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[5]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260012,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260042,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill02[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill02[5]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260013,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260043,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill03[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill03[5]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260014,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260044,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill04[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill04[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill04[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill04[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill04[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill04[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill04[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill04[5]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260015,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260045,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill05[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill05[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill05[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill05[1]]}) || RETURN",
-                "displayLines": "{[PassiveSkill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill05[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill05[2]]}) || RETURN",
-                "displayLines": "{[PassiveSkill05[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill05[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill05[3]]}) || RETURN",
-                "displayLines": "{[PassiveSkill05[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill05[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill05[4]]}) || RETURN",
-                "displayLines": "{[PassiveSkill05[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill05[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[PassiveSkill05[5]]}) || RETURN",
-                "displayLines": "{[PassiveSkill05[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill05[5]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 4260016,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Stage ID",
-                "ID": 4260046,
-                "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Strongman_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
-                "displayLines": "{[Skill06[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[0]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Scholar_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
-                "displayLines": "{[Skill06[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[1]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Minion03_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
-                "displayLines": "{[Skill06[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[2]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP1_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
-                "displayLines": "{[Skill06[3]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[3]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_SelfP2_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-                "displayLines": "{[Skill06[4]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[4]]}"
-                ]
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "_Shooter_LifeCount",
-              "value": {
-                "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
-                "displayLines": "{[Skill06[5]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill06[5]]}"
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-468473895\">Monster_W4_Claymore_LocalLegend_Status</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Enemy ID",
-                "ID": 4013014,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
-              },
-              {
-                "name": "Enemy ID",
-                "ID": 401301400,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": null
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-479922792\">Monster_W4_Claymore_LocalLegend_PartController_LockHP</a>"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
-            "displayLines": "{[Skill05[3]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[3]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID03) || RETURN",
-                "displayLines": "SummonID03",
-                "constants": [],
-                "variables": [
-                  "SummonID03"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-            "displayLines": "{[Skill05[1]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[1]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID03) || RETURN",
-                "displayLines": "SummonID03",
-                "constants": [],
-                "variables": [
-                  "SummonID03"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-            "displayLines": "{[Skill05[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[2]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
-              },
-              "locationType": "AroundCasterOnEdge"
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": {
-            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-            "displayLines": "{[Skill05[0]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill05[0]]}"
-            ]
-          },
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonID01) || RETURN",
-                "displayLines": "SummonID01",
-                "constants": [],
-                "variables": [
-                  "SummonID01"
-                ]
-              },
-              "locationType": "AroundCasterOnEdge"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"530468008\">Enemy_W4_Claymore_LocalLegend_Init_LockHp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Military Might Unstoppable"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"530468008\">Enemy_W4_Claymore_LocalLegend_Init_LockHp</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
-        },
-        {
-          "name": "Define Variable with Battle Goal Param",
-          "goalID": 5001802,
-          "variableName": "_BattleTarget_S1_2_Param"
-        },
-        {
-          "name": "Define Variable with Battle Goal Param",
-          "goalID": 5001803,
-          "variableName": "_BattleTarget_S1_3_Param"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-707065504\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1468533169\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Status</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part01": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part01",
-      "childAbilityList": [
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part01",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Camera"
-      ],
-      "skillTrigger": "Skill06",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_LocalLegend_Ability06_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part02": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster's Minions}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID04) || RETURN",
-                      "displayLines": "SummonID04",
-                      "constants": [],
-                      "variables": [
-                        "SummonID04"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID04) || RETURN",
-                    "displayLines": "SummonID04",
-                    "constants": [],
-                    "variables": [
-                      "SummonID04"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster's Minions}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID01) || RETURN",
-                      "displayLines": "SummonID01",
-                      "constants": [],
-                      "variables": [
-                        "SummonID01"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
-                "displayLines": "{[Skill05[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[0]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID01) || RETURN",
-                    "displayLines": "SummonID01",
-                    "constants": [],
-                    "variables": [
-                      "SummonID01"
-                    ]
-                  },
-                  "locationType": "AroundCasterOnEdge"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster's Minions}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID03) || RETURN",
-                      "displayLines": "SummonID03",
-                      "constants": [],
-                      "variables": [
-                        "SummonID03"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID03) || RETURN",
-                    "displayLines": "SummonID03",
-                    "constants": [],
-                    "variables": [
-                      "SummonID03"
-                    ]
-                  },
-                  "locationType": "AroundCaster"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target Count",
-            "target": {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Caster's Minions}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Enemy ID",
-                    "ID": {
-                      "operator": "Variables[0] (SummonID02) || RETURN",
-                      "displayLines": "SummonID02",
-                      "constants": [],
-                      "variables": [
-                        "SummonID02"
-                      ]
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            },
-            "compareType": "=",
-            "value2": 0,
-            "livingTargets": true
-          },
-          "passed": [
-            {
-              "name": "Create Enemies",
-              "delayPercent": {
-                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                "displayLines": "{[Skill05[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill05[1]]}"
-                ]
-              },
-              "enemyList": [
-                {
-                  "name": "Enemy Entry",
-                  "enemyID": {
-                    "operator": "Variables[0] (SummonID02) || RETURN",
-                    "displayLines": "SummonID02",
-                    "constants": [],
-                    "variables": [
-                      "SummonID02"
-                    ]
-                  },
-                  "locationType": "AroundCasterOnEdge"
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
-        }
-      ]
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part01": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part01",
-      "childAbilityList": [
-        "4013014_Monster_W4_Claymore_Ability05_Camera",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part01",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_LocalLegend_Ability05_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part02": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase1"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "searchRandom": true,
-          "maxTargets": 4,
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable with Team Count",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target List}}"
-              },
-              "variableName": "SummonCount"
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-662328641\">MModifier_Monster_W4_Claymore_Ability03_WeaponEff</a>"
-            }
-          ],
-          "noTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-662328641\">MModifier_Monster_W4_Claymore_Ability03_WeaponEff</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "ifTargetFound": [
-            {
-              "name": "Looped Event",
-              "maxLoops": {
-                "operator": "Variables[0] (SummonCount) || RETURN",
-                "displayLines": "SummonCount",
-                "constants": [],
-                "variables": [
-                  "SummonCount"
-                ]
-              },
-              "Event": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_EntityScore",
-                  "value": -1,
-                  "min": 1,
-                  "max": 100
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "_EntityScore",
-                "compareType": "<=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"809636038\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_DeadFlag</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
-              "displayLines": "{[Skill04[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-55819136\">MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "SummonCount",
-          "value": 0
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__328409415\">MModifier_Monster_W4_Claymore_Ability03_Summon</a>"
-        }
-      ]
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part01": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part01",
-      "childAbilityList": [
-        "4013014_Monster_W4_Claymore_Ability04_Camera",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part01",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_LocalLegend_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part02": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-662328641\">MModifier_Monster_W4_Claymore_Ability03_WeaponEff</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-55819136\">MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
-        },
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "TargetCount",
-          "livingTargets": true
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase2"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part01": {
-      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part01",
-      "childAbilityList": [
-        "4013014_Monster_W4_Claymore_Ability03_Camera",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part01",
-        "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_LocalLegend_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_Ability02_Part02": {
-      "fileName": "4013014_Monster_W4_Claymore_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Right of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Left of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_Ability02_Part01": {
-      "fileName": "4013014_Monster_W4_Claymore_Ability02_Part01",
-      "childAbilityList": [
-        "4013014_Monster_W4_Claymore_Ability02_Camera",
-        "4013014_Monster_W4_Claymore_Ability02_Part01",
-        "4013014_Monster_W4_Claymore_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              {
-                "name": "Sort by Physical Positioning",
-                "byHighest": true
-              },
-              {
-                "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
-              },
-              {
-                "name": "Target Index",
-                "indexValue": 1
-              }
-            ]
-          },
-          "ability": "Monster_W4_Claymore_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_Ability01_Part02": {
-      "fileName": "4013014_Monster_W4_Claymore_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Left of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Right of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4013014_Monster_W4_Claymore_Ability01_Part01": {
-      "fileName": "4013014_Monster_W4_Claymore_Ability01_Part01",
-      "childAbilityList": [
-        "4013014_Monster_W4_Claymore_Ability01_Camera",
-        "4013014_Monster_W4_Claymore_Ability01_Part01",
-        "4013014_Monster_W4_Claymore_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              {
-                "name": "Sort by Physical Positioning"
-              },
-              {
-                "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
-              },
-              {
-                "name": "Target Index",
-                "indexValue": 1
-              }
-            ]
-          },
-          "ability": "Monster_W4_Claymore_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
     "4013014_Modifiers": {
       "fileName": "4013014_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -2660,12 +644,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
-          "stackData": [
-            "MDF_EntityScore"
-          ],
-          "latentQueue": [
-            "FirstRound"
-          ],
           "description": "Target is immediately knocked down after receiving <span class=\"descriptionNumberColor\">MDF_EntityScore</span> attack(s).",
           "type": "Other",
           "statusName": "HP Count",
@@ -4381,10 +2359,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>",
-          "latentQueue": [
-            "FirstRound"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>"
         },
         {
           "name": "Modifier Construction",
@@ -7450,6 +5425,2022 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-133295283\">Enemy_W4_Claymore_FantasticStory</a>"
         }
       ],
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbility_Insert": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "FirstRound",
+          "value": 1
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          }
+        },
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]"
+        },
+        "Deleted bullshit",
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
+          "valuePerStack": {
+            "MDF_EntityScore": {
+              "operator": "Variables[0] (_SelfP1_LifeCount) || RETURN",
+              "displayLines": "_SelfP1_LifeCount",
+              "constants": [],
+              "variables": [
+                "_SelfP1_LifeCount"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-479922792\">Monster_W4_Claymore_LocalLegend_PartController_LockHP</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Current Turn Owner}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Assign Advance/Delay to Current Ability Use",
+              "adjustmentValue": 0,
+              "adjustmentType": "="
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "set": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbilityInitiate": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"983561949\">W4_Claymore_LocalLegend_BattleScore1</a>",
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Set Enemy Phase"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Stage ID",
+            "ID": 426005,
+            "compareType": "=",
+            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill06[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill06[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill06[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill06[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill06[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill06[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill06[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill06[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill06[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill06[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill06[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill06[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill06[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill06[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill06[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill06[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill06[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill06[5]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Avatar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill07[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill07[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill07[0]]}"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Avatar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
+                "displayLines": "{[Skill05[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[4]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260010,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260011,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260040,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260041,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[5]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260012,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260042,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill02[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill02[5]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260013,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260043,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill03[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill03[5]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260014,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260044,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill04[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill04[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill04[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill04[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill04[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill04[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill04[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill04[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill04[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill04[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill04[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill04[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill04[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill04[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill04[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill04[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill04[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill04[5]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260015,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260045,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill05[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill05[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill05[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill05[1]]}) || RETURN",
+                "displayLines": "{[PassiveSkill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill05[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill05[2]]}) || RETURN",
+                "displayLines": "{[PassiveSkill05[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill05[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill05[3]]}) || RETURN",
+                "displayLines": "{[PassiveSkill05[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill05[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill05[4]]}) || RETURN",
+                "displayLines": "{[PassiveSkill05[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill05[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[PassiveSkill05[5]]}) || RETURN",
+                "displayLines": "{[PassiveSkill05[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill05[5]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage ID",
+                "ID": 4260016,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Stage ID",
+                "ID": 4260046,
+                "compareType": "=",
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Strongman_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
+                "displayLines": "{[Skill06[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[0]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Scholar_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
+                "displayLines": "{[Skill06[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[1]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Minion03_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
+                "displayLines": "{[Skill06[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[2]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP1_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
+                "displayLines": "{[Skill06[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[3]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_SelfP2_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
+                "displayLines": "{[Skill06[4]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[4]]}"
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Shooter_LifeCount",
+              "value": {
+                "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
+                "displayLines": "{[Skill06[5]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill06[5]]}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-468473895\">Monster_W4_Claymore_LocalLegend_Status</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 4013014,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+              },
+              {
+                "name": "Enemy ID",
+                "ID": 401301400,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": null
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-479922792\">Monster_W4_Claymore_LocalLegend_PartController_LockHP</a>"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
+            "displayLines": "{[Skill05[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[3]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonID03) || RETURN",
+                "displayLines": "SummonID03",
+                "constants": [],
+                "variables": [
+                  "SummonID03"
+                ]
+              },
+              "locationType": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+            "displayLines": "{[Skill05[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[1]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonID03) || RETURN",
+                "displayLines": "SummonID03",
+                "constants": [],
+                "variables": [
+                  "SummonID03"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
+            "displayLines": "{[Skill05[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[2]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonID01) || RETURN",
+                "displayLines": "SummonID01",
+                "constants": [],
+                "variables": [
+                  "SummonID01"
+                ]
+              },
+              "locationType": "AroundCasterOnEdge"
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": {
+            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+            "displayLines": "{[Skill05[0]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill05[0]]}"
+            ]
+          },
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonID01) || RETURN",
+                "displayLines": "SummonID01",
+                "constants": [],
+                "variables": [
+                  "SummonID01"
+                ]
+              },
+              "locationType": "AroundCasterOnEdge"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"530468008\">Enemy_W4_Claymore_LocalLegend_Init_LockHp</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Military Might Unstoppable"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"530468008\">Enemy_W4_Claymore_LocalLegend_Init_LockHp</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"449361701\">Enemy_Standard_LocalLegend_Init_MuteBreak</a>"
+        },
+        {
+          "name": "Define Variable with Battle Goal Param",
+          "goalID": 5001802,
+          "variableName": "_BattleTarget_S1_2_Param"
+        },
+        {
+          "name": "Define Variable with Battle Goal Param",
+          "goalID": 5001803,
+          "variableName": "_BattleTarget_S1_3_Param"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-707065504\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Status</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1468533169\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Status</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part01": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part01",
+      "childAbilityList": [
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part01",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Part02",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability06_Camera"
+      ],
+      "skillTrigger": "Skill06",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_LocalLegend_Ability06_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part02": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Minions}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID04) || RETURN",
+                      "displayLines": "SummonID04",
+                      "constants": [],
+                      "variables": [
+                        "SummonID04"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                "displayLines": "{[Skill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[1]]}"
+                ]
+              },
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID04) || RETURN",
+                    "displayLines": "SummonID04",
+                    "constants": [],
+                    "variables": [
+                      "SummonID04"
+                    ]
+                  },
+                  "locationType": "AroundCaster"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Minions}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID01) || RETURN",
+                      "displayLines": "SummonID01",
+                      "constants": [],
+                      "variables": [
+                        "SummonID01"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                "displayLines": "{[Skill05[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[0]]}"
+                ]
+              },
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID01) || RETURN",
+                    "displayLines": "SummonID01",
+                    "constants": [],
+                    "variables": [
+                      "SummonID01"
+                    ]
+                  },
+                  "locationType": "AroundCasterOnEdge"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Minions}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID03) || RETURN",
+                      "displayLines": "SummonID03",
+                      "constants": [],
+                      "variables": [
+                        "SummonID03"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                "displayLines": "{[Skill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[1]]}"
+                ]
+              },
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID03) || RETURN",
+                    "displayLines": "SummonID03",
+                    "constants": [],
+                    "variables": [
+                      "SummonID03"
+                    ]
+                  },
+                  "locationType": "AroundCaster"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Minions}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonID02) || RETURN",
+                      "displayLines": "SummonID02",
+                      "constants": [],
+                      "variables": [
+                        "SummonID02"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  }
+                }
+              ]
+            },
+            "compareType": "=",
+            "value2": 0,
+            "livingTargets": true
+          },
+          "passed": [
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                "displayLines": "{[Skill05[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill05[1]]}"
+                ]
+              },
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "operator": "Variables[0] (SummonID02) || RETURN",
+                    "displayLines": "SummonID02",
+                    "constants": [],
+                    "variables": [
+                      "SummonID02"
+                    ]
+                  },
+                  "locationType": "AroundCasterOnEdge"
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-247858425\">Monster_W4_Claymore_LocalLegend_LasterSummon</a>"
+        }
+      ]
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part01": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part01",
+      "childAbilityList": [
+        "4013014_Monster_W4_Claymore_Ability05_Camera",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part01",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability05_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_LocalLegend_Ability05_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part02": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase1"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 4,
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable with Team Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target List}}"
+              },
+              "variableName": "SummonCount"
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-662328641\">MModifier_Monster_W4_Claymore_Ability03_WeaponEff</a>"
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-662328641\">MModifier_Monster_W4_Claymore_Ability03_WeaponEff</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "ifTargetFound": [
+            {
+              "name": "Looped Event",
+              "maxLoops": {
+                "operator": "Variables[0] (SummonCount) || RETURN",
+                "displayLines": "SummonCount",
+                "constants": [],
+                "variables": [
+                  "SummonCount"
+                ]
+              },
+              "Event": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "_EntityScore",
+                  "value": -1,
+                  "min": 1,
+                  "max": 100
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value1": "_EntityScore",
+                "compareType": "<=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"809636038\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_DeadFlag</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-55819136\">MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "SummonCount",
+          "value": 0
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__328409415\">MModifier_Monster_W4_Claymore_Ability03_Summon</a>"
+        }
+      ]
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part01": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part01",
+      "childAbilityList": [
+        "4013014_Monster_W4_Claymore_Ability04_Camera",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part01",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_LocalLegend_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part02": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-662328641\">MModifier_Monster_W4_Claymore_Ability03_WeaponEff</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-55819136\">MModifier_Monster_W4_Claymore_LocalLegend_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
+        },
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "variableName": "TargetCount",
+          "livingTargets": true
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase2"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part01": {
+      "fileName": "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part01",
+      "childAbilityList": [
+        "4013014_Monster_W4_Claymore_Ability03_Camera",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part01",
+        "4013014_Monster_W4_Claymore_LocalLegend_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_LocalLegend_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_Ability02_Part02": {
+      "fileName": "4013014_Monster_W4_Claymore_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Right of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Left of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_Ability02_Part01": {
+      "fileName": "4013014_Monster_W4_Claymore_Ability02_Part01",
+      "childAbilityList": [
+        "4013014_Monster_W4_Claymore_Ability02_Camera",
+        "4013014_Monster_W4_Claymore_Ability02_Part01",
+        "4013014_Monster_W4_Claymore_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              {
+                "name": "Sort by Physical Positioning",
+                "byHighest": true
+              },
+              {
+                "name": "Filter by Life-State",
+                "state": "Mask_AliveOnly"
+              },
+              {
+                "name": "Target Index",
+                "indexValue": 1
+              }
+            ]
+          },
+          "ability": "Monster_W4_Claymore_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_Ability01_Part02": {
+      "fileName": "4013014_Monster_W4_Claymore_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Left of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Right of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4013014_Monster_W4_Claymore_Ability01_Part01": {
+      "fileName": "4013014_Monster_W4_Claymore_Ability01_Part01",
+      "childAbilityList": [
+        "4013014_Monster_W4_Claymore_Ability01_Camera",
+        "4013014_Monster_W4_Claymore_Ability01_Part01",
+        "4013014_Monster_W4_Claymore_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              {
+                "name": "Sort by Physical Positioning"
+              },
+              {
+                "name": "Filter by Life-State",
+                "state": "Mask_AliveOnly"
+              },
+              {
+                "name": "Target Index",
+                "indexValue": 1
+              }
+            ]
+          },
+          "ability": "Monster_W4_Claymore_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
       "references": []
     }
   }

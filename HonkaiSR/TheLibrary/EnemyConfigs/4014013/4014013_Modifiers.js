@@ -1069,10 +1069,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__264648512\">Enemy_W4_Nikadory_IF_AbilityEX04_EMY</a>",
-      "stackData": [
-        "MDF_AllDamageReduce",
-        "MDF_AllDamageTypeAddedRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1760,9 +1756,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1417850551\">Enemy_W4_Nikadory_IF_Ability06Charge</a>[<span class=\"descriptionNumberColor\">Ready for Battle</span>]",
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span>. This state is removed when \"War Armor\" stacks are reduced to 0.",
       "type": "Other",
       "effectName": "Ready for Battle",
@@ -3320,12 +3313,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"Centirefined War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"Centirefined War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing a large amount of their Toughness, greatly delaying their action, restoring Skill Points to targets, and grants the attacker a certain number of stacks of \"Glory.\" After \"Centirefined War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. If \"Centirefined War Armor\" stack is 0 at the end of this unit's turn, it will be restored to maximum stacks.",
       "type": "Other",
       "statusName": "Centirefined War Armor",
@@ -3511,9 +3498,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1685699403\">Enemy_W4_Nikadory_IF_EnhanceShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
       "description": "DMG taken decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. Loses stacks of \"War Armor\" based on the attacker's \"Glory\" stacks after being attacked. When at 0 stacks, \"War Armor\" will be destroyed, dealing massive Imaginary DMG to this unit, reducing their Toughness, delaying their action, and restoring Skill Points to targets. After \"War Armor\" is destroyed, this unit will also additionally take minor Imaginary DMG when attacked. \"War Armor\" will be restored to maximum stacks at the end of this unit's turn.",
       "type": "Other",
       "statusName": "War Armor",
@@ -3801,20 +3785,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_ActionDelayRatio",
-        "MDF_CrackedDamage",
-        "MDF_BPRecoverValue",
-        "MDF_AllDamageReduce",
-        "MDF_CrackedDamageAfter",
-        "MDF_DamageStanceValue",
-        "MDF_SuperShield_MaxLayer",
-        "MDF_SuperShield_BPRecoverValue",
-        "MDF_BraveBonusLayer",
-        "MDF_SuperShield_ActionDelayRatio",
-        "MDF_SuperShield_DamageStanceValue"
       ],
       "execute": [
         {

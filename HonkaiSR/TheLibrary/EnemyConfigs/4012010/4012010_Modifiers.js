@@ -105,9 +105,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__773544799\">Standard_Unstable_Monster</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_Shake_ActionDelayRatio"
-      ],
       "description": "After receiving an attack, enters \"Strong Reverberation,\" then dispels \"Reverberation.\"",
       "type": "Debuff",
       "effectName": "Reverberation",

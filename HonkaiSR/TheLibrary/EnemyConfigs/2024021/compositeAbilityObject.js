@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2024021,
   "trimCharacterName": 2024021,
   "abilityList": [
+    "2024021_Modifiers",
     "2024021_Monster_Fuyan_Die",
     "2024021_Monster_Fuyan_RL_Hit_Part02",
     "2024021_Monster_Fuyan_RL_Hit_Part01",
@@ -22,1561 +23,9 @@ const compositeAbilityObject = {
     "2024021_Monster_Fuyan_Ability02_Part01",
     "2024021_Monster_Fuyan_RL_Ability01_Part02",
     "2024021_Monster_Fuyan_RL_Ability01_Part01",
-    "2024021_Monster_W2_Fuyan_PassiveAbility_BGM",
-    "2024021_Modifiers"
+    "2024021_Monster_W2_Fuyan_PassiveAbility_BGM"
   ],
   "abilityObject": {
-    "2024021_Monster_Fuyan_Die": {
-      "fileName": "2024021_Monster_Fuyan_Die",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Hit_Part02": {
-      "fileName": "2024021_Monster_Fuyan_RL_Hit_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "value1": "CurrentHP%",
-            "compareType": ">",
-            "value2": 0
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Hit_Part01": {
-      "fileName": "2024021_Monster_Fuyan_RL_Hit_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_RL_Hit_Part02"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "ADF_MaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "ADF_HPDamageRatioValue",
-          "value": {
-            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
-            "displayLines": "((1 / MonsterCount) + 0.0009999999)",
-            "constants": [
-              1,
-              0.0009999999
-            ],
-            "variables": [
-              "MonsterCount"
-            ]
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (DeathCount) || RETURN",
-            "displayLines": "DeathCount",
-            "constants": [],
-            "variables": [
-              "DeathCount"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "ADF_CurrentHPValue",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "ADF_CurrentHPValue",
-                "compareType": "<=",
-                "value2": {
-                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
-                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
-                  "constants": [],
-                  "variables": [
-                    "ADF_MaxHPValue",
-                    "ADF_HPDamageRatioValue"
-                  ]
-                }
-              },
-              "passed": [
-                {
-                  "name": "Add to Team Target Grouping",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  }
-                },
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                    "displayLines": "ADF_HPDamageRatioValue",
-                    "constants": [],
-                    "variables": [
-                      "ADF_HPDamageRatioValue"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                    "displayLines": "ADF_HPDamageRatioValue",
-                    "constants": [],
-                    "variables": [
-                      "ADF_HPDamageRatioValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "DeathCount",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_Hit_Part02": {
-      "fileName": "2024021_Monster_Fuyan_Hit_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Modifier Holder}}"
-            },
-            "value1": "CurrentHP%",
-            "compareType": ">",
-            "value2": 0
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_Hit_Part01": {
-      "fileName": "2024021_Monster_Fuyan_Hit_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_Hit_Part02"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "ADF_MaxHPValue",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "ADF_HPDamageRatioValue",
-          "value": {
-            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
-            "displayLines": "((1 / MonsterCount) + 0.000010000076)",
-            "constants": [
-              1,
-              0.000010000076
-            ],
-            "variables": [
-              "MonsterCount"
-            ]
-          }
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (DeathCount) || RETURN",
-            "displayLines": "DeathCount",
-            "constants": [],
-            "variables": [
-              "DeathCount"
-            ]
-          },
-          "Event": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "ADF_CurrentHPValue",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "ADF_CurrentHPValue",
-                "compareType": "<=",
-                "value2": {
-                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
-                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
-                  "constants": [],
-                  "variables": [
-                    "ADF_MaxHPValue",
-                    "ADF_HPDamageRatioValue"
-                  ]
-                }
-              },
-              "passed": [
-                {
-                  "name": "Force Entity Death",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Consume",
-                  "consumeFrom": "MaxHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
-                    "displayLines": "ADF_HPDamageRatioValue",
-                    "constants": [],
-                    "variables": [
-                      "ADF_HPDamageRatioValue"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "CurrentHP%",
-                        "compareType": "<",
-                        "value2": 0.1
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "MonsterCount",
-                        "compareType": "=",
-                        "value2": 3
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Force Entity Death",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Modifier Holder}}"
-          },
-          "variableName": "DeathCount",
-          "value": 0
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_Born_Part02": {
-      "fileName": "2024021_Monster_Fuyan_Born_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_Born_Part01": {
-      "fileName": "2024021_Monster_Fuyan_Born_Part01",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_Born_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_PassiveAbility_Insert2": {
-      "fileName": "2024021_Monster_Fuyan_PassiveAbility_Insert2",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          }
-        },
-        {
-          "name": "Update Max Wave Count",
-          "add": 3
-        },
-        {
-          "name": "Trigger Modifier Event",
-          "target": {
-            "name": "Join Targets",
-            "TargetList": [
-              {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              {
-                "name": "Target Name",
-                "target": "{{Battle Event List}}"
-              }
-            ]
-          },
-          "variableName": null,
-          "eventType": "InfiniteDoSummon",
-          "value": null
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2135326892\">Monster_Fuyan_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1368675926\">Monster_Fuyan_PartController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"574070131\">Monster_Fuyan_LeaveTeam</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"417134444\">Monster_Fuyan_RL_HPShared_Part3</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_PassiveAbility_Insert": {
-      "fileName": "2024021_Monster_Fuyan_PassiveAbility_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          }
-        },
-        {
-          "name": "Update Max Wave Count",
-          "add": 3
-        },
-        {
-          "name": "Trigger Modifier Event",
-          "target": {
-            "name": "Join Targets",
-            "TargetList": [
-              {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              {
-                "name": "Target Name",
-                "target": "{{Battle Event List}}"
-              }
-            ]
-          },
-          "variableName": null,
-          "eventType": "InfiniteDoSummon",
-          "value": null
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "multiBase": 0
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2135326892\">Monster_Fuyan_Endurance</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "AIFlag",
-          "value": 1
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"574070131\">Monster_Fuyan_LeaveTeam</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1663924159\">Monster_Fuyan_RL_HPShared</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_PassiveAbilityInitiate2": {
-      "fileName": "2024021_Monster_Fuyan_PassiveAbilityInitiate2",
-      "skillTrigger": "SkillP02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"574070131\">Monster_Fuyan_LeaveTeam</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1968119799\">Monster_Fuyan_AddBonus</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-100079329\">Enemy_Fuyan_RL_MonsterDieListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1368675926\">Monster_Fuyan_PartController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_PassiveAbilityInitiate": {
-      "fileName": "2024021_Monster_Fuyan_PassiveAbilityInitiate",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Assign Unique Name",
-          "uniqueName": "Fuyan",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1940788756\">Enemy_Fuyan_MonsterDieListener</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1988405555\">Enemy_Fuyan_Born</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"288555768\">Monster_Fuyan_LockHP</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-51927245\">Enemy_Fuyan_Unselectable</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Ability04_Part02": {
-      "fileName": "2024021_Monster_Fuyan_RL_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DamageUpCount",
-              "value": {
-                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(DamageUpCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DamageUpCount"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SpeedAddCount",
-                  "value": {
-                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SpeedAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SpeedAddCount"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DamageUpCount",
-                  "value": {
-                    "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DamageUpCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DamageUpCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SpeedAddCount",
-                  "value": {
-                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SpeedAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SpeedAddCount"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "popUpText": "Action Advance"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Ability04_Part01": {
-      "fileName": "2024021_Monster_Fuyan_RL_Ability04_Part01",
-      "childAbilityList": [
-        "2024021_Monster_Fuyan_RL_Ability04_Part01",
-        "2024021_Monster_Fuyan_RL_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_RL_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Ability03_Part02": {
-      "fileName": "2024021_Monster_Fuyan_RL_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DamageUpCount",
-              "value": {
-                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(DamageUpCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DamageUpCount"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SpeedAddCount",
-                  "value": {
-                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SpeedAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SpeedAddCount"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DamageUpCount",
-                  "value": {
-                    "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DamageUpCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DamageUpCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SpeedAddCount",
-                  "value": {
-                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SpeedAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SpeedAddCount"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "popUpText": "Action Advance"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Ability03_Part01": {
-      "fileName": "2024021_Monster_Fuyan_RL_Ability03_Part01",
-      "childAbilityList": [
-        "2024021_Monster_Fuyan_RL_Ability03_Part01",
-        "2024021_Monster_Fuyan_RL_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_RL_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_Ability02_Part02": {
-      "fileName": "2024021_Monster_Fuyan_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Hesitation"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_Ability02_Part01": {
-      "fileName": "2024021_Monster_Fuyan_Ability02_Part01",
-      "childAbilityList": [
-        "2024021_Monster_Fuyan_Ability02_Part01",
-        "2024021_Monster_Fuyan_Ability02_Part02",
-        "2024021_Monster_Fuyan_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Ability01_Part02": {
-      "fileName": "2024021_Monster_Fuyan_RL_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
-              "valuePerStack": {
-                "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                  "displayLines": "{[Skill01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[0]]}"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "Define Custom Variable",
-              "variableName": "DamageUpCount",
-              "value": {
-                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(DamageUpCount + 1)",
-                "constants": [
-                  1
-                ],
-                "variables": [
-                  "DamageUpCount"
-                ]
-              }
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SpeedAddCount",
-                  "value": {
-                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SpeedAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SpeedAddCount"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
-                  "valuePerStack": {
-                    "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
-                  "valuePerStack": {
-                    "MDF_SpeedAddedRatio_PerLayer": {
-                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                      "displayLines": "{[Skill01[1]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[1]]}"
-                      ]
-                    }
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "DamageUpCount",
-                  "value": {
-                    "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(DamageUpCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "DamageUpCount"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "SpeedAddCount",
-                  "value": {
-                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(SpeedAddCount + 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "SpeedAddCount"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "set": 0
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "popUpText": "Action Advance"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_Fuyan_RL_Ability01_Part01": {
-      "fileName": "2024021_Monster_Fuyan_RL_Ability01_Part01",
-      "childAbilityList": [
-        "2024021_Monster_Fuyan_RL_Ability01_Part01",
-        "2024021_Monster_Fuyan_RL_Ability01_Part02",
-        "2024021_Monster_Fuyan_RL_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_Fuyan_RL_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "2024021_Monster_W2_Fuyan_PassiveAbility_BGM": {
-      "fileName": "2024021_Monster_W2_Fuyan_PassiveAbility_BGM",
-      "childAbilityList": [
-        "2024021_Monster_W2_Fuyan_PassiveAbility_BGM"
-      ],
-      "skillTrigger": "Passive_BGM",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Stage Type",
-                "stageType": "Challenge"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "VerseSimulation"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "StrongChallengeActivity"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "RogueRelic"
-              },
-              {
-                "name": "Stage Type",
-                "stageType": "GridFightActivity"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"649895739\">Enemy_W2_Fuyan_ResetStageBGM</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__649895739\">Enemy_W2_Fuyan_ResetStageBGM</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex",
-                  "value": "CurWaveIndex"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "New Enemy Wave: Start",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Varying Data",
-                  "target": null,
-                  "variableName": "MDF_WaveIndex2",
-                  "value": "CurWaveIndex"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "MDF_WaveIndex",
-                    "compareType": "NOT=",
-                    "value2": {
-                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
-                      "displayLines": "MDF_WaveIndex2",
-                      "constants": [],
-                      "variables": [
-                        "MDF_WaveIndex2"
-                      ]
-                    }
-                  },
-                  "passed": [
-                    "Modifier Deletes Itself"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "2024021_Modifiers": {
       "fileName": "2024021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1745,9 +194,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__417134444\">Monster_Fuyan_RL_HPShared_Part3</a>",
-          "latentQueue": [
-            "AIFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -1785,10 +231,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1663924159\">Monster_Fuyan_RL_HPShared</a>",
-          "latentQueue": [
-            "InsertCheck",
-            "AIFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -3444,6 +1886,1557 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "2024021_Monster_Fuyan_Die": {
+      "fileName": "2024021_Monster_Fuyan_Die",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Hit_Part02": {
+      "fileName": "2024021_Monster_Fuyan_RL_Hit_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "value1": "CurrentHP%",
+            "compareType": ">",
+            "value2": 0
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Hit_Part01": {
+      "fileName": "2024021_Monster_Fuyan_RL_Hit_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_RL_Hit_Part02"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "ADF_MaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "ADF_HPDamageRatioValue",
+          "value": {
+            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
+            "displayLines": "((1 / MonsterCount) + 0.0009999999)",
+            "constants": [
+              1,
+              0.0009999999
+            ],
+            "variables": [
+              "MonsterCount"
+            ]
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (DeathCount) || RETURN",
+            "displayLines": "DeathCount",
+            "constants": [],
+            "variables": [
+              "DeathCount"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "ADF_CurrentHPValue",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "ADF_CurrentHPValue",
+                "compareType": "<=",
+                "value2": {
+                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
+                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
+                  "constants": [],
+                  "variables": [
+                    "ADF_MaxHPValue",
+                    "ADF_HPDamageRatioValue"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add to Team Target Grouping",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
+                },
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
+                    "displayLines": "ADF_HPDamageRatioValue",
+                    "constants": [],
+                    "variables": [
+                      "ADF_HPDamageRatioValue"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
+                    "displayLines": "ADF_HPDamageRatioValue",
+                    "constants": [],
+                    "variables": [
+                      "ADF_HPDamageRatioValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "DeathCount",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_Hit_Part02": {
+      "fileName": "2024021_Monster_Fuyan_Hit_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
+            "value1": "CurrentHP%",
+            "compareType": ">",
+            "value2": 0
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_Hit_Part01": {
+      "fileName": "2024021_Monster_Fuyan_Hit_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_Hit_Part02"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "ADF_MaxHPValue",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "ADF_HPDamageRatioValue",
+          "value": {
+            "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
+            "displayLines": "((1 / MonsterCount) + 0.000010000076)",
+            "constants": [
+              1,
+              0.000010000076
+            ],
+            "variables": [
+              "MonsterCount"
+            ]
+          }
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (DeathCount) || RETURN",
+            "displayLines": "DeathCount",
+            "constants": [],
+            "variables": [
+              "DeathCount"
+            ]
+          },
+          "Event": [
+            {
+              "name": "Define Custom Variable with Stat",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "variableName": "ADF_CurrentHPValue",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "ADF_CurrentHPValue",
+                "compareType": "<=",
+                "value2": {
+                  "operator": "Variables[0] (ADF_MaxHPValue) || Variables[1] (ADF_HPDamageRatioValue) || MUL || RETURN",
+                  "displayLines": "(ADF_MaxHPValue * ADF_HPDamageRatioValue)",
+                  "constants": [],
+                  "variables": [
+                    "ADF_MaxHPValue",
+                    "ADF_HPDamageRatioValue"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Consume",
+                  "consumeFrom": "MaxHP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "consumePercent": {
+                    "operator": "Variables[0] (ADF_HPDamageRatioValue) || RETURN",
+                    "displayLines": "ADF_HPDamageRatioValue",
+                    "constants": [],
+                    "variables": [
+                      "ADF_HPDamageRatioValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "<",
+                        "value2": 0.1
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "MonsterCount",
+                        "compareType": "=",
+                        "value2": 3
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Force Entity Death",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "variableName": "DeathCount",
+          "value": 0
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_Born_Part02": {
+      "fileName": "2024021_Monster_Fuyan_Born_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_Born_Part01": {
+      "fileName": "2024021_Monster_Fuyan_Born_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_Born_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_PassiveAbility_Insert2": {
+      "fileName": "2024021_Monster_Fuyan_PassiveAbility_Insert2",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          }
+        },
+        {
+          "name": "Update Max Wave Count",
+          "add": 3
+        },
+        {
+          "name": "Trigger Modifier Event",
+          "target": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{Battle Event List}}"
+              }
+            ]
+          },
+          "variableName": null,
+          "eventType": "InfiniteDoSummon",
+          "value": null
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2135326892\">Monster_Fuyan_Endurance</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1368675926\">Monster_Fuyan_PartController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"574070131\">Monster_Fuyan_LeaveTeam</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"417134444\">Monster_Fuyan_RL_HPShared_Part3</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_PassiveAbility_Insert": {
+      "fileName": "2024021_Monster_Fuyan_PassiveAbility_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          }
+        },
+        {
+          "name": "Update Max Wave Count",
+          "add": 3
+        },
+        {
+          "name": "Trigger Modifier Event",
+          "target": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{Battle Event List}}"
+              }
+            ]
+          },
+          "variableName": null,
+          "eventType": "InfiniteDoSummon",
+          "value": null
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": 0
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2135326892\">Monster_Fuyan_Endurance</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "InsertCheck",
+          "value": 1
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "AIFlag",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"574070131\">Monster_Fuyan_LeaveTeam</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1663924159\">Monster_Fuyan_RL_HPShared</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_PassiveAbilityInitiate2": {
+      "fileName": "2024021_Monster_Fuyan_PassiveAbilityInitiate2",
+      "skillTrigger": "SkillP02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"574070131\">Monster_Fuyan_LeaveTeam</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1968119799\">Monster_Fuyan_AddBonus</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-100079329\">Enemy_Fuyan_RL_MonsterDieListener</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1368675926\">Monster_Fuyan_PartController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_PassiveAbilityInitiate": {
+      "fileName": "2024021_Monster_Fuyan_PassiveAbilityInitiate",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Assign Unique Name",
+          "uniqueName": "Fuyan",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1940788756\">Enemy_Fuyan_MonsterDieListener</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1988405555\">Enemy_Fuyan_Born</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"288555768\">Monster_Fuyan_LockHP</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-51927245\">Enemy_Fuyan_Unselectable</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Ability04_Part02": {
+      "fileName": "2024021_Monster_Fuyan_RL_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DamageUpCount",
+              "value": {
+                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(DamageUpCount + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "DamageUpCount"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 2
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                      "displayLines": "{[Skill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[1]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SpeedAddCount",
+                  "value": {
+                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SpeedAddCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "SpeedAddCount"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageUpRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                      "displayLines": "{[Skill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[1]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DamageUpCount",
+                  "value": {
+                    "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(DamageUpCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "DamageUpCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SpeedAddCount",
+                  "value": {
+                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SpeedAddCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "SpeedAddCount"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "popUpText": "Action Advance"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Ability04_Part01": {
+      "fileName": "2024021_Monster_Fuyan_RL_Ability04_Part01",
+      "childAbilityList": [
+        "2024021_Monster_Fuyan_RL_Ability04_Part01",
+        "2024021_Monster_Fuyan_RL_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_RL_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Ability03_Part02": {
+      "fileName": "2024021_Monster_Fuyan_RL_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DamageUpCount",
+              "value": {
+                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(DamageUpCount + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "DamageUpCount"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 2
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                      "displayLines": "{[Skill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[1]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SpeedAddCount",
+                  "value": {
+                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SpeedAddCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "SpeedAddCount"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageUpRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                      "displayLines": "{[Skill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[1]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DamageUpCount",
+                  "value": {
+                    "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(DamageUpCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "DamageUpCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SpeedAddCount",
+                  "value": {
+                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SpeedAddCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "SpeedAddCount"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "popUpText": "Action Advance"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Ability03_Part01": {
+      "fileName": "2024021_Monster_Fuyan_RL_Ability03_Part01",
+      "childAbilityList": [
+        "2024021_Monster_Fuyan_RL_Ability03_Part01",
+        "2024021_Monster_Fuyan_RL_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_RL_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_Ability02_Part02": {
+      "fileName": "2024021_Monster_Fuyan_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Hesitation"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1642513753\">Enemy_Fuyan_EffectController</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_Ability02_Part01": {
+      "fileName": "2024021_Monster_Fuyan_Ability02_Part01",
+      "childAbilityList": [
+        "2024021_Monster_Fuyan_Ability02_Part01",
+        "2024021_Monster_Fuyan_Ability02_Part02",
+        "2024021_Monster_Fuyan_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Ability01_Part02": {
+      "fileName": "2024021_Monster_Fuyan_RL_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
+              "valuePerStack": {
+                "MDF_DamageUpRatio_PerLayer": {
+                  "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                  "displayLines": "{[Skill01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[0]]}"
+                  ]
+                }
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "DamageUpCount",
+              "value": {
+                "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(DamageUpCount + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "DamageUpCount"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 2
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                      "displayLines": "{[Skill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[1]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SpeedAddCount",
+                  "value": {
+                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SpeedAddCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "SpeedAddCount"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1230803206\">Monster_Fuyan_RL_DamageUp</a>[<span class=\"descriptionNumberColor\">Slay Move</span>]",
+                  "valuePerStack": {
+                    "MDF_DamageUpRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1579371120\">Monster_Fuyan_RL_SpeedUp</a>[<span class=\"descriptionNumberColor\">Transfer Move</span>]",
+                  "valuePerStack": {
+                    "MDF_SpeedAddedRatio_PerLayer": {
+                      "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                      "displayLines": "{[Skill01[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[1]]}"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DamageUpCount",
+                  "value": {
+                    "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(DamageUpCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "DamageUpCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "SpeedAddCount",
+                  "value": {
+                    "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(SpeedAddCount + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "SpeedAddCount"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "set": 0
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "popUpText": "Action Advance"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_Fuyan_RL_Ability01_Part01": {
+      "fileName": "2024021_Monster_Fuyan_RL_Ability01_Part01",
+      "childAbilityList": [
+        "2024021_Monster_Fuyan_RL_Ability01_Part01",
+        "2024021_Monster_Fuyan_RL_Ability01_Part02",
+        "2024021_Monster_Fuyan_RL_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_Fuyan_RL_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "2024021_Monster_W2_Fuyan_PassiveAbility_BGM": {
+      "fileName": "2024021_Monster_W2_Fuyan_PassiveAbility_BGM",
+      "childAbilityList": [
+        "2024021_Monster_W2_Fuyan_PassiveAbility_BGM"
+      ],
+      "skillTrigger": "Passive_BGM",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Stage Type",
+                "stageType": "Challenge"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "VerseSimulation"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "StrongChallengeActivity"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "RogueRelic"
+              },
+              {
+                "name": "Stage Type",
+                "stageType": "GridFightActivity"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"649895739\">Enemy_W2_Fuyan_ResetStageBGM</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__649895739\">Enemy_W2_Fuyan_ResetStageBGM</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex",
+                  "value": "CurWaveIndex"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave: Start",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Varying Data",
+                  "target": null,
+                  "variableName": "MDF_WaveIndex2",
+                  "value": "CurWaveIndex"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_WaveIndex",
+                    "compareType": "NOT=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_WaveIndex2) || RETURN",
+                      "displayLines": "MDF_WaveIndex2",
+                      "constants": [],
+                      "variables": [
+                        "MDF_WaveIndex2"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }

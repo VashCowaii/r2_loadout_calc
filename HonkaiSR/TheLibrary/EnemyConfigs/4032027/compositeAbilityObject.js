@@ -3,151 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032027,
   "trimCharacterName": 4032027,
   "abilityList": [
+    "4032027_Modifiers",
     "4032027_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate",
     "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02",
-    "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01",
-    "4032027_Modifiers"
+    "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01"
   ],
   "abilityObject": {
-    "4032027_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate": {
-      "fileName": "4032027_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2021392801\">Enemy_W4_FireProwler_01_Main_Status</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Target",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "target2": {
-              "name": "Target Name",
-              "target": "{{Enemy Phainon}}"
-            }
-          },
-          "passed": [
-            {
-              "name": "Consume",
-              "consumeFrom": "MaxHP",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "consumePercent": {
-                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
-                "displayLines": "{[PassiveSkill01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[PassiveSkill01[0]]}"
-                ]
-              },
-              "consumeFloor": 1,
-              "attackType": "Unknown",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Physical"
-              }
-            }
-          ]
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02": {
-      "fileName": "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01": {
-      "fileName": "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01",
-      "childAbilityList": [
-        "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01",
-        "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02",
-        "4032027_Monster_W4_FireProwler_01_Main_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_01_Main_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "4032027_Modifiers": {
       "fileName": "4032027_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -565,6 +426,145 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4032027_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate": {
+      "fileName": "4032027_Monster_W4_FireProwler_01_Main_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2021392801\">Enemy_W4_FireProwler_01_Main_Status</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Enemy Phainon}}"
+            }
+          },
+          "passed": [
+            {
+              "name": "Consume",
+              "consumeFrom": "MaxHP",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "consumePercent": {
+                "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
+                "displayLines": "{[PassiveSkill01[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[PassiveSkill01[0]]}"
+                ]
+              },
+              "consumeFloor": 1,
+              "attackType": "Unknown",
+              "DamageType": {
+                "name": "Damage Type Source",
+                "sourceType": "Physical"
+              }
+            }
+          ]
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02": {
+      "fileName": "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01": {
+      "fileName": "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01",
+      "childAbilityList": [
+        "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part01",
+        "4032027_Monster_W4_FireProwler_01_Main_Ability01_Part02",
+        "4032027_Monster_W4_FireProwler_01_Main_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_FireProwler_01_Main_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     }
   }

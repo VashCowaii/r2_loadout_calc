@@ -28,9 +28,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1705391722\">Monster_W1_Mecha03_01_Rage</a>[<span class=\"descriptionNumberColor\">Surpass</span>]",
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
       "type": "Buff",
       "effectName": "ATK Greatly Boosted",
@@ -215,9 +212,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2015116315\">Monster_W1_Mecha03_01_Overheat</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
-      "stackData": [
-        "MDF_DefenceAddedRatio"
-      ],
       "description": "DEF -<span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -260,11 +254,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1137901449\">Monster_W1_Mecha03_01_Frozen</a>[<span class=\"descriptionNumberColor\">Deep Freeze</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_IceResistanceRatio_PerLayer",
-        "MDF_SpeedAddedDelta_PerLayer",
-        "MDF_MaxLayer"
-      ],
       "description": "Reduces Ice RES by <span class=\"descriptionNumberColor\">MDF_IceResistanceRatio_PerLayer</span> and SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedDelta_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
       "type": "Debuff",
       "effectName": "Deep Freeze",

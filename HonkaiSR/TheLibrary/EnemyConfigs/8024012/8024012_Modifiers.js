@@ -320,17 +320,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__335567830\">Monster_SW_Boss_Ability04Mark</a>",
-      "latentQueue": [
-        "Phase2FirstSummon"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__335567830\">Monster_SW_Boss_Ability04Mark</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__507878310\">Monster_SW_Boss_Ability04Target</a>",
-      "latentQueue": [
-        "Phase2FirstSummon"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__507878310\">Monster_SW_Boss_Ability04Target</a>"
     },
     {
       "name": "Modifier Construction",
@@ -345,9 +339,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-658511969\">Monster_SW_Boss_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
       "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -388,12 +379,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1620116974\">Monster_SW_Boss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "Phase2FirstSummon"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect is stackable.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -453,9 +438,6 @@ const configAbility = {
         "STAT_DOT_Poison"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "Modifier_Poison_DamagePercentage"
-      ],
       "description": "Takes Wind DMG at the start of each turn for a certain number of turns.",
       "type": "Debuff",
       "effectName": "Wind Shear",
@@ -583,9 +565,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1913825605\">Monster_SW_Boss_PoisonDamage</a>",
-      "latentQueue": [
-        "Skill02First"
-      ],
       "duration": 1,
       "execute": [
         {

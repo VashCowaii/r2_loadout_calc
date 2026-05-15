@@ -2468,9 +2468,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1663989605\">Monster_W4_Claymore_LocalLegend03_PartController_LockHP</a>",
-      "latentQueue": [
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

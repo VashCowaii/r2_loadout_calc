@@ -352,10 +352,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-715823219\">Enemy_W1_Bronya_IF_02_Part2EnhanceInti</a>",
       "stackType": "Refresh",
-      "latentQueue": [
-        "AIFlag",
-        "PhaseFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -409,16 +405,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1695607247\">Enemy_W1_Bronya_IF_02_AssistantSpeed</a>[<span class=\"descriptionNumberColor\">Defense</span>]",
-      "stackData": [
-        "MDF_SpeedDownRatio"
-      ],
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "Bronya_LimboFlag",
-        "isMainAttack",
-        "AIFlag",
-        "PhaseFlag"
-      ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span> when the character is in Support mode.",
       "type": "Other",
       "statusName": "Defense",
@@ -477,13 +463,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__946500704\">Enemy_W1_Bronya_IF_02_MainHaloEffect</a>[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "Bronya_LimboFlag",
-        "isMainAttack",
-        "AIFlag",
-        "PhaseFlag"
-      ],
       "description": "The character is currently in the Main attack state.",
       "type": "Other",
       "effectName": "Main Attack",
@@ -513,10 +492,6 @@ const configAbility = {
       "stackData": [
         "MDF_SpeedUpPerLayer",
         "MDF_AttackUpPerLayer"
-      ],
-      "latentQueue": [
-        "PhaseFlag",
-        "AIFlag"
       ],
       "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpPerLayer</span> and ATK by <span class=\"descriptionNumberColor\">MDF_AttackUpPerLayer</span>. All stacks are lost when Weakness is broken.",
       "type": "Buff",
@@ -660,13 +635,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1364188900\">Enemy_W1_Bronya_IF_02_Enhance</a>[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
       "modifierFlags": [
         "STAT_SpeedUp"
-      ],
-      "stackData": [
-        "MDF_SpeedUp"
-      ],
-      "latentQueue": [
-        "Gepard_LimboFlag",
-        "AIFlag"
       ],
       "description": "Greatly enhances this unit, increasing SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUp</span>. When in this state, Bronya can summon even more Silvermane Cannoneers.",
       "type": "Buff",

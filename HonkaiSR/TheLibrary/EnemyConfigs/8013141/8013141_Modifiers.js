@@ -90,12 +90,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__596990185\">Enemy_W0_Boss_Part2_Ability11_Modifier</a>",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -271,9 +265,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1202607969\">Enemy_W0_Boss_Charge_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
       ]
     },
     {
@@ -380,9 +371,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__360534641\">Enemy_W0_Boss_Part2_AttackUp</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>. Abilities are enhanced.",
       "type": "Buff",
       "effectName": "Amplification",
@@ -711,9 +699,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1383210331\">Enemy_W0_Boss_Part2_OnPhase3SpeedUp</a>[<span class=\"descriptionNumberColor\">Burst</span>]",
-      "stackData": [
-        "MDF_SpeedAddedRatio"
-      ],
       "description": "Speed increased.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -745,9 +730,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-842741041\">Enemy_AML_Boss_Part2_Ability11_ListenSelfDieModifier</a>",
-      "latentQueue": [
-        "AML_Boss_00_BattleScore2_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"

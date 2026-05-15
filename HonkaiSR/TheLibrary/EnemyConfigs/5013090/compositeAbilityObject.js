@@ -3,173 +3,12 @@ const compositeAbilityObject = {
   "fullCharacterName": 5013090,
   "trimCharacterName": 5013090,
   "abilityList": [
+    "5013090_Modifiers",
     "5013090_Monster_W5_RangerGroup_SpecialWin",
     "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert",
-    "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate",
-    "5013090_Modifiers"
+    "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate"
   ],
   "abilityObject": {
-    "5013090_Monster_W5_RangerGroup_SpecialWin": {
-      "fileName": "5013090_Monster_W5_RangerGroup_SpecialWin",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert": {
-      "fileName": "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Create Enemies",
-          "enemyList": [
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
-                "displayLines": "SummonList_ADF_2",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_2"
-                ]
-              },
-              "locationType": "BeforeCaster"
-            },
-            {
-              "name": "Enemy Entry",
-              "enemyID": {
-                "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
-                "displayLines": "SummonList_ADF_4",
-                "constants": [],
-                "variables": [
-                  "SummonList_ADF_4"
-                ]
-              },
-              "locationType": "AfterCaster"
-            }
-          ]
-        },
-        {
-          "name": "Set Enemy Phase",
-          "mode": "Inc"
-        },
-        {
-          "name": "Use Custom Character Function",
-          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
-        },
-        {
-          "name": "Create Shared HP Group",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "resolveToSubGroups": true
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Recently Summoned Enemies}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2082758660\">Enemy_W5_RangerGroup_MainEnd</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "InsertCheck",
-          "value": 1
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1422594911\">Enemy_W5_RangerGroup_PartController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate": {
-      "fileName": "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "whenAdded": [
-        {
-          "name": "Set Action-State",
-          "on": null,
-          "stateName": "PartControl",
-          "state": false
-        },
-        {
-          "name": "Boss Bar Display",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "display": false
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2004703763\">Enemy_W5_RangerGroup_PassiveAbilityInitiate</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1422594911\">Enemy_W5_RangerGroup_PartController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "5013090_Modifiers": {
       "fileName": "5013090_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -679,6 +518,167 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "5013090_Monster_W5_RangerGroup_SpecialWin": {
+      "fileName": "5013090_Monster_W5_RangerGroup_SpecialWin",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert": {
+      "fileName": "5013090_Monster_W5_RangerGroup_PassiveAbility01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Create Enemies",
+          "enemyList": [
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
+                "displayLines": "SummonList_ADF_2",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_2"
+                ]
+              },
+              "locationType": "BeforeCaster"
+            },
+            {
+              "name": "Enemy Entry",
+              "enemyID": {
+                "operator": "Variables[0] (SummonList_ADF_4) || RETURN",
+                "displayLines": "SummonList_ADF_4",
+                "constants": [],
+                "variables": [
+                  "SummonList_ADF_4"
+                ]
+              },
+              "locationType": "AfterCaster"
+            }
+          ]
+        },
+        {
+          "name": "Set Enemy Phase",
+          "mode": "Inc"
+        },
+        {
+          "name": "Use Custom Character Function",
+          "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
+        },
+        {
+          "name": "Create Shared HP Group",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "subTarget": {
+            "name": "Target Name",
+            "target": "{{Recently Summoned Enemies}}"
+          },
+          "resolveToSubGroups": true
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Recently Summoned Enemies}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1502379157\">Enemy_W5_RangerGroup_SummonedLockHp</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2082758660\">Enemy_W5_RangerGroup_MainEnd</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "InsertCheck",
+          "value": 1
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1422594911\">Enemy_W5_RangerGroup_PartController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate": {
+      "fileName": "5013090_Monster_W5_RangerGroup_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Set Action-State",
+          "on": null,
+          "stateName": "PartControl",
+          "state": false
+        },
+        {
+          "name": "Boss Bar Display",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "display": false
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2004703763\">Enemy_W5_RangerGroup_PassiveAbilityInitiate</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1422594911\">Enemy_W5_RangerGroup_PartController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

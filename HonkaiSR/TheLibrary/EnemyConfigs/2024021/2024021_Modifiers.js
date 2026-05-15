@@ -166,9 +166,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__417134444\">Monster_Fuyan_RL_HPShared_Part3</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -206,10 +203,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1663924159\">Monster_Fuyan_RL_HPShared</a>",
-      "latentQueue": [
-        "InsertCheck",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",

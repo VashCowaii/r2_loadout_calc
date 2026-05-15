@@ -565,10 +565,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1997793398\">Monster_W1_Soldier03_ShieldControl</a>",
-      "latentQueue": [
-        "W1_Soldier03_00_SummonCounter",
-        "W1_Soldier03_00_AICounter"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",

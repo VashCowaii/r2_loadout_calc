@@ -3,304 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": 4032024,
   "trimCharacterName": 4032024,
   "abilityList": [
+    "4032024_Modifiers",
     "4032024_Monster_W4_FireProwler_01_NoDeathRattle",
     "4032024_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory",
     "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
     "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
     "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
-    "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
-    "4032024_Modifiers"
+    "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory"
   ],
   "abilityObject": {
-    "4032024_Monster_W4_FireProwler_01_NoDeathRattle": {
-      "fileName": "4032024_Monster_W4_FireProwler_01_NoDeathRattle",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "onAbort": [
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032024_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory": {
-      "fileName": "4032024_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-881069101\">Enemy_W4_FireProwler_01_Repeat_FantasticStory</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Summoner}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "valuePerStack": {
-            "MDF_Ability01": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "MDF_Ability01_Adjoin": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "MDF_Ability02": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        }
-      ],
-      "whenAdded": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory": {
-      "fileName": "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
-          "valuePerStack": {
-            "MDF_RallyTransferRatio": {
-              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
-              "displayLines": "{[Skill02[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[1]]}"
-              ]
-            },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
-              "displayLines": "{[Skill02[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[3]]}"
-              ]
-            },
-            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
-              "displayLines": "{[Skill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[2]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Hostile Entities(AOE)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory": {
-      "fileName": "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
-      "childAbilityList": [
-        "4032024_Monster_W4_FireProwler_01_Ability02_Camera_FantasticStory",
-        "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
-        "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory": {
-      "fileName": "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Targets Adjacent(Blast)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory": {
-      "fileName": "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
-      "childAbilityList": [
-        "4032024_Monster_W4_FireProwler_01_Ability01_Camera_FantasticStory",
-        "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
-        "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "subTarget": "Blast Targets"
-      },
-      "references": []
-    },
     "4032024_Modifiers": {
       "fileName": "4032024_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -313,12 +24,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-          "stackData": [
-            "MDF_Skill01",
-            "MDF_Skill01_Adjoin",
-            "MDF_Skill02"
-          ]
+          "for": "<a class=\"gModGreen\" id=\"mod__-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>"
         },
         {
           "name": "Modifier Construction",
@@ -791,6 +497,295 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4032024_Monster_W4_FireProwler_01_NoDeathRattle": {
+      "fileName": "4032024_Monster_W4_FireProwler_01_NoDeathRattle",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4032024_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory": {
+      "fileName": "4032024_Monster_W4_FireProwler_01_PassiveAbilityInitiate_FantasticStory",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-881069101\">Enemy_W4_FireProwler_01_Repeat_FantasticStory</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Summoner}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
+          "valuePerStack": {
+            "MDF_Ability01": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "MDF_Ability01_Adjoin": {
+              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+              "displayLines": "{[Skill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[1]]}"
+              ]
+            },
+            "MDF_Ability02": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        }
+      ],
+      "whenAdded": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory": {
+      "fileName": "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
+          "valuePerStack": {
+            "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
+              "displayLines": "{[Skill02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[1]]}"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
+              "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
+              "displayLines": "{[Skill02[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[3]]}"
+              ]
+            },
+            "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
+              "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
+              "displayLines": "{[Skill02[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[2]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory": {
+      "fileName": "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
+      "childAbilityList": [
+        "4032024_Monster_W4_FireProwler_01_Ability02_Camera_FantasticStory",
+        "4032024_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
+        "4032024_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory": {
+      "fileName": "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+              "displayLines": "{[Skill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[1]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory": {
+      "fileName": "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
+      "childAbilityList": [
+        "4032024_Monster_W4_FireProwler_01_Ability01_Camera_FantasticStory",
+        "4032024_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
+        "4032024_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
       "references": []
     }
   }

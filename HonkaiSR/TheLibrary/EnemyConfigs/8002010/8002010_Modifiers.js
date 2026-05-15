@@ -76,9 +76,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_DamageAddedRatio"
-      ],
       "description": "Uses Carolburst during the next action and increases DMG dealt to targets by <span class=\"descriptionNumberColor\">MDF_DamageAddedRatio</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",

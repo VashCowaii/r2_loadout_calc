@@ -450,50 +450,23 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-775084150\">Enemy_W2_Beast02_01_Ability02_Target04</a>",
-      "latentQueue": [
-        "Storage_Flag",
-        "Fire1_Flag",
-        "BattleScore_FireBallCount",
-        "Fire2_Flag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-775084150\">Enemy_W2_Beast02_01_Ability02_Target04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-858972245\">Enemy_W2_Beast02_01_Ability02_Target03</a>",
-      "latentQueue": [
-        "Storage_Flag",
-        "Fire1_Flag",
-        "BattleScore_FireBallCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-858972245\">Enemy_W2_Beast02_01_Ability02_Target03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-875749864\">Enemy_W2_Beast02_01_Ability02_Target02</a>",
-      "latentQueue": [
-        "Storage_Flag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-875749864\">Enemy_W2_Beast02_01_Ability02_Target02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-825417007\">Enemy_W2_Beast02_01_Ability02_Target01</a>",
-      "latentQueue": [
-        "Storage_Flag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-825417007\">Enemy_W2_Beast02_01_Ability02_Target01</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__562497945\">Enemy_Beast02_01_Ability03Listener</a>",
-      "latentQueue": [
-        "BattleScore_FireBallCount",
-        "AIFlag",
-        "Phase_Flag",
-        "Storage_Flag",
-        "Fire1_Flag",
-        "Fire2_Flag",
-        "Fire3_Flag",
-        "Fire4_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -555,9 +528,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-111806612\">Enemy_Beast02_01_BodyEffect_Ability04Charge</a>",
-      "latentQueue": [
-        "Storage_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -576,16 +546,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1058302594\">Enemy_Beast02_01_BodyEffect</a>",
-      "latentQueue": [
-        "Fire4_Flag",
-        "Fire3_Flag",
-        "Fire2_Flag",
-        "Fire1_Flag",
-        "Storage_Flag",
-        "Phase_Flag",
-        "AIFlag",
-        "BattleScore_FireBallCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"

@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1224800253\">W4_Serpent_BattleScore1</a>",
-      "latentQueue": [
-        "MDF_Trigger"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -383,10 +383,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1461462958\">Enemy_W3_Sam_RLBoss_BlackBloodHalo</a>",
-      "latentQueue": [
-        "Phase_Flag",
-        "InsertSpecial"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -413,9 +409,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. This effect is stackable.",
       "type": "Buff",
       "effectName": "Thermocumulative Upgrade",
@@ -455,11 +448,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1053337379\">Enemy_W3_Sam_RLBoss_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_SpeedUpRatio",
-        "MDF_ChangeHPRatio"
-      ],
       "description": "All attacks consume HP. Gains 1 stack of Thermocumulative Upgrade and increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and gains an additional action. <span class=\"descriptionNumberColor\">MDF_CurrentPoint</span> point(s) of Molten Energy remain before the Secondary Combustion state expires.",
       "type": "Other",
       "effectName": "Secondary Combustion",
@@ -1234,12 +1222,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1431346612\">Monster_W3_Sam_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-      "stackData": [
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Takes <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span> more DMG. This effect expires when Sam recovers from Weakness Break state.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -2111,7 +2093,6 @@ const configAbility = {
         "MDF_DamageUpRatio"
       ],
       "latentQueue": [
-        "MDF_ChangeHPRatio",
         "HintCheck",
         "MDF_InitHPRatio",
         "InsertCheck",
@@ -2417,10 +2398,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "InsertCheck",
-        "InsertSpecial"
-      ],
       "description": "Sam's Toughness cannot be reduced before entering the Secondary Combustion state.",
       "type": "Other",
       "statusName": "Weakness Protected",
@@ -2637,7 +2614,6 @@ const configAbility = {
         "MDF_DamagePercentage"
       ],
       "latentQueue": [
-        "MDF_ChangeHPRatio",
         "HintCheck",
         "MDF_InitHPRatio",
         "InsertCheck",
@@ -2729,7 +2705,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-642289168\">Monster_W3_Sam_EnhanceEffectPart</a>",
       "latentQueue": [
-        "MDF_ChangeHPRatio",
         "HintCheck",
         "MDF_InitHPRatio"
       ],
@@ -2742,11 +2717,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-909732184\">Monster_W3_Sam_Enhance</a>[<span class=\"descriptionNumberColor\">Secondary Combustion</span>]",
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_SpeedUpRatio",
-        "MDF_ChangeHPRatio"
-      ],
       "description": "All attacks consume HP. Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span> and gains an additional action. <span class=\"descriptionNumberColor\">MDF_CurrentPoint</span> point(s) of Molten Energy remain before the Secondary Combustion state expires.",
       "type": "Other",
       "effectName": "Secondary Combustion",

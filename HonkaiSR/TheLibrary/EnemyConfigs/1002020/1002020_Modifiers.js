@@ -14,10 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SpeedUp"
       ],
-      "stackData": [
-        "Modifier_AttackAddedRatio",
-        "Modifier_SpeedDelta"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span>.",
       "type": "Buff",
       "effectName": "ATK Boost",

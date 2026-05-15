@@ -14,11 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -58,11 +53,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1101843162\">W2_YanQing_BattleScore6</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
       ],
       "execute": [
         {
@@ -109,11 +99,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -158,11 +143,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1135398400\">W2_YanQing_BattleScore4</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
       ],
       "execute": [
         {
@@ -209,11 +189,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -254,11 +229,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -298,11 +268,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1051510305\">W2_YanQing_BattleScore1</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
       ],
       "execute": [
         {
@@ -1024,11 +989,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__684006930\">Enemy_W2_Yanqing_StandByEffect</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1159,11 +1119,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1466013786\">Enemy_W2_Yanqing_StandBySwordEffect_Controller</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_AICounter",
-        "W2_Yanqing_00_AIPhase",
-        "W2_Yanqing_00_WeakPointState"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2340,9 +2295,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "MuteHitH"
-      ],
-      "stackData": [
-        "MDF_SpeedDelta"
       ],
       "description": "Yanqing's Toughness cannot be reduced, and his SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedDelta</span>. Destroy all of Yanqing's Flying Swords to dispel this effect and cause DMG to Yanqing.",
       "type": "Other",

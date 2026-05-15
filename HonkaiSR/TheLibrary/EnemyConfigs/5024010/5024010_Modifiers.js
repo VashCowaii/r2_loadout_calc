@@ -88,10 +88,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__209501789\">Monster_W5_Ripper_Main_HPTrigger2</a>",
-      "stackData": [
-        "MDF_HPTriggerRatio",
-        "MDF_HPTriggerCompareRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -163,10 +159,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__159168932\">Monster_W5_Ripper_Main_HPTrigger1</a>",
-      "stackData": [
-        "MDF_HPTriggerRatio",
-        "MDF_HPTriggerCompareRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1102,10 +1094,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1788107220\">Monster_W5_Ripper_Ability06_SpecialFlesh</a>",
-      "latentQueue": [
-        "MainCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1788107220\">Monster_W5_Ripper_Ability06_SpecialFlesh</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1114,9 +1103,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1098328598\">Monster_W5_Ripper_Ability06_Mark</a>",
-      "latentQueue": [
-        "MainCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -1128,12 +1114,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-98226572\">Monster_W5_Ripper_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Teasing</span>]",
       "stackType": "Replace",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "MDF_InsertCheck"
-      ],
       "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -1196,20 +1176,6 @@ const configAbility = {
         147,
         "AvatarBreak"
       ],
-      "stackData": [
-        "MDF_FleshElationPoint",
-        "MDF_FleshExtraChance",
-        "MDF_FleshExtraElationPoint",
-        "MDF_AttackEnemyChance",
-        "MDF_DamagePercentage",
-        "MDF_MaxDamageRatio",
-        "MDF_MinDamageRatio",
-        "MDF_ExtraDamageMultiple",
-        "MDF_EnemyExtraDamageMultiple"
-      ],
-      "latentQueue": [
-        "MainCount"
-      ],
       "description": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
       "type": "Debuff",
       "effectName": "Happiness Puppet",
@@ -1268,20 +1234,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__34096710\">Monster_W5_Ripper_FleshEffect</a>",
-      "stackData": [
-        "MDF_FleshElationPoint",
-        "MDF_FleshExtraChance",
-        "MDF_FleshExtraElationPoint",
-        "MDF_AttackEnemyChance",
-        "MDF_DamagePercentage",
-        "MDF_MaxDamageRatio",
-        "MDF_MinDamageRatio",
-        "MDF_ExtraDamageMultiple",
-        "MDF_EnemyExtraDamageMultiple"
-      ],
-      "latentQueue": [
-        "MainCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Pre-action Phase]",
@@ -1945,15 +1897,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_AddLayer",
-        "MDF_SummonCount"
-      ],
-      "latentQueue": [
-        "MainCount",
-        "ParasitismLayer"
-      ],
       "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
       "type": "Other",
       "effectName": "Happiness",
@@ -2609,9 +2552,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__497761584\">Monster_W5_Ripper_Ability04_Mark</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "MainCount"
       ]
     },
     {
@@ -3070,9 +3010,6 @@ const configAbility = {
         "MDF_ExtraDamageMultiple",
         "MDF_EnemyExtraDamageMultiple"
       ],
-      "latentQueue": [
-        "MainCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3469,9 +3406,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1728959136\">Monster_W5_Ripper_Passive</a>",
-      "stackData": [
-        "MDF_TriggerSummonCount"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",

@@ -199,13 +199,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-191889698\">MModifier_W4_Griffin_LocalLegend_Revenge</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_AddedDamageRatio"
-      ],
-      "latentQueue": [
-        "_ListenCorrectInteract",
-        "AIFlag"
-      ],
       "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
       "type": "Other",
       "effectName": "DMG Boost",
@@ -257,9 +250,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__364693111\">Enemy_W4_Griffin_LocalLegend_Status</a>",
-      "latentQueue": [
-        "_MaxDamageReduce"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",

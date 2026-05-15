@@ -3,16 +3,50 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002020,
   "trimCharacterName": 3002020,
   "abilityList": [
+    "3002020_Modifiers",
     "3002020_Monster_W1_Mecha01_02_PassiveAbility02",
     "3002020_Monster_W1_Mecha01_02_Ability03_Death",
     "3002020_Monster_W1_Mecha01_02_Ability03_Insert_Part01",
     "3002020_Monster_W1_Mecha01_02_Ability02_Insert_Part01",
     "3002020_Monster_W1_Mecha01_02_Ability01_Insert_Part01",
     "3002020_Monster_W1_Mecha01_02_Ability04_Part02",
-    "3002020_Monster_W1_Mecha01_02_Ability04_Part01",
-    "3002020_Modifiers"
+    "3002020_Monster_W1_Mecha01_02_Ability04_Part01"
   ],
   "abilityObject": {
+    "3002020_Modifiers": {
+      "fileName": "3002020_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-590056738\">W1_Mecha01_02_BattleScore1</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "JACKPOT!",
+                      "desc": "Make Dreamjolt Troupe's Fortune Seller produce \"Jackpot!\" once",
+                      "rarity": "Low"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "3002020_Monster_W1_Mecha01_02_PassiveAbility02": {
       "fileName": "3002020_Monster_W1_Mecha01_02_PassiveAbility02",
       "skillTrigger": "PassiveSkill02",
@@ -757,40 +791,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "3002020_Modifiers": {
-      "fileName": "3002020_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-590056738\">W1_Mecha01_02_BattleScore1</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Achievement",
-                  "relatedAchievements": [
-                    {
-                      "title": "JACKPOT!",
-                      "desc": "Make Dreamjolt Troupe's Fortune Seller produce \"Jackpot!\" once",
-                      "rarity": "Low"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

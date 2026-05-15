@@ -1408,9 +1408,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2047643861\">Enemy_W5_Peacock_AbilityP01_Colorful_Effect</a>",
-      "latentQueue": [
-        "ColorInInsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1431,12 +1428,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__973037691\">Enemy_W5_Peacock_AbilityP01_Colorful</a>[<span class=\"descriptionNumberColor\">Color</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_ColorDiffDamageAddedRatio"
-      ],
-      "latentQueue": [
-        "ColorInInsertFlag"
       ],
       "description": "When using abilities, \"Paint\" will be consumed to deal Additional DMG of the corresponding Type. At the end of the turn, if all \"Paint\" has been consumed, enters the \"Colorless\" state and removes Weakness and Type RES reduction caused by \"Paint.\" When Weakness is Broken, consumes all \"Paint\" to deal Additional DMG equal to a percentage of this unit's max HP to this unit.",
       "type": "Other",
@@ -2521,12 +2512,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_ElationDamageExtraColorCount"
-      ],
-      "latentQueue": [
-        "ColorOutInsertFlag"
       ],
       "description": "When attacked by ally targets, gains 1 point of \"Paint\" based on the attacker's Type. If Elation DMG is received during the attack, then additionally gains a certain amount of \"Paint.\" When reaching 6 points of \"Paint,\" enters the \"Color\" state. During this state, based on the Types of Paint already gained, gains corresponding Types of Weakness and decreases the Type RES of corresponding Type. When in the \"Colorless\" state, Toughness will not drop below 1.",
       "type": "Other",

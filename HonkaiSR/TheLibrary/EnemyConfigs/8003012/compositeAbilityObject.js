@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8003012,
   "trimCharacterName": 8003012,
   "abilityList": [
+    "8003012_Modifiers",
     "8003012_Monster_XP_Elite01_01_PassiveAbility01_IF",
     "8003012_Monster_XP_Elite01_01_Ability06_Part02",
     "8003012_Monster_XP_Elite01_01_Ability06_Part01",
@@ -15,10 +16,62 @@ const compositeAbilityObject = {
     "8003012_Monster_XP_Elite01_01_Ability02_Part02",
     "8003012_Monster_XP_Elite01_01_Ability02_Part01",
     "8003012_Monster_XP_Elite01_01_Ability01_Part02",
-    "8003012_Monster_XP_Elite01_01_Ability01_Part01",
-    "8003012_Modifiers"
+    "8003012_Monster_XP_Elite01_01_Ability01_Part01"
   ],
   "abilityObject": {
+    "8003012_Modifiers": {
+      "fileName": "8003012_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
+          "description": "Ice Out of Space's attack mode is enhanced.",
+          "type": "Other",
+          "effectName": "Freezing Point",
+          "statusName": "Freezing Point",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Phase_Flag",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Phase_Flag",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8003012_Monster_XP_Elite01_01_PassiveAbility01_IF": {
       "fileName": "8003012_Monster_XP_Elite01_01_PassiveAbility01_IF",
       "skillTrigger": "PassiveSkill01",
@@ -1353,64 +1406,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8003012_Modifiers": {
-      "fileName": "8003012_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
-          "stackData": [
-            "Modifier_AllDamageTypeResistance",
-            "Modifier_StanceWeakAddedRatio",
-            "Modifier_Stance"
-          ],
-          "description": "Ice Out of Space's attack mode is enhanced.",
-          "type": "Other",
-          "effectName": "Freezing Point",
-          "statusName": "Freezing Point",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Phase_Flag",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Phase_Flag",
-                  "value": 2
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

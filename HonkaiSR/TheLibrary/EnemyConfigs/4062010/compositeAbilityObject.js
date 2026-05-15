@@ -3,16 +3,67 @@ const compositeAbilityObject = {
   "fullCharacterName": 4062010,
   "trimCharacterName": 4062010,
   "abilityList": [
+    "4062010_Modifiers",
     "4062010_Monster_W4_Turkey_Ability02_Part01_Assist",
     "4062010_Monster_W4_Turkey_Ability02_Part02",
     "4062010_Monster_W4_Turkey_Ability02_Part01",
     "4062010_Monster_W4_Turkey_Ability01_Part01_Assist_01",
     "4062010_Monster_W4_Turkey_Ability01_Part01_Assist_00",
     "4062010_Monster_W4_Turkey_Ability01_Part02",
-    "4062010_Monster_W4_Turkey_Ability01_Part01",
-    "4062010_Modifiers"
+    "4062010_Monster_W4_Turkey_Ability01_Part01"
   ],
   "abilityObject": {
+    "4062010_Modifiers": {
+      "fileName": "4062010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2090234676\">Enemy_W4_Turkey_Ability02_Power_EffectLoop</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]",
+          "description": "After other \"Ichor Memosprites: Pheasant\" in the \"Hemotort Resonance\" state attack, this unit will attack together with them. Dispels when Weakness is broken.",
+          "type": "Other",
+          "effectName": "Hemotort Resonance",
+          "statusName": "Hemotort Resonance",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2090234676\">Enemy_W4_Turkey_Ability02_Power_EffectLoop</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "4062010_Monster_W4_Turkey_Ability02_Part01_Assist": {
       "fileName": "4062010_Monster_W4_Turkey_Ability02_Part01_Assist",
       "abilityType": null,
@@ -882,57 +933,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "4062010_Modifiers": {
-      "fileName": "4062010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2090234676\">Enemy_W4_Turkey_Ability02_Power_EffectLoop</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]",
-          "description": "After other \"Ichor Memosprites: Pheasant\" in the \"Hemotort Resonance\" state attack, this unit will attack together with them. Dispels when Weakness is broken.",
-          "type": "Other",
-          "effectName": "Hemotort Resonance",
-          "statusName": "Hemotort Resonance",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2090234676\">Enemy_W4_Turkey_Ability02_Power_EffectLoop</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 1013011,
   "trimCharacterName": 1013011,
   "abilityList": [
+    "1013011_Modifiers",
     "1013011_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock",
     "1013011_WMonster_W1_Mecha_02_Ability05_Part02",
     "1013011_WMonster_W1_Mecha_02_Ability05_Part01",
@@ -13,10 +14,109 @@ const compositeAbilityObject = {
     "1013011_WMonster_W1_Mecha_02_Ability02_Part02",
     "1013011_WMonster_W1_Mecha_02_Ability02_Part01",
     "1013011_WMonster_W1_Mecha_02_Ability01_Part02",
-    "1013011_WMonster_W1_Mecha_02_Ability01_Part01",
-    "1013011_Modifiers"
+    "1013011_WMonster_W1_Mecha_02_Ability01_Part01"
   ],
   "abilityObject": {
+    "1013011_Modifiers": {
+      "fileName": "1013011_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>",
+          "execute": [
+            {
+              "eventTrigger": "Action End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 4,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "AIFlag",
+                        "compareType": "=",
+                        "value2": 5,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]"
+                          }
+                        ]
+                      },
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "1013011_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock": {
       "fileName": "1013011_WMonster_W1_Mecha_02_Passive_AIControlAndHPLock",
       "childAbilityList": [
@@ -1792,106 +1892,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "1013011_Modifiers": {
-      "fileName": "1013011_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-404471381\">Monster_W1_Mecha03_RemoveOneMore</a>",
-          "execute": [
-            {
-              "eventTrigger": "Action End [Owner]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 4,
-                        "contextScope": "TargetEntity"
-                      },
-                      {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "value1": "AIFlag",
-                        "compareType": "=",
-                        "value2": 5,
-                        "contextScope": "TargetEntity"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "OR",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]"
-                          }
-                        ]
-                      },
-                      "failed": [
-                        {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Modifier Holder}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

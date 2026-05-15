@@ -3,14 +3,63 @@ const compositeAbilityObject = {
   "fullCharacterName": 2022040,
   "trimCharacterName": 2022040,
   "abilityList": [
+    "2022040_Modifiers",
     "2022040_Monster_W2_Beast01_AbilityP01_Part02",
     "2022040_Monster_W2_Beast01_AbilityP01_Insert",
     "2022040_Monster_W2_Beast01_AbilityP01_Initiate",
     "2022040_Monster_W2_Beast01_Ability01_Part02",
-    "2022040_Monster_W2_Beast01_Ability01_Part01",
-    "2022040_Modifiers"
+    "2022040_Monster_W2_Beast01_Ability01_Part01"
   ],
   "abilityObject": {
+    "2022040_Modifiers": {
+      "fileName": "2022040_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__331621687\">Monster_W2_Beast01_Bonus</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W2_Beast01_AbilityP01_Insert",
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "2022040_Monster_W2_Beast01_AbilityP01_Part02": {
       "fileName": "2022040_Monster_W2_Beast01_AbilityP01_Part02",
       "abilityType": null,
@@ -341,55 +390,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "2022040_Modifiers": {
-      "fileName": "2022040_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__331621687\">Monster_W2_Beast01_Bonus</a>",
-          "modifierFlags": [
-            "Deathrattle",
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Was Killed (Queued) [Owner]",
-              "execute": [
-                {
-                  "name": "Dispel Debuffs",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "silent": true
-                },
-                {
-                  "name": "Mark Entity For Immediate Death"
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W2_Beast01_AbilityP01_Insert",
-                  "priorityTag": "EnemyDeathEffect",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8012147,
   "trimCharacterName": 8012147,
   "abilityList": [
+    "8012147_Modifiers",
     "8012147_Monster_AML_Boss_Part3_IF_PassiveAbilityInitiate",
     "8012147_Monster_AML_Boss_Part3_IF_AbilityP01_WeaknessChange",
     "8012147_Monster_AML_Boss_Part3_IF_AbilityP01_ReflexInsert",
@@ -12,10 +13,91 @@ const compositeAbilityObject = {
     "8012147_Monster_AML_Boss_Part3_IF_Ability05_Part02",
     "8012147_Monster_AML_Boss_Part3_IF_Ability05_Part01",
     "8012147_Monster_AML_Boss_Part3_IF_Ability04_Part02",
-    "8012147_Monster_AML_Boss_Part3_IF_Ability04_Part01",
-    "8012147_Modifiers"
+    "8012147_Monster_AML_Boss_Part3_IF_Ability04_Part01"
   ],
   "abilityObject": {
+    "8012147_Modifiers": {
+      "fileName": "8012147_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2003084081\">Standard_SpeedRatioUp</a>",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1344394786\">Enemy_AML_Boss_Part3_IF_AbilityP01_OneMoreController</a>",
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "AML_Boss_00_Part_EnhancementLevel",
+              "from": "ContextOwner",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "minValue": 2,
+                  "maxValue": 99,
+                  "whenEnteringRange": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ],
+                  "whenLeavingRange": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8012147_Monster_AML_Boss_Part3_IF_PassiveAbilityInitiate": {
       "fileName": "8012147_Monster_AML_Boss_Part3_IF_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -1221,91 +1303,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8012147_Modifiers": {
-      "fileName": "8012147_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2003084081\">Standard_SpeedRatioUp</a>",
-          "stackType": "ReplaceByCaster",
-          "modifierFlags": [
-            "STAT_SpeedUp"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1344394786\">Enemy_AML_Boss_Part3_IF_AbilityP01_OneMoreController</a>",
-          "variableValueChange": [
-            {
-              "name": "Variable Value Changes",
-              "variableName": "AML_Boss_00_Part_EnhancementLevel",
-              "from": "ContextOwner",
-              "valueRanges": [
-                {
-                  "name": "Variable Value Range Conditions",
-                  "minValue": 2,
-                  "maxValue": 99,
-                  "whenEnteringRange": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ],
-                  "whenLeavingRange": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

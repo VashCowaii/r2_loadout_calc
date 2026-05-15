@@ -15,12 +15,6 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_ShowValue"
-      ],
-      "latentQueue": [
-        "Insert_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -343,9 +337,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__488990783\">W3_DeathPart_Sgin_Modifier</a>",
       "stackType": "Multiple",
-      "latentQueue": [
-        "Insert_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Update Target Selected(UI) [Anyone]",

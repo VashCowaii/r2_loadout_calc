@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8002060,
   "trimCharacterName": 8002060,
   "abilityList": [
+    "8002060_Modifiers",
     "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie",
     "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
     "8002060_Monster_XP_Minion04_02_AbilityP01",
@@ -11,611 +12,9 @@ const compositeAbilityObject = {
     "8002060_Monster_XP_Minion04_02_Ability02_Part02",
     "8002060_Monster_XP_Minion04_02_Ability02_Part01",
     "8002060_Monster_XP_Minion04_02_Ability01_Part02",
-    "8002060_Monster_XP_Minion04_02_Ability01_Part01",
-    "8002060_Modifiers"
+    "8002060_Monster_XP_Minion04_02_Ability01_Part01"
   ],
   "abilityObject": {
-    "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie": {
-      "fileName": "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-        },
-        {
-          "name": "Looped Event",
-          "maxLoops": {
-            "operator": "Variables[0] (Huimie_BeHitCounter) || RETURN",
-            "displayLines": "Huimie_BeHitCounter",
-            "constants": [],
-            "variables": [
-              "Huimie_BeHitCounter"
-            ]
-          },
-          "Event": [
-            {
-              "name": "ATK Scaling DMG",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Hostile Entities(AOE)}}"
-              },
-              "AttackScaling": {
-                "DamageType": "Fire",
-                "Damage": {
-                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                  "displayLines": "{[SkillP01[0]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[SkillP01[0]]}"
-                  ]
-                },
-                "Toughness": null,
-                "Tags": null
-              }
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "Huimie_BeHitCounter"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "scope": "TargetEntity",
-          "variableName": "XP_Minion04_02_Huimie_InsertFlag"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie": {
-      "fileName": "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Exit Broken-State",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "OR",
-            "conditionList": [
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "STAT_CTRL",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "DisableAction",
-                "invertCondition": true
-              },
-              {
-                "name": "Has Flag",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "flagName": "Break",
-                "invertCondition": true
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
-            }
-          ],
-          "failed": [
-            {
-              "name": "Animation Event",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "state": "Skill04",
-              "passed": [
-                {
-                  "name": "Animation Task",
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "Animation Task"
-                },
-                {
-                  "name": "Animation Task",
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Enemy Team All}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_AbilityP01": {
-      "fileName": "8002060_Monster_XP_Minion04_02_AbilityP01",
-      "childAbilityList": [
-        "8002060_Monster_XP_Minion04_02_AbilityP01",
-        "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
-        "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
-        },
-        {
-          "name": "Update Displayed Energy Bar",
-          "value": 1,
-          "entityClass": "Enemy",
-          "maximum": 1,
-          "assignState": "True"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
-          "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
-          "type": "Other",
-          "effectName": "T—Taking Revenge",
-          "statusName": "T—Taking Revenge"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
-          "execute": [
-            {
-              "eventTrigger": "Entity Created [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
-                      },
-                      {
-                        "name": "Is Part Of Team",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "team": "Enemy Team"
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Exit Broken-State",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  }
-                },
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyBattleCry",
-                  "canHitNonTargets": true,
-                  "showInActionOrder": true,
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -55
-            }
-          ]
-        }
-      ]
-    },
-    "8002060_Monster_XP_Minion04_02_Ability03_Part02": {
-      "fileName": "8002060_Monster_XP_Minion04_02_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Dispel Debuffs",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "silent": true
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"196303828\">Enemy_XP_Minion04_02_EffectGround</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Character ID",
-            "ID": 8002060,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": null
-          }
-        },
-        {
-          "name": "Mark Entity For Immediate Death"
-        },
-        "Trigger: Ability End",
-        {
-          "name": "Entity Escape Battle"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_Ability03_Part01": {
-      "fileName": "8002060_Monster_XP_Minion04_02_Ability03_Part01",
-      "childAbilityList": [
-        "8002060_Monster_XP_Minion04_02_Ability03_Part01",
-        "8002060_Monster_XP_Minion04_02_Ability03_Part02",
-        "8002060_Monster_XP_Minion04_Ability03_Camera"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_02_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_Ability02_Part02": {
-      "fileName": "8002060_Monster_XP_Minion04_02_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_Ability02_Part01": {
-      "fileName": "8002060_Monster_XP_Minion04_02_Ability02_Part01",
-      "childAbilityList": [
-        "8002060_Monster_XP_Minion04_02_Ability02_Part01",
-        "8002060_Monster_XP_Minion04_02_Ability02_Part02",
-        "8002060_Monster_XP_Minion04_Ability02_Camera"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_02_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_Ability01_Part02": {
-      "fileName": "8002060_Monster_XP_Minion04_02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "8002060_Monster_XP_Minion04_02_Ability01_Part01": {
-      "fileName": "8002060_Monster_XP_Minion04_02_Ability01_Part01",
-      "childAbilityList": [
-        "8002060_Monster_XP_Minion04_02_Ability01_Part01",
-        "8002060_Monster_XP_Minion04_02_Ability01_Part02",
-        "8002060_Monster_XP_Minion04_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_XP_Minion04_02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "8002060_Modifiers": {
       "fileName": "8002060_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1739,6 +1138,607 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie": {
+      "fileName": "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
+        },
+        {
+          "name": "Looped Event",
+          "maxLoops": {
+            "operator": "Variables[0] (Huimie_BeHitCounter) || RETURN",
+            "displayLines": "Huimie_BeHitCounter",
+            "constants": [],
+            "variables": [
+              "Huimie_BeHitCounter"
+            ]
+          },
+          "Event": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
+              "AttackScaling": {
+                "DamageType": "Fire",
+                "Damage": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                },
+                "Toughness": null,
+                "Tags": null
+              }
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "Huimie_BeHitCounter"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "XP_Minion04_02_Huimie_InsertFlag"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"224113690\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion_On</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie": {
+      "fileName": "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "DisableAction",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "flagName": "Break",
+                "invertCondition": true
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
+            }
+          ],
+          "failed": [
+            {
+              "name": "Animation Event",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "state": "Skill04",
+              "passed": [
+                {
+                  "name": "Animation Task",
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1715207705\">Enemy_XP_Minion04_02_Huimie_EffectPaths</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Animation Task"
+                },
+                {
+                  "name": "Animation Task",
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_AbilityP01": {
+      "fileName": "8002060_Monster_XP_Minion04_02_AbilityP01",
+      "childAbilityList": [
+        "8002060_Monster_XP_Minion04_02_AbilityP01",
+        "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
+        "8002060_Monster_XP_Minion04_02_AbilityP01_InsertAbility_Huimie"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]"
+        },
+        {
+          "name": "Update Displayed Energy Bar",
+          "value": 1,
+          "entityClass": "Enemy",
+          "maximum": 1,
+          "assignState": "True"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2118515591\">Enemy_XP_Minion04_02_Introduce</a>[<span class=\"descriptionNumberColor\">T—Taking Revenge</span>]",
+          "description": "When a friendly unit is attacked, Trotter of Destruction will attack all targets. The attack count is equal to the number of the targets attacked.",
+          "type": "Other",
+          "effectName": "T—Taking Revenge",
+          "statusName": "T—Taking Revenge"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1786008658\">Enemy_XP_Minion04_02_P01_EnterBattle</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-60334252\">Enemy_XP_Minion04_02_Bonus_Huimie_Caster</a>"
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-662988294\">Enemy_XP_Minion04_02_Bonus_Huimie_Minion</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Exit Broken-State",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_XP_Minion04_02_AbilityP01_InsertAbility_EnterBattle_Huimie",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "priorityTag": "EnemyBattleCry",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "allowAbilityTriggers": false
+                }
+              ],
+              "priorityLevel": -55
+            }
+          ]
+        }
+      ]
+    },
+    "8002060_Monster_XP_Minion04_02_Ability03_Part02": {
+      "fileName": "8002060_Monster_XP_Minion04_02_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Dispel Debuffs",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "silent": true
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"196303828\">Enemy_XP_Minion04_02_EffectGround</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-801636319\">Enemy_XP_Minion04_02_EffectRound</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1010578616\">Enemy_XP_Minion04_02_Huimie_EffectGround</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"24516597\">Enemy_XP_Minion04_02_Huimie_EffectRound</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Character ID",
+            "ID": 8002060,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": null
+          }
+        },
+        {
+          "name": "Mark Entity For Immediate Death"
+        },
+        "Trigger: Ability End",
+        {
+          "name": "Entity Escape Battle"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_Ability03_Part01": {
+      "fileName": "8002060_Monster_XP_Minion04_02_Ability03_Part01",
+      "childAbilityList": [
+        "8002060_Monster_XP_Minion04_02_Ability03_Part01",
+        "8002060_Monster_XP_Minion04_02_Ability03_Part02",
+        "8002060_Monster_XP_Minion04_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Minion04_02_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_Ability02_Part02": {
+      "fileName": "8002060_Monster_XP_Minion04_02_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_Ability02_Part01": {
+      "fileName": "8002060_Monster_XP_Minion04_02_Ability02_Part01",
+      "childAbilityList": [
+        "8002060_Monster_XP_Minion04_02_Ability02_Part01",
+        "8002060_Monster_XP_Minion04_02_Ability02_Part02",
+        "8002060_Monster_XP_Minion04_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Minion04_02_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_Ability01_Part02": {
+      "fileName": "8002060_Monster_XP_Minion04_02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "8002060_Monster_XP_Minion04_02_Ability01_Part01": {
+      "fileName": "8002060_Monster_XP_Minion04_02_Ability01_Part01",
+      "childAbilityList": [
+        "8002060_Monster_XP_Minion04_02_Ability01_Part01",
+        "8002060_Monster_XP_Minion04_02_Ability01_Part02",
+        "8002060_Monster_XP_Minion04_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_XP_Minion04_02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     }
   }

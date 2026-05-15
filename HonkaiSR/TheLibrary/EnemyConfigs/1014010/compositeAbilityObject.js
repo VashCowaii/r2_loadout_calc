@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 1014010,
   "trimCharacterName": 1014010,
   "abilityList": [
+    "1014010_Modifiers",
     "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate",
     "1014010_Monster_W1_GS_Svarog_PassiveAbility04",
     "1014010_Monster_W1_GS_Svarog_PassiveAbility02",
@@ -22,10 +23,870 @@ const compositeAbilityObject = {
     "1014010_Monster_W1_GS_Svarog_Ability02_Part01",
     "1014010_Monster_W1_GS_Svarog_Ability01_Part02",
     "1014010_Monster_W1_GS_Svarog_Ability01_Part01",
-    "1014010_Monster_W1_Svarog_PassiveAbility_BGM",
-    "1014010_Modifiers"
+    "1014010_Monster_W1_Svarog_PassiveAbility_BGM"
   ],
   "abilityObject": {
+    "1014010_Modifiers": {
+      "fileName": "1014010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-733983508\">Svarog_Control_OnPart_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]"
+            },
+            {
+              "eventTrigger": "Take Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Random Chance",
+                    "chance": 0.33
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Random Chance",
+                        "chance": 0.5
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1854522558\">Svarog_Ability07_AllDamageUp_Modifier</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">Modifier_AllDamageUp</span>. This effect can stack.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "Amplification",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-818415302\">Svarog_Part_ListenBreak_Modifier</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "CanUseSkill03",
+                  "value": 1
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PartCanUseSkill03",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Weakness Broken: End [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "CanUseSkill03"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PartCanUseSkill03"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "CanUseSkill03",
+                  "value": 1
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PartCanUseSkill03",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase0"
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-920895050\">Svarog_ListenPlayerDie_Modifier</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Waiting for Healing in Limbo",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Svarog's Confinement Target}}"
+                  },
+                  "searchRandom": true,
+                  "includeDyingTargets": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "CanUseSkill03",
+                  "value": 1
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PartCanUseSkill03",
+                  "value": 1
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -90
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "CanUseSkill03",
+                  "value": 1
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PartCanUseSkill03",
+                  "value": 1
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-41812969\">Svarog_Ability06_Bonus</a>",
+          "modifierFlags": [
+            "Endurance"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__73747832\">Svarog_Part0_DamageReduceModifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__32) || RETURN",
+                    "displayLines": "ENEMIES_OBJECT_UNUSED__32",
+                    "constants": [],
+                    "variables": [
+                      "ENEMIES_OBJECT_UNUSED__32"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionRES</span>&nbsp;",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_StanceLock",
+                  "value": {
+                    "operator": "Variables[0] (_StanceLock) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(_StanceLock - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "_StanceLock"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1496711585\">Svarog_Kaboom_Modifier</a>[<span class=\"descriptionNumberColor\">Overheat</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Received Toughness DMG increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>, and received damage increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
+          "type": "Debuff",
+          "effectName": "Overheat",
+          "statusName": "Overheat",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
+                    "displayLines": "MDF_StanceBreakTakenRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_StanceBreakTakenRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
+                    "displayLines": "MDF_AllDamageTypeTakenRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AllDamageTypeTakenRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__17783365\">Svarog_Part_ListenHP_Modifier</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Put in Deathstate Limbo",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Svarog's Confinement Target}}"
+                  },
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1501253853\">Svarog_Ability06_Insert_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W1_GS_Svarog_Insert_Part01",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1035250951\">M_Svarog_CTRL</a>",
+          "stackType": "Merge",
+          "modifierFlags": [
+            "DisableAction",
+            "STAT_CTRL_Stun",
+            "STAT_CTRL",
+            "AlwaysSuccess",
+            "STAT_ForceControl"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "living": true
+                  },
+                  "passed": [
+                    {
+                      "name": "UI Display Event (On Entity)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "popUpText": "Broke Free From Restrain"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "compareType": "=",
+                    "value2": 1,
+                    "valueType": "LifeTime"
+                  },
+                  "passed": [
+                    "Abort Modifier Phase Action"
+                  ],
+                  "failed": [
+                    {
+                      "name": "UI Display Event (On Entity)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "popUpText": "Restrained"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Ultimate"
+                  ],
+                  "text": "Ability cannot be used"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__700810271\">Svarog_Electric_Modifier</a>[<span class=\"descriptionNumberColor\">Grievous</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "modifierFlags": [
+            "STAT_DefenceDown"
+          ],
+          "description": "For a certain number of turns, DEF is reduced by <span class=\"descriptionNumberColor\">Modifier_DefenceAddedRatio</span>, and takes Physical DMG at the beginning of each turn.",
+          "type": "Debuff",
+          "effectName": "Grievous",
+          "statusName": "Grievous",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Fire",
+                    "Damage": {
+                      "operator": "Variables[0] (Modifier_DamagePercentage) || RETURN",
+                      "displayLines": "Modifier_DamagePercentage",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_DamagePercentage"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "DOT"
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (Modifier_DefenceAddedRatio) || SUB || RETURN",
+                    "displayLines": "(0 - Modifier_DefenceAddedRatio)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "Modifier_DefenceAddedRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]",
+          "modifierFlags": [
+            "Stealth",
+            "DisableHealHP",
+            "AlwaysSuccess",
+            "MuteSpeed",
+            "STAT_ForceControl"
+          ],
+          "useEntitySnapshot": true,
+          "description": "Restrained. Cannot take action.",
+          "type": "Debuff",
+          "effectName": "Restrain",
+          "statusName": "Restrain",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Remove Modifier Behavior Flag(s)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "flagNames": []
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1310,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Firefly"
+                  }
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-920895050\">Svarog_ListenPlayerDie_Modifier</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "CanUseSkill03",
+                  "value": 1
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PartCanUseSkill03",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>",
+                  "valuePerStack": {
+                    "Modifier_Frozen_DamagePercentage": 0
+                  }
+                },
+                "Mark Entity as Non-Target(Unselectable)"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1443371257\">Monster_W1_GS_Svarog_Level_SpecialWin</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-353224873\">Monster_W1_GS_Svarog_DisableAction</a>",
+          "modifierFlags": [
+            "DisableAction"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2115356635\">Monster_W1_SvarogPart_CD</a>",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "duration": 1
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__419784878\">Monster_W1_SvarogPart_Overload</a>[<span class=\"descriptionNumberColor\">Overload</span>]",
+          "description": "Casts Controlled Blasting in the next action.",
+          "type": "Other",
+          "effectName": "Overload",
+          "statusName": "Overload"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
+          "type": "Other",
+          "statusName": "Overload Countdown",
+          "duration": 2,
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "PartDecisionFlag",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "PartDecisionFlag",
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate": {
       "fileName": "1014010_Monster_W1_GS_Svarog_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -1314,880 +2175,6 @@ const compositeAbilityObject = {
           ]
         }
       ]
-    },
-    "1014010_Modifiers": {
-      "fileName": "1014010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-733983508\">Svarog_Control_OnPart_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed"
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "Take Damage End [Owner]: Hit",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Random Chance",
-                    "chance": 0.33
-                  },
-                  "failed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Random Chance",
-                        "chance": 0.5
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1854522558\">Svarog_Ability07_AllDamageUp_Modifier</a>[<span class=\"descriptionNumberColor\">Amplification</span>]",
-          "stackType": "ReplaceByCaster",
-          "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">Modifier_AllDamageUp</span>. This effect can stack.",
-          "type": "Buff",
-          "effectName": "DMG Boost",
-          "statusName": "Amplification",
-          "addStacksPerTrigger": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-818415302\">Svarog_Part_ListenBreak_Modifier</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "latentQueue": [
-            "CanUseSkill03"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "CanUseSkill03",
-                  "value": 1
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PartCanUseSkill03",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Being Weakness Broken: End [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "CanUseSkill03"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PartCanUseSkill03"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "End Broken State [Owner]",
-              "execute": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "CanUseSkill03",
-                  "value": 1
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PartCanUseSkill03",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase0"
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-920895050\">Svarog_ListenPlayerDie_Modifier</a>",
-          "modifierFlags": [
-            "KeepOnDeathrattle"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "Waiting for Healing in Limbo",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Svarog's Confinement Target}}"
-                  },
-                  "searchRandom": true,
-                  "includeDyingTargets": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "CanUseSkill03",
-                  "value": 1
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PartCanUseSkill03",
-                  "value": 1
-                },
-                "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
-            },
-            {
-              "eventTrigger": "Pre-Death [Owner]",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-463045993\">Svarog_Part_OnTurnEndChangePhaseModifier</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1863384114\">Svarog_ListenBreak_RemoveControl_Modifier</a>"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Summoner}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "CanUseSkill03",
-                  "value": 1
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PartCanUseSkill03",
-                  "value": 1
-                },
-                "Modifier Deletes Itself"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-41812969\">Svarog_Ability06_Bonus</a>",
-          "modifierFlags": [
-            "Endurance"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1364752860\">W1_Mecha02_AttackBonus_Effect</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__73747832\">Svarog_Part0_DamageReduceModifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__32) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__32",
-                    "constants": [],
-                    "variables": [
-                      "ENEMIES_OBJECT_UNUSED__32"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionRES</span>&nbsp;",
-                  "value": 1
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_StanceLock",
-                  "value": {
-                    "operator": "Variables[0] (_StanceLock) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "(_StanceLock - 1)",
-                    "constants": [
-                      1
-                    ],
-                    "variables": [
-                      "_StanceLock"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1496711585\">Svarog_Kaboom_Modifier</a>[<span class=\"descriptionNumberColor\">Overheat</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "description": "Received Toughness DMG increases by <span class=\"descriptionNumberColor\">MDF_StanceBreakTakenRatio</span>, and received damage increases by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeTakenRatio</span>.",
-          "type": "Debuff",
-          "effectName": "Overheat",
-          "statusName": "Overheat",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessVulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_StanceBreakTakenRatio) || RETURN",
-                    "displayLines": "MDF_StanceBreakTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_StanceBreakTakenRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeTakenRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__17783365\">Svarog_Part_ListenHP_Modifier</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "stackData": [
-            "PassiveSkill02_P2_HPRatio",
-            "PassiveSkill02_P3_StanceBreakTakenRatio",
-            "PassiveSkill02_P4_MDF_AllDamageTypeTakenRatio",
-            "PassiveSkill02_P5_LifeTime"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Put in Deathstate Limbo",
-              "execute": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Svarog's Confinement Target}}"
-                  },
-                  "searchRandom": true,
-                  "maxTargets": 1,
-                  "ifTargetFound": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]"
-                    }
-                  ]
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1501253853\">Svarog_Ability06_Insert_Modifier</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W1_GS_Svarog_Insert_Part01",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1035250951\">M_Svarog_CTRL</a>",
-          "stackType": "Merge",
-          "modifierFlags": [
-            "DisableAction",
-            "STAT_CTRL_Stun",
-            "STAT_CTRL",
-            "AlwaysSuccess",
-            "STAT_ForceControl"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"234868487\">Stun_Effect</a>"
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "living": true
-                  },
-                  "passed": [
-                    {
-                      "name": "UI Display Event (On Entity)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "popUpText": "Broke Free From Restrain"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "compareType": "=",
-                    "value2": 1,
-                    "valueType": "LifeTime"
-                  },
-                  "passed": [
-                    "Abort Modifier Phase Action"
-                  ],
-                  "failed": [
-                    {
-                      "name": "UI Display Event (On Entity)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "popUpText": "Restrained"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Disable Abilities",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "abilityTypes": [
-                    "Ultimate"
-                  ],
-                  "text": "Ability cannot be used"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__700810271\">Svarog_Electric_Modifier</a>[<span class=\"descriptionNumberColor\">Grievous</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "modifierFlags": [
-            "STAT_DefenceDown"
-          ],
-          "description": "For a certain number of turns, DEF is reduced by <span class=\"descriptionNumberColor\">Modifier_DefenceAddedRatio</span>, and takes Physical DMG at the beginning of each turn.",
-          "type": "Debuff",
-          "effectName": "Grievous",
-          "statusName": "Grievous",
-          "execute": [
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Fire",
-                    "Damage": {
-                      "operator": "Variables[0] (Modifier_DamagePercentage) || RETURN",
-                      "displayLines": "Modifier_DamagePercentage",
-                      "constants": [],
-                      "variables": [
-                        "Modifier_DamagePercentage"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "attackType": "DOT"
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (Modifier_DefenceAddedRatio) || SUB || RETURN",
-                    "displayLines": "(0 - Modifier_DefenceAddedRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "Modifier_DefenceAddedRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__912094213\">Svarog_Control_Modifier</a>[<span class=\"descriptionNumberColor\">Restrain</span>]",
-          "modifierFlags": [
-            "Stealth",
-            "DisableHealHP",
-            "AlwaysSuccess",
-            "MuteSpeed",
-            "STAT_ForceControl"
-          ],
-          "useEntitySnapshot": true,
-          "description": "Restrained. Cannot take action.",
-          "type": "Debuff",
-          "effectName": "Restrain",
-          "statusName": "Restrain",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Remove Modifier Behavior Flag(s)",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Character ID",
-                    "ID": 1310,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "characterName": "Firefly"
-                  }
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-920895050\">Svarog_ListenPlayerDie_Modifier</a>"
-                },
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-545618319\">Svarog_ListenPlayerAllDie_Modifier</a>"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "CanUseSkill03",
-                  "value": 1
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PartCanUseSkill03",
-                  "value": 1
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1035250951\">M_Svarog_CTRL</a>",
-                  "valuePerStack": {
-                    "Modifier_Frozen_DamagePercentage": 0
-                  }
-                },
-                "Mark Entity as Non-Target(Unselectable)"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1443371257\">Monster_W1_GS_Svarog_Level_SpecialWin</a>",
-          "execute": [
-            {
-              "eventTrigger": "Ability Use [Owner]: End"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-353224873\">Monster_W1_GS_Svarog_DisableAction</a>",
-          "modifierFlags": [
-            "DisableAction"
-          ],
-          "latentQueue": [
-            "Svarog_SpecialVictory_Flag",
-            "DecisionFlag"
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2115356635\">Monster_W1_SvarogPart_CD</a>",
-          "modifierFlags": [
-            "RemoveWhenCasterDead"
-          ],
-          "duration": 1
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__419784878\">Monster_W1_SvarogPart_Overload</a>[<span class=\"descriptionNumberColor\">Overload</span>]",
-          "description": "Casts Controlled Blasting in the next action.",
-          "type": "Other",
-          "effectName": "Overload",
-          "statusName": "Overload"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-770745937\">Monster_W1_SvarogPart_CountDown</a>[<span class=\"descriptionNumberColor\">Overload Countdown</span>]",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "description": "Auxiliary Robot Arm Unit initiates Overload countdown. After the countdown ends, cast Overload Warning.",
-          "type": "Other",
-          "statusName": "Overload Countdown",
-          "duration": 2,
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "value1": "PartDecisionFlag",
-                    "compareType": "=",
-                    "value2": 1,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "PartDecisionFlag",
-                      "value": 2
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": []
     }
   }
 }

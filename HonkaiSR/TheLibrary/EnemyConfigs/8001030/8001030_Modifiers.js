@@ -12,9 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_AttackAddedRatio"
-      ],
       "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
       "type": "Buff",
       "effectName": "ATK Boost",
