@@ -1371,11 +1371,11 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__309) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__309",
+                    "operator": "Variables[0] (Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio) || RETURN",
+                    "displayLines": "Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__309"
+                      "Enemy_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
                     ]
                   },
                   "formula": "Heal from Healer's MaxHP"
@@ -1399,11 +1399,11 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "healPercent": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__310) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__310",
+                    "operator": "Variables[0] (Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio) || RETURN",
+                    "displayLines": "Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__310"
+                      "Enemy_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio"
                     ]
                   },
                   "formula": "Heal from Healer's MaxHP"
