@@ -588,9 +588,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1575455810\">Enemy_W4_Manta_LocalLegend_Statues</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
-      "stackData": [
-        "MDF_MaxLayer"
-      ],
       "description": "After receiving a certain number of attacks from the targets, immediately uses \"Psychedelic Elegy.\"",
       "type": "Other",
       "statusName": "Respite By The Waters",
