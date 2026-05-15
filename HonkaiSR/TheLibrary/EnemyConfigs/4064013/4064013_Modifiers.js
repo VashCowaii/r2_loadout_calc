@@ -53,9 +53,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Owner]: Start",
@@ -1040,9 +1037,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__149951100\">Enemy_W4_Serpent_01_Passive_StanceDamage</a>",
       "stackType": "Multiple",
-      "stackData": [
-        "MDF_StanceDamage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1165,9 +1159,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_SuperArmor"
       ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
       "description": "DMG received decreases by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. When this unit is Weakness Broken, this effect is dispelled, its action will be further delayed, and deals massive Imaginary DMG to this unit.",
       "type": "Other",
       "effectName": "Expedite Verdict",
@@ -1215,12 +1206,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-501224004\">Enemy_W4_Serpent_01_Passive</a>",
-      "stackData": [
-        "MDF_AllDamageReduce",
-        "MDF_ActionDelay",
-        "MDF_AllDamageTypeTakenRatio",
-        "MDF_DamagePercentage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
