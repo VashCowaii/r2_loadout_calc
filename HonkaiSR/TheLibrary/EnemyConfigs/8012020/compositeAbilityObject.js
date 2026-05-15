@@ -3,14 +3,69 @@ const compositeAbilityObject = {
   "fullCharacterName": 8012020,
   "trimCharacterName": 8012020,
   "abilityList": [
+    "8012020_Modifiers",
     "8012020_Monster_AML_Minion03_Passive01",
     "8012020_Monster_AML_Minion03_Ability02_Part02",
     "8012020_Monster_AML_Minion03_Ability02_Part01",
     "8012020_Monster_AML_Minion03_Ability01_Part02",
-    "8012020_Monster_AML_Minion03_Ability01_Part01",
-    "8012020_Modifiers"
+    "8012020_Monster_AML_Minion03_Ability01_Part01"
   ],
   "abilityObject": {
+    "8012020_Modifiers": {
+      "fileName": "8012020_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1906134144\">Enemy_AML_Minion03_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "TeamAction"
+          ],
+          "description": "%CasterName will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Lock On",
+          "statusName": "Lock On",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Modifier Description",
+                  "popUpText": "Targeted by %CasterName. Receives <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more DMG."
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                    "displayLines": "MDF_PropertyValue",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8012020_Monster_AML_Minion03_Passive01": {
       "fileName": "8012020_Monster_AML_Minion03_Passive01",
       "skillTrigger": "PassiveSkill01",
@@ -247,64 +302,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8012020_Modifiers": {
-      "fileName": "8012020_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1906134144\">Enemy_AML_Minion03_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-          "modifierFlags": [
-            "RemoveWhenCasterDead",
-            "TeamAction"
-          ],
-          "stackData": [
-            "MDF_PropertyValue"
-          ],
-          "description": "%CasterName will focus attacks on this target.",
-          "type": "Other",
-          "effectName": "Lock On",
-          "statusName": "Lock On",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Update Modifier Description",
-                  "popUpText": "Targeted by %CasterName. Receives <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> more DMG."
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

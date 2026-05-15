@@ -3,14 +3,76 @@ const compositeAbilityObject = {
   "fullCharacterName": 2022100,
   "trimCharacterName": 2022100,
   "abilityList": [
+    "2022100_Modifiers",
     "2022100_Monster_W2_Xuanlu_01_PassiveAbility_Effect",
     "2022100_Monster_W2_Xuanlu_04_Ability02_Part02",
     "2022100_Monster_W2_Xuanlu_04_Ability02_Part01",
     "2022100_Monster_W2_Xuanlu_04_Ability01_Part02",
-    "2022100_Monster_W2_Xuanlu_04_Ability01_Part01",
-    "2022100_Modifiers"
+    "2022100_Monster_W2_Xuanlu_04_Ability01_Part01"
   ],
   "abilityObject": {
+    "2022100_Modifiers": {
+      "fileName": "2022100_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1305390378\">Enemy_W2_Xuanlu_04_Charge</a>[<span class=\"descriptionNumberColor\">Lavish Fruit</span>]",
+          "stackType": "Multiple",
+          "description": "When there are 2 Lavish Fruits on the field, the Abundant Ebon Deer will immediately use Flamboyant Gore.",
+          "type": "Other",
+          "effectName": "Bearing Fruit",
+          "statusName": "Lavish Fruit",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "value1": "Xuanlu_04_Charged",
+                    "compareType": ">",
+                    "value2": 0,
+                    "contextScope": "TargetEntity"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Added Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Level Entity}}"
+                      },
+                      "variableName": "Xuanlu_04_Charged",
+                      "context": "TargetEntity",
+                      "value": {
+                        "operator": "Constants[0] (1) || INVERT || RETURN",
+                        "displayLines": "-1",
+                        "constants": [
+                          1
+                        ],
+                        "variables": []
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "2022100_Monster_W2_Xuanlu_01_PassiveAbility_Effect": {
       "fileName": "2022100_Monster_W2_Xuanlu_01_PassiveAbility_Effect",
       "skillTrigger": "Passive",
@@ -227,68 +289,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "2022100_Modifiers": {
-      "fileName": "2022100_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1305390378\">Enemy_W2_Xuanlu_04_Charge</a>[<span class=\"descriptionNumberColor\">Lavish Fruit</span>]",
-          "stackType": "Multiple",
-          "description": "When there are 2 Lavish Fruits on the field, the Abundant Ebon Deer will immediately use Flamboyant Gore.",
-          "type": "Other",
-          "effectName": "Bearing Fruit",
-          "statusName": "Lavish Fruit",
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value1": "Xuanlu_04_Charged",
-                    "compareType": ">",
-                    "value2": 0,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Level Entity}}"
-                      },
-                      "variableName": "Xuanlu_04_Charged",
-                      "context": "TargetEntity",
-                      "value": {
-                        "operator": "Constants[0] (1) || INVERT || RETURN",
-                        "displayLines": "-1",
-                        "constants": [
-                          1
-                        ],
-                        "variables": []
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

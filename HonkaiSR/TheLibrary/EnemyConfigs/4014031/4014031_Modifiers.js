@@ -87,10 +87,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-891601506\">Monster_W4_Pollux_RLBoss_Status</a>",
-      "latentQueue": [
-        "AIFlag",
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Anyone]",
@@ -397,10 +393,6 @@ const configAbility = {
         "STAT_DOT"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_DamageHpAddedRatio"
-      ],
       "description": "Receives DMG at the start of the turn. The higher the target's current HP percentage, the more DMG they receive. This DMG is \"Non-fatal.\"",
       "type": "Debuff",
       "effectName": "DoT",
@@ -736,10 +728,6 @@ const configAbility = {
       "stackData": [
         "_HpLimitRatio",
         "_FatigueRatio"
-      ],
-      "latentQueue": [
-        "InsertCheck",
-        "AIFlag"
       ],
       "description": "When this target deals DMG to enemy targets, decreases DMG received by enemy targets by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Restore HP to an ally target until it reaches <span class=\"descriptionNumberColor\">MDF_ShowValue2</span> to dispel this effect.",
       "type": "Other",
@@ -1168,17 +1156,11 @@ const configAbility = {
       "modifierFlags": [
         "DisableAction"
       ],
-      "latentQueue": [
-        "_WorldLevel"
-      ],
       "duration": 1
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-888665654\">Monster_W4_Pollux_Strengthen_Break</a>",
-      "latentQueue": [
-        "_WorldLevel"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2366,14 +2348,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_ShowValue1",
-        "MDF_SpeedUpRatio",
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. Attacks against \"Pollux\" or \"The Long Arms of Sorrow\" can reduce \"Desperate Bubble\" and restore allies' HP. When \"Desperate Bubble\" depletes, dispels \"Fragrance of Death.\"",
       "type": "Other",
       "effectName": "Enhance",
@@ -2814,17 +2788,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>",
-      "latentQueue": [
-        "AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__2086497725\">Monster_W4_Pollux_EnergyBar</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-977406110\">Monster_W4_Pollux_BloodPool</a>[<span class=\"descriptionNumberColor\">Dream of Demise</span>]",
       "latentQueue": [
-        "AIFlag",
-        "_WorldLevel"
+        "_WorldLevel",
+        "AIFlag"
       ],
       "description": "When ally targets' HP reduces, accumulates \"Desperate Bubble.\" When \"Desperate Bubble\" reaches the limit, this unit action advances and enters \"Fragrance of Death\" state in the next turn.",
       "type": "Other",
@@ -2837,12 +2808,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__599310144\">Monster_W4_Pollux_FX_Ground</a>",
-      "latentQueue": [
-        "StoryMode",
-        "_StorySetSpeed",
-        "IsNeedFade",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

@@ -3,14 +3,26 @@ const compositeAbilityObject = {
   "fullCharacterName": 2032020,
   "trimCharacterName": 2032020,
   "abilityList": [
+    "2032020_Modifiers",
     "2032020_Monster_W2_Lycan_01_PassiveAbilityInitiate",
     "2032020_Monster_W2_Lycan_01_Ability02_Insert_Part02",
     "2032020_Monster_W2_Lycan_01_Ability02_Insert_Part01",
     "2032020_Monster_W2_Lycan_01_Ability01_Part02",
-    "2032020_Monster_W2_Lycan_01_Ability01_Part01",
-    "2032020_Modifiers"
+    "2032020_Monster_W2_Lycan_01_Ability01_Part01"
   ],
   "abilityObject": {
+    "2032020_Modifiers": {
+      "fileName": "2032020_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "references": []
+    },
     "2032020_Monster_W2_Lycan_01_PassiveAbilityInitiate": {
       "fileName": "2032020_Monster_W2_Lycan_01_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -589,18 +601,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "2032020_Modifiers": {
-      "fileName": "2032020_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
       "references": []
     }
   }

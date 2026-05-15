@@ -469,9 +469,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
       "type": "Buff",
       "statusName": "DMG Reduction",
@@ -570,10 +567,6 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "HPBack_TimePowerCount",
-        "HPBack"
-      ],
       "description": "After receiving a killing blow, if \"%CasterName\"'s \"Calamity Power\" stacks are not 0, be instantly resummoned and enter the \"Enfettered\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
       "type": "Other",
       "effectName": "Enfettered",
@@ -665,13 +658,6 @@ const configAbility = {
       "stackType": "Multiple",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_RallyHP"
-      ],
-      "latentQueue": [
-        "HPBack_TimePowerCount",
-        "HPBack"
       ]
     },
     {
@@ -901,9 +887,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__911157260\">Enemy_W4_FireProwler_TimePowerListener</a>",
-      "stackData": [
-        "MDF_MaxCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

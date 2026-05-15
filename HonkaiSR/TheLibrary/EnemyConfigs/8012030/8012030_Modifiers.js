@@ -14,9 +14,6 @@ const configAbility = {
       "counter": 4,
       "stackType": "Replace",
       "useEntitySnapshot": true,
-      "stackData": [
-        "Skill01_P2_MarkDamagePercentage"
-      ],
       "description": "Has been attached a detonator by Voidranger: Eliminator. Takes Additional DMG after being attacked.",
       "type": "Debuff",
       "effectName": "Detonated",

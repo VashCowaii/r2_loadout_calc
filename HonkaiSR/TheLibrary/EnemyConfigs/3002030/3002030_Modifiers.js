@@ -18,11 +18,6 @@ const configAbility = {
         "STAT_DOT_Bleed"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_MaxLayer",
-        "Modifier_Bleed_DamagePercentage",
-        "Modifier_Bleed_MaxDamagePercentage"
-      ],
       "description": "For a certain number of turns, receive Physical DMG based on Max HP at the beginning of each turn, stacking up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
       "type": "Debuff",
       "effectName": "Bleed",
@@ -487,9 +482,6 @@ const configAbility = {
         "STAT_SpeedUp"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",

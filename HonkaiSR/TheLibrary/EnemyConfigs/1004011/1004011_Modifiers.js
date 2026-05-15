@@ -206,9 +206,6 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill"
       ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -368,9 +365,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1124446035\">Monster_W1_CocoliaP1_RL_IcePower</a>",
       "modifierFlags": [
         "ListenBattleEventSkill"
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
       ],
       "execute": [
         {
@@ -542,9 +536,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-883410937\">Monster_W1_CocoliaP1_RL_Ability05_Bonus</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
-      "stackData": [
-        "ModifierDamageUpValue"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">ModifierDamageUpValue</span>.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -1325,10 +1316,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1117029266\">Cocolia_P1_Ability03_Modifier</a>",
-      "latentQueue": [
-        "Cocolia_BattleScore5_Flag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1117029266\">Cocolia_P1_Ability03_Modifier</a>"
     },
     {
       "name": "Modifier Construction",

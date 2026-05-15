@@ -128,13 +128,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1061041544\">Monster_XP_Elite02_03_InitHP_LV2</a>",
-      "stackData": [
-        "MDF_InitHP_LV2",
-        "MDF_InitStance_LV2"
-      ],
-      "latentQueue": [
-        "SummonMonsterNum"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -191,13 +184,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1111374401\">Monster_XP_Elite02_03_InitHP_LV1</a>",
-      "stackData": [
-        "MDF_InitHP_LV1",
-        "MDF_InitStance_LV1"
-      ],
-      "latentQueue": [
-        "SummonMonsterNum"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -287,10 +273,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1982460961\">Monster_XP_Elite02_03_PassiveAbility_Target</a>",
-      "latentQueue": [
-        "SummonMonsterNum"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1982460961\">Monster_XP_Elite02_03_PassiveAbility_Target</a>"
     },
     {
       "name": "Modifier Construction",
@@ -298,11 +281,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1803637769\">Modifier_Monster_XP_Elite02_03_MainTarget</a>",
-      "latentQueue": [
-        "SameMonsterNum",
-        "Skill02_AssistCount"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1803637769\">Modifier_Monster_XP_Elite02_03_MainTarget</a>"
     },
     {
       "name": "Modifier Construction",
@@ -408,13 +387,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1510613058\">Modifier_Monster_XP_Elite02_03_ElationControl</a>[<span class=\"descriptionNumberColor\">Paramount Bliss</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "Skill02_P4_BuffChance"
-      ],
-      "latentQueue": [
-        "SameMonsterNum",
-        "Skill02_AssistCount"
       ],
       "description": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s).",
       "type": "Other",

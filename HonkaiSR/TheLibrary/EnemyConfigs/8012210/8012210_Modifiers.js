@@ -569,13 +569,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-616319653\">Monster_W2_HuanlongPart_01_Success</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_ActionDelayRatio",
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "Insert2Flag"
-      ],
       "description": "Increases DMG received by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is stackable.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -640,9 +633,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1118527556\">Monster_W2_HuanlongPart_01_RemoveActivityEffect</a>",
-      "latentQueue": [
-        "Phase3End"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1506,9 +1496,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1485253143\">Monster_W2_HuanlongPart_01_Revive</a>",
-      "stackData": [
-        "MDF_DormancyLifeTime"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

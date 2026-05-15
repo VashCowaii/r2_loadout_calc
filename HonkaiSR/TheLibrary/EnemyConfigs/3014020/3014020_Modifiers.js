@@ -94,13 +94,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1087767431\">Enemy_W3_Deathpart_Appear</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -149,9 +142,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__721704074\">Monster_W3_Death_Ability06_Charge_CharacterChangePhase</a>",
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -202,10 +192,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1728469043\">Death_UseAbility07_Modifier</a>",
-      "latentQueue": [
-        "Skill07_EffectFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1728469043\">Death_UseAbility07_Modifier</a>"
     },
     {
       "name": "Modifier Construction",
@@ -217,9 +204,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_ShowValue1"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>. This effect is removed when this unit becomes Weakness Broken.",
       "type": "Buff",
       "effectName": "Biting Obituary",
@@ -702,10 +686,6 @@ const configAbility = {
         "STAT_CTRL_UnOperable"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealHPPercentage",
-        "MDF_AddSPValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -820,10 +800,6 @@ const configAbility = {
         "STAT_CTRL_UnOperable"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_HealHPPercentage",
-        "MDF_AddSPValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1026,10 +1002,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1091581769\">Monster_W3_Death_ListenBreak</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1767,12 +1739,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-745487733\">Modifier_W3_Death_PartController_LockHP</a>",
-      "latentQueue": [
-        "DeathPart_AppearSkill_Flag",
-        "Effect_Flag",
-        "UsedSkill08_Flag",
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

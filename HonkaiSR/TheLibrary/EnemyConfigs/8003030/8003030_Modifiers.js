@@ -10,10 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-2041430190\">Monster_XP_Elite02_Ability07_Mark</a>",
-      "latentQueue": [
-        "Monster_XP_Elite02_00_Achievement"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-2041430190\">Monster_XP_Elite02_Ability07_Mark</a>"
     },
     {
       "name": "Modifier Construction",

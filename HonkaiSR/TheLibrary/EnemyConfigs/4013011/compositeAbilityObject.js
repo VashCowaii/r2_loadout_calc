@@ -3,522 +3,15 @@ const compositeAbilityObject = {
   "fullCharacterName": 4013011,
   "trimCharacterName": 4013011,
   "abilityList": [
+    "4013011_Modifiers",
     "4013011_Monster_W4_Claymore_Ability05_Part02",
     "4013011_Monster_W4_Claymore_Ability05_Part01",
     "4013011_Monster_W4_Claymore_Ability02_Part02",
     "4013011_Monster_W4_Claymore_Ability02_Part01",
     "4013011_Monster_W4_Claymore_Ability01_Part02",
-    "4013011_Monster_W4_Claymore_Ability01_Part01",
-    "4013011_Modifiers"
+    "4013011_Monster_W4_Claymore_Ability01_Part01"
   ],
   "abilityObject": {
-    "4013011_Monster_W4_Claymore_Ability05_Part02": {
-      "fileName": "4013011_Monster_W4_Claymore_Ability05_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 3
-          },
-          "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4013013,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Furiae Praetor (Bug)",
-                "isBaseCompare": true
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "delayPercent": 0.5,
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "KeepOnEdge"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "KeepOnEdge"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "KeepOnEdge"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "KeepOnEdge"
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Create Enemies",
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "BeforeCaster"
-                    },
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "AfterCaster"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Recently Summoned Enemies}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ],
-          "failed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<=",
-                "value2": 4
-              },
-              "passed": [
-                {
-                  "name": "Create Enemies",
-                  "enemyList": [
-                    {
-                      "name": "Enemy Entry",
-                      "enemyID": {
-                        "operator": "Variables[0] (SummonID) || RETURN",
-                        "displayLines": "SummonID",
-                        "constants": [],
-                        "variables": [
-                          "SummonID"
-                        ]
-                      },
-                      "locationType": "AroundCaster"
-                    }
-                  ]
-                },
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster's Minions}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Recently Summoned Enemies}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1276555812\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance</a>[<span class=\"descriptionNumberColor\">Indomitable</span>]"
-          }
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013011_Monster_W4_Claymore_Ability05_Part01": {
-      "fileName": "4013011_Monster_W4_Claymore_Ability05_Part01",
-      "childAbilityList": [
-        "4013011_Monster_W4_Claymore_Ability05_Camera",
-        "4013011_Monster_W4_Claymore_Ability05_Part01",
-        "4013011_Monster_W4_Claymore_Ability05_Part02"
-      ],
-      "skillTrigger": "Skill05",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Claymore_Ability05_Part02",
-          "isTrigger": true
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Enemy ID",
-            "ID": 4013013,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Furiae Praetor (Bug)",
-            "isBaseCompare": true
-          },
-          "passed": [
-            "Deleted bullshit"
-          ],
-          "failed": [
-            "Deleted bullshit"
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4013011_Monster_W4_Claymore_Ability02_Part02": {
-      "fileName": "4013011_Monster_W4_Claymore_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Right of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Left of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4013011_Monster_W4_Claymore_Ability02_Part01": {
-      "fileName": "4013011_Monster_W4_Claymore_Ability02_Part01",
-      "childAbilityList": [
-        "4013011_Monster_W4_Claymore_Ability02_Camera",
-        "4013011_Monster_W4_Claymore_Ability02_Part01",
-        "4013011_Monster_W4_Claymore_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              {
-                "name": "Sort by Physical Positioning",
-                "byHighest": true
-              },
-              {
-                "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
-              },
-              {
-                "name": "Target Index",
-                "indexValue": 1
-              }
-            ]
-          },
-          "ability": "Monster_W4_Claymore_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
-    "4013011_Monster_W4_Claymore_Ability01_Part02": {
-      "fileName": "4013011_Monster_W4_Claymore_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Left of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Target Right of Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "4013011_Monster_W4_Claymore_Ability01_Part01": {
-      "fileName": "4013011_Monster_W4_Claymore_Ability01_Part01",
-      "childAbilityList": [
-        "4013011_Monster_W4_Claymore_Ability01_Camera",
-        "4013011_Monster_W4_Claymore_Ability01_Part01",
-        "4013011_Monster_W4_Claymore_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit",
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "inherentTarget": {
-            "name": "Target Sequence",
-            "Sequence": [
-              {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
-              },
-              {
-                "name": "Sort by Physical Positioning"
-              },
-              {
-                "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
-              },
-              {
-                "name": "Target Index",
-                "indexValue": 1
-              }
-            ]
-          },
-          "ability": "Monster_W4_Claymore_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target",
-        "targetIsVariable": true
-      },
-      "references": []
-    },
     "4013011_Modifiers": {
       "fileName": "4013011_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3396,6 +2889,513 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-133295283\">Enemy_W4_Claymore_FantasticStory</a>"
         }
       ],
+      "references": []
+    },
+    "4013011_Monster_W4_Claymore_Ability05_Part02": {
+      "fileName": "4013011_Monster_W4_Claymore_Ability05_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "<=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Enemy ID",
+                "ID": 4013013,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Furiae Praetor (Bug)",
+                "isBaseCompare": true
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "delayPercent": 0.5,
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "KeepOnEdge"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "KeepOnEdge"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "KeepOnEdge"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "KeepOnEdge"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "BeforeCaster"
+                    },
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "AfterCaster"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": "<=",
+                "value2": 4
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "enemyList": [
+                    {
+                      "name": "Enemy Entry",
+                      "enemyID": {
+                        "operator": "Variables[0] (SummonID) || RETURN",
+                        "displayLines": "SummonID",
+                        "constants": [],
+                        "variables": [
+                          "SummonID"
+                        ]
+                      },
+                      "locationType": "AroundCaster"
+                    }
+                  ]
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Minions}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Recently Summoned Enemies}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1276555812\">MModifier_Monster_AML_Minion03_01_StoneShieldEnhance</a>[<span class=\"descriptionNumberColor\">Indomitable</span>]"
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013011_Monster_W4_Claymore_Ability05_Part01": {
+      "fileName": "4013011_Monster_W4_Claymore_Ability05_Part01",
+      "childAbilityList": [
+        "4013011_Monster_W4_Claymore_Ability05_Camera",
+        "4013011_Monster_W4_Claymore_Ability05_Part01",
+        "4013011_Monster_W4_Claymore_Ability05_Part02"
+      ],
+      "skillTrigger": "Skill05",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Claymore_Ability05_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4013013,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Furiae Praetor (Bug)",
+            "isBaseCompare": true
+          },
+          "passed": [
+            "Deleted bullshit"
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4013011_Monster_W4_Claymore_Ability02_Part02": {
+      "fileName": "4013011_Monster_W4_Claymore_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Right of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Left of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4013011_Monster_W4_Claymore_Ability02_Part01": {
+      "fileName": "4013011_Monster_W4_Claymore_Ability02_Part01",
+      "childAbilityList": [
+        "4013011_Monster_W4_Claymore_Ability02_Camera",
+        "4013011_Monster_W4_Claymore_Ability02_Part01",
+        "4013011_Monster_W4_Claymore_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              {
+                "name": "Sort by Physical Positioning",
+                "byHighest": true
+              },
+              {
+                "name": "Filter by Life-State",
+                "state": "Mask_AliveOnly"
+              },
+              {
+                "name": "Target Index",
+                "indexValue": 1
+              }
+            ]
+          },
+          "ability": "Monster_W4_Claymore_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
+      "references": []
+    },
+    "4013011_Monster_W4_Claymore_Ability01_Part02": {
+      "fileName": "4013011_Monster_W4_Claymore_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Left of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Target Right of Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "4013011_Monster_W4_Claymore_Ability01_Part01": {
+      "fileName": "4013011_Monster_W4_Claymore_Ability01_Part01",
+      "childAbilityList": [
+        "4013011_Monster_W4_Claymore_Ability01_Camera",
+        "4013011_Monster_W4_Claymore_Ability01_Part01",
+        "4013011_Monster_W4_Claymore_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
+              {
+                "name": "Sort by Physical Positioning"
+              },
+              {
+                "name": "Filter by Life-State",
+                "state": "Mask_AliveOnly"
+              },
+              {
+                "name": "Target Index",
+                "indexValue": 1
+              }
+            ]
+          },
+          "ability": "Monster_W4_Claymore_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
+      },
       "references": []
     }
   }

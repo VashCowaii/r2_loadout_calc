@@ -208,11 +208,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1735610792\">MModifier_Monster_AML_Minion03_01_Halo</a>[<span class=\"descriptionNumberColor\">War Song</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "MDF_DamagePercentage",
-        "MDF_AddMaxLayer",
-        "MDF_SetMaxLayer"
-      ],
       "description": "Increases max \"War Armor\" stacks for enemy units aside from this unit. Dispelled when this unit's \"Armor\" is destroyed.",
       "type": "Buff",
       "effectName": "The Warsong Begins",

@@ -934,9 +934,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
       "type": "Buff",
       "effectName": "DMG Boost",
@@ -1036,9 +1033,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-818415302\">Svarog_Part_ListenBreak_Modifier</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "latentQueue": [
-        "CanUseSkill03"
       ],
       "execute": [
         {
@@ -1419,12 +1413,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__17783365\">Svarog_Part_ListenHP_Modifier</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "PassiveSkill02_P2_HPRatio",
-        "PassiveSkill02_P3_StanceBreakTakenRatio",
-        "PassiveSkill02_P4_MDF_AllDamageTypeTakenRatio",
-        "PassiveSkill02_P5_LifeTime"
       ],
       "execute": [
         {

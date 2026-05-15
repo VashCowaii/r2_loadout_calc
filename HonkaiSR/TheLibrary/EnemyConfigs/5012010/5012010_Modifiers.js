@@ -18,9 +18,6 @@ const configAbility = {
         "IdleStun",
         "STAT_Stun_Effect"
       ],
-      "stackData": [
-        "MDF_ActionDelayRatio"
-      ],
       "description": "Action delayed. Cannot take actions for a certain number of turns.",
       "type": "Debuff",
       "effectName": "Strong Reverberation",

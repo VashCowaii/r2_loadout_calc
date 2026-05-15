@@ -501,34 +501,22 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1540631993\">Monster_W2_HuanlongPart_IF_P1_ForthMark</a>",
-      "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "WeakProtect"
-      ]
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1954442981\">Monster_W2_HuanlongPart_IF_P1_ThirdMark</a>",
-      "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "WeakProtect"
-      ]
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1995770228\">Monster_W2_HuanlongPart_IF_P1_SecondMark</a>",
-      "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "WeakProtect"
-      ]
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__254104224\">Monster_W2_HuanlongPart_IF_P1_FirstMark</a>",
-      "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "WeakProtect"
-      ]
+      "stackType": "ReplaceByCaster"
     },
     {
       "name": "Modifier Construction",
@@ -1342,9 +1330,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "WeakProtect"
-      ],
       "description": "Defeat any Lotus to dispel the Toughness Protection state.",
       "type": "Buff",
       "effectName": "Toughness Protection",
@@ -1613,9 +1598,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__427738508\">Monster_W2_Huanlong_Part3</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1643,9 +1625,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__444516127\">Monster_W2_Huanlong_Part2</a>",
-      "latentQueue": [
-        "Phase_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1673,9 +1652,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__461293746\">Monster_W2_Huanlong_Part1</a>",
-      "latentQueue": [
-        "Phase_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2069,9 +2045,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3555,10 +3528,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-2070328278\">Monster_W2_Huanlong_Ability02Mark</a>",
-      "latentQueue": [
-        "Skill02Num"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-2070328278\">Monster_W2_Huanlong_Ability02Mark</a>"
     },
     {
       "name": "Modifier Construction",

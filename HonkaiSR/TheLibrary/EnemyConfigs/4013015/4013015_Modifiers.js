@@ -622,12 +622,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1110903121\">MModifier_Monster_W4_Claymore_LocalLegend_DeathCountDown_Monster_Display</a>[<span class=\"descriptionNumberColor\">HP Count</span>]",
-      "stackData": [
-        "MDF_EntityScore"
-      ],
-      "latentQueue": [
-        "FirstRound"
-      ],
       "description": "Target is immediately knocked down after receiving <span class=\"descriptionNumberColor\">MDF_EntityScore</span> attack(s).",
       "type": "Other",
       "statusName": "HP Count",
@@ -2343,10 +2337,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>",
-      "latentQueue": [
-        "FirstRound"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__544728190\">MModifier_Monster_W4_Claymore_LocalLegend_Part3</a>"
     },
     {
       "name": "Modifier Construction",

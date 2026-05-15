@@ -45,16 +45,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_BPRecoverValue",
-        "MDF_Phase01LoseHPRatio",
-        "MDF_Phase02LoseHPRatio",
-        "MDF_DamageStanceValue"
-      ],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2597,10 +2587,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>",
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2659,10 +2645,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>",
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2721,10 +2703,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>",
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2783,10 +2761,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>",
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2994,10 +2968,7 @@ const configAbility = {
       "stackType": "Replace",
       "modifierFlags": [],
       "latentQueue": [
-        "MDF_Phase02LoseHPRatio",
-        "MDF_Phase01LoseHPRatio",
-        "ShieldBreakBonusFlag",
-        "_KillByHearse"
+        "ShieldBreakBonusFlag"
       ],
       "description": "Each stack of \"Glory\" increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. Consuming 1 Skill Point adds 1 stack of \"Glory.\" When attacking, reduces stacks of \"War Armor\" or \"Centirefined War Armor\" equal to the current \"Glory\" stacks.",
       "type": "Other",
@@ -3814,24 +3785,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_ActionDelayRatio",
-        "MDF_CrackedDamage",
-        "MDF_BPRecoverValue",
-        "MDF_AllDamageReduce",
-        "MDF_CrackedDamageAfter",
-        "MDF_DamageStanceValue",
-        "MDF_SuperShield_MaxLayer",
-        "MDF_SuperShield_BPRecoverValue",
-        "MDF_BraveBonusLayer",
-        "MDF_SuperShield_ActionDelayRatio",
-        "MDF_SuperShield_DamageStanceValue"
-      ],
-      "latentQueue": [
-        "_KillByHearse",
-        "ShieldBreakBonusFlag"
       ],
       "execute": [
         {

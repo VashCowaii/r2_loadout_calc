@@ -3,196 +3,14 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012022,
   "trimCharacterName": 4012022,
   "abilityList": [
+    "4012022_Modifiers",
     "4012022_Monster_W4_Scholar_LocalLegend_PassiveAbility02",
     "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02",
     "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01",
     "4012022_Monster_W4_Scholar_Ability02_Part02",
-    "4012022_Monster_W4_Scholar_Ability02_Part01",
-    "4012022_Modifiers"
+    "4012022_Monster_W4_Scholar_Ability02_Part01"
   ],
   "abilityObject": {
-    "4012022_Monster_W4_Scholar_LocalLegend_PassiveAbility02": {
-      "fileName": "4012022_Monster_W4_Scholar_LocalLegend_PassiveAbility02",
-      "skillTrigger": "PassiveSkill02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-644714460\">MModifier_Monster_W4_Scholar_LocalLegend_Status</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
-          "valuePerStack": {
-            "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[0]]}"
-              ]
-            },
-            "MDF_LifeTime": {
-              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
-              "displayLines": "{[PassiveSkill02[2]]}",
-              "constants": [],
-              "variables": [
-                "{[PassiveSkill02[2]]}"
-              ]
-            }
-          }
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02": {
-      "fileName": "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>[<span class=\"descriptionNumberColor\">Gleaned Instruction</span>]",
-          "valuePerStack": {
-            "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            }
-          },
-          "casterAssign": "CasterSelf"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01": {
-      "fileName": "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01",
-      "childAbilityList": [
-        "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Camera",
-        "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01",
-        "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Scholar_LocalLegend_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Ally Target"
-      },
-      "references": []
-    },
-    "4012022_Monster_W4_Scholar_Ability02_Part02": {
-      "fileName": "4012022_Monster_W4_Scholar_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Physical",
-            "Damage": {
-              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
-              "displayLines": "{[Skill02[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill02[0]]}"
-              ]
-            },
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "4012022_Monster_W4_Scholar_Ability02_Part01": {
-      "fileName": "4012022_Monster_W4_Scholar_Ability02_Part01",
-      "childAbilityList": [
-        "4012022_Monster_W4_Scholar_Ability02_Camera",
-        "4012022_Monster_W4_Scholar_Ability02_Part01",
-        "4012022_Monster_W4_Scholar_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Scholar_Ability02_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit",
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "4012022_Modifiers": {
       "fileName": "4012022_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -208,9 +26,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>[<span class=\"descriptionNumberColor\">Gleaned Instruction</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio"
           ],
           "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
           "type": "Buff",
@@ -499,10 +314,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
-          ],
-          "stackData": [
-            "MDF_SpeedUpRatio",
-            "MDF_LifeTime"
           ],
           "execute": [
             {
@@ -959,6 +770,188 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4012022_Monster_W4_Scholar_LocalLegend_PassiveAbility02": {
+      "fileName": "4012022_Monster_W4_Scholar_LocalLegend_PassiveAbility02",
+      "skillTrigger": "PassiveSkill02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-644714460\">MModifier_Monster_W4_Scholar_LocalLegend_Status</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1076100196\">MModifier_Monster_W4_Scholar_LocalLegend_BookKillerListener</a>",
+          "valuePerStack": {
+            "MDF_SpeedUpRatio": {
+              "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+              "displayLines": "{[PassiveSkill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill02[0]]}"
+              ]
+            },
+            "MDF_LifeTime": {
+              "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+              "displayLines": "{[PassiveSkill02[2]]}",
+              "constants": [],
+              "variables": [
+                "{[PassiveSkill02[2]]}"
+              ]
+            }
+          }
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02": {
+      "fileName": "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2022021618\">MModifier_Monster_W4_Scholar_LocalLegend_BookTarget</a>[<span class=\"descriptionNumberColor\">Gleaned Instruction</span>]",
+          "valuePerStack": {
+            "MDF_SpeedUpRatio": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            }
+          },
+          "casterAssign": "CasterSelf"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01": {
+      "fileName": "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01",
+      "childAbilityList": [
+        "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Camera",
+        "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part01",
+        "4012022_Monster_W4_Scholar_LocalLegend_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Scholar_LocalLegend_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      },
+      "references": []
+    },
+    "4012022_Monster_W4_Scholar_Ability02_Part02": {
+      "fileName": "4012022_Monster_W4_Scholar_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "4012022_Monster_W4_Scholar_Ability02_Part01": {
+      "fileName": "4012022_Monster_W4_Scholar_Ability02_Part01",
+      "childAbilityList": [
+        "4012022_Monster_W4_Scholar_Ability02_Camera",
+        "4012022_Monster_W4_Scholar_Ability02_Part01",
+        "4012022_Monster_W4_Scholar_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Scholar_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit",
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

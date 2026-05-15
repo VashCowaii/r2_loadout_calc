@@ -18,9 +18,6 @@ const configAbility = {
         "STAT_DOT_Burn"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamagePercentage_Layer"
-      ],
       "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns.",
       "type": "Debuff",
       "effectName": "Enkindle",
@@ -154,9 +151,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Modifier_AttackAddedRatio"
-      ],
       "description": "Increases ATK by <span class=\"descriptionNumberColor\">Modifier_AttackAddedRatio</span>. This effect can stack.",
       "type": "Buff",
       "effectName": "ATK Boost",
@@ -202,10 +196,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
       "stackType": "ReplaceByCaster",
-      "stackData": [
-        "Modifier_StanceWeakAddedRatio",
-        "Modifier_Stance"
-      ],
       "description": "Blaze Out of Space's attack mode is enhanced.",
       "type": "Other",
       "effectName": "Spontaneous Combustion",

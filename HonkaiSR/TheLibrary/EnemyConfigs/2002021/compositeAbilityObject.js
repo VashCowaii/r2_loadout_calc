@@ -3,375 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 2002021,
   "trimCharacterName": 2002021,
   "abilityList": [
+    "2002021_Modifiers",
     "2002021_Monster_W2_Yanqing_01_PassiveAbilityInitiate",
     "2002021_Monster_W2_Yanqing_Ability02_RevealedDie",
     "2002021_Monster_W2_Yanqing_02_Ability01_Part02",
-    "2002021_Monster_W2_Yanqing_02_Ability01_Part01",
-    "2002021_Modifiers"
+    "2002021_Monster_W2_Yanqing_02_Ability01_Part01"
   ],
   "abilityObject": {
-    "2002021_Monster_W2_Yanqing_01_PassiveAbilityInitiate": {
-      "fileName": "2002021_Monster_W2_Yanqing_01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkillInitiate",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2002021_Monster_W2_Yanqing_Ability02_RevealedDie": {
-      "fileName": "2002021_Monster_W2_Yanqing_Ability02_RevealedDie",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster's Summoner}}"
-            },
-            "value1": "W2_Yanqing_00_SummonMinionsPerformFlag",
-            "compareType": "=",
-            "value2": 0,
-            "contextScope": "TargetEntity"
-          },
-          "passed": [
-            {
-              "name": "Trigger Ability",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "ability": "Monster_W2_Yanqing_Ability02_TeamFormation",
-              "isTrigger": true
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
-        },
-        {
-          "name": "Mark Entity For Immediate Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Remove from Team Target Grouping",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "stayInTeam": false
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Enemy Team All}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "=",
-            "value2": 0,
-            "conditions": {
-              "name": "Has Flag",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "flagName": "Break"
-            }
-          },
-          "passed": [
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster's Summoner}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag"
-            }
-          ]
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "2002021_Monster_W2_Yanqing_02_Ability01_Part02": {
-      "fileName": "2002021_Monster_W2_Yanqing_02_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Ability Start",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
-          },
-          "passed": [
-            {
-              "name": "Shot Fired",
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Ice",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ],
-          "failed": [
-            {
-              "name": "Shot Fired",
-              "execute": [
-                {
-                  "name": "ATK Scaling DMG",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "AttackScaling": {
-                    "DamageType": "Ice",
-                    "Damage": {
-                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-                      "displayLines": "{[Skill01[0]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[0]]}"
-                      ]
-                    },
-                    "Toughness": null,
-                    "Tags": null,
-                    "EnergyGainPercent": "100%"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "Trigger: Attack End",
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-                "displayLines": "{[Skill01[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[2]]}"
-                ]
-              },
-              "baseChance": {
-                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-                "displayLines": "{[Skill01[1]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill01[1]]}"
-                ]
-              },
-              "valuePerStack": {
-                "Modifier_Frozen_DamagePercentage": {
-                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                  "displayLines": "{[Skill01[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill01[3]]}"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "2002021_Monster_W2_Yanqing_02_Ability01_Part01": {
-      "fileName": "2002021_Monster_W2_Yanqing_02_Ability01_Part01",
-      "childAbilityList": [
-        "2002021_Monster_W2_Yanqing_02_Ability01_Part01",
-        "2002021_Monster_W2_Yanqing_02_Ability01_Part02",
-        "2002021_Monster_W2_Yanqing_02_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W2_Yanqing_02_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
-      },
-      "references": []
-    },
     "2002021_Modifiers": {
       "fileName": "2002021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -3096,6 +2734,368 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "2002021_Monster_W2_Yanqing_01_PassiveAbilityInitiate": {
+      "fileName": "2002021_Monster_W2_Yanqing_01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2002021_Monster_W2_Yanqing_Ability02_RevealedDie": {
+      "fileName": "2002021_Monster_W2_Yanqing_Ability02_RevealedDie",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Summoner}}"
+            },
+            "value1": "W2_Yanqing_00_SummonMinionsPerformFlag",
+            "compareType": "=",
+            "value2": 0,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Trigger Ability",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "ability": "Monster_W2_Yanqing_Ability02_TeamFormation",
+              "isTrigger": true
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
+        },
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-237425029\">StanceBreakState_Effect</a>"
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Remove from Team Target Grouping",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "stayInTeam": false
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "=",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Flag",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "flagName": "Break"
+            }
+          },
+          "passed": [
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag"
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2002021_Monster_W2_Yanqing_02_Ability01_Part02": {
+      "fileName": "2002021_Monster_W2_Yanqing_02_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
+          },
+          "passed": [
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Ice",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Shot Fired",
+              "execute": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "AttackScaling": {
+                    "DamageType": "Ice",
+                    "Damage": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "EnergyGainPercent": "100%"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+                "displayLines": "{[Skill01[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill01[2]]}"
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                "displayLines": "{[Skill01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill01[1]]}"
+                ]
+              },
+              "valuePerStack": {
+                "Modifier_Frozen_DamagePercentage": {
+                  "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                  "displayLines": "{[Skill01[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill01[3]]}"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"153779397\">Enemy_W2_Yanqing_01_StandByEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-2068860507\">Enemy_W2_Yanqing_SwordPowerUp</a>[<span class=\"descriptionNumberColor\">Ordeal</span>]"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-770732625\">Enemy_W2_Yanqing_01_SwordPowerUp_StandByEffect</a>"
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2002021_Monster_W2_Yanqing_02_Ability01_Part01": {
+      "fileName": "2002021_Monster_W2_Yanqing_02_Ability01_Part01",
+      "childAbilityList": [
+        "2002021_Monster_W2_Yanqing_02_Ability01_Part01",
+        "2002021_Monster_W2_Yanqing_02_Ability01_Part02",
+        "2002021_Monster_W2_Yanqing_02_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Yanqing_02_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
       "references": []
     }
   }

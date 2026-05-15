@@ -3,12 +3,80 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012030,
   "trimCharacterName": 4012030,
   "abilityList": [
+    "4012030_Modifiers",
     "4012030_Monster_W4_Shooter_Passive01",
     "4012030_Monster_W4_Shooter_Ability01_Part02",
-    "4012030_Monster_W4_Shooter_Ability01_Part01",
-    "4012030_Modifiers"
+    "4012030_Monster_W4_Shooter_Ability01_Part01"
   ],
   "abilityObject": {
+    "4012030_Modifiers": {
+      "fileName": "4012030_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-877294883\">Enemy_W4_Shooter_ConfineHit_Controller</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Change Character Transformation",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "phase": "Phase1"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "flagName": "STAT_Confine"
+                  },
+                  "passed": [
+                    {
+                      "name": "Change Character Transformation",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "phase": "Phase0"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Change Character Transformation",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "phase": "Phase1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "4012030_Monster_W4_Shooter_Passive01": {
       "fileName": "4012030_Monster_W4_Shooter_Passive01",
       "skillTrigger": "PassiveSkill",
@@ -1584,74 +1652,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "targetIsVariable": true
       },
-      "references": []
-    },
-    "4012030_Modifiers": {
-      "fileName": "4012030_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-877294883\">Enemy_W4_Shooter_ConfineHit_Controller</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "Change Character Transformation",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "phase": "Phase1"
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Take Damage Start [Owner]: Any",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "flagName": "STAT_Confine"
-                  },
-                  "passed": [
-                    {
-                      "name": "Change Character Transformation",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "phase": "Phase0"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Change Character Transformation",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "phase": "Phase1"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

@@ -101,9 +101,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "stackData": [
-        "MDF_AllDamageReduce"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -281,9 +278,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__407991733\">Enemy_W4_Mascot_ListenCorrectInteract</a>",
-      "stackData": [
-        "MDF_SuccessDamageRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

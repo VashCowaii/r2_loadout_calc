@@ -14,9 +14,6 @@ const configAbility = {
       "modifierFlags": [
         "TeamAction"
       ],
-      "latentQueue": [
-        "Gepard_SummonCounter"
-      ],
       "description": "Silvermane Guards will focus their attacks on this target.",
       "type": "Debuff",
       "effectName": "Lock On",
@@ -272,10 +269,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1932026203\">Monster_W1_Gepard_RemoveOneMore</a>",
-      "latentQueue": [
-        "Gepard_SummonCounter",
-        "Gepard_AICounter"
-      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",

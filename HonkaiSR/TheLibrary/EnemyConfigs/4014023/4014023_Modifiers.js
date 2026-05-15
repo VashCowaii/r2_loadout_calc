@@ -540,10 +540,6 @@ const configAbility = {
       "modifierFlags": [
         "TauntForAutoLock"
       ],
-      "latentQueue": [
-        "Tutorial_Flag",
-        "MDF_KillByHearse"
-      ],
       "execute": [
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
@@ -569,10 +565,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__126121466\">Monster_W4_Hearse_LeaveTeam</a>",
-      "latentQueue": [
-        "AIFlag",
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Anyone]",
@@ -736,9 +728,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1169900751\">Monster_W4_Hearse_SetSpeed</a>",
-      "stackData": [
-        "MDF_Speed"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -967,11 +956,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1178549218\">Monster_W4_Hearse_Ability01_Mark</a>",
-      "latentQueue": [
-        "Tutorial_Flag",
-        "MDF_KillByHearse"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-1178549218\">Monster_W4_Hearse_Ability01_Mark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1294,10 +1279,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_DamageTakenUpRatio",
-        "MDF_ConfineChance"
-      ],
       "description": "Increases received damage by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. When receiving attacks, there is a chance to be inflicted with Imprisonment. Defeat the corresponding \"Conquer or Be Conquered\" to dispel this effect.",
       "type": "Other",
       "effectName": "Drowning in Terror",
@@ -1367,9 +1348,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__770051597\">Monster_W4_Hearse_Sign</a>[<span class=\"descriptionNumberColor\">Strife-Granted Fear</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead"
-      ],
-      "stackData": [
-        "MDF_DamageTakenUpRatio"
       ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>. This effect can be dispelled by defeating the \"Conquer or Be Conquered\" corresponding to this unit.",
       "type": "Other",
@@ -2012,9 +1990,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__985676222\">Monster_W4_Hearse_Enhance</a>[<span class=\"descriptionNumberColor\">Strife-Granted Valiance</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_KillByHearse"
-      ],
       "description": "Each stack increases DMG dealt for the next attack.",
       "type": "Buff",
       "effectName": "Valiance",

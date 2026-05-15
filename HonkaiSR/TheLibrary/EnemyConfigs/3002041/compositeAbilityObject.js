@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 3002041,
   "trimCharacterName": 3002041,
   "abilityList": [
+    "3002041_Modifiers",
     "3002041_Monster_W3_Clock_02_PassiveAbilityInitiate",
     "3002041_Monster_W3_Clock_02_Ultimate_Part02",
     "3002041_Monster_W3_Clock_02_Ultimate_Part01",
@@ -11,10 +12,21 @@ const compositeAbilityObject = {
     "3002041_Monster_W3_Clock_02_Ability02_Part02",
     "3002041_Monster_W3_Clock_02_Ability02_Part01",
     "3002041_Monster_W3_Clock_02_Ability01_Part02",
-    "3002041_Monster_W3_Clock_02_Ability01_Part01",
-    "3002041_Modifiers"
+    "3002041_Monster_W3_Clock_02_Ability01_Part01"
   ],
   "abilityObject": {
+    "3002041_Modifiers": {
+      "fileName": "3002041_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "references": []
+    },
     "3002041_Monster_W3_Clock_02_PassiveAbilityInitiate": {
       "fileName": "3002041_Monster_W3_Clock_02_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -742,18 +754,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
-      "references": []
-    },
-    "3002041_Modifiers": {
-      "fileName": "3002041_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
       "references": []
     }
   }

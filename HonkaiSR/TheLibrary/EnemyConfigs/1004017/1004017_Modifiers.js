@@ -37,9 +37,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-325261952\">Boss_Cocolia_P1_Ability05_Bonus</a>",
-      "stackData": [
-        "ModifierDamageUpValue"
-      ],
       "duration": 1,
       "execute": [
         {
@@ -496,9 +493,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1230340009\">Monster_W1_CocoliaP1_RemoveOneMore</a>",
-      "latentQueue": [
-        "InsertController"
-      ],
       "execute": [
         {
           "eventTrigger": "Action End [Owner]",

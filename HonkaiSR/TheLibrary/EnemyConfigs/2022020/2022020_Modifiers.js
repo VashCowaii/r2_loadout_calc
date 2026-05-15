@@ -11,9 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1599810700\">Monster_W2_Abomi02_EffectControl</a>",
-      "latentQueue": [
-        "IsInDeathRattle"
-      ],
       "variableValueChange": [
         {
           "name": "Variable Value Changes",

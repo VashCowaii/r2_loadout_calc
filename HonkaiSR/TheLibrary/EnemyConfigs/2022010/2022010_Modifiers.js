@@ -11,13 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__345912758\">Monster_W2_Abomi01_Accelerate</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-      "stackData": [
-        "MDF_SpeedRatio"
-      ],
-      "latentQueue": [
-        "Monster_W2_Abomi01_00_HitFlyFlag",
-        "Monster_W2_Abomi01_00_ReviveEff"
-      ],
       "description": "SPD Increased.",
       "type": "Buff",
       "effectName": "SPD Boost",

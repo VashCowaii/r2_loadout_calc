@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8012146,
   "trimCharacterName": 8012146,
   "abilityList": [
+    "8012146_Modifiers",
     "8012146_Monster_AML_Boss_Part1_IF_PassiveAbilityInitiate",
     "8012146_Monster_AML_Boss_Part1_IF_AbilityP01_WeaknessChange",
     "8012146_Monster_AML_Boss_Part1_IF_AbilityP01_ReflexInsert",
@@ -12,10 +13,26 @@ const compositeAbilityObject = {
     "8012146_Monster_AML_Boss_Part1_IF_Ability02_Part02",
     "8012146_Monster_AML_Boss_Part1_IF_Ability02_Part01",
     "8012146_Monster_AML_Boss_Part1_IF_Ability01_Part02",
-    "8012146_Monster_AML_Boss_Part1_IF_Ability01_Part01",
-    "8012146_Modifiers"
+    "8012146_Monster_AML_Boss_Part1_IF_Ability01_Part01"
   ],
   "abilityObject": {
+    "8012146_Modifiers": {
+      "fileName": "8012146_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1243397700\">Enemy_AML_Boss_Part1_IF_Ability01_Mark</a>"
+        }
+      ],
+      "references": []
+    },
     "8012146_Monster_AML_Boss_Part1_IF_PassiveAbilityInitiate": {
       "fileName": "8012146_Monster_AML_Boss_Part1_IF_PassiveAbilityInitiate",
       "skillTrigger": "PassiveSkillInitiate",
@@ -1812,23 +1829,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
-      "references": []
-    },
-    "8012146_Modifiers": {
-      "fileName": "8012146_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1243397700\">Enemy_AML_Boss_Part1_IF_Ability01_Mark</a>"
-        }
-      ],
       "references": []
     }
   }

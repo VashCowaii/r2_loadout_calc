@@ -30,9 +30,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
       "stackType": "ReplaceByCaster",
-      "latentQueue": [
-        "CurrentSupportNumber"
-      ],
       "description": "Receives Support from %CasterName.",
       "type": "Other",
       "effectName": "Support Target",

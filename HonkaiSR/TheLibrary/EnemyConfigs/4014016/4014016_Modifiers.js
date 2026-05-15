@@ -11,12 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1329925524\">Modifier_Monster_W4_Nikadory_B_HardLockHp</a>",
-      "stackData": [
-        "MDF_LockHp"
-      ],
-      "latentQueue": [
-        "_IsStoryTri"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -172,12 +166,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1174103224\">Modifier_Monster_W4_Nikadory_B_HardLockHp_BFAbility02</a>",
-      "stackData": [
-        "MDF_LockHp"
-      ],
-      "latentQueue": [
-        "_IsStoryTri"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -396,9 +384,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -512,19 +497,13 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1717699504\">Monster_W4_Nikadory_UltraPrepare</a>",
-      "latentQueue": [
-        "Tutorial_Flag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1717699504\">Monster_W4_Nikadory_UltraPrepare</a>"
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2109179973\">Monster_W4_Nikadory_Main_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "Tutorial_Flag"
       ]
     },
     {
@@ -1102,9 +1081,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
       "description": "Distribute the \"All Realms Leveled, All Legions to Dust\" attack unleashed by \"Savage God, Mad King, Incarnation of Strife.\"",
       "type": "Other",
       "effectName": "Distributed Attack",
@@ -1554,9 +1530,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1462384175\">Monster_W4_Nikadory_Brave_Judge</a>",
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking Modifier Instance [Owner]",
@@ -1638,14 +1611,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "AllowAddToGridFightBackend"
-      ],
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer",
-        "MDF_EnergyAddRatio",
-        "MDF_MaxLayer"
-      ],
-      "latentQueue": [
-        "Tutorial_Flag"
       ],
       "description": "Each stack of \"Glory\" increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span> and Energy Regeneration Rate by <span class=\"descriptionNumberColor\">MDF_EnergyAddRatio</span>. When launching Skill or Ultimate, adds 1 stack of \"Glory,\" up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> stack(s). Attacking can dispel a certain stack of \"Titanic Corpus\" corresponding to the number of \"Glory\" stacks.",
       "type": "Other",
@@ -2397,15 +2362,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__965106610\">Monster_W4_Nikadory_Passive</a>",
-      "stackData": [
-        "MDF_DamageResistance_PerLayer",
-        "MDF_ActionDelayRatio",
-        "MDF_CrackedDamage",
-        "MDF_CrackedDamageAfter",
-        "MDF_SPAddedRatio",
-        "MDF_EnhanceSPAddedRatio",
-        "MDF_MaxLayer"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -2822,12 +2778,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1471859507\">Monster_W4_Nikadory_Charge</a>",
-      "stackData": [
-        "MDF_DamageUpRatio"
-      ],
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -3393,9 +3343,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2087329841\">Monster_W4_Nikadory_Charge_UnselectableCheck</a>",
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "Unselectable Adjustment [Owner]: Start",
@@ -3862,9 +3809,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1849683412\">Monster_W4_Nikadory_WeaponEffect</a>",
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -3874,9 +3818,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1307575812\">Monster_W4_Nikadory_ChargeEffect</a>",
-      "latentQueue": [
-        "Tutorial_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

@@ -15,11 +15,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>",
-      "latentQueue": [
-        "isRefreshFlag",
-        "SoldierCount02",
-        "SoldierCount01"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -56,11 +51,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>",
-      "latentQueue": [
-        "isRefreshFlag",
-        "SoldierCount02",
-        "SoldierCount01"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

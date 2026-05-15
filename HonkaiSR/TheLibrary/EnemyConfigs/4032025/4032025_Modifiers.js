@@ -10,12 +10,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>",
-      "stackData": [
-        "MDF_Skill01",
-        "MDF_Skill01_Adjoin",
-        "MDF_Skill02"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-2020453285\">Enemy_W4_FireProwler_01_DamageValue</a>"
     },
     {
       "name": "Modifier Construction",
@@ -531,9 +526,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteHitH",
         "STAT_SuperArmor"
-      ],
-      "stackData": [
-        "MDF_AllDamageTypeResistance"
       ],
       "execute": [
         {

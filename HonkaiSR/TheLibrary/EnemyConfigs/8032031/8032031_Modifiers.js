@@ -101,9 +101,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1833952078\">Monster_W3_AventurinePart_Odds_RL</a>",
       "stackType": "Replace",
-      "latentQueue": [
-        "DiceGamblingInsertCheck_RL"
-      ],
       "addStacksPerTrigger": 1,
       "execute": [
         {
@@ -2310,9 +2307,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-34127136\">Monster_W3_AventurinePart_Result</a>",
-      "latentQueue": [
-        "DiceGamblingInsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -3583,10 +3577,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>",
-      "latentQueue": [
-        "DiceGamblingInsertCheck"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1604729097\">Monster_W3_AventurinePart_ResultTarget</a>"
     },
     {
       "name": "Modifier Construction",

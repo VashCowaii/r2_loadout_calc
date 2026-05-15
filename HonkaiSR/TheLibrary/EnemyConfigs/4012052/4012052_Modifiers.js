@@ -101,9 +101,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak"
       ],
-      "latentQueue": [
-        "AISequence"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -218,9 +215,6 @@ const configAbility = {
         "Deathrattle",
         "KeepOnDeathrattle"
       ],
-      "latentQueue": [
-        "AISequence"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -251,9 +245,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1597331632\">Enemy_W4_Mascot_LocalLegend_ListenCorrectInteract</a>",
-      "stackData": [
-        "MDF_SuccessDamageRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

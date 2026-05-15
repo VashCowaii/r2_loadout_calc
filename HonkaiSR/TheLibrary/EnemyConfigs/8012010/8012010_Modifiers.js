@@ -22,10 +22,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
       "stackType": "Replace",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
-      "stackData": [
-        "MDF_SpeedAddedRatio_PerLayer",
-        "MDF_MaxLayer"
-      ],
       "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
       "type": "Buff",
       "effectName": "SPD Boost",

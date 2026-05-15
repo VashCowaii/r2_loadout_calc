@@ -80,9 +80,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1828577143\">Enemy_SW_Boss_01_IF_AbilityEX03_SummonEnhanceCounter</a>",
-      "latentQueue": [
-        "SummonDelayRatio2"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",
@@ -979,7 +976,6 @@ const configAbility = {
         "MDF_AttackAddedRatio"
       ],
       "latentQueue": [
-        "SummonDelayRatio2",
         "CurrentSummonCount"
       ],
       "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
@@ -1141,9 +1137,6 @@ const configAbility = {
       "modifierFlags": [
         "RetainCountZero"
       ],
-      "stackData": [
-        "MDF_DamageReduce"
-      ],
       "description": "Lose 1 Insect Egg when attacked by \"Entomon Eulogy\" or \"Decay Eulogy.\"",
       "type": "Other",
       "statusName": "Insect Egg",
@@ -1249,13 +1242,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-77514845\">Enemy_SW_Boss_01_IF_SwarmArmorController</a>",
-      "stackData": [
-        "MDF_Armor_DamageReduce",
-        "MDF_Armor_CountNormal"
-      ],
-      "latentQueue": [
-        "SummonDelayRatio2"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -1393,10 +1379,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__654310441\">Enemy_SW_Boss_01_IF_StanceDamageController</a>",
-      "stackData": [
-        "MDF_ExplodeDamageTakenRatio",
-        "MDF_ExplodeStanceDamage"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2620,13 +2602,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
       "stackType": "Multiple",
-      "stackData": [
-        "MDF_SummonID",
-        "MDF_SummonDelay"
-      ],
-      "latentQueue": [
-        "AbilityFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

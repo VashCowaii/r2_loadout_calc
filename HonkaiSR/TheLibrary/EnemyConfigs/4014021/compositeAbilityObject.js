@@ -3,1689 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 4014021,
   "trimCharacterName": 4014021,
   "abilityList": [
+    "4014021_Modifiers",
     "4014021_Monster_W4_Hearse_IF_AbilityP01",
     "4014021_Monster_W4_Hearse_IF_Ability04_Part02",
     "4014021_Monster_W4_Hearse_IF_Ability04_Part01",
     "4014021_Monster_W4_Hearse_IF_Ability03_Part02",
     "4014021_Monster_W4_Hearse_IF_Ability03_Part01",
     "4014021_Monster_W4_Hearse_IF_Ability01_Part02",
-    "4014021_Monster_W4_Hearse_IF_Ability01_Part01",
-    "4014021_Modifiers"
+    "4014021_Monster_W4_Hearse_IF_Ability01_Part01"
   ],
   "abilityObject": {
-    "4014021_Monster_W4_Hearse_IF_AbilityP01": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_AbilityP01",
-      "skillTrigger": "Passive01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1961658270\">Enemy_W4_Hearse_IF_Passive</a>"
-        },
-        {
-          "name": "Declare Custom Variable",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "variableName": "Nikadory_Speed"
-        },
-        {
-          "name": "Define Custom Variable with Stat",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Nikador: Self}}"
-          },
-          "variableName": "Nikadory_Speed",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
-          "valuePerStack": {
-            "MDF_Speed": {
-              "operator": "Variables[0] (Nikadory_Speed) || Constants[0] (0) || MUL || RETURN",
-              "displayLines": "(Nikadory_Speed * 0)",
-              "constants": [
-                0
-              ],
-              "variables": [
-                "Nikadory_Speed"
-              ]
-            }
-          }
-        },
-        {
-          "name": "Create AV Link",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Nikador: Self}}"
-          },
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "linkOrder": 1,
-          "isStart": true,
-          "linkFollowerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          },
-          "linkOwnerModifications": {
-            "OnBreak": "Bit_AutoForceSync"
-          }
-        },
-        {
-          "name": "Create Shared HP Group",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Nikador: Self}}"
-          },
-          "subTarget": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1746079700\">Monster_W4_Hearse_EffectPrepare</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"126121466\">Monster_W4_Hearse_LeaveTeam</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1558222454\">Enemy_W4_Hearse_IF_Unselectable</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1324450026\">Enemy_W4_Hearse_IF_LockHP</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014021_Monster_W4_Hearse_IF_Ability04_Part02": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_Ability04_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Define Custom Variable",
-          "variableName": "_SuperShieldValue",
-          "value": 0
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill04ShieldAddValue",
-          "value": 0
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 2
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1009782212\">Monster_W4_HearsePart_ChangeEffect</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2003197831\">Monster_W4_Hearse_ChargeEffect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">",
-            "value2": 0,
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
-            }
-          }
-        },
-        "Ability Start",
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Monster Rank",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "compareType": "<=",
-                "value2": 2
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "team": "Enemy Team",
-                "location": "Left"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1968202244\">Monster_W4_Hearse_ChargeEffectDelay</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">",
-            "value2": 0,
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members(Exclude Self)}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": ">",
-            "value2": 0,
-            "conditions": {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
-            }
-          },
-          "passed": [
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "<=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "<=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "<=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
-                }
-              ]
-            },
-            {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Enemy Team All}}"
-              },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Compare: Monster Rank",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "compareType": "<=",
-                    "value2": 2
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
-                    "invertCondition": true
-                  }
-                ]
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Monster Rank",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "compareType": "<=",
-                "value2": 2
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Modifier-Specific Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
-              "variableName": "_KillByHearse",
-              "value": 1
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "value1": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
-                    "compareType": ">",
-                    "value2": 0,
-                    "valueType": "Layer"
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "scope": "ContextAbility",
-                  "valueType": "Layer",
-                  "variableName": "_SuperShieldValue",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "Skill04ShieldAddValue",
-                  "context": "ContextAbility",
-                  "value": {
-                    "operator": "Variables[0] (_SuperShieldValue) || RETURN",
-                    "displayLines": "_SuperShieldValue",
-                    "constants": [],
-                    "variables": [
-                      "_SuperShieldValue"
-                    ]
-                  },
-                  "max": 999
-                }
-              ]
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
-            },
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nikador: Self}}"
-            },
-            "flagName": "STAT_CTRL"
-          },
-          "passed": [
-            {
-              "name": "Remove Modifier Behavior Flag(s)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "flagNames": []
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nikador: Self}}"
-            },
-            "flagName": "Break"
-          },
-          "passed": [
-            {
-              "name": "Exit Broken-State",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              }
-            },
-            {
-              "name": "Reset Toughness",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "<=",
-            "value2": 2
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "ShieldBreakBonusFlag",
-              "value": 0
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "<=",
-            "value2": 2
-          },
-          "ifTargetFound": [
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill04Count",
-          "value": 0
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014021_Monster_W4_Hearse_IF_Ability04_Part01": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_Ability04_Part01",
-      "childAbilityList": [
-        "4014021_Monster_W4_Hearse_Ability04_Camera",
-        "4014021_Monster_W4_Hearse_IF_Ability04_Part01",
-        "4014021_Monster_W4_Hearse_IF_Ability04_Part02"
-      ],
-      "skillTrigger": "Skill04",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Hearse_IF_Ability04_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{All Team Members}}"
-      },
-      "references": []
-    },
-    "4014021_Monster_W4_Hearse_IF_Ability03_Part02": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_Ability03_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2003197831\">Monster_W4_Hearse_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1968202244\">Monster_W4_Hearse_ChargeEffectDelay</a>"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
-          },
-          "maxTargets": 1,
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
-            "invertCondition": true
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
-        },
-        "Ability Start",
-        {
-          "name": "Define Custom Variable with Team Count",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "variableName": "Skill03ExtraCount",
-          "livingTargets": true,
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Monster Rank",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "compareType": "=",
-                "value2": 2
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]"
-              },
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "value1": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
-                "compareType": ">",
-                "value2": 0,
-                "valueType": "Layer"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Define Custom Variable",
-          "variableName": "Skill03TotalDamage",
-          "value": {
-            "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Skill03ExtraCount) || Variables[2] ({[Skill03[1]]}) || MUL || ADD || RETURN",
-            "displayLines": "({[Skill03[0]]} + (Skill03ExtraCount * {[Skill03[1]]}))",
-            "constants": [],
-            "variables": [
-              "{[Skill03[0]]}",
-              "Skill03ExtraCount",
-              "{[Skill03[1]]}"
-            ]
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-              "displayLines": "Skill03TotalDamage",
-              "constants": [],
-              "variables": [
-                "Skill03TotalDamage"
-              ]
-            },
-            "HitSplit": 0.1,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-              "displayLines": "Skill03TotalDamage",
-              "constants": [],
-              "variables": [
-                "Skill03TotalDamage"
-              ]
-            },
-            "HitSplit": 0.1,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-              "displayLines": "Skill03TotalDamage",
-              "constants": [],
-              "variables": [
-                "Skill03TotalDamage"
-              ]
-            },
-            "HitSplit": 0.1,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        {
-          "name": "ATK Scaling DMG",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "AttackScaling": {
-            "DamageType": "Imaginary",
-            "Damage": {
-              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
-              "displayLines": "Skill03TotalDamage",
-              "constants": [],
-              "variables": [
-                "Skill03TotalDamage"
-              ]
-            },
-            "HitSplit": 0.7,
-            "Toughness": null,
-            "Tags": null,
-            "attackType": "Basic ATK",
-            "EnergyGainPercent": "100%"
-          }
-        },
-        "Trigger: Attack End",
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-200542532\">Monster_APShow_OneMore</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-689985018\">Monster_W4_Hearse_ActionBarHint</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2003197831\">Monster_W4_Hearse_ChargeEffect</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1968202244\">Monster_W4_Hearse_ChargeEffectDelay</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Player Team All}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Nikador: Self}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014021_Monster_W4_Hearse_IF_Ability03_Part01": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_Ability03_Part01",
-      "childAbilityList": [
-        "4014021_Monster_W4_Hearse_Ability03_Camera",
-        "4014021_Monster_W4_Hearse_IF_Ability03_Part01",
-        "4014021_Monster_W4_Hearse_IF_Ability03_Part02"
-      ],
-      "skillTrigger": "Skill03",
-      "abilityType": "Skill",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Hearse_IF_Ability03_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
-    "4014021_Monster_W4_Hearse_IF_Ability01_Part02": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Monster Rank",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "compareType": "<=",
-                "value2": 2
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
-              }
-            ]
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Modifier-Specific Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
-              "variableName": "_KillByHearse",
-              "value": 1
-            },
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
-            },
-            {
-              "name": "Mark Entity For Immediate Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "<=",
-            "value2": 2
-          },
-          "ifTargetFound": [
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "ShieldBreakBonusFlag",
-              "value": 0
-            },
-            {
-              "name": "Force Entity Death",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            }
-          ]
-        },
-        {
-          "name": "Create Enemies",
-          "delayPercent": 0,
-          "enemyList": [
-            {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID1",
-              "summonLocation": "KeepOnFirst"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID1",
-              "summonLocation": "BeforeCaster"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID1",
-              "summonLocation": "Last"
-            },
-            {
-              "name": "Create Enemy from Custom",
-              "value": "SummonID1",
-              "summonLocation": "KeepOnLast"
-            }
-          ]
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 2
-          },
-          "ifTargetFound": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Nikador: Self}}"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 2
-              },
-              {
-                "name": "Has Modifier",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Nikador: Self}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-907515616\">MoreOneMorePerTurn_4</a>"
-              }
-            ]
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>"
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>"
-            }
-          ]
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster's Minions}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
-              "displayLines": "{[Skill01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[0]]}"
-              ]
-            },
-            "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
-              "displayLines": "{[Skill01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[1]]}"
-              ]
-            },
-            "MDF_CrackedDamage": {
-              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
-              "displayLines": "{[Skill01[2]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[2]]}"
-              ]
-            },
-            "MDF_BPRecoverValue": {
-              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-              "displayLines": "{[Skill01[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[3]]}"
-              ]
-            },
-            "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
-              "displayLines": "{[Skill01[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[4]]}"
-              ]
-            },
-            "MDF_CrackedDamageAfter": {
-              "operator": "Variables[0] ({[Skill01[5]]}) || RETURN",
-              "displayLines": "{[Skill01[5]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[5]]}"
-              ]
-            },
-            "MDF_DamageStanceValue": {
-              "operator": "Variables[0] ({[Skill01[6]]}) || RETURN",
-              "displayLines": "{[Skill01[6]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[6]]}"
-              ]
-            },
-            "MDF_SuperShield_MaxLayer": {
-              "operator": "Variables[0] ({[Skill01[7]]}) || RETURN",
-              "displayLines": "{[Skill01[7]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[7]]}"
-              ]
-            },
-            "MDF_SuperShield_BPRecoverValue": {
-              "operator": "Variables[0] ({[Skill01[8]]}) || RETURN",
-              "displayLines": "{[Skill01[8]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[8]]}"
-              ]
-            },
-            "MDF_BraveBonusLayer": {
-              "operator": "Variables[0] ({[Skill01[9]]}) || RETURN",
-              "displayLines": "{[Skill01[9]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[9]]}"
-              ]
-            },
-            "MDF_SuperShield_ActionDelayRatio": {
-              "operator": "Variables[0] ({[Skill01[10]]}) || RETURN",
-              "displayLines": "{[Skill01[10]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[10]]}"
-              ]
-            },
-            "MDF_SuperShield_DamageStanceValue": {
-              "operator": "Variables[0] ({[Skill01[11]]}) || RETURN",
-              "displayLines": "{[Skill01[11]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill01[11]]}"
-              ]
-            }
-          },
-          "casterAssign": "TargetSelf"
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 2
-          }
-        },
-        {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Enemy Team All}}"
-          },
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Parameter Target}}"
-            },
-            "compareType": "=",
-            "value2": 2
-          },
-          "ifTargetFound": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Nikador: Self}}"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 1
-              },
-              "passed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
-                  "valuePerStack": {
-                    "MDF_BPRecoverValue": {
-                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
-                      "displayLines": "{[Skill01[3]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[3]]}"
-                      ]
-                    },
-                    "MDF_Part01LoseHPRatio": {
-                      "operator": "Variables[0] ({[Skill01[12]]}) || RETURN",
-                      "displayLines": "{[Skill01[12]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[12]]}"
-                      ]
-                    },
-                    "MDF_Part02LoseHPRatio": {
-                      "operator": "Variables[0] ({[Skill01[13]]}) || RETURN",
-                      "displayLines": "{[Skill01[13]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[13]]}"
-                      ]
-                    },
-                    "MDF_DamageStanceValue": {
-                      "operator": "Variables[0] ({[Skill01[14]]}) || RETURN",
-                      "displayLines": "{[Skill01[14]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[14]]}"
-                      ]
-                    }
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
-                  "valuePerStack": {
-                    "MDF_BPRecoverValue": {
-                      "operator": "Variables[0] ({[Skill01[8]]}) || RETURN",
-                      "displayLines": "{[Skill01[8]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[8]]}"
-                      ]
-                    },
-                    "MDF_BraveBonusLayer": {
-                      "operator": "Variables[0] ({[Skill01[9]]}) || RETURN",
-                      "displayLines": "{[Skill01[9]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[9]]}"
-                      ]
-                    },
-                    "MDF_Part01LoseHPRatio": {
-                      "operator": "Variables[0] ({[Skill01[12]]}) || RETURN",
-                      "displayLines": "{[Skill01[12]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[12]]}"
-                      ]
-                    },
-                    "MDF_Part02LoseHPRatio": {
-                      "operator": "Variables[0] ({[Skill01[13]]}) || RETURN",
-                      "displayLines": "{[Skill01[13]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[13]]}"
-                      ]
-                    },
-                    "MDF_DamageStanceValue": {
-                      "operator": "Variables[0] ({[Skill01[14]]}) || RETURN",
-                      "displayLines": "{[Skill01[14]]}",
-                      "constants": [],
-                      "variables": [
-                        "{[Skill01[14]]}"
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nikador: Self}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>"
-          },
-          "passed": [
-            {
-              "name": "Define Modifier-Specific Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Nikador: Self}}"
-              },
-              "modifierName": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>",
-              "variableName": "_DoubleChargeStateFlag",
-              "value": 1
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4014021_Monster_W4_Hearse_IF_Ability01_Part01": {
-      "fileName": "4014021_Monster_W4_Hearse_IF_Ability01_Part01",
-      "childAbilityList": [
-        "4014021_Monster_W4_Hearse_IF_Ability01_Camera",
-        "4014021_Monster_W4_Hearse_IF_Ability01_Part01",
-        "4014021_Monster_W4_Hearse_IF_Ability01_Part02"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W4_Hearse_IF_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Hostile Entities(AOE)}}"
-      },
-      "references": []
-    },
     "4014021_Modifiers": {
       "fileName": "4014021_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -1732,16 +59,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
-          ],
-          "stackData": [
-            "MDF_BPRecoverValue",
-            "MDF_Phase01LoseHPRatio",
-            "MDF_Phase02LoseHPRatio",
-            "MDF_DamageStanceValue"
-          ],
-          "latentQueue": [
-            "_KillByHearse",
-            "ShieldBreakBonusFlag"
           ],
           "execute": [
             {
@@ -4285,10 +2602,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>",
-          "latentQueue": [
-            "_KillByHearse",
-            "ShieldBreakBonusFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4347,10 +2660,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>",
-          "latentQueue": [
-            "_KillByHearse",
-            "ShieldBreakBonusFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4409,10 +2718,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>",
-          "latentQueue": [
-            "_KillByHearse",
-            "ShieldBreakBonusFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4471,10 +2776,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>",
-          "latentQueue": [
-            "_KillByHearse",
-            "ShieldBreakBonusFlag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4682,10 +2983,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "modifierFlags": [],
           "latentQueue": [
-            "MDF_Phase02LoseHPRatio",
-            "MDF_Phase01LoseHPRatio",
-            "ShieldBreakBonusFlag",
-            "_KillByHearse"
+            "ShieldBreakBonusFlag"
           ],
           "description": "Each stack of \"Glory\" increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. Consuming 1 Skill Point adds 1 stack of \"Glory.\" When attacking, reduces stacks of \"War Armor\" or \"Centirefined War Armor\" equal to the current \"Glory\" stacks.",
           "type": "Other",
@@ -5502,24 +3800,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
           "modifierFlags": [
             "KeepOnDeathrattle"
-          ],
-          "stackData": [
-            "MDF_MaxLayer",
-            "MDF_ActionDelayRatio",
-            "MDF_CrackedDamage",
-            "MDF_BPRecoverValue",
-            "MDF_AllDamageReduce",
-            "MDF_CrackedDamageAfter",
-            "MDF_DamageStanceValue",
-            "MDF_SuperShield_MaxLayer",
-            "MDF_SuperShield_BPRecoverValue",
-            "MDF_BraveBonusLayer",
-            "MDF_SuperShield_ActionDelayRatio",
-            "MDF_SuperShield_DamageStanceValue"
-          ],
-          "latentQueue": [
-            "_KillByHearse",
-            "ShieldBreakBonusFlag"
           ],
           "execute": [
             {
@@ -7722,6 +6002,1679 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_AbilityP01": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_AbilityP01",
+      "skillTrigger": "Passive01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1961658270\">Enemy_W4_Hearse_IF_Passive</a>"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "Nikadory_Speed"
+        },
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Nikador: Self}}"
+          },
+          "variableName": "Nikadory_Speed",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1169900751\">Monster_W4_Hearse_SetSpeed</a>",
+          "valuePerStack": {
+            "MDF_Speed": {
+              "operator": "Variables[0] (Nikadory_Speed) || Constants[0] (0) || MUL || RETURN",
+              "displayLines": "(Nikadory_Speed * 0)",
+              "constants": [
+                0
+              ],
+              "variables": [
+                "Nikadory_Speed"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create AV Link",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Nikador: Self}}"
+          },
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "linkOrder": 1,
+          "isStart": true,
+          "linkFollowerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          },
+          "linkOwnerModifications": {
+            "OnBreak": "Bit_AutoForceSync"
+          }
+        },
+        {
+          "name": "Create Shared HP Group",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Nikador: Self}}"
+          },
+          "subTarget": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1746079700\">Monster_W4_Hearse_EffectPrepare</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"126121466\">Monster_W4_Hearse_LeaveTeam</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1856806253\">Standard_MuteAttachWeakness</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1558222454\">Enemy_W4_Hearse_IF_Unselectable</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1324450026\">Enemy_W4_Hearse_IF_LockHP</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_Ability04_Part02": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_SuperShieldValue",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill04ShieldAddValue",
+          "value": 0
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "=",
+            "value2": 2
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-1009782212\">Monster_W4_HearsePart_ChangeEffect</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2003197831\">Monster_W4_Hearse_ChargeEffect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
+            }
+          }
+        },
+        "Ability Start",
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "<=",
+                "value2": 2
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1968202244\">Monster_W4_Hearse_ChargeEffectDelay</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
+            }
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "<=",
+                    "value2": 2
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "<=",
+                    "value2": 2
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "<=",
+                    "value2": 2
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
+                }
+              ]
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              "maxTargets": 1,
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Monster Rank",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "compareType": "<=",
+                    "value2": 2
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "<=",
+                "value2": 2
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Modifier-Specific Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
+              "variableName": "_KillByHearse",
+              "value": 1
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value1": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
+                    "compareType": ">",
+                    "value2": 0,
+                    "valueType": "Layer"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "scope": "ContextAbility",
+                  "valueType": "Layer",
+                  "variableName": "_SuperShieldValue",
+                  "modifierName": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "Skill04ShieldAddValue",
+                  "context": "ContextAbility",
+                  "value": {
+                    "operator": "Variables[0] (_SuperShieldValue) || RETURN",
+                    "displayLines": "_SuperShieldValue",
+                    "constants": [],
+                    "variables": [
+                      "_SuperShieldValue"
+                    ]
+                  },
+                  "max": 999
+                }
+              ]
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Nikador: Self}}"
+            },
+            "flagName": "STAT_CTRL"
+          },
+          "passed": [
+            {
+              "name": "Remove Modifier Behavior Flag(s)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "flagNames": []
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Nikador: Self}}"
+            },
+            "flagName": "Break"
+          },
+          "passed": [
+            {
+              "name": "Exit Broken-State",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              }
+            },
+            {
+              "name": "Reset Toughness",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "<=",
+            "value2": 2
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "ShieldBreakBonusFlag",
+              "value": 0
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "<=",
+            "value2": 2
+          },
+          "ifTargetFound": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"2101563151\">Monster_W4_Hearse_Ability04_Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill04Count",
+          "value": 0
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_Ability04_Part01": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_Ability04_Part01",
+      "childAbilityList": [
+        "4014021_Monster_W4_Hearse_Ability04_Camera",
+        "4014021_Monster_W4_Hearse_IF_Ability04_Part01",
+        "4014021_Monster_W4_Hearse_IF_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Hearse_IF_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{All Team Members}}"
+      },
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_Ability03_Part02": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2003197831\">Monster_W4_Hearse_ChargeEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1968202244\">Monster_W4_Hearse_ChargeEffectDelay</a>"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Left to Right)}}.[[removeMemosprite]]"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>",
+            "invertCondition": true
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1296909781\">Monster_W4_Hearse_Effect</a>"
+        },
+        "Ability Start",
+        {
+          "name": "Define Custom Variable with Team Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "variableName": "Skill03ExtraCount",
+          "livingTargets": true,
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "=",
+                "value2": 2
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]"
+              },
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value1": "<a class=\"gModGreen\" id=\"-1860338310\">Enemy_W4_Nikadory_IF_SuperShieldP2</a>[<span class=\"descriptionNumberColor\">Centirefined War Armor</span>]",
+                "compareType": ">",
+                "value2": 0,
+                "valueType": "Layer"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill03TotalDamage",
+          "value": {
+            "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Skill03ExtraCount) || Variables[2] ({[Skill03[1]]}) || MUL || ADD || RETURN",
+            "displayLines": "({[Skill03[0]]} + (Skill03ExtraCount * {[Skill03[1]]}))",
+            "constants": [],
+            "variables": [
+              "{[Skill03[0]]}",
+              "Skill03ExtraCount",
+              "{[Skill03[1]]}"
+            ]
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
+              "displayLines": "Skill03TotalDamage",
+              "constants": [],
+              "variables": [
+                "Skill03TotalDamage"
+              ]
+            },
+            "HitSplit": 0.1,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
+              "displayLines": "Skill03TotalDamage",
+              "constants": [],
+              "variables": [
+                "Skill03TotalDamage"
+              ]
+            },
+            "HitSplit": 0.1,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
+              "displayLines": "Skill03TotalDamage",
+              "constants": [],
+              "variables": [
+                "Skill03TotalDamage"
+              ]
+            },
+            "HitSplit": 0.1,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (Skill03TotalDamage) || RETURN",
+              "displayLines": "Skill03TotalDamage",
+              "constants": [],
+              "variables": [
+                "Skill03TotalDamage"
+              ]
+            },
+            "HitSplit": 0.7,
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-200542532\">Monster_APShow_OneMore</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-689985018\">Monster_W4_Hearse_ActionBarHint</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2003197831\">Monster_W4_Hearse_ChargeEffect</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1968202244\">Monster_W4_Hearse_ChargeEffectDelay</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1810020186\">Monster_W4_Hearse_Part2Effect</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-778914885\">Monster_W4_Hearse_Part2EffectMaterial</a>"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1065905624\">Monster_W4_Hearse_Ability03_Mark</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Nikador: Self}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"55627111\">Monster_W4_Nikadory_Part2EffectWithHearse</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_Ability03_Part01": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_Ability03_Part01",
+      "childAbilityList": [
+        "4014021_Monster_W4_Hearse_Ability03_Camera",
+        "4014021_Monster_W4_Hearse_IF_Ability03_Part01",
+        "4014021_Monster_W4_Hearse_IF_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Hearse_IF_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_Ability01_Part02": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Monster Rank",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "compareType": "<=",
+                "value2": 2
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>"
+              }
+            ]
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Modifier-Specific Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
+              "variableName": "_KillByHearse",
+              "value": 1
+            },
+            {
+              "name": "Remove Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "<=",
+            "value2": 2
+          },
+          "ifTargetFound": [
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "ShieldBreakBonusFlag",
+              "value": 0
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Create Enemies",
+          "delayPercent": 0,
+          "enemyList": [
+            {
+              "name": "Create Enemy from Custom",
+              "value": "SummonID1",
+              "summonLocation": "KeepOnFirst"
+            },
+            {
+              "name": "Create Enemy from Custom",
+              "value": "SummonID1",
+              "summonLocation": "BeforeCaster"
+            },
+            {
+              "name": "Create Enemy from Custom",
+              "value": "SummonID1",
+              "summonLocation": "Last"
+            },
+            {
+              "name": "Create Enemy from Custom",
+              "value": "SummonID1",
+              "summonLocation": "KeepOnLast"
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "=",
+            "value2": 2
+          },
+          "ifTargetFound": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Nikador: Self}}"
+                },
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 2
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Nikador: Self}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-907515616\">MoreOneMorePerTurn_4</a>"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1037785520\">Enemy_W4_Nikadory_IF_APShow_Act1</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1088118377\">Enemy_W4_Nikadory_IF_APShow_Act2</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1071340758\">Enemy_W4_Nikadory_IF_APShow_Act3</a>"
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1121673615\">Enemy_W4_Nikadory_IF_APShow_Act4</a>"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1562180674\">Enemy_W4_Nikadory_IF_StoneShieldController</a>",
+          "valuePerStack": {
+            "MDF_MaxLayer": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "MDF_ActionDelayRatio": {
+              "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+              "displayLines": "{[Skill01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[1]]}"
+              ]
+            },
+            "MDF_CrackedDamage": {
+              "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+              "displayLines": "{[Skill01[2]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[2]]}"
+              ]
+            },
+            "MDF_BPRecoverValue": {
+              "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+              "displayLines": "{[Skill01[3]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[3]]}"
+              ]
+            },
+            "MDF_AllDamageReduce": {
+              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
+              "displayLines": "{[Skill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[4]]}"
+              ]
+            },
+            "MDF_CrackedDamageAfter": {
+              "operator": "Variables[0] ({[Skill01[5]]}) || RETURN",
+              "displayLines": "{[Skill01[5]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[5]]}"
+              ]
+            },
+            "MDF_DamageStanceValue": {
+              "operator": "Variables[0] ({[Skill01[6]]}) || RETURN",
+              "displayLines": "{[Skill01[6]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[6]]}"
+              ]
+            },
+            "MDF_SuperShield_MaxLayer": {
+              "operator": "Variables[0] ({[Skill01[7]]}) || RETURN",
+              "displayLines": "{[Skill01[7]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[7]]}"
+              ]
+            },
+            "MDF_SuperShield_BPRecoverValue": {
+              "operator": "Variables[0] ({[Skill01[8]]}) || RETURN",
+              "displayLines": "{[Skill01[8]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[8]]}"
+              ]
+            },
+            "MDF_BraveBonusLayer": {
+              "operator": "Variables[0] ({[Skill01[9]]}) || RETURN",
+              "displayLines": "{[Skill01[9]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[9]]}"
+              ]
+            },
+            "MDF_SuperShield_ActionDelayRatio": {
+              "operator": "Variables[0] ({[Skill01[10]]}) || RETURN",
+              "displayLines": "{[Skill01[10]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[10]]}"
+              ]
+            },
+            "MDF_SuperShield_DamageStanceValue": {
+              "operator": "Variables[0] ({[Skill01[11]]}) || RETURN",
+              "displayLines": "{[Skill01[11]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[11]]}"
+              ]
+            }
+          },
+          "casterAssign": "TargetSelf"
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "=",
+            "value2": 2
+          }
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "compareType": "=",
+            "value2": 2
+          },
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Nikador: Self}}"
+                },
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
+                  "valuePerStack": {
+                    "MDF_BPRecoverValue": {
+                      "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                      "displayLines": "{[Skill01[3]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[3]]}"
+                      ]
+                    },
+                    "MDF_Part01LoseHPRatio": {
+                      "operator": "Variables[0] ({[Skill01[12]]}) || RETURN",
+                      "displayLines": "{[Skill01[12]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[12]]}"
+                      ]
+                    },
+                    "MDF_Part02LoseHPRatio": {
+                      "operator": "Variables[0] ({[Skill01[13]]}) || RETURN",
+                      "displayLines": "{[Skill01[13]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[13]]}"
+                      ]
+                    },
+                    "MDF_DamageStanceValue": {
+                      "operator": "Variables[0] ({[Skill01[14]]}) || RETURN",
+                      "displayLines": "{[Skill01[14]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[14]]}"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1085270043\">Enemy_W4_HearsePart_IF_Passive</a>",
+                  "valuePerStack": {
+                    "MDF_BPRecoverValue": {
+                      "operator": "Variables[0] ({[Skill01[8]]}) || RETURN",
+                      "displayLines": "{[Skill01[8]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[8]]}"
+                      ]
+                    },
+                    "MDF_BraveBonusLayer": {
+                      "operator": "Variables[0] ({[Skill01[9]]}) || RETURN",
+                      "displayLines": "{[Skill01[9]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[9]]}"
+                      ]
+                    },
+                    "MDF_Part01LoseHPRatio": {
+                      "operator": "Variables[0] ({[Skill01[12]]}) || RETURN",
+                      "displayLines": "{[Skill01[12]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[12]]}"
+                      ]
+                    },
+                    "MDF_Part02LoseHPRatio": {
+                      "operator": "Variables[0] ({[Skill01[13]]}) || RETURN",
+                      "displayLines": "{[Skill01[13]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[13]]}"
+                      ]
+                    },
+                    "MDF_DamageStanceValue": {
+                      "operator": "Variables[0] ({[Skill01[14]]}) || RETURN",
+                      "displayLines": "{[Skill01[14]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[14]]}"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Nikador: Self}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>"
+          },
+          "passed": [
+            {
+              "name": "Define Modifier-Specific Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Nikador: Self}}"
+              },
+              "modifierName": "<a class=\"gModGreen\" id=\"837336870\">Enemy_W4_Nikadory_IF_UltraChargeP2</a>",
+              "variableName": "_DoubleChargeStateFlag",
+              "value": 1
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4014021_Monster_W4_Hearse_IF_Ability01_Part01": {
+      "fileName": "4014021_Monster_W4_Hearse_IF_Ability01_Part01",
+      "childAbilityList": [
+        "4014021_Monster_W4_Hearse_IF_Ability01_Camera",
+        "4014021_Monster_W4_Hearse_IF_Ability01_Part01",
+        "4014021_Monster_W4_Hearse_IF_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W4_Hearse_IF_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Hostile Entities(AOE)}}"
+      },
       "references": []
     }
   }

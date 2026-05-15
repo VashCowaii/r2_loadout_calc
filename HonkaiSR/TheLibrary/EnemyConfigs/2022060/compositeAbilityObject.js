@@ -3,11 +3,44 @@ const compositeAbilityObject = {
   "fullCharacterName": 2022060,
   "trimCharacterName": 2022060,
   "abilityList": [
+    "2022060_Modifiers",
     "2022060_Monster_W2_Abomi03_Ability01_Part02",
-    "2022060_Monster_W2_Abomi03_Ability01_Part01",
-    "2022060_Modifiers"
+    "2022060_Monster_W2_Abomi03_Ability01_Part01"
   ],
   "abilityObject": {
+    "2022060_Modifiers": {
+      "fileName": "2022060_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
+          "stackType": "Replace",
+          "execute": [
+            {
+              "eventTrigger": "Turn End [Anyone]",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "2022060_Monster_W2_Abomi03_Ability01_Part02": {
       "fileName": "2022060_Monster_W2_Abomi03_Ability01_Part02",
       "abilityType": null,
@@ -718,39 +751,6 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "targetIsVariable": true
       },
-      "references": []
-    },
-    "2022060_Modifiers": {
-      "fileName": "2022060_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1176239641\">Monster_W2_Abomi03_HitTarget</a>",
-          "stackType": "Replace",
-          "execute": [
-            {
-              "eventTrigger": "Turn End [Anyone]",
-              "execute": [
-                {
-                  "name": "Remove Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1176239641\">Monster_W2_Abomi03_HitTarget</a>"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

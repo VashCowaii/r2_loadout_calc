@@ -11,12 +11,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__163974997\">Monster_W2_Xuanlu_10_RL_LowHP</a>",
-      "stackData": [
-        "MDF_LowHPRatio"
-      ],
-      "latentQueue": [
-        "InsertCheck"
-      ],
       "execute": [
         {
           "eventTrigger": "HP Change [Owner]",
@@ -108,9 +102,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__113542848\">Enemy_W2_Xuanlu_10_SecondPhase</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -263,9 +254,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1146705485\">Enemy_W2_Xuanlu_10_MinionMark_4</a>",
-      "stackData": [
-        "MDF_MaxMinionCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -354,9 +342,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1029262152\">Enemy_W2_Xuanlu_10_MinionMark_3</a>",
-      "stackData": [
-        "MDF_MaxMinionCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -445,9 +430,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1046039771\">Enemy_W2_Xuanlu_10_MinionMark_2</a>",
-      "stackData": [
-        "MDF_MaxMinionCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -536,9 +518,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1062817390\">Enemy_W2_Xuanlu_10_MinionMark_1</a>",
-      "stackData": [
-        "MDF_MaxMinionCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -628,10 +607,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__938780665\">Enemy_W2_Xuanlu_10_EnergyDrain</a>[<span class=\"descriptionNumberColor\">Synwood Renewal</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MMonster_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio",
-        "MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
-      ],
       "description": "In every turn, restores HP equal to <span class=\"descriptionNumberColor\">MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio</span> of the unit's Max HP.",
       "type": "Buff",
       "effectName": "Synwood Renewal",
@@ -649,11 +624,11 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MMonster_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio) || RETURN",
-                "displayLines": "MMonster_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio",
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__309) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__309",
                 "constants": [],
                 "variables": [
-                  "MMonster_W2_Xuanlu_10_EnergyDrain_TriggerHealRatio"
+                  "ENEMIES_OBJECT_UNUSED__309"
                 ]
               },
               "formula": "Heal from Healer's MaxHP"
@@ -677,11 +652,11 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio) || RETURN",
-                "displayLines": "MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio",
+                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__310) || RETURN",
+                "displayLines": "ENEMIES_OBJECT_UNUSED__310",
                 "constants": [],
                 "variables": [
-                  "MMonster_W2_Xuanlu_10_EnergyDrain_TurnHealRatio"
+                  "ENEMIES_OBJECT_UNUSED__310"
                 ]
               },
               "formula": "Heal from Healer's MaxHP"
@@ -750,9 +725,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1367728749\">Enemy_W2_Xuanlu_10_RL_RageHandler</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Created [Anyone]",

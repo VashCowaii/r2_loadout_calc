@@ -3,14 +3,143 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012010,
   "trimCharacterName": 5012010,
   "abilityList": [
+    "5012010_Modifiers",
     "5012010_Monster_W3_TV_03_Ability02_Part02",
     "5012010_Monster_W3_TV_03_Ability02_Part01",
     "5012010_Monster_W3_TV_03_PassiveAbilityInitiate",
     "5012010_Monster_W3_TV_03_Ability01_Part02",
-    "5012010_Monster_W3_TV_03_Ability01_Part01",
-    "5012010_Modifiers"
+    "5012010_Monster_W3_TV_03_Ability01_Part01"
   ],
   "abilityObject": {
+    "5012010_Modifiers": {
+      "fileName": "5012010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1044186345\">Enemy_W3_TV_03_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
+          "modifierFlags": [
+            "STAT_CTRL",
+            "DisableAction",
+            "STAT_CTRL_Shake",
+            "IdleStun",
+            "STAT_Stun_Effect"
+          ],
+          "description": "Action delayed. Cannot take actions for a certain number of turns.",
+          "type": "Debuff",
+          "effectName": "Strong Reverberation",
+          "statusName": "Strong Reverberation",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Current Turn Is",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Assign Advance/Delay to Current Ability Use",
+                      "adjustmentValue": {
+                        "operator": "Variables[0] (MDF_ActionDelayRatio) || RETURN",
+                        "displayLines": "MDF_ActionDelayRatio",
+                        "constants": [],
+                        "variables": [
+                          "MDF_ActionDelayRatio"
+                        ]
+                      },
+                      "adjustmentType": "Advance"
+                    },
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "advanceType": "Set",
+                      "multiAdd": "MDF_ActionDelayRatio"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "advanceType": "Set",
+                      "multiAdd": "MDF_ActionDelayRatio"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target Exists",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "living": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Pre-action Phase]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "compareType": "=",
+                    "value2": 1,
+                    "valueType": "LifeTime"
+                  },
+                  "passed": [
+                    "Abort Modifier Phase Action"
+                  ],
+                  "failed": [
+                    {
+                      "name": "UI Display Event (On Entity)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "popUpText": "Engulfed in Strong Reverberations"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "5012010_Monster_W3_TV_03_Ability02_Part02": {
       "fileName": "5012010_Monster_W3_TV_03_Ability02_Part02",
       "abilityType": null,
@@ -425,138 +554,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "5012010_Modifiers": {
-      "fileName": "5012010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1044186345\">Enemy_W3_TV_03_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]",
-          "modifierFlags": [
-            "STAT_CTRL",
-            "DisableAction",
-            "STAT_CTRL_Shake",
-            "IdleStun",
-            "STAT_Stun_Effect"
-          ],
-          "stackData": [
-            "MDF_ActionDelayRatio"
-          ],
-          "description": "Action delayed. Cannot take actions for a certain number of turns.",
-          "type": "Debuff",
-          "effectName": "Strong Reverberation",
-          "statusName": "Strong Reverberation",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Current Turn Is",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Assign Advance/Delay to Current Ability Use",
-                      "adjustmentValue": {
-                        "operator": "Variables[0] (MDF_ActionDelayRatio) || RETURN",
-                        "displayLines": "MDF_ActionDelayRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_ActionDelayRatio"
-                        ]
-                      },
-                      "adjustmentType": "Advance"
-                    },
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "MDF_ActionDelayRatio"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Action Advance/Delay",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "advanceType": "Set",
-                      "multiAdd": "MDF_ActionDelayRatio"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "living": true
-                  }
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Turn [Pre-action Phase]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "compareType": "=",
-                    "value2": 1,
-                    "valueType": "LifeTime"
-                  },
-                  "passed": [
-                    "Abort Modifier Phase Action"
-                  ],
-                  "failed": [
-                    {
-                      "name": "UI Display Event (On Entity)",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "popUpText": "Engulfed in Strong Reverberations"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier"
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

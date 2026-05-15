@@ -3,14 +3,86 @@ const compositeAbilityObject = {
   "fullCharacterName": 8012010,
   "trimCharacterName": 8012010,
   "abilityList": [
+    "8012010_Modifiers",
     "8012010_Monster_AML_Minion02_Passive01",
     "8012010_Monster_AML_Minion02_Ability02_Part02",
     "8012010_Monster_AML_Minion02_Ability02_Part01",
     "8012010_Monster_AML_Minion02_Ability01_Part02",
-    "8012010_Monster_AML_Minion02_Ability01_Part01",
-    "8012010_Modifiers"
+    "8012010_Monster_AML_Minion02_Ability01_Part01"
   ],
   "abilityObject": {
+    "8012010_Modifiers": {
+      "fileName": "8012010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1582498358\">Monster_AML_Minion02_Effect</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
+          "stackType": "Replace",
+          "lifeCyclePhaseAllowed": "ModifierPhase1End",
+          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
+          "type": "Buff",
+          "effectName": "SPD Boost",
+          "statusName": "SPD Boost",
+          "duration": 1,
+          "stackLimit": 3,
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
+            "displayLines": "ModifierStackLayer",
+            "constants": [],
+            "variables": [
+              "ModifierStackLayer"
+            ]
+          },
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "ModifierLayers",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
+                    "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_SpeedAddedRatio_PerLayer",
+                      "ModifierLayers"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8012010_Monster_AML_Minion02_Passive01": {
       "fileName": "8012010_Monster_AML_Minion02_Passive01",
       "skillTrigger": "PassiveSkill01",
@@ -521,82 +593,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8012010_Modifiers": {
-      "fileName": "8012010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1582498358\">Monster_AML_Minion02_Effect</a>",
-          "execute": [
-            {
-              "eventTrigger": "When Constructing Modifier"
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1771820857\">Monster_AML_Minion02_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
-          "stackType": "Replace",
-          "lifeCyclePhaseAllowed": "ModifierPhase1End",
-          "stackData": [
-            "MDF_SpeedAddedRatio_PerLayer",
-            "MDF_MaxLayer"
-          ],
-          "description": "Increases SPD by <span class=\"descriptionNumberColor\">MDF_SpeedAddedRatio_PerLayer</span>. Can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
-          "type": "Buff",
-          "effectName": "SPD Boost",
-          "statusName": "SPD Boost",
-          "duration": 1,
-          "stackLimit": 3,
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] (ModifierStackLayer) || RETURN",
-            "displayLines": "ModifierStackLayer",
-            "constants": [],
-            "variables": [
-              "ModifierStackLayer"
-            ]
-          },
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Modifier Values",
-                  "valueType": "Layer",
-                  "variableName": "ModifierLayers",
-                  "multiplier": 1
-                },
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SpeedAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
-                    "displayLines": "(MDF_SpeedAddedRatio_PerLayer * ModifierLayers)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SpeedAddedRatio_PerLayer",
-                      "ModifierLayers"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

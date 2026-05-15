@@ -3,316 +3,16 @@ const compositeAbilityObject = {
   "fullCharacterName": 3012040,
   "trimCharacterName": 3012040,
   "abilityList": [
+    "3012040_Modifiers",
     "3012040_Monster_W3_Ghost_AbilityP01_ForceKill",
     "3012040_Monster_W3_Ghost_AbilityP01",
     "3012040_Monster_W3_Ghost_Ability02_Part02",
     "3012040_Monster_W3_Ghost_Ability02_Part01",
     "3012040_Monster_W3_Ghost_Ability01_InsertAbility",
     "3012040_Monster_W3_Ghost_Ability01_Part02",
-    "3012040_Monster_W3_Ghost_Ability01_Part01",
-    "3012040_Modifiers"
+    "3012040_Monster_W3_Ghost_Ability01_Part01"
   ],
   "abilityObject": {
-    "3012040_Monster_W3_Ghost_AbilityP01_ForceKill": {
-      "fileName": "3012040_Monster_W3_Ghost_AbilityP01_ForceKill",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "abortInsertedAbilities": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012040_Monster_W3_Ghost_AbilityP01": {
-      "fileName": "3012040_Monster_W3_Ghost_AbilityP01",
-      "childAbilityList": [
-        "3012040_Monster_W3_Ghost_AbilityP01",
-        "3012040_Monster_W3_Ghost_AbilityP01_ForceKill"
-      ],
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-262946192\">Enemy_W3_Ghost_SelfDestory_Controller</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1834399911\">Enemy_W3_Ghost_ConfineHit_Controller</a>"
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012040_Monster_W3_Ghost_Ability02_Part02": {
-      "fileName": "3012040_Monster_W3_Ghost_Ability02_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012040_Monster_W3_Ghost_Ability02_Part01": {
-      "fileName": "3012040_Monster_W3_Ghost_Ability02_Part01",
-      "childAbilityList": [
-        "3012040_Monster_W3_Ghost_Ability02_Part01",
-        "3012040_Monster_W3_Ghost_Ability02_Part02"
-      ],
-      "skillTrigger": "Skill02",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Ghost_Ability02_Part02",
-          "isTrigger": true
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012040_Monster_W3_Ghost_Ability01_InsertAbility": {
-      "fileName": "3012040_Monster_W3_Ghost_Ability01_InsertAbility",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]"
-        },
-        {
-          "name": "UI Display Event (On Entity)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "popUpText": "Deception's Crown dispelled"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "3012040_Monster_W3_Ghost_Ability01_Part02": {
-      "fileName": "3012040_Monster_W3_Ghost_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-2076203496\">Enemy_W3_Ghost_Ability01_MuteDieSound</a>"
-        },
-        {
-          "name": "Force Entity Death",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Monster Rank",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "compareType": ">=",
-            "value2": 3
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Flag",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "flagName": "STAT_CTRL"
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
-            }
-          ]
-        },
-        {
-          "name": "Remove Modifier Behavior Flag(s)",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "flagNames": []
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
-          "valuePerStack": {
-            "MDF_HealPercentage_BeAttacked": {
-              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-              "displayLines": "{[SkillP01[0]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[0]]}"
-              ]
-            },
-            "MDF_ElementDamageTakenUp": {
-              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
-              "displayLines": "{[SkillP01[1]]}",
-              "constants": [],
-              "variables": [
-                "{[SkillP01[1]]}"
-              ]
-            }
-          }
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Ability Target(ST)}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
-          },
-          "passed": [
-            {
-              "name": "UI Display Event (On Entity)",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "popUpText": "Debuff dispelled"
-            }
-          ]
-        },
-        {
-          "name": "Remove Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "3012040_Monster_W3_Ghost_Ability01_Part01": {
-      "fileName": "3012040_Monster_W3_Ghost_Ability01_Part01",
-      "childAbilityList": [
-        "3012040_Monster_W3_Ghost_Ability01_Part01",
-        "3012040_Monster_W3_Ghost_Ability01_Part02",
-        "3012040_Monster_W3_Ghost_Ability01_Camera",
-        "3012040_Monster_W3_Ghost_Ability01_InsertAbility"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W3_Ghost_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "Select Ally Target"
-      },
-      "references": []
-    },
     "3012040_Modifiers": {
       "fileName": "3012040_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -608,10 +308,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
           "modifierFlags": [],
           "useEntitySnapshot": true,
-          "stackData": [
-            "MDF_HealPercentage_BeAttacked",
-            "MDF_ElementDamageTakenUp"
-          ],
           "description": "Restores HP after being attacked but additionally gains Physical and Fire-Type Weaknesses and takes increased Break DMG. This state will be dispelled after being Weakness Broken.",
           "type": "Other",
           "effectName": "Deception's Crown",
@@ -951,6 +647,306 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_AbilityP01_ForceKill": {
+      "fileName": "3012040_Monster_W3_Ghost_AbilityP01_ForceKill",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "abortInsertedAbilities": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_AbilityP01": {
+      "fileName": "3012040_Monster_W3_Ghost_AbilityP01",
+      "childAbilityList": [
+        "3012040_Monster_W3_Ghost_AbilityP01",
+        "3012040_Monster_W3_Ghost_AbilityP01_ForceKill"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-262946192\">Enemy_W3_Ghost_SelfDestory_Controller</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1834399911\">Enemy_W3_Ghost_ConfineHit_Controller</a>"
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_Ability02_Part02": {
+      "fileName": "3012040_Monster_W3_Ghost_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_Ability02_Part01": {
+      "fileName": "3012040_Monster_W3_Ghost_Ability02_Part01",
+      "childAbilityList": [
+        "3012040_Monster_W3_Ghost_Ability02_Part01",
+        "3012040_Monster_W3_Ghost_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Ghost_Ability02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_Ability01_InsertAbility": {
+      "fileName": "3012040_Monster_W3_Ghost_Ability01_InsertAbility",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]"
+        },
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "popUpText": "Deception's Crown dispelled"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_Ability01_Part02": {
+      "fileName": "3012040_Monster_W3_Ghost_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"780210766\">Enemy_W3_Ghost_EffectController</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-2076203496\">Enemy_W3_Ghost_Ability01_MuteDieSound</a>"
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Monster Rank",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "compareType": ">=",
+            "value2": 3
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "flagName": "STAT_CTRL"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
+            }
+          ]
+        },
+        {
+          "name": "Remove Modifier Behavior Flag(s)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "flagNames": []
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-892811864\">Enemy_W3_Ghost_Ability01_Parasitize_Target</a>[<span class=\"descriptionNumberColor\">Deception's Crown</span>]",
+          "valuePerStack": {
+            "MDF_HealPercentage_BeAttacked": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            },
+            "MDF_ElementDamageTakenUp": {
+              "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+              "displayLines": "{[SkillP01[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[1]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
+          },
+          "passed": [
+            {
+              "name": "UI Display Event (On Entity)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "popUpText": "Debuff dispelled"
+            }
+          ]
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1556449697\">Enemy_W3_Ghost_DebuffDispeled</a>"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "3012040_Monster_W3_Ghost_Ability01_Part01": {
+      "fileName": "3012040_Monster_W3_Ghost_Ability01_Part01",
+      "childAbilityList": [
+        "3012040_Monster_W3_Ghost_Ability01_Part01",
+        "3012040_Monster_W3_Ghost_Ability01_Part02",
+        "3012040_Monster_W3_Ghost_Ability01_Camera",
+        "3012040_Monster_W3_Ghost_Ability01_InsertAbility"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W3_Ghost_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Ally Target"
+      },
       "references": []
     }
   }

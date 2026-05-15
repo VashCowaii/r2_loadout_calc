@@ -252,9 +252,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-771052398\">Enemy_W2_Beast01_04_AbilityP02_GoldBlood_Enhance</a>[<span class=\"descriptionNumberColor\">Hemotort Stain</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_GoldBloodDOTDamageRatio"
-      ],
       "description": "After attacking, applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
       "type": "Other",
       "effectName": "Hemotort Stain",

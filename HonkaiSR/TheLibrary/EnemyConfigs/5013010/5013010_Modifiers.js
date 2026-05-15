@@ -158,9 +158,6 @@ const configAbility = {
         "STAT_Stun_Effect",
         "STAT_CTRL"
       ],
-      "latentQueue": [
-        "Index_Caster"
-      ],
       "description": "Cannot take action. At the start of the turn, if \"%CasterName\" is not in Charging state, \"%CasterName\" will initiate a Sweep attack.",
       "type": "Debuff",
       "effectName": "Revelry",
@@ -201,9 +198,6 @@ const configAbility = {
         "STAT_SpeedUp"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",
       "effectName": "SPD Boost",
@@ -252,9 +246,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_PropertyValue"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "Vulnerability",

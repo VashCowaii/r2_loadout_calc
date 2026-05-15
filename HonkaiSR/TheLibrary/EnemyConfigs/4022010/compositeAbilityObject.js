@@ -3,14 +3,31 @@ const compositeAbilityObject = {
   "fullCharacterName": 4022010,
   "trimCharacterName": 4022010,
   "abilityList": [
+    "4022010_Modifiers",
     "4022010_Monster_W4_Harpy_PassiveAbility",
     "4022010_Monster_W4_Harpy_Ability02_Part02",
     "4022010_Monster_W4_Harpy_Ability02_Part01",
     "4022010_Monster_W4_Harpy_Ability01_Part02",
-    "4022010_Monster_W4_Harpy_Ability01_Part01",
-    "4022010_Modifiers"
+    "4022010_Monster_W4_Harpy_Ability01_Part01"
   ],
   "abilityObject": {
+    "4022010_Modifiers": {
+      "fileName": "4022010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1157837417\">Monster_W4_Harpy_Ability02_Mark</a>"
+        }
+      ],
+      "references": []
+    },
     "4022010_Monster_W4_Harpy_PassiveAbility": {
       "fileName": "4022010_Monster_W4_Harpy_PassiveAbility",
       "skillTrigger": "PassiveSkill02",
@@ -314,23 +331,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "4022010_Modifiers": {
-      "fileName": "4022010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1157837417\">Monster_W4_Harpy_Ability02_Mark</a>"
-        }
-      ],
       "references": []
     }
   }

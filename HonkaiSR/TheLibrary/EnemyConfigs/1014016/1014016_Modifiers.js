@@ -53,9 +53,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__670022041\">Monster_W1_SvarogPart_RL_ListenBreak_Modifier</a>",
-      "latentQueue": [
-        "CanUseSkill03"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier"
@@ -133,9 +130,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1762407654\">Monster_W1_Svarog_RL_Control_OnPart_Modifier</a>",
-      "stackData": [
-        "Modifier_DamagePercentage"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed"
@@ -608,9 +602,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "PassiveSkill02_P2_HPRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -892,9 +883,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_DefenceDown"
       ],
-      "stackData": [
-        "MDF_DefenceAddedRatio_PerLayer"
-      ],
       "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio_PerLayer</span>. This effect can stack.",
       "type": "Debuff",
       "effectName": "DEF Reduction",
@@ -946,9 +934,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1119505279\">Monster_W1_Svarog_RL_AttackUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",
       "type": "Buff",
       "effectName": "DMG Boost",

@@ -495,12 +495,6 @@ const configAbility = {
         "DispelPriorityHigh",
         "RemoveWhenCasterDead"
       ],
-      "latentQueue": [
-        "BattleEventFlag",
-        "MindControlCount",
-        "ShowHint04",
-        "FinalPhase"
-      ],
       "description": "Triggered at the next Revelation. Can be removed before that action.",
       "type": "Debuff",
       "effectName": "Psychological Suggestion",
@@ -554,9 +548,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
-      "stackData": [
-        "MDF_DamageUpRatio_PerLayer"
-      ],
       "duration": 1,
       "execute": [
         {

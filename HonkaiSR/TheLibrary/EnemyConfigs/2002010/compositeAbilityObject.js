@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 2002010,
   "trimCharacterName": 2002010,
   "abilityList": [
+    "2002010_Modifiers",
     "2002010_Monster_W2_Knight01_Passive01",
     "2002010_Monster_W2_Knight01_PassiveAbility_Insert_Part01",
     "2002010_Monster_W2_Knight01_Ability03_Part02",
@@ -10,10 +11,21 @@ const compositeAbilityObject = {
     "2002010_Monster_W2_Knight01_Ability02_Part02",
     "2002010_Monster_W2_Knight01_Ability02_Part01",
     "2002010_Monster_W2_Knight01_Ability01_Part02",
-    "2002010_Monster_W2_Knight01_Ability01_Part01",
-    "2002010_Modifiers"
+    "2002010_Monster_W2_Knight01_Ability01_Part01"
   ],
   "abilityObject": {
+    "2002010_Modifiers": {
+      "fileName": "2002010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [],
+      "references": []
+    },
     "2002010_Monster_W2_Knight01_Passive01": {
       "fileName": "2002010_Monster_W2_Knight01_Passive01",
       "childAbilityList": [
@@ -353,18 +365,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "2002010_Modifiers": {
-      "fileName": "2002010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [],
       "references": []
     }
   }

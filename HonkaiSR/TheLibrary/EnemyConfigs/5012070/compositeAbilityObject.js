@@ -3,170 +3,13 @@ const compositeAbilityObject = {
   "fullCharacterName": 5012070,
   "trimCharacterName": 5012070,
   "abilityList": [
+    "5012070_Modifiers",
     "5012070_Monster_W5_VtuberPart01_VtuberAbility03",
     "5012070_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
     "5012070_Monster_W5_VtuberPart01_Ability01_Part02",
-    "5012070_Monster_W5_VtuberPart01_Ability01_Part01",
-    "5012070_Modifiers"
+    "5012070_Monster_W5_VtuberPart01_Ability01_Part01"
   ],
   "abilityObject": {
-    "5012070_Monster_W5_VtuberPart01_VtuberAbility03": {
-      "fileName": "5012070_Monster_W5_VtuberPart01_VtuberAbility03",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
-      },
-      "references": []
-    },
-    "5012070_Monster_W5_VtuberPart01_PassiveAbilityInitiate": {
-      "fileName": "5012070_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
-      "skillTrigger": "PassiveSkill",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-1733040515\">Enemy_W5_VtuberPart01_00</a>"
-        },
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"361111729\">Enemy_W5_VtuberPart01_Eff</a>"
-        },
-        {
-          "name": "Change Character Transformation",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "phase": "Phase02"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "5012070_Monster_W5_VtuberPart01_Ability01_Part02": {
-      "fileName": "5012070_Monster_W5_VtuberPart01_Ability01_Part02",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Has Modifier",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]"
-          },
-          "passed": [
-            {
-              "name": "Define Custom Variable with Copy",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
-              "variable": "MDF_InsertTrigger",
-              "target2": null,
-              "variable2": "MDF_InsertTrigger"
-            },
-            {
-              "name": "SWITCH",
-              "switchValue": {
-                "operator": "Variables[0] (MDF_InsertTrigger) || RETURN",
-                "displayLines": "MDF_InsertTrigger",
-                "constants": [],
-                "variables": [
-                  "MDF_InsertTrigger"
-                ]
-              },
-              "caseEvents": [
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 0
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 1,
-                  "execute": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1989512262\">Enemy_W5_VtuberPart01_Charge_Insert</a>"
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": 2
-                }
-              ],
-              "defaultEvents": []
-            }
-          ]
-        },
-        "Trigger: Ability End"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "references": []
-    },
-    "5012070_Monster_W5_VtuberPart01_Ability01_Part01": {
-      "fileName": "5012070_Monster_W5_VtuberPart01_Ability01_Part01",
-      "childAbilityList": [
-        "5012070_Monster_W5_VtuberPart01_Ability01_Part01",
-        "5012070_Monster_W5_VtuberPart01_Ability01_Part02",
-        "5012070_Monster_W5_VtuberPart01_Ability01_Camera"
-      ],
-      "skillTrigger": "Skill01",
-      "abilityType": "Basic ATK",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Trigger Ability",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "ability": "Monster_W5_VtuberPart01_Ability01_Part02",
-          "isTrigger": true
-        },
-        "Deleted bullshit"
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Ability Target List}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "5012070_Modifiers": {
       "fileName": "5012070_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -696,6 +539,163 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1733040515\">Enemy_W5_VtuberPart01_00</a>"
         }
       ],
+      "references": []
+    },
+    "5012070_Monster_W5_VtuberPart01_VtuberAbility03": {
+      "fileName": "5012070_Monster_W5_VtuberPart01_VtuberAbility03",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "5012070_Monster_W5_VtuberPart01_PassiveAbilityInitiate": {
+      "fileName": "5012070_Monster_W5_VtuberPart01_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkill",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1733040515\">Enemy_W5_VtuberPart01_00</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"361111729\">Enemy_W5_VtuberPart01_Eff</a>"
+        },
+        {
+          "name": "Change Character Transformation",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "phase": "Phase02"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "5012070_Monster_W5_VtuberPart01_Ability01_Part02": {
+      "fileName": "5012070_Monster_W5_VtuberPart01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]"
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Copy",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
+              "variable": "MDF_InsertTrigger",
+              "target2": null,
+              "variable2": "MDF_InsertTrigger"
+            },
+            {
+              "name": "SWITCH",
+              "switchValue": {
+                "operator": "Variables[0] (MDF_InsertTrigger) || RETURN",
+                "displayLines": "MDF_InsertTrigger",
+                "constants": [],
+                "variables": [
+                  "MDF_InsertTrigger"
+                ]
+              },
+              "caseEvents": [
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 0
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 1,
+                  "execute": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1989512262\">Enemy_W5_VtuberPart01_Charge_Insert</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 2
+                }
+              ],
+              "defaultEvents": []
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "5012070_Monster_W5_VtuberPart01_Ability01_Part01": {
+      "fileName": "5012070_Monster_W5_VtuberPart01_Ability01_Part01",
+      "childAbilityList": [
+        "5012070_Monster_W5_VtuberPart01_Ability01_Part01",
+        "5012070_Monster_W5_VtuberPart01_Ability01_Part02",
+        "5012070_Monster_W5_VtuberPart01_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W5_VtuberPart01_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     }
   }

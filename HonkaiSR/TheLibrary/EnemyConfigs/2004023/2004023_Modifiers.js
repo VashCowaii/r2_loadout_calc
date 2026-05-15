@@ -497,9 +497,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-794932920\">Enemy_W2_Yanqing_AbilityP01_EnterBattleToast</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SkillP01_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -886,9 +883,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1004973880\">Enemy_W2_Yanqing_Standard_IceDamageTakenUp</a>",
       "stackType": "Replace",
       "modifierFlags": [],
-      "stackData": [
-        "IceTakenRatioPerLayer"
-      ],
       "addStacksPerTrigger": 1,
       "execute": [
         {
@@ -1000,9 +994,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__640085401\">Enemy_W2_Yanqing_IF_Ability02_AdditiveToast</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "Action Choice Window [Owner]",
@@ -1125,13 +1116,6 @@ const configAbility = {
       "modifierFlags": [
         "MuteBreak",
         "MuteHitH"
-      ],
-      "stackData": [
-        "MDF_SpeedDelta",
-        "MDF_StanceDamage"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
       ],
       "execute": [
         {
@@ -2348,9 +2332,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-886573966\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag04_Secret</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2415,9 +2396,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1561049731\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag03_Secret</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2482,9 +2460,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-32322596\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag02_Secret</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2549,9 +2524,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1210540257\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag01_Secret</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -2615,31 +2587,19 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-451920887\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag04</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-451920887\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag04</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-435143268\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag03</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-435143268\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag03</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-418365649\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag02</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-418365649\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag02</a>"
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-401588030\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag01</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-401588030\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointTag01</a>"
     },
     {
       "name": "Modifier Construction",
@@ -2661,13 +2621,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__633075881\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointLogic01_Secret</a>",
       "stackType": "Multiple",
-      "stackData": [
-        "CurrentWeakPoint",
-        "MDF_SwordDelayP2"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3541,13 +3494,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-171629456\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPointLogic01</a>",
       "stackType": "Multiple",
-      "stackData": [
-        "CurrentWeakPoint",
-        "MDF_SwordDelayP2"
-      ],
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -4186,9 +4132,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__536339724\">Enemy_W2_Yanqing_IF_Ability02_SwordWeakPoint01</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
@@ -4202,11 +4145,10 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__209334766\">Enemy_W2_Yanqing_IF_Ability02_NewWeakPoint</a>",
       "latentQueue": [
-        "MDF_SwordDelayP2",
-        "W2_Yanqing_00_SwordStep",
         "W2_Yanqing_W2_Yanqing_IF_AttackFlag",
         "W2_Yanqing_IF_SwordNumber",
-        "ChangeWeakPointFlag"
+        "ChangeWeakPointFlag",
+        "W2_Yanqing_00_SwordStep"
       ]
     },
     {
@@ -4223,11 +4165,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-543718560\">Enemy_W2_Yanqing_IF_Ability02_SwitchWeakPoint</a>",
-      "latentQueue": [
-        "MonsterPhase",
-        "BreakDarkTeamFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-543718560\">Enemy_W2_Yanqing_IF_Ability02_SwitchWeakPoint</a>"
     },
     {
       "name": "Modifier Construction",
@@ -4247,9 +4185,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2138840050\">Enemy_W2_Yanqing_IF_AbilityP01_ChangePhaseController</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SkillP01_InsertFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
@@ -4373,9 +4308,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2056400991\">Enemy_W2_Yanqing_IF_Ability02_SwordEnhance</a>",
-      "latentQueue": [
-        "W2_Yanqing_00_SwordStep"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

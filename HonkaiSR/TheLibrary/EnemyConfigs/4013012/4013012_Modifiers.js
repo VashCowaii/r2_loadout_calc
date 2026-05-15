@@ -1139,14 +1139,6 @@ const configAbility = {
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
-      "stackData": [
-        "MDF_MaxLayer",
-        "MDF_CrackedEffect",
-        "MDF_CrackedDamage",
-        "MDF_DamageResistance",
-        "MDF_CrackedDamageAfter",
-        "MDF_ModifySP"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn [Action-End Phase]",
@@ -2476,9 +2468,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-351944820\">MModifier_Monster_W4_Claymore_Ability04_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
       "stackType": "Replace",
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_DamageTakenUpRatio"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>.",
       "type": "Debuff",
       "effectName": "Vulnerability",

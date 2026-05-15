@@ -3,6 +3,7 @@ const compositeAbilityObject = {
   "fullCharacterName": 8033011,
   "trimCharacterName": 8033011,
   "abilityList": [
+    "8033011_Modifiers",
     "8033011_Monster_W1_Mecha03_02_RLElite_Passive01",
     "8033011_Monster_W1_Mecha03_02_RLElite_Ability07_Part02",
     "8033011_Monster_W1_Mecha03_02_RLElite_Ability07_Part01",
@@ -17,10 +18,98 @@ const compositeAbilityObject = {
     "8033011_Monster_W1_Mecha03_02_RLElite_Ability02_Part02",
     "8033011_Monster_W1_Mecha03_02_RLElite_Ability02_Part01",
     "8033011_Monster_W1_Mecha03_02_RLElite_Ability01_Part02",
-    "8033011_Monster_W1_Mecha03_02_RLElite_Ability01_Part01",
-    "8033011_Modifiers"
+    "8033011_Monster_W1_Mecha03_02_RLElite_Ability01_Part01"
   ],
   "abilityObject": {
+    "8033011_Modifiers": {
+      "fileName": "8033011_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variableName": "SoldierCount02",
+                  "value": -1,
+                  "max": 2
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variableName": "SoldierCount02",
+                  "value": 1,
+                  "max": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variableName": "SoldierCount01",
+                  "value": -1,
+                  "max": 2
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Added Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variableName": "SoldierCount01",
+                  "value": 1,
+                  "max": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8033011_Monster_W1_Mecha03_02_RLElite_Passive01": {
       "fileName": "8033011_Monster_W1_Mecha03_02_RLElite_Passive01",
       "skillTrigger": "PassiveSkillInitiate",
@@ -2064,105 +2153,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8033011_Modifiers": {
-      "fileName": "8033011_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__769637727\">Enemy_W1_Mecha03_02_RLElite_ReFreshMark</a>"
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1792031086\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier02</a>",
-          "latentQueue": [
-            "isRefreshFlag",
-            "SoldierCount02",
-            "SoldierCount01"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variableName": "SoldierCount02",
-                  "value": -1,
-                  "max": 2
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variableName": "SoldierCount02",
-                  "value": 1,
-                  "max": 2
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1775253467\">Enemy_W1_Mecha03_02_RLElite_CountingSoldier01</a>",
-          "latentQueue": [
-            "isRefreshFlag",
-            "SoldierCount02",
-            "SoldierCount01"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Modifier Destroyed/Removed",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variableName": "SoldierCount01",
-                  "value": -1,
-                  "max": 2
-                }
-              ]
-            },
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Level Entity}}"
-                  },
-                  "variableName": "SoldierCount01",
-                  "value": 1,
-                  "max": 2
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }

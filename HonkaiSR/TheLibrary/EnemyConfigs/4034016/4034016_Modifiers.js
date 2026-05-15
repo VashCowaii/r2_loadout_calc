@@ -1368,9 +1368,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__948149510\">Enemy_W4_FireProwler_IF_NormalState</a>",
-      "stackData": [
-        "MDF_CurrentStance"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -2126,13 +2123,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__31704267\">Enemy_W4_FireProwler_IF_Limit_EffectBody</a>",
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout",
-        "AIFlag",
-        "SkillFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2142,11 +2132,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__920196339\">Enemy_W4_FireProwler_IF_Limit_EnvirEffect</a>",
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2288,16 +2273,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557758203\">Enemy_W4_FireProwler_IF_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_SpeedAddedRatio",
-        "MDF_LM_DamageStanceValue"
-      ],
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout"
-      ],
       "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
       "type": "Other",
       "effectName": "Shackle Shatter",
@@ -3527,10 +3502,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__742116058\">Enemy_W4_FireProwler_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Reduction</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "Deathrattle_Count",
-        "Deathrattle"
-      ],
       "description": "Each stack reduces DMG received by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. 1 stack is lost after 1 \"Long-Shattered Vessel\" is defeated.",
       "type": "Buff",
       "statusName": "DMG Reduction",
@@ -3720,9 +3691,6 @@ const configAbility = {
       "stackType": "Multiple",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "stackData": [
-        "MDF_RallyHP"
       ]
     },
     {

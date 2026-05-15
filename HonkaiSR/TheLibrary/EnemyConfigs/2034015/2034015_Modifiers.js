@@ -36,9 +36,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-518764402\">W2_LycanKing_BattleScore1</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -97,9 +94,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2068184553\">Enemy_W2_LycanKing_RageEffect</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ],
       "execute": [
         {
@@ -277,10 +271,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__563066245\">Enemy_W2_LycanKing_BloodRageMark</a>[<span class=\"descriptionNumberColor\">Irate</span>]",
       "stackType": "Replace",
-      "latentQueue": [
-        "MDF_BloodRageCountRemain",
-        "MDF_BloodRageCountBefore"
-      ],
       "description": "Hoolay currently possesses <span class=\"descriptionNumberColor\">MDF_Layer</span> stack(s) of Irate.",
       "type": "Other",
       "effectName": "Irate",
@@ -410,12 +400,6 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead"
       ],
-      "stackData": [
-        "MDF_SpeedAddRatio"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "When entering Moon Rage, the effect of Moon Rage will be Enhanced.",
       "type": "Buff",
       "effectName": "Lupitoxin",
@@ -435,9 +419,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__545997619\">Monster_W2_LycanKing_Revive</a>",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

@@ -3,16 +3,75 @@ const compositeAbilityObject = {
   "fullCharacterName": 4043010,
   "trimCharacterName": 4043010,
   "abilityList": [
+    "4043010_Modifiers",
     "4043010_Monster_W3_TV_01_PassiveAbility",
     "4043010_Monster_W4_Herta_WeaponControl",
     "4043010_Monster_W4_Herta_Ability01_Part02_Insert",
     "4043010_Monster_W4_Herta_Ability01_Part01_Insert",
     "4043010_Monster_W4_Herta_Ability01_Part02",
     "4043010_Monster_W4_Herta_Ability01_Part01",
-    "4043010_Modifiers",
     "4043010_Functions"
   ],
   "abilityObject": {
+    "4043010_Modifiers": {
+      "fileName": "4043010_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-690947002\">Monster_W4_Herta_Basic</a>",
+          "modifierFlags": [
+            "MuteHitFly",
+            "MuteHitH",
+            "Endurance"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 0.01
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W4_Herta_Ability01_Part01_Insert",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "priorityTag": "EnemyCreated",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ],
+              "priorityLevel": -70
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-947845666\">Monster_W4_Herta_SummonMark</a>"
+        }
+      ],
+      "references": []
+    },
     "4043010_Monster_W3_TV_01_PassiveAbility": {
       "fileName": "4043010_Monster_W3_TV_01_PassiveAbility",
       "skillTrigger": "PassiveSkill02",
@@ -819,65 +878,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "4043010_Modifiers": {
-      "fileName": "4043010_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-690947002\">Monster_W4_Herta_Basic</a>",
-          "modifierFlags": [
-            "MuteHitFly",
-            "MuteHitH",
-            "Endurance"
-          ],
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Lock HP",
-                  "threshold": 0.01
-                }
-              ]
-            },
-            {
-              "eventTrigger": "Enter Battle",
-              "execute": [
-                {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W4_Herta_Ability01_Part01_Insert",
-                  "abilitySource": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "abilityTarget": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "priorityTag": "EnemyCreated",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
-                }
-              ],
-              "priorityLevel": -70
-            }
-          ]
-        },
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-947845666\">Monster_W4_Herta_SummonMark</a>"
-        }
-      ],
       "references": []
     },
     "4043010_Functions": {

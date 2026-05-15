@@ -567,10 +567,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1146816007\">Enemy_XP_Minion04_02_Fengrao_Minion</a>",
-      "stackData": [
-        "_HealRatio",
-        "_LoseRatio"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",

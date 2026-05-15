@@ -59,18 +59,11 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__758016972\">Monster_XP_Elite02_01_Ability04_Mark</a>",
-      "latentQueue": [
-        "Monster_XP_Elite02_01_Skill07Attack"
-      ],
       "duration": 1
     },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1764090904\">Monster_XP_Elite02_01_DamageReduce</a>",
-      "stackData": [
-        "MDF_DamageReduceRatio",
-        "MDF_ConfineChance"
-      ],
       "execute": [
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -143,10 +136,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-412122860\">Monster_XP_Elite02_01_Battle_02</a>",
-      "latentQueue": [
-        "Monster_XP_Elite02_01_AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__-412122860\">Monster_XP_Elite02_01_Battle_02</a>"
     },
     {
       "name": "Modifier Construction",
@@ -1108,11 +1098,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__615554356\">Monster_XP_Elite02_01_RemoveEnergyLayer</a>",
-      "latentQueue": [
-        "Monster_XP_Elite02_01_AIFlag",
-        "ChargeFlag",
-        "Monster_XP_Elite02_01_AIFlag_02"
-      ],
       "duration": 1,
       "execute": [
         {

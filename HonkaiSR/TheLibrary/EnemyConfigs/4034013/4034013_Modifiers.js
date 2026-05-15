@@ -23,15 +23,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1932074311\">Enemy_W4_FireProwler_IF_LockStance</a>",
-      "latentQueue": [
-        "InsertFlag_LMin",
-        "InsertFlag_LMout",
-        "ChangePhase",
-        "AIFlag",
-        "Assist_Flag",
-        "Phase_Flag",
-        "LMCountDown"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -785,9 +776,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__41194297\">Enemy_W4_FireProwler_01_IF_NextWave</a>",
       "modifierFlags": [
         "KeepOnDeathrattle"
-      ],
-      "latentQueue": [
-        "AIFlag"
       ]
     },
     {
@@ -1380,9 +1368,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__948149510\">Enemy_W4_FireProwler_IF_NormalState</a>",
-      "stackData": [
-        "MDF_CurrentStance"
-      ],
       "execute": [
         {
           "eventTrigger": "Entity Death [Anyone]",
@@ -1464,15 +1449,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2128816741\">Enemy_W4_FireProwler_01_IF_Activated03</a>",
-      "stackData": [
-        "SummonIndex",
-        "MDF_ActionDelay1_Weight",
-        "MDF_ActionDelay1",
-        "MDF_ActionDelay2_Weight",
-        "MDF_ActionDelay2",
-        "MDF_ActionDelay3_Weight",
-        "MDF_ActionDelay3"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -1561,9 +1537,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2095261503\">Enemy_W4_FireProwler_01_IF_Activated01</a>[<span class=\"descriptionNumberColor\">Mutual Sacrifice</span>]",
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "When \"%CasterName\" uses \"Demise's Storm,\" also use \"Demise's Storm\" at the same time.",
       "type": "Other",
       "effectName": "Simultaneously use \"Demise's Storm\"",
@@ -1985,9 +1958,6 @@ const configAbility = {
       "modifierFlags": [
         "Deathrattle"
       ],
-      "stackData": [
-        "MDF_LoseHPRatio"
-      ],
       "description": "After receiving a killing blow, if \"%CasterName\" is in the \"Shackle Shatter\" state, be instantly resummoned and enter the \"Shackled\" state, but this causes \"%CasterName\" to lose 1 \"Calamity Power\" stack and a certain proportion of HP.",
       "type": "Other",
       "effectName": "Shackled",
@@ -2153,13 +2123,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__31704267\">Enemy_W4_FireProwler_IF_Limit_EffectBody</a>",
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout",
-        "AIFlag",
-        "SkillFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2169,11 +2132,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__920196339\">Enemy_W4_FireProwler_IF_Limit_EnvirEffect</a>",
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout"
-      ],
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier"
@@ -2315,16 +2273,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557758203\">Enemy_W4_FireProwler_IF_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
-      "stackData": [
-        "MDF_AttackAddedRatio",
-        "MDF_SpeedAddedRatio",
-        "MDF_LM_DamageStanceValue"
-      ],
-      "latentQueue": [
-        "LMCountDown",
-        "InsertFlag_LMin",
-        "InsertFlag_LMout"
-      ],
       "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
       "type": "Other",
       "effectName": "Shackle Shatter",

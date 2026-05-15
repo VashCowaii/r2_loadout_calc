@@ -470,12 +470,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1121915816\">Enemy_W3_Sam_01_TakenDamage</a>[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
-      "stackData": [
-        "MDF_DamageTakenUpRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "description": "DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio_PerLayer</span>. This effect is dispelled when this unit recovers from Weakness Break state.",
       "type": "Debuff",
       "effectName": "Vulnerability",
@@ -1068,9 +1062,6 @@ const configAbility = {
       "modifierFlags": [
         "STAT_AITargetLowerPriority"
       ],
-      "stackData": [
-        "MDF_SpeedUpRatio"
-      ],
       "description": "SPD increases by <span class=\"descriptionNumberColor\">MDF_SpeedUpRatio</span>.",
       "type": "Buff",
       "effectName": "Enhance",
@@ -1439,11 +1430,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-16655209\">Enemy_W3_Sam_01_Shield</a>[<span class=\"descriptionNumberColor\">Whirling Carapace</span>]",
-      "stackData": [
-        "MDF_ShieldThreshold",
-        "MDF_HealPercentage",
-        "MDF_MaxRallyHPRatio"
-      ],
       "description": "After \"Harbinger of Death: Swarm Nightmare\" is attacked, a portion of the reduced HP is converted into \"Corrosion.\" When \"Harbinger of Death: Swarm Nightmare\" uses \"Primordial Tide, Swarm of Death,\" this unit will restore HP equal to the amount of Corrosion.",
       "type": "Buff",
       "statusName": "Whirling Carapace",

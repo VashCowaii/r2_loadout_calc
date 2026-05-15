@@ -3,83 +3,11 @@ const compositeAbilityObject = {
   "fullCharacterName": 4012061,
   "trimCharacterName": 4012061,
   "abilityList": [
+    "4012061_Modifiers",
     "4012061_Monster_W4_HearsePart_IF_AbilityP02",
-    "4012061_Monster_W4_HearsePart_IF_AbilityP01",
-    "4012061_Modifiers"
+    "4012061_Monster_W4_HearsePart_IF_AbilityP01"
   ],
   "abilityObject": {
-    "4012061_Monster_W4_HearsePart_IF_AbilityP02": {
-      "fileName": "4012061_Monster_W4_HearsePart_IF_AbilityP02",
-      "skillTrigger": "SkillP02",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
-    "4012061_Monster_W4_HearsePart_IF_AbilityP01": {
-      "fileName": "4012061_Monster_W4_HearsePart_IF_AbilityP01",
-      "skillTrigger": "SkillP01",
-      "abilityType": "Talent",
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{Nikador: Self}}"
-            },
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 2
-          },
-          "passed": [
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-12591899\">Enemy_W4_HearsePart_IF_Part2HP</a>"
-            }
-          ]
-        }
-      ],
-      "whenAdded": [
-        {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Caster}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"1839151946\">Enemy_W4_HearsePart_IF_MuteSpeed</a>"
-        }
-      ],
-      "targetObjectData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "realTargetData": {
-        "primaryTarget": "{{Caster}}"
-      },
-      "references": []
-    },
     "4012061_Modifiers": {
       "fileName": "4012061_Modifiers",
       "abilityType": "Char. Modifiers",
@@ -6069,6 +5997,78 @@ const compositeAbilityObject = {
           ]
         }
       ],
+      "references": []
+    },
+    "4012061_Monster_W4_HearsePart_IF_AbilityP02": {
+      "fileName": "4012061_Monster_W4_HearsePart_IF_AbilityP02",
+      "skillTrigger": "SkillP02",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "4012061_Monster_W4_HearsePart_IF_AbilityP01": {
+      "fileName": "4012061_Monster_W4_HearsePart_IF_AbilityP01",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"637369732\">Monster_W4_HearsePart_Effect</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Nikador: Self}}"
+            },
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-12591899\">Enemy_W4_HearsePart_IF_Part2HP</a>"
+            }
+          ]
+        }
+      ],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1839151946\">Enemy_W4_HearsePart_IF_MuteSpeed</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
       "references": []
     }
   }
