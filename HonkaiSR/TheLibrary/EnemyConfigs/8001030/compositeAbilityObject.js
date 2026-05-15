@@ -3,15 +3,61 @@ const compositeAbilityObject = {
   "fullCharacterName": 8001030,
   "trimCharacterName": 8001030,
   "abilityList": [
+    "8001030_Modifiers",
     "8001030_Monster_XP_Minion03_PassiveAbility_Insert_Part01",
     "8001030_Monster_XP_Minion03_Passive01",
     "8001030_Monster_XP_Minion03_Ability02_Part02",
     "8001030_Monster_XP_Minion03_Ability02_Part01",
     "8001030_Monster_XP_Minion03_Ability01_Part02",
-    "8001030_Monster_XP_Minion03_Ability01_Part01",
-    "8001030_Modifiers"
+    "8001030_Monster_XP_Minion03_Ability01_Part01"
   ],
   "abilityObject": {
+    "8001030_Modifiers": {
+      "fileName": "8001030_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+          "stackType": "ReplaceByCaster",
+          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
+          "duration": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
+                    "displayLines": "MDF_AttackAddedRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_AttackAddedRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
     "8001030_Monster_XP_Minion03_PassiveAbility_Insert_Part01": {
       "fileName": "8001030_Monster_XP_Minion03_PassiveAbility_Insert_Part01",
       "abilityType": null,
@@ -519,55 +565,6 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
-      "references": []
-    },
-    "8001030_Modifiers": {
-      "fileName": "8001030_Modifiers",
-      "abilityType": "Char. Modifiers",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1727496698\">Monster_XP_Minion03_Attack</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-          "stackType": "ReplaceByCaster",
-          "stackData": [
-            "MDF_AttackAddedRatio"
-          ],
-          "description": "ATK +<span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span>.",
-          "type": "Buff",
-          "effectName": "ATK Boost",
-          "statusName": "ATK Boost",
-          "duration": 1,
-          "execute": [
-            {
-              "eventTrigger": "When Stacking/Receiving Modifier",
-              "execute": [
-                {
-                  "name": "Stack Target Stat Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
-                    "displayLines": "MDF_AttackAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AttackAddedRatio"
-                    ]
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "references": []
     }
   }
