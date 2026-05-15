@@ -12,12 +12,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__889164751\">Enemy_W3_SundayPart_IF_WeaknessShare</a>",
       "stackType": "Multiple",
-      "stackData": [
-        "MDF_WeaknessShare"
-      ],
-      "latentQueue": [
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -336,10 +330,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1909411233\">Enemy_W3_SundayPart_IF_AlreadyWeaknessShare</a>",
-      "latentQueue": [
-        "AIFlag"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__1909411233\">Enemy_W3_SundayPart_IF_AlreadyWeaknessShare</a>"
     },
     {
       "name": "Modifier Construction",
