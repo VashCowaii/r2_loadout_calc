@@ -408,12 +408,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1771971765\">Enemy_W4_IronTombCore_Main_P2PhaseController</a>",
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag",
-        "_ChangePhaseEnd"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -800,10 +794,7 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__7842154\">Enemy_W4_IronTombCore_Main_LoseMark</a>",
-      "latentQueue": [
-        "_PhaseLock"
-      ]
+      "for": "<a class=\"gModGreen\" id=\"mod__7842154\">Enemy_W4_IronTombCore_Main_LoseMark</a>"
     },
     {
       "name": "Modifier Construction",
@@ -813,10 +804,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-642581629\">Enemy_W4_IronTombCore_Main_BanUltra</a>",
       "latentQueue": [
-        "_ChangePhaseEnd",
-        "AIFlag",
-        "InsertCheck",
-        "_PhaseCheck",
         "InsertCheck02",
         "_HpLockCheck"
       ],
@@ -896,9 +883,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__895432020\">Enemy_W4_IronTombCore_Main_DisableAction</a>",
       "modifierFlags": [
         "DisableAction"
-      ],
-      "latentQueue": [
-        "_PhaseLock"
       ]
     },
     {
@@ -2024,12 +2008,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__464716604\">Enemy_W4_IronTombCore_Main_P2PhaseDamageReduceController</a>",
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag",
-        "_ChangePhaseEnd"
-      ],
       "execute": [
         {
           "eventTrigger": "Turn End [Anyone]",
@@ -3431,10 +3409,6 @@ const configAbility = {
         "DisableAction"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_SPConvert",
-        "MDF_ActionDelayConvert"
-      ],
       "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
       "type": "Debuff",
       "effectName": "Action Lock",
@@ -5133,11 +5107,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",

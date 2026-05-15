@@ -974,12 +974,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1529513281\">Enemy_W4_IronTombCore_Main_P3_AvatarDamageAdded_Listener</a>",
-      "latentQueue": [
-        "_IsWeek",
-        "_PhaseCheck",
-        "_Trigger1",
-        "_Trigger2"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1047,14 +1041,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-470333037\">Enemy_W4_IronTombCore_Main_P3_HpRatioAdded</a>",
-      "latentQueue": [
-        "_IsWeek",
-        "_PhaseCheck",
-        "_Trigger1",
-        "_Trigger2",
-        "AIFlag",
-        "_WorldLevel"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1131,10 +1117,6 @@ const configAbility = {
         "DisableAction"
       ],
       "useEntitySnapshot": true,
-      "stackData": [
-        "MDF_SPConvert",
-        "MDF_ActionDelayConvert"
-      ],
       "description": "This target's action value will not change because of the end of any target's turn. This target can reduce the \"Unlock Value\" through action advance effects or Energy regeneration. When the \"Unlock Value\" is depleted, this state will be dispelled.",
       "type": "Debuff",
       "effectName": "Action Lock",
@@ -1606,16 +1588,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1914142012\">MModifier_W4_IronTombCore_BlackBP</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_BPMaxCost",
-        "MDF_DirtyHPRatio_PerLayer"
-      ],
-      "latentQueue": [
-        "_PhaseLock",
-        "#PassiveSkill01_P3_Percentage",
-        "#PassiveSkill01_P2_Percentage",
-        "#PassiveSkill01_P1_Percentage"
-      ],
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
@@ -1673,11 +1645,11 @@ const configAbility = {
             {
               "name": "Stack Skill Point Lock-Out",
               "amount": {
-                "operator": "Variables[0] (_PhaseLock) || RETURN",
-                "displayLines": "_PhaseLock",
+                "operator": "Variables[0] (FREEVAR) || RETURN",
+                "displayLines": "FREEVAR",
                 "constants": [],
                 "variables": [
-                  "_PhaseLock"
+                  "FREEVAR"
                 ]
               }
             },
@@ -2826,11 +2798,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
-      "latentQueue": [
-        "_PhaseCheck",
-        "InsertCheck",
-        "AIFlag"
-      ],
       "execute": [
         {
           "eventTrigger": "Waiting for Healing in Limbo",
