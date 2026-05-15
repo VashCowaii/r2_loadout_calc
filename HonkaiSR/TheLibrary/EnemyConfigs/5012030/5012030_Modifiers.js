@@ -20,11 +20,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__256670650\">Enemy_W5_JK_Power</a>[<span class=\"descriptionNumberColor\">Book-Smart</span>]",
-      "stackData": [
-        "MDF_AllDamageTypeAddedRatio",
-        "MDF_AllDamageReduce",
-        "MDF_ThresholdValue"
-      ],
       "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_AllDamageTypeAddedRatio</span> and decreases DMG taken by <span class=\"descriptionNumberColor\">MDF_AllDamageReduce</span>. After receiving Elation DMG or when the target team gains Punchline and reaches <span class=\"descriptionNumberColor\">MDF_ThresholdValue</span> points, the effect is dispelled.",
       "type": "Buff",
       "effectName": "Book-Smart",
@@ -214,9 +209,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__56977717\">Enemy_W5_JK_ElationPointListener</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MDF_ThresholdValue"
-      ],
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
