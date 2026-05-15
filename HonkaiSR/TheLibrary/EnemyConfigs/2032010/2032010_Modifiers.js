@@ -167,9 +167,6 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1905621078\">Enemy_W2_Lycan_RageControllerV2</a>",
       "stackType": "Replace",
-      "stackData": [
-        "MaxAttackCount"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
