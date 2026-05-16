@@ -6,19 +6,29 @@
     </ul>
 </div> -->
 
-<!-- <div>
-    <h1>May 13th, 2026 - THE QUEUE PRIORITY UPDATE</h1>
+<div>
+    <h1>May 16th, 2026 - THE UPDATE WITH LOTS OF STUFF</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
+        <li>Added hit-specific energy gain splits.
+            <ul>
+                <li>For the longest time I have always batch collected energy gains in an attack and applied them all at once when the attack had finished, but that isn't actually how the game works. Despite that, I could get away with it because there were no characters that actually needed such granular energy monitoring, until now...</li>
+                <li>With the advent of Evanescia, we have our first character that TRULY needs EVERY instance of energy gain to be accurate at ANY point. The biggest point of pain is her ultimate since even the tiny gain of 5 she gets from her first hitsplit before the bounces and elation procs, matters now since it will scale Certified Banger and in turn the elation procs within the same attack.</li>
+                <li>This DOES result in a slowdown on the optimizer, however if you look under optimizations you'll notice I've been working on things to alleviate the impact of this change. Right now we're at about a net neutral due to the optimizations.</li>
+                <li>Given that we went from all character always batch collecting energy gains in their attacks, to suddenly getting hit-specific gains, I may have missed something obscure so if you think I did please let me know so I can fix it.</li>
+                <li>As painful as it is, it allows Evanescia to be fully accurate. The things we do for math.</li>
+            </ul>
+        </li>
         <li>Added the following new characters:
             <ul>
                 <li>Evanescia</li>
-                <li>Silver Wolf LV.999</li>
+                <!-- <li>Silver Wolf LV.999</li> -->
                 <li>Trailblazer - Elation</li>
                 <li>Welt (Novaflare)</li>
                 <li>Firefly (Novaflare)</li>
                 <li>Seele (Novaflare)</li>
+                <li>Huohuo (Novaflare)</li>
             </ul>
         </li>
         <li>Added the following new relics:
@@ -34,7 +44,11 @@
             </ul>
         </li>
         <li>Added a display for Elation Skill: Participant ID stats to display on the trace trees for Elation characters.</li>
-        <li>Reworked the queue priority system for Follow-Up Attacks and Extra Turns, to be more like the game. Functionally this shouldn't result in any significant changes in the calc or sim for you guys, but there can be some wonky edge cases that wouldn't quite match with the game.</li>
+        <li>Reworked the queue priority system for Follow-Up Attacks and Extra Turns, to be more like the game. Functionally this shouldn't result in any significant changes in the calc or sim for you guys, but there can be some wonky edge cases that wouldn't quite match with the game.
+            <ul>
+                <li>NOTE: this is still in progress, it's a remarkably fucking complicated system. It is largely set, but there will be tweaks here and there over the coming weak as I get everything finalized.</li>
+            </ul>
+        </li>
         <li>Every single FUA, inserted action, ult, or extra turn was assigned a numeric priority value, for which I am not going to list out here, HOWEVER, there were some changes to actions that already existed that I will list here:
             <ul>
                 <li>Updated the following character/entity actions to be Inserted Ability uses instead of what were prior treated as glorified extra turns:
@@ -55,6 +69,13 @@
             </ul>
         </li>
         <li>Updated Hyacine's Ica injection priority tag.</li>
+        <li>Added the following new conditions for TARGET LOGIC, not usage conditions:
+            <ul>
+                <li>FILTER: Path - To allow you to filter a pool of targets for or against a given path.</li>
+            </ul>
+        </li>
+        <li>Added Huohuo's E4 dynamic healing bonus. Even for the old Huohuo, we just didn't have this in there.</li>
+        <li>Updated Huohuo's default rotation conditions to account for entites with special energy so it doesn't brick the ult by default when paired with someone like that.</li>
 
         <h4>Fixes</h4>
         <li>Fixed an issue where user defined conditions utilizing the "Character: State" condition if targeting a character other than the character using it, could fail to recognize some state values properly.</li>
@@ -72,7 +93,25 @@
             </ul>
         </li>
         <li>Fixed an issue where when applying buffs/debuffs to batches of targets, in a crazy specific scenario it could fail to renew a buff when it already existed on the target.</li>
-        
+        <li>Fixed an issue where the following healing bonuses were applied as generalized outgoing healing, rather than being classified as on-hit. This doesn't matter for anything in the game RIGHT NOW but will matter later if healing bonuses are ever used for conversions:
+            <ul>
+                <li>Luocha's E2 bonus</li>
+                <li>Lynx' E1 bonus</li>
+                <li>Natasha's talent bonus</li>
+            </ul>
+        </li>
+        <li>Fixed issues with Gallagher's Break Effect to Healing conversion:
+            <ul>
+                <li>The outgoing healing bonus wasn't being considered as converted, now it is.</li>
+                <li>The conversion could include converted break effect bonuses, which it shouldn't. There aren't any present in the calculator right now anyways so this doesn't matter, but know that justice was done this day.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Topaz' skill energy was given after the DMG was dealt, instead of before. This ability is unique as far as energy-giving attacks go, as the energy isn't distributed in splits but rather all at once.</li>
+        <li>Fixed a visual-only issue where when importing characters via UID, if they had 2pc/2pc body sets, in some cases it could trigger a warning as if you had no complete sets.</li>
+        <li>Fixed an issue where LC Night of Fright wasn't applying the ATK stacks on every instance of healing provided by an owner, and was instead only applying the buff to healing applied by the lightcone itself.</li>
+
+        <h4>Maslow Adjustments</h4>
+        <li>Removed the Physical tag from Yao Guang. Generally worthless stat to have on her, was only put there before I knew more about elation.</li>
 
         <h4>Optimization</h4>
         Pretty much everything mentioned here is in the context of the optimizer, as I try to make it run faster.
@@ -84,12 +123,12 @@
                 <li>RES multiplier</li>
                 <li>Healing Bonuses</li>
                 <li>Shield Bonuses</li>
-                <li>Break Effect</li>
+                <li>Break/Superbreak multiplier</li>
             </ul>
         </li>
         <li>Deprecated statsOnTurn as a method/checks, since literally only the old version of Black Swan used it and nobody is ever going to be using the blazing dumpster fire that is the old version.</li>
     </ul>
-</div> -->
+</div>
 <div>
     <h1>May 14th, 2026</h1>
     A very big calc update should be coming out in the next couple days, I know it's been a minute since I updated but it's because I've been workin on some much bigger changes.
