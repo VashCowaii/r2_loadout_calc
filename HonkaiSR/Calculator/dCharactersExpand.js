@@ -1,4 +1,795 @@
 let characters = {
+  "Welt": {
+    "internalID": 1004,
+    "name": "Welt",
+    "path": "Nihility",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 509.355,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "1100401",
+        "name": "Legacy of Honor",
+        "rank": 1,
+        "desc": "After using a Skill or Ultimate to hit a target in the \"Weightless\" state, additionally deals 1 instance of Imaginary Additional DMG equal to 40% of the Ultimate's DMG multiplier. This effect can only be triggered once per target per attack.",
+        "icon": "icon/skill/1100_rank1.png",
+        "paramsEido": [
+          0.4
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "1100402",
+        "name": "Conflux of Stars",
+        "rank": 2,
+        "desc": "When his Talent is triggered, Welt regenerates 3 Energy.",
+        "icon": "icon/skill/1100_rank2.png",
+        "paramsEido": [
+          3
+        ]
+      },
+      {
+        "id": "1100403",
+        "name": "Prayer of Peace",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1100_skill.png"
+      },
+      {
+        "id": "1100404",
+        "name": "Appellation of Justice",
+        "rank": 4,
+        "desc": "Enemy targets in the \"Weightless\" state have their All-Type RES reduced by 30%.",
+        "icon": "icon/skill/1100_rank4.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "1100405",
+        "name": "Power of Kindness",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1100_ultimate.png"
+      },
+      {
+        "id": "1100406",
+        "name": "Prospect of Glory",
+        "rank": 6,
+        "desc": "When using Skill or Ultimate to hit an enemy target in the Slow state, increases CRIT Rate by 30% and CRIT DMG by 60% for the DMG dealt.",
+        "icon": "icon/skill/1100_rank6.png",
+        "paramsEido": [
+          0.3,
+          0.6
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Gravity Suppression": {
+          "variant1": {
+            "skillID": 1100401,
+            "trigger": "Skill01",
+            "name": "Gravity Suppression",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Advanced_Welt_00_Skill01_Camera",
+              "Avatar_Advanced_Welt_00_Skill01_Phase01",
+              "Avatar_Advanced_Welt_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Edge of the Void": {
+          "variant1": {
+            "skillID": 1100402,
+            "trigger": "Skill02",
+            "name": "Edge of the Void",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and additionally deals DMG 4 times, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to one random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                0.65,
+                0.1,
+                2
+              ],
+              "2": [
+                0.396,
+                0.66,
+                0.1,
+                2
+              ],
+              "3": [
+                0.432,
+                0.67,
+                0.1,
+                2
+              ],
+              "4": [
+                0.468,
+                0.68,
+                0.1,
+                2
+              ],
+              "5": [
+                0.504,
+                0.69,
+                0.1,
+                2
+              ],
+              "6": [
+                0.54,
+                0.7,
+                0.1,
+                2
+              ],
+              "7": [
+                0.585,
+                0.7125,
+                0.1,
+                2
+              ],
+              "8": [
+                0.63,
+                0.725,
+                0.1,
+                2
+              ],
+              "9": [
+                0.675,
+                0.7375,
+                0.1,
+                2
+              ],
+              "10": [
+                0.72,
+                0.75,
+                0.1,
+                2
+              ],
+              "11": [
+                0.756,
+                0.76,
+                0.1,
+                2
+              ],
+              "12": [
+                0.792,
+                0.77,
+                0.1,
+                2
+              ],
+              "13": [
+                0.828,
+                0.78,
+                0.1,
+                2
+              ],
+              "14": [
+                0.864,
+                0.79,
+                0.1,
+                2
+              ],
+              "15": [
+                0.9,
+                0.8,
+                0.1,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Welt_00_Skill02_Camera",
+              "Avatar_Advanced_Welt_00_Skill02_Phase01",
+              "Avatar_Advanced_Welt_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Synthetic Black Hole": {
+          "variant1": {
+            "skillID": 1100403,
+            "trigger": "Skill03",
+            "name": "Synthetic Black Hole",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to all enemies. Has a #3[i]% base chance to Imprison hit enemy targets for 1 turn.\\nWhile Imprisoned, enemy targets have their actions delayed by #2[f1]% and their SPD reduced by #4[i]%. After using his Ultimate, inflicts the \"Weightless\" state on all enemies. When targets in \"Weightless\" state get attacked, their actions are delayed by #5[f1]%. This effect can trigger up to #6[i] time(s) per target per turn. \"Weightless\" lasts for #7[i] turn(s).",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.9,
+                0.06,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "2": [
+                0.96,
+                0.066,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "3": [
+                1.02,
+                0.072,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "4": [
+                1.08,
+                0.078,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "5": [
+                1.14,
+                0.084,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "6": [
+                1.2,
+                0.09,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "7": [
+                1.275,
+                0.0975,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "8": [
+                1.35,
+                0.105,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "9": [
+                1.425,
+                0.1125,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "10": [
+                1.5,
+                0.12,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "11": [
+                1.56,
+                0.126,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "12": [
+                1.62,
+                0.132,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "13": [
+                1.68,
+                0.138,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "14": [
+                1.74,
+                0.144,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ],
+              "15": [
+                1.8,
+                0.15,
+                1,
+                0.1,
+                0.04,
+                8,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Welt_00_Skill03_Camera",
+              "Avatar_Advanced_Welt_00_Skill03_EnterReady",
+              "Avatar_Advanced_Welt_00_Skill03_Phase01",
+              "Avatar_Advanced_Welt_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Time Distortion": {
+          "variant1": {
+            "skillID": 1100404,
+            "trigger": "SkillP01",
+            "name": "Time Distortion",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Enemy targets in the \"Weightless\" state have their DEF reduced by #2[i]% and their SPD reduced by #3[i]%. When Welt attacks an enemy that is already Slowed, he additionally deals Imaginary Additional DMG equal to #1[i]% of his ATK to the enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.4,
+                0.05
+              ],
+              "2": [
+                0.55,
+                0.4,
+                0.05
+              ],
+              "3": [
+                0.6,
+                0.4,
+                0.05
+              ],
+              "4": [
+                0.65,
+                0.4,
+                0.05
+              ],
+              "5": [
+                0.7,
+                0.4,
+                0.05
+              ],
+              "6": [
+                0.75,
+                0.4,
+                0.05
+              ],
+              "7": [
+                0.8125,
+                0.4,
+                0.05
+              ],
+              "8": [
+                0.875,
+                0.4,
+                0.05
+              ],
+              "9": [
+                0.9375,
+                0.4,
+                0.05
+              ],
+              "10": [
+                1,
+                0.4,
+                0.05
+              ],
+              "11": [
+                1.05,
+                0.4,
+                0.05
+              ],
+              "12": [
+                1.1,
+                0.4,
+                0.05
+              ],
+              "13": [
+                1.15,
+                0.4,
+                0.05
+              ],
+              "14": [
+                1.2,
+                0.4,
+                0.05
+              ],
+              "15": [
+                1.25,
+                0.4,
+                0.05
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Welt_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Gravitational Imprisonment": {
+          "variant1": {
+            "skillID": 1100407,
+            "trigger": "SkillMaze",
+            "name": "Gravitational Imprisonment",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Welt's Technique, create a Special Dimension that lasts for #4[i] second(s). Enemies in this Special Dimension have their movement speed reduced by #5[i]%. After entering combat with enemies in the Special Dimension, there is a #1[i]% base chance to Imprison the enemies for 1 turn.\\nImprisoned enemies have their actions delayed by #2[i]% and SPD reduced by #3[i]%. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.2,
+                0.1,
+                15,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Advanced_Welt_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1004_basic_atk.png",
+        "skillRef": {
+          "skillName": "Gravity Suppression",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1004_skill.png",
+        "skillRef": {
+          "skillName": "Edge of the Void",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1004_ultimate.png",
+        "skillRef": {
+          "skillName": "Synthetic Black Hole",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1004_talent.png",
+        "skillRef": {
+          "skillName": "Time Distortion",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1004_technique.png",
+        "skillRef": {
+          "skillName": "Gravitational Imprisonment",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Retribution",
+        "icon": "icon/skill/1004_skilltree1.png",
+        "desc": "When ally targets attack targets under the \"Weightless\" state, their DMG dealt increases by #1[i]%. This effect stacks up to #2[i] times and lasts for #3[i] turn(s). At the start of the battle, Welt regenerates #4[i] Energy.",
+        "params": [
+          0.1,
+          10,
+          2,
+          30
+        ],
+        "traceAbility": "Welt_Advanced_Welt_Trace01"
+      },
+      "Point07": {
+        "name": "Judgment",
+        "icon": "icon/skill/1004_skilltree2.png",
+        "desc": "When Welt uses Basic ATK or Skill, additionally deals 1 extra instance of Additional DMG to the enemy target. The Additional DMG dealt when using Basic ATK is equal to #1[i]% of Basic ATK DMG multiplier. The Additional DMG dealt when using Skill is equal to #2[i]% of Skill DMG multiplier.",
+        "params": [
+          0.8,
+          1.2
+        ],
+        "traceAbility": "Welt_Advanced_Welt_Trace02",
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Punishment",
+        "icon": "icon/skill/1004_skilltree3.png",
+        "desc": "When Welt's Effect Hit Rate is greater than #1[i]%, for every #2[i]% that exceeds this value, increases ATK by #3[i]%, up to a maximum increase of #4[i]%. When using Ultimate, additionally restores #5[i] Energy.",
+        "params": [
+          0.4,
+          0.1,
+          0.2,
+          0.8,
+          5
+        ],
+        "traceAbility": "Welt_Advanced_Welt_Trace03",
+        "extraEffects": {
+          "Effect Hit Rate": {
+            "desc": "Effect Hit Rate increases the chance of applying debuffs to enemy targets. \\nA higher Effect Hit Rate will result in higher chances of successfully applying a debuff."
+          }
+        }
+      },
+      "Point09": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1004.png",
+    "preview": "image/character_preview/1004.png",
+    "portrait": "image/character_portrait/1004.png",
+    "bannerOffsets": [
+      12,
+      -32,
+      0.61,
+      12,
+      -32,
+      0.61,
+      12,
+      -32,
+      0.61
+    ],
+    "isBuffed": true
+  },
   "Kafka": {
     "internalID": 1005,
     "name": "Kafka",
@@ -658,6 +1449,16 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Torture",
+        "icon": "icon/skill/1005_skilltree1.png",
+        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
+        "params": [
+          0.75,
+          1
+        ],
+        "traceAbility": "Kafka_Advanced_Kafka_Trace01"
+      },
       "Point07": {
         "name": "Plunder",
         "icon": "icon/skill/1005_skilltree2.png",
@@ -666,6 +1467,19 @@ let characters = {
           5
         ],
         "traceAbility": "Kafka_Advanced_Kafka_Trace02"
+      },
+      "Point08": {
+        "name": "Thorns",
+        "icon": "icon/skill/1005_skilltree3.png",
+        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
+        "params": [
+          0.8
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
       },
       "Point09": {
         "name": "ATK Boost",
@@ -735,29 +1549,6 @@ let characters = {
         "icon": "icon/property/IconAttack.png",
         "stats": {
           "ATK%": 0.08
-        }
-      },
-      "Point06": {
-        "name": "Torture",
-        "icon": "icon/skill/1005_skilltree1.png",
-        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
-        "params": [
-          0.75,
-          1
-        ],
-        "traceAbility": "Kafka_Advanced_Kafka_Trace01"
-      },
-      "Point08": {
-        "name": "Thorns",
-        "icon": "icon/skill/1005_skilltree3.png",
-        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
-        "params": [
-          0.8
-        ],
-        "extraEffects": {
-          "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
-          }
         }
       }
     },
@@ -1477,6 +2268,40 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Generate",
+        "icon": "icon/skill/1006_skilltree1.png",
+        "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy's Weakness gets broken, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
+        "params": [
+          1,
+          1
+        ],
+        "traceAbility": "SilverWolf_Advanced_Silwolf_Trace01",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Inject",
+        "icon": "icon/skill/1006_skilltree2.png",
+        "desc": "When the battle starts, immediately regenerates #1[i] Energy. When Silver Wolf's turn starts, she regenerates #2[i] Energy.",
+        "params": [
+          20,
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Side Note",
+        "icon": "icon/skill/1006_skilltree3.png",
+        "desc": "For every #1[i]% Effect Hit Rate that Silver Wolf has, additionally increases her ATK by #2[i]%, up to a max of #3[i]%.",
+        "params": [
+          0.1,
+          0.1,
+          0.5
+        ]
+      },
       "Point09": {
         "name": "ATK Boost",
         "icon": "icon/property/IconAttack.png",
@@ -1546,40 +2371,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point06": {
-        "name": "Generate",
-        "icon": "icon/skill/1006_skilltree1.png",
-        "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy's Weakness gets broken, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
-        "params": [
-          1,
-          1
-        ],
-        "traceAbility": "SilverWolf_Advanced_Silwolf_Trace01",
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Inject",
-        "icon": "icon/skill/1006_skilltree2.png",
-        "desc": "When the battle starts, immediately regenerates #1[i] Energy. When Silver Wolf's turn starts, she regenerates #2[i] Energy.",
-        "params": [
-          20,
-          5
-        ]
-      },
-      "Point08": {
-        "name": "Side Note",
-        "icon": "icon/skill/1006_skilltree3.png",
-        "desc": "For every #1[i]% Effect Hit Rate that Silver Wolf has, additionally increases her ATK by #2[i]%, up to a max of #3[i]%.",
-        "params": [
-          0.1,
-          0.1,
-          0.5
-        ]
       }
     },
     "hasSummon": false,
@@ -2755,7 +3546,7 @@ let characters = {
         "traceAbility": "Herta_Herta_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -3348,7 +4139,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -3539,6 +4330,669 @@ let characters = {
       0.77
     ],
     "isBuffed": false
+  },
+  "Seele": {
+    "internalID": 1102,
+    "name": "Seele",
+    "path": "The Hunt",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 931.392,
+      "SPDBase": 115,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "1110201",
+        "name": "Extirpating Slash",
+        "rank": 1,
+        "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%, and ignores 20% of target's DEF.",
+        "icon": "icon/skill/1110_rank1.png",
+        "paramsEido": [
+          0.8,
+          0.15,
+          0.2
+        ],
+        "eidoAbility": "Seele_Advanced_Seele_Eidolon1"
+      },
+      {
+        "id": "1110202",
+        "name": "Dancing Butterfly",
+        "rank": 2,
+        "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
+        "icon": "icon/skill/1110_rank2.png",
+        "paramsEido": [
+          2
+        ]
+      },
+      {
+        "id": "1110203",
+        "name": "Dazzling Tumult",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1110_skill.png"
+      },
+      {
+        "id": "1110204",
+        "name": "Flitting Phantasm",
+        "rank": 4,
+        "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
+        "icon": "icon/skill/1110_rank4.png",
+        "paramsEido": [
+          15
+        ],
+        "eidoAbility": "Seele_Advanced_Seele_Eidolon4"
+      },
+      {
+        "id": "1110205",
+        "name": "Piercing Shards",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1110_ultimate.png"
+      },
+      {
+        "id": "1110206",
+        "name": "Shattering Shambles",
+        "rank": 6,
+        "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the target for 3 turn(s). Enemy targets in \"Butterfly Flurry\" will additionally take 1 instance of True DMG equal to 30% of Seele's Ultimate DMG after receiving an attack. When the target under the \"Butterfly Flurry\" state is defeated by any unit, Seele's Talent will also be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+        "icon": "icon/skill/1110_rank6.png",
+        "paramsEido": [
+          0.3,
+          3
+        ],
+        "extraEffects": {
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          },
+          "Downed State": {
+            "desc": "An ally will be incapacitated once their HP is reduced to 0."
+          }
+        },
+        "eidoAbility": "Seele_Advanced_Seele_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Thwack": {
+          "variant1": {
+            "skillID": 1110201,
+            "trigger": "Skill01",
+            "name": "Thwack",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Advanced_Seele_00_Skill01_Camera",
+              "Avatar_Advanced_Seele_00_Skill01_Phase01",
+              "Avatar_Advanced_Seele_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Sheathed Blade": {
+          "variant1": {
+            "skillID": 1110202,
+            "trigger": "Skill02",
+            "name": "Sheathed Blade",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.\\nAfter an ally target attacks, if the attack target's current HP percentage is #4[i]% or below, Seele will automatically use her Skill at that target 1 time. This Skill does not consume Skill Points or regenerate Energy. This effect can only be triggered 1 time per turn and resets at the start of Seele's turn. If there are no valid targets to attack, she attacks the enemy target with the lowest HP percentage instead.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.8,
+                0.25,
+                3,
+                0.5
+              ],
+              "2": [
+                1.98,
+                0.25,
+                3,
+                0.5
+              ],
+              "3": [
+                2.16,
+                0.25,
+                3,
+                0.5
+              ],
+              "4": [
+                2.34,
+                0.25,
+                3,
+                0.5
+              ],
+              "5": [
+                2.52,
+                0.25,
+                3,
+                0.5
+              ],
+              "6": [
+                2.7,
+                0.25,
+                3,
+                0.5
+              ],
+              "7": [
+                2.925,
+                0.25,
+                3,
+                0.5
+              ],
+              "8": [
+                3.15,
+                0.25,
+                3,
+                0.5
+              ],
+              "9": [
+                3.375,
+                0.25,
+                3,
+                0.5
+              ],
+              "10": [
+                3.6,
+                0.25,
+                3,
+                0.5
+              ],
+              "11": [
+                3.78,
+                0.25,
+                3,
+                0.5
+              ],
+              "12": [
+                3.96,
+                0.25,
+                3,
+                0.5
+              ],
+              "13": [
+                4.14,
+                0.25,
+                3,
+                0.5
+              ],
+              "14": [
+                4.32,
+                0.25,
+                3,
+                0.5
+              ],
+              "15": [
+                4.5,
+                0.25,
+                3,
+                0.5
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Seele_00_Skill02_Camera",
+              "Avatar_Advanced_Seele_00_Skill02_Phase01",
+              "Avatar_Advanced_Seele_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Butterfly Flurry": {
+          "variant1": {
+            "skillID": 1110203,
+            "trigger": "Skill03",
+            "name": "Butterfly Flurry",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Seele enters the Amplification state and deals Quantum DMG equal to #1[i]% of her ATK to one designated enemy.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3.6
+              ],
+              "2": [
+                3.96
+              ],
+              "3": [
+                4.32
+              ],
+              "4": [
+                4.68
+              ],
+              "5": [
+                5.04
+              ],
+              "6": [
+                5.4
+              ],
+              "7": [
+                5.85
+              ],
+              "8": [
+                6.3
+              ],
+              "9": [
+                6.75
+              ],
+              "10": [
+                7.2
+              ],
+              "11": [
+                7.56
+              ],
+              "12": [
+                7.92
+              ],
+              "13": [
+                8.28
+              ],
+              "14": [
+                8.64
+              ],
+              "15": [
+                9
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Seele_00_Skill03_Camera",
+              "Avatar_Advanced_Seele_00_Skill03_EnterReady",
+              "Avatar_Advanced_Seele_00_Skill03_Phase01",
+              "Avatar_Advanced_Seele_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Resurgence": {
+          "variant1": {
+            "skillID": 1110204,
+            "trigger": "SkillP01",
+            "name": "Resurgence",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG dealt by Seele increases by #1[i]% for #2[i] turn(s).\\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                3
+              ],
+              "2": [
+                0.44,
+                3
+              ],
+              "3": [
+                0.48,
+                3
+              ],
+              "4": [
+                0.52,
+                3
+              ],
+              "5": [
+                0.56,
+                3
+              ],
+              "6": [
+                0.6,
+                3
+              ],
+              "7": [
+                0.65,
+                3
+              ],
+              "8": [
+                0.7,
+                3
+              ],
+              "9": [
+                0.75,
+                3
+              ],
+              "10": [
+                0.8,
+                3
+              ],
+              "11": [
+                0.84,
+                3
+              ],
+              "12": [
+                0.88,
+                3
+              ],
+              "13": [
+                0.92,
+                3
+              ],
+              "14": [
+                0.96,
+                3
+              ],
+              "15": [
+                1,
+                3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Seele_00_Bonus_Camera",
+              "Avatar_Advanced_Seele_00_PassiveSkill_1",
+              "Avatar_Advanced_Seele_00_Bonus"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Phantom Illusion": {
+          "variant1": {
+            "skillID": 1110207,
+            "trigger": "SkillMaze",
+            "name": "Phantom Illusion",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering combat by attacking enemies, Seele will immediately enter the Amplification state and deals Quantum DMG equal to Seele's Skill DMG multiplier to random enemy target 1 time. This DMG is a guaranteed CRIT Hit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Advanced_Seele_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1102_basic_atk.png",
+        "skillRef": {
+          "skillName": "Thwack",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1102_skill.png",
+        "skillRef": {
+          "skillName": "Sheathed Blade",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1102_ultimate.png",
+        "skillRef": {
+          "skillName": "Butterfly Flurry",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1102_talent.png",
+        "skillRef": {
+          "skillName": "Resurgence",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1102_technique.png",
+        "skillRef": {
+          "skillName": "Phantom Illusion",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Nightshade",
+        "icon": "icon/skill/1102_skilltree1.png",
+        "desc": "When defeating an enemy target, increases the wearer's DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s) and lasts for #3[i] turn(s).",
+        "params": [
+          0.5,
+          3,
+          3
+        ],
+        "traceAbility": "Seele_Advanced_Seele_Trace01"
+      },
+      "Point07": {
+        "name": "Lacerate",
+        "icon": "icon/skill/1102_skilltree2.png",
+        "desc": "While Seele is in the Amplification state, her Quantum RES PEN increases by #1[i]%.",
+        "params": [
+          0.25
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Rippling Waves",
+        "icon": "icon/skill/1102_skilltree3.png",
+        "desc": "After using a Basic ATK, advances Seele's next action  by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Action Advance": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1102.png",
+    "preview": "image/character_preview/1102.png",
+    "portrait": "image/character_portrait/1102.png",
+    "bannerOffsets": [
+      145.5,
+      198.4,
+      0.81,
+      145.5,
+      198.4,
+      0.81,
+      145.5,
+      198.4,
+      0.81
+    ],
+    "isBuffed": true
   },
   "Serval": {
     "internalID": 1103,
@@ -6290,7 +7744,7 @@ let characters = {
         "traceAbility": "Hook_Hook_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -6303,7 +7757,7 @@ let characters = {
           0.2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -7047,7 +8501,7 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -7207,7 +8661,7 @@ let characters = {
           0.2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -9110,7 +10564,7 @@ let characters = {
         "traceAbility": "Luocha_Luocha_Trace03",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -9977,6 +11431,37 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Vita Infinita",
+        "icon": "icon/skill/1205_skilltree1.png",
+        "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
+        "params": [
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Neverending Deaths",
+        "icon": "icon/skill/1205_skilltree2.png",
+        "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
+        "params": [
+          0.25,
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Cyclone of Destruction",
+        "icon": "icon/skill/1205_skilltree3.png",
+        "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
+        "params": [
+          0.2,
+          15
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
       "Point09": {
         "name": "HP Boost",
         "icon": "icon/property/IconMaxHP.png",
@@ -10045,37 +11530,6 @@ let characters = {
         "icon": "icon/property/IconMaxHP.png",
         "stats": {
           "HP%": 0.08
-        }
-      },
-      "Point06": {
-        "name": "Vita Infinita",
-        "icon": "icon/skill/1205_skilltree1.png",
-        "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
-        "params": [
-          0.5
-        ]
-      },
-      "Point07": {
-        "name": "Neverending Deaths",
-        "icon": "icon/skill/1205_skilltree2.png",
-        "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
-        "params": [
-          0.25,
-          0.2
-        ]
-      },
-      "Point08": {
-        "name": "Cyclone of Destruction",
-        "icon": "icon/skill/1205_skilltree3.png",
-        "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
-        "params": [
-          0.2,
-          15
-        ],
-        "extraEffects": {
-          "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
-          }
         }
       }
     },
@@ -10849,6 +12303,32 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Deathrealm",
+        "icon": "icon/skill/1212_skilltree1.png",
+        "desc": "While in the \"Spectral Transmigration\" state, increases Effect RES by #1[i]%, and increases the Ultimate DMG dealt by #2[i]%.",
+        "params": [
+          0.35,
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Sword Champion",
+        "icon": "icon/skill/1212_skilltree2.png",
+        "desc": "After using \"Transcendent Flash,\" additionally regenerates #1[i] Energy. And after using \"Moon On Glacial River,\" additionally regenerates #2[i] Energy.",
+        "params": [
+          15,
+          8
+        ]
+      },
+      "Point08": {
+        "name": "Frost Wraith",
+        "icon": "icon/skill/1212_skilltree3.png",
+        "desc": "Upon obtaining \"Syzygy,\" if its stack limit has been reached, Jingliu's next attack ignores #1[i]% of the target's DEF.",
+        "params": [
+          0.25
+        ]
+      },
       "Point09": {
         "name": "CRIT DMG Boost",
         "icon": "icon/property/IconCriticalDamage.png",
@@ -10918,32 +12398,6 @@ let characters = {
         "stats": {
           "CritDamageBase": 0.107
         }
-      },
-      "Point06": {
-        "name": "Deathrealm",
-        "icon": "icon/skill/1212_skilltree1.png",
-        "desc": "While in the \"Spectral Transmigration\" state, increases Effect RES by #1[i]%, and increases the Ultimate DMG dealt by #2[i]%.",
-        "params": [
-          0.35,
-          0.2
-        ]
-      },
-      "Point07": {
-        "name": "Sword Champion",
-        "icon": "icon/skill/1212_skilltree2.png",
-        "desc": "After using \"Transcendent Flash,\" additionally regenerates #1[i] Energy. And after using \"Moon On Glacial River,\" additionally regenerates #2[i] Energy.",
-        "params": [
-          15,
-          8
-        ]
-      },
-      "Point08": {
-        "name": "Frost Wraith",
-        "icon": "icon/skill/1212_skilltree3.png",
-        "desc": "Upon obtaining \"Syzygy,\" if its stack limit has been reached, Jingliu's next attack ignores #1[i]% of the target's DEF.",
-        "params": [
-          0.25
-        ]
       }
     },
     "hasSummon": false,
@@ -10981,22 +12435,23 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "121701",
+        "id": "1121701",
         "name": "Anchored to Vessel, Specters Nestled",
         "rank": 1,
-        "desc": "The duration of Divine Provision produced by the Talent is extended by 1 turn(s). When Huohuo possesses Divine Provision, all allies' SPD increases by 12%.",
-        "icon": "icon/skill/1217_rank1.png",
+        "desc": "The duration of \"Divine Provision\" produced by the Talent is extended by 1 turn(s). When Huohuo possesses \"Divine Provision,\" her Outgoing Healing increases by 20%, all allies' SPD increases by 12%.",
+        "icon": "icon/skill/1121_rank1.png",
         "paramsEido": [
-          0.12,
-          1
+          1,
+          0.2,
+          0.12
         ]
       },
       {
-        "id": "121702",
+        "id": "1121702",
         "name": "Sealed in Tail, Wraith Subdued",
         "rank": 2,
         "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down and their HP will immediately be restored by an amount equal to 50% of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. This effect can only be triggered 2 time(s) per battle.",
-        "icon": "icon/skill/1217_rank2.png",
+        "icon": "icon/skill/1121_rank2.png",
         "paramsEido": [
           0.5,
           2
@@ -11008,35 +12463,35 @@ let characters = {
         }
       },
       {
-        "id": "121703",
+        "id": "1121703",
         "name": "Cursed by Fate, Moths to Flame",
         "rank": 3,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1217_ultimate.png"
+        "icon": "icon/skill/1121_ultimate.png"
       },
       {
-        "id": "121704",
+        "id": "1121704",
         "name": "Tied in Life, Bound to Strife",
         "rank": 4,
-        "desc": "When healing a target ally via Skill or Talent, the less HP the target ally currently has, the higher the amount of healing they will receive. The maximum increase in healing provided by Huohuo is 80%.",
-        "icon": "icon/skill/1217_rank4.png",
+        "desc": "When healing an ally target via Skill or Talent, the less HP the target ally currently has, the higher the amount of healing they will receive. The maximum increase in healing provided by Huohuo is 80%.",
+        "icon": "icon/skill/1121_rank4.png",
         "paramsEido": [
           0.8
         ]
       },
       {
-        "id": "121705",
+        "id": "1121705",
         "name": "Mandated by Edict, Evils Evicted",
         "rank": 5,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1217_skill.png"
+        "icon": "icon/skill/1121_skill.png"
       },
       {
-        "id": "121706",
+        "id": "1121706",
         "name": "Woven Together, Cohere Forever",
         "rank": 6,
-        "desc": "When healing a target ally, increases the target ally's DMG dealt by 50% for 2 turn(s).",
-        "icon": "icon/skill/1217_rank6.png",
+        "desc": "When healing an ally target, increases the ally target's DMG dealt by 50% for 2 turn(s).",
+        "icon": "icon/skill/1121_rank6.png",
         "paramsEido": [
           0.5,
           2
@@ -11057,12 +12512,12 @@ let characters = {
       "Basic ATK": {
         "Banner: Stormcaller": {
           "variant1": {
-            "skillID": 121701,
+            "skillID": 1121701,
             "trigger": "Skill01",
             "name": "Banner: Stormcaller",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Deals Wind DMG equal to #1[i]% of Huohuo's Max HP to a target enemy.",
+            "desc": "Deals Wind DMG equal to #1[i]% of Huohuo's Max HP to one designated enemy.",
             "energyCost": null,
             "energyRegen": 20,
             "energyRate": 0.5,
@@ -11107,8 +12562,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Huohuo_00_Skill01_Camera",
-              "Avatar_Huohuo_00_Skill01_Phase01",
-              "Avatar_Huohuo_00_Skill01_Phase02"
+              "Avatar_Advanced_Huohuo_00_Skill01_Phase01",
+              "Avatar_Advanced_Huohuo_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -11122,12 +12577,12 @@ let characters = {
       "Skill": {
         "Talisman: Protection": {
           "variant1": {
-            "skillID": 121702,
+            "skillID": 1121702,
             "trigger": "Skill02",
             "name": "Talisman: Protection",
             "type": "Restore",
             "slot": "Skill",
-            "desc": "Dispels #5[i] debuff(s) from a single target ally and immediately restores this ally's HP by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. At the same time, restores HP for allies that are adjacent to this target ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #4[i].",
+            "desc": "Dispels #5[i] debuff(s) from one designated ally and immediately restores this ally's HP by an amount equal to #1[f1]% of Huohuo's Max HP plus #2[i]. At the same time, restores HP for allies that are adjacent to this target ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #4[i].",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,
@@ -11136,108 +12591,108 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                0.14,
-                140,
-                0.112,
-                112,
+                0.16,
+                160,
+                0.128,
+                128,
                 1
               ],
               "2": [
-                0.14875,
-                224,
-                0.119,
-                179.2,
+                0.17,
+                256,
+                0.13599999,
+                204.8,
                 1
               ],
               "3": [
-                0.1575,
-                287,
-                0.126,
-                229.6,
+                0.18,
+                328,
+                0.144,
+                262.4,
                 1
               ],
               "4": [
-                0.16625,
-                350,
-                0.133,
-                280,
+                0.19,
+                400,
+                0.152,
+                320,
                 1
               ],
               "5": [
-                0.175,
-                392,
-                0.14,
-                313.6,
+                0.2,
+                448,
+                0.16,
+                358.4,
                 1
               ],
               "6": [
-                0.182,
-                434,
-                0.1456,
-                347.2,
+                0.208,
+                496,
+                0.1664,
+                396.8,
                 1
               ],
               "7": [
-                0.189,
-                465.5,
-                0.1512,
-                372.4,
+                0.216,
+                532,
+                0.1728,
+                425.6,
                 1
               ],
               "8": [
-                0.196,
-                497,
-                0.1568,
-                397.6,
+                0.224,
+                568,
+                0.1792,
+                454.4,
                 1
               ],
               "9": [
-                0.203,
-                528.5,
-                0.1624,
-                422.8,
+                0.232,
+                604,
+                0.1856,
+                483.2,
                 1
               ],
               "10": [
-                0.21,
-                560,
-                0.168,
-                448,
+                0.24,
+                640,
+                0.192,
+                512,
                 1
               ],
               "11": [
-                0.217,
-                591.5,
-                0.1736,
-                473.2,
+                0.248,
+                676,
+                0.1984,
+                540.8,
                 1
               ],
               "12": [
-                0.224,
-                623,
-                0.1792,
-                498.4,
+                0.256,
+                712,
+                0.2048,
+                569.6,
                 1
               ],
               "13": [
-                0.231,
-                654.5,
-                0.1848,
-                523.6,
+                0.264,
+                748,
+                0.2112,
+                598.4,
                 1
               ],
               "14": [
-                0.238,
-                686,
-                0.1904,
-                548.8,
+                0.272,
+                784,
+                0.2176,
+                627.2,
                 1
               ],
               "15": [
-                0.245,
-                717.5,
-                0.196,
-                574,
+                0.28,
+                820,
+                0.224,
+                656,
                 1
               ]
             },
@@ -11246,8 +12701,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Huohuo_00_Skill02_Camera",
-              "Avatar_Huohuo_00_Skill02_Phase01",
-              "Avatar_Huohuo_00_Skill02_Phase02"
+              "Avatar_Advanced_Huohuo_00_Skill02_Phase01",
+              "Avatar_Advanced_Huohuo_00_Skill02_Phase02"
             ],
             "toughnessList": [
               0,
@@ -11266,7 +12721,7 @@ let characters = {
       "Ultimate": {
         "Tail: Spiritual Domination": {
           "variant1": {
-            "skillID": 121703,
+            "skillID": 1121703,
             "trigger": "Skill03",
             "name": "Tail: Spiritual Domination",
             "type": "Support",
@@ -11360,9 +12815,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Huohuo_00_Skill03_Camera",
-              "Avatar_Huohuo_00_Skill03_EnterReady",
-              "Avatar_Huohuo_00_Skill03_Phase01",
-              "Avatar_Huohuo_00_Skill03_Phase02"
+              "Avatar_Advanced_Huohuo_00_Skill03_EnterReady",
+              "Avatar_Advanced_Huohuo_00_Skill03_Phase01",
+              "Avatar_Advanced_Huohuo_00_Skill03_Phase02"
             ],
             "toughnessList": [
               0,
@@ -11376,12 +12831,12 @@ let characters = {
       "Talent": {
         "Possession: Ethereal Metaflow": {
           "variant1": {
-            "skillID": 121704,
+            "skillID": 1121704,
             "trigger": "SkillP01",
             "name": "Possession: Ethereal Metaflow",
             "type": "Restore",
             "slot": "Talent",
-            "desc": "After using her Skill, Huohuo gains Divine Provision, lasting for #1[i] turn(s). This duration decreases by 1 turn at the start of Huohuo's every turn. If Huohuo has Divine Provision when an ally's turn starts or when an ally uses their Ultimate, restores HP for that ally by an amount equal to #3[f1]% of Huohuo's Max HP plus #5[i]. At the same time, every ally with #6[i]% HP percentage or lower receives healing once.\\nWhen Divine Provision is triggered to heal an ally, dispel #2[i] debuff(s) from that ally. This effect can be triggered up to #7[i] time(s). Using the skill again resets the effect's trigger count.",
+            "desc": "After using her Skill or Ultimate, Huohuo gains \"Divine Provision,\" lasting for #1[i] turn(s). This duration decreases by 1 turn at the start of Huohuo's every turn. When Huohuo has \"Divine Provision\" at the start of an ally target's turn or when they use their Ultimate, restores HP for that ally target and the ally target with the lowest HP percentage by an amount equal to #3[f1]% of Huohuo's Max HP plus #5[i]. Then, restores HP for every ally with a current HP percentage at or below #6[i]% by an amount equal to #3[f1]% of Huohuo's Max HP plus #5[i].\\nWhen \"Divine Provision\" is triggered to heal an ally target, dispels #2[i] debuff(s) from that target. This effect can be triggered #7[i] time(s). Gaining \"Divine Provision\" again resets the effect's trigger count.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -11390,7 +12845,7 @@ let characters = {
             "skillPointGain": 0,
             "params": {
               "1": [
-                2,
+                3,
                 1,
                 0.03,
                 0,
@@ -11399,7 +12854,7 @@ let characters = {
                 6
               ],
               "2": [
-                2,
+                3,
                 1,
                 0.031875,
                 0,
@@ -11408,7 +12863,7 @@ let characters = {
                 6
               ],
               "3": [
-                2,
+                3,
                 1,
                 0.03375,
                 0,
@@ -11417,7 +12872,7 @@ let characters = {
                 6
               ],
               "4": [
-                2,
+                3,
                 1,
                 0.035625,
                 0,
@@ -11426,7 +12881,7 @@ let characters = {
                 6
               ],
               "5": [
-                2,
+                3,
                 1,
                 0.0375,
                 0,
@@ -11435,7 +12890,7 @@ let characters = {
                 6
               ],
               "6": [
-                2,
+                3,
                 1,
                 0.039,
                 0,
@@ -11444,7 +12899,7 @@ let characters = {
                 6
               ],
               "7": [
-                2,
+                3,
                 1,
                 0.0405,
                 0,
@@ -11453,7 +12908,7 @@ let characters = {
                 6
               ],
               "8": [
-                2,
+                3,
                 1,
                 0.042,
                 0,
@@ -11462,7 +12917,7 @@ let characters = {
                 6
               ],
               "9": [
-                2,
+                3,
                 1,
                 0.0435,
                 0,
@@ -11471,7 +12926,7 @@ let characters = {
                 6
               ],
               "10": [
-                2,
+                3,
                 1,
                 0.044999998,
                 0,
@@ -11480,7 +12935,7 @@ let characters = {
                 6
               ],
               "11": [
-                2,
+                3,
                 1,
                 0.0465,
                 0,
@@ -11489,7 +12944,7 @@ let characters = {
                 6
               ],
               "12": [
-                2,
+                3,
                 1,
                 0.048,
                 0,
@@ -11498,7 +12953,7 @@ let characters = {
                 6
               ],
               "13": [
-                2,
+                3,
                 1,
                 0.0495,
                 0,
@@ -11507,7 +12962,7 @@ let characters = {
                 6
               ],
               "14": [
-                2,
+                3,
                 1,
                 0.051,
                 0,
@@ -11516,7 +12971,7 @@ let characters = {
                 6
               ],
               "15": [
-                2,
+                3,
                 1,
                 0.052500002,
                 0,
@@ -11528,8 +12983,8 @@ let characters = {
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Huohuo_00_PassiveSkill01",
-              "Avatar_Huohuo_00_Rank02_Insert"
+              "Avatar_Advanced_Huohuo_00_PassiveSkill01",
+              "Avatar_Advanced_Huohuo_00_Rank02_Insert"
             ],
             "toughnessList": [
               0,
@@ -11548,12 +13003,12 @@ let characters = {
       "Technique": {
         "Fiend: Impeachment of Evil": {
           "variant1": {
-            "skillID": 121707,
+            "skillID": 1121707,
             "trigger": "SkillMaze",
             "name": "Fiend: Impeachment of Evil",
             "type": "Impair",
             "slot": "Technique",
-            "desc": "Huohuo terrorizes surrounding enemies, afflicting Horror-Struck on them. Enemies in Horror-Struck will flee away from Huohuo for #4[i] second(s). When entering battle with enemies in Horror-Struck, there is a #1[i]% base chance of reducing every single enemy's ATK by #2[i]% for #3[i] turn(s).",
+            "desc": "Huohuo terrorizes surrounding enemies, inflicting \"Horror-Struck\" on them. Enemies in \"Horror-Struck\" will flee away from Huohuo for #4[i] second(s). When entering combat with enemies in \"Horror-Struck,\" there is a #1[i]% base chance of reducing every single enemy's ATK by #2[i]% for #3[i] turn(s).",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -11572,7 +13027,7 @@ let characters = {
             "skillEffect": "Impair",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Huohuo_00_SkillMazeInLevel"
+              "Avatar_Advanced_Huohuo_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               0,
@@ -11628,29 +13083,32 @@ let characters = {
       "Point06": {
         "name": "Fearful to Act",
         "icon": "icon/skill/1217_skilltree1.png",
-        "desc": "When battle starts, Huohuo gains Divine Provision, lasting for #1[i] turn(s).",
+        "desc": "When battle starts, Huohuo gains #1[i] Energy and \"Divine Provision,\" lasting for #2[i] turn(s).",
         "params": [
-          1
+          30,
+          2
         ]
       },
       "Point07": {
         "name": "The Cursed One",
         "icon": "icon/skill/1217_skilltree2.png",
-        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%. When using Ultimate, if an ally target's Max Energy is #2[i] or higher, additionally increases their ATK by #3[i]%.",
         "params": [
-          0.35
+          0.35,
+          160,
+          0.24
         ],
-        "traceAbility": "Huohuo_Huohuo_Trace02",
+        "traceAbility": "Huohuo_Advanced_Huohuo_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
       "Point08": {
         "name": "Stress Reaction to Horror",
         "icon": "icon/skill/1217_skilltree3.png",
-        "desc": "When her Talent is triggered to heal allies, Huohuo regenerates #1[i] Energy.",
+        "desc": "When her Talent is triggered to heal ally targets, Huohuo regenerates #1[i] Energy.",
         "params": [
           1
         ]
@@ -11741,7 +13199,7 @@ let characters = {
       11.9,
       0.66
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Gallagher": {
     "internalID": 1301,
@@ -12343,7 +13801,7 @@ let characters = {
         "icon": "icon/skill/1301_skilltree2.png",
         "desc": "After using the Ultimate, immediately advances action for this unit by 100%.",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -14448,7 +15906,7 @@ let characters = {
                 "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -15262,6 +16720,37 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Almanac",
+        "icon": "icon/skill/1306_skilltree1.png",
+        "desc": "Using Basic ATK additionally regenerates #1[i] Energy. When an ally character who holds the CRIT DMG Boost effect provided by the Skill consumes Skill Points, Sparkle additionally regenerates #2[i] Energy.",
+        "params": [
+          10,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Artificial Flower",
+        "icon": "icon/skill/1306_skilltree2.png",
+        "desc": "If an ally character consumes #1[i] or more Skill Points in a single turn, Sparkle's next use of Skill will not consume Skill Points.",
+        "params": [
+          3
+        ]
+      },
+      "Point08": {
+        "name": "Nocturne",
+        "icon": "icon/skill/1306_skilltree3.png",
+        "desc": "Increases all allies's ATK by #1[i]%. When an ally character holds the CRIT DMG Boost effect provided by the Skill, All-Type RES PEN increases by #2[i]%.",
+        "params": [
+          0.45,
+          0.1
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
       "Point09": {
         "name": "HP Boost",
         "icon": "icon/property/IconMaxHP.png",
@@ -15330,37 +16819,6 @@ let characters = {
         "icon": "icon/property/IconMaxHP.png",
         "stats": {
           "HP%": 0.08
-        }
-      },
-      "Point06": {
-        "name": "Almanac",
-        "icon": "icon/skill/1306_skilltree1.png",
-        "desc": "Using Basic ATK additionally regenerates #1[i] Energy. When an ally character who holds the CRIT DMG Boost effect provided by the Skill consumes Skill Points, Sparkle additionally regenerates #2[i] Energy.",
-        "params": [
-          10,
-          1
-        ]
-      },
-      "Point07": {
-        "name": "Artificial Flower",
-        "icon": "icon/skill/1306_skilltree2.png",
-        "desc": "If an ally character consumes #1[i] or more Skill Points in a single turn, Sparkle's next use of Skill will not consume Skill Points.",
-        "params": [
-          3
-        ]
-      },
-      "Point08": {
-        "name": "Nocturne",
-        "icon": "icon/skill/1306_skilltree3.png",
-        "desc": "Increases all allies's ATK by #1[i]%. When an ally character holds the CRIT DMG Boost effect provided by the Skill, All-Type RES PEN increases by #2[i]%.",
-        "params": [
-          0.45,
-          0.1
-        ],
-        "extraEffects": {
-          "RES PEN": {
-            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
-          }
         }
       }
     },
@@ -16091,6 +17549,53 @@ let characters = {
           "skillSlot": "Technique"
         }
       },
+      "Point06": {
+        "name": "Viscera's Disquiet",
+        "icon": "icon/skill/1307_skilltree1.png",
+        "desc": "When an enemy target gets attacked by Black Swan, there is a #1[i]% base chance of inflicting #2[i] stack(s) of \"Arcana\" on them.",
+        "params": [
+          0.65,
+          5
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace01",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Goblet's Dredges",
+        "icon": "icon/skill/1307_skilltree2.png",
+        "desc": "When an enemy targets enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of \"Arcana,\" and a #2[i]% base chance to be inflicted with the DEF reduction effect from the Skill, which lasts for #3[i] turn(s).\nAfter using Basic ATK or Ultimate, there is also a #2[i]% base chance to inflict the DEF reduction effect from the Skill on the hit enemy targets, which lasts for #3[i] turn(s).",
+        "params": [
+          0.65,
+          1,
+          3
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace02",
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Candleflame's Portent",
+        "icon": "icon/skill/1307_skilltree3.png",
+        "desc": "Increases the DMG dealt by all allies by an amount equal to #1[i]% of Black Swan's Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
+        "params": [
+          0.6,
+          0.72
+        ],
+        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace03"
+      },
       "Point09": {
         "name": "ATK Boost",
         "icon": "icon/property/IconAttack.png",
@@ -16160,53 +17665,6 @@ let characters = {
         "stats": {
           "ATK%": 0.08
         }
-      },
-      "Point06": {
-        "name": "Viscera's Disquiet",
-        "icon": "icon/skill/1307_skilltree1.png",
-        "desc": "When an enemy target gets attacked by Black Swan, there is a #1[i]% base chance of inflicting #2[i] stack(s) of \"Arcana\" on them.",
-        "params": [
-          0.65,
-          5
-        ],
-        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace01",
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          },
-          "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
-          }
-        }
-      },
-      "Point07": {
-        "name": "Goblet's Dredges",
-        "icon": "icon/skill/1307_skilltree2.png",
-        "desc": "When an enemy targets enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of \"Arcana,\" and a #2[i]% base chance to be inflicted with the DEF reduction effect from the Skill, which lasts for #3[i] turn(s).\nAfter using Basic ATK or Ultimate, there is also a #2[i]% base chance to inflict the DEF reduction effect from the Skill on the hit enemy targets, which lasts for #3[i] turn(s).",
-        "params": [
-          0.65,
-          1,
-          3
-        ],
-        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace02",
-        "extraEffects": {
-          "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
-          },
-          "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
-          }
-        }
-      },
-      "Point08": {
-        "name": "Candleflame's Portent",
-        "icon": "icon/skill/1307_skilltree3.png",
-        "desc": "Increases the DMG dealt by all allies by an amount equal to #1[i]% of Black Swan's Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
-        "params": [
-          0.6,
-          0.72
-        ],
-        "traceAbility": "BlackSwan_Advanced_BlackSwan_Trace03"
       }
     },
     "hasSummon": false,
@@ -16287,7 +17745,7 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
           }
         }
       },
@@ -16643,7 +18101,7 @@ let characters = {
                 "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -16821,7 +18279,7 @@ let characters = {
           0.25
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -16953,26 +18411,22 @@ let characters = {
     },
     "eidolons": [
       {
-        "id": "131001",
+        "id": "1131001",
         "name": "In Reddened Chrysalis, I Once Rest",
         "rank": 1,
         "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
-        "icon": "icon/skill/1310_rank1.png",
+        "icon": "icon/skill/1131_rank1.png",
         "paramsEido": [
           0.15
         ],
-        "eidoAbility": "Firefly_Sam_Eidolon1"
+        "eidoAbility": "Firefly_Advanced_Sam_Eidolon1"
       },
       {
-        "id": "131002",
+        "id": "1131002",
         "name": "From Shattered Sky, I Free Fall",
         "rank": 2,
-        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
-        "icon": "icon/skill/1310_rank2.png",
-        "paramsEido": [
-          1,
-          1
-        ],
+        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can only trigger 1 time per turn, and the trigger count resets at the start of SAM's turn.",
+        "icon": "icon/skill/1131_rank2.png",
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -16981,39 +18435,38 @@ let characters = {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
           }
         },
-        "eidoAbility": "Firefly_Sam_Eidolon2"
+        "eidoAbility": "Firefly_Advanced_Sam_Eidolon2"
       },
       {
-        "id": "131003",
+        "id": "1131003",
         "name": "Amidst Silenced Stars, I Deep Sleep",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1310_skill.png"
+        "icon": "icon/skill/1131_skill.png"
       },
       {
-        "id": "131004",
+        "id": "1131004",
         "name": "Upon Lighted Fyrefly, I Soon Gaze",
         "rank": 4,
         "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
-        "icon": "icon/skill/1310_rank4.png",
+        "icon": "icon/skill/1131_rank4.png",
         "paramsEido": [
           0.5
-        ],
-        "eidoAbility": "Firefly_Sam_Eidolon4"
+        ]
       },
       {
-        "id": "131005",
+        "id": "1131005",
         "name": "From Undreamt Night, I Thence Shine",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1310_ultimate.png"
+        "icon": "icon/skill/1131_ultimate.png"
       },
       {
-        "id": "131006",
+        "id": "1131006",
         "name": "In Finalized Morrow, I Full Bloom",
         "rank": 6,
         "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
-        "icon": "icon/skill/1310_rank6.png",
+        "icon": "icon/skill/1131_rank6.png",
         "paramsEido": [
           0.2,
           0.5
@@ -17023,7 +18476,7 @@ let characters = {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
         },
-        "eidoAbility": "Firefly_Sam_Eidolon6"
+        "eidoAbility": "Firefly_Advanced_Sam_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -17040,12 +18493,12 @@ let characters = {
       "Basic ATK": {
         "Order: Flare Propulsion": {
           "variant1": {
-            "skillID": 131001,
+            "skillID": 1131001,
             "trigger": "Skill01",
             "name": "Order: Flare Propulsion",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": 20,
             "energyRate": 0.5,
@@ -17090,8 +18543,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Sam_00_Skill01_Camera",
-              "Avatar_Sam_00_Skill01_Phase01",
-              "Avatar_Sam_00_Skill01_Phase02"
+              "Avatar_Advanced_Sam_00_Skill01_Phase01",
+              "Avatar_Advanced_Sam_00_Skill01_Phase02"
             ],
             "toughnessList": [
               30,
@@ -17103,12 +18556,12 @@ let characters = {
         },
         "Fyrefly Type-IV: Pyrogenic Decimation": {
           "variant1": {
-            "skillID": 131008,
+            "skillID": 1131008,
             "trigger": "Skill11",
             "name": "Fyrefly Type-IV: Pyrogenic Decimation",
             "type": "Single Target",
             "slot": "Basic ATK",
-            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -17163,8 +18616,8 @@ let characters = {
             "maxLevel": 10,
             "configAbilityList": [
               "Avatar_Sam_00_Skill11_Camera",
-              "Avatar_Sam_00_Skill11_Phase01",
-              "Avatar_Sam_00_Skill11_Phase02"
+              "Avatar_Advanced_Sam_00_Skill11_Phase01",
+              "Avatar_Advanced_Sam_00_Skill11_Phase02"
             ],
             "toughnessList": [
               45,
@@ -17178,12 +18631,12 @@ let characters = {
       "Skill": {
         "Order: Aerial Bombardment": {
           "variant1": {
-            "skillID": 131002,
+            "skillID": 1131002,
             "trigger": "Skill02",
             "name": "Order: Aerial Bombardment",
             "type": "Single Target",
             "slot": "Skill",
-            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
+            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -17288,8 +18741,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill02_Camera",
-              "Avatar_Sam_00_Skill02_Phase01",
-              "Avatar_Sam_00_Skill02_Phase02"
+              "Avatar_Advanced_Sam_00_Skill02_Phase01",
+              "Avatar_Advanced_Sam_00_Skill02_Phase02"
             ],
             "toughnessList": [
               60,
@@ -17298,7 +18751,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -17306,12 +18759,12 @@ let characters = {
         },
         "Fyrefly Type-IV: Deathstar Overload": {
           "variant1": {
-            "skillID": 131009,
+            "skillID": 1131009,
             "trigger": "Skill21",
             "name": "Fyrefly Type-IV: Deathstar Overload",
             "type": "Blast",
             "slot": "Skill",
-            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy target, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "desc": "Restores HP by an amount equal to 25% of this unit's Max HP. Adds Fire Weakness to one designated enemy and its adjacent targets, lasting for 2 turns. Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
             "energyCost": null,
             "energyRegen": null,
             "energyRate": 0.5,
@@ -17322,137 +18775,152 @@ let characters = {
               "1": [
                 1,
                 0.5,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "2": [
                 1.1,
                 0.55,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "3": [
                 1.2,
                 0.6,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "4": [
                 1.3,
                 0.65,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "5": [
                 1.4,
                 0.7,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "6": [
                 1.5,
                 0.75,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "7": [
                 1.625,
                 0.8125,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "8": [
                 1.75,
                 0.875,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "9": [
                 1.875,
                 0.9375,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "10": [
                 2,
                 1,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "11": [
                 2.1,
                 1.05,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "12": [
                 2.2,
                 1.1,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "13": [
                 2.3,
                 1.15,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "14": [
                 2.4,
                 1.2,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ],
               "15": [
                 2.5,
                 1.25,
-                0.25,
-                2,
+                0,
+                0,
                 0.2,
                 0.1,
-                3.6
+                3.6,
+                0
               ]
             },
             "element": "Fire",
@@ -17461,8 +18929,8 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill21_Camera",
-              "Avatar_Sam_00_Skill21_Phase01",
-              "Avatar_Sam_00_Skill21_Phase02"
+              "Avatar_Advanced_Sam_00_Skill21_Phase01",
+              "Avatar_Advanced_Sam_00_Skill21_Phase02"
             ],
             "toughnessList": [
               90,
@@ -17476,7 +18944,7 @@ let characters = {
       "Ultimate": {
         "Fyrefly Type-IV: Complete Combustion": {
           "variant1": {
-            "skillID": 131003,
+            "skillID": 1131003,
             "trigger": "Skill03",
             "name": "Fyrefly Type-IV: Complete Combustion",
             "type": "Enhance",
@@ -17585,9 +19053,9 @@ let characters = {
             "maxLevel": 15,
             "configAbilityList": [
               "Avatar_Sam_00_Skill03_Camera",
-              "Avatar_Sam_00_Skill03_EnterReady",
-              "Avatar_Sam_00_Skill03_Phase01",
-              "Avatar_Sam_00_Skill03_Phase02"
+              "Avatar_Advanced_Sam_00_Skill03_EnterReady",
+              "Avatar_Advanced_Sam_00_Skill03_Phase01",
+              "Avatar_Advanced_Sam_00_Skill03_Phase02"
             ],
             "toughnessList": [
               0,
@@ -17601,7 +19069,7 @@ let characters = {
       "Talent": {
         "Chrysalid Pyronexus": {
           "variant1": {
-            "skillID": 131004,
+            "skillID": 1131004,
             "trigger": "SkillP01",
             "name": "Chrysalid Pyronexus",
             "type": "Defense",
@@ -17709,9 +19177,8 @@ let characters = {
             "skillEffect": "Defence",
             "maxLevel": 15,
             "configAbilityList": [
-              "Avatar_Sam_00_PassiveSkill01",
-              "Avatar_Sam_00_Rank02_Bonus",
-              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
+              "Avatar_Advanced_Sam_00_PassiveSkill01",
+              "Avatar_Advanced_Sam_00_PassiveSkill01_BattleEvent_Insert"
             ],
             "toughnessList": [
               0,
@@ -17730,7 +19197,7 @@ let characters = {
       "Technique": {
         "Δ Order: Meteoric Incineration": {
           "variant1": {
-            "skillID": 131007,
+            "skillID": 1131007,
             "trigger": "SkillMaze",
             "name": "Δ Order: Meteoric Incineration",
             "slot": "Technique",
@@ -17753,7 +19220,7 @@ let characters = {
             "skillEffect": "MazeAttack",
             "maxLevel": 1,
             "configAbilityList": [
-              "Avatar_Sam_00_SkillMazeInLevel"
+              "Avatar_Advanced_Sam_00_SkillMazeInLevel"
             ],
             "toughnessList": [
               60,
@@ -17804,23 +19271,31 @@ let characters = {
       "Point06": {
         "name": "Module α: Antilag Outburst",
         "icon": "icon/skill/1310_skilltree1.png",
-        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
+        "desc": "While in the Complete Combustion state, SAM's Break Effect increases by #1[i]%. When using Enhanced Basic ATK or Enhanced Skill to inflict Weakness Break on a target, the Complete Combustion countdown is delayed by #2[i]%. This effect can trigger a maximum of #3[i] time(s) during each Complete Combustion state.",
         "params": [
-          0.55
+          0.25,
+          0.1,
+          3
         ],
-        "traceAbility": "Firefly_Sam_Trace01"
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Action Delayed": {
+            "desc": "Increases the target's waiting interval before the next action."
+          }
+        }
       },
       "Point07": {
         "name": "Module β: Autoreactive Armor",
         "icon": "icon/skill/1310_skilltree2.png",
         "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
         "params": [
-          2,
-          3.6,
-          0.35,
-          0.5
+          1.5,
+          3,
+          1,
+          1.5
         ],
-        "traceAbility": "Firefly_Sam_Trace02",
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -17839,7 +19314,7 @@ let characters = {
           10,
           0.007999999
         ],
-        "traceAbility": "Firefly_Sam_Trace03"
+        "traceAbility": "Firefly_Advanced_Sam_Trace03"
       },
       "Point09": {
         "name": "Break Boost",
@@ -17927,7 +19402,7 @@ let characters = {
       45,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": true
   },
   "Sunday": {
     "internalID": 1313,
@@ -19231,7 +20706,7 @@ let characters = {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -19664,7 +21139,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -21226,6 +22701,1327 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Phainon": {
+    "internalID": 1408,
+    "name": "Phainon",
+    "path": "Destruction",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 12,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 703.395,
+      "HPBase": 1435.8960000000002,
+      "SPDBase": 94,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "140801",
+        "name": "Fire and Light Bind Virtue and Vice",
+        "rank": 1,
+        "desc": "The base SPD inheritance ratio for Khaslana's extra turn increases to 66%. For every enemy target defeated in one battle, additionally increases this ratio by 1.5%, up to a max of 84%.\nWhen using Ultimate, increases CRIT DMG by 50%, lasting for 3 turn(s).",
+        "icon": "icon/skill/1408_rank1.png",
+        "paramsEido": [
+          0.015,
+          0.5,
+          3,
+          0.84,
+          0.66
+        ],
+        "extraEffects": {
+          "Khaslana's Extra Turn": {
+            "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+          }
+        },
+        "eidoAbility": "Phainon_Phainon_Eidolon1"
+      },
+      {
+        "id": "140802",
+        "name": "Sky and Earth Churn Mortal Froth",
+        "rank": 2,
+        "desc": "Khaslana's Physical RES PEN increases by 20%. When one use of \"Foundation: Stardeath Verdict\" consumes 4 \"Scourge\" point(s), gains 1 extra turn.",
+        "icon": "icon/skill/1408_rank2.png",
+        "paramsEido": [
+          4,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Scourge": {
+            "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        },
+        "eidoAbility": "Phainon_Phainon_Eidolon2"
+      },
+      {
+        "id": "140803",
+        "name": "Depths of Quiet, Entombed in Ruin",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1408_ultimate.png"
+      },
+      {
+        "id": "140804",
+        "name": "Faces of Titans, Blurred by Time",
+        "rank": 4,
+        "desc": "When using \"Calamity: Soulscorch Edict,\" additionally gains 4 stack(s) of \"Soulscorch.\"",
+        "icon": "icon/skill/1408_rank4.png",
+        "paramsEido": [
+          4
+        ]
+      },
+      {
+        "id": "140805",
+        "name": "The Wheel Spins Forevermore",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1408_skill.png"
+      },
+      {
+        "id": "140806",
+        "name": "Embers of Old Rise Still",
+        "rank": 6,
+        "desc": "The number of overflow points allowed for \"Coreflame\" no longer has an upper limit. When the battle starts, gains 6 point(s) of \"Coreflame.\"\nAfter using the attack from \"Foundation: Stardeath Verdict,\" additionally deals True DMG equal to 36% of the total DMG dealt in this attack to the enemy target with the highest HP.",
+        "icon": "icon/skill/1408_rank6.png",
+        "paramsEido": [
+          0.36,
+          6
+        ],
+        "extraEffects": {
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          }
+        },
+        "eidoAbility": "Phainon_Phainon_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Stride to Deliverance": {
+          "variant1": {
+            "skillID": 140801,
+            "trigger": "Skill01",
+            "name": "Stride to Deliverance",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Phainon's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill01_Phase01",
+              "Avatar_Phainon_00_Skill01_Phase02",
+              "Avatar_Phainon_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Creation: Bloodthorn Ferry": {
+          "variant1": {
+            "skillID": 140808,
+            "trigger": "Skill11",
+            "name": "Creation: Bloodthorn Ferry",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Gains #3[i] point(s) of \"Scourge\", dealing Physical DMG equal to #1[i]% of Khaslana's ATK to one designated enemy and Physical DMG equal to #2[i]% of Khaslana's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.25,
+                0.375,
+                2
+              ],
+              "2": [
+                1.5,
+                0.45,
+                2
+              ],
+              "3": [
+                1.75,
+                0.525,
+                2
+              ],
+              "4": [
+                2,
+                0.6,
+                2
+              ],
+              "5": [
+                2.25,
+                0.675,
+                2
+              ],
+              "6": [
+                2.5,
+                0.75,
+                2
+              ],
+              "7": [
+                2.75,
+                0.825,
+                2
+              ],
+              "8": [
+                3,
+                0.9,
+                2
+              ],
+              "9": [
+                3.25,
+                0.975,
+                2
+              ],
+              "10": [
+                3.5,
+                1.05,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill11_EnterReady",
+              "Avatar_Phainon_00_Skill11_Phase01",
+              "Avatar_Phainon_00_Skill11_Phase02",
+              "Avatar_Phainon_00_Skill11_Camera"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              60
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "Let There Be Light": {
+          "variant1": {
+            "skillID": 140802,
+            "trigger": "Skill02",
+            "name": "Let There Be Light",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Gains #3[i] point(s) of \"Coreflame,\" dealing Physical DMG equal to #1[i]% of Phainon's ATK to one designated enemy and Physical DMG equal to #2[i]% of Phainon's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.6,
+                2
+              ],
+              "2": [
+                1.65,
+                0.66,
+                2
+              ],
+              "3": [
+                1.8,
+                0.72,
+                2
+              ],
+              "4": [
+                1.95,
+                0.78,
+                2
+              ],
+              "5": [
+                2.1,
+                0.84,
+                2
+              ],
+              "6": [
+                2.25,
+                0.9,
+                2
+              ],
+              "7": [
+                2.4375,
+                0.975,
+                2
+              ],
+              "8": [
+                2.625,
+                1.05,
+                2
+              ],
+              "9": [
+                2.8125,
+                1.125,
+                2
+              ],
+              "10": [
+                3,
+                1.2,
+                2
+              ],
+              "11": [
+                3.15,
+                1.26,
+                2
+              ],
+              "12": [
+                3.3,
+                1.32,
+                2
+              ],
+              "13": [
+                3.45,
+                1.38,
+                2
+              ],
+              "14": [
+                3.6,
+                1.44,
+                2
+              ],
+              "15": [
+                3.75,
+                1.5,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill02_Phase01",
+              "Avatar_Phainon_00_Skill02_Phase02",
+              "Avatar_Phainon_00_Skill02_Camera"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": []
+          }
+        },
+        "Calamity: Soulscorch Edict": {
+          "variant1": {
+            "skillID": 140809,
+            "trigger": "Skill21",
+            "name": "Calamity: Soulscorch Edict",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Gains \"Scourge\" by an amount equal to the number of enemies and 1 stack of \"Soulscorch,\" then causes all enemies to immediately take action.\\nWhile in the \"Soulscorch\" state, Khaslana takes #2[i]% reduced DMG. After an enemy target attacks or takes action, gains 1 more stack of \"Soulscorch.\" After said enemy targets finish their actions, immediately launches Counter, deals Physical DMG to all enemies equal to #1[i]% of Khaslana's ATK, and additionally deals #3[i] instance(s) of DMG, with each instance being Physical DMG equal to #4[i]% of Khaslana's ATK dealt to one random enemy. Afterward, \"Soulscorch\" is dispelled. Each \"Soulscorch\" stack increases the DMG multiplier of said Counter by #5[i]% of its original multiplier value.\\nDMG dealt through this ability is considered as Skill DMG. If \"Soulscorch\" is still active at the start of Khaslana's extra turn, immediately launches Counter.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.75,
+                4,
+                0.15,
+                0.2
+              ],
+              "2": [
+                0.22,
+                0.75,
+                4,
+                0.165,
+                0.2
+              ],
+              "3": [
+                0.24,
+                0.75,
+                4,
+                0.18,
+                0.2
+              ],
+              "4": [
+                0.26,
+                0.75,
+                4,
+                0.195,
+                0.2
+              ],
+              "5": [
+                0.28,
+                0.75,
+                4,
+                0.21,
+                0.2
+              ],
+              "6": [
+                0.3,
+                0.75,
+                4,
+                0.225,
+                0.2
+              ],
+              "7": [
+                0.325,
+                0.75,
+                4,
+                0.24375,
+                0.2
+              ],
+              "8": [
+                0.35,
+                0.75,
+                4,
+                0.2625,
+                0.2
+              ],
+              "9": [
+                0.375,
+                0.75,
+                4,
+                0.28125,
+                0.2
+              ],
+              "10": [
+                0.4,
+                0.75,
+                4,
+                0.3,
+                0.2
+              ],
+              "11": [
+                0.42,
+                0.75,
+                4,
+                0.315,
+                0.2
+              ],
+              "12": [
+                0.44,
+                0.75,
+                4,
+                0.33,
+                0.2
+              ],
+              "13": [
+                0.46,
+                0.75,
+                4,
+                0.345,
+                0.2
+              ],
+              "14": [
+                0.48,
+                0.75,
+                4,
+                0.36,
+                0.2
+              ],
+              "15": [
+                0.5,
+                0.75,
+                4,
+                0.375,
+                0.2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill21_Phase01",
+              "Avatar_Phainon_00_Skill21_Phase02",
+              "Avatar_Phainon_00_Skill21_Camera",
+              "Avatar_Phainon_00_Skill21_Insert_Phase01",
+              "Avatar_Phainon_00_Skill21_Insert_Phase02",
+              "Avatar_Phainon_00_Skill21_Insert_Camera"
+            ],
+            "toughnessList": [
+              30,
+              15,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              },
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              },
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              }
+            }
+          }
+        },
+        "Foundation: Stardeath Verdict": {
+          "variant1": {
+            "skillID": 140811,
+            "trigger": "Skill22",
+            "name": "Foundation: Stardeath Verdict",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Dispels all debuffs on this unit, then deals Physical DMG equal to a max of #5[i]% of Khaslana's ATK.\\nFor every 1 point of \"Scourge\" consumed, deals #3[i] instance(s) of DMG, with each instance being Physical DMG equal to #2[f1]% of Khaslana's ATK dealt to one random enemy. When consuming #4[i] point(s) of \"Scourge\", additionally deals Physical DMG equal to #1[i]% of Khaslana's ATK, which is evenly distributed across all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.25,
+                0.225,
+                4,
+                4,
+                5.85
+              ],
+              "2": [
+                2.475,
+                0.2475,
+                4,
+                4,
+                6.435
+              ],
+              "3": [
+                2.7,
+                0.27,
+                4,
+                4,
+                7.02
+              ],
+              "4": [
+                2.925,
+                0.2925,
+                4,
+                4,
+                7.605
+              ],
+              "5": [
+                3.15,
+                0.315,
+                4,
+                4,
+                8.19
+              ],
+              "6": [
+                3.375,
+                0.3375,
+                4,
+                4,
+                8.775
+              ],
+              "7": [
+                3.65625,
+                0.365625,
+                4,
+                4,
+                9.50625
+              ],
+              "8": [
+                3.9375,
+                0.39375,
+                4,
+                4,
+                10.2375
+              ],
+              "9": [
+                4.21875,
+                0.421875,
+                4,
+                4,
+                10.96875
+              ],
+              "10": [
+                4.5,
+                0.45,
+                4,
+                4,
+                11.7
+              ],
+              "11": [
+                4.725,
+                0.4725,
+                4,
+                4,
+                12.285
+              ],
+              "12": [
+                4.95,
+                0.495,
+                4,
+                4,
+                12.87
+              ],
+              "13": [
+                5.175,
+                0.5175,
+                4,
+                4,
+                13.455
+              ],
+              "14": [
+                5.4,
+                0.54,
+                4,
+                4,
+                14.04
+              ],
+              "15": [
+                5.625,
+                0.5625,
+                4,
+                4,
+                14.625
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill22_Entry",
+              "Avatar_Phainon_00_Skill22_Phase01",
+              "Avatar_Phainon_00_Skill22_v2_Phase01",
+              "Avatar_Phainon_00_Skill22_Phase02",
+              "Avatar_Phainon_00_Skill22_v2_Phase02",
+              "Avatar_Phainon_00_Skill22_Camera",
+              "Avatar_Phainon_00_Skill22_v2_Camera"
+            ],
+            "toughnessList": [
+              10,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "He Who Bears the World Must Burn": {
+          "variant1": {
+            "skillID": 140803,
+            "trigger": "Skill03",
+            "name": "He Who Bears the World Must Burn",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Transforms into Khaslana. During the transformation, deploys the Territory \"Ruinous Irontomb.\" Within the Territory, other teammates depart and cannot take action, and all enemies have Physical Weaknesses.\\nKhaslana does not enter his own turn, but has #4[i] Khaslana's extra turn(s), with a SPD set at #3[i]% of Khaslana's base SPD. When the last of Khaslana's extra turns starts, immediately launches a final hit and deals Physical Ultimate DMG equal to #1[i]% of Khaslana's ATK that is distributed evenly across all enemies.",
+            "energyCost": 12,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4.8,
+                12,
+                0.6,
+                8
+              ],
+              "2": [
+                5.28,
+                12,
+                0.6,
+                8
+              ],
+              "3": [
+                5.76,
+                12,
+                0.6,
+                8
+              ],
+              "4": [
+                6.24,
+                12,
+                0.6,
+                8
+              ],
+              "5": [
+                6.72,
+                12,
+                0.6,
+                8
+              ],
+              "6": [
+                7.2,
+                12,
+                0.6,
+                8
+              ],
+              "7": [
+                7.8,
+                12,
+                0.6,
+                8
+              ],
+              "8": [
+                8.4,
+                12,
+                0.6,
+                8
+              ],
+              "9": [
+                9,
+                12,
+                0.6,
+                8
+              ],
+              "10": [
+                9.6,
+                12,
+                0.6,
+                8
+              ],
+              "11": [
+                10.08,
+                12,
+                0.6,
+                8
+              ],
+              "12": [
+                10.56,
+                12,
+                0.6,
+                8
+              ],
+              "13": [
+                11.04,
+                12,
+                0.6,
+                8
+              ],
+              "14": [
+                11.52,
+                12,
+                0.6,
+                8
+              ],
+              "15": [
+                12,
+                12,
+                0.6,
+                8
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill03_EnterReady",
+              "Avatar_Phainon_00_Skill03_Phase01",
+              "Avatar_Phainon_00_Skill03_Phase02",
+              "Avatar_Phainon_00_Skill03_Camera",
+              "Avatar_Phainon_00_Skill31_Camera",
+              "Avatar_Phainon_00_Skill31_SelectTarget",
+              "Avatar_Phainon_00_Skill31_SelectTarget_OnLimbo",
+              "Avatar_Phainon_00_Skill31_Phase1",
+              "Avatar_Phainon_00_Skill31_Phase2"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              },
+              "Departed": {
+                "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order."
+              },
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Pyric Corpus": {
+          "variant1": {
+            "skillID": 140804,
+            "trigger": "SkillP01",
+            "name": "Pyric Corpus",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Phainon's Talent. When \"Coreflame\" reaches #4[i] point(s), can activate Ultimate. Even after reaching the limit, can still hold up to #3[i] overflow point(s). When the transformation ends, gains \"Coreflame\" based on the number of overflow points.\\nWhen Phainon is targeted by an ability from any other target, gains 1 \"Coreflame\" point. And if the ability is cast by one of Phainon's teammates, can also increase Phainon's CRIT DMG by #1[i]% for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                3,
+                3,
+                12
+              ],
+              "2": [
+                0.165,
+                3,
+                3,
+                12
+              ],
+              "3": [
+                0.18,
+                3,
+                3,
+                12
+              ],
+              "4": [
+                0.195,
+                3,
+                3,
+                12
+              ],
+              "5": [
+                0.21,
+                3,
+                3,
+                12
+              ],
+              "6": [
+                0.225,
+                3,
+                3,
+                12
+              ],
+              "7": [
+                0.24375,
+                3,
+                3,
+                12
+              ],
+              "8": [
+                0.2625,
+                3,
+                3,
+                12
+              ],
+              "9": [
+                0.28125,
+                3,
+                3,
+                12
+              ],
+              "10": [
+                0.3,
+                3,
+                3,
+                12
+              ],
+              "11": [
+                0.315,
+                3,
+                3,
+                12
+              ],
+              "12": [
+                0.33,
+                3,
+                3,
+                12
+              ],
+              "13": [
+                0.345,
+                3,
+                3,
+                12
+              ],
+              "14": [
+                0.36,
+                3,
+                3,
+                12
+              ],
+              "15": [
+                0.375,
+                3,
+                3,
+                12
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fate: Divine Vessel": {
+          "variant1": {
+            "skillID": 140805,
+            "trigger": "SkillP02",
+            "name": "Fate: Divine Vessel",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Khaslana's Talent. Upon transformation, gains #1[i] point(s) of \"Scourge\". If this happens during an ally target's turn, then the duration of all buffs on that target is extended by 1 turn and the current turn ends.\\nKhaslana is immune to Crowd Control debuffs, has 1 Enhanced Basic ATK and 2 Enhanced Skills, but cannot use Ultimate. During the transformation, increases ATK by #4[i]% and Max HP by #5[i]%. After using an attack, restores HP equal to #7[i]% of his Max HP. When Khaslana takes a killing blow, he will not get knocked down. Instead, he will restore HP equal to #2[i]% of Max HP and immediately launch a final hit. For every 1 remaining Khaslana's extra turn, the final hit's DMG multiplier decreases by #3[f1]% of its original multiplier value.\\nWhen the transformation ends, increases all allies' SPD by #6[i]% for 1 turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4,
+                0.25,
+                0.125,
+                0.4,
+                1.35,
+                0.15,
+                0.2
+              ],
+              "2": [
+                4,
+                0.25,
+                0.125,
+                0.44,
+                1.485,
+                0.15,
+                0.2
+              ],
+              "3": [
+                4,
+                0.25,
+                0.125,
+                0.48,
+                1.62,
+                0.15,
+                0.2
+              ],
+              "4": [
+                4,
+                0.25,
+                0.125,
+                0.52,
+                1.755,
+                0.15,
+                0.2
+              ],
+              "5": [
+                4,
+                0.25,
+                0.125,
+                0.56,
+                1.89,
+                0.15,
+                0.2
+              ],
+              "6": [
+                4,
+                0.25,
+                0.125,
+                0.6,
+                2.025,
+                0.15,
+                0.2
+              ],
+              "7": [
+                4,
+                0.25,
+                0.125,
+                0.65,
+                2.19375,
+                0.15,
+                0.2
+              ],
+              "8": [
+                4,
+                0.25,
+                0.125,
+                0.7,
+                2.3625,
+                0.15,
+                0.2
+              ],
+              "9": [
+                4,
+                0.25,
+                0.125,
+                0.75,
+                2.53125,
+                0.15,
+                0.2
+              ],
+              "10": [
+                4,
+                0.25,
+                0.125,
+                0.8,
+                2.7,
+                0.15,
+                0.2
+              ],
+              "11": [
+                4,
+                0.25,
+                0.125,
+                0.84,
+                2.835,
+                0.15,
+                0.2
+              ],
+              "12": [
+                4,
+                0.25,
+                0.125,
+                0.88,
+                2.97,
+                0.15,
+                0.2
+              ],
+              "13": [
+                4,
+                0.25,
+                0.125,
+                0.92,
+                3.105,
+                0.15,
+                0.2
+              ],
+              "14": [
+                4,
+                0.25,
+                0.125,
+                0.96,
+                3.24,
+                0.15,
+                0.2
+              ],
+              "15": [
+                4,
+                0.25,
+                0.125,
+                1,
+                3.375,
+                0.15,
+                0.2
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_PassiveSkill02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              },
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              },
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Beginning of the End": {
+          "variant1": {
+            "skillID": 140807,
+            "trigger": "SkillMaze",
+            "name": "Beginning of the End",
+            "slot": "Technique",
+            "desc": "While Phainon is in the team, increases Max Technique Points by 3.\\nWhen actively using this Technique, consumes 2 Technique Points and immediately attacks all enemies within a certain range. After entering combat, regenerates #3[i] Energy for allies and gains #2[i] \"Scourge\" and #4[i] Skill Point(s). Deals Physical DMG equal to #1[i]% of Phainon's ATK to all enemies at the start of each wave.\\nIf attacking a normal enemy, immediately defeats them without entering combat. No Technique Points are consumed if no enemies are hit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                2,
+                25,
+                1
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Phainon_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1408_basic_atk.png",
+        "skillRef": {
+          "skillName": "Stride to Deliverance",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1408_skill.png",
+        "skillRef": {
+          "skillName": "Let There Be Light",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1408_ultimate.png",
+        "skillRef": {
+          "skillName": "He Who Bears the World Must Burn",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1408_talent.png",
+        "skillRef": {
+          "skillName": "Pyric Corpus",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1408_technique.png",
+        "skillRef": {
+          "skillName": "Beginning of the End",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "March to Oblivion",
+        "icon": "icon/skill/1408_skilltree1.png",
+        "desc": "When the battle starts, gains #2[i] point(s) of \"Coreflame.\" When the transformation ends, gains #1[i] point(s) of \"Coreflame.\"",
+        "params": [
+          3,
+          1
+        ],
+        "traceAbility": "Phainon_Phainon_Trace01"
+      },
+      "Point07": {
+        "name": "Bide in Flames",
+        "icon": "icon/skill/1408_skilltree2.png",
+        "desc": "When receiving healing or a Shield from a teammate, deals #1[i]% increased DMG for #2[i] turn(s). This effect cannot trigger repeatedly within one turn.\nWhen receiving an Energy Regeneration effect from a teammate's ability, gains #3[i] point(s) of \"Coreflame.\"",
+        "params": [
+          0.45,
+          4,
+          1
+        ],
+        "traceAbility": "Phainon_Phainon_Trace02"
+      },
+      "Point08": {
+        "name": "Shine with Valor",
+        "icon": "icon/skill/1408_skilltree3.png",
+        "desc": "When entering combat or ending transformation, increases ATK by #1[i]%. This effect can stack up to #2[i] time(s).",
+        "params": [
+          0.5,
+          2
+        ],
+        "traceAbility": "Phainon_Phainon_Trace03"
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1408.png",
+    "preview": "image/character_preview/1408.png",
+    "portrait": "image/character_portrait/1408.png",
+    "bannerOffsets": [
+      140,
+      -13,
+      0.64,
+      140,
+      -13,
+      0.64,
+      140,
+      -13,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Hyacine": {
     "internalID": 1409,
     "name": "Hyacine",
@@ -22177,7 +24973,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -23187,7 +25983,7 @@ let characters = {
         "id": "141301",
         "name": "Sleep Tight, the Night Dreams Long",
         "rank": 1,
-        "desc": "When Evernight is on the field, if there are (4 or more)/3/2/1 enemy targets on the field, ally memosprites deal DMG equal to 120%/125%/130%/150% of their original DMG respectively.",
+        "desc": "When Evernight is on the field, if there are (≥4)/3/2/1 enemy targets on the field, ally memosprites deal DMG equal to 120%/125%/130%/150% of their original DMG respectively.",
         "icon": "icon/skill/1413_rank1.png",
         "paramsEido": [
           1.2,
@@ -23767,7 +26563,7 @@ let characters = {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -23941,7 +26737,7 @@ let characters = {
                 "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
               },
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -24235,7 +27031,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               }
             }
           }
@@ -24421,7 +27217,7 @@ let characters = {
       "Point08": {
         "name": "Kindle the Morn, Drop the Rain",
         "icon": "icon/skill/1413_skilltree3.png",
-        "desc": "When there are 1/2/3/(4 or more) Remembrance characters in the team, increases CRIT DMG for all ally memosprites by #1[i]%/#2[i]%/#3[i]%/#4[i]% respectively while Evernight's Skill lasts.",
+        "desc": "When there are 1/2/3/≥4 Remembrance characters in the team, increases CRIT DMG for all ally memosprites by #1[i]%/#2[i]%/#3[i]%/#4[i]% respectively while Evernight's Skill lasts.",
         "params": [
           0.05,
           0.15,
@@ -24585,7 +27381,7 @@ let characters = {
           2
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           },
           "Additional DMG": {
@@ -25282,7 +28078,7 @@ let characters = {
           0.15
         ],
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -26404,6 +29200,7 @@ let characters = {
               0
             ],
             "hitSplits": [],
+            "participantID": 144,
             "extraEffects": {
               "Elation DMG": {
                 "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
@@ -26463,7 +29260,7 @@ let characters = {
       "Point07": {
         "name": "Dazzling! Persona Kaleidoscope",
         "icon": "icon/skill/1501_skilltree2.png",
-        "desc": "When there are 1/2/(3 or more) Elation characters in the team, using Sparxie's Ultimate will additionally gain #1[i]/#2[i]/#3[i] Punchline and #4[i]/#5[i]/#6[i] \"Thrill\".",
+        "desc": "When there are 1/2/≥3 Elation characters in the team, using Sparxie's Ultimate will additionally gain #1[i]/#2[i]/#3[i] Punchline and #4[i]/#5[i]/#6[i] \"Thrill\".",
         "params": [
           2,
           4,
@@ -27324,6 +30121,7 @@ let characters = {
               0
             ],
             "hitSplits": [],
+            "participantID": 116,
             "extraEffects": {
               "Elation DMG": {
                 "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
@@ -27502,6 +30300,2294 @@ let characters = {
       43,
       28,
       0.66
+    ],
+    "isBuffed": false
+  },
+  "Evanescia": {
+    "internalID": 1505,
+    "name": "Evanescia",
+    "path": "Elation",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 480,
+    "baseStats": {
+      "ATKBase": 737.3520000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1047.816,
+      "SPDBase": 104,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150501",
+        "name": "Home: A Prayer in Dance",
+        "rank": 1,
+        "desc": "Increases All-Type RES PEN by 20%. After \"Master Fox\" uses an attack, additionally triggers 1 instance of Elation Skill. Elation Skill additionally grants this unit 10 \"Certified Banger\" point(s).",
+        "icon": "icon/skill/1505_rank1.png",
+        "paramsEido": [
+          0.2,
+          10
+        ],
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      {
+        "id": "150502",
+        "name": "Voyage: A Wish for Everbloom",
+        "rank": 2,
+        "desc": "CRIT DMG increases by 36%. When triggering the Certified Banger gain effect from the Trace \"Watch All Revels\"/\"Best All Blooms\", additionally gains \"Certified Banger\" equal to 50%/100% of the \"Certified Banger\" gained this time.",
+        "icon": "icon/skill/1505_rank2.png",
+        "paramsEido": [
+          0.36,
+          0.5,
+          1
+        ],
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      {
+        "id": "150503",
+        "name": "Blade: A Feast on Evils",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1505_ultimate.png"
+      },
+      {
+        "id": "150504",
+        "name": "Meadow: A Ruin by Vice",
+        "rank": 4,
+        "desc": "Evanescia's DMG dealt ignores 15% of the enemy targets' DEF.",
+        "icon": "icon/skill/1505_rank4.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "150505",
+        "name": "Arcadia: A Glimpse of Fates",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1505_skill.png"
+      },
+      {
+        "id": "150506",
+        "name": "Maiden: A Step into Dreams",
+        "rank": 6,
+        "desc": "The duration of Evanescia's \"Certified Banger\" increases by 1 turn(s). The Elation DMG dealt by Evanescia merrymakes by 15%. For every 100 points of \"Certified Banger\" held, it additionally merrymakes by 2.0%. Up to 1000 points of \"Certified Banger\" can be taken into account. After using Ultimate for the first time upon entering combat, regenerates a fixed amount of 120 Energy for Evanescia. This effect can trigger 1 time for every 4 more instances of Ultimate used.",
+        "icon": "icon/skill/1505_rank6.png",
+        "paramsEido": [
+          0.15,
+          1,
+          0.02,
+          120,
+          4
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          },
+          "Merrymake": {
+            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Syllabus: Pop Quiz": {
+          "variant1": {
+            "skillID": 150501,
+            "trigger": "Skill01",
+            "name": "Syllabus: Pop Quiz",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Evanescia's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Evanescia_00_Skill01_Camera",
+              "Avatar_Evanescia_00_Skill01_Phase01",
+              "Avatar_Evanescia_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Discipline: Final Verdict": {
+          "variant1": {
+            "skillID": 150502,
+            "trigger": "Skill02",
+            "name": "Discipline: Final Verdict",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #2[i]% of Evanescia's ATK to one designated enemy and Physical DMG equal to #3[i]% of Evanescia's ATK to adjacent targets. Additionally gains #4[i] Punchline.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1.5,
+                0.75,
+                10
+              ],
+              "2": [
+                1,
+                1.65,
+                0.825,
+                10
+              ],
+              "3": [
+                1,
+                1.8,
+                0.9,
+                10
+              ],
+              "4": [
+                1,
+                1.95,
+                0.975,
+                10
+              ],
+              "5": [
+                1,
+                2.1,
+                1.05,
+                10
+              ],
+              "6": [
+                1,
+                2.25,
+                1.125,
+                10
+              ],
+              "7": [
+                1,
+                2.4375,
+                1.21875,
+                10
+              ],
+              "8": [
+                1,
+                2.625,
+                1.3125,
+                10
+              ],
+              "9": [
+                1,
+                2.8125,
+                1.40625,
+                10
+              ],
+              "10": [
+                1,
+                3,
+                1.5,
+                10
+              ],
+              "11": [
+                1,
+                3.15,
+                1.575,
+                10
+              ],
+              "12": [
+                1,
+                3.3,
+                1.65,
+                10
+              ],
+              "13": [
+                1,
+                3.45,
+                1.725,
+                10
+              ],
+              "14": [
+                1,
+                3.6,
+                1.8,
+                10
+              ],
+              "15": [
+                1,
+                3.75,
+                1.875,
+                10
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evanescia_00_Skill02_Camera",
+              "Avatar_Evanescia_00_Skill02_Phase01",
+              "Avatar_Evanescia_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Swordsong: Absolution Denied": {
+          "variant1": {
+            "skillID": 150503,
+            "trigger": "Skill03",
+            "name": "Swordsong: Absolution Denied",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Physical DMG equal to #1[i]% of Evanescia's ATK to all enemy targets, then deals 5 instances of DMG, with each instance dealing Physical DMG equal to #3[i]% of Evanescia's ATK to one random enemy.",
+            "energyCost": 240,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                5,
+                0.72,
+                88
+              ],
+              "2": [
+                0.88,
+                5,
+                0.768,
+                88
+              ],
+              "3": [
+                0.96,
+                5,
+                0.816,
+                88
+              ],
+              "4": [
+                1.04,
+                5,
+                0.864,
+                88
+              ],
+              "5": [
+                1.12,
+                5,
+                0.912,
+                88
+              ],
+              "6": [
+                1.2,
+                5,
+                0.96,
+                88
+              ],
+              "7": [
+                1.3,
+                5,
+                1.02,
+                88
+              ],
+              "8": [
+                1.4,
+                5,
+                1.08,
+                88
+              ],
+              "9": [
+                1.5,
+                5,
+                1.14,
+                88
+              ],
+              "10": [
+                1.6,
+                5,
+                1.2,
+                88
+              ],
+              "11": [
+                1.68,
+                5,
+                1.248,
+                88
+              ],
+              "12": [
+                1.76,
+                5,
+                1.296,
+                88
+              ],
+              "13": [
+                1.84,
+                5,
+                1.344,
+                88
+              ],
+              "14": [
+                1.92,
+                5,
+                1.392,
+                88
+              ],
+              "15": [
+                2,
+                5,
+                1.44,
+                88
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evanescia_00_Skill03_EnterReady",
+              "Avatar_Evanescia_00_Skill03_Camera",
+              "Avatar_Evanescia_00_Skill03_Phase01",
+              "Avatar_Evanescia_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              15,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Youth: Halcyon Evermore": {
+          "variant1": {
+            "skillID": 150504,
+            "trigger": "SkillP01",
+            "name": "Youth: Halcyon Evermore",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Evanescia gains Elation equal to #5[i]% of CRIT DMG. When Evanescia gains Energy, she will simultaneously gain an equal amount of \"Certified Banger.\" When Evanescia gains \"Certified Banger,\" she will simultaneously gain an equal amount of Energy. The amount of \"Certified Banger\" taken into calculation via this method cannot exceed 100 points in a single instance.\\nAfter accumulating #3[i] Energy, she consumes this accumulation of #3[i], and \"Master Fox\" launches Follow-Up ATK, dealing Physical DMG equal to #1[i]% of Evanescia's ATK to all enemies, and regenerates #4[i] Energy for Evanescia. Each instance of Energy regeneration grants up to an accumulation of #3[i]. While Evanescia holds \"Certified Banger\":\\nUsing Skill can deal #7[f1]% Physical Elation DMG to the attacked enemy targets.\\nUsing Ultimate can deal #6[i]% Physical Elation DMG to all enemies and also deals #8[i]% Physical Elation DMG to the enemy targets that have been randomly dealt DMG by Ultimate. When Ultimate deals Elation DMG, the amount of \"Certified Banger\" taken into account is at least equal to Max Energy.\\nMaster Fox's Follow-Up ATK deals #2[i]% Physical Elation DMG to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.125,
+                240,
+                10,
+                0.2,
+                0.12,
+                0.08,
+                0.14
+              ],
+              "2": [
+                0.55,
+                0.1375,
+                240,
+                10,
+                0.2,
+                0.132,
+                0.088,
+                0.154
+              ],
+              "3": [
+                0.6,
+                0.15,
+                240,
+                10,
+                0.2,
+                0.144,
+                0.096,
+                0.168
+              ],
+              "4": [
+                0.65,
+                0.1625,
+                240,
+                10,
+                0.2,
+                0.156,
+                0.104,
+                0.182
+              ],
+              "5": [
+                0.7,
+                0.175,
+                240,
+                10,
+                0.2,
+                0.168,
+                0.112,
+                0.196
+              ],
+              "6": [
+                0.75,
+                0.1875,
+                240,
+                10,
+                0.2,
+                0.18,
+                0.12,
+                0.21
+              ],
+              "7": [
+                0.8125,
+                0.203125,
+                240,
+                10,
+                0.2,
+                0.195,
+                0.13,
+                0.2275
+              ],
+              "8": [
+                0.875,
+                0.21875,
+                240,
+                10,
+                0.2,
+                0.21,
+                0.14,
+                0.245
+              ],
+              "9": [
+                0.9375,
+                0.234375,
+                240,
+                10,
+                0.2,
+                0.225,
+                0.15,
+                0.2625
+              ],
+              "10": [
+                1,
+                0.25,
+                240,
+                10,
+                0.2,
+                0.24,
+                0.16,
+                0.28
+              ],
+              "11": [
+                1.05,
+                0.2625,
+                240,
+                10,
+                0.2,
+                0.252,
+                0.168,
+                0.294
+              ],
+              "12": [
+                1.1,
+                0.275,
+                240,
+                10,
+                0.2,
+                0.264,
+                0.176,
+                0.308
+              ],
+              "13": [
+                1.15,
+                0.2875,
+                240,
+                10,
+                0.2,
+                0.276,
+                0.184,
+                0.322
+              ],
+              "14": [
+                1.2,
+                0.3,
+                240,
+                10,
+                0.2,
+                0.288,
+                0.192,
+                0.336
+              ],
+              "15": [
+                1.25,
+                0.3125,
+                240,
+                10,
+                0.2,
+                0.3,
+                0.2,
+                0.35
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evanescia_00_PassiveSkill01",
+              "Avatar_EvanesciaCombat_00_Insert_SelectTarget",
+              "Avatar_EvanesciaCombat_00_Insert_Phase01",
+              "Avatar_EvanesciaCombat_00_Insert_Phase02",
+              "Avatar_EvanesciaCombat_00_Insert_Camera"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Petalfall: Floral Reminiscence": {
+          "variant1": {
+            "skillID": 150507,
+            "trigger": "SkillMaze",
+            "name": "Petalfall: Floral Reminiscence",
+            "slot": "Technique",
+            "desc": "Immediately attacks all enemies within a certain range. After entering combat, deals Physical DMG equal to #1[i]% of Evanescia's ATK to all enemies and gains #2[i] point(s) of \"Certified Banger.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                20
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Evanescia_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      },
+      "Elation Skill": {
+        "Scarlet: Elation or Execution": {
+          "variant1": {
+            "skillID": 150520,
+            "trigger": "Skill04",
+            "name": "Scarlet: Elation or Execution",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Deals #2[i]% Physical Elation DMG to all enemies and additionally gains #1[i] point(s) of \"Certified Banger\".",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5,
+                0.55
+              ],
+              "2": [
+                5,
+                0.605
+              ],
+              "3": [
+                5,
+                0.66
+              ],
+              "4": [
+                5,
+                0.715
+              ],
+              "5": [
+                5,
+                0.77
+              ],
+              "6": [
+                5,
+                0.825
+              ],
+              "7": [
+                5,
+                0.89375
+              ],
+              "8": [
+                5,
+                0.9625
+              ],
+              "9": [
+                5,
+                1.03125
+              ],
+              "10": [
+                5,
+                1.1
+              ],
+              "11": [
+                5,
+                1.155
+              ],
+              "12": [
+                5,
+                1.21
+              ],
+              "13": [
+                5,
+                1.265
+              ],
+              "14": [
+                5,
+                1.32
+              ],
+              "15": [
+                5,
+                1.375
+              ]
+            },
+            "element": "Physical",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evanescia_00_Skill04_Camera",
+              "Avatar_Evanescia_00_Skill04_Phase01",
+              "Avatar_Evanescia_00_Skill04_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 146,
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1505_basic_atk.png",
+        "skillRef": {
+          "skillName": "Syllabus: Pop Quiz",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1505_skill.png",
+        "skillRef": {
+          "skillName": "Discipline: Final Verdict",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1505_ultimate.png",
+        "skillRef": {
+          "skillName": "Swordsong: Absolution Denied",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1505_talent.png",
+        "skillRef": {
+          "skillName": "Youth: Halcyon Evermore",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1505_technique.png",
+        "skillRef": {
+          "skillName": "Petalfall: Floral Reminiscence",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Watch All Revels",
+        "icon": "icon/skill/1505_skilltree1.png",
+        "desc": "Increases Evanescia's CRIT Rate by #1[i]%. When there are (≥3)/2/1 enemy target(s) on the field, the Ultimate's bounce count increases by #2[i]/#3[i]/#4[i]. When a teammate with an Elation Skill Participant ID lower than Evanescia's gains \"Certified Banger,\" Evanescia converts #5[i]% of it into her own \"Certified Banger.\"",
+        "params": [
+          0.3,
+          1,
+          2,
+          4,
+          0.5
+        ],
+        "traceAbility": "Evanescia_Evanescia_Trace01",
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Weigh All Truths",
+        "icon": "icon/skill/1505_skilltree2.png",
+        "desc": "When \"Master Fox\" uses an attack, it additionally inflicts Vulnerability on the target, increasing the DMG they take by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.12,
+          3
+        ],
+        "traceAbility": "Evanescia_Evanescia_Trace02"
+      },
+      "Point08": {
+        "name": "Best All Blooms",
+        "icon": "icon/skill/1505_skilltree3.png",
+        "desc": "When a teammate's \"Certified Banger\" ends, Evanescia converts #1[i]% of it into her own \"Certified Banger.\"",
+        "params": [
+          0.5
+        ],
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1505_elation.png",
+        "skillRef": {
+          "skillName": "Scarlet: Elation or Execution",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1505.png",
+    "preview": "image/character_preview/1505.png",
+    "portrait": "image/character_portrait/1505.png",
+    "bannerOffsets": [
+      -13.5,
+      22.72,
+      0.53,
+      -13.5,
+      22.72,
+      0.53,
+      -13.5,
+      22.72,
+      0.53
+    ],
+    "isBuffed": false
+  },
+  "Silver Wolf LV.999": {
+    "internalID": 1506,
+    "name": "Silver Wolf LV.999",
+    "path": "Elation",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 60,
+    "baseStats": {
+      "ATKBase": 388.08000000000004,
+      "DEFBase": 654.885,
+      "HPBase": 1047.816,
+      "SPDBase": 110,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150601",
+        "name": "Aether Editing: Eidolon +1",
+        "rank": 1,
+        "desc": "Enemy targets in the Zone take 20% increased DMG.\nWhen exiting the \"Godmode Player\" state, \"Hidden MMR\" will not be cleared. Instead, 20% of \"Hidden MMR\" will be retained.",
+        "icon": "icon/skill/1506_rank1.png",
+        "paramsEido": [
+          0.2,
+          0.2
+        ]
+      },
+      {
+        "id": "150602",
+        "name": "It's a Feature, Not a Bug",
+        "rank": 2,
+        "desc": "After entering the \"Godmode Player\" state, extends the duration of all buffs on this unit by 1 turn. In the current \"Godmode Player\" state, for every 120 point(s) of \"Hidden MMR\" increased (including the initial \"Hidden MMR\"), Silver Wolf LV.999 gains 1 extra turn and regains 1 use of Enhanced Basic ATK.",
+        "icon": "icon/skill/1506_rank2.png",
+        "paramsEido": [
+          120
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        }
+      },
+      {
+        "id": "150603",
+        "name": "Max Lv. 15? Says who?",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1506_skill.png"
+      },
+      {
+        "id": "150604",
+        "name": "I Came. I Saw. I One-Shot.",
+        "rank": 4,
+        "desc": "Elation DMG dealt by \"Honkai-DMG Demo\" additionally takes into account Punchline, equal to the original amount multiplied by 5.",
+        "icon": "icon/skill/1506_rank4.png",
+        "paramsEido": [
+          5
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        },
+        "eidoAbility": "SilverWolfL_SilverWolf999_Eidolon4"
+      },
+      {
+        "id": "150605",
+        "name": "Basic ATK Is the New Ultimate",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1506_ultimate.png"
+      },
+      {
+        "id": "150606",
+        "name": "Solo Maxxing!",
+        "rank": 6,
+        "desc": "Elation DMG dealt during Enhanced Basic ATK merrymakes by 50%.\nWhen enemy targets enter combat, they are implanted with \"Absolute Weakness\": Has All-Type Weakness, and reduces their All-Type Base RES to 0. (If Base RES is already at 0, then the corresponding Type RES decreases by 20% instead).",
+        "icon": "icon/skill/1506_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.5
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Merrymake": {
+            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+          },
+          "Base RES": {
+            "desc": "The fixed DMG Type RES a target has when entering combat. Under normal circumstances, it cannot be modified."
+          }
+        },
+        "eidoAbility": "SilverWolfL_SilverWolf999_Eidolon6"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "One Punch!": {
+          "variant1": {
+            "skillID": 150601,
+            "trigger": "Skill01",
+            "name": "One Punch!",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Silver Wolf LV.999's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill01_Camera",
+              "Avatar_SilverWolf999_00_Skill01_Phase01",
+              "Avatar_SilverWolf999_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Bonus Stage: αWolf Instant": {
+          "variant1": {
+            "skillID": 150608,
+            "trigger": "Skill11",
+            "name": "Bonus Stage: αWolf Instant",
+            "type": "Bounce",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to a total of #1[i]% of Silver Wolf LV.999's ATK, split evenly into #3[i] hits that bounce onto random enemies. After every set number of bounces, the bouncing pauses and the Top Loot Box triggers 1 time. Can trigger up to #5[i] time(s) in total.\\nWhen dealing fatal damage to all enemies on the field, this ability ends. After attackable enemy targets appear, gains 1 extra turn and uses this ability again based on the remaining number of bounces and Top Loot Box triggers. The first time this effect triggers in each turn, extends the duration of all buffs on this unit by 1 turn.\\nAfter all of the above DMG is dealt, launches a Final Hit that deals Imaginary DMG equal to #4[i]% of Silver Wolf LV.999's ATK, split evenly among all enemies.\\nEnhanced Basic ATK cannot recover Skill Points. For every #6[i] points of \"Hidden MMR\" held, increases DMG dealt during Enhanced Basic ATK by #8[i]% of the original DMG, stacking up to #7[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 50,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2,
+                0,
+                100,
+                0.5,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "2": [
+                1.44,
+                0,
+                100,
+                0.6,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "3": [
+                1.68,
+                0,
+                100,
+                0.7,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "4": [
+                1.92,
+                0,
+                100,
+                0.8,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "5": [
+                2.16,
+                0,
+                100,
+                0.9,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "6": [
+                2.4,
+                0,
+                100,
+                1,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "7": [
+                2.64,
+                0,
+                100,
+                1.1,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "8": [
+                2.88,
+                0,
+                100,
+                1.2,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "9": [
+                3.12,
+                0,
+                100,
+                1.3,
+                3,
+                60,
+                2,
+                0.15
+              ],
+              "10": [
+                3.36,
+                0,
+                100,
+                1.4,
+                3,
+                60,
+                2,
+                0.15
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Bounce",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill11_Entry",
+              "Avatar_SilverWolf999_00_Skill11_Start_Camera",
+              "Avatar_SilverWolf999_00_Skill11_Phase01",
+              "Avatar_SilverWolf999_00_Skill11_Phase02",
+              "Avatar_SilverWolf999_00_Skill11_End_Camera",
+              "Avatar_SilverWolf999_00_Skill11_End_Phase01",
+              "Avatar_SilverWolf999_00_Skill11_End_Phase02",
+              "Avatar_SilverWolf999_00_Item_Insert",
+              "Avatar_SilverWolf999_00_ItemStart_Insert_Camera"
+            ],
+            "toughnessList": [
+              30,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Top Loot Box": {
+                "desc": "Special Attack that ally targets can trigger while in Silver Wolf LV.<unbreak>999</unbreak>'s Zone when Silver Wolf LV.<unbreak>999</unbreak> has \"Certified Banger.\" Can also be actively triggered in \"Bonus Stage: αWolf Instant.\" Triggering via this method is not considered as launching 1 attack.\\nWhen used, deals massive Imaginary Elation DMG split evenly among all enemies and randomly triggers one of the following 3 effects:\\n\"Big Flipping Sword\": Deals True DMG to the target with the highest HP based on the total DMG dealt this time.\\n\"Kaboom Eggsplosion\": Restores Skill Points (Trigger rate increases when Skill Points are low. Trigger rate decreases when Skill Points are high).\\n\"Funky Munch Bean\": Gains Punchline (Trigger rate increases when \"Hidden MMR\" is low. Trigger rate decreases when \"Hidden MMR\" is high)."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              }
+            }
+          }
+        },
+        "Big Flipping Sword": {
+          "variant1": {
+            "skillID": 150610,
+            "trigger": "Skill12",
+            "name": "Big Flipping Sword",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals massive Imaginary Elation DMG to all enemies, split evenly among them. And deals True DMG to the target with the highest HP based on the total DMG dealt.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill11_Item1_Prepare_Camera",
+              "Avatar_SilverWolf999_00_Skill11_Item1_Prepare",
+              "Avatar_SilverWolf999_00_Skill11_Item1_Phase01",
+              "Avatar_SilverWolf999_00_Skill11_Item1_Phase02",
+              "Avatar_SilverWolf999_00_Skill11_Item1_Camera",
+              "Avatar_SilverWolf999_00_Item1_Phase01",
+              "Avatar_SilverWolf999_00_Item1_Phase02",
+              "Avatar_SilverWolf999_00_Item1_Camera"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Kaboom Eggsplosion": {
+          "variant1": {
+            "skillID": 150612,
+            "trigger": "Skill13",
+            "name": "Kaboom Eggsplosion",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals massive Imaginary Elation DMG to all enemies, split evenly among them. And recovers Skill Points.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill11_Item2_Prepare_Camera",
+              "Avatar_SilverWolf999_00_Skill11_Item2_Prepare",
+              "Avatar_SilverWolf999_00_Skill11_Item2_Phase01",
+              "Avatar_SilverWolf999_00_Skill11_Item2_Phase02",
+              "Avatar_SilverWolf999_00_Skill11_Item2_Camera",
+              "Avatar_SilverWolf999_00_Item2_Phase01",
+              "Avatar_SilverWolf999_00_Item2_Phase02",
+              "Avatar_SilverWolf999_00_Item2_Camera"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Funky Munch Bean": {
+          "variant1": {
+            "skillID": 150618,
+            "trigger": "Skill14",
+            "name": "Funky Munch Bean",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals massive Imaginary Elation DMG to all enemies, split evenly among them. And gains Punchline.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill11_Item3_Prepare_Camera",
+              "Avatar_SilverWolf999_00_Skill11_Item3_Prepare",
+              "Avatar_SilverWolf999_00_Skill11_Item3_Phase01",
+              "Avatar_SilverWolf999_00_Skill11_Item3_Phase02",
+              "Avatar_SilverWolf999_00_Skill11_Item3_Camera",
+              "Avatar_SilverWolf999_00_Item3_Phase01",
+              "Avatar_SilverWolf999_00_Item3_Phase02",
+              "Avatar_SilverWolf999_00_Item3_Camera",
+              "Avatar_SilverWolf999_00_MazeSkill_Insert"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Trigger Happy": {
+          "variant1": {
+            "skillID": 150602,
+            "trigger": "Skill02",
+            "name": "Trigger Happy",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Gains #2[i] Punchline point(s) and deals Imaginary DMG equal to #1[i]% of Silver Wolf LV.999's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                5
+              ],
+              "2": [
+                0.88,
+                5
+              ],
+              "3": [
+                0.96,
+                5
+              ],
+              "4": [
+                1.04,
+                5
+              ],
+              "5": [
+                1.12,
+                5
+              ],
+              "6": [
+                1.2,
+                5
+              ],
+              "7": [
+                1.3,
+                5
+              ],
+              "8": [
+                1.4,
+                5
+              ],
+              "9": [
+                1.5,
+                5
+              ],
+              "10": [
+                1.6,
+                5
+              ],
+              "11": [
+                1.68,
+                5
+              ],
+              "12": [
+                1.76,
+                5
+              ],
+              "13": [
+                1.84,
+                5
+              ],
+              "14": [
+                1.92,
+                5
+              ],
+              "15": [
+                2,
+                5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill02_Camera",
+              "Avatar_SilverWolf999_00_Skill02_Phase01",
+              "Avatar_SilverWolf999_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "God Mode: ON!": {
+          "variant1": {
+            "skillID": 150603,
+            "trigger": "Skill03",
+            "name": "God Mode: ON!",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enters the \"Godmode Player\" state, and advances action by 100%.\\nDeploys a Zone while in the \"Godmode Player\" state. While Silver Wolf LV.999 holds \"Certified Banger,\" for every 1 Skill Point consumed by an ally target within the Zone, there is a chance to trigger 1 instance of Silver Wolf LV.999's \"Top Loot Box\": Deals #3[i]% Imaginary Elation DMG that is distributed evenly among all enemies, and randomly triggers 1 of the following effects:\\n\"Big Flipping Sword\": Additionally deals True DMG equal to #5[i]% of the total DMG dealt this time to the enemy target with the highest HP.\\n\"Kaboom Eggsplosion\": Recovers #7[i] Skill Point(s).\\n\"Funky Munch Bean\": Gains #6[i] Punchline point(s).\\nThe initial fixed chance to trigger the effect is 100%. After a successfully trigger, the fixed chance for the next trigger is reduced to #4[i]% of the current chance. If the target is defeated before it triggers, it will instead trigger on a newly entering enemy target.",
+            "energyCost": 60,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                60,
+                0,
+                0.45,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "2": [
+                60,
+                0,
+                0.495,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "3": [
+                60,
+                0,
+                0.54,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "4": [
+                60,
+                0,
+                0.585,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "5": [
+                60,
+                0,
+                0.63,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "6": [
+                60,
+                0,
+                0.675,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "7": [
+                60,
+                0,
+                0.73125,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "8": [
+                60,
+                0,
+                0.7875,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "9": [
+                60,
+                0,
+                0.84375,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "10": [
+                60,
+                0,
+                0.9,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "11": [
+                60,
+                0,
+                0.945,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "12": [
+                60,
+                0,
+                0.99,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "13": [
+                60,
+                0,
+                1.035,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "14": [
+                60,
+                0,
+                1.08,
+                0.2,
+                0.2,
+                3,
+                2
+              ],
+              "15": [
+                60,
+                0,
+                1.125,
+                0.2,
+                0.2,
+                3,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill03_EnterReady",
+              "Avatar_SilverWolf999_00_Skill03_Camera",
+              "Avatar_SilverWolf999_00_Skill03_Phase01",
+              "Avatar_SilverWolf999_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advance": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              },
+              "Top Loot Box": {
+                "desc": "Special Attack that ally targets can trigger while in Silver Wolf LV.<unbreak>999</unbreak>'s Zone when Silver Wolf LV.<unbreak>999</unbreak> has \"Certified Banger.\" Can also be actively triggered in \"Bonus Stage: αWolf Instant.\" Triggering via this method is not considered as launching 1 attack.\\nWhen used, deals massive Imaginary Elation DMG split evenly among all enemies and randomly triggers one of the following 3 effects:\\n\"Big Flipping Sword\": Deals True DMG to the target with the highest HP based on the total DMG dealt this time.\\n\"Kaboom Eggsplosion\": Restores Skill Points (Trigger rate increases when Skill Points are low. Trigger rate decreases when Skill Points are high).\\n\"Funky Munch Bean\": Gains Punchline (Trigger rate increases when \"Hidden MMR\" is low. Trigger rate decreases when \"Hidden MMR\" is high)."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              },
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              },
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "I Carry, We Win": {
+          "variant1": {
+            "skillID": 150604,
+            "trigger": "SkillP01",
+            "name": "I Carry, We Win",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After \"Hidden MMR\" reaches #1[i], can activate Ultimate. And after reaching its maximum limit, it can overflow by an additional #2[i] point(s).\\nWhen gaining Punchline, Silver Wolf LV.999 gains an equal amount of \"Hidden MMR.\" Each point of \"Hidden MMR\" increases CRIT Rate by #4[f2]%. Once CRIT Rate reaches 100%, each additional point of \"Hidden MMR\" instead increases CRIT DMG by #6[f2]%.\\nWhile in the \"Godmode Player\" state, Silver Wolf LV.999 becomes immune to Crowd Control debuffs, cannot use Ultimate, and gains Enhanced Basic ATK and Enhanced Elation Skill. After fully using Enhanced Basic ATK #5[i] time(s), she exits the \"Godmode Player\" state. When exiting the \"Godmode Player\" state, clears \"Hidden MMR\".\\nWhile holding \"Certified Banger,\" using Basic ATK or Skill deals #3[i]% Imaginary Elation DMG to the attacked enemy targets. And the Enhanced Basic ATK's ability DMG changes to Elation DMG at the same multiplier.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                60,
+                240,
+                0.2,
+                0.0019999999,
+                3,
+                0.0039999997
+              ],
+              "2": [
+                60,
+                240,
+                0.22,
+                0.0022,
+                3,
+                0.0044
+              ],
+              "3": [
+                60,
+                240,
+                0.24,
+                0.0024,
+                3,
+                0.0048
+              ],
+              "4": [
+                60,
+                240,
+                0.26,
+                0.0026000002,
+                3,
+                0.0051999995
+              ],
+              "5": [
+                60,
+                240,
+                0.28,
+                0.0028000004,
+                3,
+                0.0056
+              ],
+              "6": [
+                60,
+                240,
+                0.3,
+                0.0029999998,
+                3,
+                0.0059999996
+              ],
+              "7": [
+                60,
+                240,
+                0.325,
+                0.0032500003,
+                3,
+                0.0065
+              ],
+              "8": [
+                60,
+                240,
+                0.35,
+                0.0035,
+                3,
+                0.0069999993
+              ],
+              "9": [
+                60,
+                240,
+                0.375,
+                0.0037500006,
+                3,
+                0.0075
+              ],
+              "10": [
+                60,
+                240,
+                0.4,
+                0.0039999997,
+                3,
+                0.007999999
+              ],
+              "11": [
+                60,
+                240,
+                0.42,
+                0.0042,
+                3,
+                0.0084
+              ],
+              "12": [
+                60,
+                240,
+                0.44,
+                0.0044,
+                3,
+                0.0088
+              ],
+              "13": [
+                60,
+                240,
+                0.46,
+                0.0046,
+                3,
+                0.009199999
+              ],
+              "14": [
+                60,
+                240,
+                0.48,
+                0.0048,
+                3,
+                0.0095999995
+              ],
+              "15": [
+                60,
+                240,
+                0.5,
+                0.005,
+                3,
+                0.01
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_PassiveSkill01",
+              "Avatar_SilverWolf999_00_UltraEnd_Insert",
+              "Avatar_SilverWolf999_00_UltraEnd_Insert_Camera"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "This? Absolute Meta!": {
+          "variant1": {
+            "skillID": 150607,
+            "trigger": "SkillMaze",
+            "name": "This? Absolute Meta!",
+            "type": "Summon",
+            "slot": "Technique",
+            "desc": "Summons \"Funky Munch Bean.\" Use again to dismiss. Using Technique does not consume Technique Points. When Technique Points reach 0, the summon is dismissed and Technique cannot be used.\\n\"Funky Munch Bean\" causes Normal Enemies within a certain range to enter a Terrified state. It will also automatically search for and attack Normal Enemies, consuming 1 Technique Point to instantly defeat them without entering combat.\\nWhile \"Funky Munch Bean\" is present, after entering combat, 1 instance of \"Top Loot Box\" from \"Funky Munch Bean\" is triggered at the start of each wave. A fixed amount of #1[i] \"Certified Banger\" is taken into account for the Elation DMG dealt in this instance.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                99
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Summon",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Top Loot Box": {
+                "desc": "Special Attack that ally targets can trigger while in Silver Wolf LV.<unbreak>999</unbreak>'s Zone when Silver Wolf LV.<unbreak>999</unbreak> has \"Certified Banger.\" Can also be actively triggered in \"Bonus Stage: αWolf Instant.\" Triggering via this method is not considered as launching 1 attack.\\nWhen used, deals massive Imaginary Elation DMG split evenly among all enemies and randomly triggers one of the following 3 effects:\\n\"Big Flipping Sword\": Deals True DMG to the target with the highest HP based on the total DMG dealt this time.\\n\"Kaboom Eggsplosion\": Restores Skill Points (Trigger rate increases when Skill Points are low. Trigger rate decreases when Skill Points are high).\\n\"Funky Munch Bean\": Gains Punchline (Trigger rate increases when \"Hidden MMR\" is low. Trigger rate decreases when \"Hidden MMR\" is high)."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Elation Skill": {
+        "Pro-Gamer Move": {
+          "variant1": {
+            "skillID": 150620,
+            "trigger": "Skill04",
+            "name": "Pro-Gamer Move",
+            "type": "Enhance",
+            "slot": "Elation Skill",
+            "desc": "Gains #1[i] \"Hidden MMR\" point(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15
+              ],
+              "2": [
+                15
+              ],
+              "3": [
+                15
+              ],
+              "4": [
+                15
+              ],
+              "5": [
+                15
+              ],
+              "6": [
+                15
+              ],
+              "7": [
+                15
+              ],
+              "8": [
+                15
+              ],
+              "9": [
+                15
+              ],
+              "10": [
+                15
+              ],
+              "11": [
+                15
+              ],
+              "12": [
+                15
+              ],
+              "13": [
+                15
+              ],
+              "14": [
+                15
+              ],
+              "15": [
+                15
+              ]
+            },
+            "attackType": "ElationDamage",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill04_Camera",
+              "Avatar_SilverWolf999_00_Skill04_Phase01",
+              "Avatar_SilverWolf999_00_Skill04_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 999
+          }
+        },
+        "Honkai-DMG Demo": {
+          "variant1": {
+            "skillID": 150621,
+            "trigger": "Skill41",
+            "name": "Honkai-DMG Demo",
+            "type": "Bounce",
+            "slot": "Elation Skill",
+            "desc": "Deals #2[i] instances of DMG, with each instance dealing #1[i]% Imaginary Elation DMG to one random enemy. Then, resets the fixed chance to trigger \"Top Loot Box\" to its initial value.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.45,
+                6
+              ],
+              "2": [
+                0.495,
+                6
+              ],
+              "3": [
+                0.54,
+                6
+              ],
+              "4": [
+                0.585,
+                6
+              ],
+              "5": [
+                0.63,
+                6
+              ],
+              "6": [
+                0.675,
+                6
+              ],
+              "7": [
+                0.73125,
+                6
+              ],
+              "8": [
+                0.7875,
+                6
+              ],
+              "9": [
+                0.84375,
+                6
+              ],
+              "10": [
+                0.9,
+                6
+              ],
+              "11": [
+                0.945,
+                6
+              ],
+              "12": [
+                0.99,
+                6
+              ],
+              "13": [
+                1.035,
+                6
+              ],
+              "14": [
+                1.08,
+                6
+              ],
+              "15": [
+                1.125,
+                6
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "ElationDamage",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_SilverWolf999_00_Skill41_Camera",
+              "Avatar_SilverWolf999_00_Skill41_Phase01",
+              "Avatar_SilverWolf999_00_Skill41_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 999,
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              },
+              "Top Loot Box": {
+                "desc": "Special Attack that ally targets can trigger while in Silver Wolf LV.<unbreak>999</unbreak>'s Zone when Silver Wolf LV.<unbreak>999</unbreak> has \"Certified Banger.\" Can also be actively triggered in \"Bonus Stage: αWolf Instant.\" Triggering via this method is not considered as launching 1 attack.\\nWhen used, deals massive Imaginary Elation DMG split evenly among all enemies and randomly triggers one of the following 3 effects:\\n\"Big Flipping Sword\": Deals True DMG to the target with the highest HP based on the total DMG dealt this time.\\n\"Kaboom Eggsplosion\": Restores Skill Points (Trigger rate increases when Skill Points are low. Trigger rate decreases when Skill Points are high).\\n\"Funky Munch Bean\": Gains Punchline (Trigger rate increases when \"Hidden MMR\" is low. Trigger rate decreases when \"Hidden MMR\" is high)."
+              },
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1506_basic_atk.png",
+        "skillRef": {
+          "skillName": "One Punch!",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1506_skill.png",
+        "skillRef": {
+          "skillName": "Trigger Happy",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1506_ultimate.png",
+        "skillRef": {
+          "skillName": "God Mode: ON!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1506_talent.png",
+        "skillRef": {
+          "skillName": "I Carry, We Win",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1506_technique.png",
+        "skillRef": {
+          "skillName": "This? Absolute Meta!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "False Ending Speedrun",
+        "icon": "icon/skill/1506_skilltree1.png",
+        "desc": "When SPD is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] SPD exceeded, increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          160,
+          0.5,
+          1,
+          0.02,
+          100
+        ],
+        "traceAbility": "SilverWolfL_SilverWolf999_Trace01"
+      },
+      "Point07": {
+        "name": "True Ending Unlocked",
+        "icon": "icon/skill/1506_skilltree2.png",
+        "desc": "If the number of Punchline points taken into account when using Elation Skill is #1[i] or more, additionally gains #3[i] \"Hidden MMR\" points (And if it's #2[i] or more, then gains #4[i] more points on top of that).",
+        "params": [
+          20,
+          40,
+          20,
+          20
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Secret Level Maxed",
+        "icon": "icon/skill/1506_skilltree3.png",
+        "desc": "After entering the \"Godmode Player\" state, gains #1[i] \"Hidden MMR\" point(s).",
+        "params": [
+          20
+        ],
+        "traceAbility": "SilverWolfL_SilverWolf999_Trace03"
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1506_elation.png",
+        "skillRef": {
+          "skillName": "Pro-Gamer Move",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1506.png",
+    "preview": "image/character_preview/1506.png",
+    "portrait": "image/character_portrait/1506.png",
+    "bannerOffsets": [
+      21.16,
+      -25.2,
+      0.53,
+      21.16,
+      -25.2,
+      0.53,
+      21.16,
+      -25.2,
+      0.53
     ],
     "isBuffed": false
   },
@@ -27741,7 +32827,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Crowd Control debuff": {
-                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
               },
               "Joint Attack": {
                 "desc": "Multiple targets respectively use attacks on enemy targets in one action."
@@ -28326,7 +33412,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "True DMG": {
@@ -28525,7 +33611,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Advanced": {
+              "Action Advance": {
                 "desc": "Reduces the target's waiting interval before the next action."
               }
             }
@@ -28579,7 +33665,7 @@ let characters = {
         ],
         "traceAbility": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
         "extraEffects": {
-          "Action Advanced": {
+          "Action Advance": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
         }
@@ -28715,6 +33801,862 @@ let characters = {
     "hasRemembranceSummon": true,
     "remembranceSummonID": 18007,
     "summonName": "Mem"
+  },
+  "Trailblazer - Elation": {
+    "internalID": 8009,
+    "name": "Trailblazer - Elation",
+    "path": "Elation",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 465.696,
+      "DEFBase": 630.6300000000001,
+      "HPBase": 1086.624,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "800901",
+        "name": "Believe In the Light",
+        "rank": 1,
+        "desc": "After using Skill, the next Ultimate increases the amount of \"Certified Banger\" gained by ally targets by 2. This effect can stack up to 3 time(s).",
+        "icon": "icon/skill/8009_rank1.png",
+        "paramsEido": [
+          2,
+          3
+        ],
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      {
+        "id": "800902",
+        "name": "History in the Making...",
+        "rank": 2,
+        "desc": "Ultimate additionally increases the Elation of one designated ally by 12%, lasting for 2 turn(s).",
+        "icon": "icon/skill/8009_rank2.png",
+        "paramsEido": [
+          0.12,
+          2
+        ]
+      },
+      {
+        "id": "800903",
+        "name": "Into the Spotlight",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/8009_skill.png"
+      },
+      {
+        "id": "800904",
+        "name": "Save the World. Just Because.",
+        "rank": 4,
+        "desc": "When using Elation Skill, increases the DMG taken by enemy targets by 10%, lasting for 2 turn(s).",
+        "icon": "icon/skill/8009_rank4.png",
+        "paramsEido": [
+          0.1,
+          2
+        ]
+      },
+      {
+        "id": "800905",
+        "name": "Love & Courage: Always in Style",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/8009_ultimate.png"
+      },
+      {
+        "id": "800906",
+        "name": "The Cosmic Legend Cometh!",
+        "rank": 6,
+        "desc": "When using Elation Skill, increases this unit's CRIT DMG by 100% for 3 turns.",
+        "icon": "icon/skill/8009_rank6.png",
+        "paramsEido": [
+          1,
+          3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Make Some Noise": {
+          "variant1": {
+            "skillID": 800901,
+            "trigger": "Skill01",
+            "name": "Make Some Noise",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Trailblazer's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_40_Skill01_Camera",
+              "Avatar_PlayerBoy_40_Skill01_Phase01",
+              "Avatar_PlayerBoy_40_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Let the Storm Rage On": {
+          "variant1": {
+            "skillID": 800902,
+            "trigger": "Skill02",
+            "name": "Let the Storm Rage On",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of the Trailblazer's ATK to all enemies and gains #2[i] point(s) of \"Certified Banger.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                20
+              ],
+              "2": [
+                0.33,
+                20
+              ],
+              "3": [
+                0.36,
+                20
+              ],
+              "4": [
+                0.39,
+                20
+              ],
+              "5": [
+                0.42,
+                20
+              ],
+              "6": [
+                0.45,
+                20
+              ],
+              "7": [
+                0.4875,
+                20
+              ],
+              "8": [
+                0.525,
+                20
+              ],
+              "9": [
+                0.5625,
+                20
+              ],
+              "10": [
+                0.6,
+                20
+              ],
+              "11": [
+                0.63,
+                20
+              ],
+              "12": [
+                0.66,
+                20
+              ],
+              "13": [
+                0.69,
+                20
+              ],
+              "14": [
+                0.72,
+                20
+              ],
+              "15": [
+                0.75,
+                20
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_40_Skill02_Camera",
+              "Avatar_PlayerBoy_40_Skill02_Phase01",
+              "Avatar_PlayerBoy_40_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "May the Trailblaze Fly You Starward": {
+          "variant1": {
+            "skillID": 800903,
+            "trigger": "Skill03",
+            "name": "May the Trailblaze Fly You Starward",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Gains #6[i] Punchline point(s). Increases the CRIT DMG of one designated ally by #1[i]% for #2[i] turn(s), and dispels Crowd Control debuffs on them.\\nIf the target has Elation Skill, they additionally gain #4[i] point(s) of \"Certified Banger\" and immediately use their Elation Skill 1 time, taking into account a fixed amount of #5[i] Punchline point(s). If the enemy target is defeated before the Elation Skill is unleashed, then the Elation Skill is instead launched on a newly entering enemy target.\\nIf the target does not have Elation Skill, their action advances by #3[i]%.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "2": [
+                0.32,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "3": [
+                0.34,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "4": [
+                0.36,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "5": [
+                0.38,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "6": [
+                0.4,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "7": [
+                0.425,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "8": [
+                0.45,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "9": [
+                0.475,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "10": [
+                0.5,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "11": [
+                0.52,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "12": [
+                0.54,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "13": [
+                0.56,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "14": [
+                0.58,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ],
+              "15": [
+                0.6,
+                3,
+                0.5,
+                10,
+                20,
+                5
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_40_Skill03_Camera",
+              "Avatar_PlayerBoy_40_Skill03_EnterReady",
+              "Avatar_PlayerBoy_40_Skill03_Phase01",
+              "Avatar_PlayerBoy_40_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Action Advance": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "That Smile Hits Different": {
+          "variant1": {
+            "skillID": 800904,
+            "trigger": "SkillP01",
+            "name": "That Smile Hits Different",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "After using an attack, regenerates a fixed amount of #1[i] Energy and gains #2[i] Punchline point(s).\\nWhen the Trailblazer holds \"Certified Banger,\" their Skill additionally deals #3[i]% Lightning Elation DMG to all enemies. This DMG is calculated using the highest \"Certified Banger\" value among all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                3,
+                0.15
+              ],
+              "2": [
+                10,
+                3,
+                0.165
+              ],
+              "3": [
+                10,
+                3,
+                0.18
+              ],
+              "4": [
+                10,
+                3,
+                0.195
+              ],
+              "5": [
+                10,
+                3,
+                0.21
+              ],
+              "6": [
+                10,
+                3,
+                0.225
+              ],
+              "7": [
+                10,
+                3,
+                0.24375
+              ],
+              "8": [
+                10,
+                3,
+                0.2625
+              ],
+              "9": [
+                10,
+                3,
+                0.28125
+              ],
+              "10": [
+                10,
+                3,
+                0.3
+              ],
+              "11": [
+                10,
+                3,
+                0.315
+              ],
+              "12": [
+                10,
+                3,
+                0.33
+              ],
+              "13": [
+                10,
+                3,
+                0.345
+              ],
+              "14": [
+                10,
+                3,
+                0.36
+              ],
+              "15": [
+                10,
+                3,
+                0.375
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_40_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "We Are So Back!": {
+          "variant1": {
+            "skillID": 800907,
+            "trigger": "SkillMaze",
+            "name": "We Are So Back!",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, randomly gains 1 of the following effects:\\nA low chance to gain \"Hearty Laughter\": Increases Elation by #1[i]%.\\nA high chance to gain \"Irrepressible Laughter\": Increases Elation by #3[i]%.\\nWhen the next battle begins, increases all allies' Elation stat by the corresponding amount for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                0.1,
+                0.2,
+                0.1,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_40_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Elation Skill": {
+        "I Said \"Elation,\" Did I Stutter?": {
+          "variant1": {
+            "skillID": 800920,
+            "trigger": "Skill04",
+            "name": "I Said \"Elation,\" Did I Stutter?",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Deals #1[i] instances of DMG, with each instance dealing #2[i]% Lightning Elation DMG to one random enemy. At last, deals #3[i]% Lightning Elation DMG, which is split evenly among all enemies.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                8,
+                0.1,
+                0.3
+              ],
+              "2": [
+                8,
+                0.11,
+                0.33
+              ],
+              "3": [
+                8,
+                0.12,
+                0.36
+              ],
+              "4": [
+                8,
+                0.13,
+                0.39
+              ],
+              "5": [
+                8,
+                0.14,
+                0.42
+              ],
+              "6": [
+                8,
+                0.15,
+                0.45
+              ],
+              "7": [
+                8,
+                0.1625,
+                0.4875
+              ],
+              "8": [
+                8,
+                0.175,
+                0.525
+              ],
+              "9": [
+                8,
+                0.1875,
+                0.5625
+              ],
+              "10": [
+                8,
+                0.2,
+                0.6
+              ],
+              "11": [
+                8,
+                0.21,
+                0.63
+              ],
+              "12": [
+                8,
+                0.22,
+                0.66
+              ],
+              "13": [
+                8,
+                0.23,
+                0.69
+              ],
+              "14": [
+                8,
+                0.24,
+                0.72
+              ],
+              "15": [
+                8,
+                0.25,
+                0.75
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_40_ElationSkill_Phase01",
+              "Avatar_PlayerBoy_40_ElationSkill_Phase02",
+              "Avatar_PlayerBoy_40_ElationSkill_Camera"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 120,
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/8009_basic_atk.png",
+        "skillRef": {
+          "skillName": "Make Some Noise",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/8009_skill.png",
+        "skillRef": {
+          "skillName": "Let the Storm Rage On",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/8009_ultimate.png",
+        "skillRef": {
+          "skillName": "May the Trailblaze Fly You Starward",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/8009_talent.png",
+        "skillRef": {
+          "skillName": "That Smile Hits Different",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/8009_technique.png",
+        "skillRef": {
+          "skillName": "We Are So Back!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "On Cloud Nine",
+        "icon": "icon/skill/8009_skilltree1.png",
+        "desc": "For every #2[i] point(s) of Trailblazer's ATK that exceeds #1[i], increases this unit's Elation stat by #3[f1]%, up to a maximum increase of #4[f1]%.",
+        "params": [
+          1000,
+          200,
+          0.1,
+          0.6
+        ]
+      },
+      "Point07": {
+        "name": "Screw It, We Ball",
+        "icon": "icon/skill/8009_skilltree2.png",
+        "desc": "Increases this unit's CRIT Rate by #1[i]%. After using Ultimate, recovers #2[i] Skill Point(s) for the team.",
+        "params": [
+          0.15,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Aha, Sic 'Em!",
+        "icon": "icon/skill/8009_skilltree3.png",
+        "desc": "After an ally target uses Elation Skill, Trailblazer additionally gains #1[i] point(s) of \"Certified Banger\" the next time they use their Skill.",
+        "params": [
+          2
+        ],
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/8009_elation.png",
+        "skillRef": {
+          "skillName": "I Said \"Elation,\" Did I Stutter?",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/8009.png",
+    "preview": "image/character_preview/8009.png",
+    "portrait": "image/character_portrait/8009.png",
+    "bannerOffsets": [],
+    "isBuffed": false
   },
   "Saber": {
     "internalID": 1014,
