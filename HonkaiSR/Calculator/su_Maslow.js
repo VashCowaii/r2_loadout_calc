@@ -769,6 +769,13 @@ const maslowCategoryPlanars = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "Punklorde Stage Zero": {
+        gives: ["CritDMG","Elation"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     
 }
 
