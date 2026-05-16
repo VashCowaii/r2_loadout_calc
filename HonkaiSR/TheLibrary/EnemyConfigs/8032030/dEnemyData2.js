@@ -1,0 +1,38 @@
+let enemyData = {
+  "name": "\"All or Nothing\"",
+  "image": 8032030,
+  "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
+  "stArray": [
+    18,
+    210,
+    46.5,
+    100,
+    null,
+    0.2,
+    null,
+    1,
+    null,
+    null,
+    1
+  ],
+  "options": {
+    "8032030": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "abilities": [
+        3193
+      ]
+    }
+  }
+}
