@@ -1763,7 +1763,7 @@ const turnLogicLightcones = {
                             sourceTurn.echoesOfTheCoffinEnergyRegen = rankParams[2];
                         }
                         const energyRegen = sourceTurn.echoesOfTheCoffinEnergyRegen * targetsHit;
-                        battleActions.updateEnergy(battleData,energyRegen,sourceTurn,false,"Echoes of the Coffin - Enemies Hit");
+                        updateEnergy(battleData,energyRegen,sourceTurn,false,"Echoes of the Coffin - Enemies Hit");
                     }
                 },
                 "target": "self",
@@ -1838,16 +1838,17 @@ const turnLogicLightcones = {
                     }
 
                     const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let ownerSlot in ownersSlots) {
                         const currentOwner = allyTurns[ownerSlot];
-
 
                         if (!currentOwner.lcNightOfFrightHealingHEALOBJECT) {
                             let lcNameRef = "Night of Fright";
                             let lcPathing = lightcones[lcNameRef].params;
                             let ownerRank = ownersSlots[currentOwner.name];
                             let rankParams = lcPathing[ownerRank-1];
+
+                            const actionTags = ["Gear","Heal"];
+                            const compositeCacheTag = actionTags + currentOwner.properName;
                             
                             currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
                                 multipliers: {
@@ -1863,34 +1864,65 @@ const turnLogicLightcones = {
                                 scalar: "HP",
                                 DMGTags: [],
                                 allToughness: false,
-                                slot: "Lightcone"
-                            }
-
-                            currentOwner.lcNightOfFrightATKSHEET = {
-                                "stats": [ATKP],
-                                [ATKP]: rankParams[2],
-                                "source": lcNameRef,
-                                "sourceOwner": currentOwner.properName,
-                                "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 5,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
+                                slot: "Lightcone",
+                                actionTags,compositeCacheTag,
                             }
                         }
                         const healObject = currentOwner.lcNightOfFrightHealingHEALOBJECT;
     
-                        battleActions.healAlly(battleData,healObject,lowestPercentAlly,currentOwner,"Lightcone",1,null);
-
-                        const buffSheet = currentOwner.lcNightOfFrightATKSHEET;
-                        updateBuff(battleData,lowestPercentAlly,buffSheet)
+                        healAlly(battleData,healObject,lowestPercentAlly,currentOwner,"Lightcone",1,null);
                     }
                 },
                 "target": "team",
                 "listenerName": "Night of Fright ult start listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "HealStart",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    const targetTurn = generalInfo.targetTurn;
+                    if (!targetTurn || targetTurn.isEnemy) {return;}
+                    //healing needs to be on an ally target, and in turn a target must exist
+                    //strictly speaking this could break if healing started on a target that was removed from the battle, though its turn object should still exist regardless
+                    //just no longer in the turn order. All the same, better to be safe.
+
+                    if (!sourceTurn.lcNightOfFrightHealingHEALOBJECT) {
+                        let lcNameRef = "Night of Fright";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcNightOfFrightATKSHEET = {
+                            "stats": [ATKP],
+                            [ATKP]: rankParams[2],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 5,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    const buffSheet = sourceTurn.lcNightOfFrightATKSHEET;
+                    battleActions.updateBuff(battleData,targetTurn,buffSheet)
+
+                    // const totalHealed = generalInfo.totalHealed;
+                    // sourceTurn.lcTimeWaitsForNoOneHealing = (sourceTurn.lcTimeWaitsForNoOneHealing ?? 0) + totalHealed;
+                },
+                "target": "self",
+                "listenerName": "Night of Fright - healing start listener",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -2049,57 +2081,51 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
 
+                    if (ownerRef.length) {
+                        // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                        // const statCheck = this.statCheck ??= turnLogicLightcones["Perfect Timing"].skillFunctions.statCheck;
+                        const namedTurns = battleData.nameBasedTurns;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+                            
+                            // statCheck(battleData,currentTurn,ownersSlots);
 
-                    if (!sourceTurn.lcPostOpHEALBONUSUSHEET) {
-                        let lcNameRef = "Post-Op Conversation";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        sourceTurn.lcPostOpHEALBONUSUSHEET = {
-                            "stats": [HealingOutgoing],
-                            [HealingOutgoing]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
+                            if (!currentTurn.lcPostOpHEALBONUSUSHEET) {
+                                let lcNameRef = "Post-Op Conversation";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerRank = ownersSlots[currentTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                currentTurn.lcPostOpHEALBONUSUSHEET = {
+                                    "stats": [HealingOutgoing],
+                                    [HealingOutgoing]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": currentTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["Ultimate"],
+                                }
+                            }
+                            let buffSheet = currentTurn.lcPostOpHEALBONUSUSHEET;
+                            battleActions.updateBuff(battleData,currentTurn,buffSheet);
                         }
                     }
-                    let buffSheet = sourceTurn.lcPostOpHEALBONUSUSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                 },
-                "target": "team",
-                "listenerName": "Post-Op Conversation ult start listener",
-                "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "UltimateEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    let buffSheet = sourceTurn.lcPostOpHEALBONUSUSHEET;
-                    removeBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "team",
-                "listenerName": "Post-Op Conversation ult end listener",
-                "owners": [],
-                "ownersSlots": {}
+                "target": "self",
+                "listenerName": "Post-Op Conversation battlestart ult healing bonus",
+                "owners": []
             },
         ],
         "buffNames": {
@@ -2122,6 +2148,9 @@ const turnLogicLightcones = {
                         let lcNameRef = "What Is Real?";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
+
+                        const actionTags = ["Gear","Heal"];
+                        const compositeCacheTag = actionTags + sourceTurn.properName;
                         
                         sourceTurn.lcWhatIsRealHealingHEALOBJECT ??= {
                             multipliers: {
@@ -2137,12 +2166,13 @@ const turnLogicLightcones = {
                             scalar: "HP",
                             DMGTags: [],
                             allToughness: false,
-                            slot: "Lightcone"
+                            slot: "Lightcone",
+                            actionTags,compositeCacheTag
                         }
                     }
                     const healObject = sourceTurn.lcWhatIsRealHealingHEALOBJECT;
 
-                    battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,null);
+                    healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,null);
                 },
                 "target": "team",
                 "listenerName": "What Is Real? basic atk end listener",
@@ -2190,7 +2220,7 @@ const turnLogicLightcones = {
 
                         const regenValue = sourceTurn.lcDreamsMontageREGENVALUE;
 
-                        battleActions.updateEnergy(battleData,regenValue,sourceTurn,false,"Dream's Montage (LC)");
+                        updateEnergy(battleData,regenValue,sourceTurn,false,"Dream's Montage (LC)");
                         sourceTurn.lcDreamsMontageREGENCOUNTER ??= 0;
                         sourceTurn.lcDreamsMontageREGENCOUNTER++;
                     }
@@ -2243,14 +2273,11 @@ const turnLogicLightcones = {
                     const regen = sourceTurn.lcSharedFeelingREGENVALUE;
 
                     const allyPositions = battleData.allyPositions;
-                    const updateEnergy = battleActions.updateEnergy;
                     for (let ally of allyPositions) {
                         if (ally.isUniqueEvent) {continue;}
 
                         updateEnergy(battleData,regen,ally,false,"Shared Feeling (LC)");
                     }
-
-                    
                 },
                 "target": "team",
                 "listenerName": "Shared Feeling Skill End listener",
@@ -2314,7 +2341,7 @@ const turnLogicLightcones = {
 
                     let chosenCharacter = availableToGive[chosenValue];
                     let luckyBastard = battleData.nameBasedTurns[chosenCharacter];
-                    battleActions.updateEnergy(battleData,values,luckyBastard,false,this.listenerName);
+                    updateEnergy(battleData,values,luckyBastard,false,this.listenerName);
                 },
                 "target": "self",
                 "listenerName": "Quid Pro Quo - Energy buff controller",
@@ -2345,6 +2372,9 @@ const turnLogicLightcones = {
                             let lcNameRef = "Warmth Shortens Cold Nights";
                             let lcPathing = lightcones[lcNameRef].params;
                             let rankParams = lcPathing[ownerRank-1];
+
+                            const actionTags = ["Gear","Heal"];
+                            const compositeCacheTag = actionTags + currentTurn.properName;
                             
                             currentTurn.lcWarmthShortensNightsHEALOBJECT ??= {
                                 multipliers: {
@@ -2360,7 +2390,8 @@ const turnLogicLightcones = {
                                 scalar: "HP",
                                 DMGTags: [],
                                 allToughness: false,
-                                slot: "Lightcone"
+                                slot: "Lightcone",
+                                actionTags,compositeCacheTag
                             }
                         }
                     }
@@ -2380,7 +2411,7 @@ const turnLogicLightcones = {
                     const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
 
                     const allyTargets = battleData.allAllyTargetsArray;
-                    battleActions.healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
+                    healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
                 },
                 "target": "team",
                 "listenerName": "Warmth Shortens Cold Nights basic atk end listener",
@@ -2398,7 +2429,7 @@ const turnLogicLightcones = {
                     const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
 
                     const allyTargets = battleData.allAllyTargetsArray;
-                    battleActions.healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
+                    healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
                 },
                 "target": "team",
                 "listenerName": "Warmth Shortens Cold Nights skill end listener",
@@ -2585,7 +2616,6 @@ const turnLogicLightcones = {
                     // const updateBuff = battleActions.updateBuff;
 
                     const fullCharacterArray = battleData.fullCharacterArray;
-                    const updateEnergy = battleActions.updateEnergy
                 
                     for (let owner of ownerRef) {
                         let rankParams = lcPathing[owner.rank-1];
@@ -3002,7 +3032,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "SkillEnd",
                 condition(battleData,generalInfo) {
-                    //ik most debuffs apply as the attack starts, not after they land, but this one is an AFTER application and I did confirm that
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -3217,7 +3246,7 @@ const turnLogicLightcones = {
                             const energyGain = currentOwner.lcSolitaryHealingRegenValue ??= lightcones["Solitary Healing"].params[ownersSlots[currentOwner.name]-1][3]
                             //cursed to do it this way, but since we can't bind it to the event listener, and need superimposition value, we bind it to the turn object of each owner
                             //instead of accessing it every fuckin time
-                            battleActions.updateEnergy(battleData,energyGain,currentOwner,false,"Solitary Healing - Death with DOT Owned")
+                            updateEnergy(battleData,energyGain,currentOwner,false,"Solitary Healing - Death with DOT Owned")
                         }
                     }
                 },
@@ -3302,7 +3331,7 @@ const turnLogicLightcones = {
 
                         //only ONE regen happens, no matter how many def reduced targets there were
                         const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1];
-                        battleActions.updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
+                        updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
                     }
                 },
                 "target": "enemy",
@@ -4376,7 +4405,7 @@ const turnLogicLightcones = {
                     const energyCheck = energyMax >= 300;
                     if (energyCheck) {
                         const energyBump = energyMax * 0.10;
-                        battleActions.updateEnergy(battleData,energyBump,sourceTurn,true,"A Thankless Coronation");
+                        updateEnergy(battleData,energyBump,sourceTurn,true,"A Thankless Coronation");
                     }
                 },
                 "target": "self",
@@ -4803,7 +4832,7 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "UltimateEnd",
                 condition(battleData,generalInfo) {
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -5508,7 +5537,7 @@ const turnLogicLightcones = {
                     const values = sourceTurn.groundedAscentHymnPARAMS;
                     const buffSheet = sourceTurn.groundedAscentHymnSHEET;
 
-                    battleActions.updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
+                    updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
 
 
                     sourceTurn.groundedAscentTargetStacks ??= 0;
@@ -5637,7 +5666,6 @@ const turnLogicLightcones = {
                     const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
                     const namedTurns = battleData.nameBasedTurns;
 
-                    const updateEnergy = battleActions.updateEnergy;
                     for (let owner in ownersSlots) {
                         let ownerRank = ownersSlots[owner];
                         let currentTurn = namedTurns[owner];
@@ -5662,7 +5690,7 @@ const turnLogicLightcones = {
                     let lcNameRef = "If Time Were a Flower";
                     const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
                     updatePresage(battleData,sourceTurn,ownerRank);
-                    battleActions.updateEnergy(battleData,12,sourceTurn,false,"If Time Were a Flower [FUA Started]");
+                    updateEnergy(battleData,12,sourceTurn,false,"If Time Were a Flower [FUA Started]");
                 },
                 "target": "self",
                 "listenerName": "If Time Were a Flower - FUA launched listener",
@@ -5888,7 +5916,6 @@ const turnLogicLightcones = {
                 condition(battleData,generalInfo) {
                     // let ownerTurn = this.ownerTurn;
                     const allyPositions = battleData.allyPositions;
-                    const updateEnergy = battleActions.updateEnergy
                     for (let ally of allyPositions) {
                         updateEnergy(battleData,10,ally,false,"Past Self in Mirror [LC]");
                     }
@@ -5907,7 +5934,7 @@ const turnLogicLightcones = {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             lcRegenEnergy(battleData,targetTurn,energyToRegen) {
-                battleActions.updateEnergy(battleData,energyToRegen,targetTurn,false,"Memories of the Past [LC]");
+                updateEnergy(battleData,energyToRegen,targetTurn,false,"Memories of the Past [LC]");
                 targetTurn.lcMemoriesOfThePastCanRegen = false;
             },
         },
@@ -5960,7 +5987,7 @@ const turnLogicLightcones = {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             lcRegenEnergy(battleData,targetTurn,energyToRegen) {
-                battleActions.updateEnergy(battleData,energyToRegen,targetTurn,false,"Meshing Cogs [LC]");
+                updateEnergy(battleData,energyToRegen,targetTurn,false,"Meshing Cogs [LC]");
                 targetTurn.lcMeshingCogsCanRegen = false;
             },
         },
@@ -6518,7 +6545,7 @@ const turnLogicLightcones = {
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
 
-                        battleActions.updateEnergy(battleData,rankParams[3],summonAssignedTo,false,"Memosprite removed [To Evernight's Stars]");
+                        updateEnergy(battleData,rankParams[3],summonAssignedTo,false,"Memosprite removed [To Evernight's Stars]");
                     }
                 },
                 "target": "self",
@@ -7547,7 +7574,7 @@ const turnLogicLightcones = {
                         let lcNameRef = "Shadowburn";
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
-                        battleActions.updateEnergy(battleData,rankParams[1],sourceTurn,false,"Shadowburn (LC)")
+                        updateEnergy(battleData,rankParams[1],sourceTurn,false,"Shadowburn (LC)")
                         battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Shadowburn (LC)"});
 
                         sourceTurn.lcShadowburnFIRSTSUMMONDONE = true;
@@ -7791,6 +7818,9 @@ const turnLogicLightcones = {
                         }
 
 
+                        const actionTags = ["Gear","Heal"];
+                        const compositeCacheTag = actionTags + sourceTurn.properName;
+
                         sourceTurn.thoughWorldsHealObject = {
                             multipliers: {
                                 primary: rankParams[4],
@@ -7805,7 +7835,8 @@ const turnLogicLightcones = {
                             scalar: "ATK",
                             DMGTags: [],
                             allToughness: false,
-                            slot: "Lightcone"
+                            slot: "Lightcone",
+                            actionTags,compositeCacheTag
                         }
                     }
                     const buffSheet = sourceTurn.thoughWorldsDMGSHEET;
@@ -7831,9 +7862,9 @@ const turnLogicLightcones = {
                         }
                     }
 
-                    // healCall(battleData,null,ownerTurn,allyPositions,1);
-                    const healAlly = battleActions.healAlly;
                     healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,allyPositions);
+
+                    // console.log(allyPositions,lowestHPAlly)
                     healAlly(battleData,healObject,lowestHPAlly,sourceTurn,"Lightcone",1);
                 },
                 "target": "self",
@@ -8098,7 +8129,7 @@ const turnLogicLightcones = {
                     if (!ownerRank) {return;}
 
                     //NOTE: the energy regen is uniform, not reliant upon superimposition
-                    battleActions.updateEnergy(battleData,10,sourceTurn,false,"Life Should Be Cast to Flames (LC)");
+                    updateEnergy(battleData,10,sourceTurn,false,"Life Should Be Cast to Flames (LC)");
                 },
                 "target": "self",
                 "listenerName": "Life Should Be Cast to Flames - energy on turnstart",
@@ -8452,6 +8483,292 @@ const turnLogicLightcones = {
         "buffNames": {
             "genShred": "Dazzled by a Flowery World (Shred)",
             "genTeam": "Stream Promo (LC)",
+        },
+    },
+    "Welcome to the Cosmic City": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let ownerRank = ownersSlots[charSlot];
+                        let currentTurn = namedTurns[charSlot];
+
+                        // updateFortune(battleData,currentTurn,ownerRank);
+                        if (!currentTurn.lcCosmicCitySHREDSHEET) {
+                            let lcNameRef = "Welcome to the Cosmic City";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+                            currentTurn.lcCosmicCitySHREDSHEET = {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentTurn.properName,
+                                "buffName": buffNames.shred,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Elation"],
+                            }
+                        }
+        
+                        let buffSheet2 = currentTurn.lcCosmicCitySHREDSHEET;
+                        updateBuff(battleData,currentTurn,buffSheet2);
+
+                        currentTurn.lcCosmicCityBasicCounter = 3;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Welcome to the Cosmic City - battlestart elation shred application",
+                "owners": []
+            },
+            {
+                "trigger": "TargetAlly",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.lcCosmicCityBasicCounter != 3) {return;}
+
+                    let ownerSlot = sourceTurn.name;
+                    const ownerRank = ownersSlots[ownerSlot];
+                    if (!ownerRank) {return;}//abort non-owners
+                    let targetTurn = generalInfo.targetTurn;
+                    const skillType = generalInfo.targetSkill;
+                    const skillCheck = skillType === "Ultimate";
+                    const targetType = generalInfo.targetType;
+                    if (!targetTurn || !skillCheck || targetType != "Single") {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
+                    if (targetTurn.properName != sourceTurn.properName) {return;}
+                    //the lc requires you to target YOURSELF, otherwise this proc flops.
+
+                    if (!sourceTurn.lcCosmicCityPLGainValue) {
+                        let lcNameRef = "Welcome to the Cosmic City";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        sourceTurn.lcCosmicCityPLGainValue = rankParams[2];
+                    }
+                    const values = sourceTurn.lcCosmicCityPLGainValue;
+                    battleActions.updatePunchlineValue(battleData,values,sourceTurn,"LC Cosmic - Ult used on Self");
+                    sourceTurn.lcCosmicCityBasicCounter = 0;
+                },
+                "target": "self",
+                "listenerName": "Welcome to the Cosmic City - self ult listener",
+                "owners": [],
+            },
+            {
+                "trigger": "BasicATKStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    let ownerSlot = sourceTurn.name;
+                    const ownerRank = ownersSlots[ownerSlot];
+                    if (!ownerRank) {return;}//abort non-owners
+
+                    if (sourceTurn.lcCosmicCityBasicCounter < 3) {
+                        sourceTurn.lcCosmicCityBasicCounter += 1;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Welcome to the Cosmic City - basic atk counter",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "shred": "Welcome to the Cosmic City (Shred)",
+        },
+    },
+    "Elation Brimming With Blessings": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "TargetAlly",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    let ownerSlot = sourceTurn.name;
+                    const ownerRank = ownersSlots[ownerSlot];
+                    if (!ownerRank) {return;}//abort non-owners
+                    let targetTurn = generalInfo.targetTurn;
+                    const skillType = generalInfo.targetSkill;
+                    const skillCheck = skillType === "Ultimate" || skillType === "Skill";
+                    const targetType = generalInfo.targetType;
+                    if (!targetTurn || !skillCheck || targetType != "Single") {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
+
+                    if (!sourceTurn.lcElationBrimmingELATIONSHEET) {
+                        let lcNameRef = "Elation Brimming With Blessings";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcElationBrimmingELATIONSHEET = {
+                            "stats": [ElationDMGAll],
+                            [ElationDMGAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.brimming,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "removeOnDeath": true,
+                        }
+                    }
+                    const buffSheet = sourceTurn.lcElationBrimmingELATIONSHEET;
+
+                    const updateBuff = battleActions.updateBuff;
+                    updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Elation Brimming With Blessings - buff application",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "brimming": "Elation Brimming With Blessings [LC]"
+            // "buff2": "Aether Code"
+            // "hruntingStack": "Hrunting Stack"
+        },
+    },
+    "Until the Flowers Bloom Again": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "ElationFinalizePre",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const updateBuff = battleActions.updateBuff;
+
+                    const baseLine = 120;
+                    const maxStacks = 360;
+                    const increment = 10;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let ownerRank = ownersSlots[charSlot];
+                        let currentTurn = namedTurns[charSlot];
+
+                        // updateFortune(battleData,currentTurn,ownerRank);
+                        if (!currentTurn.lcUntilFlowersBloomERRSHEET) {
+                            let lcNameRef = "Until the Flowers Bloom Again";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+
+                            const preValue = rankParams[3];
+                            const stackValue = rankParams[5];
+
+                            const currentMax = currentTurn.maxEnergy;
+                            const toSpare = Math.min(maxStacks, Math.max(0, currentMax - baseLine));
+
+                            const validStacks = Math.floor(toSpare/increment);
+                            if (!validStacks) {continue;}
+
+                            currentTurn.lcUntilFlowersBloomERRSHEET = {
+                                "stats": [EnergyRegenRate],
+                                [EnergyRegenRate]: preValue + validStacks * stackValue,
+                                "source": lcNameRef,
+                                "sourceOwner": currentTurn.properName,
+                                "buffName": buffNames.ERR,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                        }
+        
+                        let buffSheet2 = currentTurn.lcUntilFlowersBloomERRSHEET;
+                        updateBuff(battleData,currentTurn,buffSheet2);
+
+                        // currentTurn.lcCosmicCityBasicCounter = 3;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Until the Flowers Bloom Again - battlestart ERR application",
+                "owners": []
+            },
+            {
+                "trigger": "ElationSkillStart",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}//then abort non-owners
+
+                    if (!sourceTurn.lcUntilFlowersBloomVULNSHEET) {
+                        let lcNameRef = "Until the Flowers Bloom Again";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+    
+                        const logicRef = turnLogicLightcones[lcNameRef];
+                        const buffNames = logicRef.buffNames;
+                        let buffName3 = buffNames.elationVuln;
+    
+                        sourceTurn.lcUntilFlowersBloomVULNSHEET = {
+                            "stats": [VulnAll],
+                            [VulnAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName3,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                        
+                    }
+    
+                    let buffSheet3 = sourceTurn.lcUntilFlowersBloomVULNSHEET;
+                    
+                    const enemyPositions = battleData.enemyPositions;
+                    
+                    updateBuffBatchTargets(battleData,enemyPositions,buffSheet3);
+                    // console.log(enemyPositions.length, battleData.sumAV,JSON.parse(JSON.stringify(enemyPositions)))
+                },
+                "target": "self",
+                "listenerName": "Until the Flowers Bloom Again - elation skill vuln debuff",
+                "owners": [],
+                "ownersSlots": {}
+            }
+        ],
+        "buffNames": {
+            "ERR": "Until the Flowers Bloom Again (ERR)",
+            "elationVuln": "Until the Flowers Bloom Again (Vuln)",
         },
     },
     "Mushy Shroomy's Adventures": {
@@ -10116,7 +10433,7 @@ const turnLogicRelics = {
             },
         }
     },
-    "Iron Cavalry Against the Scourge": {
+    "Iron Cavalry Against the Scourge": {//right now the debate is whether I keep old stats likd DEFShredBreak or if I just revert to standard shred and actiontag the bonuses instead
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
@@ -10932,12 +11249,15 @@ const turnLogicRelics = {
                         const canHeal = hpRatio <= hpThreshold;
 
 
-                        if (!this.healObject) {
+                        if (!sourceTurn.relicGuardWutheringHealObject) {
                             let relicNameRef = "Guard of Wuthering Snow";
                             // let pcRef = "4pc";
                             let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
 
-                            this.healObject ??= {
+                            const actionTags = ["Gear","Heal"];
+                            const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                            sourceTurn.relicGuardWutheringHealObject ??= {
                                 multipliers: {
                                     primary: relicPathing[1],
                                     blast: null,
@@ -10951,14 +11271,15 @@ const turnLogicRelics = {
                                 scalar: "HP",
                                 DMGTags: [],
                                 allToughness: false,
-                                slot: "Relic"
+                                slot: "Relic",
+                                actionTags,compositeCacheTag
                             }
                         }
-                        const healObject = this.healObject;
+                        const healObject = sourceTurn.relicGuardWutheringHealObject;
 
                         if (canHeal) {
-                            battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,"Relic",1,null);
-                            battleActions.updateEnergy(battleData,5,sourceTurn,false,"Guard of Wuthering Snow")
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Relic",1,null);
+                            updateEnergy(battleData,5,sourceTurn,false,"Guard of Wuthering Snow")
                         }
                     },
                     "target": "self",
@@ -10998,7 +11319,7 @@ const turnLogicRelics = {
                         let ownerRank = ownersSlots[sourceTurn.name];
                         if (!ownerRank) {return;}
 
-                        battleActions.updateEnergy(battleData,3,sourceTurn,false,"Thief of Shooting Meteor");
+                        updateEnergy(battleData,3,sourceTurn,false,"Thief of Shooting Meteor");
                     },
                     "target": "self",
                     "listenerName": "Thief of Shooting Meteor - weakness break listener",
@@ -13349,6 +13670,138 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "critDMG": "Tengoku@Livestream"
+            },
+        }
+    },
+    "Punklorde Stage Zero": {
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {
+                statCheck(battleData,currentTurn) {
+                    if (!currentTurn.punklordeElationCRITSHEET) {
+                        let relicNameRef = "Punklorde Stage Zero";
+                        const buffRef = turnLogicRelics[relicNameRef]["2pc"].buffNames;
+                        let buffName = buffRef.dmg1;
+                        let buffName2 = buffRef.dmg2;
+                        let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+
+                        currentTurn.punklordeElationCRITSHEET = {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: relicPathing[3],
+                            "source": relicNameRef,
+                            "sourceOwner": currentTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        currentTurn.punklordeElationCRITSHEET2 = {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: relicPathing[4],
+                            "source": relicNameRef,
+                            "sourceOwner": currentTurn.properName,
+                            "buffName": buffName2,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                    }
+
+                    const statTable = currentTurn.statTable;
+                    const fullElation = statTable[ElationDMGAll] + statTable[ElationDMGAllNULL];
+                    
+                    let buffSheet2 = currentTurn.punklordeElationCRITSHEET2;
+                    const buffName2 = buffSheet2.buffName;
+                    const buffsObject = currentTurn.buffsObject;
+                    const updateBuff = battleActions.updateBuff;
+                    const buffCheck2 = buffsObject[buffName2];
+                    if (buffCheck2) {return;}//unlike something like glamoth, this bonus CANT be removed even if it falls below in the middle of a battle
+
+                    let hadEnoughFor2 = false;
+                    if (fullElation >= 0.80) {//if the target has enough cr for the buff, then we can apply it
+                        updateBuff(battleData,currentTurn,buffSheet2);
+                        hadEnoughFor2 = true;
+
+                        battleData.relicPunklordeUsersCompleted += 1;
+                    }
+
+                    let buffSheet = currentTurn.punklordeElationCRITSHEET;
+                    const buffName = buffSheet.buffName;
+                    const buffCheck = buffsObject[buffName];
+
+                    if (buffCheck && hadEnoughFor2) {
+                        removeBuff(battleData,currentTurn,buffCheck);
+                        return;
+                    }
+                    else if (hadEnoughFor2) {return;}
+
+                    if (buffCheck) {return;}
+
+                    if (fullElation >= 0.40) {//if the target has enough cr for the buff, then we can apply it
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                }
+            },
+            "listeners": [
+                {
+                    "trigger": "UpdateStatElation",//Elation stat family
+                    condition(battleData,generalInfo) {
+                        let sourceTurn = generalInfo.sourceTurn;
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                        if (!ownerRank) {return;}
+
+
+                        if (battleData.relicPunklordeUsersCompleted === battleData.relicPunklordeUsersMax) {
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            //we don't need to bother doing this in the listener below bc that's just a battlestart listener, this
+                            //is the only one with the potential to get called a billion times, and if we remove it mid battle we're set
+                        }
+
+                        const statCheck = this.statCheck ??= turnLogicRelics["Punklorde Stage Zero"]["2pc"].skillFunctions.statCheck;
+                        statCheck(battleData,sourceTurn);
+                    },
+                    "target": "self",
+                    "listenerName": "Punklorde Stage Zero elation changes check",
+                    "owners": []
+                },
+                {
+                    "trigger": "PreBattleEntersCombat",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+                        if (ownerRef.length) {
+                            // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                            const statCheck = this.statCheck ??= turnLogicRelics["Punklorde Stage Zero"]["2pc"].skillFunctions.statCheck;
+                            const namedTurns = battleData.nameBasedTurns;
+
+                            battleData.relicPunklordeUsersCompleted = 0;
+                            
+                            for (let owner of ownerRef) {
+                                let charSlot = owner.slot;
+                                let currentTurn = namedTurns[charSlot];
+                                statCheck(battleData,currentTurn);
+                            }
+
+                            battleData.relicPunklordeUsersMax = ownerRef.length;
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Punklorde Stage Zero battle start stat check trigger",
+                    "owners": []
+                },
+            ],
+            "buffNames": {
+                "dmg1": "Punklorde Stage Zero (>=40)",
+                "dmg2": "Punklorde Stage Zero (>=80)",
             },
         }
     },
