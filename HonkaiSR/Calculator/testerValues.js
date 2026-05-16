@@ -2383,10 +2383,44 @@ const defaultConditions = {
             "type": "AND",
             "array": [
                 {
-                    "type": "AND",
+                    "type": "OR",
                     "array": [
                         {
                             "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
                             "comparison": "!=",
                             "array": [
                                 {
@@ -2400,6 +2434,45 @@ const defaultConditions = {
                                     "target": "char1",
                                     "targetType": "Character",
                                     "characterValue": "maxEnergy"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "OR",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char2",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char2",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
                                 }
                             ]
                         },
@@ -2420,6 +2493,45 @@ const defaultConditions = {
                                     "characterValue": "maxEnergy"
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "type": "OR",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char3",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char3",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
+                                }
+                            ]
                         },
                         {
                             "type": "COMPARE",
@@ -2436,6 +2548,45 @@ const defaultConditions = {
                                     "target": "char3",
                                     "targetType": "Character",
                                     "characterValue": "maxEnergy"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "OR",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char4",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char4",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
                                 }
                             ]
                         },
