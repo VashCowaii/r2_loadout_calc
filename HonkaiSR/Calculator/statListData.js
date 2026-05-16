@@ -124,6 +124,156 @@ function spreadBuffSheet(buffSheet) {
     }
     return newBuffSheet;
 }
+function spreadBuffSheet2(battleData,sourceTurn,buffSheet) {
+    return {
+        buffName: buffSheet.buffName,
+        source: buffSheet.source,
+        sourceOwner: buffSheet.sourceOwner,
+        AVApplied: battleData.sumAV,
+
+        maxStacks: buffSheet.maxStacks,
+        currentStacks: buffSheet.currentStacks,
+
+        duration: sourceTurn.turnState ? buffSheet.durationInTurn : buffSheet.duration,
+        durationInTurn: buffSheet.durationInTurn,
+        expireType: buffSheet.expireType,
+        decay: buffSheet.decay,
+
+        shieldRemaining: buffSheet.shieldRemaining,
+
+        isShield: buffSheet.isShield,
+        isDOT: buffSheet.isDOT,
+        isSpecialDOTLast: buffSheet.isSpecialDOTLast,
+        isDebuff: buffSheet.isDebuff,
+        isSourceSpecific: buffSheet.isSourceSpecific,
+        
+        stats: buffSheet.stats,
+        statsOnHit: buffSheet.statsOnHit,
+
+        element: buffSheet.element,
+        multiplier: buffSheet.multiplier,
+        multiPerStack: buffSheet.multiPerStack,
+        multiStackCap: buffSheet.multiStackCap,
+        softCapDetonate: buffSheet.softCapDetonate,
+        customTurnStartFunction: buffSheet.customTurnStartFunction,
+
+        scalar: buffSheet.scalar,
+        slot: buffSheet.slot,
+        ownerIsAllied: buffSheet.ownerIsAllied,
+        ownerSlot: buffSheet.ownerSlot,
+        avgChanceApplied: buffSheet.avgChanceApplied,
+        baseChance: buffSheet.baseChance,
+        actionTags,tags: buffSheet.actionTags,
+        compositeCacheTag: buffSheet.compositeCacheTag,
+        realDMGKeys: buffSheet.realDMGKeys,
+        realPENKeys: buffSheet.realPENKeys,
+        realShredKeys: buffSheet.realShredKeys,
+        realVulnKeys: buffSheet.realVulnKeys,
+
+        expireFunction: buffSheet.expireFunction,
+        expireParam: buffSheet.expireParam,
+        removeOnDeath: buffSheet.removeOnDeath,
+        
+    };
+}
+function spreadBuffSheet3(battleData,sourceTurn,buffSheet) {
+    return {
+        //COULD KEEP IN STORAGE
+        buffName: buffSheet.buffName,
+        source: buffSheet.source,
+        maxStacks: buffSheet.maxStacks,
+        expireType: buffSheet.expireType,
+        decay: buffSheet.decay,
+        isShield: buffSheet.isShield,
+        isDOT: buffSheet.isDOT,
+        isSpecialDOTLast: buffSheet.isSpecialDOTLast,
+        isDebuff: buffSheet.isDebuff,
+        isSourceSpecific: buffSheet.isSourceSpecific,
+        stats: buffSheet.stats,
+        statsOnHit: buffSheet.statsOnHit,
+
+        element: buffSheet.element,
+
+        customTurnStartFunction: buffSheet.customTurnStartFunction,
+        scalar: buffSheet.scalar,
+        expireFunction: buffSheet.expireFunction,
+        removeOnDeath: buffSheet.removeOnDeath,
+
+
+
+
+        sourceOwner: buffSheet.sourceOwner,
+        AVApplied: battleData.sumAV,
+        currentStacks: buffSheet.currentStacks,
+
+        duration: sourceTurn.turnState ? buffSheet.durationInTurn : buffSheet.duration,
+        durationInTurn: buffSheet.durationInTurn,
+        
+        shieldRemaining: buffSheet.shieldRemaining,
+
+        multiplier: buffSheet.multiplier,
+        multiPerStack: buffSheet.multiPerStack,
+        multiStackCap: buffSheet.multiStackCap,
+        softCapDetonate: buffSheet.softCapDetonate,
+        
+        slot: buffSheet.slot,
+        ownerIsAllied: buffSheet.ownerIsAllied,
+        ownerSlot: buffSheet.ownerSlot,
+        avgChanceApplied: buffSheet.avgChanceApplied,
+        baseChance: buffSheet.baseChance,
+        actionTags,tags: buffSheet.actionTags,
+        compositeCacheTag: buffSheet.compositeCacheTag,
+        realDMGKeys: buffSheet.realDMGKeys,
+        realPENKeys: buffSheet.realPENKeys,
+        realShredKeys: buffSheet.realShredKeys,
+        realVulnKeys: buffSheet.realVulnKeys,
+
+        expireParam: buffSheet.expireParam,
+        
+        
+    };
+}
+function spreadBuffSheet4(buffSheet) {
+    // "Arcana [Black Swan]"
+    return {
+        //COULD KEEP IN STORAGE
+
+        stats: buffSheet.stats,
+        source: buffSheet.source,
+        sourceOwner: buffSheet.sourceOwner,
+        buffName: buffSheet.buffName,
+        durationInTurn: buffSheet.durationInTurn,
+        duration: buffSheet.duration,
+        AVApplied: buffSheet.AVApplied,
+        maxStacks: buffSheet.maxStacks,
+        currentStacks: buffSheet.currentStacks,
+        decay: buffSheet.decay,
+        expireType: buffSheet.expireType,
+        isDOT: buffSheet.isDOT,
+        isDebuff: buffSheet.isDebuff,
+        element: buffSheet.element,
+        isAllDOTTypes: buffSheet.isAllDOTTypes,
+        multiplier: buffSheet.multiplier,
+        multiPerStack: buffSheet.multiPerStack,
+        multiStackCap: buffSheet.multiStackCap,
+        softCapDetonate: buffSheet.softCapDetonate,
+        scalar: buffSheet.scalar,
+        slot: buffSheet.slot,
+        ownerIsAllied: buffSheet.ownerIsAllied,
+        ownerSlot: buffSheet.ownerSlot,
+        avgChanceApplied: buffSheet.avgChanceApplied,
+        baseChance: buffSheet.baseChance,
+        customTurnStartFunction: buffSheet.customTurnStartFunction,
+        isSpecialDOTLast: buffSheet.isSpecialDOTLast,
+        tags: buffSheet.tags,
+        actionTags: buffSheet.actionTags,
+        compositeCacheTag: buffSheet.compositeCacheTag,
+        realDMGKeys: buffSheet.realDMGKeys,
+        realPENKeys: buffSheet.realPENKeys,
+        realShredKeys: buffSheet.realShredKeys,
+        realVulnKeys: buffSheet.realVulnKeys
+    };
+}
 
 // function newEmptyTable(size) {
 //     let newArray = new Array(size);
@@ -953,17 +1103,17 @@ const propertyImagePaths = {
                 "specific": "Toughness",
                 "unit": ""
             },
-        }
-    },
-    "PEN": {
-        "icon": noIconPath,
-        "sets": {
+
             [greatTableIndex["ResistanceAll"]]: {
                 "display": "All RES",
                 "specific": "RES: All",
                 "unit": "%"
             },
-
+        }
+    },
+    "PEN": {
+        "icon": noIconPath,
+        "sets": {
             [greatTableIndex["ResistanceAllPEN"]]: {
                 "display": "All RES PEN",
                 "specific": "PEN: All",
@@ -1423,33 +1573,12 @@ const propertyImagePaths = {
 const cacheTagFamilies = {
     "Elation": {
         ...propertyImagePaths.Elation.sets,
-        // [ElationDMGAll]: propertyImagePaths.Elation.sets.ElationDMGAll,
-        // [DamageFire]: propertyImagePaths.Fire.sets.DamageFire,
-        // [DamageIce]: propertyImagePaths.Ice.sets.DamageIce,
-        // [DamageLightning]: propertyImagePaths.Lightning.sets.DamageLightning,
-        // [DamageWind]: propertyImagePaths.Wind.sets.DamageWind,
-        // [DamageQuantum]: propertyImagePaths.Quantum.sets.DamageQuantum,
-        // [DamageImaginary]: propertyImagePaths.Imaginary.sets.DamageImaginary,
     },
     "MerryMake": {
         ...propertyImagePaths.MerryMake.sets,
-        // [ElationDMGAll]: propertyImagePaths.Elation.sets.ElationDMGAll,
-        // [DamageFire]: propertyImagePaths.Fire.sets.DamageFire,
-        // [DamageIce]: propertyImagePaths.Ice.sets.DamageIce,
-        // [DamageLightning]: propertyImagePaths.Lightning.sets.DamageLightning,
-        // [DamageWind]: propertyImagePaths.Wind.sets.DamageWind,
-        // [DamageQuantum]: propertyImagePaths.Quantum.sets.DamageQuantum,
-        // [DamageImaginary]: propertyImagePaths.Imaginary.sets.DamageImaginary,
     },
     "DamageReduction": {
         ...propertyImagePaths.DamageReduction.sets,
-        // [ElationDMGAll]: propertyImagePaths.Elation.sets.ElationDMGAll,
-        // [DamageFire]: propertyImagePaths.Fire.sets.DamageFire,
-        // [DamageIce]: propertyImagePaths.Ice.sets.DamageIce,
-        // [DamageLightning]: propertyImagePaths.Lightning.sets.DamageLightning,
-        // [DamageWind]: propertyImagePaths.Wind.sets.DamageWind,
-        // [DamageQuantum]: propertyImagePaths.Quantum.sets.DamageQuantum,
-        // [DamageImaginary]: propertyImagePaths.Imaginary.sets.DamageImaginary,
     },
     "Damage": {
         ...propertyImagePaths.Damage.sets,
@@ -1464,16 +1593,11 @@ const cacheTagFamilies = {
     "DEFShred": {
         ...propertyImagePaths.DEFShred.sets,
     },
+    "DEF": {
+        ...propertyImagePaths.DEF.sets,
+    },
     "PEN": {
         ...propertyImagePaths.PEN.sets,//resistance all is bundled under pen as well, no need to add it separately
-        // ResistancePhysical: propertyImagePaths.PhysicalRES.sets.ResistancePhysical,
-        // ResistanceFire: propertyImagePaths.FireRES.sets.ResistanceFire,
-        // ResistanceIce: propertyImagePaths.IceRES.sets.ResistanceIce,
-        // ResistanceLightning: propertyImagePaths.LightningRES.sets.ResistanceLightning,
-        // ResistanceWind: propertyImagePaths.WindRES.sets.ResistanceWind,
-        // ResistanceQuantum: propertyImagePaths.QuantumRES.sets.ResistanceQuantum,
-        // ResistanceImaginary: propertyImagePaths.ImaginaryRES.sets.ResistanceImaginary,
-
         [ResistancePhysicalPEN]: propertyImagePaths.PhysicalRES.sets.ResistancePhysicalPEN,
         [ResistanceFirePEN]: propertyImagePaths.FireRES.sets.ResistanceFirePEN,
         [ResistanceIcePEN]: propertyImagePaths.IceRES.sets.ResistanceIcePEN,
@@ -1481,6 +1605,18 @@ const cacheTagFamilies = {
         [ResistanceWindPEN]: propertyImagePaths.WindRES.sets.ResistanceWindPEN,
         [ResistanceQuantumPEN]: propertyImagePaths.QuantumRES.sets.ResistanceQuantumPEN,
         [ResistanceImaginaryPEN]: propertyImagePaths.ImaginaryRES.sets.ResistanceImaginaryPEN,
+    },
+    "RES": {
+        // ...propertyImagePaths.PEN.sets,//resistance all is bundled under pen as well, no need to add it separately
+
+        [ResistanceAll]: propertyImagePaths.Misc.sets.ResistanceAll,
+        [ResistancePhysical]: propertyImagePaths.PhysicalRES.sets.ResistancePhysical,
+        [ResistanceFire]: propertyImagePaths.FireRES.sets.ResistanceFireP,
+        [ResistanceIce]: propertyImagePaths.IceRES.sets.ResistanceIce,
+        [ResistanceLightning]: propertyImagePaths.LightningRES.sets.ResistanceLightning,
+        [ResistanceWind]: propertyImagePaths.WindRES.sets.ResistanceWind,
+        [ResistanceQuantum]: propertyImagePaths.QuantumRES.sets.ResistanceQuantum,
+        [ResistanceImaginary]: propertyImagePaths.ImaginaryRES.sets.ResistanceImaginary,
     },
     "Vulnerable": {
         ...propertyImagePaths.Vulnerable.sets,
@@ -1491,8 +1627,29 @@ const cacheTagFamilies = {
     "CritDamage": {
         ...propertyImagePaths.CritDamage.sets,
     },
+    "Healing": {
+        ...propertyImagePaths.HealOUT.sets,
+        ...propertyImagePaths.HealIN.sets,
+    },
+    "Shield": {
+        ...propertyImagePaths.Shield.sets,
+    },
+    "Break": {
+        ...propertyImagePaths.Break.sets,
+    },
 }
-const familyCacheTagSet = new Set (["UpdateStatDamage","UpdateStatElation","UpdateStatMerryMake","UpdateStatDamageReduction","UpdateStatDEFShred","UpdateStatPEN","UpdateStatVulnerable","UpdateStatCritRate","UpdateStatCritDamage"])
+const familyCacheTagSet = new Set ([
+    "UpdateStatDamage",
+    "UpdateStatElation","UpdateStatMerryMake",
+    "UpdateStatDamageReduction",
+    "UpdateStatDEFShred","UpdateStatDEF",
+    "UpdateStatPEN",
+    "UpdateStatRES",
+    "UpdateStatVulnerable",
+    "UpdateStatCritRate","UpdateStatCritDamage",
+    "UpdateStatHealing","UpdateStatShield",
+    "UpdateStatBreak",
+])
 
 // const testArray = new Array(greatTableSize);
 // testArray[0] += 1
