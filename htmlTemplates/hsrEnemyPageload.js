@@ -20,7 +20,8 @@ const scriptsToLoad = [
     "/HonkaiSR/TheLibrary/dScaleHard.js",
     "/HonkaiSR/TheLibrary/dScaleInfinite.js",
 
-    "dEnemyData.js",
+    // "dEnemyData.js",
+    "dEnemyData2.js",
     "compositeAbilityObject.js",
 
     "/HonkaiSR/TheLibrary/painAndSuffering.js",
