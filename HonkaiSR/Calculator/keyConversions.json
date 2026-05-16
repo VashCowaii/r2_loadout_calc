@@ -36,6 +36,8 @@
     "StanceBreakAddRatio": "DamageBreakEfficiency[?]",
     "StanceBreakTakenRatio": "ToughnessVulnerability",
 
+    "FireStanceBreakTakenRatio": "ToughnessVulnerabilityFire",
+
     "IndependentDamageAddedRatio": "UniqueFinalMultiplier",
 
     "Level_FinalDamageAddedRatio": "StageFinalDMG",
@@ -44,6 +46,7 @@
     "ElationDamageAddedRatio": "ElationDMGSUM",
     "ElationDamageAddedRatioConvert": "ElationDMGConverted",
     "ElationPointNum": "Punchline",
+    "ElationPointNumDelta": "PunchlineFlatBonus",
     "EnableElationPointMultiplier": "PunchlineToggle",
 
     "ElationDamageExtraAddedRatio": "MerryMake",
@@ -178,6 +181,15 @@
     "ThunderPenetrate": "ResistanceLightningPEN",
     "ImaginaryPenetrate": "ResistanceImaginaryPEN",
     "PhysicalPenetrate": "ResistancePhysicalPEN",
+
+    "AllDamageTypeResistanceOverrideBase": "ResistanceAllBaseOverride",
+    "PhysicalResistanceBase": "ResistancePhysicalBase",
+    "FireResistanceBase": "ResistanceFireBase",
+    "IceResistanceBase": "ResistanceIceBase",
+    "ThunderResistanceBase": "ResistanceLightningBase",
+    "WindResistanceBase": "ResistanceWindBase",
+    "QuantumResistanceBase": "ResistanceQuantumBase",
+    "ImaginaryResistanceBase": "ResistanceImaginaryBase",
 
     "AllDamageTypeResistance": "ResistanceAll",
     "PhysicalResistance": "ResistancePhysical",

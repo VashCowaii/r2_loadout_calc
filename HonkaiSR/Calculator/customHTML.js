@@ -933,6 +933,7 @@ const targetSelectPoolArray = [
 
 const filterBasicListArray = [
     "FILTER: Statistic",
+    "FILTER: Path",
     // "FILTER: State",
     "SORT: Statistic",
     "Filter Ally",
@@ -1044,6 +1045,17 @@ const conditionListCharsType = [
     "Character",
     "Memosprite",
     "Summon",
+]
+const conditionListPathType = [
+    "Erudition",
+    "Harmony",
+    "Preservation",
+    "Destruction",
+    "Hunt",
+    "Elation",
+    "Remembrance",
+    "Nihility",
+    "Abundance",
 ]
 const conditionListCharsTypeBuffTarget = [
     "Character",
@@ -1358,6 +1370,12 @@ const rotationsUISuffering = {
                         {type: "Filter Stat", statName: "ATK%"},
                         {type: "Filter Stat", statName: "ATK%"}
                     ],
+                }
+            case "FILTER: Path":
+                return {
+                    type: "FILTER: Path",
+                    comparison: "=",
+                    path: "Erudition",
                 }
             case "SORT: Statistic":
                 return {
@@ -2722,8 +2740,7 @@ const rotationsUISuffering = {
         destination.stateName ??= firstValidState;//if the stateName doesn't exist yet(prob bc this was a new selection and we didn't read char states yet) then assign it the first valid state we can find
         //otherwise we leave it as is with whatever value the element provided from user selections, if this was a preexisting condition
         if (firstValidState != null) {
-
-            const currentRef = customDisplayValuesLog[characterName] ?? [];
+            const currentRef = customDisplayValuesLog[targetSlot] ?? [];
             for (let battleEntry of currentRef) {
                 // {type: "Character: State", target: "Self", stateName: "currentEnergy", isBattleValue: false},
                 // destination.stateName
@@ -3142,6 +3159,56 @@ const rotationsUISuffering = {
 
         return returnString
     },
+    "FILTER: Path"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+
+
+        indexCounter++;
+        const newArray = [...arrayToPass];
+        newArray.push(indexCounter);
+
+        //we don't need a newIndex at -1 here bc the comparison will always have 2 entries, so index 0 and index 1
+
+        // {
+        //     type: "FILTER: Path",
+        //     comparison: "=",
+        //     path: "Erudition",
+        // }
+
+        const arrayIDString = newArray.join("|");
+        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
+
+
+        const compareElem = readSelection(`${baseIDString}Comparison`);
+        if (compareElem) {destination.comparison = compareElem.value;}
+
+        const comparePath = readSelection(`${baseIDString}Path`);
+        if (comparePath) {destination.path = comparePath.value;}
+
+        // console.log(destination)
+
+        let newIndex = -1;
+        const getConditionList = rotationsUISuffering.getConditionList;
+        let returnString = `<div class="rotationsSectionANDBoxHolder">
+        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+            ${rotationsUISuffering.getConditionList("FILTER: Path",filterBasicListArray)}
+        </select>
+        </div>
+
+        <div class="rotationConditionOperatorBox">
+            <div class="rotationsConditionsRowHeader">
+                <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                    ${getConditionList(destination.comparison ?? "=",conditionComparatorList)}
+                </select>
+            </div>
+            <div class="rotationsSectionConditionHolderBox">
+                <select class="rotationActionSelectorSub" id="${baseIDString}Path" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
+                    ${getConditionList(destination.path ?? "Erudition",conditionListPathType)}
+                </select>
+            </div>
+        </div>`;
+
+        return returnString
+    },
     "SORT: Statistic"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         indexCounter++;
         const newArray = [...arrayToPass];
@@ -3461,12 +3528,11 @@ const rotationsUISuffering = {
         const characterObject = globalRecords.character;
         const target = destination.target;
         const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-
         // state: true,
 
         const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
 
-        const firstValidValue = rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue,null,characterName,destination.target ?? "Self",true);
+        const firstValidValue = rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue,null,targetSlot,destination.target ?? "Self",true);
         // console.log(firstValidState)
 
         const getConditionList = rotationsUISuffering.getConditionList;
@@ -3491,7 +3557,7 @@ const rotationsUISuffering = {
                     <div class="rotationsSectionConditionHolderBox">
                         
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue ?? firstValidValue,null,characterName,destination.target ?? "Self",false)}
+                            ${rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue ?? firstValidValue,null,targetSlot,destination.target ?? "Self",false)}
                         </select>
                     </div>
 
@@ -3506,8 +3572,7 @@ const rotationsUISuffering = {
         destination.specialValue ??= firstValidValue;//if the stateName doesn't exist yet(prob bc this was a new selection and we didn't read char states yet) then assign it the first valid state we can find
         //otherwise we leave it as is with whatever value the element provided from user selections, if this was a preexisting condition
         if (firstValidValue != null) {
-
-            const currentRef = customDisplayValuesLog[characterName];
+            const currentRef = customDisplayValuesLog[targetSlot];
             for (let battleEntry of currentRef) {
                 // {type: "Character: State", target: "Self", stateName: "currentEnergy", isBattleValue: false},
                 // destination.stateName

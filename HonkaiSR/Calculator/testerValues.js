@@ -68,6 +68,41 @@ const customEnergyBar = {
                 ${energyOverflowRatio ? `<div class="actionDetailHeaderRowCharacterEnergyBoxInnerRing" style="border:2px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}"></div>` : ""}
                 `;
         }
+    },
+    "Evanescia": {
+        isJustExtraFill: true,
+        fillFunction(turnRef,specialEnergyData) {
+            const halfMax = turnRef.maxEnergy * 0.5;
+
+            const energyPossible = Math.max(0, turnRef.currentEnergy - halfMax);
+            const energyOverflowRatio = energyPossible / halfMax
+
+            // "Physical": {
+            //         energyColor1: "#FFFFFF80",
+            //         energyColor2: "#B9BABB80"
+            //     },
+
+            // const currentEnergy = turnRef.currentEnergy/turnRef.maxEnergy;
+
+
+
+
+            return `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+                style="height: ${
+                    (Math.min(halfMax, turnRef.currentEnergy))
+                    /(halfMax) 
+                    * 100
+                }%;
+                background: linear-gradient(to bottom, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}, ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor2}80);"></div>
+                ` + `<div class="actionDetailHeaderRowCharacterEnergyBoxEnergyShutter" 
+                style="height: ${
+                    (energyOverflowRatio)
+                    * 100
+                }%;bottom: 0%;
+                background: linear-gradient(to bottom,rgba(255, 255, 255, 0.67),rgba(185, 186, 187, 0.72));"></div>
+                ${energyOverflowRatio ? `<div class="actionDetailHeaderRowCharacterEnergyBoxInnerRing" style="border:2px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}"></div>` : ""}
+                `;
+        }
     }
 }
 
@@ -86,6 +121,13 @@ const customDisplayValuesLog = {
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "bladeFUAStackSum",summaryType: "SUM"},
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
         {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false,summaryValue: "bladeHPTallySummer",summaryType: "SUM"},
+    ],
+    "Firefly": [
+        // {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
+        {valueName: "Combustion State", refName: "combustionActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Countdown Delay Remaining", refName: "traceDelayRemaining", isBattleValue: true},
+        {valueName: "E2 Cooldown", refName: "e2AdvanceCooldown", isBattleValue: true, isCharacterState: true, requiresEidolon: 2},
     ],
     "Archer": [//tracker done
         {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
@@ -214,6 +256,12 @@ const customDisplayValuesLog = {
         {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSparxie`,summaryType: "SUM"},
         {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
     ],
+    "Trailblazer - Elation": [//tracker done
+        // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerTrailblazer - Elation`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerTrailblazer - Elation`,summaryType: "SUM"},
+    ],
+
     "Sparkle": [//tracker done
         {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true,summaryValue: "sparkleReserveSum",summaryType: "SUM"},
         {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
@@ -236,6 +284,50 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+    "Welt": [//tracker done
+        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
+    "Seele": [//tracker done
+        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+
+        
+        {valueName: "E6 Ult DMG Tracked", refName: "e6DMGTracked", isBattleValue: true, requiresEidolon: 6},
+    ],
+    "Silver Wolf LV.999": [//tracker done
+        {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
+    "Evanescia": [//tracker done
+        {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true},
+        {valueName: "E6 Ult Counter", refName: "E6UltCounter", isBattleValue: true, requiresEidolon: 6},
+        
+
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerEvanescia`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerEvanescia`,summaryType: "SUM"},
+        // {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
+    
+
+    
 }
 
 const permaConditionsTextLibrary = {
@@ -343,6 +435,13 @@ const conditionsCharacterDisplayWarning = {
         hasEnhancedState: false,
         "Skill": "",
         "Ultimate": "You as the user need to define conditions for Argenti that will determine if you use at Half-Energy or at full.",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
+    },
+    "Evanescia": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "You as the user need to define conditions for Evanescia that will determine if you use at Half-Energy or at full.",
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
     },
@@ -573,6 +672,31 @@ const conditionLibrary = {
             return value1 < value2;
         },
     },
+    "FILTER: Path"(battleData,sourceTurn,destination) {
+        // const array = destination.array;
+
+        // {
+        //     type: "FILTER: Path",
+        //     comparison: "=",
+        //     path: "Erudition",
+        // }
+        const comparator = destination.comparison;
+
+        const quickCompare = conditionLibrary.comparisonOperations;
+        const compare = quickCompare[comparator];
+
+        const path = destination.path;
+
+        let newArray = [];
+        let currentTargets = currentGlobalTargetPool;
+
+        for (let entity of currentTargets) {
+            const isValid = compare(path,entity.path);
+            if (isValid) {newArray.push(entity);}
+        }
+
+        return newArray;
+    },
     "FILTER: Statistic"(battleData,sourceTurn,destination) {
         // const array = destination.array;
 
@@ -681,7 +805,6 @@ const conditionLibrary = {
         return statFunction1;
     },
     "Lowest HP Ally (On-Field)"(battleData,sourceTurn,condition) {
-        // return battleActions.findLowestHPAlly(battleData);
         const currentGlobalTargetPoolInner = currentGlobalTargetPool;
         let lastValue = 0;
         let lastTarget = currentGlobalTargetPoolInner[0];
@@ -695,8 +818,6 @@ const conditionLibrary = {
         return lastTarget ? [lastTarget] : [];
     },
     "Maximize Blast Healing"(battleData,sourceTurn,condition) {
-        // return battleActions.findLowestHPAlly(battleData);
-
         const initialGlobalTargetPoolInner = initialGlobalTargetPool;
 
         let sumWeight = 0;
@@ -872,6 +993,11 @@ const conditionLibrary = {
             else {return false;}//if the target has no memosprite, they can't pass these checks ever
         }
 
+        //If I circle back here in the future bc of a mysterious error, check if chars are disabled in the sim
+        //char value will try to extract a value from a given character slot even if they don't exist in the sim
+        //so if characters are disabled and you have slot specific conditions, this WILL break, but I also
+        //kinda don't care to fix that bc anyone doing any legit comparisons using valid conditions should
+        //also always have a full team so that's just kinda w/e
         return target[condition.characterValue];
     },
 
@@ -893,7 +1019,7 @@ const conditionLibrary = {
         // const valueToReturn = condition.isBattleValue ? target.battleValues[valueName] : target[valueName];
         // console.log(valueName,valueToReturn,condition.isBattleValue,target)
 
-        return condition.isBattleValue ? target.battleValues[valueName] : target[valueName];
+        return condition.isBattleValue ? target.battleValues[valueName] : target[valueName];//"skillCounter"
     },
     
     //TEAM VALUES
@@ -1181,6 +1307,7 @@ const defaultConditions = {
         //I don't really wanna bother with passing another parameter through all of these functions, so instead we're just making a quick global variable
         //in the form of globalPoolKey that will allow target or filter functions within the conditions here, to call the correct grouping function.
         globalPoolKey = poolKey;
+        // console.log(poolKey)
         initialGlobalTargetPool = conditionLibrary[poolKey](battleData,sourceTurn,conditionPath)
         const result = conditionLibrary[startType](battleData,sourceTurn,conditionPath);
         globalPoolKey = null;
@@ -1236,10 +1363,70 @@ const defaultConditions = {
             "array": []
         }
     },
+    "Evanescia": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Silver Wolf LV.999": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
     "Jingliu": {
         "hasEnhancedState": false,
-        "Skill": null,
-        "Ultimate": null
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Firefly": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Pre-Action",
+                    "state": false
+                }
+            ]
+        },
+        "validTargetChecks": []
+    },
+    "Seele": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
+        "validTargetChecks": []
     },
     "Hook": {
         "hasEnhancedState": true,
@@ -1273,7 +1460,10 @@ const defaultConditions = {
     //REMEMBRANCE
     "Trailblazer - Remembrance": {
         hasEnhancedState: true,
-        "Skill": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "Ultimate": {
             type: "AND",
             array: []
@@ -1555,14 +1745,17 @@ const defaultConditions = {
     },
     "Cyrene": {
         hasEnhancedState: true,
-        "Skill": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "Ultimate": {
             type: "AND",
             array: []
         }
     },
     "Hyacine": {
-        hasEnhancedState: true,
+        hasEnhancedState: false,
         "Skill": {
             type: "AND",
             array: []
@@ -1579,7 +1772,10 @@ const defaultConditions = {
     //NIHILITY
     "Silver Wolf": {
         hasEnhancedState: false,
-        "Skill": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "Ultimate": {
             type: "AND",
             array: []
@@ -1587,7 +1783,10 @@ const defaultConditions = {
     },
     "Pela": {
         hasEnhancedState: false,
-        "Skill": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "Ultimate": {
             type: "AND",
             array: []
@@ -1618,13 +1817,36 @@ const defaultConditions = {
     },
     "Hysilens": {
         "hasEnhancedState": false,
-        "Skill": null,
-        "Ultimate": null
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
     },
     "Black Swan": {
         "hasEnhancedState": false,
-        "Skill": null,
-        "Ultimate": null
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Welt": {
+        hasEnhancedState: false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            type: "AND",
+            array: []
+        },
     },
 
     //HARMONY
@@ -1881,7 +2103,10 @@ const defaultConditions = {
     },
     "Tingyun": {
         hasEnhancedState: false,
-        "Skill": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "validTargetChecks": [
             "Skill","Ultimate"
         ],
@@ -2005,11 +2230,22 @@ const defaultConditions = {
         },
     },
     "Tribbie": {
-        hasEnhancedState: false,
-        "Skill": null,
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Buff",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "buffName": "Numinosity (Countdown)",
+                    "state": false
+                }
+            ]
+        },
         "Ultimate": {
-            type: "AND",
-            array: []
+            "type": "AND",
+            "array": []
         }
     },
     "Asta": {
@@ -2052,7 +2288,10 @@ const defaultConditions = {
     },
     "Sparkle": {
         "hasEnhancedState": false,
-        "Skill": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
         "validTargetChecks": [
             "Skill"
         ],
@@ -2113,7 +2352,10 @@ const defaultConditions = {
                 }
             ]
         },
-        "Ultimate": null
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
     },
 
     //ABUNDANCE
@@ -2141,10 +2383,44 @@ const defaultConditions = {
             "type": "AND",
             "array": [
                 {
-                    "type": "AND",
+                    "type": "OR",
                     "array": [
                         {
                             "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
                             "comparison": "!=",
                             "array": [
                                 {
@@ -2158,6 +2434,45 @@ const defaultConditions = {
                                     "target": "char1",
                                     "targetType": "Character",
                                     "characterValue": "maxEnergy"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "OR",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char2",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char2",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
                                 }
                             ]
                         },
@@ -2178,6 +2493,45 @@ const defaultConditions = {
                                     "characterValue": "maxEnergy"
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "type": "OR",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char3",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char3",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
+                                }
+                            ]
                         },
                         {
                             "type": "COMPARE",
@@ -2194,6 +2548,45 @@ const defaultConditions = {
                                     "target": "char3",
                                     "targetType": "Character",
                                     "characterValue": "maxEnergy"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "OR",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char4",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char4",
+                                    "targetType": "Character",
+                                    "characterValue": "maxEnergy"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 0
                                 }
                             ]
                         },
@@ -2607,13 +3000,25 @@ const defaultConditions = {
     //ERUDITON
     "Argenti": {
         hasEnhancedState: false,
-        "Skill": null,
-        "Ultimate": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
     },
     "Anaxa": {
         hasEnhancedState: false,
-        "Skill": null,
-        "Ultimate": null,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
     },
 
     //HUNT
@@ -2746,8 +3151,85 @@ const defaultConditions = {
     },
     "Sparxie": {
         "hasEnhancedState": false,
-        "Skill": null,
-        "Ultimate": null
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Trailblazer - Elation": {
+        "hasEnhancedState": false,
+        "validTargetChecks": [
+            "Ultimate"
+        ],
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
+        "UltimateTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
     },
     "Z_Test": {
         "hasEnhancedState": false,

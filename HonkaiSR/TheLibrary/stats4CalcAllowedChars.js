@@ -5,12 +5,13 @@ global.calcAllowedSet = new Set([
     "Hysilens",
     "Pela",
     "Black Swan",
+    "Welt",
 
     //ERUDITION
     "Argenti",
     "Anaxa",
-    "Serval",
-    "Herta",
+    "Serval",//not yet
+    "Herta",//not yet
 
     //DESTRUCTION
     "Saber",
@@ -18,10 +19,12 @@ global.calcAllowedSet = new Set([
     "Jingliu",
     "Firefly",//not yet
     "Hook",
+    "Phainon",//not yet
 
     //HUNT
     "Topaz & Numby",
     "Archer",
+    "Seele",
 
     //HARMONY
     "Bronya",
@@ -54,4 +57,7 @@ global.calcAllowedSet = new Set([
     //ELATION
     "Yao Guang",
     "Sparxie",
+    "Trailblazer - Elation",
+    "Silver Wolf LV.999",
+    "Evanescia",
 ]);

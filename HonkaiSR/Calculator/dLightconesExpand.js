@@ -10104,5 +10104,237 @@ let lightcones = {
       69,
       1.05
     ]
+  },
+  "Until the Flowers Bloom Again": {
+    "lightconeID": 23058,
+    "name": "Until the Flowers Bloom Again",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.6
+      },
+      "2": {
+        "CritDamageBase": 0.75
+      },
+      "3": {
+        "CritDamageBase": 0.9
+      },
+      "4": {
+        "CritDamageBase": 1.05
+      },
+      "5": {
+        "CritDamageBase": 1.2
+      }
+    },
+    "skillName": "Daydream",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]% and Energy Regeneration Rate by #4[f1]%. When the wearer's Max Energy is greater than #5[i], for every 10 points of Max Energy that exceeds this amount, further increases Energy Regeneration Rate by #6[f1]%. Up to a maximum of #7[i] points of excess Max Energy can be taken into account. When the wearer uses Elation Skill, increases the DMG received by all enemies by #2[f1]% for #3[i] turn(s). Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.6,
+        0.15,
+        2,
+        0.1,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        0.75,
+        0.1875,
+        2,
+        0.115,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        0.9,
+        0.225,
+        2,
+        0.13,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        1.05,
+        0.2625,
+        2,
+        0.145,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        1.2,
+        0.3,
+        2,
+        0.16,
+        120,
+        0.0029999998,
+        360
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23058.png",
+    "preview": "image/light_cone_preview/23058.png",
+    "portrait": "image/light_cone_portrait/23058.png",
+    "imageOffset": [
+      -4,
+      -28,
+      1.17
+    ]
+  },
+  "Welcome to the Cosmic City": {
+    "lightconeID": 23057,
+    "name": "Welcome to the Cosmic City",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 529.2,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.18
+      },
+      "2": {
+        "SPD%": 0.21
+      },
+      "3": {
+        "SPD%": 0.24
+      },
+      "4": {
+        "SPD%": 0.27
+      },
+      "5": {
+        "SPD%": 0.3
+      }
+    },
+    "skillName": "Guaranteed Victory",
+    "desc": "Increases the wearer's SPD by #1[i]%. The Elation DMG dealt ignores #2[i]% of the target's DEF. When the wearer uses Ultimate on themselves, gains #3[i] point(s) of \"Punchline.\" This effect can be triggered up to 1 time. And resets this trigger count after using Basic ATK #4[i] time(s).",
+    "params": [
+      [
+        0.18,
+        0.2,
+        20,
+        3
+      ],
+      [
+        0.21,
+        0.24,
+        25,
+        3
+      ],
+      [
+        0.24,
+        0.28,
+        30,
+        3
+      ],
+      [
+        0.27,
+        0.32,
+        35,
+        3
+      ],
+      [
+        0.3,
+        0.36,
+        40,
+        3
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23057.png",
+    "preview": "image/light_cone_preview/23057.png",
+    "portrait": "image/light_cone_portrait/23057.png",
+    "imageOffset": [
+      10,
+      -115,
+      1.6
+    ]
+  },
+  "Tomorrow, Together": {
+    "lightconeID": 22007,
+    "name": "Tomorrow, Together",
+    "path": "Elation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.12
+      },
+      "2": {
+        "CritDamageBase": 0.15
+      },
+      "3": {
+        "CritDamageBase": 0.18
+      },
+      "4": {
+        "CritDamageBase": 0.21
+      },
+      "5": {
+        "CritDamageBase": 0.24
+      }
+    },
+    "skillName": "Companion",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. After the wearer uses their Ultimate, increases all allies' Elation by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.12,
+        0.08,
+        1
+      ],
+      [
+        0.15,
+        0.09,
+        1
+      ],
+      [
+        0.18,
+        0.1,
+        1
+      ],
+      [
+        0.21,
+        0.11,
+        1
+      ],
+      [
+        0.24,
+        0.12,
+        1
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22007.png",
+    "preview": "image/light_cone_preview/22007.png",
+    "portrait": "image/light_cone_portrait/22007.png",
+    "imageOffset": [
+      0,
+      13,
+      1.07
+    ]
   }
 }

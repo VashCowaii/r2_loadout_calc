@@ -3016,7 +3016,11 @@ const customMenu = {
         const summonCustomImages = graphs.summonCustomImages;
 
         for (let action of log) {
-            const isEvent = action.eventOverrideImage;
+
+
+            // eventImage name
+
+            const isEvent = action.eventOverrideImage || summonCustomImages[action.name];
             const currentLogType = action.logType;
 
             // "actionOrderFiltersChars": {
@@ -3130,6 +3134,7 @@ const customMenu = {
             // logToBattle(battleData,{logType: "BattleStartWeakness", name:firstTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"BattleStartWeakness"});
             let basicMiniAction = {
                 "FUAStart": "FuA",
+                "GenericAbilityStart": "Insert",
                 "SkillStart": "Skill",
                 "ElationSkillStart": "Elation",
                 "BasicATKStart": "Basic",
@@ -3602,6 +3607,11 @@ const userTriggers = {
                     <div class="traceAttackTargetType">${currentSkill.type ? `[${currentSkill.type}]` : ""}</div>
                     <div class="${levelIsBlue ? "traceSkillLevelBlue" : "traceSkillLevel"}">${skillPath[skillKeys[0]].variant1.name === currentSkill.name ? `Lv.  ${baseLevel}` : ""}</div>
                 </div>
+
+                ${!currentSkill.participantID ? "" : `<div class="traceToughnessBox">
+                    <div class="traceToughnessTitleBox">Participant ID</div>
+                    <div class="traceToughnessValueBox">${currentSkill.participantID}</div>
+                </div>`}
 
                 ${!currentSkill.skillPointCost && !currentSkill.skillPointGain ? "" : `<div class="traceToughnessBox">
                     <div class="traceToughnessTitleBox">Skill Points</div>
@@ -4185,6 +4195,7 @@ const userTriggers = {
         // "ActionAdvanced",
         // "SpeedAdvanced",
         "FUAStart",
+        "GenericAbilityStart",
         "SkillStart",
         "ElationSkillStart",
         "MemoSkillStart",
@@ -4221,6 +4232,7 @@ const userTriggers = {
         "TechniqueStart": "Technique Start",
         "UltimateStart": "Ultimate Start",
         "FUAStart": "Follow-up Attack (Action Queue)",
+        "GenericAbilityStart": "Insert Instance",
         "SkillStart": "Skill Start",
         "ElationSkillStart": "Elation Skill Start",
         "MemoSkillStart": "Memosprite Skill Start",
@@ -4367,6 +4379,12 @@ const userTriggers = {
                     energyName: "Recollection",
                     energyColor1: "#74C1FD",
                     energyColor2: "#705BFF"
+                },
+
+                "Silver Wolf LV.999": {//TODO: check coloring later on this, rn we're defaulting to cas energy colors
+                    energyName: "MMR",
+                    energyColor1: "#856EFF",
+                    energyColor2: "#EC97FF"
                 },
                 
             }
@@ -4603,6 +4621,17 @@ const userTriggers = {
                     <div class="actionDetailBody">Call: ${action.fuaName}</div>
                     `
                     break;
+
+                    
+                case "GenericAbilityStart": 
+                    // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
+                    returnString = `
+                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Inserted Instance</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
+                    <div class="actionDetailBody">Target: ${action.target}</div>
+                    <div class="actionDetailBody">Call: ${action.fuaName}</div>
+                    `
+                    break;
                 case "ImmediateExtraTurn":
                     // logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target, AV: currentAV, ultName: currentUltyFunction.name});
                     returnString = `
@@ -4755,11 +4784,11 @@ const userTriggers = {
                     break;
                 case "QueueFUA":
                     // battleData.battleLog.push({logType: "QueueFUA", name: entry.name});
-                    returnString = `<div class="actionDetailBody">--Queued Follow-up attack from: ${action.name}</div>`;
+                    returnString = `<div class="actionDetailBody">--Queued Inserted Ability from: ${action.name}</div>`;
                     break;
                 case "QueueUltimate":
                     // logToBattle(battleData,{logType: "QueueUltimate", name: entry.name, isExtraTurn: entry.isExtraTurn});
-                    returnString = `<div class="actionDetailBody">--Queued ${action.isExtraTurn ? "Immediate Extra-Turn" : "Ultimate"} from: ${action.name}</div>`;
+                    returnString = `<div class="actionDetailBody">--Queued ${action.isExtraTurn ? "Extra-Turn" : "Ultimate"} from: ${action.name}</div>`;
                     break;
                 case "BuffApply":
                     let applyType = action.applicationType;
@@ -4890,6 +4919,7 @@ const userTriggers = {
 
                     // <span style="color: ;"></span>
                     // DOT
+                    // console.log(hitData.element)
                     const colorOpening = `<span style="${hitData.element ? `color:${dmgColorKeys[hitData.element]};` : ""}">`;
                     // console.log(hitData)
                     const colorClose = `</span>`;
@@ -7403,8 +7433,8 @@ const importFuckery = {
 
         let incompleteSetsFound = false;
         //if we ever see mismatched shit, let people know we forced a complete set bc we do NOT operate with incomplete bullshit
-        if (sortedSetCounts[0]?.setCount != 2 && sortedSetCounts[0]?.setCount != 4
-            || sortedSetCounts[1]?.setCount
+        if ((sortedSetCounts[0]?.setCount != 2 && sortedSetCounts[0]?.setCount != 4)
+            || (sortedSetCounts[0]?.setCount != 4 && sortedSetCounts[1]?.setCount != 2)
             || planarSecondary != planarSetName) {incompleteSetsFound = true;}
 
         // console.log(sortedSetCounts,setCounts)

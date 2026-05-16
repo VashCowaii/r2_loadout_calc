@@ -700,6 +700,9 @@ const sim = {
             "eventBasedTurns": {},
             "allyPositions": [],//ally equivalent of enemyPositions
             "actionCounter": 0,
+            totalUltsQueued: 0,
+            totalExTurnsQueued: 0,
+            totalAbilitiesQueued: 0,
             "battleListeners": {},
             "followUpQueue": [],
             "ultimateQueue": [],
@@ -780,7 +783,6 @@ const sim = {
 
         const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
 
-        const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
         for (let i=charKeys.length-1;i>=0;i--) {
             const characterEntry = charKeys[i];
             let currentCharacter = characterObject[characterEntry];
@@ -816,6 +818,7 @@ const sim = {
 
             let rank = characterObjectInner[characterEntry].rank;
             // const actionEntry = 
+
             namedTurns[characterEntry] = {
                 name:characterEntry,
                 AV:SPDStats.SPDActionValue,
@@ -830,7 +833,7 @@ const sim = {
                 specialEnergyCurrent: null,
                 specialEnergyMax: null,
                 maxEnergy: charEntryTemp.energyMax ?? 0,//TODO: account for special energy stacks like acheron bullshit later
-                currentEnergy: charEntryTemp.energyMax ? charEntryTemp.energyMax * startingEnergyPercent : 0,
+                currentEnergy: 0,
                 actionCounter: 0,
                 ultsUsed: 0,
                 turnState: false,
@@ -1090,8 +1093,6 @@ const sim = {
                 currentListenerArray.unshift(eachListener);
             }
         }
-
-
         
         // console.log(battleListeners)
         return battleData;
@@ -1111,9 +1112,21 @@ const sim = {
         // battleSettings
         const summaryTurns = battleData.battleTotal.Turns;
         const enemiesToMake = battleSettings.waveArray1;
+        const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
 
         
         poke("EntityConstruction",battleData);
+        poke("ElationInitialize",battleData);
+        const updateEnergy = battleActions.updateEnergy;
+        for (let targetTurn of battleData.allyPositions) {
+
+            const specialEnergy = targetTurn.specialEnergy;
+            if (!specialEnergy) {
+                const amount = targetTurn.maxEnergy * startingEnergyPercent;
+                updateEnergy(battleData,amount,targetTurn,true,"Set Battlestart Energy");
+            }
+        }
+        poke("ElationFinalizePre",battleData);
         poke("BattlePrep",battleData);//this DOES need to go here before prebattle settings
         sim.createEnemyTargets(battleData,enemiesToMake);
 
@@ -1402,12 +1415,44 @@ const sim = {
                 let sourceTurn = currentFUA.sourceTurn;
                 let actionName = currentFUA.name;
                 let generalInfo = {sourceTurn,actionName};
-                const targetTurn = currentFUA.targetTurn;
+                const targetTurn = currentFUA.target;
 
-                if (isLog) {logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});}
-                poke("FUAStart",battleData,generalInfo);
-                currentFUA.attack(battleData,sourceTurn,targetTurn);
-                poke("FUAEnd",battleData,generalInfo);
+                const isFUATrigger = currentFUA.useFUATriggers;
+                const useAnyTrigger = currentFUA.useAnyTriggers;
+                // useFUATriggers: false,
+                // useAnyTriggers: false,
+
+                // totalUltsQueued: 0,
+                // totalExTurnsQueued: 0,
+                // totalAbilitiesQueued: 0,
+                battleData.totalAbilitiesQueued -= 1;
+
+                if (useAnyTrigger) {
+                    if (isFUATrigger) {
+                        if (isLog) {
+                            const isEnhanced = currentFUA.isEnhanced;
+                            logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.attack.name});
+                        }
+                        poke("FUAStart",battleData,generalInfo);
+                        currentFUA.attack(battleData,targetTurn,sourceTurn);
+                        poke("FUAEnd",battleData,generalInfo);
+                    }
+                    else {
+                        const typeStart = currentFUA.eventTypeStart;
+                        const typeEnd = currentFUA.eventTypeEnd;
+
+                        if (isLog) {
+                            const displayTypeStart = currentFUA.eventTypeStartLOG;
+                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
+                        }
+                        poke(typeStart,battleData,generalInfo);
+                        currentFUA.attack(battleData,targetTurn,sourceTurn);
+                        poke(typeEnd,battleData,generalInfo);
+                    }
+                }
+                else {
+                    currentFUA.attack(battleData,targetTurn,sourceTurn);
+                }
             }
         }
     },
@@ -1419,6 +1464,7 @@ const sim = {
         if (battleData.battleIsOver) {return;}
 
         const clearFUA = sim.clearFollowUpAttackQueue;
+        const clearULT = sim.clearUltimateQueue;
         const FUAQueue = battleData.followUpQueue;
         if (FUAQueue.length) {clearFUA(battleData);}
         
@@ -1430,19 +1476,42 @@ const sim = {
         //in such a case saber would check first, fail to see sunday's ult in the queue because it wasn't there yet, and not queue her ult but sunday would right after
         //so we double poke to make sure that dependencies in these cases are not fucked.
 
+        if (!battleData.totalUltsQueued && !battleData.totalAbilitiesQueued) {
+            poke("UltimateQueueEmpty",battleData);
+        }
+        //NOTE: this is for shit like archer's extra turn, where it relies on the queue being empty at a given moment in order to determine if it should queue itself or not
+
 
         if (queue.length) {
+
+            
+            
+
             let isLog = battleData.isLoggyLogger;
             const currentAV = battleData.sumAV;
 
             while (queue.length > 0 && !battleData.battleIsOver) {
+
+                if (battleData.isInExtraTurn) {
+                    const preCheck = queue[0];
+                    const preCheckExtraTurn = preCheck.isExtraTurn;
+    
+                    if (preCheckExtraTurn) {return;}
+                    else if (!battleData.inExtraTurnUseUlts) {
+                        poke("UltimateQueueBlockedOrDone",battleData);
+                        return;
+                    }
+                    //if we're already in an extra turn, and the next queued ult instance is ALSO an extra turn, then abort the ult queue empty
+                }
+
                 let currentUltimate = queue.shift();
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
                 let actionName = currentUltimate.name;
                 let target = currentUltimate.target;
                 const isAttackUlt = currentUltimate.isAttackUlt;
-                let generalInfo = {sourceTurn,actionName,target,isAttackUlt};
+                const queueTag = currentUltimate.queueTag;
+                let generalInfo = {sourceTurn,actionName,target,isAttackUlt,queueTag};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
                 
 
@@ -1451,6 +1520,11 @@ const sim = {
                 const currentUltyFunction = currentUltimate.attack;
 
                 if (!isExtraTurn) {
+                    // totalUltsQueued: 0,
+                    // totalExTurnsQueued: 0,
+                    // totalAbilitiesQueued: 0,
+                    battleData.totalUltsQueued -= 1;
+                    
                     const enemyChecker = battleData.enemyPositions.length;
                     if (!enemyChecker) {
                         sourceTurn.ultyQueued = false;
@@ -1461,6 +1535,8 @@ const sim = {
                     if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
 
+                    
+
                     sourceTurn.ultsUsed++;
                     currentUltyFunction(battleData,sourceTurn,target);
                     //nonViolentWrapper gets called on buff-type ultimates within their own respective functions.
@@ -1468,16 +1544,46 @@ const sim = {
                     poke("UltimateEnd",battleData,generalInfo);
                 }
                 else {
-                    const extraTurnHasChoice = currentUltimate.extraTurnHasChoice;
+                    const allowUlts = currentUltimate.allowUlts;
+                    battleData.inExtraTurnUseUlts = allowUlts;
 
                     if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     
                     // if (extraTurnHasChoice) {
                     //     poke("StartTurnEnd", battleData, generalInfo);
                     // }
-                    
-                    currentUltyFunction(battleData,target,sourceTurn);
 
+                    battleData.isInExtraTurn = true;
+                    poke("ExtraTurnStart",battleData,generalInfo);
+                    if (battleData.inExtraTurnUseUlts) {clearULT(battleData);}
+                    
+                    const extraTurnHasChoice = currentUltimate.extraTurnHasChoice;
+
+                    if (extraTurnHasChoice) {
+                        currentUltyFunction(sourceTurn.properName,sourceTurn,battleData);
+                        // turnWrapper(charName,sourceTurn,battleData)
+                    }
+                    else {
+                        const actionHasForcedPL = currentUltimate.elationForcedPunchline;
+                        if (actionHasForcedPL) {
+                            battleData.punchlineForced = actionHasForcedPL;
+                            battleData.punchlineConsume = false;
+                        }
+
+                        currentUltyFunction(battleData,target,sourceTurn);
+
+                        if (actionHasForcedPL) {
+                            battleData.punchlineForced = 0;
+                            battleData.punchlineConsume = true;
+                        }
+                    }
+                    
+                    battleData.totalExTurnsQueued -= 1;
+                    battleData.inExtraTurnUseUlts = false;
+                    battleData.isInExtraTurn = false;
+
+                    poke("ExtraTurnEnd",battleData,generalInfo);
+                    
                 }
 
                 poke("UltimateReady",battleData);
@@ -1487,7 +1593,23 @@ const sim = {
                     clearFUA(battleData);
                     poke("UltimateReady",battleData);
                 }
+
+                const allQueuesEmpty = !battleData.totalAbilitiesQueued && (!battleData.totalUltsQueued || (battleData.totalExTurnsQueued && queue[0].isExtraTurn))
+                if (allQueuesEmpty) {
+                    poke("UltimateQueueBlockedOrDone",battleData);
+                }
             }
+        }
+
+
+        const allQueuesEmpty = !battleData.totalAbilitiesQueued && (!battleData.totalUltsQueued || (battleData.totalExTurnsQueued && queue[0].isExtraTurn))
+        if (allQueuesEmpty) {
+            poke("UltimateQueueBlockedOrDone",battleData);
+
+            if (queue.length) {
+                clearULT(battleData);
+            }
+            
         }
     },
 }
