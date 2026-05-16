@@ -73,13 +73,18 @@ const superGlobal = {
             "UpdateStatMerryMake": {},
             "UpdateStatDamageReduction": {},
             "UpdateStatDEFShred": {},
+            "UpdateStatDEF": {},
             "UpdateStatPEN": {},
+            "UpdateStatRES": [],
             "UpdateStatVulnerable": {},
             "UpdateStatCritRate": {},
             "UpdateStatCritDamage": {},
+            "UpdateStatHealing": {},
+            "UpdateStatShield": {},
+            "UpdateStatBreak": {},
         }
     },
-    createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,atkSlot) {
+    createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,atkSlot,energy) {
         const fullTag = tags + "";
         const realDMGKeys = globalTagCacheKeysDMG[fullTag] ??= keyShortcut(dmgKeys,tags);
         const realPENKeys = globalTagCacheKeysPEN[fullTag] ??= keyShortcut(resPENKeys,tags);
@@ -94,6 +99,7 @@ const superGlobal = {
                 blast: null,
                 all: null,
             },
+            energy,
             scalar,
             DMGTags: tags,
             slot: atkSlot,
