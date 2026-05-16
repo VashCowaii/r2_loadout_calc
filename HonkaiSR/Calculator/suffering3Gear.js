@@ -1893,7 +1893,7 @@ const turnLogicLightcones = {
                     //strictly speaking this could break if healing started on a target that was removed from the battle, though its turn object should still exist regardless
                     //just no longer in the turn order. All the same, better to be safe.
 
-                    if (!sourceTurn.lcNightOfFrightHealingHEALOBJECT) {
+                    if (!sourceTurn.lcNightOfFrightATKSHEET) {
                         let lcNameRef = "Night of Fright";
                         let lcPathing = lightcones[lcNameRef].params;
                         let ownerRank = ownersSlots[sourceTurn.name];
