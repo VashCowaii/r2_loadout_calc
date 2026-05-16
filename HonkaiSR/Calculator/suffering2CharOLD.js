@@ -2293,6 +2293,543 @@ const turnLogic = {
             "techImplant": "Δ Order: Meteoric Incineration"
         },
         "characterValuesBattle": {},
+    },
+    //TODO: e2: ally revive shit, later when I allow for ally deaths // e4: dunno if healing final multi or just outgoing healing //the cleanse I didn't add yet just forgot looks like
+    "Huohuo_v0": {//ENERGY DONE
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                return returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.huohuoSkillHeal, 
+                target: null, 
+                endTurn: true,
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.huohuoBasic, 
+                target: "enemy", 
+                endTurn: true,
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            huohuoBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.huohuoBasicREF ??= ATKObjects["Basic ATK"]["Banner: Stormcaller"].variant1;
+                if (!ATKObjects.huohuoBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Wind"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.huohuoBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.huohuoBasicATKOBJECT;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("BasicATKStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                poke("BasicATKEnd",battleData,{sourceTurn});
+            },
+            huohuoSkillHeal(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.huohuoSkillHealHealREF ??= ATKObjects.Skill["Talisman: Protection"].variant1;
+                let rank = sourceTurn.rank;
+                // let e2 = rank >= 2;
+                const targetTurn = target[0];
+                // console.log(targetTurn)
+                //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
+                
+                //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
+                //YES on wavestrider, even subtargets count, NO on sacerdos, only single targets count unless sunday bc reasons
+                if (!ATKObjects.huohuoSkillHealHealHEALOBJECT) {
+                    let values = ATKObjects.huohuoSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const actionTags = ["Heal","Skill"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                    ATKObjects.huohuoSkillHealHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[2],
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: values[3],
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag
+                    }
+                }
+                
+    
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("SkillStart",battleData,{sourceTurn});
+
+                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                poke("TargetAlly",battleData,{targetType:"Blast", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+
+                let healObject = ATKObjects.huohuoSkillHealHealHEALOBJECT;
+                healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
+
+                logicRef.skillFunctions.huohuoApplyDivineProvision(battleData,sourceTurn);
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                poke("SkillEnd",battleData,{sourceTurn});
+            },
+            huohuoApplyDivineProvision(battleData,sourceTurn,turnOverride) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.huohuoTalentREF ??= ATKObjects.Talent["Possession: Ethereal Metaflow"].variant1;
+                let values = ATKObjects.huohuoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                const e1 = rank>=1;
+                if (!ATKObjects.huohuoTalentOwnerSHEET) {
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.huohuoTalentOwnerSHEET = {
+                        "stats": null,
+                        "source": "Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.talentCountdown,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.provisionExpired,
+                        expireParam: sourceTurn.name
+                    }
+
+                    if (e1) {
+                        ATKObjects.huohuoTalentE1SPDSHEET = {
+                            "stats": [SPDP],
+                            [SPDP]: 0.12,
+                            "source": "E1",
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffNames.e1SPD,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            removeOnDeath: true,
+                        }
+                    }
+                }
+                const countdownSheet = ATKObjects.huohuoTalentOwnerSHEET;
+                sourceTurn.talentProvisionIsActive = true;
+                sourceTurn.talentCleanseCounter = 0;
+                const updateBuff = battleActions.updateBuff;
+                updateBuff(battleData,sourceTurn,countdownSheet);
+
+                if (e1) {
+                    const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
+                    const allyPositions = battleData.allyPositions;
+                    
+                    for (let ally of allyPositions) {
+                        updateBuff(battleData,ally,spdSheet);
+                    }
+                }
+                
+                // const buffCheck = 
+            },
+            provisionExpired(battleData,expireParam) {
+                const huohuoTurn = battleData.nameBasedTurns[expireParam];
+                huohuoTurn.talentProvisionIsActive = false;
+
+                const rank = huohuoTurn.rank;
+                if (rank>=1) {
+                    const logicRef = turnLogic[huohuoTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
+                    // const updateBuff = battleActions.updateBuff;
+                    const allyPositions = battleData.allyPositions;
+                    
+                    for (let ally of allyPositions) {
+                        removeBuff(battleData,ally,spdSheet);
+                    }
+                }
+            },
+            provisionHeal(battleData,sourceTurn,targetTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // sourceTurn.talentProvisionIsActive = true;
+                // sourceTurn.talentCleanseCounter = 0;
+                let skillRef = ATKObjects.huohuoTalentREF ??= ATKObjects.Talent["Possession: Ethereal Metaflow"].variant1;
+                let values = ATKObjects.huohuoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.provisionHealHEALOBJECT) {
+                    const actionTags = ["Heal","Talent"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                    ATKObjects.provisionHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[4],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag
+                    }
+                }
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TalentStart",battleData,{sourceTurn});
+
+                let healObject = ATKObjects.provisionHealHEALOBJECT;
+                healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
+                //TODO: cleanse later, not a huge deal, gallagher already has something that would do it in his skill, I just don't let enemies apply debuffs YET
+
+                let alliesArray = [];
+                const allyPositions = battleData.allyPositions;
+                for (let ally of allyPositions) {
+                    const HPRatio = ally.currentHP/ally.maxHP;
+                    if (HPRatio <= 0.5) {alliesArray.push(ally)}
+                }
+                if (alliesArray.length) {
+                    healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,alliesArray);
+                }
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                updateEnergy(battleData,1,sourceTurn,false,"Stress Reaction to Horror");
+                poke("TalentEnd",battleData,{sourceTurn});
+            },
+            huohuoUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.huohuoUltimateREF ??= ATKObjects.Ultimate["Tail: Spiritual Domination"].variant1;
+                let values = ATKObjects.huohuoUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                let rank = sourceTurn.rank;
+                const characterName = sourceTurn.properName;
+
+                if (!ATKObjects.huohuoUltimateBuffSHEET) {
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.huohuoUltimateBuffSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: values[1],
+                        "source": "Ultimate",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.ultATK,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": false,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const buffSheet = ATKObjects.huohuoUltimateBuffSHEET;
+
+
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+
+                const allyPositions = battleData.allyPositions;
+                const updateBuff = battleActions.updateBuff;
+                const percentRegen = values[0];
+
+                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
+                for (let ally of allyPositions) {
+                    if (ally.properName === characterName || ally.isMemosprite) {continue;}//huohuo doesn't give herself energy, rip
+                    const energyToRegen = ally.maxEnergy * percentRegen;
+                    updateEnergy(battleData,energyToRegen,ally,true,"Huohuo Ultimate");
+                    updateBuff(battleData,ally,buffSheet);
+                }
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            huohuoTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.huohuoTechREF ??= ATKObjects.Technique["Fiend: Impeachment of Evil"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+
+                // turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity(battleData,sourceTurn);
+                if (!ATKObjects.huohuoTechBUFFSHEET) {
+                    ATKObjects.huohuoTechBUFFSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: -0.25,
+                        "source": "Technique",
+                        "sourceOwner": characterName,
+                        "buffName": logicRef.buffNames.techniqueATKDebuff,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                const buffSheet = ATKObjects.huohuoTechBUFFSHEET;
+
+                const enemyPositions = battleData.enemyPositions;
+                const updateBuff = battleActions.updateBuff;
+                for (let enemy of enemyPositions) {
+                    updateBuff(battleData,enemy,buffSheet);
+                }
+
+                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "StartTurn",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || !ownerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
+
+                    const provisionHeal = this.provisionHeal ??= turnLogic[ownerTurn.properName].skillFunctions.provisionHeal
+                    provisionHeal(battleData,ownerTurn,sourceTurn);
+                },
+                "target": "allies",
+                "listenerName": "Divine Provision Healing controller (turn started)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || !ownerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
+
+                    const provisionHeal = this.provisionHeal ??= turnLogic[ownerTurn.properName].skillFunctions.provisionHeal
+                    provisionHeal(battleData,ownerTurn,sourceTurn);
+                },
+                "target": "allies",
+                "listenerName": "Divine Provision Healing controller (ultimate used)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    const huohuoApplyDivineProvision = this.huohuoApplyDivineProvision ??= turnLogic[characterName].skillFunctions.huohuoApplyDivineProvision
+                    huohuoApplyDivineProvision(battleData,ownerTurn,1);
+                },
+                "target": "self",
+                "listenerName": "Fearful to Act - battlestart Provision application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            attack: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
+                            target: this.target,
+                            name: this.listenerName,
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            priority: priorityList.turn.Default,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        battleActions.queueUltimateUse(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Huohuo - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleStartTechniquesNormal",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
+                    //StartBattle for dmg techniques that could have conflicts
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    if (useTechnique && battleData.techniquesAllowed) {
+                        const huohuoTechnique = this.huohuoTechnique ??= logicRef.skillFunctions.huohuoTechnique
+                        huohuoTechnique(battleData,"enemy",ownerTurn)
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Huohuo Technique",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleEntersCombat",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.35,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                },
+                "target": "self",
+                "listenerName": "The Cursed One - CC RES application",
+                "announce": false,
+                "ownerTurn": {},
+            },
+        ],
+        "eidolonListeners": {
+            1: [],
+            2: [],
+            3: [],
+            4: [
+                //presumably the 80% scales from the ally's 100% full as a basis, so if an ally has 20% hp they get the full 80% bonus
+                //but the question is is this a healing final multi on all huohuo healing or is it just outgoing healing
+            ],
+            5: [],
+            6: [
+                {
+                    "trigger": "HealEnd",
+                    condition(battleData,generalInfo) {
+                        // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                        let ownerTurn = this.ownerTurn;
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.properName != ownerTurn.properName) {return;}
+                        // let characterName = ownerTurn.properName;
+    
+                        if (!this.e6DMGBuffSHEET) {
+                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                            this.e6DMGBuffSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.50,
+                                "source": "E6",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffNames.e6DMG,
+                                "durationInTurn": 3,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+                        const buffSheet = this.e6DMGBuffSHEET;
+                        const targetTurn = generalInfo.targetTurn;
+                        battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                    },
+                    "target": "ally",
+                    "listenerName": "Woven Together, Cohere Forever - healed ally listener",
+                    "announce": false,
+                    "ownerTurn": {},
+                },
+            ],
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "talentProvisionIsActive": false,
+            "cleanseCounter": 0
+        },
+        "useTechnique": true,
+        "techniqueType": "Impair",
+        "buffNames": {
+            "talentCountdown": "Divine Provision (Countdown)",
+            "ultATK": "Tail: Spiritual Domination",
+            "techniqueATKDebuff": "Fiend: Impeachment of Evil",
+            "ccRES": "The Cursed One",
+            "e1SPD": "E1: Anchored to Vessel, Specters Nestled",
+            "e6DMG": "E6: Woven Together, Cohere Forever",
+        },
+        "characterValuesBattle": {},
     }
 }
 
@@ -2772,3 +3309,504 @@ const turnLogic = {
             
     //     }
     // },
+
+
+// pullCompositeStats(sourceCache,targetCache,compositeCacheTag,table,enemyTable,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
+//     // realPENKeys,realShredKeys,realVulnKeys
+//     // console.log(tagsPEN,tagsShred,tagsVuln)
+//     const {UpdateStatPEN:UpdateStatPENTarget,UpdateStatDEFShred:UpdateStatDEFShredTarget,UpdateStatVulnerable:UpdateStatVulnerableTarget} = targetCache;
+//     const {UpdateStatPEN,UpdateStatDEFShred,UpdateStatVulnerable} = sourceCache;
+//     // const {UpdateStatPEN:UpdateStatPENTarget,UpdateStatDEFShred:UpdateStatDEFShredTarget,UpdateStatVulnerable:UpdateStatVulnerableTarget} = targetCache;
+
+//     const sourceDepositPEN = UpdateStatPEN[compositeCacheTag] ??= {};
+//     const targetDepositPEN = UpdateStatPENTarget[compositeCacheTag] ??= {};
+//     const hasChangedPEN = !sourceDepositPEN.valueIsCurrentAsAttacker || !targetDepositPEN.valueIsCurrentAsTarget;
+
+//     const sourceDepositShred = UpdateStatDEFShred[compositeCacheTag] ??= {};
+//     const targetDepositShred = UpdateStatDEFShredTarget[compositeCacheTag] ??= {};
+//     const hasChangedShred = !sourceDepositShred.valueIsCurrentAsAttacker || !targetDepositShred.valueIsCurrentAsTarget;
+
+//     const sourceDepositVuln = UpdateStatVulnerable[compositeCacheTag] ??= {};
+//     const targetDepositVuln = UpdateStatVulnerableTarget[compositeCacheTag] ??= {};
+//     const hasChangedVuln = !sourceDepositVuln.valueIsCurrentAsAttacker || !targetDepositVuln.valueIsCurrentAsTarget;
+
+//     const iterateAtAll = hasChangedPEN || hasChangedShred || hasChangedVuln;
+
+//     // realPENKeys,realShredKeys,realVulnKeys
+//     // const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+
+//     if (iterateAtAll) {
+//         let sumPEN = 0;
+//         let sumSHRED = 0;
+//         let sumVULN = 1;
+
+//         const totalTagLength = tagsPEN.length;
+
+//         if (actionTags) {
+//             for (let i=0;i<totalTagLength;i++) {
+//                 const tagPEN = tagsPEN[i];
+//                 const tagShred = tagsShred[i];
+//                 const tagVuln = tagsVuln[i];
+
+//                 if (hasChangedPEN) {sumPEN += table[tagPEN] + attackerStatsONHIT[tagPEN] + targetStatsSourceBased[tagPEN] + targetStatsOnTurn[tagPEN];}
+//                 if (hasChangedShred) {sumSHRED += table[tagShred] + attackerStatsONHIT[tagShred] + targetStatsSourceBased[tagShred] + targetStatsOnTurn[tagShred];}
+//                 if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + attackerStatsONHIT[tagVuln] + targetStatsSourceBased[tagVuln] + targetStatsOnTurn[tagVuln];}
+
+//                 for (let action of actionTags) {
+//                     const actionTableSource = actionTables[action];
+//                     const actionTableTarget = actionTablesTarget[action];
+
+//                     // bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
+//                     if (hasChangedPEN) {sumPEN += (actionTableSource?.[tagPEN] ?? 0) + (actionTableTarget?.[tagPEN] ?? 0);}
+//                     if (hasChangedShred) {sumSHRED += (actionTableSource?.[tagShred] ?? 0) + (actionTableTarget?.[tagShred] ?? 0);}
+//                     if (hasChangedVuln) {sumVULN += (actionTableSource?.[tagVuln] ?? 0) + (actionTableTarget?.[tagVuln] ?? 0);}
+//                 }
+//             }
+//         }
+//         else {
+//             for (let i=0;i<totalTagLength;i++) {
+//                 // bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag];
+//                 const tagPEN = tagsPEN[i];
+//                 const tagShred = tagsShred[i];
+//                 const tagVuln = tagsVuln[i];
+
+//                 if (hasChangedPEN) {sumPEN += table[tagPEN] + attackerStatsONHIT[tagPEN] + targetStatsSourceBased[tagPEN] + targetStatsOnTurn[tagPEN];}
+//                 if (hasChangedShred) {sumSHRED += table[tagShred] + attackerStatsONHIT[tagShred] + targetStatsSourceBased[tagShred] + targetStatsOnTurn[tagShred];}
+//                 if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + attackerStatsONHIT[tagVuln] + targetStatsSourceBased[tagVuln] + targetStatsOnTurn[tagVuln];}
+//             }
+//         }
+
+//         if (hasChangedPEN) {
+//             sourceDepositPEN.valueIsCurrentAsAttacker = true;
+//             targetDepositPEN.valueIsCurrentAsTarget = true;
+//             sourceDepositPEN.cacheValue = sumPEN;
+//         }
+//         if (hasChangedShred) {
+//             sourceDepositShred.valueIsCurrentAsAttacker = true;
+//             targetDepositShred.valueIsCurrentAsTarget = true;
+//             sourceDepositShred.cacheValue = sumSHRED;
+//         }
+//         if (hasChangedVuln) {
+//             sourceDepositVuln.valueIsCurrentAsAttacker = true;
+//             targetDepositVuln.valueIsCurrentAsTarget = true;
+//             sourceDepositVuln.cacheValue = sumVULN;
+//         }
+//     }
+
+//     return {sumPEN:sourceDepositPEN.cacheValue,sumSHRED:sourceDepositShred.cacheValue,sumVULN:sourceDepositVuln.cacheValue}
+// },
+
+
+
+
+
+
+// pullDamageReduction(sourceCache,targetCache,compositeCacheTag,table,targetStats,tableONHIT,targetStatsSourceBased,targetStatsOnTurn,actionTables,actionTags,actionTablesTarget) {
+//     // console.log(targetStatsSourceBased)
+//     const sourceDeposit = sourceCache.UpdateStatDamageReduction[compositeCacheTag] ??= {};
+//     const targetDeposit = targetCache.UpdateStatDamageReduction[compositeCacheTag] ??= {};
+//     const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+//     // const hasChanged = !targetDeposit.valueIsCurrentAsTarget;
+
+//     const standardDRIndex = DamageReductionStandard;
+
+//     if (hasChanged) {
+//         let bonus = 0;
+//         sourceDeposit.valueIsCurrentAsAttacker = true;
+//         targetDeposit.valueIsCurrentAsTarget = true;//targetStats
+
+        
+//         if (actionTags) {
+//             bonus += targetStats[standardDRIndex] + tableONHIT[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
+
+//             for (let action of actionTags) {
+//                 bonus += (actionTables[action]?.[standardDRIndex] ?? 0) + (actionTablesTarget[action]?.[standardDRIndex] ?? 0);
+//             }
+//         }
+//         else {
+
+//             bonus += targetStats[standardDRIndex] + tableONHIT[standardDRIndex] + targetStatsSourceBased[standardDRIndex];
+
+//         }
+
+//         targetDeposit.cacheValue = bonus;
+//     }
+
+//     return Math.max(0.01,1 - targetDeposit.cacheValue);
+
+//     // greatTableIndex
+//     // return bonus;
+// },
+
+
+
+// pullCritRateSUM(table,targetStats,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,actionTables,actionTags,actionTablesTarget) {
+//     // table,attackerStatsONHIT,targetStatsSourceBased,tags
+//     let bonus = 0;
+
+//     bonus += table[CritRateBase] + attackerStatsONHIT[CritRateBase] + targetStatsSourceBased[CritRateBase] + targetStatsTeamBased[CritRateBase];
+//     // console.log(actionTags,hasTagTables)
+//     if (actionTags) {
+//         for (let action of actionTags) {
+//             const currentTable = actionTables[action];
+//             const currentTableTarget = actionTablesTarget[action];
+//             // console.log(currentTable.CritRateBase)
+//             bonus += (currentTable ? currentTable[CritRateBase] : 0) + (currentTableTarget ? currentTableTarget[CritRateBase] : 0);
+//         }
+//     }
+    
+//     return Math.min(1,bonus);//sourceTurn.tagSpecific
+// },
+// pullCritDamageSUM(table,targetStats,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,actionTables,actionTags,actionTablesTarget) {
+//     // table,attackerStatsONHIT,targetStatsSourceBased,tags
+//     let bonus = 0;
+
+//     bonus += table[CritDamageBase] + attackerStatsONHIT[CritDamageBase] + targetStatsSourceBased[CritDamageBase] + targetStatsTeamBased[CritDamageBase] + targetStatsOnTurn[CritDamageBase];
+//     // console.log(actionTags,hasTagTables)
+//     if (actionTags) {
+//         for (let action of actionTags) {
+//             const currentTable = actionTables[action];
+//             const currentTableTarget = actionTablesTarget[action];
+//             // console.log(currentTable.CritDamageBase)
+//             bonus += (currentTable ? currentTable[CritDamageBase] : 0) + (currentTableTarget ? currentTableTarget[CritDamageBase] : 0);
+//         }
+//     }
+//     // console.log(bonus)
+//     return bonus;//sourceTurn.tagSpecific
+// },
+// pullCritStats(table,targetStats,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,actionTables,actionTags,actionTablesTarget) {
+//     // table,attackerStatsONHIT,targetStatsSourceBased,tags
+//     // let bonus = 0;
+//     let totalCritRate = 0;
+//     let totalCritDMG = 0;
+
+//     totalCritDMG += table[CritDamageBase] + attackerStatsONHIT[CritDamageBase] + targetStatsSourceBased[CritDamageBase] + targetStatsTeamBased[CritDamageBase] + targetStatsOnTurn[CritDamageBase];
+//     totalCritRate += table[CritRateBase] + attackerStatsONHIT[CritRateBase] + targetStatsSourceBased[CritRateBase] + targetStatsTeamBased[CritRateBase];
+//     // console.log(actionTags,hasTagTables)
+//     if (actionTags) {
+//         for (let action of actionTags) {
+//             const currentTable = actionTables[action];
+//             const currentTableTarget = actionTablesTarget[action];
+//             // console.log(currentTable.CritDamageBase)
+//             totalCritDMG += (currentTable ? currentTable[CritDamageBase] : 0) + (currentTableTarget ? currentTableTarget[CritDamageBase] : 0);
+//             totalCritRate += (currentTable ? currentTable[CritRateBase] : 0) + (currentTableTarget ? currentTableTarget[CritRateBase] : 0);
+//         }
+//     }
+//     totalCritRate = Math.min(1,totalCritRate);
+//     // console.log(bonus)
+//     return {totalCritDMG,totalCritRate};//sourceTurn.tagSpecific
+// },
+
+
+
+// pullPENBonus(sourceCache,targetCache,compositeCacheTag,table,tableONHIT,targetStatsSourceBased,targetStatsOnTurn,tags) {
+//     const sourceDeposit = sourceCache.UpdateStatPEN[compositeCacheTag] ??= {};
+//     const targetDeposit = targetCache.UpdateStatPEN[compositeCacheTag] ??= {};
+//     const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+
+    
+//     if (hasChanged) {
+//         let bonus = 0;
+//         sourceDeposit.valueIsCurrentAsAttacker = true;
+//         targetDeposit.valueIsCurrentAsTarget = true;
+
+//         for (let tag of tags) {bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag];}
+//         sourceDeposit.cacheValue = bonus;
+//     }
+
+//     return sourceDeposit.cacheValue;
+//     // return bonus;
+// },
+//                 // table,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,tags,actionTables,actionTags,actionTablesTarget
+// pullDEFShredBonusOLD(table,tableONHIT,targetStatsSourceBased,tags) {
+//     let bonus = 0;
+//     for (let tag of tags) {bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag]}
+//     return bonus;
+// },
+// pullDEFShredBonus(sourceCache,targetCache,compositeCacheTag,table,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,tags,actionTables,actionTags,actionTablesTarget) {
+//     // table,attackerStatsONHIT,targetStatsSourceBased,tags
+    
+//     const sourceDeposit = sourceCache.UpdateStatDEFShred[compositeCacheTag] ??= {};
+//     const targetDeposit = targetCache.UpdateStatDEFShred[compositeCacheTag] ??= {};
+//     const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+
+    
+//     if (hasChanged) {
+//         let bonus = 0;
+
+//         sourceDeposit.valueIsCurrentAsAttacker = true;
+//         targetDeposit.valueIsCurrentAsTarget = true;
+
+//         if (actionTags) {
+//             for (let tag of tags) {
+//                 bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag]; 
+
+//                 for (let action of actionTags) {
+//                     bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
+//                 }
+//             }
+//         }
+//         else {
+//             for (let tag of tags) {
+//                 bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag];
+//             }
+//         }
+
+//         sourceDeposit.cacheValue = bonus;
+//     }
+
+//     // if (actionTags) {
+//     //     for (let tag of tags) {
+//     //         bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag]; 
+//     //         for (let action of actionTags) {
+//     //             bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
+//     //         }
+//     //     }
+//     // }
+//     // else {
+//     //     for (let tag of tags) {
+//     //         bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag];
+//     //     }
+//     // }
+
+//     // return bonus;
+//     return sourceDeposit.cacheValue;//sourceTurn.tagSpecific
+// },
+// // pullVULNBonusOLD(table,attackerStatsONHIT,targetStatsSourceBased,tags) {
+// //     let bonus = 0;
+// //     for (let tag of tags) {bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag]}
+// //     return bonus;
+// // },
+// pullVULNBonus(sourceCache,targetCache,compositeCacheTag,table,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,targetStatsOnTurn,tags,actionTables,actionTags,actionTablesTarget) {
+//     // table,attackerStatsONHIT,targetStatsSourceBased,tags
+//     const sourceDeposit = sourceCache.UpdateStatVulnerable[compositeCacheTag] ??= {};
+//     const targetDeposit = targetCache.UpdateStatVulnerable[compositeCacheTag] ??= {};
+//     const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+
+    
+//     if (hasChanged) {
+//         let bonus = 0;
+//         sourceDeposit.valueIsCurrentAsAttacker = true;
+//         targetDeposit.valueIsCurrentAsTarget = true;
+//         if (actionTags) {
+//             // for (let action of actionTags) {
+//             //     const currentTable = actionTables[action];
+//             // }
+//             for (let tag of tags) {
+//                 bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag]; 
+//                 for (let action of actionTags) {
+//                     const actionRef = actionTables[action];
+//                     const actionRefTarget = actionTablesTarget[action];
+//                     bonus += (actionRef ? actionRef[tag] : 0) + (actionRefTarget ? actionRefTarget[tag] : 0);
+//                 }
+//             }
+//         }
+//         else {
+//             for (let tag of tags) {
+//                 bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag] + targetStatsOnTurn[tag];
+//             }
+//         }
+//         sourceDeposit.cacheValue = bonus;
+//     }
+    
+//     return sourceDeposit.cacheValue;
+//     // return bonus;//sourceTurn.tagSpecific
+// },
+
+
+
+// healedOLD(battleData,targetTurn,sourceTurn,hitType,percent,flat,scalar,skillSlot,targetsHealedThisTurn) {
+//     let targetStats = targetTurn.statTable;
+//     let sourceStats = sourceTurn.statTable;
+
+//     poke("HealStart",battleData,{source:sourceTurn.name,target:targetTurn.name});
+//     let sourceMulti = 1 + sourceStats.HealingOutgoing + targetStats.HealingIncoming;
+//     // let targetMulti = 1 + targetStats.HealingIncoming;
+//     let composite = sourceMulti;// * targetMulti;
+
+//     let scalarSUM = scalar ? pullScalar(sourceStats,scalar) : 0;
+
+//     let percentHealed = percent * composite * scalarSUM;
+//     let flatHealed = flat * composite;
+//     let totalHealed = percentHealed + flatHealed;
+
+//     let targetMax = targetTurn.maxHP;
+//     let proposedHealing = targetTurn.currentHP + totalHealed
+//     targetTurn.currentHP = Math.min(targetMax,proposedHealing);
+
+//     let overHeal = proposedHealing > targetMax ? proposedHealing - targetMax : 0;
+//     let actualHeal = totalHealed - overHeal;
+
+//     let logger = battleData.isLoggyLogger;
+//     let hitData = {
+//         scalar,percent,flat,
+//         totalHealed,actualHeal,overHeal,
+//         sourceData: logger ? JSON.stringify(sourceTurn) : null,
+//         targetData: logger ? JSON.stringify(targetTurn) : null,
+//         AV:battleData.sumAV
+//     }
+//     if (!targetsHealedThisTurn[targetTurn.name]) {targetsHealedThisTurn[targetTurn.name] = 0}
+//     targetsHealedThisTurn[targetTurn.name] += 1;
+//     let hitDisplay = {
+//         "primary": "Single Target",
+//         "blast": "Blast",
+//         "all": "AoE"
+//     }
+//     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "HealAlly", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData});}
+    
+//     poke("HealEnd",battleData,{source:sourceTurn.name,target:targetTurn.name});
+//     return {totalHealed,actualHeal,overHeal}
+// },
+
+
+
+// healAllyWrapper(battleData,targetTurn,sourceTurn,ATKObject,skillSlo) {
+//     //idk if there are any "when healing allies, increase the healing amount by x" benefits but if there are then we'd need this poke trigger
+//     //revise later if worthless
+//     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "HealAllyStart"});}
+//     poke("HealAllyStart",battleData,{sourceTurn,targetTurn});
+//     // poke("HealAllyStart",battleData,{source:sourceTurn.name,target:targetTurn.name});
+
+//     let multis = ATKObject.multipliers;
+//     let flats = ATKObject.flatAmounts;
+
+//     let totalHeal = 0;
+//     let overHeal = 0;
+//     let targetsHealedThisTurn = {};
+//     let targetsHealed = 0;
+
+//     //target for the heal doesn't HAVE to be specified, but it needs to be if it is actually a targeted, non-all type heal.
+//     let namedTurned = battleData.nameBasedTurns;
+
+//     if (multis.primary || flats.primary) {
+//         let hitType = "primary";
+//         let percent = multis[hitType] ? multis[hitType] : 0;
+//         let flat = flats[hitType] ? flats[hitType] : 0;
+
+//         let heal = battleActions.healed(battleData,targetTurn,sourceTurn,hitType,percent,flat,ATKObject.scalar,skillSlot,targetsHealedThisTurn);
+//         totalHeal += heal.totalHealed;
+//         overHeal += heal.overHeal;
+//         targetsHealed++;
+//     }
+//     if (multis.blast || flats.blast) {
+//         let targetSlot = targetTurn.slotNumber;
+//         let blast1Slot = `char${targetSlot - 1}`;
+//         let blast2Slot = `char${targetSlot + 1}`;
+//         let blastTargets = [];
+        
+//         let hitType = "blast";
+//         let percent = multis[hitType] ? multis[hitType] : 0;
+//         let flat = flats[hitType] ? flats[hitType] : 0;
+
+//         if (blast1Slot != "char0" && !namedTurned[blast1Slot].isDead) {blastTargets.push(namedTurned[blast1Slot])}
+//         if (blast2Slot != "char5" && !namedTurned[blast2Slot].isDead) {blastTargets.push(namedTurned[blast2Slot])}
+//         //TODO: dynamic handling for summons that can be healed and are between characters
+//         //iirc a summon will always be to the RIGHT of a character, so char1 summon is char1.5 never char0
+
+//         for (let blastTarget of blastTargets) {
+//             let heal = battleActions.healed(battleData,blastTarget,sourceTurn,hitType,percent,flat,ATKObject.scalar,skillSlot,targetsHealedThisTurn);
+//             // return {totalHealed,actualHeal,overHeal,targetsHealedThisTurn}
+//             totalHeal += heal.totalHealed;
+//             overHeal += heal.overHeal;
+//             targetsHealed++;
+//         }
+//     }
+//     if (multis.all || flats.all) {
+//         let hitType = "all";
+//         let percent = multis[hitType] ? multis[hitType] : 0;
+//         let flat = flats[hitType] ? flats[hitType] : 0;
+
+//         for (let allySlot in namedTurned) {
+//             let currentAlly = namedTurned[allySlot];
+
+//             let heal = battleActions.healed(battleData,currentAlly,sourceTurn,hitType,percent,flat,ATKObject.scalar,skillSlot,targetsHealedThisTurn);
+//             totalHeal += heal.totalHealed;
+//             overHeal += heal.overHeal;
+//             targetsHealed++;
+//         }
+//     }
+//     // let ATKObject = {
+//     //     multipliers: {
+//     //         primary: null,
+//     //         blast: null,
+//     //         all: null,
+//     //     },
+//     //     flatAmounts: {
+//     //         primary: values[0],
+//     //         blast: null,
+//     //         all: null,
+//     //     },
+//     //     scalar: null,
+//     //     DMGTags: []
+//     // }
+//     battleData.battleHealingSUM += totalHeal;
+
+//     let sourceName = sourceTurn.properName;
+//     let totalsRef = battleData.battleTotal;
+//     let sumSlotRef = totalsRef.Healing[sourceName] ??= {};
+//     sumSlotRef[skillSlot] = (sumSlotRef[skillSlot] ?? 0) + totalHeal;
+//     let sumSlotRef2 = totalsRef.Actions[sourceName] ??= {};
+//     sumSlotRef2[skillSlot] = (sumSlotRef2[skillSlot] ?? 0) + 1;
+//     let sumSlotRef3 = totalsRef.OverHeal[sourceName] ??= {};
+//     sumSlotRef3[skillSlot] = (sumSlotRef3[skillSlot] ?? 0) + overHeal;
+
+//     poke("HealAllyEnd",battleData,{sourceTurn,targetTurn});
+//     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "HealAllyEnd", targetsHealed, totalHeal});}
+//     return {targetsHealedThisTurn}
+// },
+
+
+
+// pullSuperBreakDMGMultiOLD(targetStats,targetStatsONHIT,targetStatsSourceBased) {
+//     return (1 + targetStats[DamageBreak] + targetStatsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak]) 
+//     * (1 + targetStats[DamageBreakBonus] + targetStatsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus])
+//     * (1 + targetStats[DamageBreakSuper] + targetStatsONHIT[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper]);
+//     // - targetStats.DamageBreakNULL - targetStatsONHIT.DamageBreakNULL - targetStatsSourceBased.DamageBreakNULL) 
+    
+//     //supposedly it is:
+//     //base * abilityMulti * 1+breakEffect * 1+breakDMGIncrease
+//     //*DEFstuff * RESstuff * VULNstuff * brokenMulti
+// },
+
+// pullBreakDMGMultiOLD(targetStats,targetStatsONHIT,targetStatsSourceBased) {
+//     return (1 + targetStats[DamageBreak] + targetStatsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak]) * (1 + targetStats[DamageBreakBonus] + targetStatsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus]);
+//     // - targetStats.DamageBreakNULL - targetStatsONHIT.DamageBreakNULL - targetStatsSourceBased.DamageBreakNULL) 
+    
+//     //supposedly it is:
+//     //base * abilityMulti * 1+breakEffect * 1+breakDMGIncrease
+//     //*DEFstuff * RESstuff * VULNstuff * brokenMulti
+// },
+
+
+// findLowestHPAlly(battleData) {
+//     let allyToReturn = battleData.nameBasedTurns.char1;
+//     let allyRatio = allyToReturn.currentHP / allyToReturn.maxHP;
+//     for (let targetTurn of battleData.allyPositions) {
+//         if (targetTurn.name === "char1" || targetTurn.cantBeTargeted) {continue;}//we start with char1 anyways, skip
+//         //canBeHealed is for say summons that might exist but aren't targetable
+
+//         let currentPercent = targetTurn.currentHP / targetTurn.maxHP;
+//         if (currentPercent === 1) {continue;}
+
+//         let isLowerPercent = currentPercent < allyRatio;
+//         let hasMoreHPMax = targetTurn.maxHP > allyToReturn.maxHP;
+//         //if the ally we're comparing has lower %max hp, then return this ally
+//         //but if the %HP is the same, and this ally has more max HP, then return this ally even still.
+//         if (isLowerPercent || (currentPercent === allyRatio && hasMoreHPMax)) {
+//             allyToReturn = targetTurn;
+//             allyRatio = currentPercent;
+//         }
+//     }
+
+//     if (allyRatio === 1) {return null}
+//     else {
+//         return allyToReturn;
+//     }
+// },
+
+
+
+// energyLookAhead(thisTurn,potentialAmount) {
+//     if (thisTurn.maxEnergy === thisTurn.currentEnergy) {return false}
+//     return (thisTurn.maxEnergy - thisTurn.currentEnergy) <= (potentialAmount * (1 + thisTurn.statTable.EnergyRegenRate));
+// },
