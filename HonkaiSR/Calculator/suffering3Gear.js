@@ -8323,7 +8323,7 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "TargetAlly",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -8331,15 +8331,15 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}//then abort non-owners
 
-                    const updateFortune = this.shortRef ??= turnLogicLightcones["When She Decided to See"].skillFunctions.updateFortune;
-                    const namedTurns = battleData.nameBasedTurns;
-                    for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
-                        let ownerRank = ownersSlots[charSlot];
-                        let currentTurn = namedTurns[charSlot];
+                    // let targetTurn = generalInfo.targetTurn;
+                    const skillType = generalInfo.targetSkill;
+                    const skillCheck = skillType === "Ultimate";
+                    // const targetType = generalInfo.targetType;
+                    // if (!targetTurn || !skillCheck || targetType != "Single") {return;}
+                    if (!skillCheck) {return;}
 
-                        updateFortune(battleData,currentTurn,ownerRank);
-                    }
+                    const updateFortune = this.shortRef ??= turnLogicLightcones["When She Decided to See"].skillFunctions.updateFortune;
+                    updateFortune(battleData,sourceTurn,ownerRank);
                 },
                 "target": "self",
                 "listenerName": "When She Decided to See - ult use Great Fortune application",
