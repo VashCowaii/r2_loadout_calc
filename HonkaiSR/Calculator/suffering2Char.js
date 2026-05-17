@@ -1853,7 +1853,7 @@ const battleActions = {
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
-        const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+        const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
         if (energyGain && !ignoreEnergy) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
         
 
@@ -2215,7 +2215,7 @@ const battleActions = {
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag});
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         let atkEntryRef = atkEntry[hitType];
-        const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+        const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
         if (energyGain && !ignoreEnergy) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
 
         let currentSplit = atkEntryRef.hitRatio / (isDistributed ? distributedTargetCount : 1);//the hit split of the current attack
@@ -2230,7 +2230,8 @@ const battleActions = {
         if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
 
 
-        const punchline = battleData.punchlineForced || battleData.punchline;
+        const useCB = ATKObject.useCertifiedBanger;
+        const punchline = useCB ? sourceTurn.certifiedBanger : (battleData.punchlineForced || battleData.punchline);
         const banger = null;
         const elationValueToUse = punchline;
         const punchlineMulti = 1 + ((elationValueToUse*5)/(elationValueToUse+240));
@@ -35749,8 +35750,8 @@ const turnLogic = {
                             hitSplit: {
                                 "primary": {//160 -> 135
                                     "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 1
+                                    // "energyRatio": 1,
+                                    "toughness": 5
                                 },
                                 "blast": null,
                                 "all": null,
