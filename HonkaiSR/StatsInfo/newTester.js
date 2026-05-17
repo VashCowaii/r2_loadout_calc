@@ -874,17 +874,23 @@ const megaParsingFuckery = {
                         </div>
                         <div class="statsBoxResultingText" id="plightDEF" style="color: lightcoral;">NOTE: If you're trying compare PLIGHT enemies, use LVL 100, even if they're 120.</div>
 
-                        <div class="statisticSettingsRow">
-                            <div class="statsRowName">SUM SHRED %:&nbsp;<span id="allyPENSliderValue">60%</span></div>
-                            <div class="statsRowToggle">
-                                <input type="range" id="allyPENSlider" name="slider" min="0" max="100" value="60" step="10" list="tickmarks" onchange="megaParsingFuckery.updateDEFPage()">
+
+                        <div class="imageRowStatisticBox1">
+                            <div class="imageRowStatisticImageBox"></div>
+                            <div class="imageRowStatisticNameBox">SUM SHRED %:</div>
+                            <div class="imageRowStatisticStatBox">
+                                <div class="presetsSelectorBox">
+                                    <input type="number" class="tagInput" id="allyPENSlider" value="60" onchange="megaParsingFuckery.updateDEFPage()">%
+                                </div>
                             </div>
                         </div>
-
-                        <div class="statisticSettingsRow">
-                            <div class="statsRowName">COMPARE SHRED %:&nbsp;<span id="allyPENSliderValue2">70%</span></div>
-                            <div class="statsRowToggle">
-                                <input type="range" id="allyPENSlider2" name="slider" min="0" max="100" value="70" step="10" list="tickmarks" onchange="megaParsingFuckery.updateDEFPage()">
+                        <div class="imageRowStatisticBox1">
+                            <div class="imageRowStatisticImageBox"></div>
+                            <div class="imageRowStatisticNameBox">COMPARE SHRED %:</div>
+                            <div class="imageRowStatisticStatBox">
+                                <div class="presetsSelectorBox">
+                                    <input type="number" class="tagInput" id="allyPENSlider2" value="70" onchange="megaParsingFuckery.updateDEFPage()">%
+                                </div>
                             </div>
                         </div>
 
@@ -952,6 +958,12 @@ const megaParsingFuckery = {
         const RESValue = +readSelection("enemyRESSlider").value
         const enemyDEFBase = RESValue * 10 + 200;//RESValue being enemy level
 
+        const PENValuePre = +readSelection("allyPENSlider").value;
+        const PENValue2Pre = +readSelection("allyPENSlider2").value;
+
+        readSelection("allyPENSlider").value = Math.min(100, Math.max(0, PENValuePre));
+        readSelection("allyPENSlider2").value = Math.min(100, Math.max(0, PENValue2Pre));
+
         const PENValue = +readSelection("allyPENSlider").value;
         const PENValue2 = +readSelection("allyPENSlider2").value;
 
@@ -960,8 +972,8 @@ const megaParsingFuckery = {
         // const isCompare = readSelection("use2ndValueCompare").checked;
 
         readSelection("enemyRESSliderValue").innerHTML = `(${enemyDEFBase.toLocaleString()} DEF)`;
-        readSelection("allyPENSliderValue").innerHTML = PENValue + "%";
-        readSelection("allyPENSliderValue2").innerHTML = PENValue2 + "%";
+        // readSelection("allyPENSliderValue").innerHTML = PENValue + "%";
+        // readSelection("allyPENSliderValue2").innerHTML = PENValue2 + "%";
 
         
         const attackerDiffDEF = 80 * 10 + 200;//80 being the player's level here
@@ -1058,17 +1070,23 @@ const megaParsingFuckery = {
                             </div>
                         </div>
 
-                        <div class="statisticSettingsRow">
-                            <div class="statsRowName">SUM PEN %:&nbsp;<span id="allyPENSliderValue">0%</span></div>
-                            <div class="statsRowToggle">
-                                <input type="range" id="allyPENSlider" name="slider" min="0" max="190" value="0" step="10" list="tickmarks" onchange="megaParsingFuckery.updateRESPage()">
+                        <div class="imageRowStatisticBox1">
+                            <div class="imageRowStatisticImageBox"></div>
+                            <div class="imageRowStatisticNameBox">SUM PEN %:</div>
+                            <div class="imageRowStatisticStatBox">
+                                <div class="presetsSelectorBox">
+                                    <input type="number" class="tagInput" id="allyPENSlider" value="0" onchange="megaParsingFuckery.updateRESPage()">%
+                                </div>
                             </div>
                         </div>
 
-                        <div class="statisticSettingsRow">
-                            <div class="statsRowName">COMPARE PEN %:&nbsp;<span id="allyPENSliderValue2">20%</span></div>
-                            <div class="statsRowToggle">
-                                <input type="range" id="allyPENSlider2" name="slider" min="0" max="190" value="20" step="10" list="tickmarks" onchange="megaParsingFuckery.updateRESPage()">
+                        <div class="imageRowStatisticBox1">
+                            <div class="imageRowStatisticImageBox"></div>
+                            <div class="imageRowStatisticNameBox">COMPARE PEN %:</div>
+                            <div class="imageRowStatisticStatBox">
+                                <div class="presetsSelectorBox">
+                                    <input type="number" class="tagInput" id="allyPENSlider2" value="20" onchange="megaParsingFuckery.updateRESPage()">%
+                                </div>
                             </div>
                         </div>
 
@@ -1127,14 +1145,22 @@ const megaParsingFuckery = {
         currentPage = "Resistance (RES)";
         megaParsingFuckery.updateCurrentPage()
         const RESValue = +readSelection("enemyRESSlider").value;
+
+        const PENValuePre = +readSelection("allyPENSlider").value;
+        const PENValue2Pre = +readSelection("allyPENSlider2").value;
+
+        readSelection("allyPENSlider").value = Math.min(190, Math.max(0, PENValuePre));
+        readSelection("allyPENSlider2").value = Math.min(190, Math.max(0, PENValue2Pre));
+
+
         const PENValue = +readSelection("allyPENSlider").value;
         const PENValue2 = +readSelection("allyPENSlider2").value;
 
         // const isCompare = readSelection("use2ndValueCompare").checked;
 
         readSelection("enemyRESSliderValue").innerHTML = RESValue + "%";
-        readSelection("allyPENSliderValue").innerHTML = PENValue + "%";
-        readSelection("allyPENSliderValue2").innerHTML = PENValue2 + "%";
+        // readSelection("allyPENSliderValue").innerHTML = PENValue + "%";
+        // readSelection("allyPENSliderValue2").innerHTML = PENValue2 + "%";
 
         const preValue = 1 - (RESValue/100);
         const finalMulti = Math.max(0.1, Math.min(2, 1 - ((RESValue/100) - (PENValue/100))));
@@ -1212,37 +1238,42 @@ const megaParsingFuckery = {
                 <div class="cyclesSettingsHeader">Stat Comparison</div>
 
 
-                        <div class="statisticSettingsRow">
-                            <div class="statsRowName">SUM VULN %:&nbsp;<span id="allyPENSliderValue">0%</span></div>
-                            <div class="statsRowToggle">
-                                <input type="range" id="allyPENSlider" name="slider" min="0" max="250" value="20" step="10" list="tickmarks" onchange="megaParsingFuckery.updateVULNPage()">
+                    <div class="imageRowStatisticBox1">
+                        <div class="imageRowStatisticImageBox"></div>
+                        <div class="imageRowStatisticNameBox">SUM VULN %:</div>
+                        <div class="imageRowStatisticStatBox">
+                            <div class="presetsSelectorBox">
+                                <input type="number" class="tagInput" id="allyPENSlider" value="20" onchange="megaParsingFuckery.updateVULNPage()">%
                             </div>
                         </div>
-
-                        <div class="statisticSettingsRow">
-                            <div class="statsRowName">COMPARE VULN %:&nbsp;<span id="allyPENSliderValue2">20%</span></div>
-                            <div class="statsRowToggle">
-                                <input type="range" id="allyPENSlider2" name="slider" min="0" max="250" value="40" step="10" list="tickmarks" onchange="megaParsingFuckery.updateVULNPage()">
+                    </div>
+                    <div class="imageRowStatisticBox1">
+                        <div class="imageRowStatisticImageBox"></div>
+                        <div class="imageRowStatisticNameBox">COMPARE VULN %:</div>
+                        <div class="imageRowStatisticStatBox">
+                            <div class="presetsSelectorBox">
+                                <input type="number" class="tagInput" id="allyPENSlider2" value="40" onchange="megaParsingFuckery.updateVULNPage()">%
                             </div>
                         </div>
+                    </div>
 
 
-                        <div class="totalHealingBoxBreakdownRows" style="background-color: #ffffff1A">
-                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                                <div class="totalHealingHeader">Final Multi #1</div>
-                                <div class="totalHealingValueBoss" id="finalMulti">x1</div>
-                            </div>
-                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                                <div class="totalHealingHeader">Final Multi #2</div>
-                                <div class="totalHealingValueBoss" id="finalMulti2">x1</div>
-                            </div>
-                            <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                                <div class="totalHealingHeader">COMPARE Gain</div>
-                                <div class="totalHealingValueBoss" id="gainValue2">689.841</div>
-                            </div>
+                    <div class="totalHealingBoxBreakdownRows" style="background-color: #ffffff1A">
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">Final Multi #1</div>
+                            <div class="totalHealingValueBoss" id="finalMulti">x1</div>
                         </div>
-                        
-                        <div class="statsBoxResultingText" id="resultingText"></div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">Final Multi #2</div>
+                            <div class="totalHealingValueBoss" id="finalMulti2">x1</div>
+                        </div>
+                        <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                            <div class="totalHealingHeader">COMPARE Gain</div>
+                            <div class="totalHealingValueBoss" id="gainValue2">689.841</div>
+                        </div>
+                    </div>
+                    
+                    <div class="statsBoxResultingText" id="resultingText"></div>
                 </div>
             </div>
 
@@ -1297,14 +1328,21 @@ const megaParsingFuckery = {
         currentPage = "Vulnerability";
         megaParsingFuckery.updateCurrentPage()
         // const RESValue = +readSelection("enemyRESSlider").value;
+        const PENValuePre = +readSelection("allyPENSlider").value;
+        const PENValue2Pre = +readSelection("allyPENSlider2").value;
+
+        readSelection("allyPENSlider").value = Math.min(250,Math.max(0,PENValuePre));
+        readSelection("allyPENSlider2").value = Math.min(250,Math.max(0,PENValue2Pre));
+
+
         const PENValue = +readSelection("allyPENSlider").value;
         const PENValue2 = +readSelection("allyPENSlider2").value;
 
         // const isCompare = readSelection("use2ndValueCompare").checked;
 
         // readSelection("enemyRESSliderValue").innerHTML = RESValue + "%";
-        readSelection("allyPENSliderValue").innerHTML = PENValue + "%";
-        readSelection("allyPENSliderValue2").innerHTML = PENValue2 + "%";
+        // readSelection("allyPENSliderValue").innerHTML = PENValue + "%";
+        // readSelection("allyPENSliderValue2").innerHTML = PENValue2 + "%";
 
         // const preValue = 1 - (RESValue/100);
         const finalMulti = Math.max(1, Math.min(3.5, 1 + (PENValue/100)));
