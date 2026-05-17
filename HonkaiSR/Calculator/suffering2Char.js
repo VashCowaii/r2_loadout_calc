@@ -5510,7 +5510,7 @@ const turnLogic = {
 
                 for (let entity of elationEntityArray) {
                     // buffSheet.currentStacks = usablePunchline;
-                    const applicablePunchline = battleData.punchlineForced ?? battleData.punchline;
+                    const applicablePunchline = battleData.punchlineForced || battleData.punchline;
                     cbFunction(battleData,entity,applicablePunchline);
                 }
 
