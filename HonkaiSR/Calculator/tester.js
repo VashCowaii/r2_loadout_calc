@@ -803,7 +803,7 @@ const customMenu = {
             if (cachedShowcaseObject && cachedShowcaseObject.detailInfo?.avatarDetailList) {
                 const currentCharacterID = characters[currentCharacter].internalID;
                 for (let entry of cachedShowcaseObject.detailInfo.avatarDetailList) {
-                    const currentID = entry.avatarId;
+                    const currentID = userTriggers.trailblazeExceptions[entry.avatarId] ?? entry.avatarId;
 
                     if (currentID === currentCharacterID) {
                         showcaseCacheString += `<div class="importCharacterBoxItemShowcase">
@@ -5866,6 +5866,13 @@ const userTriggers = {
         }
         
     },
+    trailblazeExceptions: {
+        8002: 8001,//DMC
+        8004: 8003,//PMC
+        8006: 8005,//HMC
+        8008: 8007,//RMC
+        8010: 8009,//EMC
+    },
     importCharacterData(charSlot,pathReadID,showcaseID) {
         // charALLImport
 
@@ -5963,7 +5970,8 @@ const userTriggers = {
             const showcaseCharacters = cachedShowcaseObject.detailInfo.avatarDetailList;
             let characterToParse = null;
             for (let entry of showcaseCharacters) {
-                if (entry.avatarId === showcaseID) {
+                const testID = userTriggers.trailblazeExceptions[entry.avatarId] ?? entry.avatarId;
+                if (testID === showcaseID) {
                     characterToParse = entry;
                     break
                 }
@@ -7235,7 +7243,10 @@ const importFuckery = {
         // }
 
         //CHARACTER
-        const charID = characterParseObject.avatarId;
+        const charIDPRE = characterParseObject.avatarId;
+        const trailblazeExceptions = userTriggers.trailblazeExceptions;
+        const charID = trailblazeExceptions[charIDPRE] ?? charIDPRE;
+
         const charRank = characterParseObject.rank ?? 0;
         let charNameParse = "";
 
