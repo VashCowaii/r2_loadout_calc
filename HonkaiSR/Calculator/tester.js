@@ -5792,7 +5792,12 @@ const userTriggers = {
                             alert("You can't import a single wave into a battle array slot.\nSomehow you've manage to import a wave file into the all waves slot.\n\nIf you ever see this message and you didn't intentionally brute-force file extensions to cause this, let Vash know in the discord.");
                             return
                         }
-                        for (let i=1;i<=battleSettings.totalWaves;i++) {
+
+                        const restirctWaveLength = Math.max(0, Math.min(5, parsedData.length))
+                        battleSettings.totalWaves = restirctWaveLength;
+                        readSelection("queriesTotalWavesSlider").value = restirctWaveLength;
+
+                        for (let i=1;i<=restirctWaveLength;i++) {
                             const isBeyondImportedLength = i > parsedData.length;
                             if (isBeyondImportedLength) {break;}
 
