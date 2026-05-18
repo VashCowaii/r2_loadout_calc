@@ -849,6 +849,63 @@ const battleActions = {
 
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.name, isExtraTurn: entry.isExtraTurn});}
     },
+    waveStartQueueHandling(battleData) {
+        const ultyQueue = battleData.ultimateQueue;
+        const ultyQueueRestart = battleData.ultimateQueueWAVE;
+        const isLoggy = battleData.isLoggyLogger;
+
+        for (let ult of ultyQueue) {
+            let sourceTurn = ult.sourceTurn;
+            const isExtraTurn = ult.isExtraTurn;
+
+            if (!isExtraTurn) {
+                sourceTurn.ultyQueued = false;
+                if (isLoggy) {logToBattle(battleData,{logType: "GenericAction", source:"Failed Ult", bodyText: `No enemies remaining, ult queue aborted for ${sourceTurn.properName}`});}
+            }
+            else if (!ult.dontKeepNextWave) {
+                ultyQueueRestart.push(ult);
+            }
+        }
+        battleData.ultimateQueue = [...ultyQueueRestart];
+        battleData.ultimateQueueWAVE = [];
+
+
+        const fuaQueue = battleData.followUpQueue;
+        const fuaQueueRestart = battleData.followUpQueueWAVE;
+
+        for (let fua of fuaQueue) {
+            
+
+            if (fua.dontKeepNextWave) {//if we're killing the fUA, we need to check offset handling
+                
+                const needsOffset = fua.needsOffset;
+
+                if (needsOffset) {
+
+                    let sourceTurn = fua.sourceTurn;
+                    const offsetName = fua.offsetName;
+                    const offsetBV = fua.offsetBV;
+                    const offsetBoolean = fua.offsetBoolean;
+                    
+                    const valuePathing = offsetBV ? sourceTurn.battleValues : sourceTurn;
+
+                    if (offsetBoolean) {
+                        valuePathing[offsetName] = !valuePathing[offsetName];
+                    }
+                    else {
+                        const offsetValue = fua.offsetValue;
+                        valuePathing[offsetName] += offsetValue;
+                    }
+                }
+                
+            }
+            else {
+                fuaQueueRestart.push(fua);//otherwise push to the next wave
+            }
+        }
+        battleData.followUpQueue = [...fuaQueueRestart];
+        battleData.followUpQueueWAVE = [];
+    },
     queueExtraTurn(battleData,extraTurnObject,isImmediateAction) {
         battleData.nextTurnAV.push(extraTurnObject);
         if (isImmediateAction) {battleData.extraTurnPriority += 1;}
@@ -31233,6 +31290,7 @@ const turnLogic = {
                         priority: priorityList.turn.CharacterChainedSkill,
                         decrementBuffs: true,
                         extraTurnHasChoice: false,
+                        dontKeepNextWave: true,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
                     }
                     queueObject.sourceTurn = icaTurn;
                     battleActions.queueInstantUltimateUse(battleData,queueObject);

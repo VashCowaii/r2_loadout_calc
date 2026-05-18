@@ -706,6 +706,8 @@ const sim = {
             "battleListeners": {},
             "followUpQueue": [],
             "ultimateQueue": [],
+            "followUpQueueWAVE": [],
+            "ultimateQueueWAVE": [],
             characterObject,
             char1: characterObject.char1.conditions,
             char2: characterObject.char2?.conditions,
@@ -1410,6 +1412,13 @@ const sim = {
             let isLog = battleData.isLoggyLogger;
             
             while (queue.length > 0 && !battleData.battleIsOver) {
+
+                const enemyChecker = battleData.enemyPositions.length;
+                if (!enemyChecker) {
+                    battleActions.waveStartQueueHandling(battleData);
+                    return;
+                }
+
                 let currentFUA = queue.shift();
                 let characterName = currentFUA.properName;
                 let sourceTurn = currentFUA.sourceTurn;
@@ -1503,6 +1512,12 @@ const sim = {
                     }
                     //if we're already in an extra turn, and the next queued ult instance is ALSO an extra turn, then abort the ult queue empty
                 }
+                
+                const enemyChecker = battleData.enemyPositions.length;
+                if (!enemyChecker) {
+                    battleActions.waveStartQueueHandling(battleData);
+                    return;
+                }
 
                 let currentUltimate = queue.shift();
                 let characterName = currentUltimate.properName;
@@ -1525,12 +1540,12 @@ const sim = {
                     // totalAbilitiesQueued: 0,
                     battleData.totalUltsQueued -= 1;
                     
-                    const enemyChecker = battleData.enemyPositions.length;
-                    if (!enemyChecker) {
-                        sourceTurn.ultyQueued = false;
-                        logToBattle(battleData,{logType: "GenericAction", source:"Failed Ult", bodyText: `No enemies remaining, ult queue aborted for ${sourceTurn.properName}`});
-                        continue;
-                    }
+                    // const enemyChecker = battleData.enemyPositions.length;
+                    // if (!enemyChecker) {
+                    //     sourceTurn.ultyQueued = false;
+                    //     logToBattle(battleData,{logType: "GenericAction", source:"Failed Ult", bodyText: `No enemies remaining, ult queue aborted for ${sourceTurn.properName}`});
+                    //     continue;
+                    // }
 
                     if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     poke("UltimateStart",battleData,generalInfo);
