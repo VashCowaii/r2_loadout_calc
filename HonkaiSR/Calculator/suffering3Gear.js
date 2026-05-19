@@ -10587,7 +10587,7 @@ const turnLogicRelics = {
 
                         if (currentActiveMemosprites) {
                             if (buffCheck) {return;}//if the buff already exists, abort
-                            battleActions.updateBuff(battleData,summonAssignedTo,buffSheet);
+                            updateBuff(battleData,summonAssignedTo,buffSheet);
                         }
                         else if (!currentActiveMemosprites && buffCheck) {//only remove the buff if it already existed
                             removeBuff(battleData,summonAssignedTo,buffSheet);
@@ -10637,8 +10637,6 @@ const turnLogicRelics = {
                         }
                         const buffSheet = sourceTurn.heroTriumphantCRITDMGSHEET;
                         
-
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,ownerTurn,buffSheet);//owner
                         updateBuff(battleData,sourceTurn,buffSheet);//memo
 
@@ -10710,7 +10708,6 @@ const turnLogicRelics = {
                     const allyPositions = battleData.allyPositions;
                     const declaredMemosprites = battleData.declaredMemosprites;
 
-                    const updateBuff = battleActions.updateBuff;
                     if (memoTurn.isActive) {
                         const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                         if (buffCheck) {return;}
@@ -10894,7 +10891,6 @@ const turnLogicRelics = {
                         const buffName = buffSheet.buffName;
                         const buffCheck = ownerTurn.buffsObject[buffName];
 
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,ownerTurn,buffSheet);
 
                         //if the owner already had gentle rain before renewing it, that means all allies still have the crit dmg, and we don't need to reapply
@@ -10956,7 +10952,6 @@ const turnLogicRelics = {
                         }
 
                         let buffSheet = sourceTurn.longevousDiscipleCRITSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Longevous Disciple - owner lost hp listener",
@@ -11002,7 +10997,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -11051,7 +11045,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -11075,7 +11068,6 @@ const turnLogicRelics = {
                         const shieldSource = generalInfo.currentReference.sourceOwner;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        // const updateBuff = battleActions.updateBuff;
                         const sourceTurnShields = sourceTurn.activeShields;
                         let shieldOwners = [];
 
@@ -11124,7 +11116,6 @@ const turnLogicRelics = {
                         const shieldSource = generalInfo.sourceTurn.properName;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
 
@@ -11212,7 +11203,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -11378,7 +11368,6 @@ const turnLogicRelics = {
 
                         const namedTurns = battleData.nameBasedTurns;
                         const menuStatsREF = battleData.menuStats;
-                        const updateBuff = battleActions.updateBuff
                         const getFinalSPD = calcs.getSPDFinal;
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
@@ -11490,7 +11479,6 @@ const turnLogicRelics = {
                         let buffSheet1 = this.buffSheet1;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             const memoRef = currentTurn.memospriteEventRef;
@@ -11561,7 +11549,6 @@ const turnLogicRelics = {
                         buffSheet1.currentStacks = stacksToAdd;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             const memoRef = currentTurn.memospriteEventRef;
@@ -11622,7 +11609,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.statTable[CritRateBase] >= 0.7) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
                         removeBuff(battleData,currentTurn,buffSheet);
@@ -11700,7 +11687,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.statTable[CritRateBase] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
                         removeBuff(battleData,currentTurn,buffSheet);
@@ -11785,7 +11772,6 @@ const turnLogicRelics = {
                     let buffName = buffSheet.buffName;
 
                     const buffCheck = currentTurn.buffsObject[buffName];
-                    const applyBuff = battleActions.updateBuff;
                     const allyPositions = battleData.allyPositions;
                     const declaredMemosprites = battleData.declaredMemosprites;
                     if (currentTurn.statTable[EffectRES] >= 0.3) {//if the target has enough, then we can apply it
@@ -11793,10 +11779,10 @@ const turnLogicRelics = {
 
                         
                         for (let targetTurn of allyPositions) {
-                            applyBuff(battleData,targetTurn,buffSheet);
+                            updateBuff(battleData,targetTurn,buffSheet);
                         }
                         for (let targetTurn of declaredMemosprites) {
-                            applyBuff(battleData,targetTurn,buffSheet);
+                            updateBuff(battleData,targetTurn,buffSheet);
                         }
                     }
                     else if (buffCheck) {//but if they don't have enough, but have the buff, then remove it
@@ -11893,7 +11879,7 @@ const turnLogicRelics = {
                         buffSheet = this.buffSheet;
                         buffSheet.currentStacks = timesToApply;
                         buffSheet.sourceOwner = firstTurn.properName;
-                        battleActions.updateBuff(battleData,firstTurn,buffSheet);
+                        updateBuff(battleData,firstTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Lushaka, the Sunken Seas battle start stat check trigger",
@@ -11938,7 +11924,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = this.buffSheet
 
-                        const updateBuff = battleActions.updateBuff;
                         // const allyPositions = battleData.allyPositions;
                         const namedTurns = battleData.nameBasedTurns;
                         const allyArray = battleData.allAlliesArray;//TODO: verify this can apply to memos, it looks like it should, but idk about demiurge
@@ -12045,7 +12030,7 @@ const turnLogicRelics = {
                     
                         let buffSheet = sourceTurn.forgeKalpagniBREAKSHEET;
 
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Kalpagni weakness check",
@@ -12087,7 +12072,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.statTable[EffectHitRate] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
 
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
@@ -12167,7 +12152,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.SPD >= 145) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
 
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
@@ -12247,7 +12232,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.SPD >= 120) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
 
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
@@ -12421,7 +12406,6 @@ const turnLogicRelics = {
                             "expireType": null
                         }
 
-                        const updateBuff = battleActions.updateBuff;
                         const allyPositions = battleData.allyPositions;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let owner of ownerRef) {
@@ -12486,7 +12470,6 @@ const turnLogicRelics = {
 
                     const HP = calcs.getHPFinal(currentTurn.statTable).HPFinal;
 
-                    const updateBuff = battleActions.updateBuff;
                     if (HP >= 5000) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
                         updateBuff(battleData,currentTurn,buffSheet);
@@ -12589,7 +12572,7 @@ const turnLogicRelics = {
 
                     buffSheet[ATKP] = conversion;
                     
-                    battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                    updateBuff(battleData,currentTurn,buffSheet);
                 },
             },
             "listeners": [
@@ -12663,7 +12646,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff;
                         const menuStats = battleData.menuStats;
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
@@ -12793,7 +12775,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = sourceTurn.duranDynastyMERITSHEET;
                         
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,sourceTurn,buffSheet);
                         const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
 
@@ -12874,8 +12855,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = this.sigoniaDesolationCRITDMGSHEET;
                         
-
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let charSlot in ownersSlots) {
                             let currentTurn = namedTurns[charSlot];
@@ -12949,7 +12928,6 @@ const turnLogicRelics = {
                     let buffSheet2 = currentTurn.firmamentGlamothDMG2SHEET;
                     const buffName2 = buffSheet2.buffName;
                     const buffsObject = currentTurn.buffsObject;
-                    const updateBuff = battleActions.updateBuff;
                     const buffCheck2 = buffsObject[buffName2];
                     if (currentTurn.SPD >= 160) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
@@ -13066,7 +13044,6 @@ const turnLogicRelics = {
                     const buffCheck2 = buffsObject[buffName2];
                     const memoRef = currentTurn.memospriteEventRef;
                     const SPDFinal = calcs.getSPDFinal(currentTurn.statTable).SPDFinal;
-                    const updateBuff = battleActions.updateBuff;
 
                     if (SPDFinal >= 180) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
@@ -13187,7 +13164,6 @@ const turnLogicRelics = {
                     const buffsObject = currentTurn.buffsObject;
                     const buffCheck2 = buffsObject[buffName2];
                     const atkFinal = calcs.getATKFinal(currentTurn.statTable).ATKFinal;
-                    const updateBuff = battleActions.updateBuff;
                     if (atkFinal >= 3600) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
                             updateBuff(battleData,currentTurn,buffSheet2);
@@ -13300,7 +13276,7 @@ const turnLogicRelics = {
                         const addedOrRemoved = generalInfo.summonWas;
                         if (addedOrRemoved === "Apply") {
                             if (buffCheck) {return;}//if the buff already exists, abort
-                            battleActions.updateBuff(battleData,summonAssignedTo,buffSheet);
+                            updateBuff(battleData,summonAssignedTo,buffSheet);
                         }
                         else if (addedOrRemoved === "Remove" && buffCheck) {//only remove the buff if it already existed
                             removeBuff(battleData,summonAssignedTo,buffSheet);
@@ -13379,7 +13355,6 @@ const turnLogicRelics = {
                         buffSheet2.currentStacks = diffMemo;
                         const buffName2 = buffSheet2.buffName;
 
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let slots in ownersSlots) {
                             const currentOwner = namedTurns[slots];
@@ -13473,7 +13448,6 @@ const turnLogicRelics = {
                         buffSheet2.currentStacks = diffMemo;
                         const buffName2 = buffSheet2.buffName;
 
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let slots in ownersSlots) {
                             const currentOwner = namedTurns[slots];
@@ -13653,7 +13627,7 @@ const turnLogicRelics = {
                             }
                             const buffSheet = sourceTurn.tengokuSPCritDMGSHEET;
 
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
 
                             //disable further tracking, someone like archer might spend a gajllion in the bounds of the same turn which would be shite
                             sourceTurn.tengokuTrackingCounter = 0;
@@ -13718,7 +13692,6 @@ const turnLogicRelics = {
                     let buffSheet2 = currentTurn.punklordeElationCRITSHEET2;
                     const buffName2 = buffSheet2.buffName;
                     const buffsObject = currentTurn.buffsObject;
-                    const updateBuff = battleActions.updateBuff;
                     const buffCheck2 = buffsObject[buffName2];
                     if (buffCheck2) {return;}//unlike something like glamoth, this bonus CANT be removed even if it falls below in the middle of a battle
 
