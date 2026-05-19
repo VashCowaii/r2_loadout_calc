@@ -1990,7 +1990,6 @@ const battleActions = {
             let smallestOverflow = 0;
             let shieldsBroken = 0;
 
-            // const updateBuff = battleActions.updateBuff;
             for (let shieldName in shieldsRef) {
                 const currentShield = shieldsRef[shieldName];
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
@@ -2211,7 +2210,7 @@ const battleActions = {
                         }
                     }
                     const dotSheet = sourceTurn.breakDOTSheet;
-                    battleActions.updateBuff(battleData,targetTurn,dotSheet);
+                    updateBuff(battleData,targetTurn,dotSheet);
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
@@ -2362,7 +2361,6 @@ const battleActions = {
             let smallestOverflow = 0;
             let shieldsBroken = 0;
 
-            // const updateBuff = battleActions.updateBuff;
             for (let shieldName in shieldsRef) {
                 const currentShield = shieldsRef[shieldName];
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
@@ -2578,7 +2576,7 @@ const battleActions = {
                         }
                     }
                     const dotSheet = sourceTurn.breakDOTSheet;
-                    battleActions.updateBuff(battleData,targetTurn,dotSheet);
+                    updateBuff(battleData,targetTurn,dotSheet);
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
@@ -2747,7 +2745,7 @@ const battleActions = {
                     }
                 }
                 const dotSheet = sourceTurn.breakDOTSheet;
-                battleActions.updateBuff(battleData,targetTurn,dotSheet);
+                updateBuff(battleData,targetTurn,dotSheet);
             }
             // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
             poke("BrokeEnemyWeakness",battleData,turnMerge);
@@ -5081,7 +5079,6 @@ const battleActions = {
     generalApplyDOT(battleData,sourceTurn,targetTurn,applicationSheet,gotHitObject,targetRefObject,isPerHit) {
 
         const baseChance = applicationSheet.baseChance;
-        const updateBuff = battleActions.updateBuff;
 
         if (!isPerHit && !gotHitObject) {
             
@@ -5241,7 +5238,6 @@ const turnLogic = {
                     if (!memoTurn.isMemosprite || action != "Remove") {return;}
 
                     const buffsRef = memoTurn.buffsObject;
-                    // const updateBuff = battleActions.updateBuff;
                     for (let buffName in buffsRef) {
                         const currentBuff = buffsRef[buffName];
                         if (currentBuff && currentBuff.removeOnDeath) {
@@ -5528,7 +5524,7 @@ const turnLogic = {
                 buffSheet.durationInTurn = standardDuration + 1;
                 buffSheet.currentStacks = amount;
                 buffSheet.expireParam = {sourceTurn: targetTurn.name, stackCount: amount};
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
             },
             startAhaInstant(battleData,ahaTurn) {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantStart", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
@@ -5560,7 +5556,6 @@ const turnLogic = {
 
                 const elationSkillObject = battleData.elationSkillObject;
 
-                // const updateBuff = battleActions.updateBuff;
                 // const updateBangerValue = battleActions.updateBangerValue;
                 for (let entity of elationEntityArray) {
                     const currentElationSkill = elationSkillObject[entity.participantID];
@@ -5731,7 +5726,6 @@ const turnLogic = {
                     const turnExceptions = battleData.elationBangerTurnExceptions;
                     const elationEntityArray = battleData.elationEntityArray;
 
-                    const updateBuff = battleActions.updateBuff;
                     const updateBangerValue = battleActions.updateBangerValue;
                     const startingBangerValue = 20;
                     for (let elationChar of elationEntityArray) {
@@ -6660,7 +6654,7 @@ const turnLogic = {
 
                 if (e2) {
                     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
                 }
 
@@ -6766,7 +6760,7 @@ const turnLogic = {
 
                 let targetTurn = battleData.primaryTarget//single target, so the enemy hit will always be one enemy, aka first key;
                 let buffSheet = ATKObjects.gallagherBasicEnhancedBLITZSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
@@ -6856,7 +6850,7 @@ const turnLogic = {
                     }
                 }
                 let buffSheet = ATKObjects.enemyBesottedSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -6904,7 +6898,7 @@ const turnLogic = {
                 let buffSheet = ATKObjects.gallagherHealingConversionSHEET;
                 buffSheet[HealingOutgoing] = conversion;
                 buffSheet[HealingOutgoingNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             gallagherTechnique(battleData,target,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -7106,7 +7100,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                        updateBuff(battleData,ownerTurn,buffSheet)
                         // When entering the battle, Gallagher regenerates 20 Energy and increases Effect RES by 50%.
                     },
                     "target": "self",
@@ -7139,7 +7133,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                        updateBuff(battleData,ownerTurn,buffSheet)
                     },
                     "target": "self",
                     "listenerName": "Gallagher - +Break Effect/Efficiency - E6",
@@ -7348,7 +7342,7 @@ const turnLogic = {
                 const countdownSheet = ATKObjects.huohuoTalentOwnerSHEET;
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
-                battleActions.updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
+                updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
 
                 if (e1) {
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
@@ -7369,7 +7363,6 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
-                    // const updateBuff = battleActions.updateBuff;
                     const allyPositions = battleData.allyPositions;
                     
                     removeBuffFromBatch(battleData,allyPositions,spdSheet);
@@ -7494,7 +7487,6 @@ const turnLogic = {
 
                 const allyPositions = battleData.allyPositions;
                 const charactersOnly = battleData.fullCharacterArray;
-                const updateBuff = battleActions.updateBuff;
                 const percentRegen = values[0];
 
                 const teamCallObject = ATKObjects.huohuoUltimateTeamCallObject ??= {targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false};
@@ -7701,7 +7693,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
@@ -7760,7 +7752,7 @@ const turnLogic = {
                         if (hpRatio >= 1) {return;}
     
                         buffSheet[HealingOutgoing] = bonusValue;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E4 dynamic HP ratio healing bonus",
@@ -7797,7 +7789,7 @@ const turnLogic = {
                         }
                         const buffSheet = this.e6DMGBuffSHEET;
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                        updateBuff(battleData,targetTurn,buffSheet)
                     },
                     "target": "ally",
                     "listenerName": "Woven Together, Cohere Forever - healed ally listener",
@@ -7972,7 +7964,7 @@ const turnLogic = {
 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
 
-                battleActions.updateBuff(battleData,targetTurn,skillHOTSheet);
+                updateBuff(battleData,targetTurn,skillHOTSheet);
 
                 let healObject = ATKObjects.natashaSkillHealHEALOBJECT;
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
@@ -8046,7 +8038,7 @@ const turnLogic = {
 
                     if (sub30Array.length) {
                         const ultBuffSheet = ATKObjects.natashaSUltHealHOTHEALSHEET;
-                        battleActions.updateBuffBatchTargets(battleData,sub30Array,ultBuffSheet);
+                        updateBuffBatchTargets(battleData,sub30Array,ultBuffSheet);
                     }
                 }
 
@@ -8130,9 +8122,6 @@ const turnLogic = {
 
 
                 const enemyPositions = battleData.enemyPositions;
-                // for (let enemyPosition of enemyPositions) {
-                //     battleActions.updateBuff(battleData,enemyPosition,buffSheet); 
-                // }
                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet)
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -8207,7 +8196,7 @@ const turnLogic = {
                     };
 
                     if (hpRatio <= hpThreshold) {
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                     else {
                         removeBuff(battleData,ownerTurn,buffSheet);
@@ -8331,7 +8320,7 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Natasha - Battlestart HealingOutgoing trace Healer",
@@ -8643,7 +8632,7 @@ const turnLogic = {
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-                battleActions.updateBuff(battleData,targetTurn,talentHealSheet);
+                updateBuff(battleData,targetTurn,talentHealSheet);
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -8707,7 +8696,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.lynxSkillHealHOTSHEET;
                 buffSheet[HPFlat] = finalHPValue;
                 buffSheet[HPFlatNULL] = -conversion;//the flat amount isn't converted HP, which is actually unusual bc conversions NORMALLY include that value as converted
-                const updateBuff = battleActions.updateBuff;
 
                 if (rank >= 4) {
                     const ATKRatio = 0.03;
@@ -8788,9 +8776,6 @@ const turnLogic = {
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
 
-                const updateBuff = battleActions.updateBuff;
-                
-
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
                 // poke("BasicATKStart",battleData,{source:"Gallagher"});
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
@@ -8819,8 +8804,6 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-
-                // const updateBuff = battleActions.updateBuff;
 
                 updateBuffBatchTargets(battleData,allyPositions,talentHealSheet);
 
@@ -9025,7 +9008,7 @@ const turnLogic = {
                         };
     
                         if (hpRatio <= hpThreshold) {
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                         }
                         else {
                             removeBuff(battleData,ownerTurn,buffSheet);
@@ -9237,7 +9220,6 @@ const turnLogic = {
 
                 // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
-                const updateBuff = battleActions.updateBuff
 
                 if (rank >= 2) {
                     const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
@@ -9371,7 +9353,6 @@ const turnLogic = {
                 let ATKObject = ATKObjects.luochaUltimateATKOBJECT;
 
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                const updateBuff = battleActions.updateBuff;
 
                 if (rank >= 6) {
                     const enemyPositions = battleData.enemyPositions;
@@ -9453,7 +9434,6 @@ const turnLogic = {
 
                 const countdownSheet = ATKObjects.luochaAddZoneCountdownSHEET;
                 // const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 battleValues.zoneIsActive = true;
                 battleValues.zoneIsQueued = false;
@@ -9500,7 +9480,6 @@ const turnLogic = {
 
                 // const buffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
                 // const enemyPositions = battleData.enemyPositions;
-                // // const updateBuff = battleActions.updateBuff;
                 // for (let enemy of enemyPositions) {
                 //     removeBuff(battleData,enemy,buffSheet);
                 // }
@@ -9820,7 +9799,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
@@ -9844,7 +9823,7 @@ const turnLogic = {
                         const ATKObjects = logicRef.ATKObjects;
     
                         let buffSheet = ATKObjects.luochaE4WEAKENSHEET;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "enemy",
                     "listenerName": "E4 enemy created while zone active listener",
@@ -10073,8 +10052,6 @@ const turnLogic = {
                 //So fun fact, the implant + res reduction CAN stack with other implants(like archer e2) but sw has to implant first to get her 20% res reduction for that element
                 //if archer implants first and sw implants after, only 20% res reduction is applied from archer only, but if sw comes first then it's 40% total.
 
-
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,targetEnemy,weaknessSheet);
 
                 //NOTE: normally I'd bother with the whole, "if it is the enemy's turn right now, add one more duration to the timer"
@@ -10142,7 +10119,6 @@ const turnLogic = {
                     }
                 }
                 
-                const updateBuff = battleActions.updateBuff;
                 let ATKObject = ATKObjects.silverwolfUltimateATKOBJECT;
                 let buffSheet = ATKObjects.silverwolfUltimateDEFDEBUFFSHEET;
                 for (let enemySlot of battleData.enemyPositions) {
@@ -10220,7 +10196,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TalentStart",battleData,{sourceTurn});
 
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
                 if (charValuesRef.bugCycleCounter === 3) {charValuesRef.bugCycleCounter = 0;}//reset the bug rotation
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
@@ -10253,7 +10229,6 @@ const turnLogic = {
                 const stacksToApply = Math.min(5,Math.floor(currentEHR/0.10));
 
                 const buffCheck = currentTurn.buffsObject[buffName1];
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if sw already has the buff
                     const currentStacks = buffCheck.currentStacks;//then check the current stacks on the existing buff
 
@@ -10422,7 +10397,7 @@ const turnLogic = {
                     const primaryRef = battleData.primaryTarget;
                     if (implantNameFound && primaryRef && !primaryRef.buffsObject[implantNameFound]) {
                         const implantSheetToTransfer = enemyKilledBuffs[implantNameFound]
-                        battleActions.updateBuff(battleData,primaryRef,implantSheetToTransfer);
+                        updateBuff(battleData,primaryRef,implantSheetToTransfer);
                     }
                     //note this does mean that we are only actually giving a shit about one single implant getting swapped, and only to the primary target(which would be elite or higher anyways by default)
                     //if there are ever more than one implants, only one will ever get swapped at death and only the first one found in the loop
@@ -10575,7 +10550,7 @@ const turnLogic = {
                             "expireType": null
                         };
     
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "enemy",
                     "listenerName": "E2 Vuln Zombie Network",
@@ -10635,7 +10610,6 @@ const turnLogic = {
                         let buffName = buffSheet.buffName;
                         const buffCheck = sourceTurn.buffsObject[buffName];
 
-                        const updateBuff = battleActions.updateBuff;
                         if (buffCheck) {//if the buff exists
                             const currentStacks = buffCheck.currentStacks;
                             if (currentStacks < targetDebuffs) {//and if the current stacks are lower than the stacks we need
@@ -10800,7 +10774,7 @@ const turnLogic = {
                     else {removeBuff(battleData,currentTurn,buffCheck);}//otherwise if we lost the EHR required, kill the buuff
                 }
                 else if (hasEnough) {//if it doesn't exist and we have enough, then apply
-                    battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                    updateBuff(battleData,currentTurn,buffSheet);
                 }
             },
             kafkaSkill(battleData,target,sourceTurn) {
@@ -11073,8 +11047,6 @@ const turnLogic = {
                 const enemyTurns = battleData.enemyBasedTurns;
                 // const getChance = battleActions.getChanceToApply;
                 // const baseChance = values[1];
-                // const updateBuff = battleActions.updateBuff;
-            
 
                 generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
             },
@@ -11344,7 +11316,6 @@ const turnLogic = {
                         const buffSheet = this.e1DOTVulnDEBUFFSHEET;
                          
                         // const enemyTurns = battleData.enemyBasedTurns;
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,targetTurn,buffSheet);//owner
                     },
                     "target": "self",
@@ -11384,7 +11355,7 @@ const turnLogic = {
                         const buffSheet = this.kafkaE2DOTSHEET;
 
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "team",
                     "listenerName": "Fortississimo DOT Buff",
@@ -11616,7 +11587,7 @@ const turnLogic = {
                         if (currentStacks < stacks) {
                             const stackDiff = stacks - currentStacks;
                             buffSheet.currentStacks = stackDiff;
-                            battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                            updateBuff(battleData,currentTurn,buffSheet);
                             return;
                         }
                         //else if we have too many stacks, then remove
@@ -11627,7 +11598,7 @@ const turnLogic = {
                 if (stacks === 0) {return}
 
                 buffSheet.currentStacks = stacks;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             addHysilensField(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -11680,7 +11651,6 @@ const turnLogic = {
                 const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET
 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,debuffSheet);
                 }
@@ -11708,7 +11678,6 @@ const turnLogic = {
 
 
                 const enemyPositions = battleData.enemyPositions;
-                // const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     const buffCheck = enemy.buffsObject[debuffName];
                     if (buffCheck) {removeBuff(battleData,enemy,buffCheck);}
@@ -12421,7 +12390,7 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const debuffSheet = ATKObjects.hysilensFieldDEBUFFSHEET;
-                    battleActions.updateBuff(battleData,enemyTurn,debuffSheet);
+                    updateBuff(battleData,enemyTurn,debuffSheet);
                 },
                 "target": "self",
                 "listenerName": "Zone - enemy added to field listener",
@@ -12537,7 +12506,7 @@ const turnLogic = {
                         }
                         const multiSheet = this.E1FinalMultiDOTSHEET;
 
-                        battleActions.updateBuff(battleData,targetTurn,multiSheet);
+                        updateBuff(battleData,targetTurn,multiSheet);
                     },
                     "target": "self",
                     "listenerName": "You Ask Why Hearts Cry - DOT team-wide final multi",
@@ -12724,7 +12693,7 @@ const turnLogic = {
                 buffSheet[DamageAll] = usableValue;
                 for (let ally of allyPositions) {
                     if (ally.isUniqueEvent) {continue;}
-                    battleActions.updateBuff(battleData,ally,buffSheet);
+                    updateBuff(battleData,ally,buffSheet);
                     // removeBuff(battleData,currentTurn,buffCheck,true,null,false,true);
                 }
                 
@@ -12827,7 +12796,7 @@ const turnLogic = {
                     finalAVG = 1 - composite;
                 }
                 arcanaSheet.avgChanceApplied = finalAVG;
-                battleActions.updateBuff(battleData,targetTurn,arcanaSheet);
+                updateBuff(battleData,targetTurn,arcanaSheet);
             },
             blackswanArcanaDOTTurnStart(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -13010,7 +12979,6 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
                 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
 
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
@@ -13111,7 +13079,7 @@ const turnLogic = {
                         "expireType": null,
                         "actionTags": ["BSArcana"],
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "battleprep create skill sheet/arcana shred sheet",
@@ -13134,7 +13102,6 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
                     const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
-                    const updateBuff = battleActions.updateBuff;
 
                     for (let enemy of enemyPositions) {
                         if (!targetsGotHit[enemy.name]) {continue;}
@@ -13214,7 +13181,7 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
                     const skillShredSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
-                    battleActions.updateBuff(battleData,enemyTurn,skillShredSheet);
+                    updateBuff(battleData,enemyTurn,skillShredSheet);
                 },
                 "target": "self",
                 "listenerName": "Arcana - enemy added to field listener",
@@ -13389,7 +13356,6 @@ const turnLogic = {
                         const windSheet = ATKObjects.E1DebuffRESSHEETWind;
                         const sourceDots = sourceTurn.dots;
                         const sourceBuffs = sourceTurn.buffsObject;
-                        const updateBuff = battleActions.updateBuff;
 
                         if (sourceDots.Lightning) {
                             const buffCheck = sourceBuffs[lightningSheet.buffName];
@@ -13657,7 +13623,6 @@ const turnLogic = {
                 const stacksToApply = Math.min(4,Math.floor(usableEHR/0.10));
 
                 const buffCheck = currentTurn.buffsObject[buffName1];
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if sw already has the buff
                     const currentStacks = buffCheck.currentStacks;//then check the current stacks on the existing buff
 
@@ -13796,7 +13761,6 @@ const turnLogic = {
                 let ATKObject = isSkill ? ATKObjects.weltTraceDMGSKILLREF : ATKObjects.weltTraceDMGBASICREF;
                 let slowSheet = ATKObjects.weltSkillOnlySLOWSHEET;
                 const e1Sheet = ATKObjects.weltTalentDMGE1REF;
-                const updateBuff = battleActions.updateBuff;
 
                 const ATKObjectSLOW = ATKObjects.weltTalentDMGSLOWREF;
 
@@ -14105,7 +14069,7 @@ const turnLogic = {
                             "expireType": "EndTurn"
                         };
                     
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
 
                         battleActions.actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
                     }
@@ -14227,7 +14191,6 @@ const turnLogic = {
                         }
                         let buffName = buffSheet.buffName;
                         const buffCheck = sourceTurn.buffsObject[buffName];
-                        const updateBuff = battleActions.updateBuff;
                         if (validDMG) {
                             if (buffCheck) {return}
                             else{updateBuff(battleData,ownerTurn,buffSheet);}
@@ -14419,7 +14382,7 @@ const turnLogic = {
 
                 if (rank >= 4) {
                     const bonusSheet3 = ATKObjects.pelaSkillDE4PENSHEET;
-                    battleActions.updateBuff(battleData,battleData.primaryTarget,bonusSheet3);
+                    updateBuff(battleData,battleData.primaryTarget,bonusSheet3);
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -14427,11 +14390,11 @@ const turnLogic = {
                 let dispelCount = 0;
                 if (dispelCount) {
                     const bonusSheet = ATKObjects.pelaSkillDispelDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,bonusSheet);
+                    updateBuff(battleData,sourceTurn,bonusSheet);
 
                     if (rank >= 2) {
                         const bonusSheet2 = ATKObjects.pelaSkillDispelSPDSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,bonusSheet2);
+                        updateBuff(battleData,sourceTurn,bonusSheet2);
                     }
                 }
 
