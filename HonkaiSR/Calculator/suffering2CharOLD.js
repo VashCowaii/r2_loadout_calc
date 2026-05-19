@@ -124,7 +124,6 @@ const turnLogic = {
 
                 const buffCheck = targetTurn.buffsObject[buffName];
 
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if the buff already exists
                     const statCheck = buffCheck[CritDamageBase];
                     if (statCheck === critDMGTotalBonus) {//if the bonus is the same, then just renew it
@@ -221,7 +220,6 @@ const turnLogic = {
                 let dreamDiverFound = false;
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
                 const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
-                const updateBuff = battleActions.updateBuff;
                 for (let targetTurn of battleData.allyPositions) {
                     const currentBuffs = targetTurn.buffsObject;
                     let alreadyHasHerring = currentBuffs[buffName2];
@@ -319,7 +317,6 @@ const turnLogic = {
 
                 const buffSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEET;
                 const redoName = turnToRedo ? turnToRedo.properName : null;
-                const updateBuff = battleActions.updateBuff;
                 
 
                 for (let targetTurn of battleData.allyPositions) {
@@ -429,7 +426,7 @@ const turnLogic = {
                     }
                     let buffSheet1 = this.sparkleNocturneUniversalATKSHEET;
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet1);
+                    updateBuff(battleData,targetTurn,buffSheet1);
                 },
                 "target": "self",
                 "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
@@ -445,7 +442,6 @@ const turnLogic = {
                     let buffArrayQuantum = [0.05,0.15,0.30];
                     let quantumAllies = [];
 
-                    const updateBuff = battleActions.updateBuff;
                     for (let targetTurn of battleData.allyPositions) {
                         let currentType = targetTurn.element;
                         if (currentType === "Quantum") {
@@ -666,7 +662,7 @@ const turnLogic = {
                 }
 
                 buffSheet[DamageAll] = usableValue;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             blackswanArcanaDOT(battleData,sourceTurn,targetTurn,generalInfo,stacksToPass) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -748,7 +744,7 @@ const turnLogic = {
                     finalAVG = 1 - composite;
                 }
                 arcanaSheet.avgChanceApplied = finalAVG;
-                battleActions.updateBuff(battleData,targetTurn,arcanaSheet);
+                updateBuff(battleData,targetTurn,arcanaSheet);
             },
             blackswanArcanaDOTTurnStart(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -763,7 +759,6 @@ const turnLogic = {
                 const sevenCheck = stackCount >= 7;
                 const threeCheck = stackCount >= 3;
                 const values = ATKObjects.blackswanTalentREFVALUES;
-                const updateBuff = battleActions.updateBuff;
 
                 if (sevenCheck) {
                     if (!ATKObjects.blackswanArcanaStacks7OrMoreSHEET) {
@@ -924,7 +919,6 @@ const turnLogic = {
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of allBlastTargets) {updateBuff(battleData,enemy,debuffSheet);}
 
                 battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -1009,7 +1003,6 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
                 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
 
                 battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 // logicRef.skillFunctions.addHysilensField(battleData,sourceTurn);
@@ -1145,7 +1138,7 @@ const turnLogic = {
                     const stacks = 1;
                     const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
                     dotFunction(battleData,ownerTurn,enemyTurn,generalInfo,stacks);
-                    // battleActions.updateBuff(battleData,enemyTurn,debuffSheet);
+                    // updateBuff(battleData,enemyTurn,debuffSheet);
                 },
                 "target": "self",
                 "listenerName": "Arcana - enemy added to field listener",
@@ -1320,7 +1313,6 @@ const turnLogic = {
                         const windSheet = ATKObjects.E1DebuffRESSHEETWind;
                         const sourceDots = sourceTurn.dots;
                         const sourceBuffs = sourceTurn.buffsObject;
-                        const updateBuff = battleActions.updateBuff;
 
                         if (sourceDots.Lightning) {
                             const buffCheck = sourceBuffs[lightningSheet.buffName];
@@ -1722,7 +1714,7 @@ const turnLogic = {
                 const energy = battleActions.updateEnergy;
                 energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 logicRef.characterValuesBattle.combustionActive = true;
 
                 energy(battleData,skillRef.energyRegen,sourceTurn);
@@ -1923,7 +1915,7 @@ const turnLogic = {
                 battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
 
                 const buffSheet = ATKObjects.fireflySkillEnhancedIMPLANTSHEET;
-                battleActions.updateBuff(battleData,battleData.primaryTarget,buffSheet);
+                updateBuff(battleData,battleData.primaryTarget,buffSheet);
 
 
                 // Restores HP by an amount equal to 25.00% of this unit's Max HP. Applies Fire Weakness to a single target enemy, lasting for 2 turn(s). Deals Fire DMG equal to (0.2 × Break Effect + 200.00%) of SAM's
@@ -2004,7 +1996,6 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
@@ -2060,7 +2051,7 @@ const turnLogic = {
                 if (!conversion) {return;}
                 buffSheet[DamageBreak] = conversion;
                 buffSheet[DamageBreakNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
         },
         "listeners": [
@@ -2475,7 +2466,6 @@ const turnLogic = {
                 const countdownSheet = ATKObjects.huohuoTalentOwnerSHEET;
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
 
                 if (e1) {
@@ -2499,7 +2489,6 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
-                    // const updateBuff = battleActions.updateBuff;
                     const allyPositions = battleData.allyPositions;
                     
                     for (let ally of allyPositions) {
@@ -2593,7 +2582,6 @@ const turnLogic = {
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 const percentRegen = values[0];
 
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
@@ -2640,7 +2628,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.huohuoTechBUFFSHEET;
 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
@@ -2756,7 +2743,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
@@ -2801,7 +2788,7 @@ const turnLogic = {
                         }
                         const buffSheet = this.e6DMGBuffSHEET;
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                        updateBuff(battleData,targetTurn,buffSheet)
                     },
                     "target": "ally",
                     "listenerName": "Woven Together, Cohere Forever - healed ally listener",
