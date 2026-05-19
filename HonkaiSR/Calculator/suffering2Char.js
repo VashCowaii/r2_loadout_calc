@@ -1547,7 +1547,7 @@ const battleActions = {
         "Wind": true,
         "Physical": true,
     },
-    pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsONHIT,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
+    pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsOnHit,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
@@ -1560,8 +1560,8 @@ const battleActions = {
             let bonusBreak = 1;
             let bonusBreakMulti = 1;
 
-            bonusBreak += table[DamageBreak] + statsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + statsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            bonusBreak += table[DamageBreak] + statsOnHit[DamageBreak] + targetStatsSourceBased[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus] + statsOnHit[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
 
             if (actionTags) {
                 for (let action of actionTags) {
@@ -1581,7 +1581,7 @@ const battleActions = {
 
         return sourceDeposit.cacheValue;
     },
-    pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsONHIT,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
+    pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsOnHit,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
@@ -1595,9 +1595,9 @@ const battleActions = {
             let bonusBreakMulti = 1;
             let superMulti = 1;
 
-            bonusBreak += table[DamageBreak] + statsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + statsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
-            superMulti += table[DamageBreakSuper] + statsONHIT[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
+            bonusBreak += table[DamageBreak] + statsOnHit[DamageBreak] + targetStatsSourceBased[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus] + statsOnHit[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            superMulti += table[DamageBreakSuper] + statsOnHit[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
 
             if (actionTags) {
                 for (let action of actionTags) {
@@ -21602,7 +21602,7 @@ const turnLogic = {
                         if (!this.ruanmeiE2ATKSHEET) {
                             const buffNames = turnLogic[ownerTurn.properName].buffNames;
                             this.ruanmeiE2ATKSHEET = {
-                                "stats": [ATKP],
+                                "statsOnHit": [ATKP],
                                 [ATKP]: 0.40,
                                 "source": "E2",
                                 "sourceOwner": ownerTurn.properName,
