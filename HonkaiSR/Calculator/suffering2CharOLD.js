@@ -188,7 +188,7 @@ const turnLogic = {
 
                 const energy = battleActions.updateEnergy;
                 energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
 
                 const buffNAMES = logicRef.buffNames;
                 let buffName = buffNAMES.cipher;
@@ -361,7 +361,7 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 let spRecovery = 3;
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 poke("TechniqueEnd",battleData,{sourceTurn});

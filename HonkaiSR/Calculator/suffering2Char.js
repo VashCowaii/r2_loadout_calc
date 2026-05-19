@@ -5159,6 +5159,7 @@ const generalApplyDOT = battleActions.generalApplyDOT;
 const healAlly = battleActions.healAlly;
 const updateEnergy = battleActions.updateEnergy;
 const updateBuff = battleActions.updateBuff;
+const updateSkillPoints = battleActions.updateSkillPoints;
 
 const turnLogic = {
 
@@ -11604,7 +11605,7 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"The Gladius of Conquest"});
+                updateSkillPoints(1,battleData,{sourceTurn,sourceName:"The Gladius of Conquest"});
                 sourceTurn.hysilensFieldActive = true;
 
                 const rank = sourceTurn.rank;
@@ -15655,7 +15656,7 @@ const turnLogic = {
                 poke("TalentEnd",battleData,{sourceTurn});
 
                 //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
-                battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
+                updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
             },
             archerSkillInstance(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -15720,7 +15721,7 @@ const turnLogic = {
 
                 if (rank >= 1 && battleValues.skillCounter === 3) {//fail condition right off if no source exists or it's not archer
                     let cost = 2;
-                    battleActions.updateSkillPoints(cost,battleData,{sourceTurn,sourceName:"E1: Skill Point Refund"})
+                    updateSkillPoints(cost,battleData,{sourceTurn,sourceName:"E1: Skill Point Refund"})
                 }
 
                 poke("SkillEnd",battleData,{sourceTurn});
@@ -16175,7 +16176,7 @@ const turnLogic = {
     
                         if (ownerTurn.turnState) {
                             let cost = 1;
-                            battleActions.updateSkillPoints(cost,battleData,{sourceTurn,sourceName:this.listenerName});
+                            updateSkillPoints(cost,battleData,{sourceTurn,sourceName:this.listenerName});
                         }
                     },
                     "target": "self",
@@ -17862,7 +17863,7 @@ const turnLogic = {
                     const quickRef = sourceTurn.battleValues;
                     if (quickRef.e1SPRegenReady) {
                         quickRef.e1SPRegenReady = false;
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
                     }
                     else if (!quickRef.e1SPRegenReady) {quickRef.e1SPRegenReady = 2;}
                     else if (Ref.e1SPRegenReady === 2) {quickRef.e1SPRegenReady = true;}
@@ -18482,7 +18483,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 const charWithBeatified = sourceTurn.battleValues.charWithBeatifiedNameSlot;
-                if (charWithBeatified) {battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Skill used on Beatified"});}
+                if (charWithBeatified) {updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Skill used on Beatified"});}
 
 
                 poke("SkillEnd",battleData,{sourceTurn});
@@ -18820,7 +18821,7 @@ const turnLogic = {
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.properName != ownerTurn.properName) {return;}
 
-                        battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"E2: Faith Outstrips Frailty"});
+                        updateSkillPoints(2,battleData,{sourceTurn,sourceName:"E2: Faith Outstrips Frailty"});
     
                         battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                     },
@@ -21853,7 +21854,7 @@ const turnLogic = {
                 const adjusted = old + spRecovery;
                 const maximum = battleData.battleTable.SPMax;
 
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
                 
                 if (adjusted > maximum) {
                     const reserve = adjusted - maximum;
@@ -22136,7 +22137,7 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 let spRecovery = 3;
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
                 updateEnergy(battleData,20,sourceTurn,false,"Sparkle Technique");
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
@@ -22207,7 +22208,7 @@ const turnLogic = {
                                 const amountToGain = reservePoints > actualDiff ? actualDiff : reservePoints;
                                 // battleValues.reservePoints -= amountToGain;
                                 poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"});
-                                battleActions.updateSkillPoints(amountToGain,battleData,{sourceTurn: ownerTurn,sourceName:"Sparkle: Reserve Skill Points"});
+                                updateSkillPoints(amountToGain,battleData,{sourceTurn: ownerTurn,sourceName:"Sparkle: Reserve Skill Points"});
                             }
                         }
 
@@ -22953,7 +22954,7 @@ const turnLogic = {
 
                         if (maxCheck) {
                             removeBuff(battleData,ownerTurn,manaCheck);
-                            battleActions.updateSkillPoints(1,battleData,{sourceTurn:ownerTurn,sourceName:"Knight of the Dragon"});
+                            updateSkillPoints(1,battleData,{sourceTurn:ownerTurn,sourceName:"Knight of the Dragon"});
 
                             // battleActions.actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");
                             valuesRef.advanceReady = false;
@@ -29372,7 +29373,7 @@ const turnLogic = {
 
                 battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
 
-                battleActions.updateSkillPoints(1,battleData,{sourceTurn:evernightTurn,sourceName:"Evey enhanced skill"});
+                updateSkillPoints(1,battleData,{sourceTurn:evernightTurn,sourceName:"Evey enhanced skill"});
                 const finalMemoria = valuesRef.memoria;
                 poke("EvernightGainMemoria",battleData,{pointsGained: -finalMemoria,sourceString:"Consumed Memoria [Enhanced Skill]"});
                 logicRef.skillFunctions.eveyDeathFunction(battleData,memoTurn,null,finalMemoria);
@@ -32616,7 +32617,7 @@ const turnLogic = {
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.properName != ownerTurn.properName) {return;}
     
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"E1: Shed Scales of Old"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"E1: Shed Scales of Old"});
                     },
                     "target": "self",
                     "listenerName": "E1: dan used ult skillpoint gain",
@@ -32978,9 +32979,6 @@ const turnLogic = {
                 const shieldCall = ATKObjects.aventurineTalentShield ??= logicRef.skillFunctions.aventurineTalentShield;
                 shieldCall(battleData,sourceTurn);
                 poke("TalentEnd",battleData,{sourceTurn});
-
-                //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
-                // battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
             },
             aventurineTalentShield(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -35048,7 +35046,7 @@ const turnLogic = {
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
 
-                    battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Anaxa E1 First Skill Use"});
+                    updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Anaxa E1 First Skill Use"});
 
                     //then remove, bc this is the only time it'll get called
                     battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
@@ -35861,7 +35859,7 @@ const turnLogic = {
                     const sourceTurn = generalInfo.sourceTurn;
                     if (ownerTurn.properName != sourceTurn.properName) {return;}//only her elation skill can trigger this
 
-                    battleActions.updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Poised and Sated: Elation Skill End"})
+                    updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Poised and Sated: Elation Skill End"})
                 },
                 "target": "self",
                 "listenerName": "Poised and Sated elation skill skill point gain",
@@ -36315,7 +36313,6 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
-                const updateSkillPoints = battleActions.updateSkillPoints;
                 const battleValues = sourceTurn.battleValues;
 
                 let ignoreInitialCost = false;
@@ -36420,7 +36417,7 @@ const turnLogic = {
 
                 if (rngIndex === 2 && battleValues.skillCounter < 15) {
                     battleActions.updatePunchlineValue(battleData,2,sourceTurn,"Skill: Straight Fire");
-                    battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
+                    updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
                 }
                 else {
                     battleActions.updatePunchlineValue(battleData,1,sourceTurn,"Skill: Unreal Banger");
@@ -36738,7 +36735,7 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
-                battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Sparxie Technique"});
+                updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Sparxie Technique"});
                 poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
@@ -37846,7 +37843,7 @@ const turnLogic = {
                     const sourceTurn = generalInfo.sourceTurn;
                     if (ownerTurn.properName != sourceTurn.properName) {return;}//only his ult can trigger this
 
-                    battleActions.updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Screw It, We Ball: Ult End"})
+                    updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Screw It, We Ball: Ult End"})
                 },
                 "target": "self",
                 "listenerName": "Screw It, We Ball ult end skill point gain",

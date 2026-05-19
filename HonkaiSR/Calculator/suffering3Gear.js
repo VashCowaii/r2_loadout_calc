@@ -5356,7 +5356,7 @@ const turnLogicLightcones = {
                     if (quickRef.battleIsntOverUltyCount === 3) {
                         quickRef.battleIsntOverUltyCount = 1;
                         let lcNameRef = "But the Battle Isn't Over";
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:lcNameRef});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:lcNameRef});
                     }
                 },
                 "target": "self",
@@ -5507,7 +5507,7 @@ const turnLogicLightcones = {
                     sourceTurn.groundedAscentTargetStacks += 1;
                     if (sourceTurn.groundedAscentTargetStacks === 2) {
                         sourceTurn.groundedAscentTargetStacks = 0;
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"A Grounded Ascent - Departing Anew"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"A Grounded Ascent - Departing Anew"});
                         //for now assume that either or on skill/ulty will stack this
                         //it DOES actually work that way, thankfully
                     }
@@ -5860,7 +5860,7 @@ const turnLogicLightcones = {
 
                     const breakCheck = sourceTurn.statTable[DamageBreak] >= 1.5;
                     if (breakCheck) {
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Past Self in Mirror [LC]"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Past Self in Mirror [LC]"});
                     }
                 },
                 "target": "self",
@@ -7518,7 +7518,7 @@ const turnLogicLightcones = {
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
                         updateEnergy(battleData,rankParams[1],sourceTurn,false,"Shadowburn (LC)")
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Shadowburn (LC)"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Shadowburn (LC)"});
 
                         sourceTurn.lcShadowburnFIRSTSUMMONDONE = true;
                         battleData.lcShadowburnFIRSTSUMMONDONECOUNTER ??= 0;
@@ -9940,7 +9940,6 @@ const turnLogicRelics = {
                         let relicNameRef = "Passerby of Wandering Cloud";
                         const namedTurns = battleData.nameBasedTurns;
                         const SPGen = 1;
-                        const updateSkillPoints = battleActions.updateSkillPoints
                         for (let ally in ownersSlots) {
                             let sourceTurn = namedTurns[ally];
 
