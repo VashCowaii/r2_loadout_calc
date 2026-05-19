@@ -22864,7 +22864,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
 
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"});
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
@@ -22933,7 +22933,7 @@ const turnLogic = {
                             //only check this if we haven't finished stacking yet, and if the change in points is actually positive
                             const buffSheet = this.saberCoreGainCRITDMGSHEET;
                             buffSheet.currentStacks = pointsGained;
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = buffsObject[buffSheet.buffName];
                             if (buffCheck.currentStacks === 8) {ownerTurn.coreResonanceCRITDMGDone = true;}//mark as completed so this buff is never called again
                         }
@@ -22942,7 +22942,7 @@ const turnLogic = {
                             //only check this if we haven't finished stacking yet, and if the change in points is actually positive
                             const buffSheet = this.saberCoreGainE2SHREDSHEET;
                             buffSheet.currentStacks = pointsGained;
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = buffsObject[buffSheet.buffName];
                             if (buffCheck.currentStacks === 15) {ownerTurn.coreResonanceE2SHREDDone = true;}//mark as completed so this buff is never called again
                         }
@@ -23097,7 +23097,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObjects.saberDragonCoreDMGSHEET;
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
 
                     const generalInfo2 = this.generalInfo2 ??= {pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"};
                     poke("SaberGainCoreResonance",battleData,generalInfo2);
@@ -23125,7 +23125,6 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
 
                     const buffSheet2 = this.buffSheet2 ??= {
@@ -23249,7 +23248,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Lost White Walls Ult DMG",
@@ -23313,7 +23312,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Saga of Sixteen Winter Days battlestart RES PEN",
@@ -23349,7 +23348,7 @@ const turnLogic = {
                         }
 
                         const buffSheet = this.saberSagaSixteenDaysPENSHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                         //TODO: listener self removal later
                         //also make sure I addressed the issue about removing a listener mid poke and the array length not reflecting in the for let i= loops
                     },
@@ -23380,7 +23379,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Long Fated Night Ult RES PEN",
@@ -23597,7 +23596,7 @@ const turnLogic = {
                 battleActions.consumeHP(battleData,false,values[0],sourceTurn,sourceTurn,skillRef.slot);
 
                 let buffSheet = ATKObjects.bladeSkillInstanceBUFFSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 
                 sourceTurn.battleValues.hellscapeActive = true;
                 poke("BladeSkillQueueExtraTurn",battleData,exoTurnRef);
@@ -24021,7 +24020,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Neverending Deaths: battlestart inc healing bonus",
@@ -24046,7 +24045,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Cyclone of Destruction: battlestart FUA bonus",
@@ -24142,7 +24141,7 @@ const turnLogic = {
 
 
                     const buffSheet = this.bladeE4HPSHEET;
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                     const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
                     if (buffCheck.currentStacks === 2) {
                         battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
@@ -24401,7 +24400,7 @@ const turnLogic = {
 
                 if (rank >= 2) {
                     const buffSheet2 = ATKObjects.jingliuE2PostUltDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet2);
+                    updateBuff(battleData,sourceTurn,buffSheet2);
                 }
 
                 sourceTurn.ultyQueued = false;
@@ -24449,7 +24448,7 @@ const turnLogic = {
                     }
                 }
                 const buffSheet = ATKObjects.jingliuTalentEnhancedSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.enhancedActive = true;
@@ -24568,7 +24567,7 @@ const turnLogic = {
                             "actionTags": ["Attack"]
                         }
                         valuesRef.traceShredActive = true;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                     
                     let enteredState = false;
@@ -24724,7 +24723,7 @@ const turnLogic = {
                         const ATKObjects = logicRef.ATKObjects;
 
                         const moonlightSheet = ATKObjects.jingliuTalentEnhancedMoonlightSHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,moonlightSheet);
+                        updateBuff(battleData,ownerTurn,moonlightSheet);
 
                         const buffCheck = ownerTurn.buffsObject[moonlightSheet.buffName];
                         if (buffCheck.currentStacks === buffCheck.maxStacks) {
@@ -24815,7 +24814,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn"
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Moon Crashes Tianguan Gate: enhanced skill listener",
@@ -24842,7 +24841,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn"
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Moon Crashes Tianguan Gate: ult use listener",
@@ -25091,7 +25090,7 @@ const turnLogic = {
 
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.combustionActive = true;
@@ -25301,10 +25300,9 @@ const turnLogic = {
                 healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
 
                 const buffSheet = ATKObjects.fireflySkillEnhancedIMPLANTSHEET;
-                // battleActions.updateBuff(battleData,battleData.primaryTarget,buffSheet);
                 // battleData.fullBlastTargets
 
-                battleActions.updateBuffBatchTargets(battleData,battleData.fullBlastTargets,buffSheet);
+                updateBuffBatchTargets(battleData,battleData.fullBlastTargets,buffSheet);
 
 
                 // Restores HP by an amount equal to 25.00% of this unit's Max HP. Applies Fire Weakness to a single target enemy, lasting for 2 turn(s). Deals Fire DMG equal to (0.2 × Break Effect + 200.00%) of SAM's
@@ -25386,7 +25384,6 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
@@ -25442,7 +25439,7 @@ const turnLogic = {
                 if (!conversion) {return;}
                 buffSheet[DamageBreak] = conversion;
                 buffSheet[DamageBreakNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
         },
         "listeners": [
@@ -26254,7 +26251,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Hook Naivete cc res",
@@ -26332,7 +26329,7 @@ const turnLogic = {
                             "expireType": null,
                             "actionTags": ["HookEnhSkill"],
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Hook E1 enh skill dmg buff",
@@ -26377,7 +26374,7 @@ const turnLogic = {
                         }
                         else {
                             if (!burnCount) {return;}
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                         }
                     },
                     "target": "self",
@@ -26893,8 +26890,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.rmcMemsSupportSHEET;
                 buffSheet.expireParam.targetTurn = char1.name;
 
-
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,char1,buffSheet);
                 char1.rmcCharHasMemSupport = true;
                 //TODO: for now we force char1 as the assumed target of mem's support, but remember to hook this up as a parameter for user defined conditions later
@@ -27523,7 +27518,7 @@ const turnLogic = {
                         }
                         const memTurn = ownerTurn.rmcMemTURNEVENT;
     
-                        battleActions.updateBuff(battleData,memTurn,buffSheet);
+                        updateBuff(battleData,memTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E6 ult crit bonus",
@@ -27939,7 +27934,7 @@ const turnLogic = {
                 if (stacksToInherit) {
                     //TODO: fix if she recasts and would accidentally inherit again
                     buffSheet.currentStacks = stacksToInherit;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
 
@@ -27965,8 +27960,8 @@ const turnLogic = {
                     }
                     let buffSheet = ATKObjects.aggyUltimateE6PENSHEET;
 
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
-                    battleActions.updateBuff(battleData,garmentTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,garmentTurn,buffSheet);
                 }
 
 
@@ -28075,7 +28070,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 let buffSheet = ATKObjects.aggyUltimateSTANCESHEET;
-                // const updateBuff = battleActions.updateBuff;
                 if (buffSheet) {
                     const buffCheck = aggyTurn.buffsObject[buffSheet.buffName];
 
@@ -28139,7 +28133,6 @@ const turnLogic = {
                 const buffCheck = currentTurn.buffsObject[buffName];
                 const garmentTurn = currentTurn.aggyGarmentTURNEVENT;
 
-                const updateBuff = battleActions.updateBuff;
                 if (inStance) {
                     const aggyRatio = 7.2;
                     const garmentRatio = 3.6;
@@ -28208,7 +28201,6 @@ const turnLogic = {
                 const buffCheck = currentTurn.buffsObject[buffName];
                 const garmentTurn = currentTurn.aggyGarmentTURNEVENT;
 
-                const updateBuff = battleActions.updateBuff;
                 if (inStance) {
                     const garmentTurnRef = currentTurn.aggyGarmentTURNEVENT;
 
@@ -28372,7 +28364,6 @@ const turnLogic = {
 
                 // valuesRef.garmentIsActive
 
-                const updateBuff = battleActions.updateBuff;
                 const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
                 if (applyOrRemove === "Apply") {
                     if (buffCheck && buffCheck.currentStacks === 3) {return;}
@@ -28481,7 +28472,6 @@ const turnLogic = {
                         // "actionTags": ["FUA"]
                     }
                     // let buffSheet = ownerTurn.aggySeamStitchDEBUFFSHEET
-                    // battleActions.updateBuff(battleData,targetTurn,buffSheet)
 
 
 
@@ -28625,7 +28615,7 @@ const turnLogic = {
                     let buffSheet = ATKObjects.aggySeamStitchDEBUFFSHEET;
                     const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
                     if (buffCheck) {return;}
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Seam stitch application listener",
@@ -28688,7 +28678,7 @@ const turnLogic = {
 
                         const buffSheet = ATKObjects.garmentTalentSPDSHEET;
                         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Last Thread of Fate", bodyText: `Garmentmaker inherited one speed stack from prior life`});}
-                        battleActions.updateBuff(battleData,memoTurn,buffSheet);
+                        updateBuff(battleData,memoTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -28780,9 +28770,6 @@ const turnLogic = {
 
                     if (buffCheck && buffCheck.currentStacks === buffCheck.maxStacks) {return;}
 
-                    
-                    
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,garmentTurn,buffSheet);
                     charValuesRef.lastSpdStacksMemo = garmentTurn.buffsObject[buffName]?.currentStacks ?? 0;
                     if (charValuesRef.supremeStanceActive) {
@@ -29190,7 +29177,6 @@ const turnLogic = {
 
                 const ownerSheet = ATKObjects.evernightSkillOWNERSHEET;
 
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,ownerSheet);
                 const allySheet = ATKObjects.evernightSkillMemoBUFFSHEET;
                 allySheet[CritDamageBase] = conversion;
@@ -29213,7 +29199,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.evernightSkillMemoBUFFSHEET;
-                // const updateBuff = battleActions.updateBuff;
                 const declaredMemosprites = battleData.declaredMemosprites;
                 for (let memo of declaredMemosprites) {
                     removeBuff(battleData,memo,buffSheet);
@@ -29281,7 +29266,6 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.eveyWasSummonedDMGSHEET;
                 // const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,buffSheet);
                 updateBuff(battleData,eveyTurn,buffSheet);
 
@@ -29508,7 +29492,6 @@ const turnLogic = {
 
                 const normalSPDSheet = ATKObjects.eveyDiedSPDSheet;
                 normalSPDSheet[SPDP] = SPDValue;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,ownerTurn,normalSPDSheet);
 
                 poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
@@ -29541,7 +29524,6 @@ const turnLogic = {
                 }
                 const memoTurn = evernightTurn.everEveyTURNEVENT;
                 const buffSheet = ATKObjects.traceHPConsumeCritDMGSHEET;
-                const updateBuff = battleActions.updateBuff;
                 
                 updateBuff(battleData,evernightTurn,buffSheet);
                 if (memoTurn.isActive) {
@@ -29645,10 +29627,6 @@ const turnLogic = {
                 const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
 
                 
-
-                
-                const updateBuff = battleActions.updateBuff;
-                
                 updateBuff(battleData,sourceTurn,dmgSheet);
                 updateBuff(battleData,eveyTurn,dmgSheet);
                 const enemyPositions = battleData.enemyPositions;
@@ -29669,7 +29647,6 @@ const turnLogic = {
 
                 const dmgSheet = ATKObjects.evernightUltimateDMGSHEET;
                 const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
-                // const updateBuff = battleActions.updateBuff;
 
                 removeBuff(battleData,evernightTurn,dmgSheet);
                 removeBuff(battleData,eveyTurn,dmgSheet);
@@ -29731,7 +29708,6 @@ const turnLogic = {
                 if (lastBuffGiven === currentEnemies) {return;}
                 const buffSheet = ATKObjects.E1FinalMultiSHEET;
                 buffSheet.multiplier = buffArray[currentEnemies];
-                const updateBuff = battleActions.updateBuff;
 
                 const declaredMemosprites = battleData.declaredMemosprites;
                 for (let memo of declaredMemosprites) {
@@ -29949,7 +29925,6 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObjects.talentHPLostCRITDMGSHEET;
-                    const updateBuff = battleActions.updateBuff;
                     
                     buffSheet.duration = ownerTurn.turnState ? 3 : 2;
                     updateBuff(battleData,ownerTurn,buffSheet);
@@ -29992,7 +29967,7 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,vulnSheet);
+                    updateBuff(battleData,targetTurn,vulnSheet);
                 },
                 "target": "enemy",
                 "listenerName": "Enemy created while darkest riddle active debuff application",
@@ -30123,7 +30098,6 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
                     updateBuff(battleData,eveyTurn,buffSheet);
                 },
@@ -30230,7 +30204,6 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,ownerTurn,buffSheet);
                         updateBuff(battleData,eveyTurn,buffSheet);
                     },
@@ -30262,7 +30235,6 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,eveyTurn,buffSheet);//evey gets the bonus twice, so we just cheat and say 2 stacks by applying once here and later when applying to all memos
 
                         //then adjust to one stack before applying to others
@@ -30303,7 +30275,7 @@ const turnLogic = {
     
                         const buffSheet = this.e6RESPENSHEET;
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "team",
                     "listenerName": "Like This, Always: ally res pen bonus",
@@ -30613,7 +30585,6 @@ const turnLogic = {
                     }
                     const buffSheet = ATKObjects.hyacineE6IcaFieldSheet;
 
-                    const updateBuff = battleActions.updateBuff;
                     const allyTurns = battleData.nameBasedTurns;
                     for (let allySlot in allyTurns) {
                         const currentTurn = allyTurns[allySlot];
@@ -30682,7 +30653,6 @@ const turnLogic = {
 
                     const buffSheet = ATKObjects.hyacineE6IcaFieldSheet;
 
-                    // const updateBuff = battleActions.updateBuff;
                     for (let allySlot in allyTurns) {
                         const currentTurn = allyTurns[allySlot];
                         removeBuff(battleData,currentTurn,buffSheet);
@@ -30737,7 +30707,6 @@ const turnLogic = {
 
                 const HPSheet = ATKObjects.hyacineSPD200HPSheet;
                 const healingSheet = ATKObjects.hyacineSPD200HealingSheet;
-                const updateBuff = battleActions.updateBuff;
 
                 const icaTurn = currentTurn.hyacineIcaTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
@@ -30973,8 +30942,6 @@ const turnLogic = {
                 }
                 healAlly(battleData,icaHealObject,icaTurn,sourceTurn,skillRef.slot,1);
 
-
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 valuesRef.hyacineAfterRainActive = true;
                 if (!buffCheck) {//if afterRain is already active before we renewed, then all allies already have the HP buff, and there's no need to call it again
@@ -30997,7 +30964,6 @@ const turnLogic = {
 
                 const HPSheet = ATKObjects.hyacineUltHPSHEET;
                 const allyPositions = battleData.allyPositions;
-                // const updateBuff = battleActions.updateBuff;
                 removeBuffFromBatch(battleData,allyPositions,HPSheet);
             },
             hyacineTechnique(battleData,target,sourceTurn) {
@@ -31057,7 +31023,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.hyacineTechHPSHEET;
                 const healObject = ATKObjects.hyacineTechHealObject;
 
-                // const updateBuff = battleActions.updateBuff;
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
@@ -31356,7 +31321,7 @@ const turnLogic = {
                     
                     if (icaTurn.isActive) {
                         const buffSheet = this.allyWasHealedIcaDMGSHEET;
-                        battleActions.updateBuff(battleData,icaTurn,buffSheet);
+                        updateBuff(battleData,icaTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -31402,7 +31367,6 @@ const turnLogic = {
                     const buffSheet = this.allyWasHealedOutgoingHealingSHEET;
                     const buffCheck = sourceTurn.buffsObject[buffSheet.name];
 
-                    const updateBuff = battleActions.updateBuff;
                     if (buffCheck) {
                         if (hpRatio) {return;}
                         else {
