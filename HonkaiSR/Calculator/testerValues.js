@@ -310,6 +310,9 @@ const customDisplayValuesLog = {
         {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSilver Wolf LV.999`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSilver Wolf LV.999`,summaryType: "SUM"},
     ],
     "Evanescia": [//tracker done
         {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true},
@@ -555,6 +558,29 @@ const conditionLibrary = {
                 return stat1Value < stat2Value;
             default: return false;
         }
+    },
+    NOT(battleData,sourceTurn,destination) {
+        // const array = destination.array;
+
+        // {
+        //     type: "COMPARE",
+        //     comparison: "=",
+        //     array: [
+        //         {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"},
+        //         {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"}
+        //     ],
+        // }
+
+        // statArray: [
+        //     {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"},
+        //     {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"}
+        // ],
+        const statArray = destination.array;
+        const stat1Destination = statArray[0];
+        const stat1Value = conditionLibrary[stat1Destination.type](battleData,sourceTurn,stat1Destination);
+        // console.log(stat1Value,stat2Value,comparator)
+
+        return !stat1Value;
     },
     "Target Priority"(battleData,sourceTurn,destination) {
         const array = destination.array;
