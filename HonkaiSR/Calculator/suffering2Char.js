@@ -14453,7 +14453,6 @@ const turnLogic = {
                     }
                 }
                 
-                const updateBuff = battleActions.updateBuff;
                 let ATKObject = ATKObjects.pelaUltimateATKOBJECT;
                 let buffSheet = ATKObjects.pelaUltimateDEFDEBUFFSHEET;
                 for (let enemySlot of battleData.enemyPositions) {
@@ -14528,7 +14527,7 @@ const turnLogic = {
 
                 let buffSheet = ATKObjects.pelaTechniqueDEFDEBUFFSHEET;
                 for (let enemySlot of battleData.enemyPositions) {
-                    battleActions.updateBuff(battleData,enemySlot,buffSheet);
+                    updateBuff(battleData,enemySlot,buffSheet);
                 }
                 poke("TechniqueEnd",battleData,{sourceTurn});
             },
@@ -14601,7 +14600,7 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "The Secret Strategy trace bonus to allies",
@@ -14636,8 +14635,6 @@ const turnLogic = {
                     let buffName = buffSheet.buffName;
                     const buffCheck = sourceTurn.buffsObject[buffName];
 
-                    
-                    const updateBuff = battleActions.updateBuff;
                     if (!buffCheck && targetDebuffs) {
                         updateBuff(battleData,sourceTurn,buffSheet);
                     }
@@ -15059,7 +15056,7 @@ const turnLogic = {
 
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 
                 valuesRef.bonanzaStacks = rank>=6 ? 3 : 2;
                 valuesRef.isBonanzaActive = true;
@@ -15203,7 +15200,7 @@ const turnLogic = {
                         "isDebuff": true,
                         "actionTags": ["FUA"]
                     }
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Topaz: numby event creation",
@@ -15227,7 +15224,7 @@ const turnLogic = {
                     charValuesRef.enemyWithDebt = battleData.primaryTarget;
                     if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
                     let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
-                    battleActions.updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
+                    updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Topaz: Proof of Debt death swap",
@@ -15280,7 +15277,7 @@ const turnLogic = {
                     }
                     else {//if weakness found, apply buff
                         if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -15421,7 +15418,7 @@ const turnLogic = {
                         let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
 
 
-                        battleActions.updateBuff(battleData,enemyWithDebt,buffSheet);
+                        updateBuff(battleData,enemyWithDebt,buffSheet);
                         const buffCheck = enemyWithDebt.buffsObject[buffName];
                         if (buffCheck.currentStacks === 2) {
                             enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
@@ -15736,7 +15733,7 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                 const lessThanMax = battleValues.skillCounter < 5;
 
-                if (!buffCheck || buffCheck.currentStacks < buffCheck.maxStacks) {battleActions.updateBuff(battleData,sourceTurn,buffSheet);}
+                if (!buffCheck || buffCheck.currentStacks < buffCheck.maxStacks) {updateBuff(battleData,sourceTurn,buffSheet);}
 
                 if (lessThanMax) {
                     sourceTurn.ArcherCanDoExtraTurn = true;
@@ -15808,7 +15805,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObject.archerUltimateE2IMPLANTSHEET;
-                    battleActions.updateBuff(battleData,currentEnemy,buffSheet);
+                    updateBuff(battleData,currentEnemy,buffSheet);
                     //NOTE: the e2 weakness implant can double stack with silver wolf's implant, but sw implant has to come first
                     //just checked and sw weakness check DOES look for implanted weaknesses too, and won't do the 20% RES reduction if archer's goes first.
                 }
@@ -16108,7 +16105,7 @@ const turnLogic = {
                         }
 
                         let buffSheet = this.spChangeGuardianCRITDMGSHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -16160,7 +16157,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Archer - +Ult DMG - E4",
@@ -16204,7 +16201,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Archer - Skill DEF Shred - E6",
@@ -16370,7 +16367,7 @@ const turnLogic = {
                 poke("SkillStart",battleData,{sourceTurn});
 
                 const buffSheet = ATKObjects.seeleSkillSPDSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 // poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Skill Use"});
 
                 if (!isExtraSkill) {//energy is never gained unless it's the reg skill, not inserted
@@ -16442,11 +16439,6 @@ const turnLogic = {
                 poke("SeeleEnterAmplification",battleData,null);
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                // if (rank >= 2) {
-                //     const buffSheet2 = ATKObjects.jingliuE2PostUltDMGSHEET;
-                //     battleActions.updateBuff(battleData,sourceTurn,buffSheet2);
-                // }
 
                 sourceTurn.ultyQueued = false;
             },
@@ -16600,7 +16592,7 @@ const turnLogic = {
                         "expireType": "EndTurn",
                         // "actionTags": ["JingliuEnhanced"],
                     }
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
 
                     const battleValues = ownerTurn.battleValues;
 
@@ -16808,7 +16800,7 @@ const turnLogic = {
                         "expireType": "EndTurn",
                         // "actionTags": ["JingliuEnhanced"],
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Seele Entered Amplification",
@@ -16913,7 +16905,7 @@ const turnLogic = {
                                 removeBuff(battleData,ownerTurn,buffSheet);
                             }
                         }
-                        else if (HPCheck80) {battleActions.updateBuff(battleData,ownerTurn,buffSheet);}
+                        else if (HPCheck80) {updateBuff(battleData,ownerTurn,buffSheet);}
                     },
                     "target": "self",
                     "listenerName": "E1 <=80%HP Target Checker",
@@ -16999,7 +16991,7 @@ const turnLogic = {
                                     battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
                                 }
                                 if (validTag) {
-                                    battleActions.updateBuff(battleData,currentEnemy,buffSheet);
+                                    updateBuff(battleData,currentEnemy,buffSheet);
                                 }
                             }
                             
@@ -17225,7 +17217,6 @@ const turnLogic = {
                 let buffSheet = ATKObjects.tingyunSkillBENEDICTIONSHEET;
                 buffSheet[ATKFlat] = finalBuff;
 
-                const updateBuff = battleActions.updateBuff;
                 let charValuesRef = logicRef.characterValuesBattle;
                 if (charValuesRef.charWithBenediction) {//if someone exists on the team right now with benediction
                     let oldTarget = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
@@ -17397,7 +17388,7 @@ const turnLogic = {
                 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
                 let buffSheet = ATKObjects.tingyunUltimateDMGSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -17471,7 +17462,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "Tingyun - Major Trace: Knell Subdual",
@@ -17594,7 +17585,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn"
                         }
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E1 spd boost controller",
@@ -17865,7 +17856,7 @@ const turnLogic = {
                     }
                 }
                 const buffSheet = ATKObjects.bronyaAdvanceSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
 
                 if (e1) {
                     const quickRef = sourceTurn.battleValues;
@@ -17901,7 +17892,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObjects.bronyaAdvanceE2SHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 }
 
                 poke("SkillEnd",battleData,{sourceTurn});
@@ -17985,7 +17976,7 @@ const turnLogic = {
 
                 for (let targetTurn of battleData.allyPositions) {
                     buffSheet.target = targetTurn.properName;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                    updateBuff(battleData,targetTurn,buffSheet)
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -18018,7 +18009,7 @@ const turnLogic = {
                     }
                     const buffSheet = this.bronyaMightDMGSHEET;
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Bronya - Major Trace: Military Might",
@@ -18052,7 +18043,7 @@ const turnLogic = {
                     const buffSheet = this.bronyaBattlefieldDEFSHEET;
 
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Bronya - Major Trace: Battlefield",

@@ -31,6 +31,8 @@
         <h4>Fixes</h4>
         <li>Fixed an issue where cached values in repeated attacks could fail to update in prolonged battles with multiple targets, causing late-battle dmg values to be slightly wrong after gaining/losing a buff.</li>
         
+        <h4>Optimization</h4>
+        <li>Unified updateBuff calls amidst all the code. While the function itself has been redone several times, it is one of the oldest functions in the calc so the way it was referenced wasn't always uniform.</li>
     </ul>
 </div>
 <div>
