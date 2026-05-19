@@ -2571,7 +2571,7 @@ const turnLogicLightcones = {
                         sourceTurn.lc3starMultiVALUE = rankParams[0];
                     }
                     const advValue = sourceTurn.lc3starMultiVALUE;
-                    battleActions.actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
+                    actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
                 },
                 "target": "team",
                 "listenerName": "Multiplication basic atk start advance listener",
@@ -5437,7 +5437,6 @@ const turnLogicLightcones = {
                     }
                     let values = sourceTurn.danceDanceDanceREF;
                     
-                    const actionAdvance = battleActions.actionAdvance;
                     for (let targetTurn of battleData.allyPositions) {
                         actionAdvance(values,targetTurn,battleData,lcNameRef);
                     }
@@ -6359,7 +6358,7 @@ const turnLogicLightcones = {
                             summonAssignedTo.makeFarewellsAdvancementVALUES = lcPathing[ownerRank-1];
                         }
                         const rankParams = summonAssignedTo.makeFarewellsAdvancementVALUES;
-                        battleActions.actionAdvance(rankParams[3],summonAssignedTo,battleData,"Memosprite vanished advancement - Make Farewells More Beautiful");
+                        actionAdvance(rankParams[3],summonAssignedTo,battleData,"Memosprite vanished advancement - Make Farewells More Beautiful");
                         summonAssignedTo.makeFarewellsAdvanceUsed = true;
                     }
                 },
@@ -9116,7 +9115,7 @@ const turnLogicRelics = {
                         if (!ownerRank) {return;}
 
                         let relicNameRef = "Eagle of Twilight Line";
-                        battleActions.actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
+                        actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
                     },
                     "target": "self",
                     "listenerName": "Eagle - Advance/Ult",
@@ -11878,7 +11877,6 @@ const turnLogicRelics = {
                     condition(battleData,generalInfo) {
                         let ownerRef = this.owners;
                         let relicNameRef = "Sprightly Vonwacq";
-                        let advance = battleActions.actionAdvance;
                         let amount = 0.40;
                         //TODO: need to look into whether speed buffs applied as you enter combat, can count
                         //bc if so I need to move this to the battlestart trigger next to dmg techniques
@@ -11887,7 +11885,7 @@ const turnLogicRelics = {
                         for (let owner of ownerRef) {
                             let currentTurn = namedTurns[owner.slot];
                             if (currentTurn.SPD >= 120) {
-                                advance(amount,currentTurn,battleData,relicNameRef);
+                                actionAdvance(amount,currentTurn,battleData,relicNameRef);
                             }
                         }
                     },

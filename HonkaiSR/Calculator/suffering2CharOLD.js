@@ -72,10 +72,10 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("BasicATKStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
 
-                battleActions.updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
+                updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
             },
             applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -148,7 +148,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 let rank = sourceTurn.rank;
                 let e6 = rank >= 6;
 
@@ -168,7 +168,7 @@ const turnLogic = {
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
+                if (targetTurn.properName != "Sparkle") {actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             sparkleUltimate(battleData,sourceTurn) {
@@ -186,8 +186,7 @@ const turnLogic = {
 
                 let spRecovery = 4 + (e4 ? 1 : 0);
 
-                const energy = battleActions.updateEnergy;
-                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
 
                 const buffNAMES = logicRef.buffNames;
@@ -250,7 +249,7 @@ const turnLogic = {
                     //so we'll see later if some e6-haver complains.
                 }
 
-                energy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
@@ -621,7 +620,7 @@ const turnLogic = {
 
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
             statCheck(battleData,currentTurn) {
@@ -921,7 +920,7 @@ const turnLogic = {
 
                 for (let enemy of allBlastTargets) {updateBuff(battleData,enemy,debuffSheet);}
 
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             blackswanUltimate(battleData,sourceTurn) {
@@ -1004,7 +1003,7 @@ const turnLogic = {
                 
                 const enemyPositions = battleData.enemyPositions;
 
-                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 // logicRef.skillFunctions.addHysilensField(battleData,sourceTurn);
 
                 if (rank>=4) {
@@ -1025,7 +1024,7 @@ const turnLogic = {
                 }
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 sourceTurn.ultyQueued = false;
             },
@@ -1410,7 +1409,7 @@ const turnLogic = {
                         if (!buffCheck) {return;}
                         //if the enemy died with no debuff, then we can abort
 
-                        battleActions.updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                        updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
                         ownerTurn.isReadyForE4Regen = false;
                     },
                     "target": "self",
@@ -1434,7 +1433,7 @@ const turnLogic = {
                         const buffCheck = sourceTurn.buffsObject[epiphanyName];
                         if (!buffCheck) {return;}
 
-                        battleActions.updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                        updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
                         ownerTurn.isReadyForE4Regen = false;
                     },
                     "target": "self",
@@ -1614,7 +1613,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("BasicATKStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
             fireflySkillReg(battleData,target,sourceTurn) {
@@ -1658,14 +1657,14 @@ const turnLogic = {
                 poke("SkillStart",battleData,{sourceTurn});
 
                 const energyBump = sourceTurn.maxEnergy * 0.60;
-                battleActions.updateEnergy(battleData,energyBump,sourceTurn,true);
+                updateEnergy(battleData,energyBump,sourceTurn,true);
                 // battleActions.consumeHP(battleData,isAllAllies,percent,targetTurn,sourceTurn)
                 battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
                 poke("SkillEnd",battleData,{sourceTurn});
-                battleActions.actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
+                actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
             },
             fireflyUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -1711,18 +1710,17 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
 
-                const energy = battleActions.updateEnergy;
-                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 updateBuff(battleData,sourceTurn,buffSheet);
                 logicRef.characterValuesBattle.combustionActive = true;
 
-                energy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 // let newCharge = Math.min(4,chargeRef.charge + 2)
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
+                actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
 
                 const ActionEntry = sourceTurn.fireflyUltimateCOMBUSTTURNEVENT ??= {
                     // name:characterEntry,
@@ -1829,7 +1827,7 @@ const turnLogic = {
                 // let healed = battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillSlot,timesToApply)
                 battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1)
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//NO ENERGY ASSOCIATED WITH THIS ATTACK
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//NO ENERGY ASSOCIATED WITH THIS ATTACK
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
             fireflySkillEnhanced(battleData,target,sourceTurn) {
@@ -1930,7 +1928,7 @@ const turnLogic = {
                 // console.log(multiRef,values[1])
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             pullMultiCUSTOMFIREFLY(sourceTurn,targetTurn,dmgNeedsElationComposite,table,tableONHIT,hitType,ATKObject) {
@@ -2089,7 +2087,7 @@ const turnLogic = {
                     const currentEnergy = ownerTurn.currentEnergy;
                     const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
 
-                    if (energyToRegen) {battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
+                    if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
                 },
                 "target": "self",
                 "listenerName": "Firefly talent: energy regen on battleStart",

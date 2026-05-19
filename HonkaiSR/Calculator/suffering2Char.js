@@ -2215,7 +2215,7 @@ const battleActions = {
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
 
-                if (!targetTurn.isDead) {battleActions.actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
             else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
                 const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
@@ -2581,7 +2581,7 @@ const battleActions = {
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
 
-                if (!targetTurn.isDead) {battleActions.actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
             else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
                 const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
@@ -3815,7 +3815,7 @@ const battleActions = {
 
         // if (enemiesThatBroke.length) {
         //     for (let brokenEnemy of enemiesThatBroke) {
-        //         if (!brokenEnemy.isDead) {battleActions.actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+        //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
         //     }
         // }
 
@@ -4063,7 +4063,6 @@ const battleActions = {
         
 
         // if (enemiesThatBroke.length) {
-        //     const actionAdvance = battleActions.actionAdvance;
         //     for (let brokenEnemy of enemiesThatBroke) {
         //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
         //     }
@@ -4288,7 +4287,6 @@ const battleActions = {
         if (!isEnemy) {battleData.battleDamageSUM += totals.totalAVGDMG + totals2.totalAVGDMG;}
 
         // if (enemiesThatBroke.length) {
-        //     const actionAdvance = battleActions.actionAdvance;
         //     for (let brokenEnemy of enemiesThatBroke) {
         //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
         //     }
@@ -5160,6 +5158,7 @@ const healAlly = battleActions.healAlly;
 const updateEnergy = battleActions.updateEnergy;
 const updateBuff = battleActions.updateBuff;
 const updateSkillPoints = battleActions.updateSkillPoints;
+const actionAdvance = battleActions.actionAdvance;
 
 const turnLogic = {
 
@@ -6820,7 +6819,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 logicRef.characterValuesBattle.nextBasicEnhanced = true;
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");//will advance when ult is cast but not within his turn, obv does nothing then
+                actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             besotted(battleData,sourceTurn,targetTurn,e4,values2) {
@@ -14072,7 +14071,7 @@ const turnLogic = {
                     
                         updateBuff(battleData,sourceTurn,buffSheet);
 
-                        battleActions.actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
+                        actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
                     }
                 },
                 "target": "enemy",
@@ -15355,13 +15354,13 @@ const turnLogic = {
 
                     const isFUA = generalInfo.ATKObject.isFUA;
                     if (isFUA) {
-                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
+                        actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
                     }
 
                     const slot = generalInfo.slot;
                     const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
                     if (battleValues.isBonanzaActive && slotCheck) {
-                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
+                        actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
                     }
                     //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
                 },
@@ -15441,7 +15440,7 @@ const turnLogic = {
 
                         const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
                         if (numbyTurn.properName != sourceTurn.properName) {return;}
-                        battleActions.actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
+                        actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
                     },
                     "target": "owner",
                     "listenerName": "Agile Operation",
@@ -16303,7 +16302,7 @@ const turnLogic = {
                 poke("BasicATKStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
-                battleActions.actionAdvance(0.20,sourceTurn,battleData,"Trace: Rippling Waves");
+                actionAdvance(0.20,sourceTurn,battleData,"Trace: Rippling Waves");
 
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
@@ -17812,7 +17811,7 @@ const turnLogic = {
                 poke("TalentStart",battleData,{sourceTurn});
                 let values = ATKObjects.bronyaTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                battleActions.actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
+                actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
                 poke("TalentEnd",battleData,{sourceTurn});
             },
             bronyaAdvance(battleData,target,sourceTurn) {
@@ -17871,7 +17870,7 @@ const turnLogic = {
                     //if the next turn comes up and it's off, then we turn it on so we can regen on the next turn
                 }
 
-                if (targetTurn.properName != characterName) {battleActions.actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
+                if (targetTurn.properName != characterName) {actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 if (e2) {
@@ -18450,7 +18449,6 @@ const turnLogic = {
                 }
 
                 if (targetTurn.path != "Harmony") {
-                    const actionAdvance = battleActions.actionAdvance;
                     if (targetTurn.activeSummons) {
                         const declaredSummons = battleData.declaredSummons;
                         const ownedSummon = targetTurn.summonEventRef;
@@ -19993,7 +19991,6 @@ const turnLogic = {
                 });
 
 
-                const actionAdvance = battleActions.actionAdvance;
                 for (let i=nextAVDupe.length-1;i>=0;i--) {
                     const currentTurn = nextAVDupe[i];
 
@@ -20030,7 +20027,7 @@ const turnLogic = {
                 }
 
                 nextAV.push(robinTurn);
-                battleActions.actionAdvance(1,robinTurn,battleData,"Robin exited Concerto state");
+                actionAdvance(1,robinTurn,battleData,"Robin exited Concerto state");
             },
             ultAddedDMG(battleData,generalInfo,sourceTurn,targetsGotHit) {
                 // battleData,generalInfo,sourceTurn,targetsGotHit
@@ -20146,7 +20143,7 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    battleActions.actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
+                    actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
                 },
                 "target": "self",
                 "listenerName": "Coloratura Cadenza: battlestart advance",
@@ -21211,7 +21208,7 @@ const turnLogic = {
                 const breakEffect = sourceTurn.statTable[DamageBreak];
                 const delayValue = -((breakEffect * values[3]) + values[4]);
                 targetTurn.AV = 0;
-                battleActions.actionAdvance(delayValue,targetTurn,battleData,"Thanataplum Rebloom");
+                actionAdvance(delayValue,targetTurn,battleData,"Thanataplum Rebloom");
                 targetTurn.ruanmeiWaitingToDelay = false;
             },
         },
@@ -21828,7 +21825,7 @@ const turnLogic = {
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
+                if (targetTurn.properName != "Sparkle") {actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             sparkleUltimate(battleData,sourceTurn) {
@@ -22956,7 +22953,6 @@ const turnLogic = {
                             removeBuff(battleData,ownerTurn,manaCheck);
                             updateSkillPoints(1,battleData,{sourceTurn:ownerTurn,sourceName:"Knight of the Dragon"});
 
-                            // battleActions.actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");
                             valuesRef.advanceReady = false;
                             valuesRef.waitingToAdvance = true;
                             //in the event of souldragon from dhpt being on saber, when saber does a skill that would push her over the core resonance threshold
@@ -22977,7 +22973,7 @@ const turnLogic = {
                     const ownerTurn = this.ownerTurn;
                     const battleValues = ownerTurn.battleValues;
                     if (!battleValues.waitingToAdvance) {return;}
-                    battleActions.actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
+                    actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
                     battleValues.waitingToAdvance = false;
                 },
                 "target": "self",
@@ -24379,7 +24375,7 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Entered Spectral Transmigration state");
+                actionAdvance(1,sourceTurn,battleData,"Entered Spectral Transmigration state");
                 const rank = sourceTurn.rank;
                 if (!ATKObjects.jingliuTalentEnhancedSHEET) {
                     let skillRef = ATKObjects.jingliuTalentREF ??= ATKObjects["Talent"]["Crescent Transmigration"].variant1;
@@ -25011,7 +25007,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
                 poke("SkillEnd",battleData,{sourceTurn});
-                battleActions.actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
+                actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
             },
             fireflyUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -25071,7 +25067,7 @@ const turnLogic = {
                 // let newCharge = Math.min(4,chargeRef.charge + 2)
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
+                actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
 
                 const ActionEntry = sourceTurn.fireflyUltimateCOMBUSTTURNEVENT ??= {
                     // name:characterEntry,
@@ -25455,7 +25451,7 @@ const turnLogic = {
                         battleValues.traceDelayRemaining -= 1;//reduce count, we'll always reset this to 3 on any ult usage
 
                         const ActionEntry = ownerTurn.fireflyUltimateCOMBUSTTURNEVENT;
-                        battleActions.actionAdvance(-0.10,ActionEntry,battleData,"Module α: Antilag Outburst - Countdown Delay");
+                        actionAdvance(-0.10,ActionEntry,battleData,"Module α: Antilag Outburst - Countdown Delay");
                     }
                 },
                 "target": "self",
@@ -25947,7 +25943,7 @@ const turnLogic = {
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.isEnhanced = true;
-                battleActions.actionAdvance(0.20,sourceTurn,battleData,"Major Trace: Playing With Fire");//will advance when ult is cast but not within his turn, obv does nothing then
+                actionAdvance(0.20,sourceTurn,battleData,"Major Trace: Playing With Fire");//will advance when ult is cast but not within his turn, obv does nothing then
                 updateEnergy(battleData,5,sourceTurn,false,"Major Trace: Playing With Fire");
 
                 sourceTurn.ultyQueued = false;
@@ -26600,11 +26596,9 @@ const turnLogic = {
                 }
                 else {
                     logicRef.skillFunctions.addMemToField(battleData,sourceTurn);
-                    // battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea gained extra turn");
                 }
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                // if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             addMemToField(battleData,sourceTurn) {
@@ -26855,7 +26849,7 @@ const turnLogic = {
 
                 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot});
-                battleActions.actionAdvance(1,char1,battleData,"Mem's Support");
+                actionAdvance(1,char1,battleData,"Mem's Support");
 
                 const buffSheet = ATKObjects.rmcMemsSupportSHEET;
                 buffSheet.expireParam.targetTurn = char1.name;
@@ -26942,7 +26936,7 @@ const turnLogic = {
                 poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
                 poke("AllyDied",battleData,{targetTurn:deathTurn});
 
-                battleActions.actionAdvance(0.25,ownerTurn,battleData,"Mem Died");
+                actionAdvance(0.25,ownerTurn,battleData,"Mem Died");
             },
             rmcUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -27055,7 +27049,6 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 const enemyPositions = battleData.enemyPositions;
-                const actionAdvance = battleActions.actionAdvance;
                 for (let enemy of enemyPositions) {
                     actionAdvance(-values[1],enemy,battleData,"RMC Technique Delay");
                 }
@@ -27201,7 +27194,7 @@ const turnLogic = {
 
                     if (maxCheck) {
                         
-                        battleActions.actionAdvance(1,memTurn,battleData,"Friends! Together!");
+                        actionAdvance(1,memTurn,battleData,"Friends! Together!");
                         ownerTurn.battleValues.memIsEnhanced = true;
                     }
                 },
@@ -27290,7 +27283,7 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    battleActions.actionAdvance(0.30,ownerTurn,battleData,"Rhapsode's Scepter");
+                    actionAdvance(0.30,ownerTurn,battleData,"Rhapsode's Scepter");
                 },
                 "target": "self",
                 "listenerName": "Rhapsode's Scepter: battlestart action advance",
@@ -27663,7 +27656,7 @@ const turnLogic = {
                 }
                 else {
                     logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
-                    battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea advanced");
+                    actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea advanced");
                 }
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -27786,7 +27779,7 @@ const turnLogic = {
                 poke("AllyCreated",battleData,{targetTurn:garmentTurnObject});
                 battleActions.assignAttackTargetsEnemy(battleData);
 
-                battleActions.actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
+                actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
             },
             garmentTurnAttack(battleData,memoTurn) {
                 // eventOwner: ownerTurn.name
@@ -27942,7 +27935,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Aglaea Ult Advance");
+                actionAdvance(1,sourceTurn,battleData,"Aglaea Ult Advance");
                 const ActionEntry = sourceTurn.aggySupremeStanceCountdownTURNEVENT ??= {
                     name:null,
                     AV:10000/100,
@@ -29239,7 +29232,7 @@ const turnLogic = {
                 updateBuff(battleData,sourceTurn,buffSheet);
                 updateBuff(battleData,eveyTurn,buffSheet);
 
-                battleActions.actionAdvance(1,eveyTurn,battleData,"Evey summoned advance");
+                actionAdvance(1,eveyTurn,battleData,"Evey summoned advance");
             },
             eveyTurnAttack(battleData,memoTurn) {
                 // eventOwner: ownerTurn.name
@@ -29726,7 +29719,7 @@ const turnLogic = {
                     const isReadyForAdvance = ownerTurn.memoriaIsReadyForAdvance;
                     const eveyTurn = ownerTurn.everEveyTURNEVENT;
                     if (resoRef >= 16 && isReadyForAdvance && eveyTurn.isActive) {
-                        battleActions.actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
+                        actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
                         ownerTurn.memoriaIsReadyForAdvance = false;
                     }
                 },
@@ -30584,7 +30577,7 @@ const turnLogic = {
                 const icaTurn = eventTurn;
 
                 //the advance value does NOT scale with trace level
-                battleActions.actionAdvance(0.30,ownerTurn,battleData,"Ica died - Hyacine advance");
+                actionAdvance(0.30,ownerTurn,battleData,"Ica died - Hyacine advance");
                 
                 icaTurn.currentHP = 0;
                 icaTurn.isDead = true;
@@ -32155,7 +32148,7 @@ const turnLogic = {
 
                 battleValues.souldragonEnhanced = true;
 
-                if (rank>=2) {battleActions.actionAdvance(1,sourceTurn.dhptSouldragonTURNEVENT,battleData,"E2: Souldragon advanced");}
+                if (rank>=2) {actionAdvance(1,sourceTurn.dhptSouldragonTURNEVENT,battleData,"E2: Souldragon advanced");}
 
                 sourceTurn.ultyQueued = false;
             },
@@ -32545,7 +32538,7 @@ const turnLogic = {
 
                     const dragonTurn = ownerTurn.dhptSouldragonTURNEVENT;
                     updateEnergy(battleData,6,ownerTurn,false,"Sylvanity (Bondmate Attack)");
-                    battleActions.actionAdvance(0.15,dragonTurn,battleData,"Sylvanity (Bondmate Attack)");
+                    actionAdvance(0.15,dragonTurn,battleData,"Sylvanity (Bondmate Attack)");
                 },
                 "target": "self",
                 "listenerName": "Sylvanity: Bondmate attack action advance + energy",
@@ -32555,7 +32548,7 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    battleActions.actionAdvance(0.40,ownerTurn,battleData,"Sylvanity");
+                    actionAdvance(0.40,ownerTurn,battleData,"Sylvanity");
                 },
                 "target": "self",
                 "listenerName": "Sylvanity: battlestart action advance",
@@ -37492,7 +37485,7 @@ const turnLogic = {
                     battleActions.queueInstantUltimateUse(battleData,queueObject);
                 }
                 else {
-                    battleActions.actionAdvance(0.50,targetTurn,battleData,"EMC Ult - Non-Elation Target");
+                    actionAdvance(0.50,targetTurn,battleData,"EMC Ult - Non-Elation Target");
                 }
 
 
