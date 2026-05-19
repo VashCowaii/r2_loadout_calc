@@ -1661,7 +1661,7 @@ const battleActions = {
             }
         }
         const currentBreakCaching = breakTagging[preCacheTag];
-        const compositeCacheTag = currentBreakCaching.realTag;
+        const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
         const newTags = currentBreakCaching.newTags;
         const actionTags = currentBreakCaching.actionTags;
         const realPENKeys = currentBreakCaching.realPENKeys;
@@ -1784,7 +1784,7 @@ const battleActions = {
             }
         }
         const currentBreakCaching = breakTagging[preCacheTag];
-        const compositeCacheTag = currentBreakCaching.realTag;
+        const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
         const newTags = currentBreakCaching.newTags;
         const actionTags = currentBreakCaching.actionTags;
         const realPENKeys = currentBreakCaching.realPENKeys;
@@ -1879,6 +1879,7 @@ const battleActions = {
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
             instanceTag
         } = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
@@ -1909,7 +1910,7 @@ const battleActions = {
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag});
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
-        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
+        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
         if (energyGain && !ignoreEnergy) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
@@ -1962,9 +1963,9 @@ const battleActions = {
         let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
-        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         // console.log(totalCritDMG,totalCritRate)
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
@@ -2246,6 +2247,7 @@ const battleActions = {
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,bonusScalar,DMGTags,realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,ElationPercentOverride,
             instanceTag
         } = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
@@ -2334,10 +2336,10 @@ const battleActions = {
         let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
-        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
-        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
 
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
 
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
@@ -2773,6 +2775,7 @@ const battleActions = {
         // ATKObject.fixedCritDMG,ATKObject.fixedCritRate
         // ATKObject.realDMGKeys, ATKObject.realPENKeys, ATKObject.realShredKeys, ATKObject.realVulnKeys
         const {actionTags,multipliers,scalar,compositeCacheTag,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,fixedCritDMG,fixedCritRate} = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const currentMulti = multipliers.additional;
 
 
@@ -2791,9 +2794,9 @@ const battleActions = {
         
         let multiOf = scalar ? pullScalar(statTable,statTableONHIT,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
-        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
     
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
 
@@ -2913,6 +2916,7 @@ const battleActions = {
         // ATKObject.fixedCritDMG,ATKObject.fixedCritRate
         // ATKObject.realDMGKeys, ATKObject.realPENKeys, ATKObject.realShredKeys, ATKObject.realVulnKeys
         const {actionTags,multipliers,scalar,compositeCacheTag,DMGTags,realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,fixedCritDMG,fixedCritRate,ElationPercentOverride,BangerValueOverride} = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const currentMulti = multipliers.elation;
 
 
@@ -2931,9 +2935,9 @@ const battleActions = {
         let multiOf = battleActions.elationLevelRef;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
         // console.log(ElationPercentOverride,ATKObject)
-        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
         
-        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
 
         // console.log(sumDMG,compositeCacheTag)
@@ -2948,7 +2952,7 @@ const battleActions = {
 
 
         //resistance and PEN
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
 
         // Outgoing DMG = Base DMG * DMG% Multiplier * DEF Multiplier * RES Multiplier * DMG Taken Multiplier * Universal DMG Reduction Multiplier * Weaken Multiplier
 
@@ -3219,7 +3223,7 @@ const battleActions = {
             // console.log(element)
             multiOf = pullScalar(playerStats,playerStatsONHIT,targetStatsSourceBased,scalar);//the stat that this attacks scales off of, so ATK or HP etc
 
-            const compositeCacheTag = currentBuff.compositeCacheTag;
+            const compositeCacheTag = currentBuff.compositeCacheTag + targetTurn.properName;
             // sourceTurn.hysilensTalentDOTSHEETPhysical = {
             //     "stats": null,
             //     "source": characterName,
@@ -3324,7 +3328,7 @@ const battleActions = {
                 }
             }
             const currentBreakCaching = breakTagging[element];
-            const compositeCacheTag = currentBreakCaching.realTag;
+            const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
             tags = currentBreakCaching.newTags;
             const actionTags = currentBreakCaching.actionTags;
             const realPENKeys = currentBreakCaching.realPENKeys;
@@ -4465,11 +4469,11 @@ const battleActions = {
                 }
             }
 
-            targetDeposit.cacheValue = bonus;
+            sourceDeposit.cacheValue = bonus;
         }
         // let sourceMulti = 1 + (isFixedHealing ? 0 : (sourceStats[HealingOutgoing] + targetStats[HealingIncoming]));
 
-        return targetDeposit.cacheValue;
+        return sourceDeposit.cacheValue;
     },
     healed(battleData,targetTurn,skillSlot,percent,flat,generalInfo,isFixedHealing) {
         // const generalInfo = {sourceTurn,skillSlot,scalar:healObject.scalar,totals};
@@ -4700,11 +4704,11 @@ const battleActions = {
                 }
             }
 
-            targetDeposit.cacheValue = bonus;
+            sourceDeposit.cacheValue = bonus;
         }
         // let sourceMulti = 1 + sourceStats[ShieldOutgoing] + targetStats[ShieldIncoming];
 
-        return targetDeposit.cacheValue;
+        return sourceDeposit.cacheValue;
     },
     getShieldValue(battleData,targetTurn,currentReference,sourceRef,sourceTurn) {
         // existingShield,percent,flat,percentCap,flatCap,scalar
