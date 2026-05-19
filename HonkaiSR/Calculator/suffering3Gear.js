@@ -1714,7 +1714,6 @@ const turnLogicLightcones = {
                 },
                 "target": "enemy",
                 "listenerName": "Time Waits for No One attack listener for additional dmg",
-                "announce": false,
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -1731,7 +1730,6 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "Time Waits for No One - turn start dmg done reset",
-                "announce": false,
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -6787,7 +6785,6 @@ const turnLogicLightcones = {
                 },
                 "target": "enemy",
                 "listenerName": "Long May Rainbows Adorn the Sky -  attack listener for additional dmg",
-                "announce": false,
                 "owners": [],
                 "ownersSlots": {}
             },

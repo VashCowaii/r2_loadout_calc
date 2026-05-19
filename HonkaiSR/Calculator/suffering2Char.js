@@ -1896,6 +1896,7 @@ const battleActions = {
         const actionTablesTarget = targetTurn.tagSpecific;
         const targetStatsTeamBased = emptyTableNeverAdd;
         const isDistributed = ATKObject.isDistributed;
+        totals.totalHits += 1;
     
 
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
@@ -2262,7 +2263,7 @@ const battleActions = {
         const actionTablesTarget = targetTurn.tagSpecific;
         const targetStatsTeamBased = emptyTableNeverAdd;
         const isDistributed = ATKObject.isDistributed;
-    
+        totals.totalHits += 1;
 
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
         targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
@@ -3836,7 +3837,7 @@ const battleActions = {
             }
         }
 
-        return {targetsGotHit}
+        return {targetsGotHit,generalInfo}
     },
     attackWrapperChained(battleData,ATKPath,sourceTurn,ATKObject,attackState,chainedAttackRef) {
         let logging = battleData.isLoggyLogger;
@@ -3853,7 +3854,8 @@ const battleActions = {
             totalAVGDMG: 0,
             totalBreakDMG: 0,
             totalBreakSuperDMG: 0,
-            totalOverkill: 0
+            totalOverkill: 0,
+            totalHits: 0,
         }
 
         if (chainedAttackRef) {
@@ -5214,7 +5216,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Universal SPD Change AV Controller",
-                "announce": false
             },
             {
                 "trigger": "UpdateStatHP",//SPD stat change
@@ -5225,7 +5226,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Universal Max HP adjustment controller",
-                "announce": false
             },
             {
                 "trigger": "SummonOnFieldAdjustment",
@@ -5756,9 +5756,7 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Aha Instant SPD Controller",
-                "announce": false
             },
-
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
@@ -7108,7 +7106,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Gallagher - +Energy & EffectRES/Start - E1",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -7141,7 +7138,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Gallagher - +Break Effect/Efficiency - E6",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -9823,7 +9819,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
-                "announce": false,
                 "ownerTurn": {},
             },
         ],
@@ -9848,7 +9843,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "E4 enemy created while zone active listener",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10580,7 +10574,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "E2 Vuln Zombie Network",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10603,7 +10596,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "Silver Wolf E4 additional DMG controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10660,7 +10652,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Silver Wolf E6 bonus DMG ONHIT",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -12486,7 +12477,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Hysilens - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -13281,7 +13271,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Black Swan - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -14821,7 +14810,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "Silver Wolf E4 additional DMG controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -16208,7 +16196,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Archer - +Ult DMG - E4",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -16228,7 +16215,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Archer - +SP/StartTurn - E6",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -16254,7 +16240,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Archer - Skill DEF Shred - E6",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -17645,7 +17630,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E1 spd boost controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -17666,7 +17650,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E2 ally kill count reset",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -17688,7 +17671,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E2 ally energy gain",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -18199,7 +18181,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Bronya E4 FUA stack reset",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -18253,7 +18234,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "Bronya E4 FUA controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -19502,7 +19482,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Enemy created while zone active debuff application",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -19662,7 +19641,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Tribbie ult zone attack listener for additional dmg",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -22342,7 +22320,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Talent vuln(fake) application for new enemies added to field",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -23261,7 +23238,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Saber - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -25620,7 +25596,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Firefly - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -25642,7 +25617,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Firefly Technique",
-                "announce": false,
                 "ownerTurn": {},
             },
         ],
@@ -26291,7 +26265,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Hook talent additional DMG controller",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -26345,7 +26318,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Hook - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -27454,7 +27426,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Trailblazer: Remembrance - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -28884,7 +28855,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Aglaea - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30058,7 +30028,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Enemy created while darkest riddle active debuff application",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30077,7 +30046,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Evernight turnstart riddle expiration",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30223,7 +30191,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Evernight - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30257,7 +30224,6 @@ const turnLogic = {
                     },
                     "target": "team",
                     "listenerName": "Enemy created E1 buff application",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -30271,7 +30237,6 @@ const turnLogic = {
                     },
                     "target": "team",
                     "listenerName": "Enemy killed E1 buff application",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -31572,7 +31537,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Hyacine - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -32787,7 +32751,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "E6 vuln application enemy added to field while bondmate exists",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -34102,7 +34065,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Argenti Generosity trace energy regen per enemy added to field",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -34174,7 +34136,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Argenti - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -35148,7 +35109,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "E2 Vuln Zombie Network",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
