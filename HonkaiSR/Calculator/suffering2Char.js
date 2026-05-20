@@ -18780,8 +18780,6 @@ const turnLogic = {
                                 // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                                 // specialEnergyPoke: "SW999GainMMR",
                                 
-                                targetTurn: null,
-                                
                                 isEnhanced: false,
                                 isTieBreaker: false,
                                 isExtraTurn: false,
@@ -18808,7 +18806,7 @@ const turnLogic = {
                                 elationForcedPunchline: null,
                             }
                             queueObject.sourceTurn = ownerTurn;
-                            queueObject.targetTurn = enemyToFUA;
+                            queueObject.target = enemyToFUA;
                             queueInsertAbility(battleData,queueObject);
                         }
                     },
