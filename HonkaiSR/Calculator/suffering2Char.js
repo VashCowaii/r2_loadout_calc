@@ -8462,17 +8462,41 @@ const turnLogic = {
 
                         if (hpRatio <= 0.30) {
                             const queueObject = this.queueObject ??= {
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
-                                target: this.target,
                                 name: this.listenerName,
-                                properName: ownerTurn.properName,
-                                sourceTurn: null,
                                 priority: priorityList.ability.CharacterHealSelf,
+                                queueTag: "QueuedInsert",
+
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
+                                action: "Insert", 
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useFUATriggers: false,
+                                useAnyTriggers: true,
                                 eventTypeStartLOG: "GenericAbilityStart",
                                 eventTypeStart: "GenericAbilityStart",
                                 eventTypeEnd: "GenericAbilityEnd",
-                                useFUATriggers: false,
-                                useAnyTriggers: true,
+
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                                target: this.target,
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                                elationForcedPunchline: null,
                             }
     
                             queueObject.sourceTurn = ownerTurn;
@@ -9604,17 +9628,41 @@ const turnLogic = {
                         valuesRef.zoneIsQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
-                            target: this.target,
                             name: this.listenerName,
+                            priority: priorityList.ability.CharacterBuffSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,//no need to specify any eventType stuff here since the skill action itself has the pokes already
+                            eventTypeStartLOG: "GenericAbilityStart",
+                            eventTypeStart: "GenericAbilityStart",
+                            eventTypeEnd: "GenericAbilityEnd",
+                            
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            priority: priorityList.ability.CharacterBuffSelf,
-                            // eventTypeStartLOG: "GenericAbilityStart",
-                            // eventTypeStart: "GenericAbilityStart",
-                            // eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: false,
-                            useAnyTriggers: false,//no need to specify any eventType stuff here since the skill action itself has the pokes already
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
 
                         queueObject.sourceTurn = ownerTurn;
@@ -9750,17 +9798,41 @@ const turnLogic = {
                         }
 
                         const queueObject = this.queueObjectSkill ??= {
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
-                            target: null,
                             name: this.listenerName,
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterHealOthers,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: false,
+                            useFUATriggers: false,
+                            useAnyTriggers: false,//no need to specify any eventType stuff here since the skill action itself has the pokes already
                             // eventTypeStartLOG: "GenericAbilityStart",
                             // eventTypeStart: "GenericAbilityStart",
                             // eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: false,
-                            useAnyTriggers: false,//no need to specify any eventType stuff here since the skill action itself has the pokes already
+                            
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: null,
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
 
                         queueObject.sourceTurn = ownerTurn;
@@ -11242,17 +11314,41 @@ const turnLogic = {
                         valuesRef.fuaStackDebt += 1;
 
                         const queueObject = this.queueObject ??= {
-                            actionCall: turnLogic[characterName].skillFunctions.kafkaFUA,
-                            target: this.target,
                             name: this.listenerName,
-                            properName: characterName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[characterName].skillFunctions.kafkaFUA,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: true,
+                            useAnyTriggers: true,
                             // eventTypeStartLOG: "GenericAbilityStart",
                             // eventTypeStart: "GenericAbilityStart",
                             // eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
+
+                            properName: characterName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueInsertAbility(battleData,queueObject);
@@ -15348,18 +15444,41 @@ const turnLogic = {
                     const isEnhanced = valuesRef.isBonanzaActive;
 
                     const queueObject = this.queueObject ??= {
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttackAction,
-                        target: "enemy",
                         name: this.listenerName,
-                        properName: generalInfo.eventTurn.properName,
-                        sourceTurn: null,
                         priority: priorityList.ability.STAGE_Character,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttackAction,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: true,
+                        useAnyTriggers: true,
                         // eventTypeStartLOG: "GenericAbilityStart",
                         // eventTypeStart: "GenericAbilityStart",
                         // eventTypeEnd: "GenericAbilityEnd",
-                        useFUATriggers: true,
-                        useAnyTriggers: true,
-                        isEnhanced: false,
+
+                        properName: generalInfo.eventTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
                     }
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.isEnhanced = isEnhanced;
@@ -16325,17 +16444,41 @@ const turnLogic = {
                     if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
 
                         const queueObject = this.queueObject ??= {
-                            actionCall: turnLogic[characterName].skillFunctions.archerFUA,
-                            target: this.target,
                             name: this.listenerName,
-                            properName: characterName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[characterName].skillFunctions.archerFUA,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: true,
+                            useAnyTriggers: true,
                             // eventTypeStartLOG: "GenericAbilityStart",
                             // eventTypeStart: "GenericAbilityStart",
                             // eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
+
+                            properName: characterName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueInsertAbility(battleData,queueObject);
@@ -18626,18 +18769,43 @@ const turnLogic = {
                             valuesRef.e4FUAReady = false;
     
                             const queueObject = this.queueObject ??= {
-                                actionCall: logicRef.skillFunctions.bronyaFUABasic,
-                                target: this.target,
                                 name: this.listenerName,
-                                properName: characterName,
-                                sourceTurn: null,
-                                targetTurn: null,
                                 priority: priorityList.ability.CharacterAttackFromSelf,
+                                queueTag: "QueuedInsert",
+
+                                actionCall: logicRef.skillFunctions.bronyaFUABasic,
+                                action: "Insert", 
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                targetTurn: null,
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: true,
+                                isAbility: true,
+                                useFUATriggers: true,
+                                useAnyTriggers: true,
                                 // eventTypeStartLOG: "GenericAbilityStart",
                                 // eventTypeStart: "GenericAbilityStart",
                                 // eventTypeEnd: "GenericAbilityEnd",
-                                useFUATriggers: true,
-                                useAnyTriggers: true,
+
+                                properName: characterName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                                target: this.target,
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                                elationForcedPunchline: null,
                             }
                             queueObject.sourceTurn = ownerTurn;
                             queueObject.targetTurn = enemyToFUA;
@@ -19921,17 +20089,41 @@ const turnLogic = {
                     sourceTurn.usedTribbieFUA = true;
 
                     const queueObject = this.queueObject ??= {
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieFUA,
-                        target: this.target,
                         name: this.listenerName,
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
                         priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieFUA,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: true,
+                        useAnyTriggers: true,
                         // eventTypeStartLOG: "GenericAbilityStart",
                         // eventTypeStart: "GenericAbilityStart",
                         // eventTypeEnd: "GenericAbilityEnd",
-                        useFUATriggers: true,
-                        useAnyTriggers: true,
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
                     }
                     queueObject.sourceTurn = ownerTurn;
 
@@ -22001,17 +22193,41 @@ const turnLogic = {
                     //this won't be part of the insert, but will tell the enemy to end its turn anyways, then the insert will happen right after
 
                     const queueObject = this.queueObject ??= {
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiReBreak,
-                        target: this.target,
                         name: this.listenerName,
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
                         priority: priorityList.ability.STAGE_Character,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiReBreak,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: false,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,//no need to specify any eventType stuff here since the skill action itself has the pokes already
                         eventTypeStartLOG: "GenericAbilityStart",
                         eventTypeStart: "GenericAbilityStart",
                         eventTypeEnd: "GenericAbilityEnd",
-                        useFUATriggers: false,
-                        useAnyTriggers: true,//no need to specify any eventType stuff here since the skill action itself has the pokes already
+                        
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
                     }
 
                     queueObject.sourceTurn = ownerTurn;
@@ -24573,17 +24789,41 @@ const turnLogic = {
                         ownerTurn.bladeFUAIsQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
-                            target: this.target,
                             name: this.listenerName,
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: true,
+                            useAnyTriggers: true,
                             // eventTypeStartLOG: "GenericAbilityStart",
                             // eventTypeStart: "GenericAbilityStart",
                             // eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn =  ownerTurn;
                         queueInsertAbility(battleData,queueObject);
@@ -25249,17 +25489,41 @@ const turnLogic = {
                         valuesRef.enhancedQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
-                            target: this.target,
                             name: this.listenerName + ": Reached 2+ Syzygy",
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterBuffSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
                             eventTypeStartLOG: "GenericAbilityStart",
                             eventTypeStart: "GenericAbilityStart",
                             eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: false,
-                            useAnyTriggers: true,
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
 
                         queueObject.sourceTurn = ownerTurn;
@@ -26428,20 +26692,41 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
 
                     const queueObject = this.queueObject ??= {
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyTechniqueDMG,
-                        target: null,
                         name: "Firefly Technique",
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
                         priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyTechniqueDMG,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
                         eventTypeStartLOG: "TechniqueStart",
                         eventTypeStart: "TechniqueStart",
                         eventTypeEnd: "TechniqueEnd",
-                        useFUATriggers: false,
-                        useAnyTriggers: true,
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
                         // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-                        // eventImage: graphs.summonCustomImages["Numby"],
-                        // BattleEvent_1506_Box.png
+
+                        target: null,
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
                     }
                     queueObject.sourceTurn = ownerTurn;
                     queueInsertAbility(battleData,queueObject);
@@ -29206,17 +29491,41 @@ const turnLogic = {
                     const garmentTurn = ownerTurn.aggyGarmentTURNEVENT;
 
                     const queueObject = this.queueObject ??= {
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.garmentDeathFunctionForced,
-                        target: "self",
                         name: this.listenerName,
-                        properName: garmentTurn.properName,
-                        sourceTurn: null,
                         priority: priorityList.ability.CharacterBuffOthers,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.garmentDeathFunctionForced,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: false,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
                         eventTypeStartLOG: "GenericAbilityStart",
                         eventTypeStart: "GenericAbilityStart",
                         eventTypeEnd: "GenericAbilityEnd",
-                        useFUATriggers: false,
-                        useAnyTriggers: true,
+
+                        properName: garmentTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "self",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
                     }
                     queueObject.sourceTurn = garmentTurn;
                     queueInsertAbility(battleData,queueObject);
@@ -33368,35 +33677,82 @@ const turnLogic = {
                         valuesRef.souldragonEnhancedTurns -= 1;
 
                         const queueObject = this.queueObject ??= {
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.souldragonTurnAttackEnhanced,
-                            target: "enemy",
                             name: this.listenerName + " [FUA ATTACK]",
-                            properName: dragonTurn.properName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.souldragonTurnAttackEnhanced,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: true,
+                            useAnyTriggers: true,
                             // eventTypeStartLOG: "GenericAbilityStart",
                             // eventTypeStart: "GenericAbilityStart",
                             // eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
 
+                            properName: dragonTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: "enemy",
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueInsertAbility(battleData,queueObject); 
                     }
                     else {
                         const queueObject = this.queueObject2 ??= {
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptTalentShield,
-                            target: "team",
                             name: this.listenerName + " [SHIELD]",
-                            properName: dragonTurn.properName,
-                            sourceTurn: null,
                             priority: priorityList.ability.CharacterBuffSelf,
+                            queueTag: "QueuedInsert",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptTalentShield,
+                            action: "Insert", 
+                            points: 0,
+                            energyCost: null,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: false,
+                            useFUATriggers: false,
+                            useAnyTriggers: false,
                             eventTypeStartLOG: "GenericAbilityStart",
                             eventTypeStart: "GenericAbilityStart",
                             eventTypeEnd: "GenericAbilityEnd",
-                            useFUATriggers: false,
-                            useAnyTriggers: false,
+
+                            properName: dragonTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: "team",
+                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueInsertAbility(battleData,queueObject);
@@ -34215,17 +34571,41 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
 
                             const queueObject = this.queueObject ??= {
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.aventurineFUA,
-                                target: "enemy",
                                 name: this.listenerName,
-                                properName: characterName,
-                                sourceTurn: null,
                                 priority: priorityList.ability.CharacterAttackFromSelf,
+                                queueTag: "QueuedInsert",
+
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.aventurineFUA,
+                                action: "Insert", 
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: true,
+                                isAbility: true,
+                                useFUATriggers: true,
+                                useAnyTriggers: true,
                                 // eventTypeStartLOG: "GenericAbilityStart",
                                 // eventTypeStart: "GenericAbilityStart",
                                 // eventTypeEnd: "GenericAbilityEnd",
-                                useFUATriggers: true,
-                                useAnyTriggers: true,
+
+                                properName: characterName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                                target: "enemy",
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                                elationForcedPunchline: null,
                             }
                             queueObject.sourceTurn = ownerTurn;
                             queueInsertAbility(battleData,queueObject);
@@ -39930,17 +40310,41 @@ const turnLogic = {
                             battleValues.fuaIsQueued = true;
 
                             const queueObject = this.queueObject ??= {
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaFUA,
-                                target: this.target,
                                 name: this.listenerName,
-                                properName: ownerTurn.properName,
-                                sourceTurn: null,
                                 priority: priorityList.ability.CharacterAttackFromSelf,
+                                queueTag: "QueuedInsert",
+
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaFUA,
+                                action: "Insert", 
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: true,
+                                isAbility: true,
+                                useFUATriggers: true,
+                                useAnyTriggers: true,
                                 // eventTypeStartLOG: "GenericAbilityStart",
                                 // eventTypeStart: "GenericAbilityStart",
                                 // eventTypeEnd: "GenericAbilityEnd",
-                                useFUATriggers: true,
-                                useAnyTriggers: true,
+
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                                target: this.target,
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                                elationForcedPunchline: null,
                             }
                             queueObject.sourceTurn = ownerTurn;
         
