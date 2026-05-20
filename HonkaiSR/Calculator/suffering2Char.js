@@ -7036,9 +7036,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -7645,9 +7646,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -8350,9 +8352,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -8959,9 +8962,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -9771,9 +9775,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -10519,9 +10524,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -11228,9 +11234,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -12481,9 +12488,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -13279,9 +13287,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -14169,9 +14178,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -14764,9 +14774,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
                             
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -15367,9 +15378,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -16136,9 +16148,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -16901,9 +16914,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -17606,9 +17620,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
                             
-                            target: null,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
@@ -18157,9 +18172,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -18874,9 +18890,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
 
@@ -19670,9 +19687,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -20331,9 +20349,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -20972,9 +20991,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -21620,9 +21640,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -22511,9 +22532,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -23301,9 +23323,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -24178,9 +24201,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -24873,9 +24897,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -25690,9 +25715,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -26450,9 +26476,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -27559,9 +27586,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -28987,9 +29015,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -30316,9 +30345,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -31657,9 +31687,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -32811,9 +32842,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -33639,9 +33671,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -34267,9 +34300,10 @@ const turnLogic = {
                             energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimateCostCheck,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -35117,9 +35151,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -36148,9 +36183,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -37241,9 +37277,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -38143,9 +38180,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+
+                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
@@ -39180,9 +39218,10 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
-                            target: this.target,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            
+                            target: this.target,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
