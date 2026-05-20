@@ -7044,6 +7044,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -7661,6 +7662,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -8374,6 +8376,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -8991,6 +8994,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -9811,6 +9815,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -10567,6 +10572,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -11284,6 +11290,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -12545,6 +12552,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -13351,6 +13359,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -14249,6 +14258,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -14852,6 +14862,7 @@ const turnLogic = {
                             
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -15463,6 +15474,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -16240,6 +16252,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -17013,6 +17026,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -17726,6 +17740,7 @@ const turnLogic = {
                             
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -18284,6 +18299,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -19009,6 +19025,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -19812,6 +19829,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -20481,6 +20499,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -21130,6 +21149,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -21786,6 +21806,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -22685,6 +22706,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -23483,6 +23505,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -24368,6 +24391,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -25071,6 +25095,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -25896,6 +25921,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -26664,6 +26690,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -27781,6 +27808,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -29217,6 +29245,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -30554,6 +30583,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -31903,6 +31933,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -33065,6 +33096,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -33901,6 +33933,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -34537,6 +34570,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -35395,6 +35429,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -36434,6 +36469,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -37535,6 +37571,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -38445,6 +38482,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -39489,6 +39527,7 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
