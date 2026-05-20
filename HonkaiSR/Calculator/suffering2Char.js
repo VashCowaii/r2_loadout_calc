@@ -7034,6 +7034,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -7652,6 +7658,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -8366,6 +8378,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -8984,6 +9002,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -9805,6 +9829,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -10562,6 +10592,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -11280,6 +11316,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -12542,6 +12584,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -13349,6 +13397,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -14248,6 +14302,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -14852,6 +14912,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -15464,6 +15530,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -16242,6 +16314,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -17016,6 +17094,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -17730,6 +17814,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -18289,6 +18379,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -19015,6 +19111,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -19819,6 +19921,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -20489,6 +20597,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -21139,6 +21253,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -21796,6 +21916,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -22696,6 +22822,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -23495,6 +23627,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -24381,6 +24519,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -25085,6 +25229,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -25911,6 +26061,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -26680,6 +26836,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -27798,6 +27960,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -29235,6 +29403,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -30573,6 +30747,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -31923,6 +32103,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -33086,6 +33272,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -33923,6 +34115,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -34560,6 +34758,12 @@ const turnLogic = {
                             energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimateCostCheck,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -35419,6 +35623,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -36459,6 +36669,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -37561,6 +37777,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
@@ -38472,6 +38694,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useFUATriggers: false,
@@ -39517,6 +39745,12 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useFUATriggers: false,
