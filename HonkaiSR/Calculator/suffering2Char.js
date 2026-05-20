@@ -39323,19 +39323,7 @@ const turnLogic = {
 
 
                 if (rank >= 1) {
-                    const queueObject = ATKObjects.evaE1BonusElationSkillObject ??= {
-                        actionCall: logicRef.skillFunctions.elationSkill,
-                        target: "enemy",
-                        name: "E1 FUA 'Elation Skill' Queue",
-                        properName: sourceTurn.properName,
-                        sourceTurn: null,
-                        isExtraTurn: true,
-                        allowUlts: false,
-                        priority: priorityList.turn.Default,
-                        // elationForcedPunchline: 20,
-                    }
-                    queueObject.sourceTurn = sourceTurn;
-                    queueExtraTurn(battleData,queueObject);
+                    poke("EvanesciaE1ElationQueue",battleData,null);
                 }
 
                 updateEnergy(battleData,10,sourceTurn,false,"Master Fox FUA Ended");
@@ -39900,6 +39888,29 @@ const turnLogic = {
         ],
         "eidolonListeners": {
             1: [
+                {
+                    "trigger": "EvanesciaE1ElationQueue",
+                    condition(battleData,generalInfo) {
+                        let ownerTurn = this.ownerTurn;
+    
+                        const queueObject = this.queueObject ??= {
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
+                            target: "enemy",
+                            name: "E1 FUA 'Elation Skill' Queue",
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            isExtraTurn: true,
+                            allowUlts: false,
+                            priority: priorityList.turn.Default,
+                            // elationForcedPunchline: 20,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueExtraTurn(battleData,queueObject);
+                    },
+                    "target": "self",
+                    "listenerName": "E1 post-FUA Elation Queue Bonus",
+                    "ownerTurn": {},
+                },
                 {
                     "trigger": "PreBattleEntersCombat",
                     condition(battleData,generalInfo) {
