@@ -5172,6 +5172,7 @@ const updateBuff = battleActions.updateBuff;
 const updateSkillPoints = battleActions.updateSkillPoints;
 const actionAdvance = battleActions.actionAdvance;
 const queueUltimate = battleActions.queueUltimateUse;
+const queueInsertAbility = battleActions.queueFollowUpAttack;
 
 const turnLogic = {
 
@@ -8466,7 +8467,7 @@ const turnLogic = {
                             }
     
                             queueObject.sourceTurn = ownerTurn;
-                            battleActions.queueFollowUpAttack(battleData,queueObject);
+                            queueInsertAbility(battleData,queueObject);
 
                             battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                             //remove listener as it an only happen once per fight.
@@ -9607,7 +9608,7 @@ const turnLogic = {
                         // battleActions.queueInstantUltimateUse(battleData,queueObject);
 
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                     }
 
                     const sourceString = generalInfo.sourceString
@@ -9771,7 +9772,7 @@ const turnLogic = {
 
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = sourceTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -11253,7 +11254,7 @@ const turnLogic = {
                             useAnyTriggers: true,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                         // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Kafka FUA Stacks ${chargeRef.charge} --> ${chargeRef.charge-1}/2`});}
                     }
                 },
@@ -15341,7 +15342,7 @@ const turnLogic = {
                     }
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.isEnhanced = isEnhanced;
-                    battleActions.queueFollowUpAttack(battleData,queueObject);
+                    queueInsertAbility(battleData,queueObject);
                 },
                 "target": "enemy",
                 "listenerName": "Topaz - Numby's Turn Action/Insert [FUA ATTACK]",
@@ -16289,7 +16290,7 @@ const turnLogic = {
                             useAnyTriggers: true,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Archer Charge ${chargeRef.charge} --> ${chargeRef.charge-1}/4`});}
                         // chargeRef.charge -= 1;
                         chargeRef.chargeDebt += 1;
@@ -18528,7 +18529,7 @@ const turnLogic = {
                             }
                             queueObject.sourceTurn = ownerTurn;
                             queueObject.targetTurn = enemyToFUA;
-                            battleActions.queueFollowUpAttack(battleData,queueObject);
+                            queueInsertAbility(battleData,queueObject);
                         }
                     },
                     "target": "enemy",
@@ -19818,7 +19819,7 @@ const turnLogic = {
                     }
                     queueObject.sourceTurn = ownerTurn;
 
-                    battleActions.queueFollowUpAttack(battleData,queueObject);
+                    queueInsertAbility(battleData,queueObject);
                 },
                 "target": "enemy",
                 "listenerName": "Tribbie - Follow-up queued - Talent",
@@ -21890,7 +21891,7 @@ const turnLogic = {
 
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.target = sourceTurn;
-                    battleActions.queueFollowUpAttack(battleData,queueObject);
+                    queueInsertAbility(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Zone active - target attempted to recover from weakness break",
@@ -24423,7 +24424,7 @@ const turnLogic = {
                             useAnyTriggers: true,
                         }
                         queueObject.sourceTurn =  ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -25096,7 +25097,7 @@ const turnLogic = {
                         }
 
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -26244,7 +26245,7 @@ const turnLogic = {
                         // BattleEvent_1506_Box.png
                     }
                     queueObject.sourceTurn = ownerTurn;
-                    battleActions.queueFollowUpAttack(battleData,queueObject);
+                    queueInsertAbility(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Firefly tech wave start listener",
@@ -29011,7 +29012,7 @@ const turnLogic = {
                         useAnyTriggers: true,
                     }
                     queueObject.sourceTurn = garmentTurn;
-                    battleActions.queueFollowUpAttack(battleData,queueObject);
+                    queueInsertAbility(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Aglaea - Garmentmaker Forced Death",
@@ -33138,7 +33139,7 @@ const turnLogic = {
 
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject); 
+                        queueInsertAbility(battleData,queueObject); 
                     }
                     else {
                         const queueObject = this.queueObject2 ??= {
@@ -33155,7 +33156,7 @@ const turnLogic = {
                             useAnyTriggers: false,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueFollowUpAttack(battleData,queueObject);
+                        queueInsertAbility(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -33980,7 +33981,7 @@ const turnLogic = {
                                 useAnyTriggers: true,
                             }
                             queueObject.sourceTurn = ownerTurn;
-                            battleActions.queueFollowUpAttack(battleData,queueObject);
+                            queueInsertAbility(battleData,queueObject);
                         }
                     }
 
@@ -39543,7 +39544,7 @@ const turnLogic = {
                             }
                             queueObject.sourceTurn = ownerTurn;
         
-                            battleActions.queueFollowUpAttack(battleData,queueObject);
+                            queueInsertAbility(battleData,queueObject);
                         }
                     }
 
