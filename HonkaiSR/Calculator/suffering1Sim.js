@@ -702,7 +702,6 @@ const sim = {
             "actionCounter": 0,
             totalUltsQueued: 0,
             totalExTurnsQueued: 0,
-            totalAbilitiesQueued: 0,
             "battleListeners": {},
             "followUpQueue": [],
             "ultimateQueue": [],
@@ -1317,11 +1316,14 @@ const sim = {
             sourceTurn.actionAssigned = true;
             actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
 
-            if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
-                turnEnded = true;
-                if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
-                if (sourceTurn.turnShouldEnd) {return;}
-            }//return turn ending for everyone else
+            // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
+            //     turnEnded = true;
+            //     if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
+            //     if (sourceTurn.turnShouldEnd) {return;}
+            // }//return turn ending for everyone else
+            turnEnded = true;
+            if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
+
             if (queueRef.length) {clearFUA(battleData);}
             clearULT(battleData);//readiness poke is inside the function on this one
             sourceTurn.actionAssigned = false;
@@ -1347,10 +1349,12 @@ const sim = {
             designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
             // if (cost && cost > 0) {battleActions.updateSkillPoints(cost,battleData,{source: charName,sourceName:designatedAction.action});}//gains are applied after the actions are taken, I think. Thonk.
 
-            if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
-                turnEnded = true;
-                if (sourceTurn.turnShouldEnd) {return;}
-            }//return turn ending for everyone else
+            // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
+            //     turnEnded = true;
+            //     if (sourceTurn.turnShouldEnd) {return;}
+            // }//return turn ending for everyone else
+            turnEnded = true;
+            
             if (battleData.followUpQueue.length) {sim.clearFollowUpAttackQueue(battleData);}
             sim.clearUltimateQueue(battleData);//readiness poke is inside the function on this one
             //ok but I DO want ulty readiness checks inside enemy actions for later. Rn I'm only bothering with generic enemy actions
@@ -1434,8 +1438,6 @@ const sim = {
 
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
-                // totalAbilitiesQueued: 0,
-                battleData.totalAbilitiesQueued -= 1;
 
                 if (useAnyTrigger) {
                     if (isFUATrigger) {
@@ -1486,7 +1488,7 @@ const sim = {
         //in such a case saber would check first, fail to see sunday's ult in the queue because it wasn't there yet, and not queue her ult but sunday would right after
         //so we double poke to make sure that dependencies in these cases are not fucked.
 
-        if (!battleData.totalUltsQueued && !battleData.totalAbilitiesQueued) {
+        if (!battleData.totalUltsQueued && !battleData.followUpQueue.length) {
             poke("UltimateQueueEmpty",battleData);
         }
         //NOTE: this is for shit like archer's extra turn, where it relies on the queue being empty at a given moment in order to determine if it should queue itself or not
@@ -1538,7 +1540,6 @@ const sim = {
                 if (!isExtraTurn) {
                     // totalUltsQueued: 0,
                     // totalExTurnsQueued: 0,
-                    // totalAbilitiesQueued: 0,
                     battleData.totalUltsQueued -= 1;
                     
                     // const enemyChecker = battleData.enemyPositions.length;
@@ -1625,7 +1626,7 @@ const sim = {
                     poke("UltimateReady",battleData);
                 }
 
-                const allQueuesEmpty = !battleData.totalAbilitiesQueued && (!battleData.totalUltsQueued || (battleData.totalExTurnsQueued && queue[0].isExtraTurn))
+                const allQueuesEmpty = !battleData.followUpQueue.length && (!battleData.totalUltsQueued || (battleData.totalExTurnsQueued && queue[0].isExtraTurn))
                 if (allQueuesEmpty) {
                     poke("UltimateQueueBlockedOrDone",battleData);
                 }
@@ -1633,7 +1634,7 @@ const sim = {
         }
 
 
-        const allQueuesEmpty = !battleData.totalAbilitiesQueued && (!battleData.totalUltsQueued || (battleData.totalExTurnsQueued && queue[0].isExtraTurn))
+        const allQueuesEmpty = !battleData.followUpQueue.length && (!battleData.totalUltsQueued || (battleData.totalExTurnsQueued && queue[0].isExtraTurn))
         if (allQueuesEmpty) {
             poke("UltimateQueueBlockedOrDone",battleData);
 

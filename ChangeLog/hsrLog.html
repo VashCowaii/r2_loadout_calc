@@ -34,9 +34,35 @@
         <li>Fixed an issue where bounce attacks against enemies that died, could waste a hitcount on a dead enemy without actually hitting them.</li>
         <li>Fixed a hardlock that could occur when bounce attacks killed all enemies in very specific circumstances.</li>
         <li>Fixed a visual issue that prevented any log actions by Argenti that included Apotheosis gain from being viewed.</li>
+        <li>Fixed an issue where the following stat conversions in very specific scenarios, due to a floating point error resulting in mismatched decimal values when checked, could cause infinite recursion:
+            <ul>
+                Characters
+                <li>Yao Guang skill zone elation conversion</li>
+                <li>Gallagher BE conversion</li>
+                <li>Black Swan EHR conversion</li>
+                <li>Aglaea SPD conversion</li>
+                <li>Evanescia Crit DMG conversion</li>
+
+                Lightcones
+                <li>Perfect Timing Effect RES conversion</li>
+
+                Relics
+                <li>Pan-Cosmic EHR conversion</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where the following stat conversion weren't properly excluding converted bonuses when they should, if ever applied:
+            <ul>
+                <li>Aglaea SPD conversion</li>
+                <li>Hyacine SPD conversion</li>
+                <li>Aventurine DEF conversion</li>
+            </ul>
+        </li>
+        <li>Fixed a visual issue where Luocha's skill zone wasn't getting its own separate visual break in the action order for the inserted ability, and rather would show up under other actions.</li>
+        <li>Fixed an issue where Bronya's E4 FUA could fail to locate the wind-weak enemy that was hit, and break the sim.</li>
 
         <h4>Optimization</h4>
         <li>Unified the ultimate cost drain handling between special energy characters(sw999, cas, acheron) and standard energy characters, leaves less room for error on several aspects.</li>
+        <li>Adjusted how turn-endings work to reduce checks involved, the old way only needed to exist due to outdated and no-longer-used handling on characters like Archer with cycled turn-states.</li>
     </ul>
 </div>
 <div>
