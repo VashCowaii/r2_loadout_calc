@@ -2002,7 +2002,7 @@ const turnLogicLightcones = {
                 const conversionRatio = currentTurn.lcPerfectTimingERToHealingRATIO;
                 const conversionCap = currentTurn.lcPerfectTimingERToHealingCAP;
 
-                const endTotal = Math.min(conversionCap,currentEffectRes * conversionRatio);
+                const endTotal = +(Math.min(conversionCap,currentEffectRes * conversionRatio)).toFixed(7);;
 
                 if (buffCheck) {
                     const currentAmount = buffCheck[HealingOutgoing];
@@ -12469,7 +12469,7 @@ const turnLogicRelics = {
 
 
                     let currentEHR = currentTurn.statTable[EffectHitRate];
-                    let conversion = Math.min(0.25,currentEHR * 0.25);//atk converted by 25% of EHR, up to a max of 25%
+                    let conversion = +(Math.min(0.25,currentEHR * 0.25)).toFixed(7);;//atk converted by 25% of EHR, up to a max of 25%
                     //also if this is anything like tingyun's benediction(and it is like that), then this amount is not null ATK, can be used in conversions
                     //confirmed this is not converted attack
 

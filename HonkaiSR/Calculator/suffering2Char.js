@@ -6843,7 +6843,7 @@ const turnLogic = {
                 const statTable = currentTurn.statTable;
 
                 let currentBE = statTable[DamageBreak] + statTable[DamageBreakNULL];
-                let conversion = Math.min(0.75,currentBE * 0.5);
+                let conversion = +(Math.min(0.75,currentBE * 0.5)).toFixed(7);;
                 let buffRef = currentTurn.buffsObject;
                 let buffCheck = buffRef[buffName1];
 
@@ -12842,7 +12842,7 @@ const turnLogic = {
                 const buffCheck = currentTurn.buffsObject[buffName];
 
                 const EHRCheck = currentTurn.statTable[EffectHitRate];
-                const usableValue = Math.min(0.72,EHRCheck * 0.60);
+                const usableValue = +(Math.min(0.72,EHRCheck * 0.60)).toFixed(7);
                 const allyPositions = battleData.allyPositions;
 
                 if (buffCheck) {//if the buff exists
@@ -18339,7 +18339,7 @@ const turnLogic = {
                 
                 let fixedBonus = values[2];
                 let bonusRatio = values[1];
-                let critDMGTotalBonus = bonusRatio*critDMG + fixedBonus;
+                let critDMGTotalBonus = +(bonusRatio*critDMG + fixedBonus).toFixed(7);;
 
                 if (!ATKObjects.bronyaUltimateSHEET) {
                     let buffName = logicRef.buffNames.belobog;
@@ -19009,7 +19009,7 @@ const turnLogic = {
                 
                 let fixedBonus = values[3];
                 let bonusRatio = values[1];
-                let critDMGTotalBonus = bonusRatio*critDMG + fixedBonus;
+                let critDMGTotalBonus = +(bonusRatio*critDMG + fixedBonus).toFixed(7);;
 
                 
                 const buffSheet = ATKObjects.sundayUltimateBeatifiedSHEET;
@@ -19773,7 +19773,7 @@ const turnLogic = {
 
                     // if (ally.properName === "Tribbie") {console.log(finalHP,nullHP)}
                 }
-                const conversion = HPTally * 0.09;
+                const conversion = +(HPTally * 0.09).toFixed(7);
 
                 
                 if (buffCheck) {
@@ -22344,7 +22344,7 @@ const turnLogic = {
                 const critDMG = stats[CritDamageBase] + stats[CritDamageBaseNULL];//null is for shit that can't be included in the ratio
                 const fixedBonus = values[1];
                 const bonusRatio = values[0] + (e6 ? 0.30 : 0);//e6 boosts the conversion ratio by 30%
-                const critDMGTotalBonus = bonusRatio*critDMG + fixedBonus;
+                const critDMGTotalBonus = +(bonusRatio*critDMG + fixedBonus).toFixed(7);
 
                 const buffCheck = targetTurn.buffsObject[buffName];
 
@@ -28962,9 +28962,9 @@ const turnLogic = {
                     const currentStatsGarment = garmentTurnRef.statTable;
 
                     const getSpeed = calcs.getSPDFinal;
-                    const aggySpeed = getSpeed(currentStatsAggy).SPDFinal;
-                    const garmentSpeed = getSpeed(currentStatsGarment).SPDFinal;
-                    const conversion = aggySpeed*aggyRatio + garmentSpeed*garmentRatio;
+                    const aggySpeed = getSpeed(currentStatsAggy).SPDFinal + currentStatsAggy[SPDFlatNull];
+                    const garmentSpeed = getSpeed(currentStatsGarment).SPDFinal + currentStatsGarment[SPDFlatNull]
+                    const conversion = +(aggySpeed*aggyRatio + garmentSpeed*garmentRatio).toFixed(7);
 
                     if (buffCheck) {
                         const statCheck = buffCheck[ATKFlat];
@@ -31575,7 +31575,7 @@ const turnLogic = {
 
                 const SPDBeyondThis = 200;
                 const currentStats = currentTurn.statTable;
-                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal;
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNull];
                 const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
                 const usableSPD = Math.min(200,Math.floor(validSPD));
 
@@ -33791,7 +33791,7 @@ const turnLogic = {
 
                 const currentStats = currentTurn.statTable;
                 const defBeyondThis = 1600;
-                const defFinal = Math.max(0,calcs.getDEFFinal(currentStats).DEFFinal - defBeyondThis - currentStats[DEFFlatNULL]);//can't benefit from converted bonuses
+                const defFinal = Math.max(0,calcs.getDEFFinal(currentStats).DEFFinal - defBeyondThis + currentStats[DEFFlatNULL]);//can't benefit from converted bonuses
                 const conversion = Math.min(0.48,Math.floor(defFinal/100) * 0.02);
 
                 if (buffCheck) {
@@ -36595,7 +36595,7 @@ const turnLogic = {
 
                 const currentStats = currentTurn.statTable;
                 const usableElationDMG = currentStats[ElationDMGAll] + currentStats[ElationDMGAllNULL];
-                const endConversion = values[1] * usableElationDMG + (rank >= 2 ? 0.16 : 0);
+                const endConversion = +(values[1] * usableElationDMG + (rank >= 2 ? 0.16 : 0)).toFixed(7);
 
                 const dmgSheet = ATKObjects.yaoSkillBUFFSHEET;
 
@@ -39334,7 +39334,7 @@ const turnLogic = {
 
                 const dmgExtraSheet = ATKObjects.evaCDMGConversionSHEET;
 
-                const finalBonusValue = 0.2 * currentCDMG;
+                const finalBonusValue = +(0.2 * currentCDMG).toFixed(7);
 
                 // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
