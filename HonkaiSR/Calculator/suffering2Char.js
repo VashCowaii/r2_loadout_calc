@@ -10008,6 +10008,9 @@ const turnLogic = {
             "Imaginary": ResistanceImaginary,
             "Physical": ResistancePhysical,
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             swBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -10818,6 +10821,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             kafkaBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -11581,6 +11587,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             fishladyBasic(battleData,target,sourceTurn) {
@@ -12753,6 +12762,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             blackswanBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -13742,6 +13754,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             weltBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -14460,6 +14475,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             pelaBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -15065,6 +15083,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             topazBasic(battleData,target,sourceTurn) {
@@ -15808,6 +15829,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             archerBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -16540,6 +16564,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             seeleBasic(battleData,target,sourceTurn) {
@@ -19312,6 +19339,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             tribbieBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -20117,6 +20147,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             robinBasic(battleData,target,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -20752,6 +20785,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             astaBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -21379,6 +21415,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             ruanmeiBasic(battleData,target,sourceTurn) {
@@ -22975,6 +23014,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             saberBasicReg(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -23931,6 +23973,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             bladeBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -24737,6 +24782,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             jingliuBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -25460,6 +25508,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             fireflyBasicReg(battleData,target,sourceTurn) {
@@ -26321,6 +26372,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             hookBasicReg(battleData,target,sourceTurn) {
@@ -28218,6 +28272,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             aggyBasicReg(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -29661,6 +29718,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             evernightBasic(battleData,target,sourceTurn) {
@@ -33459,6 +33519,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             aventurineBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -34349,6 +34412,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             argentiBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -34938,6 +35004,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             anaxaBasic(battleData,target,sourceTurn) {
@@ -35959,6 +36028,9 @@ const turnLogic = {
                 endTurn: true
             }
         },
+        "abilityTargetPools": {
+            "Ultimate": null,
+        },
         "skillFunctions": {
             yaoguangBasic(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -36898,6 +36970,9 @@ const turnLogic = {
                 target: "enemy", 
                 endTurn: true
             }
+        },
+        "abilityTargetPools": {
+            "Ultimate": null,
         },
         "skillFunctions": {
             sparxBasic(battleData,target,sourceTurn) {
