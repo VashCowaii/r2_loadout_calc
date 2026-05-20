@@ -7038,6 +7038,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -7652,6 +7655,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -8362,6 +8368,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -8976,6 +8985,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -9793,6 +9805,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -10546,6 +10561,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -11260,6 +11278,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -12518,6 +12539,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -13321,6 +13345,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -14216,6 +14243,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -14816,6 +14846,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
                             
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -15424,6 +15457,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -16198,6 +16234,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -16968,6 +17007,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -17678,6 +17720,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
                             
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -18233,6 +18278,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -18955,6 +19003,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -19755,6 +19806,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -20421,6 +20475,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -21067,6 +21124,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -21720,6 +21780,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -22616,6 +22679,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -23411,6 +23477,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -24293,6 +24362,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -24993,6 +25065,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -25815,6 +25890,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -26580,6 +26658,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -27694,6 +27775,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -29127,6 +29211,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -30461,6 +30548,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -31807,6 +31897,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -32966,6 +33059,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -33799,6 +33895,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -34432,6 +34531,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -35287,6 +35389,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -36323,6 +36428,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -37421,6 +37529,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -38328,6 +38439,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -39369,6 +39483,9 @@ const turnLogic = {
                             isAbility: true,
                             useFUATriggers: false,
                             useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
