@@ -308,6 +308,8 @@ const customDisplayValuesLog = {
         // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "E2 EX-Turn Tally", refName: "e2Accumulation", isBattleValue: true, requiresEidolon: 2},
+        
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
 
@@ -497,6 +499,16 @@ const conditionsCharacterDisplayWarning = {
 }
 
 
+const alliedPoolKeys = new Set([
+    "Self",
+    "char1","char2","char3","char4",
+    "Characters","Memosprites",
+    "Allies (All)",
+    "Allies (On-Field)",
+])
+const enemyPoolKeys = new Set([
+    "Enemies (On-Field)",
+])
 const conditionLibrary = {
     AND(battleData,sourceTurn,destination) {
         const array = destination.array;

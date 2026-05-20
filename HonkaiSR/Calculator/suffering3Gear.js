@@ -201,10 +201,10 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
 
                     let sourceTurn = generalInfo.sourceTurn;
-                    const isAttackUlt = generalInfo.isAttackUlt;
+                    const isAttack = generalInfo.isAttack;
                     let charSlot = sourceTurn.name;
                     let ownerRank = ownersSlots[charSlot];
-                    if (!ownerRank || !isAttackUlt) {return;}//the ult has to have attack targets
+                    if (!ownerRank || !isAttack) {return;}//the ult has to have attack targets
 
                     if (!sourceTurn.baptismOfPureThoughDISPSHEET) {
                         let lcNameRef = "Baptism of Pure Thought";

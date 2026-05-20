@@ -492,7 +492,7 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: characterNaownerTurn.properNameme,
@@ -500,7 +500,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -1185,16 +1185,16 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
+                            isAttack: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -2132,16 +2132,16 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
+                            isAttack: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -2180,7 +2180,7 @@ const turnLogic = {
                         let ownerTurn = this.ownerTurn;
                         
                         const queueObject = this.queueObject ??= {
-                            attack: sim.turnWrapper,
+                            actionCall: sim.turnWrapper,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -2689,7 +2689,7 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -2697,7 +2697,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",

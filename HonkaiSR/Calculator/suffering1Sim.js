@@ -156,7 +156,7 @@ const sim = {
                 logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
                 logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             }
-            poke("WaveStart",battleData,{});
+            poke("WaveStart",battleData,{currentWave: waveID});
             battleData.readyForNewWave = false;
 
             for (let battleEntity of nextTurnAV) {
@@ -1146,6 +1146,7 @@ const sim = {
         if (isLoggyLogger) {logToBattle(battleData,{logType: "StartBattle"});}
         poke("StartBattle",battleData,{});
         poke("StartBattleEnterCombat",battleData,{});
+        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
         if (!battleData.attackTechniqueUsed && battleData.battleStartWeaknessReduction) {
             turnLogic.Universal.skillFunctions.battleStartMatchingWeakness(battleData);
             // poke("StartBattle",battleData,{});
@@ -1440,10 +1441,10 @@ const sim = {
                     if (isFUATrigger) {
                         if (isLog) {
                             const isEnhanced = currentFUA.isEnhanced;
-                            logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.attack.name});
+                            logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
                         }
                         poke("FUAStart",battleData,generalInfo);
-                        currentFUA.attack(battleData,targetTurn,sourceTurn);
+                        currentFUA.actionCall(battleData,targetTurn,sourceTurn);
                         poke("FUAEnd",battleData,generalInfo);
                     }
                     else {
@@ -1452,15 +1453,15 @@ const sim = {
 
                         if (isLog) {
                             const displayTypeStart = currentFUA.eventTypeStartLOG;
-                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
+                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
                         }
                         poke(typeStart,battleData,generalInfo);
-                        currentFUA.attack(battleData,targetTurn,sourceTurn);
+                        currentFUA.actionCall(battleData,targetTurn,sourceTurn);
                         poke(typeEnd,battleData,generalInfo);
                     }
                 }
                 else {
-                    currentFUA.attack(battleData,targetTurn,sourceTurn);
+                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
                 }
             }
         }
@@ -1524,15 +1525,15 @@ const sim = {
                 let sourceTurn = currentUltimate.sourceTurn;
                 let actionName = currentUltimate.name;
                 let target = currentUltimate.target;
-                const isAttackUlt = currentUltimate.isAttackUlt;
+                const isAttack = currentUltimate.isAttack;
                 const queueTag = currentUltimate.queueTag;
-                let generalInfo = {sourceTurn,actionName,target,isAttackUlt,queueTag};
+                let generalInfo = {sourceTurn,actionName,target,isAttack,queueTag};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
                 
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
-                const currentUltyFunction = currentUltimate.attack;
+                const currentUltyFunction = currentUltimate.actionCall;
 
                 if (!isExtraTurn) {
                     // totalUltsQueued: 0,
@@ -1547,7 +1548,22 @@ const sim = {
                     //     continue;
                     // }
 
-                    if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name : target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    // alliedPoolKeys
+
+                    const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn) ?? currentUltimate.energyCost;
+                    //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
+                    const checkSpecial = currentUltimate.specialEnergyPoke;
+                            // specialEnergyPoke: "SW999GainMMR",
+                    if (checkSpecial) {
+                        poke(checkSpecial,battleData,{pointsGained: -energyCost,sourceString:"Ultimate Cost [SPECIAL]"});
+                    }
+                    else {
+                        updateEnergy(battleData,-energyCost,sourceTurn,true,"Ultimate Cost");
+                    }
+                    
+
+                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
                     poke("UltimateStart",battleData,generalInfo);
 
                     
