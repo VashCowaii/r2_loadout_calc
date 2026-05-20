@@ -2188,7 +2188,7 @@ const turnLogic = {
             
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        queueExtraTurn(battleData,queueObject);
                     },
                     "target": "self",
                     "listenerName": "Firefly E2 - Queued Extra Turn",
@@ -3782,4 +3782,10 @@ const turnLogic = {
 // energyLookAhead(thisTurn,potentialAmount) {
 //     if (thisTurn.maxEnergy === thisTurn.currentEnergy) {return false}
 //     return (thisTurn.maxEnergy - thisTurn.currentEnergy) <= (potentialAmount * (1 + thisTurn.statTable.EnergyRegenRate));
+// },
+
+
+// queueExtraTurn(battleData,extraTurnObject,isImmediateAction) {
+//     battleData.nextTurnAV.push(extraTurnObject);
+//     if (isImmediateAction) {battleData.extraTurnPriority += 1;}
 // },

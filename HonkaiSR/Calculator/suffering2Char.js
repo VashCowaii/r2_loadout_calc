@@ -906,10 +906,6 @@ const battleActions = {
         battleData.followUpQueue = [...fuaQueueRestart];
         battleData.followUpQueueWAVE = [];
     },
-    queueExtraTurn(battleData,extraTurnObject,isImmediateAction) {
-        battleData.nextTurnAV.push(extraTurnObject);
-        if (isImmediateAction) {battleData.extraTurnPriority += 1;}
-    },
     "levelFloors": {
         "Basic ATK": 6,
         "Skill": 10,
@@ -5173,6 +5169,7 @@ const updateSkillPoints = battleActions.updateSkillPoints;
 const actionAdvance = battleActions.actionAdvance;
 const queueUltimate = battleActions.queueUltimateUse;
 const queueInsertAbility = battleActions.queueFollowUpAttack;
+const queueExtraTurn = battleActions.queueInstantUltimateUse;
 
 const turnLogic = {
 
@@ -9605,7 +9602,7 @@ const turnLogic = {
                         }
                         // queueObject.sourceTurn = ownerTurn;
                         // // queueObject.target = sourceTurn;
-                        // battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        // queueExtraTurn(battleData,queueObject);
 
                         queueObject.sourceTurn = ownerTurn;
                         queueInsertAbility(battleData,queueObject);
@@ -9750,7 +9747,7 @@ const turnLogic = {
                         // }
                         // queueObject.sourceTurn = ownerTurn;
                         // queueObject.target = sourceTurn;
-                        // battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        // queueExtraTurn(battleData,queueObject);
 
 
                         const queueObject = this.queueObjectSkill ??= {
@@ -9768,7 +9765,7 @@ const turnLogic = {
                         }
                         // queueObject.sourceTurn = ownerTurn;
                         // // queueObject.target = sourceTurn;
-                        // battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        // queueExtraTurn(battleData,queueObject);
 
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = sourceTurn;
@@ -16213,7 +16210,7 @@ const turnLogic = {
                         isTieBreaker: true,//archer has a param(use same tags as reg action) will cause him to beat out tied extra turns like an aha instant
                     }
                     queueObject.sourceTurn = ownerTurn;
-                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    queueExtraTurn(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Archer Post-Skill - Queued Extra Turn",
@@ -16823,7 +16820,7 @@ const turnLogic = {
                             // skipEXDisplay: true,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        queueExtraTurn(battleData,queueObject);
 
                         ownerTurn.battleValues.skillInjectReady = false;
                     };
@@ -17042,7 +17039,7 @@ const turnLogic = {
                         queueTag: "SeeleResurgence"
                     }
                     queueObject.sourceTurn = ownerTurn;
-                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    queueExtraTurn(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Seele Resurgence Queued",
@@ -21887,7 +21884,7 @@ const turnLogic = {
                     }
                     // queueObject.sourceTurn = ownerTurn;
                     // // queueObject.target = sourceTurn;
-                    // battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    // queueExtraTurn(battleData,queueObject);
 
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.target = sourceTurn;
@@ -24351,7 +24348,7 @@ const turnLogic = {
                         extraTurnHasChoice: true,
                     }
                     queueObject.sourceTurn = ownerTurn;
-                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    queueExtraTurn(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Blade Skill Use - Queued Extra Turn",
@@ -26152,7 +26149,7 @@ const turnLogic = {
                             extraTurnHasChoice: true,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        queueExtraTurn(battleData,queueObject);
                     },
                     "target": "self",
                     "listenerName": "Firefly E2 - Queued Extra Turn",
@@ -31848,7 +31845,7 @@ const turnLogic = {
                         dontKeepNextWave: true,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
                     }
                     queueObject.sourceTurn = icaTurn;
-                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    queueExtraTurn(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Hyacine action ended - after rain ica turn injection",
@@ -35301,7 +35298,7 @@ const turnLogic = {
                                     extraTurnHasChoice: false,
                                 }
                                 queueObject.sourceTurn = ownerTurn;
-                                battleActions.queueInstantUltimateUse(battleData,queueObject);
+                                queueExtraTurn(battleData,queueObject);
                             }
                             else {
                                 const queueObject = this.queueObjectBasic ??= {
@@ -35318,7 +35315,7 @@ const turnLogic = {
                                 }
 
                                 queueObject.sourceTurn = ownerTurn;
-                                battleActions.queueInstantUltimateUse(battleData,queueObject);
+                                queueExtraTurn(battleData,queueObject);
                             }
                         }
                         else {
@@ -36370,7 +36367,7 @@ const turnLogic = {
                     priority: priorityList.turn.Default,
                 }
                 queueObject.sourceTurn = battleData.ahaInstantTURNEVENT;
-                battleActions.queueInstantUltimateUse(battleData,queueObject);
+                queueExtraTurn(battleData,queueObject);
                 battleData.punchlineForced = rank >= 1 ? 40 : 20;
                 battleData.punchlineConsume = false;
 
@@ -37886,7 +37883,7 @@ const turnLogic = {
                         }
 
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueInstantUltimateUse(battleData,queueObject);
+                        queueExtraTurn(battleData,queueObject);
 
                         //NOTE: confirmed thrill gain is after queue
                         poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Sparxie E2"});
@@ -38337,7 +38334,7 @@ const turnLogic = {
                     }
                     queueObject.sourceTurn = targetTurn;
 
-                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    queueExtraTurn(battleData,queueObject);
                 }
                 else {
                     actionAdvance(0.50,targetTurn,battleData,"EMC Ult - Non-Elation Target");
@@ -38347,7 +38344,7 @@ const turnLogic = {
 
                 
                 // queueObject.sourceTurn = battleData.ahaInstantTURNEVENT;
-                // battleActions.queueInstantUltimateUse(battleData,queueObject);
+                // queueExtraTurn(battleData,queueObject);
                 // battleData.punchlineForced = rank >= 1 ? 40 : 20;
                 // battleData.punchlineConsume = false;
 
@@ -39261,7 +39258,7 @@ const turnLogic = {
                         // elationForcedPunchline: 20,
                     }
                     queueObject.sourceTurn = sourceTurn;
-                    battleActions.queueInstantUltimateUse(battleData,queueObject);
+                    queueExtraTurn(battleData,queueObject);
                 }
 
                 updateEnergy(battleData,10,sourceTurn,false,"Master Fox FUA Ended");
