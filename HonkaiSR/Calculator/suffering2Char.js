@@ -7040,6 +7040,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -7650,6 +7651,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -8356,6 +8358,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -8966,6 +8969,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -9779,6 +9783,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -10528,6 +10533,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -11238,6 +11244,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -12492,6 +12499,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -13291,6 +13299,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -14182,6 +14191,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -14778,6 +14788,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -15382,6 +15393,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -16152,6 +16164,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -16918,6 +16931,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -18176,6 +18190,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -19691,6 +19706,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -20353,6 +20369,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -20995,6 +21012,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -21644,6 +21662,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -22536,6 +22555,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -23327,6 +23347,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -24205,6 +24226,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -24901,6 +24923,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -25719,6 +25742,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -26480,6 +26504,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -27590,6 +27615,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -29019,6 +29045,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -30349,6 +30376,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -31691,6 +31719,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -32846,6 +32875,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -33675,6 +33705,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -34304,6 +34335,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -35155,6 +35187,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -36187,6 +36220,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -37281,6 +37315,7 @@ const turnLogic = {
                             sourceTurn: null,
 
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
@@ -39220,8 +39255,9 @@ const turnLogic = {
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            
+
                             target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
