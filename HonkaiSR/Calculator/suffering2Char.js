@@ -7026,6 +7026,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.gallagherUltimate,
                             action: "Ultimate", 
@@ -7650,6 +7651,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
                             action: "Ultimate", 
@@ -8370,6 +8372,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaUltimate,
                             action: "Ultimate", 
@@ -8994,6 +8997,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.lynxUltimate,
                             action: "Ultimate", 
@@ -9821,6 +9825,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaUltimate,
                             action: "Ultimate", 
@@ -10584,6 +10589,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.swUltimate,
                             action: "Ultimate", 
@@ -11308,6 +11314,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.kafkaUltimate,
                             action: "Ultimate", 
@@ -12576,6 +12583,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.fishladyUltimate,
                             action: "Ultimate", 
@@ -13389,6 +13397,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
                             action: "Ultimate", 
@@ -14294,6 +14303,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.weltUltimate,
                             action: "Ultimate", 
@@ -14904,6 +14914,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.pelaUltimate,
                             action: "Ultimate", 
@@ -15522,6 +15533,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.topazUltimate,
                             action: "Ultimate", 
@@ -16306,6 +16318,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.archerUltimate,
                             action: "Ultimate", 
@@ -17086,6 +17099,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.seeleUltimate,
                             action: "Ultimate", 
@@ -17806,6 +17820,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.tingyunUltimate,
                             action: "Ultimate", 
@@ -18371,6 +18386,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.bronyaUltimate,
                             action: "Ultimate", 
@@ -19103,6 +19119,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sundayUltimate,
                             action: "Ultimate", 
@@ -19913,6 +19930,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieUltimate,
                             action: "Ultimate", 
@@ -20589,6 +20607,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
                             
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.robinUltimate,
                             action: "Ultimate", 
@@ -21245,6 +21264,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.astaUltimate,
                             action: "Ultimate", 
@@ -21908,6 +21928,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiUltimate,
                             action: "Ultimate", 
@@ -22814,6 +22835,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
                             action: "Ultimate",
@@ -23619,6 +23641,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
                             action: "Ultimate", 
@@ -24511,6 +24534,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
                             action: "Ultimate", 
@@ -25221,6 +25245,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.jingliuUltimate,
                             action: "Ultimate", 
@@ -26053,6 +26078,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
                             action: "Ultimate", 
@@ -26828,6 +26854,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.hookUltimate,
                             action: "Ultimate", 
@@ -27952,6 +27979,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.rmcUltimate,
                             action: "Ultimate", 
@@ -29395,6 +29423,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.aggyUltimate,
                             action: "Ultimate", 
@@ -30739,6 +30768,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.evernightUltimate,
                             action: "Ultimate", 
@@ -32095,6 +32125,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.hyacineUltimate,
                             action: "Ultimate", 
@@ -33264,6 +33295,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptUltimate,
                             action: "Ultimate", 
@@ -34107,6 +34139,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.aventurineUltimate,
                             action: "Ultimate", 
@@ -34750,6 +34783,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimate,
                             action: "Ultimate", 
@@ -35615,6 +35649,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaUltimate,
                             action: "Ultimate", 
@@ -36661,6 +36696,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.yaoUltimate,
                             action: "Ultimate", 
@@ -37769,6 +37805,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparxUltimate,
                             action: "Ultimate", 
@@ -38686,6 +38723,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.emcUltimate,
                             action: "Ultimate", 
@@ -39737,6 +39775,7 @@ const turnLogic = {
                         const queueObject = this.queueObject ??= {
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaUltimate,
                             action: "Ultimate", 
