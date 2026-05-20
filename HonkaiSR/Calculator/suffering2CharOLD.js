@@ -72,10 +72,10 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("BasicATKStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
 
-                battleActions.updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
+                updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
             },
             applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -124,7 +124,6 @@ const turnLogic = {
 
                 const buffCheck = targetTurn.buffsObject[buffName];
 
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if the buff already exists
                     const statCheck = buffCheck[CritDamageBase];
                     if (statCheck === critDMGTotalBonus) {//if the bonus is the same, then just renew it
@@ -149,7 +148,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillStart", name:characterName, target:targetTurn.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("SkillStart",battleData,{sourceTurn});
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 let rank = sourceTurn.rank;
                 let e6 = rank >= 6;
 
@@ -169,7 +168,7 @@ const turnLogic = {
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
+                if (targetTurn.properName != "Sparkle") {actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             sparkleUltimate(battleData,sourceTurn) {
@@ -187,9 +186,8 @@ const turnLogic = {
 
                 let spRecovery = 4 + (e4 ? 1 : 0);
 
-                const energy = battleActions.updateEnergy;
-                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
 
                 const buffNAMES = logicRef.buffNames;
                 let buffName = buffNAMES.cipher;
@@ -221,7 +219,6 @@ const turnLogic = {
                 let dreamDiverFound = false;
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
                 const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
-                const updateBuff = battleActions.updateBuff;
                 for (let targetTurn of battleData.allyPositions) {
                     const currentBuffs = targetTurn.buffsObject;
                     let alreadyHasHerring = currentBuffs[buffName2];
@@ -252,7 +249,7 @@ const turnLogic = {
                     //so we'll see later if some e6-haver complains.
                 }
 
-                energy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
@@ -319,7 +316,6 @@ const turnLogic = {
 
                 const buffSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEET;
                 const redoName = turnToRedo ? turnToRedo.properName : null;
-                const updateBuff = battleActions.updateBuff;
                 
 
                 for (let targetTurn of battleData.allyPositions) {
@@ -364,7 +360,7 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 let spRecovery = 3;
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -429,7 +425,7 @@ const turnLogic = {
                     }
                     let buffSheet1 = this.sparkleNocturneUniversalATKSHEET;
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet1);
+                    updateBuff(battleData,targetTurn,buffSheet1);
                 },
                 "target": "self",
                 "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
@@ -445,7 +441,6 @@ const turnLogic = {
                     let buffArrayQuantum = [0.05,0.15,0.30];
                     let quantumAllies = [];
 
-                    const updateBuff = battleActions.updateBuff;
                     for (let targetTurn of battleData.allyPositions) {
                         let currentType = targetTurn.element;
                         if (currentType === "Quantum") {
@@ -497,7 +492,7 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: characterNaownerTurn.properNameme,
@@ -505,7 +500,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -625,7 +620,7 @@ const turnLogic = {
 
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
             statCheck(battleData,currentTurn) {
@@ -666,7 +661,7 @@ const turnLogic = {
                 }
 
                 buffSheet[DamageAll] = usableValue;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             blackswanArcanaDOT(battleData,sourceTurn,targetTurn,generalInfo,stacksToPass) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -748,7 +743,7 @@ const turnLogic = {
                     finalAVG = 1 - composite;
                 }
                 arcanaSheet.avgChanceApplied = finalAVG;
-                battleActions.updateBuff(battleData,targetTurn,arcanaSheet);
+                updateBuff(battleData,targetTurn,arcanaSheet);
             },
             blackswanArcanaDOTTurnStart(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -763,7 +758,6 @@ const turnLogic = {
                 const sevenCheck = stackCount >= 7;
                 const threeCheck = stackCount >= 3;
                 const values = ATKObjects.blackswanTalentREFVALUES;
-                const updateBuff = battleActions.updateBuff;
 
                 if (sevenCheck) {
                     if (!ATKObjects.blackswanArcanaStacks7OrMoreSHEET) {
@@ -924,10 +918,9 @@ const turnLogic = {
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of allBlastTargets) {updateBuff(battleData,enemy,debuffSheet);}
 
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             blackswanUltimate(battleData,sourceTurn) {
@@ -1009,9 +1002,8 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
                 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
 
-                battleActions.updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 // logicRef.skillFunctions.addHysilensField(battleData,sourceTurn);
 
                 if (rank>=4) {
@@ -1032,7 +1024,7 @@ const turnLogic = {
                 }
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 sourceTurn.ultyQueued = false;
             },
@@ -1145,7 +1137,7 @@ const turnLogic = {
                     const stacks = 1;
                     const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
                     dotFunction(battleData,ownerTurn,enemyTurn,generalInfo,stacks);
-                    // battleActions.updateBuff(battleData,enemyTurn,debuffSheet);
+                    // updateBuff(battleData,enemyTurn,debuffSheet);
                 },
                 "target": "self",
                 "listenerName": "Arcana - enemy added to field listener",
@@ -1193,21 +1185,20 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
+                            isAttack: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Black Swan - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -1321,7 +1312,6 @@ const turnLogic = {
                         const windSheet = ATKObjects.E1DebuffRESSHEETWind;
                         const sourceDots = sourceTurn.dots;
                         const sourceBuffs = sourceTurn.buffsObject;
-                        const updateBuff = battleActions.updateBuff;
 
                         if (sourceDots.Lightning) {
                             const buffCheck = sourceBuffs[lightningSheet.buffName];
@@ -1419,7 +1409,7 @@ const turnLogic = {
                         if (!buffCheck) {return;}
                         //if the enemy died with no debuff, then we can abort
 
-                        battleActions.updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                        updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
                         ownerTurn.isReadyForE4Regen = false;
                     },
                     "target": "self",
@@ -1443,7 +1433,7 @@ const turnLogic = {
                         const buffCheck = sourceTurn.buffsObject[epiphanyName];
                         if (!buffCheck) {return;}
 
-                        battleActions.updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                        updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
                         ownerTurn.isReadyForE4Regen = false;
                     },
                     "target": "self",
@@ -1623,7 +1613,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BasicATKStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("BasicATKStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
             fireflySkillReg(battleData,target,sourceTurn) {
@@ -1667,14 +1657,14 @@ const turnLogic = {
                 poke("SkillStart",battleData,{sourceTurn});
 
                 const energyBump = sourceTurn.maxEnergy * 0.60;
-                battleActions.updateEnergy(battleData,energyBump,sourceTurn,true);
+                updateEnergy(battleData,energyBump,sourceTurn,true);
                 // battleActions.consumeHP(battleData,isAllAllies,percent,targetTurn,sourceTurn)
                 battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
                 poke("SkillEnd",battleData,{sourceTurn});
-                battleActions.actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
+                actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
             },
             fireflyUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -1720,18 +1710,17 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
 
-                const energy = battleActions.updateEnergy;
-                energy(battleData,-sourceTurn.maxEnergy,sourceTurn);
+                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 logicRef.characterValuesBattle.combustionActive = true;
 
-                energy(battleData,skillRef.energyRegen,sourceTurn);
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 // let newCharge = Math.min(4,chargeRef.charge + 2)
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
+                actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
 
                 const ActionEntry = sourceTurn.fireflyUltimateCOMBUSTTURNEVENT ??= {
                     // name:characterEntry,
@@ -1838,7 +1827,7 @@ const turnLogic = {
                 // let healed = battleActions.healAlly(battleData,healObject,targetTurn,sourceTurn,skillSlot,timesToApply)
                 battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1)
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//NO ENERGY ASSOCIATED WITH THIS ATTACK
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//NO ENERGY ASSOCIATED WITH THIS ATTACK
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
             fireflySkillEnhanced(battleData,target,sourceTurn) {
@@ -1924,7 +1913,7 @@ const turnLogic = {
                 battleActions.healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
 
                 const buffSheet = ATKObjects.fireflySkillEnhancedIMPLANTSHEET;
-                battleActions.updateBuff(battleData,battleData.primaryTarget,buffSheet);
+                updateBuff(battleData,battleData.primaryTarget,buffSheet);
 
 
                 // Restores HP by an amount equal to 25.00% of this unit's Max HP. Applies Fire Weakness to a single target enemy, lasting for 2 turn(s). Deals Fire DMG equal to (0.2 × Break Effect + 200.00%) of SAM's
@@ -1939,7 +1928,7 @@ const turnLogic = {
                 // console.log(multiRef,values[1])
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // battleActions.updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it
+                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             pullMultiCUSTOMFIREFLY(sourceTurn,targetTurn,dmgNeedsElationComposite,table,tableONHIT,hitType,ATKObject) {
@@ -2005,7 +1994,6 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
@@ -2061,7 +2049,7 @@ const turnLogic = {
                 if (!conversion) {return;}
                 buffSheet[DamageBreak] = conversion;
                 buffSheet[DamageBreakNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
         },
         "listeners": [
@@ -2099,7 +2087,7 @@ const turnLogic = {
                     const currentEnergy = ownerTurn.currentEnergy;
                     const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
 
-                    if (energyToRegen) {battleActions.updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
+                    if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
                 },
                 "target": "self",
                 "listenerName": "Firefly talent: energy regen on battleStart",
@@ -2144,21 +2132,20 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
+                            isAttack: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Firefly - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -2180,7 +2167,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Firefly Technique",
-                "announce": false,
                 "ownerTurn": {},
             },
         ],
@@ -2194,7 +2180,7 @@ const turnLogic = {
                         let ownerTurn = this.ownerTurn;
                         
                         const queueObject = this.queueObject ??= {
-                            attack: sim.turnWrapper,
+                            actionCall: sim.turnWrapper,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -2478,7 +2464,6 @@ const turnLogic = {
                 const countdownSheet = ATKObjects.huohuoTalentOwnerSHEET;
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
 
                 if (e1) {
@@ -2502,7 +2487,6 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
-                    // const updateBuff = battleActions.updateBuff;
                     const allyPositions = battleData.allyPositions;
                     
                     for (let ally of allyPositions) {
@@ -2596,7 +2580,6 @@ const turnLogic = {
                 updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 const percentRegen = values[0];
 
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
@@ -2643,7 +2626,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.huohuoTechBUFFSHEET;
 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
@@ -2707,7 +2689,7 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -2715,7 +2697,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -2759,11 +2741,10 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
-                "announce": false,
                 "ownerTurn": {},
             },
         ],
@@ -2805,11 +2786,10 @@ const turnLogic = {
                         }
                         const buffSheet = this.e6DMGBuffSHEET;
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                        updateBuff(battleData,targetTurn,buffSheet)
                     },
                     "target": "ally",
                     "listenerName": "Woven Together, Cohere Forever - healed ally listener",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],

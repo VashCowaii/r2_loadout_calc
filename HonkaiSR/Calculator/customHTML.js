@@ -949,6 +949,7 @@ const conditionListArray = [
     "AND",
     "OR",
     "COMPARE",
+    "NOT",
     "Turn",
     "Next Turn Is:",
     "Buff",
@@ -1292,6 +1293,16 @@ const rotationsUISuffering = {
                         {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"}
                     ],
                 }
+            case "NOT":
+                return {
+                    type: "NOT",
+                    array: [
+                        {
+                            type: "AND",
+                            array: []
+                        }
+                    ],
+                }
             case "Target Priority":
                 return {
                     type: "Target Priority",
@@ -1464,6 +1475,7 @@ const rotationsUISuffering = {
         "AND",
         "OR",
         "COMPARE",
+        "NOT",
         "MATH",
         "TARGET CHECK",
         "TARGET",
@@ -2879,6 +2891,52 @@ const rotationsUISuffering = {
             </div>
             ${rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot)}
             
+        </div>`;
+
+        return returnString
+    },
+    NOT(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+        /*
+        COMPARE
+            value 1 selections
+            comparison operator
+            value 2 selections
+        */
+
+
+        indexCounter++;
+        const newArray = [...arrayToPass];
+        newArray.push(indexCounter);
+
+        //we don't need a newIndex at -1 here bc the comparison will always have 2 entries, so index 0 and index 1
+
+        // {
+        //     type: "COMPARE",
+        //     stat1: {type: "Stat", target: "Self", targetType: "Character", statName: "Any Part"},
+        //     comparison: ">",
+        //     stat2: {type: "Stat", target: "Self", targetType: "Character", statName: "Any Part"}
+        // },
+
+        // statArray: [
+        //     {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"},
+        //     {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"}
+        // ],
+
+        const arrayIDString = newArray.join("|");
+        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
+
+        // console.log(destination)
+
+        let newIndex = -1;
+        const getConditionList = rotationsUISuffering.getConditionList;
+        let returnString = `<div class="rotationsSectionANDBoxHolder">
+        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+            ${rotationsUISuffering.getConditionList("NOT",conditionListArray)}
+        </select>
+        </div>
+
+        <div class="rotationConditionOperatorBox">
+            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
         </div>`;
 
         return returnString

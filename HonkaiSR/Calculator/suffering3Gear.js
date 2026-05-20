@@ -19,7 +19,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "The Hell Where Ideals Burn";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     let buffSheet = this.buffSheet ??= {
                         "stats": [ATKP],
@@ -93,7 +92,7 @@ const turnLogicLightcones = {
                     let buffSheet = sourceTurn.whereIdealsBurnSTACKSHEET;
                     let buffName = buffSheet.buffName;
                     
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
 
                     if (sourceTurn.buffsObject[buffName].currentStacks === 4) {
                         sourceTurn.whereIdealsBurnCOMPLETED = true;
@@ -152,14 +151,14 @@ const turnLogicLightcones = {
                             const stackDiff = debuffsCount - currentStacks;
                             const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
                             buffSheet.currentStacks = stackDiff;
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                             return;
                         }
                         else {//but if we have more than we should, remove without triggering so we can apply it later
                             removeBuff(battleData,sourceTurn,buffCheck,true,null,false,true);
                             const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
                             buffSheet.currentStacks = debuffsCount;
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                         }
 
                         
@@ -187,7 +186,7 @@ const turnLogicLightcones = {
                         }
                         
                         const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -202,10 +201,10 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
 
                     let sourceTurn = generalInfo.sourceTurn;
-                    const isAttackUlt = generalInfo.isAttackUlt;
+                    const isAttack = generalInfo.isAttack;
                     let charSlot = sourceTurn.name;
                     let ownerRank = ownersSlots[charSlot];
-                    if (!ownerRank || !isAttackUlt) {return;}//the ult has to have attack targets
+                    if (!ownerRank || !isAttack) {return;}//the ult has to have attack targets
 
                     if (!sourceTurn.baptismOfPureThoughDISPSHEET) {
                         let lcNameRef = "Baptism of Pure Thought";
@@ -229,7 +228,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.baptismOfPureThoughDISPSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Baptism of Pure Thought - ult start listener",
@@ -264,7 +263,7 @@ const turnLogicLightcones = {
                         else if (currentStacks < 2) {//but if we have less than total, add the amount diff
                             // const stackDiff = debuffsCount - currentStacks;
                             const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                             return;
                         }
                     }
@@ -291,7 +290,7 @@ const turnLogicLightcones = {
                         }
                         
                         const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -321,7 +320,7 @@ const turnLogicLightcones = {
                         }
                         else {//if we're at 2 stacks, remove it and apply 1 stack
                             removeBuff(battleData,sourceTurn,buffCheck);
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                         }
                     }
                 },
@@ -384,7 +383,6 @@ const turnLogicLightcones = {
                 const buffCheck = buffsRef[buffName];
 
                 const SPDFinal = calcs.getSPDFinal(currentTurn.statTable).SPDFinal;
-                const updateBuff = battleActions.updateBuff;
 
                 const minSPD = 100;
                 const usableSPD = Math.max(0,SPDFinal - minSPD);
@@ -498,7 +496,7 @@ const turnLogicLightcones = {
                     }
                 }
                 else if (hasEnough) {
-                    battleActions.updateBuff(battleData,currentTurn,buffSheet2);
+                    updateBuff(battleData,currentTurn,buffSheet2);
                 }
             }
         },
@@ -527,7 +525,6 @@ const turnLogicLightcones = {
                     if (ownerRef.length) {
                         const statCheck = this.statCheck ??= turnLogicLightcones["Sailing Towards a Second Life"].skillFunctions.statCheck;
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
@@ -596,7 +593,7 @@ const turnLogicLightcones = {
                     }
                 }
                 let buffSheet2 = currentTurn.lcSleepLikeDeadCRITSHEET;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet2)
+                updateBuff(battleData,currentTurn,buffSheet2)
 
                 currentTurn.lcSleepLikeDeadCooldown = 3;
             }
@@ -668,7 +665,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Worrisome, Blissful";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     // let buffName = this.buffNames.fuaDMG;
                     let buffSheet = this.buffSheet ??= {
@@ -744,7 +740,6 @@ const turnLogicLightcones = {
                     
 
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let enemyHit in targetsGotHit) {
                         const currentEnemy = enemyTurns[enemyHit];
                         if (currentEnemy.worrisomBlissfulTameSTACKCOMPLETE) {continue;}
@@ -815,7 +810,7 @@ const turnLogicLightcones = {
                     if (hpRatio <= hpThreshold) {
                         if (buffCheck) {return;}
                         else {
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                         }
                     }
                     else if (buffCheck) {
@@ -860,7 +855,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.cruisingStellarATKSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Cruising - kill atk buff",
@@ -939,7 +934,7 @@ const turnLogicLightcones = {
                     if (buffCheck && buffCheck.currentStacks === 5) {return;}
                     // console.log(sourceTurn.properName)
                     
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Swordplay - Hit scaling",
@@ -968,7 +963,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Swordplay";
                     // let lcPathing = lightcones[lcNameRef].params;
-                    // const updateBuff = battleActions.updateBuff;
 
                     const namedTurns = battleData.nameBasedTurns;
                     const newTarget = battleData.primaryTarget.name;
@@ -991,11 +985,9 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     // let lcNameRef = "Swordplay";
                     // let lcPathing = lightcones[lcNameRef].params;
-                    // const updateBuff = battleActions.updateBuff;
 
                     const allyTurns = battleData.nameBasedTurns;
                     const enemyTurns = battleData.enemyBasedTurns;
-                    // const updateBuff = battleActions.updateBuff;
                     if (battleData.battleIsOver) {return;}
                     const newTarget = battleData.primaryTarget.name;
                     for (let owner of ownerRef) {
@@ -1058,7 +1050,7 @@ const turnLogicLightcones = {
                         }
                     }
                     const buffSheet = sourceTurn.worrisomBlissfulTameSTACKSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Final Victor dmg end listener",
@@ -1085,7 +1077,6 @@ const turnLogicLightcones = {
 
                     if (battleData.lcOnlySilenceRemainsValidCount && validCount) {return;}
                     else if (!battleData.lcOnlySilenceRemainsValidCount && validCount) {
-                        const updateBuff = battleActions.updateBuff;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let rankParams = lcPathing[owner.rank-1];
@@ -1140,8 +1131,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "River Flows in Spring";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
-
                 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -1204,7 +1193,7 @@ const turnLogicLightcones = {
 
 
                     if (!sourceTurn.lcRiverFlowsSpringWASACTIVE) {
-                        battleActions.updateBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
+                        updateBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
                         sourceTurn.lcRiverFlowsSpringWASACTIVE = true;
                     }
                 },
@@ -1227,7 +1216,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "See You at the End";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -1274,7 +1262,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Shadowed by Night";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -1315,7 +1302,7 @@ const turnLogicLightcones = {
 
 
                     if (!sourceTurn.lcShadowedByNightALREADYACTIVE) {
-                        battleActions.updateBuff(battleData,sourceTurn,sourceTurn.lcShadowedByNightSPDSHEET)
+                        updateBuff(battleData,sourceTurn,sourceTurn.lcShadowedByNightSPDSHEET)
                         sourceTurn.lcShadowedByNightALREADYACTIVE = true;
                     }
                 },
@@ -1352,7 +1339,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Subscribe for More!";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -1428,7 +1414,7 @@ const turnLogicLightcones = {
 
                     if (isFull) {
                         if (buffCheck) {return;}
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                     else if (buffCheck) {
                         removeBuff(battleData,sourceTurn,buffSheet);
@@ -1486,7 +1472,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcAdversarialSPDSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Adversarial - kill listener",
@@ -1507,7 +1493,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Arrows";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -1584,7 +1569,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcDartingArrowATKSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Darting Arrow - kill listener",
@@ -1714,7 +1699,6 @@ const turnLogicLightcones = {
                 },
                 "target": "enemy",
                 "listenerName": "Time Waits for No One attack listener for additional dmg",
-                "announce": false,
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -1731,7 +1715,6 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "Time Waits for No One - turn start dmg done reset",
-                "announce": false,
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -1916,7 +1899,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcNightOfFrightATKSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                    updateBuff(battleData,targetTurn,buffSheet)
 
                     // const totalHealed = generalInfo.totalHealed;
                     // sourceTurn.lcTimeWaitsForNoOneHealing = (sourceTurn.lcTimeWaitsForNoOneHealing ?? 0) + totalHealed;
@@ -1966,7 +1949,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.heyOverHereHEALBONUSUSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Hey, Over Here skill start listener",
@@ -2031,7 +2014,7 @@ const turnLogicLightcones = {
 
                 buffSheet[HealingOutgoing] = endTotal;
                 buffSheet[HealingOutgoingNULL] = -endTotal;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet)
+                updateBuff(battleData,currentTurn,buffSheet)
             }
         },
         "listeners": [
@@ -2119,7 +2102,7 @@ const turnLogicLightcones = {
                                 }
                             }
                             let buffSheet = currentTurn.lcPostOpHEALBONUSUSHEET;
-                            battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                            updateBuff(battleData,currentTurn,buffSheet);
                         }
                     }
                 },
@@ -2449,7 +2432,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Unto Tomorrow's Morrow";
                     let lcPathing = lightcones[lcNameRef].params;
-                    // const updateBuff = battleActions.updateBuff;
                     const allyTargets = battleData.allAllyTargetsArray;
                     const buffNames = turnLogicLightcones[lcNameRef].buffNames;
                 
@@ -2498,7 +2480,6 @@ const turnLogicLightcones = {
                     if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && !ratio) {return;}
                     else if (sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {return;}
                     else if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {
-                        const updateBuff = battleActions.updateBuff;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = battleData.nameBasedTurns[charSlot];
@@ -2536,7 +2517,6 @@ const turnLogicLightcones = {
                     if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && !ratio) {return;}
                     else if (sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {return;}
                     else if (!sourceTurn.lcUntoTomorrowMorrowWASACTIVE && ratio) {
-                        const updateBuff = battleActions.updateBuff;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = battleData.nameBasedTurns[charSlot];
@@ -2591,7 +2571,7 @@ const turnLogicLightcones = {
                         sourceTurn.lc3starMultiVALUE = rankParams[0];
                     }
                     const advValue = sourceTurn.lc3starMultiVALUE;
-                    battleActions.actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
+                    actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
                 },
                 "target": "team",
                 "listenerName": "Multiplication basic atk start advance listener",
@@ -2613,7 +2593,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Fine Fruit";
                     let lcPathing = lightcones[lcNameRef].params;
-                    // const updateBuff = battleActions.updateBuff;
 
                     const fullCharacterArray = battleData.fullCharacterArray;
                 
@@ -2668,7 +2647,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Cornucopia ult start listener",
@@ -2705,7 +2684,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Cornucopia skill start listener",
@@ -2800,7 +2779,7 @@ const turnLogicLightcones = {
                         }
                         
                         let buffSheet = sourceTurn.incessantRainCRITSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -2852,7 +2831,6 @@ const turnLogicLightcones = {
                     const targetsAttacked = generalInfo.targetsGotHit;
                     
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let targetHit in targetsAttacked) {
                         const currentEnemy = enemyTurns[targetHit];
                         if (currentEnemy.buffsObject[buffName]) {continue;}//do not consider those who already have the buff
@@ -2923,7 +2901,7 @@ const turnLogicLightcones = {
                     }
                     
                     let buffSheet = sourceTurn.lcAlongPassingShoreDMGSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                     // }
                 },
                 "target": "self",
@@ -2981,7 +2959,7 @@ const turnLogicLightcones = {
                         }
                         
                         let buffSheet = sourceTurn.lcNameOfTheWorldDMGSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -3022,7 +3000,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.lcNameOfTheWorldSkillSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "In the Name of the World skill start listener",
@@ -3111,7 +3089,6 @@ const turnLogicLightcones = {
 
                     const targetsGotHit = generalInfo.targetsGotHit;
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
 
                     const SPDNeeded = 170;
                     const currentSPD = calcs.getSPDFinal(sourceTurn.statTable).SPDFinal;
@@ -3157,7 +3134,6 @@ const turnLogicLightcones = {
 
 
                     const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let slotOwner in ownersSlots) {
                         const currentOwner = allyTurns[slotOwner];
 
@@ -3287,7 +3263,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.lcSolitaryHealingDOTSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Solitary Healing ult start listener",
@@ -3393,7 +3369,7 @@ const turnLogicLightcones = {
                     let buffSheet = sourceTurn.patienceIsAllSTACKSHEET;
                     let buffName = buffSheet.buffName;
                     
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
 
                     if (sourceTurn.buffsObject[buffName].currentStacks === 3) {
                         sourceTurn.patienceIsAllSPDCompleted = true;
@@ -3529,11 +3505,10 @@ const turnLogicLightcones = {
                 }
                 let buffSheet = ownerTurn.oceanSingEnthrallmentSHEET;
                 
-                // battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                // updateBuff(battleData,sourceTurn,buffSheet);
 
 
                 const buffCheck = buffsRef[buffName];
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {
                     const stackCount = buffCheck.currentStacks;
                     if (stackCount === finalStacks) {return;}
@@ -3661,7 +3636,7 @@ const turnLogicLightcones = {
                         }
 
                         let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -3760,7 +3735,7 @@ const turnLogicLightcones = {
 
                     if (stacksToApply) {
                         buffSheet.currentStacks = stacksToApply;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
 
 
@@ -3847,7 +3822,6 @@ const turnLogicLightcones = {
                     const targetsAttacked = generalInfo.targetsGotHit;
                     
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let targetHit in targetsAttacked) {
                         const currentEnemy = enemyTurns[targetHit];
                         const enemyBuffs = currentEnemy.buffsObject;
@@ -3950,7 +3924,7 @@ const turnLogicLightcones = {
                         }
                         
                         let buffSheet = sourceTurn.resolutionShinesDEFSHREDSHEET;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -3973,7 +3947,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Eyes of the Prey";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     let buffSheet = this.buffSheet ??= {
                         "stats": [DamageDOT],
@@ -4060,7 +4033,7 @@ const turnLogicLightcones = {
                     }
                     else {
                         if (!hasValidDot) {return;}
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -4112,7 +4085,6 @@ const turnLogicLightcones = {
                     let buffSheet = sourceTurn.lcGoodNightSleepWellSTACKSHEET;
                     
                     const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
-                    const updateBuff = battleActions.updateBuff;
 
                     if (buffCheck) {
                         const currentStacks = buffCheck.currentStacks;
@@ -4181,7 +4153,6 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.lcHolidayThermaeVULNSHEET;
-                    const updateBuff = battleActions.updateBuff;
 
                     const enemyTurns = battleData.enemyBasedTurns;
 
@@ -4212,7 +4183,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Void";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                     
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -4324,12 +4294,12 @@ const turnLogicLightcones = {
                     const turnState = targetTurn.turnState;
                     if (!buffCheck || (buffCheck && buffCheck.duration != (turnState ? 3 : 2))) {
                         //if the spd debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     }
 
                     if (!buffCheck2 || (buffCheck2 && buffCheck2.duration != (turnState ? 3 : 2))) {
                         //if the character specific vuln debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet2);
+                        updateBuff(battleData,targetTurn,buffSheet2);
                     }
                     
 
@@ -4386,7 +4356,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.thanklessCoronationATKSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "A Thankless Coronation - ult buff trigger",
@@ -4471,7 +4441,7 @@ const turnLogicLightcones = {
                         }
                     }
                     const buffSheet = sourceTurn.onTheFallAeonDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "On the Fall of an Aeon - broke enemy",
@@ -4512,7 +4482,7 @@ const turnLogicLightcones = {
                     const buffSheet = sourceTurn.onTheFallAeonATKSHEET;
                     const buffName = buffSheet.buffName;
                     
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
 
                     if (sourceTurn.buffsObject[buffName].currentStacks === 4) {
                         sourceTurn.onTheFallAeonCOMPLETED = true;
@@ -4575,7 +4545,7 @@ const turnLogicLightcones = {
 
                     const buffSheet = sourceTurn.unreachableSideDMGSHEET;
                     
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "The Unreachable Side - hp lost listener",
@@ -4666,13 +4636,13 @@ const turnLogicLightcones = {
     
                         const buffSheet = currentOwner.shallBeMyOwnSwordDMGSHEET;
                         buffSheet.currentStacks = 1;
-                        battleActions.updateBuff(battleData,currentOwner,buffSheet);
+                        updateBuff(battleData,currentOwner,buffSheet);
                         const buffCheck = currentOwner.buffsObject[buffSheet.buffName];
 
                         if (buffCheck.currentStacks === buffCheck.maxStacks) {
                             currentOwner.shallBeMyOwnSwordStackingDONETEMP = true;
                             const buffSheet2 = currentOwner.shallBeMyOwnSwordSHREDSHEET;
-                            battleActions.updateBuff(battleData,currentOwner,buffSheet2);
+                            updateBuff(battleData,currentOwner,buffSheet2);
                         }
                     }
                 },
@@ -4742,13 +4712,13 @@ const turnLogicLightcones = {
     
                         const buffSheet = currentOwner.shallBeMyOwnSwordDMGSHEET;
                         buffSheet.currentStacks = hitCount - (targetsGotHit[allySlot] ? 1 : 0);
-                        battleActions.updateBuff(battleData,currentOwner,buffSheet);
+                        updateBuff(battleData,currentOwner,buffSheet);
                         const buffCheck = currentOwner.buffsObject[buffSheet.buffName];
 
                         if (buffCheck.currentStacks === buffCheck.maxStacks) {
                             currentOwner.shallBeMyOwnSwordStackingDONETEMP = true;
                             const buffSheet2 = currentOwner.shallBeMyOwnSwordSHREDSHEET;
-                            battleActions.updateBuff(battleData,currentOwner,buffSheet2);
+                            updateBuff(battleData,currentOwner,buffSheet2);
                         }
                     }
                 },
@@ -4796,7 +4766,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Thus Burns the Dawn";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     let buffSheet = this.buffSheet ??= {
                         "stats": [DEFShredAll],
@@ -4862,7 +4831,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcThusBurnsDawnDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Thus Burns the Dawn ult start listener",
@@ -4911,7 +4880,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcBrighterThanSunATKSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Brighter Than the Sun basic atk start listener",
@@ -4933,7 +4902,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Dance at Sunset";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -4995,7 +4963,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcDanceAtSunsetDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Dance at Sunset ult end listener",
@@ -5050,7 +5018,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcUnderBlueSkyCRITSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Under the Blue Sky - kill listener",
@@ -5071,7 +5039,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "A Trail of Bygone Blood";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                 
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -5143,7 +5110,7 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcIndeliblePromiseCRITSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Indelible Promise ult end listener",
@@ -5166,7 +5133,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Collapsing Sky";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
                     
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -5256,7 +5222,6 @@ const turnLogicLightcones = {
                 let buffSheet2 = currentTurn.updateMaskMASKOWNERSHEET;
                 if (battleStartOverride) {buffSheet2.duration = battleStartOverride;}//the start of the battle gives a 3turn buff, not the standard 4 applied by the user themselves
                 else {buffSheet2.duration = 4}
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,currentTurn,buffSheet2);
 
                 let buffSheet3 = currentTurn.updateMaskCRITSHEET;
@@ -5278,7 +5243,6 @@ const turnLogicLightcones = {
                 const uniqueBuffName = expireParam.uniqueName;
                 // "expireParam": {sourceTurn:currentTurn.name,uniqueName:currentTurn.maskCRITBONUSNAMEOWNER}//owner, in this case
 
-                // const updateBuff = battleActions.updateBuff;
                 const allyTurns = battleData.nameBasedTurns;
                 for (let targetSlot in allyTurns) {
                     const targetTurn = allyTurns[targetSlot]
@@ -5339,7 +5303,6 @@ const turnLogicLightcones = {
                     
                     
                     buffSheet.currentStacks = SPDiff;
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,sourceTurn,buffSheet);
 
                     let buffRef = sourceTurn.buffsObject[buffName];
@@ -5393,7 +5356,7 @@ const turnLogicLightcones = {
                     if (quickRef.battleIsntOverUltyCount === 3) {
                         quickRef.battleIsntOverUltyCount = 1;
                         let lcNameRef = "But the Battle Isn't Over";
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:lcNameRef});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:lcNameRef});
                     }
                 },
                 "target": "self",
@@ -5437,7 +5400,7 @@ const turnLogicLightcones = {
                     }
 
                     let buffSheet = sourceTurn.battleIsntOverSkillEndSHEET
-                    battleActions.updateBuff(battleData,nextAllyTurn,buffSheet);
+                    updateBuff(battleData,nextAllyTurn,buffSheet);
 
                     //confirmed it works like this by using the skill on a character when souldragon from dan was next, and archer was after souldragon.
                     //the moment the skill ended, archer got the buff bc souldragon was not a valid entity for buffing.
@@ -5474,7 +5437,6 @@ const turnLogicLightcones = {
                     }
                     let values = sourceTurn.danceDanceDanceREF;
                     
-                    const actionAdvance = battleActions.actionAdvance;
                     for (let targetTurn of battleData.allyPositions) {
                         actionAdvance(values,targetTurn,battleData,lcNameRef);
                     }
@@ -5544,7 +5506,7 @@ const turnLogicLightcones = {
                     sourceTurn.groundedAscentTargetStacks += 1;
                     if (sourceTurn.groundedAscentTargetStacks === 2) {
                         sourceTurn.groundedAscentTargetStacks = 0;
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"A Grounded Ascent - Departing Anew"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"A Grounded Ascent - Departing Anew"});
                         //for now assume that either or on skill/ulty will stack this
                         //it DOES actually work that way, thankfully
                     }
@@ -5557,7 +5519,6 @@ const turnLogicLightcones = {
                     const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
                     
                     const ownerFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
-                    const updateBuff = battleActions.updateBuff;
                     // if (!memoTurn && ownerFinished) {return;}
 
                     const targetChildEntities = generalInfo.targetChildEntities;
@@ -5635,7 +5596,6 @@ const turnLogicLightcones = {
                 const buffSheet2 = currentTurn.updatePresageOwnerSHEET;
                 const buffName2 = buffSheet2.buffName;
                 const buffCheck = currentTurn.buffsObject[buffName2];
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,currentTurn,buffSheet2);
 
                 if (buffCheck) {return;}
@@ -5728,7 +5688,6 @@ const turnLogicLightcones = {
                     if (sourceTurn.isEnemy) {return;}
 
                     let ownersSlots = this.ownersSlots;
-                    const updateBuff = battleActions.updateBuff;
                     let lcNameRef = "Flowing Nightglow";
                     const logicRef = turnLogicLightcones[lcNameRef];
 
@@ -5784,7 +5743,6 @@ const turnLogicLightcones = {
                     const buffSheet = sourceTurn.flowingNightglowCantillationSheet;
                     const buffCheck = buffSheet ? sourceBuffs[buffSheet.buffName] : null;
                     // if (!buffCheck || buffCheck && buffCheck.currentStacks < 5) {return;}
-                    const updateBuff = battleActions.updateBuff;
                     if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
                     
 
@@ -5872,8 +5830,6 @@ const turnLogicLightcones = {
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}//then abort non-owners
 
-                    const updateBuff = battleActions.updateBuff;
-
                     if (!sourceTurn.pastSelfInMirrorDMGSheet) {
                         let lcNameRef = "Past Self in Mirror";
                         let lcPathing = lightcones[lcNameRef].params;
@@ -5903,7 +5859,7 @@ const turnLogicLightcones = {
 
                     const breakCheck = sourceTurn.statTable[DamageBreak] >= 1.5;
                     if (breakCheck) {
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Past Self in Mirror [LC]"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Past Self in Mirror [LC]"});
                     }
                 },
                 "target": "self",
@@ -6117,7 +6073,6 @@ const turnLogicLightcones = {
 
                         break;
                     }
-                    const updateBuff = battleActions.updateBuff;
                     const buffSheet = firstOwnerTurn.lcPoisedToBloomCRITSHEET;
 
                     let pathHolderObject = {};
@@ -6241,9 +6196,6 @@ const turnLogicLightcones = {
                     let buffSheet = sourceTurn.timeWovenBrocadeSTACKSHEET;
                     let buffName = buffSheet.buffName;
                     
-
-
-                    const updateBuff = battleActions.updateBuff;
                     if (isMemo) {
                         const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
 
@@ -6358,7 +6310,6 @@ const turnLogicLightcones = {
                     
 
 
-                    const updateBuff = battleActions.updateBuff;
                     if (isMemo) {
                         const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
 
@@ -6407,7 +6358,7 @@ const turnLogicLightcones = {
                             summonAssignedTo.makeFarewellsAdvancementVALUES = lcPathing[ownerRank-1];
                         }
                         const rankParams = summonAssignedTo.makeFarewellsAdvancementVALUES;
-                        battleActions.actionAdvance(rankParams[3],summonAssignedTo,battleData,"Memosprite vanished advancement - Make Farewells More Beautiful");
+                        actionAdvance(rankParams[3],summonAssignedTo,battleData,"Memosprite vanished advancement - Make Farewells More Beautiful");
                         summonAssignedTo.makeFarewellsAdvanceUsed = true;
                     }
                 },
@@ -6503,7 +6454,6 @@ const turnLogicLightcones = {
                     let buffSheet = ownerTurn.toEvernightsStarsNoctisOWNERSHEET;
                     let buffSheet3 = ownerTurn.toEvernightsStarsNoctisAllyMemoSHEET;
 
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
                     updateBuff(battleData,sourceTurn,buffSheet);
 
@@ -6787,7 +6737,6 @@ const turnLogicLightcones = {
                 },
                 "target": "enemy",
                 "listenerName": "Long May Rainbows Adorn the Sky -  attack listener for additional dmg",
-                "announce": false,
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -6835,7 +6784,6 @@ const turnLogicLightcones = {
                     
 
                     const allyPositions = battleData.allyPositions;
-                    const updateBuff = battleActions.updateBuff;
                     for (let ally of allyPositions) {
                         updateBuff(battleData,ally,buffSheet);
                     }
@@ -6936,7 +6884,7 @@ const turnLogicLightcones = {
     //                 const buffSheet = sourceOwnerTurn.lcThisLoveForeverBLANKSHEET;
     //                 // const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
     //                 // if (buffCheck) {return;}
-    //                 battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+    //                 updateBuff(battleData,sourceTurn,buffSheet);
     //                 sourceTurn.lcThisLoveBlankActive = true;
                     
     //                 const enemyPositions = battleData.enemyPositions;
@@ -6973,7 +6921,6 @@ const turnLogicLightcones = {
 
     //                 // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
     //                 const namedTurns = battleData.nameBasedTurns;
-    //                 const updateBuff = battleActions.updateBuff;
     //                 for (let ownerSlot in ownersSlots) {
     //                     const currentOwner = namedTurns[ownerSlot];
 
@@ -7077,7 +7024,7 @@ const turnLogicLightcones = {
     //                 const buffSheet = sourceOwnerTurn.lcThisLoveForeverVERSESHEET;
     //                 // const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
     //                 // if (buffCheck) {return;}
-    //                 battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+    //                 updateBuff(battleData,sourceTurn,buffSheet);
     //                 sourceTurn.lcThisLoveVerseActive = true;
     //                 // lcThisLoveVerseActive
     //                 // lcThisLoveBlankActive
@@ -7244,7 +7191,6 @@ const turnLogicLightcones = {
 
                     const memTurn = rmcRefTurn.rmcMemTURNEVENT;
                     
-                    const updateBuff = battleActions.updateBuff;
                     for (let allySlot in nameBasedTurns) {
                         const currentAlly = nameBasedTurns[allySlot];
                         updateBuff(battleData,currentAlly,buffSheet);
@@ -7298,7 +7244,6 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceTurn.lcGeniusGreetingsBASICSHEET;
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,sourceTurn,buffSheet);
 
                     const memoTurnRef = sourceTurn.memospriteEventRef;
@@ -7362,7 +7307,6 @@ const turnLogicLightcones = {
                             }
                         }
                         let buffSheet = sourceTurn.lcSweatNowCryLessDMGSHEET;
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,sourceTurn,buffSheet);
                         updateBuff(battleData,summonEvent,buffSheet);
                     }
@@ -7389,7 +7333,6 @@ const turnLogicLightcones = {
 
                     // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
                     const namedTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let ownerSlot in ownersSlots) {
                         const currentOwner = namedTurns[ownerSlot];
 
@@ -7475,7 +7418,6 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = sourceOwnerTurn.lcStorysNextPageHEALINGSHEET;
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,sourceOwnerTurn,buffSheet);
                     updateBuff(battleData,sourceTurn,buffSheet);
                 },
@@ -7575,7 +7517,7 @@ const turnLogicLightcones = {
                         let lcPathing = lightcones[lcNameRef].params;
                         let rankParams = lcPathing[ownerRank-1];
                         updateEnergy(battleData,rankParams[1],sourceTurn,false,"Shadowburn (LC)")
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Shadowburn (LC)"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Shadowburn (LC)"});
 
                         sourceTurn.lcShadowburnFIRSTSUMMONDONE = true;
                         battleData.lcShadowburnFIRSTSUMMONDONECOUNTER ??= 0;
@@ -7656,7 +7598,6 @@ const turnLogicLightcones = {
                     }
 
                     const buffSheet = ownerTurn.lcReminiscenceDMGSHEET;
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
                     updateBuff(battleData,sourceTurn,buffSheet);
                 },
@@ -7709,7 +7650,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.inherentlyUnjustCRITDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Inherently Unjust Destiny - ATK% Stack - Hrunting Stack",
@@ -7754,7 +7695,7 @@ const turnLogicLightcones = {
                         }
                     }
                     let buffSheet = sourceTurn.inherentlyUnjustDEBUFFSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Inherently Unjust Destiny - Hit scaling",
@@ -7844,7 +7785,6 @@ const turnLogicLightcones = {
                     const healObject = sourceTurn.thoughWorldsHealObject;
 
                     const allyPositions = battleData.allyPositions;
-                    const updateBuff = battleActions.updateBuff;
 
                     let lowestHPValue = Infinity;
                     let lowestHPAlly = null;
@@ -7886,7 +7826,6 @@ const turnLogicLightcones = {
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let ownersSlots = this.ownersSlots;
-                    const updateBuff = battleActions.updateBuff;
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
                         let currentTurn = battleData.nameBasedTurns[charSlot];
@@ -7943,7 +7882,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "An Instant Before A Gaze";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     // let buffName = this.buffNames.fuaDMG;
                     let buffSheet = this.buffSheet ??= {
@@ -7993,7 +7931,6 @@ const turnLogicLightcones = {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Today Is Another Peaceful Day";
                     let lcPathing = lightcones[lcNameRef].params;
-                    const updateBuff = battleActions.updateBuff;
 
                     // let buffName = this.buffNames.fuaDMG;
                     let buffSheet = this.buffSheet ??= {
@@ -8081,7 +8018,6 @@ const turnLogicLightcones = {
                     const buffSheet = sourceTurn.greatCosmicDMGSHEET;
                     const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
 
-                    const updateBuff = battleActions.updateBuff;
                     if (buffCheck) {
                         const currentStacks = buffCheck.currentStacks;
                         if (currentStacks === weaknessCount) {return;}
@@ -8198,7 +8134,6 @@ const turnLogicLightcones = {
                         }
                     }
 
-                    const updateBuff = battleActions.updateBuff;
                     const buffSheet = sourceTurn.lifeShouldBeCastFlamesDMGSHEET;
                     const buffCheck = targetBuffs[buffSheet.buffName];
                     if (foundImplantedByOwner) {
@@ -8283,7 +8218,6 @@ const turnLogicLightcones = {
 
                 let buffSheet2 = currentTurn.updateFortuneCRITSHEETOwner;
                 const buffCheck = currentTurn.buffsObject[buffSheet2.buffName];
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,currentTurn,buffSheet2);
 
                 let buffSheet3 = currentTurn.updateFortuneCRITSHEET;
@@ -8430,7 +8364,7 @@ const turnLogicLightcones = {
 
                     const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                     if (!buffCheck || buffCheck && buffCheck.currentStacks < buffCheck.maxStacks) {
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                     
 
@@ -8496,7 +8430,6 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
 
                     const namedTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
                         let ownerRank = ownersSlots[charSlot];
@@ -8638,7 +8571,6 @@ const turnLogicLightcones = {
                     }
                     const buffSheet = sourceTurn.lcElationBrimmingELATIONSHEET;
 
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
@@ -8663,7 +8595,6 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
 
                     const namedTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
 
                     const baseLine = 120;
                     const maxStacks = 360;
@@ -8816,7 +8747,6 @@ const turnLogicLightcones = {
                     let buffSheet3 = sourceTurn.mushyShroomyAdventureVULNSHEET;
                     
                     const enemyPositions = battleData.enemyPositions;
-                    const updateBuff = battleActions.updateBuff;
                     for (let enemy of enemyPositions) {
                         updateBuff(battleData,enemy,buffSheet3)
                     }
@@ -8874,7 +8804,7 @@ const turnLogicLightcones = {
     
                     let buffSheet3 = sourceTurn.elationTodaysGoodLuck;
 
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet3);
+                    updateBuff(battleData,sourceTurn,buffSheet3);
 
                     const buffCheck = sourceTurn.buffsObject[buffSheet3.buffName];
 
@@ -8914,7 +8844,6 @@ const turnLogicLightcones = {
                     
 
                     const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let ownerSlotName in ownersSlots) {
                         const currentOwner = allyTurns[ownerSlotName];
 
@@ -8964,7 +8893,6 @@ const turnLogicLightcones = {
                     
 
                     const allyTurns = battleData.nameBasedTurns;
-                    // const updateBuff = battleActions.updateBuff;
                     for (let ownerSlotName in ownersSlots) {
                         const currentOwner = allyTurns[ownerSlotName];
 
@@ -9012,7 +8940,6 @@ const turnLogicLightcones = {
                     
 
                     const allyTurns = battleData.nameBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let ownerSlotName in ownersSlots) {
                         const currentOwner = allyTurns[ownerSlotName];
 
@@ -9101,7 +9028,6 @@ const turnLogicRelics = {
                             "expireType": null
                         }
 
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
@@ -9158,7 +9084,7 @@ const turnLogicRelics = {
                         else {//if weakness found, apply buff
                             if (sourceTurn.buffsObject[buffName]) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
                             
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                         }
                     },
                     "target": "self",
@@ -9189,7 +9115,7 @@ const turnLogicRelics = {
                         if (!ownerRank) {return;}
 
                         let relicNameRef = "Eagle of Twilight Line";
-                        battleActions.actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
+                        actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
                     },
                     "target": "self",
                     "listenerName": "Eagle - Advance/Ult",
@@ -9250,7 +9176,6 @@ const turnLogicRelics = {
 
                         let buffSheet = sourceTurn.sacerdosCRITDMGSHEET;
                         
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,targetTurn,buffSheet);
                         const targetChildEntities = generalInfo.targetChildEntities;
                         if (targetChildEntities) {
@@ -9298,7 +9223,7 @@ const turnLogicRelics = {
 
                     let buffSheet = targetTurn.wavestriderHELPSHEET;
                     
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 }
             },
             "listeners": [
@@ -9365,7 +9290,6 @@ const turnLogicRelics = {
                         let helpCheck = sourceTurn.buffsObject[buffRef.help];
 
                         if (helpCheck && helpCheck.currentStacks === 2) {
-                            const updateBuff = battleActions.updateBuff;
                             removeBuff(battleData,sourceTurn,helpCheck);//clear the help stacks
 
                             if (!sourceTurn.wavestriderATKSHEET) {
@@ -9437,13 +9361,11 @@ const turnLogicRelics = {
                         }
                         // console.log(buffSheet)
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff;
                         for (let allySlot in ownersSlots) {
                             const allyTurn = namedTurns[allySlot];
                             buffSheet.sourceOwner = allyTurn.properName,
                             updateBuff(battleData,allyTurn,buffSheet);
                         }
-                        // battleActions.updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Scholar Ulty/Skill DMG application",
@@ -9486,7 +9408,7 @@ const turnLogicRelics = {
                         const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                         if (buffCheck) {return;}//this is a "you have it or you don't" kinda buff since it only applies to the next skill use, duration doesn't matter
                         
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Scholar ulty listener",
@@ -9564,8 +9486,6 @@ const turnLogicRelics = {
                         }
 
                         let buffSheet = sourceTurn.watchmatcherBREAKSHEET;
-                        let newAV = battleData.sumAV;
-                        const updateBuff = battleActions.updateBuff;
                         const allyPositions = battleData.allyPositions;
                         for (let targetTurn of allyPositions) {
                             updateBuff(battleData,targetTurn,buffSheet);
@@ -9611,7 +9531,7 @@ const turnLogicRelics = {
                     let buffSheet = targetTurn.streetwiseBoxingATKSHEET;
                     const buffName = buffSheet.buffName;
                     
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
 
                     const stackCheck = targetTurn.buffsObject[buffName].currentStacks;
                     if (stackCheck === 5) {
@@ -9722,7 +9642,7 @@ const turnLogicRelics = {
 
                         let buffSheet = sourceTurn.sizzlingThunderATKSHEET;
                         
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Band of Sizzling Thunder skill listener",
@@ -9769,7 +9689,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -9819,7 +9738,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -9878,7 +9796,7 @@ const turnLogicRelics = {
                         
                         let buffSheet = sourceTurn.firesmithNextAttackFIRESHEET;
                         
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Firesmith of Lava-Forging Next-Attack buff application",
@@ -9945,7 +9863,7 @@ const turnLogicRelics = {
                         }
 
                         let buffSheet = sourceTurn.glacialForestCRITDMGSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Hunter of Glacial Forest ult listener",
@@ -9990,7 +9908,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -10022,7 +9939,6 @@ const turnLogicRelics = {
                         let relicNameRef = "Passerby of Wandering Cloud";
                         const namedTurns = battleData.nameBasedTurns;
                         const SPGen = 1;
-                        const updateSkillPoints = battleActions.updateSkillPoints
                         for (let ally in ownersSlots) {
                             let sourceTurn = namedTurns[ally];
 
@@ -10079,7 +9995,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = sourceTurn.traversingHackerspaceSPDSHEET;
                         const allyPositions = battleData.allyPositions;
-                        const updateBuff = battleActions.updateBuff;
                         for (let ally of allyPositions) {
                             updateBuff(battleData,ally,buffSheet);
                         }
@@ -10142,7 +10057,6 @@ const turnLogicRelics = {
 
                         const namedTurns = battleData.nameBasedTurns;
                         const menuStatsREF = battleData.menuStats;
-                        const updateBuff = battleActions.updateBuff
                         const getFinalSPD = calcs.getSPDFinal;
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
@@ -10222,7 +10136,7 @@ const turnLogicRelics = {
                             else if (DOTCount > currentStacks) {
                                 
                                 buffSheet.currentStacks = DOTCount - currentStacks;//if dot count is 2 but someone already had 1 stack, we can't stack 2 more, gotta stack just the diff
-                                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                                updateBuff(battleData,sourceTurn,buffSheet);
                                 return;//can abort early if all we did was stack it
                             }
                             //otherwise remove the buff bc that means the stacks are mismatched and less than
@@ -10232,7 +10146,7 @@ const turnLogicRelics = {
                         if (DOTCount) {//then, if the dots > 0, apply the buff as it is now
                             
                             buffSheet.currentStacks = DOTCount;
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
                         }
                     },
                     "target": "self",
@@ -10276,7 +10190,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -10356,7 +10269,7 @@ const turnLogicRelics = {
                         const buffCheck = sourceTurn.buffsObject[buffSheet.name];
                         //if we're in a super hit-spammy attack, and reached the 8 point already, then abort without bothering the buff handler
                         if (buffCheck && buffCheck.currentStacks === 8) {return;}
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Ashblazing Grand Duke - Hit scaling",
@@ -10420,7 +10333,7 @@ const turnLogicRelics = {
                         }
 
                         let buffSheet = sourceTurn.windSoaringValorousULTDMGSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Wind-Soaring Valorous fua listener",
@@ -10483,7 +10396,6 @@ const turnLogicRelics = {
                     const buffCheck2 = buffsRef[buffName2];
                     const currentBreak = currentTurn.statTable[DamageBreak];
 
-                    const updateBuff = battleActions.updateBuff;
                     if (currentBreak >= 2.5) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck2) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
                         //also if the owner has the highest buff, they'll also always have the lowest buff, so we're good to abort here without worry
@@ -10590,7 +10502,7 @@ const turnLogicRelics = {
 
                         if (currentActiveMemosprites) {
                             if (buffCheck) {return;}//if the buff already exists, abort
-                            battleActions.updateBuff(battleData,summonAssignedTo,buffSheet);
+                            updateBuff(battleData,summonAssignedTo,buffSheet);
                         }
                         else if (!currentActiveMemosprites && buffCheck) {//only remove the buff if it already existed
                             removeBuff(battleData,summonAssignedTo,buffSheet);
@@ -10640,8 +10552,6 @@ const turnLogicRelics = {
                         }
                         const buffSheet = sourceTurn.heroTriumphantCRITDMGSHEET;
                         
-
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,ownerTurn,buffSheet);//owner
                         updateBuff(battleData,sourceTurn,buffSheet);//memo
 
@@ -10713,7 +10623,6 @@ const turnLogicRelics = {
                     const allyPositions = battleData.allyPositions;
                     const declaredMemosprites = battleData.declaredMemosprites;
 
-                    const updateBuff = battleActions.updateBuff;
                     if (memoTurn.isActive) {
                         const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                         if (buffCheck) {return;}
@@ -10897,7 +10806,6 @@ const turnLogicRelics = {
                         const buffName = buffSheet.buffName;
                         const buffCheck = ownerTurn.buffsObject[buffName];
 
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,ownerTurn,buffSheet);
 
                         //if the owner already had gentle rain before renewing it, that means all allies still have the crit dmg, and we don't need to reapply
@@ -10959,7 +10867,6 @@ const turnLogicRelics = {
                         }
 
                         let buffSheet = sourceTurn.longevousDiscipleCRITSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Longevous Disciple - owner lost hp listener",
@@ -11005,7 +10912,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -11054,7 +10960,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -11078,7 +10983,6 @@ const turnLogicRelics = {
                         const shieldSource = generalInfo.currentReference.sourceOwner;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        // const updateBuff = battleActions.updateBuff;
                         const sourceTurnShields = sourceTurn.activeShields;
                         let shieldOwners = [];
 
@@ -11127,7 +11031,6 @@ const turnLogicRelics = {
                         const shieldSource = generalInfo.sourceTurn.properName;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
 
@@ -11215,7 +11118,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             buffSheet.sourceOwner = currentTurn.properName;
@@ -11381,7 +11283,6 @@ const turnLogicRelics = {
 
                         const namedTurns = battleData.nameBasedTurns;
                         const menuStatsREF = battleData.menuStats;
-                        const updateBuff = battleActions.updateBuff
                         const getFinalSPD = calcs.getSPDFinal;
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
@@ -11493,7 +11394,6 @@ const turnLogicRelics = {
                         let buffSheet1 = this.buffSheet1;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             const memoRef = currentTurn.memospriteEventRef;
@@ -11564,7 +11464,6 @@ const turnLogicRelics = {
                         buffSheet1.currentStacks = stacksToAdd;
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
                             const memoRef = currentTurn.memospriteEventRef;
@@ -11625,7 +11524,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.statTable[CritRateBase] >= 0.7) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
                         removeBuff(battleData,currentTurn,buffSheet);
@@ -11703,7 +11602,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.statTable[CritRateBase] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
                         removeBuff(battleData,currentTurn,buffSheet);
@@ -11788,7 +11687,6 @@ const turnLogicRelics = {
                     let buffName = buffSheet.buffName;
 
                     const buffCheck = currentTurn.buffsObject[buffName];
-                    const applyBuff = battleActions.updateBuff;
                     const allyPositions = battleData.allyPositions;
                     const declaredMemosprites = battleData.declaredMemosprites;
                     if (currentTurn.statTable[EffectRES] >= 0.3) {//if the target has enough, then we can apply it
@@ -11796,10 +11694,10 @@ const turnLogicRelics = {
 
                         
                         for (let targetTurn of allyPositions) {
-                            applyBuff(battleData,targetTurn,buffSheet);
+                            updateBuff(battleData,targetTurn,buffSheet);
                         }
                         for (let targetTurn of declaredMemosprites) {
-                            applyBuff(battleData,targetTurn,buffSheet);
+                            updateBuff(battleData,targetTurn,buffSheet);
                         }
                     }
                     else if (buffCheck) {//but if they don't have enough, but have the buff, then remove it
@@ -11896,7 +11794,7 @@ const turnLogicRelics = {
                         buffSheet = this.buffSheet;
                         buffSheet.currentStacks = timesToApply;
                         buffSheet.sourceOwner = firstTurn.properName;
-                        battleActions.updateBuff(battleData,firstTurn,buffSheet);
+                        updateBuff(battleData,firstTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Lushaka, the Sunken Seas battle start stat check trigger",
@@ -11941,7 +11839,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = this.buffSheet
 
-                        const updateBuff = battleActions.updateBuff;
                         // const allyPositions = battleData.allyPositions;
                         const namedTurns = battleData.nameBasedTurns;
                         const allyArray = battleData.allAlliesArray;//TODO: verify this can apply to memos, it looks like it should, but idk about demiurge
@@ -11980,7 +11877,6 @@ const turnLogicRelics = {
                     condition(battleData,generalInfo) {
                         let ownerRef = this.owners;
                         let relicNameRef = "Sprightly Vonwacq";
-                        let advance = battleActions.actionAdvance;
                         let amount = 0.40;
                         //TODO: need to look into whether speed buffs applied as you enter combat, can count
                         //bc if so I need to move this to the battlestart trigger next to dmg techniques
@@ -11989,7 +11885,7 @@ const turnLogicRelics = {
                         for (let owner of ownerRef) {
                             let currentTurn = namedTurns[owner.slot];
                             if (currentTurn.SPD >= 120) {
-                                advance(amount,currentTurn,battleData,relicNameRef);
+                                actionAdvance(amount,currentTurn,battleData,relicNameRef);
                             }
                         }
                     },
@@ -12048,7 +11944,7 @@ const turnLogicRelics = {
                     
                         let buffSheet = sourceTurn.forgeKalpagniBREAKSHEET;
 
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Kalpagni weakness check",
@@ -12090,7 +11986,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.statTable[EffectHitRate] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
 
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
@@ -12170,7 +12066,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.SPD >= 145) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
 
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
@@ -12250,7 +12146,7 @@ const turnLogicRelics = {
 
                     if (currentTurn.SPD >= 120) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet);
 
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
@@ -12424,7 +12320,6 @@ const turnLogicRelics = {
                             "expireType": null
                         }
 
-                        const updateBuff = battleActions.updateBuff;
                         const allyPositions = battleData.allyPositions;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let owner of ownerRef) {
@@ -12489,7 +12384,6 @@ const turnLogicRelics = {
 
                     const HP = calcs.getHPFinal(currentTurn.statTable).HPFinal;
 
-                    const updateBuff = battleActions.updateBuff;
                     if (HP >= 5000) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
                         updateBuff(battleData,currentTurn,buffSheet);
@@ -12592,7 +12486,7 @@ const turnLogicRelics = {
 
                     buffSheet[ATKP] = conversion;
                     
-                    battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                    updateBuff(battleData,currentTurn,buffSheet);
                 },
             },
             "listeners": [
@@ -12666,7 +12560,6 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
-                        const updateBuff = battleActions.updateBuff;
                         const menuStats = battleData.menuStats;
                         for (let ally in ownersSlots) {
                             let currentTurn = namedTurns[ally];
@@ -12796,7 +12689,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = sourceTurn.duranDynastyMERITSHEET;
                         
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,sourceTurn,buffSheet);
                         const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
 
@@ -12877,8 +12769,6 @@ const turnLogicRelics = {
                         }
                         let buffSheet = this.sigoniaDesolationCRITDMGSHEET;
                         
-
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let charSlot in ownersSlots) {
                             let currentTurn = namedTurns[charSlot];
@@ -12952,7 +12842,6 @@ const turnLogicRelics = {
                     let buffSheet2 = currentTurn.firmamentGlamothDMG2SHEET;
                     const buffName2 = buffSheet2.buffName;
                     const buffsObject = currentTurn.buffsObject;
-                    const updateBuff = battleActions.updateBuff;
                     const buffCheck2 = buffsObject[buffName2];
                     if (currentTurn.SPD >= 160) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
@@ -13069,7 +12958,6 @@ const turnLogicRelics = {
                     const buffCheck2 = buffsObject[buffName2];
                     const memoRef = currentTurn.memospriteEventRef;
                     const SPDFinal = calcs.getSPDFinal(currentTurn.statTable).SPDFinal;
-                    const updateBuff = battleActions.updateBuff;
 
                     if (SPDFinal >= 180) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
@@ -13190,7 +13078,6 @@ const turnLogicRelics = {
                     const buffsObject = currentTurn.buffsObject;
                     const buffCheck2 = buffsObject[buffName2];
                     const atkFinal = calcs.getATKFinal(currentTurn.statTable).ATKFinal;
-                    const updateBuff = battleActions.updateBuff;
                     if (atkFinal >= 3600) {//if the target has enough cr for the buff, then we can apply it
                         if (!buffCheck2) {
                             updateBuff(battleData,currentTurn,buffSheet2);
@@ -13303,7 +13190,7 @@ const turnLogicRelics = {
                         const addedOrRemoved = generalInfo.summonWas;
                         if (addedOrRemoved === "Apply") {
                             if (buffCheck) {return;}//if the buff already exists, abort
-                            battleActions.updateBuff(battleData,summonAssignedTo,buffSheet);
+                            updateBuff(battleData,summonAssignedTo,buffSheet);
                         }
                         else if (addedOrRemoved === "Remove" && buffCheck) {//only remove the buff if it already existed
                             removeBuff(battleData,summonAssignedTo,buffSheet);
@@ -13382,7 +13269,6 @@ const turnLogicRelics = {
                         buffSheet2.currentStacks = diffMemo;
                         const buffName2 = buffSheet2.buffName;
 
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let slots in ownersSlots) {
                             const currentOwner = namedTurns[slots];
@@ -13476,7 +13362,6 @@ const turnLogicRelics = {
                         buffSheet2.currentStacks = diffMemo;
                         const buffName2 = buffSheet2.buffName;
 
-                        const updateBuff = battleActions.updateBuff;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let slots in ownersSlots) {
                             const currentOwner = namedTurns[slots];
@@ -13656,7 +13541,7 @@ const turnLogicRelics = {
                             }
                             const buffSheet = sourceTurn.tengokuSPCritDMGSHEET;
 
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,sourceTurn,buffSheet);
 
                             //disable further tracking, someone like archer might spend a gajllion in the bounds of the same turn which would be shite
                             sourceTurn.tengokuTrackingCounter = 0;
@@ -13721,7 +13606,6 @@ const turnLogicRelics = {
                     let buffSheet2 = currentTurn.punklordeElationCRITSHEET2;
                     const buffName2 = buffSheet2.buffName;
                     const buffsObject = currentTurn.buffsObject;
-                    const updateBuff = battleActions.updateBuff;
                     const buffCheck2 = buffsObject[buffName2];
                     if (buffCheck2) {return;}//unlike something like glamoth, this bonus CANT be removed even if it falls below in the middle of a battle
 

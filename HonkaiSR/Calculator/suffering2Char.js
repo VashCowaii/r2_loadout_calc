@@ -1547,7 +1547,7 @@ const battleActions = {
         "Wind": true,
         "Physical": true,
     },
-    pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsONHIT,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
+    pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsOnHit,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
@@ -1560,8 +1560,8 @@ const battleActions = {
             let bonusBreak = 1;
             let bonusBreakMulti = 1;
 
-            bonusBreak += table[DamageBreak] + statsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + statsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            bonusBreak += table[DamageBreak] + statsOnHit[DamageBreak] + targetStatsSourceBased[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus] + statsOnHit[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
 
             if (actionTags) {
                 for (let action of actionTags) {
@@ -1581,7 +1581,7 @@ const battleActions = {
 
         return sourceDeposit.cacheValue;
     },
-    pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsONHIT,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
+    pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsOnHit,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
@@ -1595,9 +1595,9 @@ const battleActions = {
             let bonusBreakMulti = 1;
             let superMulti = 1;
 
-            bonusBreak += table[DamageBreak] + statsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + statsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
-            superMulti += table[DamageBreakSuper] + statsONHIT[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
+            bonusBreak += table[DamageBreak] + statsOnHit[DamageBreak] + targetStatsSourceBased[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus] + statsOnHit[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            superMulti += table[DamageBreakSuper] + statsOnHit[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
 
             if (actionTags) {
                 for (let action of actionTags) {
@@ -1661,7 +1661,7 @@ const battleActions = {
             }
         }
         const currentBreakCaching = breakTagging[preCacheTag];
-        const compositeCacheTag = currentBreakCaching.realTag;
+        const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
         const newTags = currentBreakCaching.newTags;
         const actionTags = currentBreakCaching.actionTags;
         const realPENKeys = currentBreakCaching.realPENKeys;
@@ -1784,7 +1784,7 @@ const battleActions = {
             }
         }
         const currentBreakCaching = breakTagging[preCacheTag];
-        const compositeCacheTag = currentBreakCaching.realTag;
+        const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
         const newTags = currentBreakCaching.newTags;
         const actionTags = currentBreakCaching.actionTags;
         const realPENKeys = currentBreakCaching.realPENKeys;
@@ -1879,6 +1879,7 @@ const battleActions = {
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
             instanceTag
         } = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
@@ -1896,6 +1897,7 @@ const battleActions = {
         const actionTablesTarget = targetTurn.tagSpecific;
         const targetStatsTeamBased = emptyTableNeverAdd;
         const isDistributed = ATKObject.isDistributed;
+        totals.totalHits += 1;
     
 
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
@@ -1908,7 +1910,7 @@ const battleActions = {
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag});
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
-        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
+        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
         if (energyGain && !ignoreEnergy) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
@@ -1961,9 +1963,9 @@ const battleActions = {
         let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
-        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         // console.log(totalCritDMG,totalCritRate)
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
@@ -1988,7 +1990,6 @@ const battleActions = {
             let smallestOverflow = 0;
             let shieldsBroken = 0;
 
-            // const updateBuff = battleActions.updateBuff;
             for (let shieldName in shieldsRef) {
                 const currentShield = shieldsRef[shieldName];
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
@@ -2209,12 +2210,12 @@ const battleActions = {
                         }
                     }
                     const dotSheet = sourceTurn.breakDOTSheet;
-                    battleActions.updateBuff(battleData,targetTurn,dotSheet);
+                    updateBuff(battleData,targetTurn,dotSheet);
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
 
-                if (!targetTurn.isDead) {battleActions.actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
             else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
                 const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
@@ -2245,6 +2246,7 @@ const battleActions = {
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,bonusScalar,DMGTags,realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,ElationPercentOverride,
             instanceTag
         } = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
@@ -2262,7 +2264,7 @@ const battleActions = {
         const actionTablesTarget = targetTurn.tagSpecific;
         const targetStatsTeamBased = emptyTableNeverAdd;
         const isDistributed = ATKObject.isDistributed;
-    
+        totals.totalHits += 1;
 
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
         targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
@@ -2288,7 +2290,7 @@ const battleActions = {
 
 
         const useCB = ATKObject.useCertifiedBanger;
-        const punchline = useCB ? sourceTurn.certifiedBanger : (battleData.punchlineForced || battleData.punchline);
+        const punchline = useCB ? (ATKObject.BangerValueOverride || sourceTurn.certifiedBanger) : (battleData.punchlineForced || battleData.punchline);
         const banger = null;
         const elationValueToUse = punchline;
         const punchlineMulti = 1 + ((elationValueToUse*5)/(elationValueToUse+240));
@@ -2333,10 +2335,10 @@ const battleActions = {
         let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
-        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
-        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
 
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
 
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
@@ -2359,7 +2361,6 @@ const battleActions = {
             let smallestOverflow = 0;
             let shieldsBroken = 0;
 
-            // const updateBuff = battleActions.updateBuff;
             for (let shieldName in shieldsRef) {
                 const currentShield = shieldsRef[shieldName];
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
@@ -2575,12 +2576,12 @@ const battleActions = {
                         }
                     }
                     const dotSheet = sourceTurn.breakDOTSheet;
-                    battleActions.updateBuff(battleData,targetTurn,dotSheet);
+                    updateBuff(battleData,targetTurn,dotSheet);
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
 
-                if (!targetTurn.isDead) {battleActions.actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
             else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
                 const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
@@ -2744,7 +2745,7 @@ const battleActions = {
                     }
                 }
                 const dotSheet = sourceTurn.breakDOTSheet;
-                battleActions.updateBuff(battleData,targetTurn,dotSheet);
+                updateBuff(battleData,targetTurn,dotSheet);
             }
             // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
             poke("BrokeEnemyWeakness",battleData,turnMerge);
@@ -2772,6 +2773,7 @@ const battleActions = {
         // ATKObject.fixedCritDMG,ATKObject.fixedCritRate
         // ATKObject.realDMGKeys, ATKObject.realPENKeys, ATKObject.realShredKeys, ATKObject.realVulnKeys
         const {actionTags,multipliers,scalar,compositeCacheTag,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,fixedCritDMG,fixedCritRate} = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const currentMulti = multipliers.additional;
 
 
@@ -2790,9 +2792,9 @@ const battleActions = {
         
         let multiOf = scalar ? pullScalar(statTable,statTableONHIT,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
-        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
     
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
 
@@ -2912,6 +2914,7 @@ const battleActions = {
         // ATKObject.fixedCritDMG,ATKObject.fixedCritRate
         // ATKObject.realDMGKeys, ATKObject.realPENKeys, ATKObject.realShredKeys, ATKObject.realVulnKeys
         const {actionTags,multipliers,scalar,compositeCacheTag,DMGTags,realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,fixedCritDMG,fixedCritRate,ElationPercentOverride,BangerValueOverride} = ATKObject;
+        const realCacheTag = compositeCacheTag + targetTurn.properName;
         const currentMulti = multipliers.elation;
 
 
@@ -2930,9 +2933,9 @@ const battleActions = {
         let multiOf = battleActions.elationLevelRef;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
         // console.log(ElationPercentOverride,ATKObject)
-        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
         
-        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,compositeCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
 
         // console.log(sumDMG,compositeCacheTag)
@@ -2947,7 +2950,7 @@ const battleActions = {
 
 
         //resistance and PEN
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,compositeCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
 
         // Outgoing DMG = Base DMG * DMG% Multiplier * DEF Multiplier * RES Multiplier * DMG Taken Multiplier * Universal DMG Reduction Multiplier * Weaken Multiplier
 
@@ -3218,7 +3221,7 @@ const battleActions = {
             // console.log(element)
             multiOf = pullScalar(playerStats,playerStatsONHIT,targetStatsSourceBased,scalar);//the stat that this attacks scales off of, so ATK or HP etc
 
-            const compositeCacheTag = currentBuff.compositeCacheTag;
+            const compositeCacheTag = currentBuff.compositeCacheTag + targetTurn.properName;
             // sourceTurn.hysilensTalentDOTSHEETPhysical = {
             //     "stats": null,
             //     "source": characterName,
@@ -3323,7 +3326,7 @@ const battleActions = {
                 }
             }
             const currentBreakCaching = breakTagging[element];
-            const compositeCacheTag = currentBreakCaching.realTag;
+            const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
             tags = currentBreakCaching.newTags;
             const actionTags = currentBreakCaching.actionTags;
             const realPENKeys = currentBreakCaching.realPENKeys;
@@ -3716,7 +3719,7 @@ const battleActions = {
                 totalHits += allLength * bounceCount;
                 for (let i=0;i<bounceCount;i++) {
                     // totalHits += allTargetArray.length;
-
+                    if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
                     let atkEntryRef = atkEntry[hitTypeAll];
                     const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
                     if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
@@ -3734,10 +3737,13 @@ const battleActions = {
                     if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
                     const currentEnemy = isSingleTargetBounce ? enemyPrimary : bounceOrder[currentEnemyIndex];
                     currentEnemyIndex++;
-
+                    if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
                     if (currentEnemy === undefined) {continue;}
 
-                    if (currentEnemy.isDead) {continue;}//skip dead bois
+                    if (currentEnemy.isDead) {
+                        i--;
+                        continue;
+                    }//skip dead bois
                     hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
                     totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
                 }
@@ -3812,7 +3818,7 @@ const battleActions = {
 
         // if (enemiesThatBroke.length) {
         //     for (let brokenEnemy of enemiesThatBroke) {
-        //         if (!brokenEnemy.isDead) {battleActions.actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+        //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
         //     }
         // }
 
@@ -3836,7 +3842,7 @@ const battleActions = {
             }
         }
 
-        return {targetsGotHit}
+        return {targetsGotHit,generalInfo}
     },
     attackWrapperChained(battleData,ATKPath,sourceTurn,ATKObject,attackState,chainedAttackRef) {
         let logging = battleData.isLoggyLogger;
@@ -3853,7 +3859,8 @@ const battleActions = {
             totalAVGDMG: 0,
             totalBreakDMG: 0,
             totalBreakSuperDMG: 0,
-            totalOverkill: 0
+            totalOverkill: 0,
+            totalHits: 0,
         }
 
         if (chainedAttackRef) {
@@ -3957,12 +3964,13 @@ const battleActions = {
                 totalHits += allTargetArray.length * bounceCount;
                 for (let i=0;i<bounceCount;i++) {
                     // totalHits += allTargetArray.length;
-
+                    if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
                     let atkEntryRef = atkEntry[hitTypeAll];
                     const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
                     if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
 
                     for (let enemyTarget of allTargetArray) {
+                        if (enemyTarget.isDead) {continue;}
                         hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,isBounce,null,true);
                     }
                 }
@@ -3975,8 +3983,11 @@ const battleActions = {
                     if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
                     const currentEnemy = bounceOrder[currentEnemyIndex];
                     currentEnemyIndex++;
-                    if (battleData.battleIsOver) {break;}
-                    if (currentEnemy.isDead) {i--;continue;}//skip dead bois
+                    if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+                    if (currentEnemy.isDead) {
+                        i--;
+                        continue;
+                    }//skip dead bois
                     hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
                     totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
                 }
@@ -4059,7 +4070,6 @@ const battleActions = {
         
 
         // if (enemiesThatBroke.length) {
-        //     const actionAdvance = battleActions.actionAdvance;
         //     for (let brokenEnemy of enemiesThatBroke) {
         //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
         //     }
@@ -4250,11 +4260,13 @@ const battleActions = {
                 for (let i=0;i<bounceCount;i++) {
                     // totalHits += allTargetArray.length;
 
+                    if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
                     let atkEntryRef = atkEntry[hitTypeAll];
                     const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
                     if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
 
                     for (let enemyTarget of allTargetArray) {
+                        if (enemyTarget.isDead) {continue;}
                         hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,isBounce,null,true);
                         hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo2,isLastHit,isBounce,null,true);
                     }
@@ -4268,7 +4280,11 @@ const battleActions = {
                     if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
                     const currentEnemy = bounceOrder[currentEnemyIndex];
                     currentEnemyIndex++;
-                    if (currentEnemy.isDead) {continue;}//skip dead bois
+                    if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+                    if (currentEnemy.isDead) {
+                        i--;
+                        continue;
+                    }//skip dead bois
                     hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
                     hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo2,isLastHit,isBounce);
                     totalHits += 2;//since we skip dead guys, gotta increments hits inside the loop
@@ -4284,7 +4300,6 @@ const battleActions = {
         if (!isEnemy) {battleData.battleDamageSUM += totals.totalAVGDMG + totals2.totalAVGDMG;}
 
         // if (enemiesThatBroke.length) {
-        //     const actionAdvance = battleActions.actionAdvance;
         //     for (let brokenEnemy of enemiesThatBroke) {
         //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
         //     }
@@ -4369,7 +4384,6 @@ const battleActions = {
 
         if (battleData.enemiesRemaining === 0) {
             // battleData.wavesToRun = battleSettings.totalWaves;
-            // battleData.wavesCompleted = 0;
             battleData.wavesCompleted += 1;
             if (battleData.wavesCompleted === battleData.wavesToRun) {
                 battleData.battleIsOver = true;
@@ -4463,11 +4477,11 @@ const battleActions = {
                 }
             }
 
-            targetDeposit.cacheValue = bonus;
+            sourceDeposit.cacheValue = bonus;
         }
         // let sourceMulti = 1 + (isFixedHealing ? 0 : (sourceStats[HealingOutgoing] + targetStats[HealingIncoming]));
 
-        return targetDeposit.cacheValue;
+        return sourceDeposit.cacheValue;
     },
     healed(battleData,targetTurn,skillSlot,percent,flat,generalInfo,isFixedHealing) {
         // const generalInfo = {sourceTurn,skillSlot,scalar:healObject.scalar,totals};
@@ -4698,11 +4712,11 @@ const battleActions = {
                 }
             }
 
-            targetDeposit.cacheValue = bonus;
+            sourceDeposit.cacheValue = bonus;
         }
         // let sourceMulti = 1 + sourceStats[ShieldOutgoing] + targetStats[ShieldIncoming];
 
-        return targetDeposit.cacheValue;
+        return sourceDeposit.cacheValue;
     },
     getShieldValue(battleData,targetTurn,currentReference,sourceRef,sourceTurn) {
         // existingShield,percent,flat,percentCap,flatCap,scalar
@@ -5075,7 +5089,6 @@ const battleActions = {
     generalApplyDOT(battleData,sourceTurn,targetTurn,applicationSheet,gotHitObject,targetRefObject,isPerHit) {
 
         const baseChance = applicationSheet.baseChance;
-        const updateBuff = battleActions.updateBuff;
 
         if (!isPerHit && !gotHitObject) {
             
@@ -5155,6 +5168,10 @@ const getChanceToApply = battleActions.getChanceToApply;
 const generalApplyDOT = battleActions.generalApplyDOT;
 const healAlly = battleActions.healAlly;
 const updateEnergy = battleActions.updateEnergy;
+const updateBuff = battleActions.updateBuff;
+const updateSkillPoints = battleActions.updateSkillPoints;
+const actionAdvance = battleActions.actionAdvance;
+const queueUltimate = battleActions.queueUltimateUse;
 
 const turnLogic = {
 
@@ -5214,7 +5231,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Universal SPD Change AV Controller",
-                "announce": false
             },
             {
                 "trigger": "UpdateStatHP",//SPD stat change
@@ -5225,7 +5241,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Universal Max HP adjustment controller",
-                "announce": false
             },
             {
                 "trigger": "SummonOnFieldAdjustment",
@@ -5236,7 +5251,6 @@ const turnLogic = {
                     if (!memoTurn.isMemosprite || action != "Remove") {return;}
 
                     const buffsRef = memoTurn.buffsObject;
-                    // const updateBuff = battleActions.updateBuff;
                     for (let buffName in buffsRef) {
                         const currentBuff = buffsRef[buffName];
                         if (currentBuff && currentBuff.removeOnDeath) {
@@ -5523,7 +5537,7 @@ const turnLogic = {
                 buffSheet.durationInTurn = standardDuration + 1;
                 buffSheet.currentStacks = amount;
                 buffSheet.expireParam = {sourceTurn: targetTurn.name, stackCount: amount};
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
             },
             startAhaInstant(battleData,ahaTurn) {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantStart", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
@@ -5555,7 +5569,6 @@ const turnLogic = {
 
                 const elationSkillObject = battleData.elationSkillObject;
 
-                // const updateBuff = battleActions.updateBuff;
                 // const updateBangerValue = battleActions.updateBangerValue;
                 for (let entity of elationEntityArray) {
                     const currentElationSkill = elationSkillObject[entity.participantID];
@@ -5726,7 +5739,6 @@ const turnLogic = {
                     const turnExceptions = battleData.elationBangerTurnExceptions;
                     const elationEntityArray = battleData.elationEntityArray;
 
-                    const updateBuff = battleActions.updateBuff;
                     const updateBangerValue = battleActions.updateBangerValue;
                     const startingBangerValue = 20;
                     for (let elationChar of elationEntityArray) {
@@ -5756,35 +5768,7 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Aha Instant SPD Controller",
-                "announce": false
             },
-
-            {
-                "trigger": "WaveStart",
-                condition(battleData,generalInfo) {
-                    battleActions.updatePunchlineValue(battleData,5,null,"MoC Wavestart punchline gain");
-
-
-                    // let ownerTurn = this.ownerTurn;
-                    // updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
-                },
-                "target": "self",
-                "listenerName": "Robin Technique wave start listener",
-                "ownerTurn": {},
-            },
-            // {
-            //     "trigger": "BattlePrep",
-            //     condition(battleData,generalInfo) {
-            //         battleActions.updatePunchlineValue(battleData,5,null,"MoC Wavestart punchline gain");
-
-
-            //         // let ownerTurn = this.ownerTurn;
-            //         // updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Robin Technique wave start listener",
-            //     "ownerTurn": {},
-            // }
         ],
         "finalListeners": [],
         "characterValues": {},
@@ -6657,7 +6641,7 @@ const turnLogic = {
 
                 if (e2) {
                     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
                 }
 
@@ -6763,7 +6747,7 @@ const turnLogic = {
 
                 let targetTurn = battleData.primaryTarget//single target, so the enemy hit will always be one enemy, aka first key;
                 let buffSheet = ATKObjects.gallagherBasicEnhancedBLITZSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
@@ -6818,11 +6802,10 @@ const turnLogic = {
                     besotted(battleData,sourceTurn,enemySlot,e4,values2);
                 }
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 logicRef.characterValuesBattle.nextBasicEnhanced = true;
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");//will advance when ult is cast but not within his turn, obv does nothing then
+                actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");//will advance when ult is cast but not within his turn, obv does nothing then
                 sourceTurn.ultyQueued = false;
             },
             besotted(battleData,sourceTurn,targetTurn,e4,values2) {
@@ -6853,7 +6836,7 @@ const turnLogic = {
                     }
                 }
                 let buffSheet = ATKObjects.enemyBesottedSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -6901,7 +6884,7 @@ const turnLogic = {
                 let buffSheet = ATKObjects.gallagherHealingConversionSHEET;
                 buffSheet[HealingOutgoing] = conversion;
                 buffSheet[HealingOutgoingNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             gallagherTechnique(battleData,target,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -7041,16 +7024,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.gallagherUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.gallagherUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -7103,12 +7093,11 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                        updateBuff(battleData,ownerTurn,buffSheet)
                         // When entering the battle, Gallagher regenerates 20 Energy and increases Effect RES by 50%.
                     },
                     "target": "self",
                     "listenerName": "Gallagher - +Energy & EffectRES/Start - E1",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -7137,11 +7126,10 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                        updateBuff(battleData,ownerTurn,buffSheet)
                     },
                     "target": "self",
                     "listenerName": "Gallagher - +Break Effect/Efficiency - E6",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -7347,7 +7335,7 @@ const turnLogic = {
                 const countdownSheet = ATKObjects.huohuoTalentOwnerSHEET;
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
-                battleActions.updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
+                updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
 
                 if (e1) {
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
@@ -7368,7 +7356,6 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
-                    // const updateBuff = battleActions.updateBuff;
                     const allyPositions = battleData.allyPositions;
                     
                     removeBuffFromBatch(battleData,allyPositions,spdSheet);
@@ -7489,11 +7476,8 @@ const turnLogic = {
                 const buffSheet = ATKObjects.huohuoUltimateBuffSHEET;
                 const buffSheet2 = ATKObjects.huohuoUltimateBuffSHEET2;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 const allyPositions = battleData.allyPositions;
                 const charactersOnly = battleData.fullCharacterArray;
-                const updateBuff = battleActions.updateBuff;
                 const percentRegen = values[0];
 
                 const teamCallObject = ATKObjects.huohuoUltimateTeamCallObject ??= {targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false};
@@ -7648,7 +7632,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -7656,7 +7648,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -7700,7 +7692,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
@@ -7759,7 +7751,7 @@ const turnLogic = {
                         if (hpRatio >= 1) {return;}
     
                         buffSheet[HealingOutgoing] = bonusValue;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E4 dynamic HP ratio healing bonus",
@@ -7796,7 +7788,7 @@ const turnLogic = {
                         }
                         const buffSheet = this.e6DMGBuffSHEET;
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                        updateBuff(battleData,targetTurn,buffSheet)
                     },
                     "target": "ally",
                     "listenerName": "Woven Together, Cohere Forever - healed ally listener",
@@ -7971,7 +7963,7 @@ const turnLogic = {
 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
 
-                battleActions.updateBuff(battleData,targetTurn,skillHOTSheet);
+                updateBuff(battleData,targetTurn,skillHOTSheet);
 
                 let healObject = ATKObjects.natashaSkillHealHEALOBJECT;
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
@@ -8045,13 +8037,11 @@ const turnLogic = {
 
                     if (sub30Array.length) {
                         const ultBuffSheet = ATKObjects.natashaSUltHealHOTHEALSHEET;
-                        battleActions.updateBuffBatchTargets(battleData,sub30Array,ultBuffSheet);
+                        updateBuffBatchTargets(battleData,sub30Array,ultBuffSheet);
                     }
                 }
 
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
-                // poke("BasicATKStart",battleData,{source:"Gallagher"});
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
@@ -8129,9 +8119,6 @@ const turnLogic = {
 
 
                 const enemyPositions = battleData.enemyPositions;
-                // for (let enemyPosition of enemyPositions) {
-                //     battleActions.updateBuff(battleData,enemyPosition,buffSheet); 
-                // }
                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet)
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -8206,7 +8193,7 @@ const turnLogic = {
                     };
 
                     if (hpRatio <= hpThreshold) {
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                     else {
                         removeBuff(battleData,ownerTurn,buffSheet);
@@ -8330,7 +8317,7 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Natasha - Battlestart HealingOutgoing trace Healer",
@@ -8349,7 +8336,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.natashaUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -8357,7 +8352,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -8413,7 +8408,7 @@ const turnLogic = {
 
                         if (hpRatio <= 0.30) {
                             const queueObject = this.queueObject ??= {
-                                attack: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
                                 target: this.target,
                                 name: this.listenerName,
                                 properName: ownerTurn.properName,
@@ -8642,7 +8637,7 @@ const turnLogic = {
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-                battleActions.updateBuff(battleData,targetTurn,talentHealSheet);
+                updateBuff(battleData,targetTurn,talentHealSheet);
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -8706,7 +8701,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.lynxSkillHealHOTSHEET;
                 buffSheet[HPFlat] = finalHPValue;
                 buffSheet[HPFlatNULL] = -conversion;//the flat amount isn't converted HP, which is actually unusual bc conversions NORMALLY include that value as converted
-                const updateBuff = battleActions.updateBuff;
 
                 if (rank >= 4) {
                     const ATKRatio = 0.03;
@@ -8787,12 +8781,7 @@ const turnLogic = {
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
 
-                const updateBuff = battleActions.updateBuff;
-                
-
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot});
-                // poke("BasicATKStart",battleData,{source:"Gallagher"});
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
 
                 for (let ally of allyPositions) {
@@ -8818,8 +8807,6 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-
-                // const updateBuff = battleActions.updateBuff;
 
                 updateBuffBatchTargets(battleData,allyPositions,talentHealSheet);
 
@@ -8957,7 +8944,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.lynxUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.lynxUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -8965,7 +8960,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -9024,7 +9019,7 @@ const turnLogic = {
                         };
     
                         if (hpRatio <= hpThreshold) {
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                         }
                         else {
                             removeBuff(battleData,ownerTurn,buffSheet);
@@ -9236,7 +9231,6 @@ const turnLogic = {
 
                 // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
-                const updateBuff = battleActions.updateBuff
 
                 if (rank >= 2) {
                     const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
@@ -9369,9 +9363,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.luochaUltimateATKOBJECT;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                const updateBuff = battleActions.updateBuff;
-
                 if (rank >= 6) {
                     const enemyPositions = battleData.enemyPositions;
                     const debuffSheet = ATKObjects.luochaE6RESSHEET;
@@ -9452,7 +9443,6 @@ const turnLogic = {
 
                 const countdownSheet = ATKObjects.luochaAddZoneCountdownSHEET;
                 // const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 battleValues.zoneIsActive = true;
                 battleValues.zoneIsQueued = false;
@@ -9499,7 +9489,6 @@ const turnLogic = {
 
                 // const buffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
                 // const enemyPositions = battleData.enemyPositions;
-                // // const updateBuff = battleActions.updateBuff;
                 // for (let enemy of enemyPositions) {
                 //     removeBuff(battleData,enemy,buffSheet);
                 // }
@@ -9544,7 +9533,7 @@ const turnLogic = {
                         valuesRef.zoneIsQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -9693,7 +9682,7 @@ const turnLogic = {
                         }
                         
                         // const queueObject = this.queueObjectSkill ??= {
-                        //     attack: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
+                        //     actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
                         //     target: "ally",
                         //     name: this.listenerName,
                         //     properName: ownerTurn.properName,
@@ -9707,7 +9696,7 @@ const turnLogic = {
 
 
                         const queueObject = this.queueObjectSkill ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
                             target: null,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -9766,16 +9755,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.luochaUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -9819,11 +9815,10 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "The Cursed One - CC RES application",
-                "announce": false,
                 "ownerTurn": {},
             },
         ],
@@ -9844,11 +9839,10 @@ const turnLogic = {
                         const ATKObjects = logicRef.ATKObjects;
     
                         let buffSheet = ATKObjects.luochaE4WEAKENSHEET;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "enemy",
                     "listenerName": "E4 enemy created while zone active listener",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10074,8 +10068,6 @@ const turnLogic = {
                 //So fun fact, the implant + res reduction CAN stack with other implants(like archer e2) but sw has to implant first to get her 20% res reduction for that element
                 //if archer implants first and sw implants after, only 20% res reduction is applied from archer only, but if sw comes first then it's 40% total.
 
-
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,targetEnemy,weaknessSheet);
 
                 //NOTE: normally I'd bother with the whole, "if it is the enemy's turn right now, add one more duration to the timer"
@@ -10143,13 +10135,11 @@ const turnLogic = {
                     }
                 }
                 
-                const updateBuff = battleActions.updateBuff;
                 let ATKObject = ATKObjects.silverwolfUltimateATKOBJECT;
                 let buffSheet = ATKObjects.silverwolfUltimateDEFDEBUFFSHEET;
                 for (let enemySlot of battleData.enemyPositions) {
                     updateBuff(battleData,enemySlot,buffSheet);
                 }
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 let ultyHit = battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
 
@@ -10221,7 +10211,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TalentStart",battleData,{sourceTurn});
 
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
                 if (charValuesRef.bugCycleCounter === 3) {charValuesRef.bugCycleCounter = 0;}//reset the bug rotation
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
@@ -10254,7 +10244,6 @@ const turnLogic = {
                 const stacksToApply = Math.min(5,Math.floor(currentEHR/0.10));
 
                 const buffCheck = currentTurn.buffsObject[buffName1];
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if sw already has the buff
                     const currentStacks = buffCheck.currentStacks;//then check the current stacks on the existing buff
 
@@ -10423,7 +10412,7 @@ const turnLogic = {
                     const primaryRef = battleData.primaryTarget;
                     if (implantNameFound && primaryRef && !primaryRef.buffsObject[implantNameFound]) {
                         const implantSheetToTransfer = enemyKilledBuffs[implantNameFound]
-                        battleActions.updateBuff(battleData,primaryRef,implantSheetToTransfer);
+                        updateBuff(battleData,primaryRef,implantSheetToTransfer);
                     }
                     //note this does mean that we are only actually giving a shit about one single implant getting swapped, and only to the primary target(which would be elite or higher anyways by default)
                     //if there are ever more than one implants, only one will ever get swapped at death and only the first one found in the loop
@@ -10513,16 +10502,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.swUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.swUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -10576,11 +10572,10 @@ const turnLogic = {
                             "expireType": null
                         };
     
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "enemy",
                     "listenerName": "E2 Vuln Zombie Network",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10603,7 +10598,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "Silver Wolf E4 additional DMG controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10638,7 +10632,6 @@ const turnLogic = {
                         let buffName = buffSheet.buffName;
                         const buffCheck = sourceTurn.buffsObject[buffName];
 
-                        const updateBuff = battleActions.updateBuff;
                         if (buffCheck) {//if the buff exists
                             const currentStacks = buffCheck.currentStacks;
                             if (currentStacks < targetDebuffs) {//and if the current stacks are lower than the stacks we need
@@ -10660,7 +10653,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Silver Wolf E6 bonus DMG ONHIT",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -10804,7 +10796,7 @@ const turnLogic = {
                     else {removeBuff(battleData,currentTurn,buffCheck);}//otherwise if we lost the EHR required, kill the buuff
                 }
                 else if (hasEnough) {//if it doesn't exist and we have enough, then apply
-                    battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                    updateBuff(battleData,currentTurn,buffSheet);
                 }
             },
             kafkaSkill(battleData,target,sourceTurn) {
@@ -10994,9 +10986,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.kafkaUltimateATKOBJECT;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 const valuesRef = sourceTurn.battleValues;
                 const oldValue = valuesRef.fuaStacks;
@@ -11077,8 +11067,6 @@ const turnLogic = {
                 const enemyTurns = battleData.enemyBasedTurns;
                 // const getChance = battleActions.getChanceToApply;
                 // const baseChance = values[1];
-                // const updateBuff = battleActions.updateBuff;
-            
 
                 generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
             },
@@ -11159,7 +11147,7 @@ const turnLogic = {
                         valuesRef.fuaStackDebt += 1;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[characterName].skillFunctions.kafkaFUA,
+                            actionCall: turnLogic[characterName].skillFunctions.kafkaFUA,
                             target: this.target,
                             name: this.listenerName,
                             properName: characterName,
@@ -11222,16 +11210,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.kafkaUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.kafkaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -11348,7 +11343,6 @@ const turnLogic = {
                         const buffSheet = this.e1DOTVulnDEBUFFSHEET;
                          
                         // const enemyTurns = battleData.enemyBasedTurns;
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,targetTurn,buffSheet);//owner
                     },
                     "target": "self",
@@ -11388,7 +11382,7 @@ const turnLogic = {
                         const buffSheet = this.kafkaE2DOTSHEET;
 
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "team",
                     "listenerName": "Fortississimo DOT Buff",
@@ -11620,7 +11614,7 @@ const turnLogic = {
                         if (currentStacks < stacks) {
                             const stackDiff = stacks - currentStacks;
                             buffSheet.currentStacks = stackDiff;
-                            battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                            updateBuff(battleData,currentTurn,buffSheet);
                             return;
                         }
                         //else if we have too many stacks, then remove
@@ -11631,13 +11625,13 @@ const turnLogic = {
                 if (stacks === 0) {return}
 
                 buffSheet.currentStacks = stacks;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             addHysilensField(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"The Gladius of Conquest"});
+                updateSkillPoints(1,battleData,{sourceTurn,sourceName:"The Gladius of Conquest"});
                 sourceTurn.hysilensFieldActive = true;
 
                 const rank = sourceTurn.rank;
@@ -11684,7 +11678,6 @@ const turnLogic = {
                 const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET
 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,debuffSheet);
                 }
@@ -11712,7 +11705,6 @@ const turnLogic = {
 
 
                 const enemyPositions = battleData.enemyPositions;
-                // const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     const buffCheck = enemy.buffsObject[debuffName];
                     if (buffCheck) {removeBuff(battleData,enemy,buffCheck);}
@@ -12100,8 +12092,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.fishladyUltimateATKOBJECT;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 const addHysilensField = ATKObjects.addHysilensField ??= logicRef.skillFunctions.addHysilensField;
                 addHysilensField(battleData,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -12425,7 +12415,7 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const debuffSheet = ATKObjects.hysilensFieldDEBUFFSHEET;
-                    battleActions.updateBuff(battleData,enemyTurn,debuffSheet);
+                    updateBuff(battleData,enemyTurn,debuffSheet);
                 },
                 "target": "self",
                 "listenerName": "Zone - enemy added to field listener",
@@ -12472,21 +12462,27 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.fishladyUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.fishladyUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Hysilens - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -12542,7 +12538,7 @@ const turnLogic = {
                         }
                         const multiSheet = this.E1FinalMultiDOTSHEET;
 
-                        battleActions.updateBuff(battleData,targetTurn,multiSheet);
+                        updateBuff(battleData,targetTurn,multiSheet);
                     },
                     "target": "self",
                     "listenerName": "You Ask Why Hearts Cry - DOT team-wide final multi",
@@ -12729,7 +12725,7 @@ const turnLogic = {
                 buffSheet[DamageAll] = usableValue;
                 for (let ally of allyPositions) {
                     if (ally.isUniqueEvent) {continue;}
-                    battleActions.updateBuff(battleData,ally,buffSheet);
+                    updateBuff(battleData,ally,buffSheet);
                     // removeBuff(battleData,currentTurn,buffCheck,true,null,false,true);
                 }
                 
@@ -12832,7 +12828,7 @@ const turnLogic = {
                     finalAVG = 1 - composite;
                 }
                 arcanaSheet.avgChanceApplied = finalAVG;
-                battleActions.updateBuff(battleData,targetTurn,arcanaSheet);
+                updateBuff(battleData,targetTurn,arcanaSheet);
             },
             blackswanArcanaDOTTurnStart(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -13015,9 +13011,6 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
                 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,debuffSheet);
@@ -13116,7 +13109,7 @@ const turnLogic = {
                         "expireType": null,
                         "actionTags": ["BSArcana"],
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "battleprep create skill sheet/arcana shred sheet",
@@ -13139,7 +13132,6 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
                     const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
-                    const updateBuff = battleActions.updateBuff;
 
                     for (let enemy of enemyPositions) {
                         if (!targetsGotHit[enemy.name]) {continue;}
@@ -13219,7 +13211,7 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
                     const skillShredSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
-                    battleActions.updateBuff(battleData,enemyTurn,skillShredSheet);
+                    updateBuff(battleData,enemyTurn,skillShredSheet);
                 },
                 "target": "self",
                 "listenerName": "Arcana - enemy added to field listener",
@@ -13267,21 +13259,27 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Black Swan - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -13395,7 +13393,6 @@ const turnLogic = {
                         const windSheet = ATKObjects.E1DebuffRESSHEETWind;
                         const sourceDots = sourceTurn.dots;
                         const sourceBuffs = sourceTurn.buffsObject;
-                        const updateBuff = battleActions.updateBuff;
 
                         if (sourceDots.Lightning) {
                             const buffCheck = sourceBuffs[lightningSheet.buffName];
@@ -13663,7 +13660,6 @@ const turnLogic = {
                 const stacksToApply = Math.min(4,Math.floor(usableEHR/0.10));
 
                 const buffCheck = currentTurn.buffsObject[buffName1];
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if sw already has the buff
                     const currentStacks = buffCheck.currentStacks;//then check the current stacks on the existing buff
 
@@ -13802,7 +13798,6 @@ const turnLogic = {
                 let ATKObject = isSkill ? ATKObjects.weltTraceDMGSKILLREF : ATKObjects.weltTraceDMGBASICREF;
                 let slowSheet = ATKObjects.weltSkillOnlySLOWSHEET;
                 const e1Sheet = ATKObjects.weltTalentDMGE1REF;
-                const updateBuff = battleActions.updateBuff;
 
                 const ATKObjectSLOW = ATKObjects.weltTalentDMGSLOWREF;
 
@@ -13934,7 +13929,6 @@ const turnLogic = {
                 }
                 
                 let ATKObject = ATKObjects.weltUltimateATKOBJECT;
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 updateEnergy(battleData,5,sourceTurn,false,"Punishment");
                 let ultyHit = battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
@@ -14111,9 +14105,9 @@ const turnLogic = {
                             "expireType": "EndTurn"
                         };
                     
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
 
-                        battleActions.actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
+                        actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
                     }
                 },
                 "target": "enemy",
@@ -14154,16 +14148,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.weltUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.weltUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -14233,7 +14234,6 @@ const turnLogic = {
                         }
                         let buffName = buffSheet.buffName;
                         const buffCheck = sourceTurn.buffsObject[buffName];
-                        const updateBuff = battleActions.updateBuff;
                         if (validDMG) {
                             if (buffCheck) {return}
                             else{updateBuff(battleData,ownerTurn,buffSheet);}
@@ -14425,7 +14425,7 @@ const turnLogic = {
 
                 if (rank >= 4) {
                     const bonusSheet3 = ATKObjects.pelaSkillDE4PENSHEET;
-                    battleActions.updateBuff(battleData,battleData.primaryTarget,bonusSheet3);
+                    updateBuff(battleData,battleData.primaryTarget,bonusSheet3);
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -14433,11 +14433,11 @@ const turnLogic = {
                 let dispelCount = 0;
                 if (dispelCount) {
                     const bonusSheet = ATKObjects.pelaSkillDispelDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,bonusSheet);
+                    updateBuff(battleData,sourceTurn,bonusSheet);
 
                     if (rank >= 2) {
                         const bonusSheet2 = ATKObjects.pelaSkillDispelSPDSHEET;
-                        battleActions.updateBuff(battleData,sourceTurn,bonusSheet2);
+                        updateBuff(battleData,sourceTurn,bonusSheet2);
                     }
                 }
 
@@ -14496,13 +14496,11 @@ const turnLogic = {
                     }
                 }
                 
-                const updateBuff = battleActions.updateBuff;
                 let ATKObject = ATKObjects.pelaUltimateATKOBJECT;
                 let buffSheet = ATKObjects.pelaUltimateDEFDEBUFFSHEET;
                 for (let enemySlot of battleData.enemyPositions) {
                     updateBuff(battleData,enemySlot,buffSheet);
                 }
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 sourceTurn.ultyQueued = false;
@@ -14571,7 +14569,7 @@ const turnLogic = {
 
                 let buffSheet = ATKObjects.pelaTechniqueDEFDEBUFFSHEET;
                 for (let enemySlot of battleData.enemyPositions) {
-                    battleActions.updateBuff(battleData,enemySlot,buffSheet);
+                    updateBuff(battleData,enemySlot,buffSheet);
                 }
                 poke("TechniqueEnd",battleData,{sourceTurn});
             },
@@ -14644,7 +14642,7 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "The Secret Strategy trace bonus to allies",
@@ -14679,8 +14677,6 @@ const turnLogic = {
                     let buffName = buffSheet.buffName;
                     const buffCheck = sourceTurn.buffsObject[buffName];
 
-                    
-                    const updateBuff = battleActions.updateBuff;
                     if (!buffCheck && targetDebuffs) {
                         updateBuff(battleData,sourceTurn,buffSheet);
                     }
@@ -14746,16 +14742,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.pelaUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.pelaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -14821,7 +14824,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "Silver Wolf E4 additional DMG controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -15101,9 +15103,7 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.topazUltimateBONANZASHEET;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 
                 valuesRef.bonanzaStacks = rank>=6 ? 3 : 2;
                 valuesRef.isBonanzaActive = true;
@@ -15143,7 +15143,7 @@ const turnLogic = {
                     const isEnhanced = valuesRef.isBonanzaActive;
 
                     const queueObject = this.queueObject ??= {
-                        attack: turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttackAction,
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttackAction,
                         target: "enemy",
                         name: this.listenerName,
                         properName: generalInfo.eventTurn.properName,
@@ -15247,7 +15247,7 @@ const turnLogic = {
                         "isDebuff": true,
                         "actionTags": ["FUA"]
                     }
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Topaz: numby event creation",
@@ -15271,7 +15271,7 @@ const turnLogic = {
                     charValuesRef.enemyWithDebt = battleData.primaryTarget;
                     if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
                     let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
-                    battleActions.updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
+                    updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Topaz: Proof of Debt death swap",
@@ -15324,7 +15324,7 @@ const turnLogic = {
                     }
                     else {//if weakness found, apply buff
                         if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -15344,7 +15344,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.topazUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.topazUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -15352,7 +15360,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -15401,13 +15409,13 @@ const turnLogic = {
 
                     const isFUA = generalInfo.ATKObject.isFUA;
                     if (isFUA) {
-                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
+                        actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
                     }
 
                     const slot = generalInfo.slot;
                     const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
                     if (battleValues.isBonanzaActive && slotCheck) {
-                        battleActions.actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
+                        actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
                     }
                     //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
                 },
@@ -15465,7 +15473,7 @@ const turnLogic = {
                         let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
 
 
-                        battleActions.updateBuff(battleData,enemyWithDebt,buffSheet);
+                        updateBuff(battleData,enemyWithDebt,buffSheet);
                         const buffCheck = enemyWithDebt.buffsObject[buffName];
                         if (buffCheck.currentStacks === 2) {
                             enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
@@ -15487,7 +15495,7 @@ const turnLogic = {
 
                         const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
                         if (numbyTurn.properName != sourceTurn.properName) {return;}
-                        battleActions.actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
+                        actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
                     },
                     "target": "owner",
                     "listenerName": "Agile Operation",
@@ -15702,7 +15710,7 @@ const turnLogic = {
                 poke("TalentEnd",battleData,{sourceTurn});
 
                 //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
-                battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
+                updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
             },
             archerSkillInstance(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -15767,7 +15775,7 @@ const turnLogic = {
 
                 if (rank >= 1 && battleValues.skillCounter === 3) {//fail condition right off if no source exists or it's not archer
                     let cost = 2;
-                    battleActions.updateSkillPoints(cost,battleData,{sourceTurn,sourceName:"E1: Skill Point Refund"})
+                    updateSkillPoints(cost,battleData,{sourceTurn,sourceName:"E1: Skill Point Refund"})
                 }
 
                 poke("SkillEnd",battleData,{sourceTurn});
@@ -15780,7 +15788,7 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
                 const lessThanMax = battleValues.skillCounter < 5;
 
-                if (!buffCheck || buffCheck.currentStacks < buffCheck.maxStacks) {battleActions.updateBuff(battleData,sourceTurn,buffSheet);}
+                if (!buffCheck || buffCheck.currentStacks < buffCheck.maxStacks) {updateBuff(battleData,sourceTurn,buffSheet);}
 
                 if (lessThanMax) {
                     sourceTurn.ArcherCanDoExtraTurn = true;
@@ -15825,8 +15833,6 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.archerUltimateATKOBJECT;
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
 
                 let e2 = sourceTurn.rank >= 2;
                 if (e2) {
@@ -15852,7 +15858,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObject.archerUltimateE2IMPLANTSHEET;
-                    battleActions.updateBuff(battleData,currentEnemy,buffSheet);
+                    updateBuff(battleData,currentEnemy,buffSheet);
                     //NOTE: the e2 weakness implant can double stack with silver wolf's implant, but sw implant has to come first
                     //just checked and sw weakness check DOES look for implanted weaknesses too, and won't do the 20% RES reduction if archer's goes first.
                 }
@@ -15992,7 +15998,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     
                     const queueObject = this.queueObject ??= {
-                        attack: sim.turnWrapper,
+                        actionCall: sim.turnWrapper,
                         target: this.target,
                         name: this.listenerName,
                         properName: ownerTurn.properName,
@@ -16070,7 +16076,7 @@ const turnLogic = {
                     if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[characterName].skillFunctions.archerFUA,
+                            actionCall: turnLogic[characterName].skillFunctions.archerFUA,
                             target: this.target,
                             name: this.listenerName,
                             properName: characterName,
@@ -16106,16 +16112,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.archerUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.archerUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -16152,7 +16165,7 @@ const turnLogic = {
                         }
 
                         let buffSheet = this.spChangeGuardianCRITDMGSHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -16204,11 +16217,10 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Archer - +Ult DMG - E4",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -16223,12 +16235,11 @@ const turnLogic = {
     
                         if (ownerTurn.turnState) {
                             let cost = 1;
-                            battleActions.updateSkillPoints(cost,battleData,{sourceTurn,sourceName:this.listenerName});
+                            updateSkillPoints(cost,battleData,{sourceTurn,sourceName:this.listenerName});
                         }
                     },
                     "target": "self",
                     "listenerName": "Archer - +SP/StartTurn - E6",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -16250,11 +16261,10 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Archer - Skill DEF Shred - E6",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -16352,7 +16362,7 @@ const turnLogic = {
                 poke("BasicATKStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
-                battleActions.actionAdvance(0.20,sourceTurn,battleData,"Trace: Rippling Waves");
+                actionAdvance(0.20,sourceTurn,battleData,"Trace: Rippling Waves");
 
                 poke("BasicATKEnd",battleData,{sourceTurn});
             },
@@ -16417,7 +16427,7 @@ const turnLogic = {
                 poke("SkillStart",battleData,{sourceTurn});
 
                 const buffSheet = ATKObjects.seeleSkillSPDSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 // poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Skill Use"});
 
                 if (!isExtraSkill) {//energy is never gained unless it's the reg skill, not inserted
@@ -16483,17 +16493,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.seeleUltimateATKOBJECT;
 
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 poke("SeeleEnterAmplification",battleData,null);
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                // if (rank >= 2) {
-                //     const buffSheet2 = ATKObjects.jingliuE2PostUltDMGSHEET;
-                //     battleActions.updateBuff(battleData,sourceTurn,buffSheet2);
-                // }
 
                 sourceTurn.ultyQueued = false;
             },
@@ -16589,7 +16591,7 @@ const turnLogic = {
                     
                     if (targetFound) {
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.seeleSkill,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.seeleSkill,
                             target: "DETERMINE",
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -16647,7 +16649,7 @@ const turnLogic = {
                         "expireType": "EndTurn",
                         // "actionTags": ["JingliuEnhanced"],
                     }
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
 
                     const battleValues = ownerTurn.battleValues;
 
@@ -16808,7 +16810,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     
                     const queueObject = this.queueObject ??= {
-                        attack: sim.turnWrapper,
+                        actionCall: sim.turnWrapper,
                         target: this.target,
                         name: this.listenerName,
                         properName: ownerTurn.properName,
@@ -16855,7 +16857,7 @@ const turnLogic = {
                         "expireType": "EndTurn",
                         // "actionTags": ["JingliuEnhanced"],
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Seele Entered Amplification",
@@ -16874,16 +16876,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.seeleUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.seeleUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -16960,7 +16969,7 @@ const turnLogic = {
                                 removeBuff(battleData,ownerTurn,buffSheet);
                             }
                         }
-                        else if (HPCheck80) {battleActions.updateBuff(battleData,ownerTurn,buffSheet);}
+                        else if (HPCheck80) {updateBuff(battleData,ownerTurn,buffSheet);}
                     },
                     "target": "self",
                     "listenerName": "E1 <=80%HP Target Checker",
@@ -17046,7 +17055,7 @@ const turnLogic = {
                                     battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
                                 }
                                 if (validTag) {
-                                    battleActions.updateBuff(battleData,currentEnemy,buffSheet);
+                                    updateBuff(battleData,currentEnemy,buffSheet);
                                 }
                             }
                             
@@ -17272,7 +17281,6 @@ const turnLogic = {
                 let buffSheet = ATKObjects.tingyunSkillBENEDICTIONSHEET;
                 buffSheet[ATKFlat] = finalBuff;
 
-                const updateBuff = battleActions.updateBuff;
                 let charValuesRef = logicRef.characterValuesBattle;
                 if (charValuesRef.charWithBenediction) {//if someone exists on the team right now with benediction
                     let oldTarget = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
@@ -17413,8 +17421,6 @@ const turnLogic = {
                 let rank = sourceTurn.rank;
                 let e6 = rank >= 6;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 let charValuesRef = logicRef.characterValuesBattle;
                 //atm we look for the ally with benediction, if nobody has it then we assume char1 gets the energy, always
                 let targetTurn = target[0];
@@ -17444,7 +17450,7 @@ const turnLogic = {
                 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
                 let buffSheet = ATKObjects.tingyunUltimateDMGSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -17518,7 +17524,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet)
                 },
                 "target": "self",
                 "listenerName": "Tingyun - Major Trace: Knell Subdual",
@@ -17574,7 +17580,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.tingyunUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+                            
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.tingyunUltimate,
                             target: null,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -17585,7 +17599,7 @@ const turnLogic = {
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
                         
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "char1",
@@ -17641,11 +17655,10 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn"
                         }
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E1 spd boost controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -17666,7 +17679,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E2 ally kill count reset",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -17688,7 +17700,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Tingyun - E2 ally energy gain",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -17870,7 +17881,7 @@ const turnLogic = {
                 poke("TalentStart",battleData,{sourceTurn});
                 let values = ATKObjects.bronyaTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                battleActions.actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
+                actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
                 poke("TalentEnd",battleData,{sourceTurn});
             },
             bronyaAdvance(battleData,target,sourceTurn) {
@@ -17915,13 +17926,13 @@ const turnLogic = {
                     }
                 }
                 const buffSheet = ATKObjects.bronyaAdvanceSHEET;
-                battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                updateBuff(battleData,targetTurn,buffSheet);
 
                 if (e1) {
                     const quickRef = sourceTurn.battleValues;
                     if (quickRef.e1SPRegenReady) {
                         quickRef.e1SPRegenReady = false;
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Bronya E1 SP Regen"});
                     }
                     else if (!quickRef.e1SPRegenReady) {quickRef.e1SPRegenReady = 2;}
                     else if (Ref.e1SPRegenReady === 2) {quickRef.e1SPRegenReady = true;}
@@ -17929,7 +17940,7 @@ const turnLogic = {
                     //if the next turn comes up and it's off, then we turn it on so we can regen on the next turn
                 }
 
-                if (targetTurn.properName != characterName) {battleActions.actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
+                if (targetTurn.properName != characterName) {actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 if (e2) {
@@ -17951,7 +17962,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObjects.bronyaAdvanceE2SHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 }
 
                 poke("SkillEnd",battleData,{sourceTurn});
@@ -17962,8 +17973,6 @@ const turnLogic = {
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.bronyaUltimateREF ??= ATKObjects.Ultimate["The Belobog March"].variant1;
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
                 //team wide buffs already cycle through the allyPositions array, in which case active memos will get targeted without needing targetChildEntities to be true
@@ -18035,7 +18044,7 @@ const turnLogic = {
 
                 for (let targetTurn of battleData.allyPositions) {
                     buffSheet.target = targetTurn.properName;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                    updateBuff(battleData,targetTurn,buffSheet)
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -18068,7 +18077,7 @@ const turnLogic = {
                     }
                     const buffSheet = this.bronyaMightDMGSHEET;
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Bronya - Major Trace: Military Might",
@@ -18102,7 +18111,7 @@ const turnLogic = {
                     const buffSheet = this.bronyaBattlefieldDEFSHEET;
 
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Bronya - Major Trace: Battlefield",
@@ -18121,7 +18130,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.bronyaUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bronyaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -18129,7 +18146,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -18176,7 +18193,7 @@ const turnLogic = {
                         "actionTags": ["Basic"]
                     }
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Bronya - Major Trace: Command",
@@ -18199,7 +18216,6 @@ const turnLogic = {
                     },
                     "target": "self",
                     "listenerName": "Bronya E4 FUA stack reset",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -18233,7 +18249,7 @@ const turnLogic = {
                             valuesRef.e4FUAReady = false;
     
                             const queueObject = this.queueObject ??= {
-                                attack: logicRef.skillFunctions.bronyaFUABasic,
+                                actionCall: logicRef.skillFunctions.bronyaFUABasic,
                                 target: this.target,
                                 name: this.listenerName,
                                 properName: characterName,
@@ -18253,7 +18269,6 @@ const turnLogic = {
                     },
                     "target": "enemy",
                     "listenerName": "Bronya E4 FUA controller",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -18425,7 +18440,6 @@ const turnLogic = {
                 const hasMemosprite = targetTurn.activeMemosprites;
                 const memospriteEventRef = targetTurn.memospriteEventRef;
                 const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,targetTurn,buffSheet);
                 if (memoTurn) {
                     updateBuff(battleData,memoTurn,buffSheet);
@@ -18511,7 +18525,6 @@ const turnLogic = {
                 }
 
                 if (targetTurn.path != "Harmony") {
-                    const actionAdvance = battleActions.actionAdvance;
                     if (targetTurn.activeSummons) {
                         const declaredSummons = battleData.declaredSummons;
                         const ownedSummon = targetTurn.summonEventRef;
@@ -18544,7 +18557,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 const charWithBeatified = sourceTurn.battleValues.charWithBeatifiedNameSlot;
-                if (charWithBeatified) {battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Skill used on Beatified"});}
+                if (charWithBeatified) {updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Skill used on Beatified"});}
 
 
                 poke("SkillEnd",battleData,{sourceTurn});
@@ -18556,8 +18569,6 @@ const turnLogic = {
                 
                 let skillRef = ATKObjects.sundayUltimateREF ??= ATKObjects.Ultimate["Ode to Caress and Cicatrix"].variant1;
                 let values = ATKObjects.sundayUltimateREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 const allyTurns = battleData.nameBasedTurns;
                 const targetTurn = target[0];
@@ -18635,7 +18646,6 @@ const turnLogic = {
                 const hasMemosprite = targetTurn.activeMemosprites;
                 const memospriteEventRef = targetTurn.memospriteEventRef;
                 const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                const updateBuff = battleActions.updateBuff;
                 let charValuesRef = sourceTurn.battleValues;
                 if (charValuesRef.charWithBeatifiedNameSlot != null) {//if someone exists on the team right now with benediction
                     let oldTarget = allyTurns[charValuesRef.charWithBeatifiedNameSlot];
@@ -18727,7 +18737,6 @@ const turnLogic = {
                 const hasMemosprite = targetTurn.activeMemosprites;
                 const memospriteEventRef = targetTurn.memospriteEventRef;
                 const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,targetTurn,buffSheet);
                 if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
 
@@ -18752,7 +18761,6 @@ const turnLogic = {
                 const memoTurn = hasMemosprite ? charWithBeatified[memospriteEventRef] : null;
 
                 const targetSheet = ATKObjects.sundayUltimateBeatifiedSHEET;
-                // const updateBuff = battleActions.updateBuff;
                 removeBuff(battleData,charWithBeatified,targetSheet);
                 if (memoTurn) {removeBuff(battleData,memoTurn,targetSheet);}
                 charValuesRef.charWithBeatifiedNameSlot = null;
@@ -18795,7 +18803,6 @@ const turnLogic = {
 
                 // greatTableIndex
                 // greatTableKeys
-                // const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {
                     const statCheck = buffCheck[CritDamageBase];
                     if (!conversion) {
@@ -18812,7 +18819,7 @@ const turnLogic = {
                 if (!conversion) {return;}
                 buffSheet[CritDamageBase] = conversion;
                 buffSheet[CritDamageBaseNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
         },
         "listeners": [
@@ -18839,7 +18846,15 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.sundayUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.sundayUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -18850,7 +18865,7 @@ const turnLogic = {
 
                         queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "ally",
@@ -18886,7 +18901,7 @@ const turnLogic = {
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.properName != ownerTurn.properName) {return;}
 
-                        battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"E2: Faith Outstrips Frailty"});
+                        updateSkillPoints(2,battleData,{sourceTurn,sourceName:"E2: Faith Outstrips Frailty"});
     
                         battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                     },
@@ -18950,7 +18965,6 @@ const turnLogic = {
                     const memospriteEventRef = targetTurn.memospriteEventRef;
                     const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
 
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,targetTurn,buffSheet);
                     if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
                     //then remove, bc this is the only time it'll get called
@@ -19130,7 +19144,6 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.numinosityIsActive = true;
 
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
                 if (!buffCheck) {
@@ -19216,8 +19229,6 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.tribbieUltimateREF ??= ATKObjects.Ultimate["Guess Who Lives Here"].variant1;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 if (!ATKObjects.tribbieUltimateZoneCountdownSHEET) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     const buffNames = logicRef.buffNames;
@@ -19287,7 +19298,6 @@ const turnLogic = {
 
                 const countdownSheet = ATKObjects.tribbieUltimateZoneCountdownSHEET;
                 const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 sourceTurn.tribbieZoneActive = true;
 
@@ -19346,7 +19356,6 @@ const turnLogic = {
                 }
                 const buffSheet = ATKObjects.tribbieZoneHPBuffSHEET;
 
-                const updateBuff = battleActions.updateBuff;
                 // console.log(currentTurn.tribbieZoneActive)
                 if (!currentTurn.tribbieZoneActive) {
                     removeBuff(battleData,currentTurn,buffSheet);
@@ -19383,7 +19392,7 @@ const turnLogic = {
 
                 buffSheet[HPFlat] = conversion;
                 buffSheet[HPFlatNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet,false,null,false,true);
+                updateBuff(battleData,currentTurn,buffSheet,false,null,false,true);
                 //TODO: fix the recursion bug here
                 //right now the last param needs to be true to avoid poking hp listeners, but that is a prob
                 //if there is ever anyone else that does something based on max HP
@@ -19498,11 +19507,10 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     let buffSheet = ATKObjects.tribbieUltimateZoneDebuffSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "enemy",
                 "listenerName": "Enemy created while zone active debuff application",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -19517,7 +19525,7 @@ const turnLogic = {
                     sourceTurn.usedTribbieFUA = true;
 
                     const queueObject = this.queueObject ??= {
-                        attack: turnLogic[ownerTurn.properName].skillFunctions.tribbieFUA,
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieFUA,
                         target: this.target,
                         name: this.listenerName,
                         properName: ownerTurn.properName,
@@ -19565,7 +19573,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = this.tribbieFUABuffStackSHEET;
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Lamb Outside the Wall... - FUA listener",
@@ -19614,7 +19622,7 @@ const turnLogic = {
 
                     const buffSheet = ATKObjects.tribbieSkillBUFFSHEET;
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "team",
                 "listenerName": "Numinosity (skill) ally created listener",
@@ -19633,16 +19641,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.tribbieUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -19662,7 +19677,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Tribbie ult zone attack listener for additional dmg",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -19741,7 +19755,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Morrow of Star Shine - E6 FUA DMG application",
@@ -19915,7 +19929,6 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.battleValues.ariaIsActive = true;
 
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
                 if (!buffCheck) {
@@ -19955,7 +19968,6 @@ const turnLogic = {
 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 const rank = sourceTurn.rank;
                 sourceTurn.battleValues.robinConcertoActive = true;
 
@@ -20004,7 +20016,6 @@ const turnLogic = {
                 }
                 
                 // const countdownSheet = sourceTurn.robinConcertoCountdownSHEET;
-                // const updateBuff = battleActions.updateBuff;
                 // updateBuff(battleData,sourceTurn,countdownSheet);
 
                 const conversionRatio = values[0];
@@ -20066,7 +20077,6 @@ const turnLogic = {
                 });
 
 
-                const actionAdvance = battleActions.actionAdvance;
                 for (let i=nextAVDupe.length-1;i>=0;i--) {
                     const currentTurn = nextAVDupe[i];
 
@@ -20087,7 +20097,6 @@ const turnLogic = {
 
                 const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
                 const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
-                // const updateBuff = battleActions.updateBuff;
 
                 const allyTargets = battleData.allAllyTargetsArray;
                 removeBuffFromBatch(battleData,allyTargets,buffSheet);
@@ -20104,7 +20113,7 @@ const turnLogic = {
                 }
 
                 nextAV.push(robinTurn);
-                battleActions.actionAdvance(1,robinTurn,battleData,"Robin exited Concerto state");
+                actionAdvance(1,robinTurn,battleData,"Robin exited Concerto state");
             },
             ultAddedDMG(battleData,generalInfo,sourceTurn,targetsGotHit) {
                 // battleData,generalInfo,sourceTurn,targetsGotHit
@@ -20220,7 +20229,7 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    battleActions.actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
+                    actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
                 },
                 "target": "self",
                 "listenerName": "Coloratura Cadenza: battlestart advance",
@@ -20292,7 +20301,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.robinUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.robinUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -20300,7 +20317,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -20359,6 +20376,7 @@ const turnLogic = {
             "techniqueWaveStart": {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
                     let ownerTurn = this.ownerTurn;
                     updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
                 },
@@ -20584,8 +20602,6 @@ const turnLogic = {
                 let rank = sourceTurn.rank;
                 // let e6 = rank >= 6;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 let values = ATKObjects.astaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.astaUltimateSPDSHEET) {
@@ -20611,7 +20627,6 @@ const turnLogic = {
                 let buffSheet = ATKObjects.astaUltimateSPDSHEET;
 
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff
                 for (ally of allyPositions) {
                     updateBuff(battleData,ally,buffSheet);
                 }
@@ -20769,7 +20784,6 @@ const turnLogic = {
                         }
                     }
 
-                    const updateBuff = battleActions.updateBuff;
                     if (ownerTurn.rank >= 4) {
                         const energySheet = ATKObjects.astaChargeE4ERRSHEET;
                         const buffCheckEnergy = ownerTurn.buffsObject[energySheet.buffName];
@@ -20878,7 +20892,7 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Ignite trace bonus to allies",
@@ -20927,7 +20941,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.astaUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.astaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -20935,7 +20957,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -21122,7 +21144,6 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.battleValues.overtoneIsActive = true;
 
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
                 const overtoneBEConversion = ATKObjects.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion
@@ -21172,9 +21193,6 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.ruanmeiUltimateREF ??= ATKObjects.Ultimate["Petals to Stream, Repose in Dream"].variant1;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
-
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 if (!ATKObjects.ruanmeiUltimateZoneCountdownSHEET) {
@@ -21219,7 +21237,6 @@ const turnLogic = {
 
                 const countdownSheet = ATKObjects.ruanmeiUltimateZoneCountdownSHEET;
                 const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 sourceTurn.battleValues.ruanmeiZoneActive = true;
 
@@ -21289,7 +21306,7 @@ const turnLogic = {
                 const breakEffect = sourceTurn.statTable[DamageBreak];
                 const delayValue = -((breakEffect * values[3]) + values[4]);
                 targetTurn.AV = 0;
-                battleActions.actionAdvance(delayValue,targetTurn,battleData,"Thanataplum Rebloom");
+                actionAdvance(delayValue,targetTurn,battleData,"Thanataplum Rebloom");
                 targetTurn.ruanmeiWaitingToDelay = false;
             },
         },
@@ -21402,7 +21419,6 @@ const turnLogic = {
                     }
 
                     const allyArray = battleData.allAlliesArray;
-                    const updateBuff = battleActions.updateBuff;
                     for (let allySlot of allyArray) {
                         if (allySlot.properName === ownerTurn.properName) {continue;}
                         updateBuff(battleData,allySlot,buffSheet);
@@ -21484,7 +21500,6 @@ const turnLogic = {
 
                     const targetsGotHit = generalInfo.targetsGotHit;
                     const enemyTurns = battleData.enemyBasedTurns;
-                    const updateBuff = battleActions.updateBuff;
                     for (let enemySlot in targetsGotHit) {
                         const currentEnemy = enemyTurns[enemySlot];
                         if (currentEnemy.ruanmeiWaitingToRecover) {continue;}
@@ -21524,7 +21539,7 @@ const turnLogic = {
                     //this won't be part of the insert, but will tell the enemy to end its turn anyways, then the insert will happen right after
 
                     const queueObject = this.queueObject ??= {
-                        attack: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiReBreak,
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiReBreak,
                         target: this.target,
                         name: this.listenerName,
                         properName: ownerTurn.properName,
@@ -21573,7 +21588,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -21581,7 +21604,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -21620,7 +21643,7 @@ const turnLogic = {
                         if (!this.ruanmeiE2ATKSHEET) {
                             const buffNames = turnLogic[ownerTurn.properName].buffNames;
                             this.ruanmeiE2ATKSHEET = {
-                                "stats": [ATKP],
+                                "statsOnHit": [ATKP],
                                 [ATKP]: 0.40,
                                 "source": "E2",
                                 "sourceOwner": ownerTurn.properName,
@@ -21642,7 +21665,6 @@ const turnLogic = {
                         //bc in practice the target would be designated as broken at that point
                         //why does it matter? someone like firefly, who scales break effect off of ATK
                         const brokenCheck = targetTurn.isBroken;
-                        const updateBuff = battleActions.updateBuff;
 
                         if (brokenCheck) {
                             if (buffCheck) {return;}
@@ -21686,7 +21708,7 @@ const turnLogic = {
                             }
                         }
                         const buffSheet = this.ruanmeiE4BESHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E4 weakness broken listener",
@@ -21848,7 +21870,6 @@ const turnLogic = {
 
                 const buffCheck = targetTurn.buffsObject[buffName];
 
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if the buff already exists
                     const statCheck = buffCheck[CritDamageBase];
                     if (statCheck === critDMGTotalBonus) {//if the bonus is the same, then just renew it
@@ -21896,7 +21917,7 @@ const turnLogic = {
 
                 if (rank >= 1) {
                     const buffSheet = ATKObjects.sparkleE1SPDSheet;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
                 if (e6) {
@@ -21910,7 +21931,7 @@ const turnLogic = {
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
+                if (targetTurn.properName != "Sparkle") {actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             sparkleUltimate(battleData,sourceTurn) {
@@ -21929,14 +21950,11 @@ const turnLogic = {
 
                 let spRecovery = 6 + (e4 ? 1 : 0);
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
-
                 const old = battleData.skillPointCurrent;
                 const adjusted = old + spRecovery;
                 const maximum = battleData.battleTable.SPMax;
 
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Ultimate"});
                 
                 if (adjusted > maximum) {
                     const reserve = adjusted - maximum;
@@ -21975,7 +21993,6 @@ const turnLogic = {
                 let dreamDiverFound = false;
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
                 const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
-                const updateBuff = battleActions.updateBuff;
                 for (let targetTurn of battleData.allyPositions) {
                     const currentBuffs = targetTurn.buffsObject;
                     let alreadyHasHerring = currentBuffs[buffName2];
@@ -22115,7 +22132,6 @@ const turnLogic = {
 
                 const buffSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEET;
                 // const redoName = turnToRedo ? turnToRedo.properName : null;
-                const updateBuff = battleActions.updateBuff;
 
                 const noCipherValue = values[1];
                 const fullCipherValue = values[1] + values2[2];
@@ -22162,7 +22178,7 @@ const turnLogic = {
                         //w/e buff that exists if reapplied will keep the values it started with, so if we just add more stacks
                         //it doesn't redo the value it has, so no removal needs to happen here p much ever
                         //since we already handled updating the vuln value in the isRedone check
-                        battleActions.updateBuff(battleData,sourceTurn,countdown);
+                        updateBuff(battleData,sourceTurn,countdown);
                     }
                     else {
                         //since if we're already at max stacks, the only thing that changes is the duration getting refreshed,
@@ -22178,7 +22194,7 @@ const turnLogic = {
                         updateBuff(battleData,ally,buffSheet);
                     }
                     
-                    battleActions.updateBuff(battleData,sourceTurn,countdown);
+                    updateBuff(battleData,sourceTurn,countdown);
 
                     sourceTurn.battleValues.talentZoneActive = true;
 
@@ -22221,7 +22237,7 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 let spRecovery = 3;
-                battleActions.updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
+                updateSkillPoints(spRecovery,battleData,{sourceTurn,sourceName:"Sparkle Technique"});
                 updateEnergy(battleData,20,sourceTurn,false,"Sparkle Technique");
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
@@ -22292,7 +22308,7 @@ const turnLogic = {
                                 const amountToGain = reservePoints > actualDiff ? actualDiff : reservePoints;
                                 // battleValues.reservePoints -= amountToGain;
                                 poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"});
-                                battleActions.updateSkillPoints(amountToGain,battleData,{sourceTurn: ownerTurn,sourceName:"Sparkle: Reserve Skill Points"});
+                                updateSkillPoints(amountToGain,battleData,{sourceTurn: ownerTurn,sourceName:"Sparkle: Reserve Skill Points"});
                             }
                         }
 
@@ -22338,11 +22354,10 @@ const turnLogic = {
 
                     let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
 
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "enemy",
                 "listenerName": "Talent vuln(fake) application for new enemies added to field",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -22416,7 +22431,7 @@ const turnLogic = {
                     }
 
                     const buffSheet = ATKObjects.sparkleE1SPDSheet;
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
@@ -22463,7 +22478,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -22471,17 +22494,17 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
 
 
 
                         // const queueObject = this.queueObject ??= {
-                        //     attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
+                        //     actionCall: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
                         //     target: this.target,
                         //     name: this.listenerName,
                         //     properName: ownerTurn.properName,
                         //     sourceTurn: ownerTurn,
-                        //     isAttackUlt: true,
+                        //     isAttack: true,
                         // }
                         // queueObject.sourceTurn = ownerTurn;
                     }
@@ -22690,7 +22713,7 @@ const turnLogic = {
                 poke("SkillStart",battleData,{sourceTurn});
 
                 const buffSheet = ATKObjects.saberSkillCRITDMGSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 
                 if (maxCheck) {
                     updateEnergy(battleData,possibleEnergy,sourceTurn,true);
@@ -22764,7 +22787,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.saberUltimateATKOBJECT;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 // const logicRef = turnLogic[characterName];
@@ -22881,7 +22903,7 @@ const turnLogic = {
                 poke("BasicATKStart",battleData,{sourceTurn});
 
                 const buffSheet = ATKObjects.saberManaBurstNULLSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.advanceReady = true;
@@ -22919,7 +22941,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
 
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"});
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
@@ -22988,7 +23010,7 @@ const turnLogic = {
                             //only check this if we haven't finished stacking yet, and if the change in points is actually positive
                             const buffSheet = this.saberCoreGainCRITDMGSHEET;
                             buffSheet.currentStacks = pointsGained;
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = buffsObject[buffSheet.buffName];
                             if (buffCheck.currentStacks === 8) {ownerTurn.coreResonanceCRITDMGDone = true;}//mark as completed so this buff is never called again
                         }
@@ -22997,7 +23019,7 @@ const turnLogic = {
                             //only check this if we haven't finished stacking yet, and if the change in points is actually positive
                             const buffSheet = this.saberCoreGainE2SHREDSHEET;
                             buffSheet.currentStacks = pointsGained;
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = buffsObject[buffSheet.buffName];
                             if (buffCheck.currentStacks === 15) {ownerTurn.coreResonanceE2SHREDDone = true;}//mark as completed so this buff is never called again
                         }
@@ -23039,9 +23061,8 @@ const turnLogic = {
 
                         if (maxCheck) {
                             removeBuff(battleData,ownerTurn,manaCheck);
-                            battleActions.updateSkillPoints(1,battleData,{sourceTurn:ownerTurn,sourceName:"Knight of the Dragon"});
+                            updateSkillPoints(1,battleData,{sourceTurn:ownerTurn,sourceName:"Knight of the Dragon"});
 
-                            // battleActions.actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");
                             valuesRef.advanceReady = false;
                             valuesRef.waitingToAdvance = true;
                             //in the event of souldragon from dhpt being on saber, when saber does a skill that would push her over the core resonance threshold
@@ -23062,7 +23083,7 @@ const turnLogic = {
                     const ownerTurn = this.ownerTurn;
                     const battleValues = ownerTurn.battleValues;
                     if (!battleValues.waitingToAdvance) {return;}
-                    battleActions.actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
+                    actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
                     battleValues.waitingToAdvance = false;
                 },
                 "target": "self",
@@ -23152,7 +23173,7 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObjects.saberDragonCoreDMGSHEET;
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
 
                     const generalInfo2 = this.generalInfo2 ??= {pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"};
                     poke("SaberGainCoreResonance",battleData,generalInfo2);
@@ -23180,7 +23201,6 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
 
                     const buffSheet2 = this.buffSheet2 ??= {
@@ -23247,21 +23267,27 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
                         const queueObject = this.queueObject ??= {
-                            attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Saber - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -23305,7 +23331,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Lost White Walls Ult DMG",
@@ -23369,7 +23395,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Saga of Sixteen Winter Days battlestart RES PEN",
@@ -23405,7 +23431,7 @@ const turnLogic = {
                         }
 
                         const buffSheet = this.saberSagaSixteenDaysPENSHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                         //TODO: listener self removal later
                         //also make sure I addressed the issue about removing a listener mid poke and the array length not reflecting in the for let i= loops
                     },
@@ -23436,7 +23462,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "The Long Fated Night Ult RES PEN",
@@ -23653,7 +23679,7 @@ const turnLogic = {
                 battleActions.consumeHP(battleData,false,values[0],sourceTurn,sourceTurn,skillRef.slot);
 
                 let buffSheet = ATKObjects.bladeSkillInstanceBUFFSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
                 
                 sourceTurn.battleValues.hellscapeActive = true;
                 poke("BladeSkillQueueExtraTurn",battleData,exoTurnRef);
@@ -23837,8 +23863,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bladeUltimateATKOBJECT;
 
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 const maxHP = sourceTurn.maxHP;
                 const currentHP = sourceTurn.currentHP;
                 const currentHPRatio = currentHP / maxHP;
@@ -23932,7 +23956,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     
                     const queueObject = this.queueObject ??= {
-                        attack: sim.turnWrapper,
+                        actionCall: sim.turnWrapper,
                         target: this.target,
                         name: this.listenerName,
                         properName: ownerTurn.properName,
@@ -23950,8 +23974,6 @@ const turnLogic = {
                 "listenerName": "Blade Skill Use - Queued Extra Turn",
                 "ownerTurn": {},
             },
-
-
             {
                 "trigger": "AllyLostHP",
                 condition(battleData,generalInfo) {
@@ -24006,7 +24028,7 @@ const turnLogic = {
                         ownerTurn.bladeFUAIsQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -24077,7 +24099,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Neverending Deaths: battlestart inc healing bonus",
@@ -24102,7 +24124,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Cyclone of Destruction: battlestart FUA bonus",
@@ -24121,16 +24143,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -24198,7 +24227,7 @@ const turnLogic = {
 
 
                     const buffSheet = this.bladeE4HPSHEET;
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                     const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
                     if (buffCheck.currentStacks === 2) {
                         battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
@@ -24444,9 +24473,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.jingliuUltimateATKOBJECT;
 
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 // ATKObject.bonusScalar.refValue = sourceTurn.bladeHPTally;
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -24457,7 +24483,7 @@ const turnLogic = {
 
                 if (rank >= 2) {
                     const buffSheet2 = ATKObjects.jingliuE2PostUltDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet2);
+                    updateBuff(battleData,sourceTurn,buffSheet2);
                 }
 
                 sourceTurn.ultyQueued = false;
@@ -24466,7 +24492,7 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Entered Spectral Transmigration state");
+                actionAdvance(1,sourceTurn,battleData,"Entered Spectral Transmigration state");
                 const rank = sourceTurn.rank;
                 if (!ATKObjects.jingliuTalentEnhancedSHEET) {
                     let skillRef = ATKObjects.jingliuTalentREF ??= ATKObjects["Talent"]["Crescent Transmigration"].variant1;
@@ -24505,7 +24531,7 @@ const turnLogic = {
                     }
                 }
                 const buffSheet = ATKObjects.jingliuTalentEnhancedSHEET;
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.enhancedActive = true;
@@ -24624,7 +24650,7 @@ const turnLogic = {
                             "actionTags": ["Attack"]
                         }
                         valuesRef.traceShredActive = true;
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                     
                     let enteredState = false;
@@ -24657,7 +24683,7 @@ const turnLogic = {
                         valuesRef.enhancedQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
                             target: this.target,
                             name: this.listenerName + ": Reached 2+ Syzygy",
                             properName: ownerTurn.properName,
@@ -24780,7 +24806,7 @@ const turnLogic = {
                         const ATKObjects = logicRef.ATKObjects;
 
                         const moonlightSheet = ATKObjects.jingliuTalentEnhancedMoonlightSHEET;
-                        battleActions.updateBuff(battleData,ownerTurn,moonlightSheet);
+                        updateBuff(battleData,ownerTurn,moonlightSheet);
 
                         const buffCheck = ownerTurn.buffsObject[moonlightSheet.buffName];
                         if (buffCheck.currentStacks === buffCheck.maxStacks) {
@@ -24811,16 +24837,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.jingliuUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.jingliuUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -24871,7 +24904,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn"
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Moon Crashes Tianguan Gate: enhanced skill listener",
@@ -24898,7 +24931,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn"
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Moon Crashes Tianguan Gate: ult use listener",
@@ -25098,7 +25131,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//Firefly skill doesn't actually have energy regen associated with it, just the fixed% regen it causes
                 poke("SkillEnd",battleData,{sourceTurn});
-                battleActions.actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
+                actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
             },
             fireflyUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -25145,9 +25178,7 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
-                battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.combustionActive = true;
@@ -25158,7 +25189,7 @@ const turnLogic = {
                 // let newCharge = Math.min(4,chargeRef.charge + 2)
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
+                actionAdvance(1,sourceTurn,battleData,"Firefly Ult Advance");
 
                 const ActionEntry = sourceTurn.fireflyUltimateCOMBUSTTURNEVENT ??= {
                     // name:characterEntry,
@@ -25357,10 +25388,9 @@ const turnLogic = {
                 healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
 
                 const buffSheet = ATKObjects.fireflySkillEnhancedIMPLANTSHEET;
-                // battleActions.updateBuff(battleData,battleData.primaryTarget,buffSheet);
                 // battleData.fullBlastTargets
 
-                battleActions.updateBuffBatchTargets(battleData,battleData.fullBlastTargets,buffSheet);
+                updateBuffBatchTargets(battleData,battleData.fullBlastTargets,buffSheet);
 
 
                 // Restores HP by an amount equal to 25.00% of this unit's Max HP. Applies Fire Weakness to a single target enemy, lasting for 2 turn(s). Deals Fire DMG equal to (0.2 × Break Effect + 200.00%) of SAM's
@@ -25388,6 +25418,24 @@ const turnLogic = {
                 return conversion;
             },
             fireflyTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+                let skillRef = ATKObjects.fireflyTechREF ??= ATKObjects.Technique["Δ Order: Meteoric Incineration"].variant1;
+
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                // poke("TechniqueStart",battleData,{sourceTurn});
+
+                let attackEndings = battleData.battleListeners.WaveStart ??= [];
+                const listenerToInject = logicRef.listenersToInjectLater.techniqueWaveStart;
+                listenerToInject.ownerTurn = sourceTurn;
+
+                attackEndings.unshift(listenerToInject);
+                // battleActions.nonViolentWrapper(battleData,skillRef,characterName);
+                // poke("TechniqueEnd",battleData,{sourceTurn});
+            },
+            fireflyTechniqueDMG(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -25440,14 +25488,13 @@ const turnLogic = {
                 const ATKObject = ATKObjects.fireflyTechATKObject;
                 const buffSheet = ATKObjects.fireflyTechImplantSHEET;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
-                const updateBuff = battleActions.updateBuff;
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                // poke("TechniqueStart",battleData,{sourceTurn});
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
+                // poke("TechniqueEnd",battleData,{sourceTurn});
                 // poke("SkillEnd",battleData,{source:"Archer"});
             },
             statCheck(battleData,currentTurn) {
@@ -25498,7 +25545,7 @@ const turnLogic = {
                 if (!conversion) {return;}
                 buffSheet[DamageBreak] = conversion;
                 buffSheet[DamageBreakNULL] = -conversion;
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
         },
         "listeners": [
@@ -25544,7 +25591,7 @@ const turnLogic = {
                         battleValues.traceDelayRemaining -= 1;//reduce count, we'll always reset this to 3 on any ult usage
 
                         const ActionEntry = ownerTurn.fireflyUltimateCOMBUSTTURNEVENT;
-                        battleActions.actionAdvance(-0.10,ActionEntry,battleData,"Module α: Antilag Outburst - Countdown Delay");
+                        actionAdvance(-0.10,ActionEntry,battleData,"Module α: Antilag Outburst - Countdown Delay");
                     }
                 },
                 "target": "self",
@@ -25606,21 +25653,27 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: false,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Firefly - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -25642,7 +25695,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Firefly Technique",
-                "announce": false,
                 "ownerTurn": {},
             },
         ],
@@ -25656,7 +25708,7 @@ const turnLogic = {
                         let ownerTurn = this.ownerTurn;
                         
                         const queueObject = this.queueObject ??= {
-                            attack: sim.turnWrapper,
+                            actionCall: sim.turnWrapper,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -25736,6 +25788,37 @@ const turnLogic = {
             4: [],
             5: [],
             6: [],
+        },
+        "listenersToInjectLater": {
+            "techniqueWaveStart": {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                    let ownerTurn = this.ownerTurn;
+
+                    const queueObject = this.queueObject ??= {
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyTechniqueDMG,
+                        target: null,
+                        name: "Firefly Technique",
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        eventTypeStartLOG: "TechniqueStart",
+                        eventTypeStart: "TechniqueStart",
+                        eventTypeEnd: "TechniqueEnd",
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+                        // eventImage: graphs.summonCustomImages["Numby"],
+                        // BattleEvent_1506_Box.png
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+                    battleActions.queueFollowUpAttack(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Firefly tech wave start listener",
+                "ownerTurn": {},
+            }
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -26033,12 +26116,11 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hookUltimateATKOBJECT;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.isEnhanced = true;
-                battleActions.actionAdvance(0.20,sourceTurn,battleData,"Major Trace: Playing With Fire");//will advance when ult is cast but not within his turn, obv does nothing then
+                actionAdvance(0.20,sourceTurn,battleData,"Major Trace: Playing With Fire");//will advance when ult is cast but not within his turn, obv does nothing then
                 updateEnergy(battleData,5,sourceTurn,false,"Major Trace: Playing With Fire");
 
                 sourceTurn.ultyQueued = false;
@@ -26082,7 +26164,7 @@ const turnLogic = {
                     }
 
                     const actionTags2 = ["Heal","Talent"];
-                    const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
+                    const compositeCacheTag2 = actionTags2 + allyTurn.properName;
                     ATKObjects.hookTalentHealHEALOBJECT ??= {
                         multipliers: {
                             primary: 0.05,
@@ -26291,7 +26373,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Hook talent additional DMG controller",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -26313,7 +26394,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Hook Naivete cc res",
@@ -26331,21 +26412,27 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
                         const queueObject = this.queueObject ??= {
-                            attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.hookUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.hookUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Hook - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -26392,7 +26479,7 @@ const turnLogic = {
                             "expireType": null,
                             "actionTags": ["HookEnhSkill"],
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Hook E1 enh skill dmg buff",
@@ -26437,7 +26524,7 @@ const turnLogic = {
                         }
                         else {
                             if (!burnCount) {return;}
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                         }
                     },
                     "target": "self",
@@ -26693,11 +26780,9 @@ const turnLogic = {
                 }
                 else {
                     logicRef.skillFunctions.addMemToField(battleData,sourceTurn);
-                    // battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea gained extra turn");
                 }
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                // if (targetTurn.properName != "Sparkle") {battleActions.actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
                 poke("SkillEnd",battleData,{sourceTurn});
             },
             addMemToField(battleData,sourceTurn) {
@@ -26948,13 +27033,11 @@ const turnLogic = {
 
                 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot});
-                battleActions.actionAdvance(1,char1,battleData,"Mem's Support");
+                actionAdvance(1,char1,battleData,"Mem's Support");
 
                 const buffSheet = ATKObjects.rmcMemsSupportSHEET;
                 buffSheet.expireParam.targetTurn = char1.name;
 
-
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,char1,buffSheet);
                 char1.rmcCharHasMemSupport = true;
                 //TODO: for now we force char1 as the assumed target of mem's support, but remember to hook this up as a parameter for user defined conditions later
@@ -27037,7 +27120,7 @@ const turnLogic = {
                 poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
                 poke("AllyDied",battleData,{targetTurn:deathTurn});
 
-                battleActions.actionAdvance(0.25,ownerTurn,battleData,"Mem Died");
+                actionAdvance(0.25,ownerTurn,battleData,"Mem Died");
             },
             rmcUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -27085,8 +27168,6 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.rmcUltimateATKOBJECT;
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 const summonUp = sourceTurn.battleValues.memIsActive;
                 if (!summonUp) {logicRef.skillFunctions.addMemToField(battleData,sourceTurn);}
@@ -27150,7 +27231,6 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 const enemyPositions = battleData.enemyPositions;
-                const actionAdvance = battleActions.actionAdvance;
                 for (let enemy of enemyPositions) {
                     actionAdvance(-values[1],enemy,battleData,"RMC Technique Delay");
                 }
@@ -27296,7 +27376,7 @@ const turnLogic = {
 
                     if (maxCheck) {
                         
-                        battleActions.actionAdvance(1,memTurn,battleData,"Friends! Together!");
+                        actionAdvance(1,memTurn,battleData,"Friends! Together!");
                         ownerTurn.battleValues.memIsEnhanced = true;
                     }
                 },
@@ -27385,7 +27465,7 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    battleActions.actionAdvance(0.30,ownerTurn,battleData,"Rhapsode's Scepter");
+                    actionAdvance(0.30,ownerTurn,battleData,"Rhapsode's Scepter");
                 },
                 "target": "self",
                 "listenerName": "Rhapsode's Scepter: battlestart action advance",
@@ -27440,21 +27520,27 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.rmcUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.rmcUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Trailblazer: Remembrance - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -27584,7 +27670,7 @@ const turnLogic = {
                         }
                         const memTurn = ownerTurn.rmcMemTURNEVENT;
     
-                        battleActions.updateBuff(battleData,memTurn,buffSheet);
+                        updateBuff(battleData,memTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E6 ult crit bonus",
@@ -27759,7 +27845,7 @@ const turnLogic = {
                 }
                 else {
                     logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
-                    battleActions.actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea advanced");
+                    actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea advanced");
                 }
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
@@ -27882,7 +27968,7 @@ const turnLogic = {
                 poke("AllyCreated",battleData,{targetTurn:garmentTurnObject});
                 battleActions.assignAttackTargetsEnemy(battleData);
 
-                battleActions.actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
+                actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
             },
             garmentTurnAttack(battleData,memoTurn) {
                 // eventOwner: ownerTurn.name
@@ -27988,8 +28074,6 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.aggyUltimateSTANCESHEET;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
                 const garmentBuffCheck = garmentTurn.buffsObject[logicRef.buffNames.spdStackMemo];
 
@@ -28000,7 +28084,7 @@ const turnLogic = {
                 if (stacksToInherit) {
                     //TODO: fix if she recasts and would accidentally inherit again
                     buffSheet.currentStacks = stacksToInherit;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
 
@@ -28026,8 +28110,8 @@ const turnLogic = {
                     }
                     let buffSheet = ATKObjects.aggyUltimateE6PENSHEET;
 
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
-                    battleActions.updateBuff(battleData,garmentTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,garmentTurn,buffSheet);
                 }
 
 
@@ -28038,7 +28122,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
 
-                battleActions.actionAdvance(1,sourceTurn,battleData,"Aglaea Ult Advance");
+                actionAdvance(1,sourceTurn,battleData,"Aglaea Ult Advance");
                 const ActionEntry = sourceTurn.aggySupremeStanceCountdownTURNEVENT ??= {
                     name:null,
                     AV:10000/100,
@@ -28136,7 +28220,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 let buffSheet = ATKObjects.aggyUltimateSTANCESHEET;
-                // const updateBuff = battleActions.updateBuff;
                 if (buffSheet) {
                     const buffCheck = aggyTurn.buffsObject[buffSheet.buffName];
 
@@ -28200,7 +28283,6 @@ const turnLogic = {
                 const buffCheck = currentTurn.buffsObject[buffName];
                 const garmentTurn = currentTurn.aggyGarmentTURNEVENT;
 
-                const updateBuff = battleActions.updateBuff;
                 if (inStance) {
                     const aggyRatio = 7.2;
                     const garmentRatio = 3.6;
@@ -28269,7 +28351,6 @@ const turnLogic = {
                 const buffCheck = currentTurn.buffsObject[buffName];
                 const garmentTurn = currentTurn.aggyGarmentTURNEVENT;
 
-                const updateBuff = battleActions.updateBuff;
                 if (inStance) {
                     const garmentTurnRef = currentTurn.aggyGarmentTURNEVENT;
 
@@ -28433,7 +28514,6 @@ const turnLogic = {
 
                 // valuesRef.garmentIsActive
 
-                const updateBuff = battleActions.updateBuff;
                 const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
                 if (applyOrRemove === "Apply") {
                     if (buffCheck && buffCheck.currentStacks === 3) {return;}
@@ -28456,7 +28536,7 @@ const turnLogic = {
                     const garmentTurn = ownerTurn.aggyGarmentTURNEVENT;
 
                     const queueObject = this.queueObject ??= {
-                        attack: turnLogic[ownerTurn.properName].skillFunctions.garmentDeathFunctionForced,
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.garmentDeathFunctionForced,
                         target: "self",
                         name: this.listenerName,
                         properName: garmentTurn.properName,
@@ -28542,7 +28622,6 @@ const turnLogic = {
                         // "actionTags": ["FUA"]
                     }
                     // let buffSheet = ownerTurn.aggySeamStitchDEBUFFSHEET
-                    // battleActions.updateBuff(battleData,targetTurn,buffSheet)
 
 
 
@@ -28686,7 +28765,7 @@ const turnLogic = {
                     let buffSheet = ATKObjects.aggySeamStitchDEBUFFSHEET;
                     const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
                     if (buffCheck) {return;}
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Seam stitch application listener",
@@ -28749,7 +28828,7 @@ const turnLogic = {
 
                         const buffSheet = ATKObjects.garmentTalentSPDSHEET;
                         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Last Thread of Fate", bodyText: `Garmentmaker inherited one speed stack from prior life`});}
-                        battleActions.updateBuff(battleData,memoTurn,buffSheet);
+                        updateBuff(battleData,memoTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -28841,9 +28920,6 @@ const turnLogic = {
 
                     if (buffCheck && buffCheck.currentStacks === buffCheck.maxStacks) {return;}
 
-                    
-                    
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,garmentTurn,buffSheet);
                     charValuesRef.lastSpdStacksMemo = garmentTurn.buffsObject[buffName]?.currentStacks ?? 0;
                     if (charValuesRef.supremeStanceActive) {
@@ -28871,7 +28947,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.aggyUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.aggyUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -28879,12 +28963,11 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Aglaea - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -29252,7 +29335,6 @@ const turnLogic = {
 
                 const ownerSheet = ATKObjects.evernightSkillOWNERSHEET;
 
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,ownerSheet);
                 const allySheet = ATKObjects.evernightSkillMemoBUFFSHEET;
                 allySheet[CritDamageBase] = conversion;
@@ -29275,7 +29357,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.evernightSkillMemoBUFFSHEET;
-                // const updateBuff = battleActions.updateBuff;
                 const declaredMemosprites = battleData.declaredMemosprites;
                 for (let memo of declaredMemosprites) {
                     removeBuff(battleData,memo,buffSheet);
@@ -29343,11 +29424,10 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.eveyWasSummonedDMGSHEET;
                 // const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,buffSheet);
                 updateBuff(battleData,eveyTurn,buffSheet);
 
-                battleActions.actionAdvance(1,eveyTurn,battleData,"Evey summoned advance");
+                actionAdvance(1,eveyTurn,battleData,"Evey summoned advance");
             },
             eveyTurnAttack(battleData,memoTurn) {
                 // eventOwner: ownerTurn.name
@@ -29481,7 +29561,7 @@ const turnLogic = {
 
                 battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
 
-                battleActions.updateSkillPoints(1,battleData,{sourceTurn:evernightTurn,sourceName:"Evey enhanced skill"});
+                updateSkillPoints(1,battleData,{sourceTurn:evernightTurn,sourceName:"Evey enhanced skill"});
                 const finalMemoria = valuesRef.memoria;
                 poke("EvernightGainMemoria",battleData,{pointsGained: -finalMemoria,sourceString:"Consumed Memoria [Enhanced Skill]"});
                 logicRef.skillFunctions.eveyDeathFunction(battleData,memoTurn,null,finalMemoria);
@@ -29570,7 +29650,6 @@ const turnLogic = {
 
                 const normalSPDSheet = ATKObjects.eveyDiedSPDSheet;
                 normalSPDSheet[SPDP] = SPDValue;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,ownerTurn,normalSPDSheet);
 
                 poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
@@ -29603,7 +29682,6 @@ const turnLogic = {
                 }
                 const memoTurn = evernightTurn.everEveyTURNEVENT;
                 const buffSheet = ATKObjects.traceHPConsumeCritDMGSHEET;
-                const updateBuff = battleActions.updateBuff;
                 
                 updateBuff(battleData,evernightTurn,buffSheet);
                 if (memoTurn.isActive) {
@@ -29621,8 +29699,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.evernightUltimateREF ??= ATKObjects.Ultimate["O Wakeful World, Goodnight"].variant1;
                 let values = ATKObjects.evernightUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 const rank = sourceTurn.rank;
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 
                 logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
 
@@ -29707,10 +29783,6 @@ const turnLogic = {
                 const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
 
                 
-
-                
-                const updateBuff = battleActions.updateBuff;
-                
                 updateBuff(battleData,sourceTurn,dmgSheet);
                 updateBuff(battleData,eveyTurn,dmgSheet);
                 const enemyPositions = battleData.enemyPositions;
@@ -29731,7 +29803,6 @@ const turnLogic = {
 
                 const dmgSheet = ATKObjects.evernightUltimateDMGSHEET;
                 const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
-                // const updateBuff = battleActions.updateBuff;
 
                 removeBuff(battleData,evernightTurn,dmgSheet);
                 removeBuff(battleData,eveyTurn,dmgSheet);
@@ -29793,7 +29864,6 @@ const turnLogic = {
                 if (lastBuffGiven === currentEnemies) {return;}
                 const buffSheet = ATKObjects.E1FinalMultiSHEET;
                 buffSheet.multiplier = buffArray[currentEnemies];
-                const updateBuff = battleActions.updateBuff;
 
                 const declaredMemosprites = battleData.declaredMemosprites;
                 for (let memo of declaredMemosprites) {
@@ -29842,7 +29912,7 @@ const turnLogic = {
                     const isReadyForAdvance = ownerTurn.memoriaIsReadyForAdvance;
                     const eveyTurn = ownerTurn.everEveyTURNEVENT;
                     if (resoRef >= 16 && isReadyForAdvance && eveyTurn.isActive) {
-                        battleActions.actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
+                        actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
                         ownerTurn.memoriaIsReadyForAdvance = false;
                     }
                 },
@@ -30011,7 +30081,6 @@ const turnLogic = {
                         }
                     }
                     const buffSheet = ATKObjects.talentHPLostCRITDMGSHEET;
-                    const updateBuff = battleActions.updateBuff;
                     
                     buffSheet.duration = ownerTurn.turnState ? 3 : 2;
                     updateBuff(battleData,ownerTurn,buffSheet);
@@ -30054,11 +30123,10 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const vulnSheet = ATKObjects.evernightUltimateVulnSHEET;
-                    battleActions.updateBuff(battleData,targetTurn,vulnSheet);
+                    updateBuff(battleData,targetTurn,vulnSheet);
                 },
                 "target": "enemy",
                 "listenerName": "Enemy created while darkest riddle active debuff application",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30077,7 +30145,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Evernight turnstart riddle expiration",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30187,7 +30254,6 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
                     updateBuff(battleData,eveyTurn,buffSheet);
                 },
@@ -30209,21 +30275,27 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.evernightUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.evernightUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Evernight - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -30257,7 +30329,6 @@ const turnLogic = {
                     },
                     "target": "team",
                     "listenerName": "Enemy created E1 buff application",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -30271,7 +30342,6 @@ const turnLogic = {
                     },
                     "target": "team",
                     "listenerName": "Enemy killed E1 buff application",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -30297,7 +30367,6 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,ownerTurn,buffSheet);
                         updateBuff(battleData,eveyTurn,buffSheet);
                     },
@@ -30329,7 +30398,6 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null
                         }
-                        const updateBuff = battleActions.updateBuff;
                         updateBuff(battleData,eveyTurn,buffSheet);//evey gets the bonus twice, so we just cheat and say 2 stacks by applying once here and later when applying to all memos
 
                         //then adjust to one stack before applying to others
@@ -30370,7 +30438,7 @@ const turnLogic = {
     
                         const buffSheet = this.e6RESPENSHEET;
                         const targetTurn = generalInfo.targetTurn;
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "team",
                     "listenerName": "Like This, Always: ally res pen bonus",
@@ -30680,7 +30748,6 @@ const turnLogic = {
                     }
                     const buffSheet = ATKObjects.hyacineE6IcaFieldSheet;
 
-                    const updateBuff = battleActions.updateBuff;
                     const allyTurns = battleData.nameBasedTurns;
                     for (let allySlot in allyTurns) {
                         const currentTurn = allyTurns[allySlot];
@@ -30710,7 +30777,7 @@ const turnLogic = {
                 const icaTurn = eventTurn;
 
                 //the advance value does NOT scale with trace level
-                battleActions.actionAdvance(0.30,ownerTurn,battleData,"Ica died - Hyacine advance");
+                actionAdvance(0.30,ownerTurn,battleData,"Ica died - Hyacine advance");
                 
                 icaTurn.currentHP = 0;
                 icaTurn.isDead = true;
@@ -30749,7 +30816,6 @@ const turnLogic = {
 
                     const buffSheet = ATKObjects.hyacineE6IcaFieldSheet;
 
-                    // const updateBuff = battleActions.updateBuff;
                     for (let allySlot in allyTurns) {
                         const currentTurn = allyTurns[allySlot];
                         removeBuff(battleData,currentTurn,buffSheet);
@@ -30804,7 +30870,6 @@ const turnLogic = {
 
                 const HPSheet = ATKObjects.hyacineSPD200HPSheet;
                 const healingSheet = ATKObjects.hyacineSPD200HealingSheet;
-                const updateBuff = battleActions.updateBuff;
 
                 const icaTurn = currentTurn.hyacineIcaTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
@@ -30942,8 +31007,6 @@ const turnLogic = {
                 let values = ATKObjects.hyacineUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 const rank = sourceTurn.rank;
 
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-
                 // const logicRef = turnLogic[characterName];
                 const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
                 if (!icaTurn.isActive) {logicRef.skillFunctions.addIcaToField(battleData,sourceTurn);}
@@ -31040,8 +31103,6 @@ const turnLogic = {
                 }
                 healAlly(battleData,icaHealObject,icaTurn,sourceTurn,skillRef.slot,1);
 
-
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 valuesRef.hyacineAfterRainActive = true;
                 if (!buffCheck) {//if afterRain is already active before we renewed, then all allies already have the HP buff, and there's no need to call it again
@@ -31064,7 +31125,6 @@ const turnLogic = {
 
                 const HPSheet = ATKObjects.hyacineUltHPSHEET;
                 const allyPositions = battleData.allyPositions;
-                // const updateBuff = battleActions.updateBuff;
                 removeBuffFromBatch(battleData,allyPositions,HPSheet);
             },
             hyacineTechnique(battleData,target,sourceTurn) {
@@ -31124,7 +31184,6 @@ const turnLogic = {
                 const buffSheet = ATKObjects.hyacineTechHPSHEET;
                 const healObject = ATKObjects.hyacineTechHealObject;
 
-                // const updateBuff = battleActions.updateBuff;
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
@@ -31280,7 +31339,7 @@ const turnLogic = {
                     const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
 
                     const queueObject = this.queueObject ??= {
-                        attack: turnLogic[ownerTurn.properName].skillFunctions.icaTurnAttack,
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.icaTurnAttack,
                         target: this.target,
                         name: this.listenerName,
                         properName: icaTurn.properName,
@@ -31423,7 +31482,7 @@ const turnLogic = {
                     
                     if (icaTurn.isActive) {
                         const buffSheet = this.allyWasHealedIcaDMGSHEET;
-                        battleActions.updateBuff(battleData,icaTurn,buffSheet);
+                        updateBuff(battleData,icaTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -31469,7 +31528,6 @@ const turnLogic = {
                     const buffSheet = this.allyWasHealedOutgoingHealingSHEET;
                     const buffCheck = sourceTurn.buffsObject[buffSheet.name];
 
-                    const updateBuff = battleActions.updateBuff;
                     if (buffCheck) {
                         if (hpRatio) {return;}
                         else {
@@ -31506,7 +31564,6 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
                     // updateBuff(battleData,eveyTurn,buffSheet);
                 },
@@ -31535,7 +31592,6 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-                    const updateBuff = battleActions.updateBuff;
                     updateBuff(battleData,ownerTurn,buffSheet);
                     updateBuff(battleData,icaTurn,buffSheet);
                 },
@@ -31559,7 +31615,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.hyacineUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.hyacineUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -31567,12 +31631,11 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Hyacine - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -31587,7 +31650,7 @@ const turnLogic = {
 
                     const HPSheet = ATKObjects.hyacineUltHPSHEET;
                     const targetTurn = generalInfo.targetTurn;
-                    battleActions.updateBuff(battleData,targetTurn,HPSheet);
+                    updateBuff(battleData,targetTurn,HPSheet);
                 },
                 "target": "team",
                 "listenerName": "Ultimate - After Rain - ally added to field while after rain active",
@@ -31689,7 +31752,7 @@ const turnLogic = {
 
                         const buffCheck = sourceTurn.buffsObject[buffName];
                         if (buffCheck && buffCheck.duration === buffCheck.durationInTurn) {return;}
-                        battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                        updateBuff(battleData,sourceTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E2 ally lost hp listener",
@@ -31901,7 +31964,6 @@ const turnLogic = {
                 const bondmateTurn = battleData.nameBasedTurns[bondmateSlot];
 
                 const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
-                const updateBuff = battleActions.updateBuff;
 
                 const dragonTurn = sourceTurn.dhptSouldragonTURNEVENT;
                 if (!dragonTurn.isActive || bondmateSlot != targetTurn.name) {
@@ -32057,7 +32119,6 @@ const turnLogic = {
 
                 const shieldBuffObject = ATKObjects.dhptTalentSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRefTalent.slot});
 
 
@@ -32146,7 +32207,6 @@ const turnLogic = {
                     const buffSheet = ATKObjects.e6VulnSHEET;
 
                     const enemyPositions = battleData.enemyPositions;
-                    const updateBuff = battleActions.updateBuff;
                     for (let enemy of enemyPositions) {
                         updateBuff(battleData,enemy,buffSheet);
                     }
@@ -32173,7 +32233,6 @@ const turnLogic = {
                     const buffSheet = ATKObjects.e6VulnSHEET;
 
                     const enemyPositions = battleData.enemyPositions;
-                    const updateBuff = battleActions.updateBuff;
                     for (let enemy of enemyPositions) {
                         updateBuff(battleData,enemy,buffSheet);
                     }
@@ -32284,11 +32343,6 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.dhptUltimateATKOBJECT;
 
-                
-                // poke("SkillStart",battleData,{source:"Archer"});//ultimate listeners are poked before and after ulty use, within the ulty queue dump function
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                // battleActions.updateBuff(battleData,targetEnemy,buffSheet);
-
                 const battleValues = sourceTurn.battleValues;
                 battleValues.souldragonEnhancedTurns = 2 + (rank>=2 ? 2 : 0);
                 logicRef.skillFunctions.dhptUltimateShield(battleData,sourceTurn);
@@ -32296,7 +32350,7 @@ const turnLogic = {
 
                 battleValues.souldragonEnhanced = true;
 
-                if (rank>=2) {battleActions.actionAdvance(1,sourceTurn.dhptSouldragonTURNEVENT,battleData,"E2: Souldragon advanced");}
+                if (rank>=2) {actionAdvance(1,sourceTurn.dhptSouldragonTURNEVENT,battleData,"E2: Souldragon advanced");}
 
                 sourceTurn.ultyQueued = false;
             },
@@ -32348,7 +32402,6 @@ const turnLogic = {
 
                 const shieldBuffObject = ATKObjects.dhptUltimateSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRefUlt.slot});
                 
                 for (let ally of allyPositions) {
@@ -32561,7 +32614,7 @@ const turnLogic = {
                         valuesRef.souldragonEnhancedTurns -= 1;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.souldragonTurnAttackEnhanced,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.souldragonTurnAttackEnhanced,
                             target: "enemy",
                             name: this.listenerName + " [FUA ATTACK]",
                             properName: dragonTurn.properName,
@@ -32579,7 +32632,7 @@ const turnLogic = {
                     }
                     else {
                         const queueObject = this.queueObject2 ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.dhptTalentShield,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptTalentShield,
                             target: "team",
                             name: this.listenerName + " [SHIELD]",
                             properName: dragonTurn.properName,
@@ -32687,7 +32740,7 @@ const turnLogic = {
 
                     const dragonTurn = ownerTurn.dhptSouldragonTURNEVENT;
                     updateEnergy(battleData,6,ownerTurn,false,"Sylvanity (Bondmate Attack)");
-                    battleActions.actionAdvance(0.15,dragonTurn,battleData,"Sylvanity (Bondmate Attack)");
+                    actionAdvance(0.15,dragonTurn,battleData,"Sylvanity (Bondmate Attack)");
                 },
                 "target": "self",
                 "listenerName": "Sylvanity: Bondmate attack action advance + energy",
@@ -32697,7 +32750,7 @@ const turnLogic = {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    battleActions.actionAdvance(0.40,ownerTurn,battleData,"Sylvanity");
+                    actionAdvance(0.40,ownerTurn,battleData,"Sylvanity");
                 },
                 "target": "self",
                 "listenerName": "Sylvanity: battlestart action advance",
@@ -32715,16 +32768,23 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.dhptUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -32759,7 +32819,7 @@ const turnLogic = {
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.properName != ownerTurn.properName) {return;}
     
-                        battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"E1: Shed Scales of Old"});
+                        updateSkillPoints(1,battleData,{sourceTurn,sourceName:"E1: Shed Scales of Old"});
                     },
                     "target": "self",
                     "listenerName": "E1: dan used ult skillpoint gain",
@@ -32783,11 +32843,10 @@ const turnLogic = {
                         const ATKObjects = logicRef.ATKObjects;
                         let buffSheet = ATKObjects.e6VulnSHEET;
     
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
                     },
                     "target": "enemy",
                     "listenerName": "E6 vuln application enemy added to field while bondmate exists",
-                    "announce": false,
                     "ownerTurn": {},
                 },
                 {
@@ -32918,7 +32977,7 @@ const turnLogic = {
                     const buffSheet = ATKObjects.aventurineBasicE2RESSHEET;
                     const targetTurn = battleData.primaryTarget;
 
-                    battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,targetTurn,buffSheet);
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -32973,7 +33032,7 @@ const turnLogic = {
                 buffSheet[CritRateBase] = conversion;
                 buffSheet[CritRateBaseNULL] = -conversion;
                 
-                battleActions.updateBuff(battleData,currentTurn,buffSheet);
+                updateBuff(battleData,currentTurn,buffSheet);
             },
             aventurineSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -33054,7 +33113,6 @@ const turnLogic = {
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 const shieldBuffObject = ATKObjects.aventurineSkillShieldSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
-                // const updateBuff = battleActions.updateBuff;
                 updateBuffBatchTargets(battleData,allyPositions,shieldBuffObject,false,sourceTurn);
             },
             aventurineFUA(battleData,targetTurn,sourceTurn) {
@@ -33123,9 +33181,6 @@ const turnLogic = {
                 const shieldCall = ATKObjects.aventurineTalentShield ??= logicRef.skillFunctions.aventurineTalentShield;
                 shieldCall(battleData,sourceTurn);
                 poke("TalentEnd",battleData,{sourceTurn});
-
-                //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
-                // battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Archer - +SP - Talent"})
             },
             aventurineTalentShield(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -33183,7 +33238,6 @@ const turnLogic = {
                 const shieldBuffObject = ATKObjects.aventurineTraceShieldSHIELDSHEET;
                 
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 
                 let allyWithLowestShield = null;
@@ -33270,9 +33324,7 @@ const turnLogic = {
                 const buffSheet = ATKObjects.aventurineUltimateDEBUFFSHEET;
                 const targetEnemy = battleData.primaryTarget;
                 
-                // poke("SkillStart",battleData,{source:"Archer"});//ultimate listeners are poked before and after ulty use, within the ulty queue dump function
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                battleActions.updateBuff(battleData,targetEnemy,buffSheet);
+                updateBuff(battleData,targetEnemy,buffSheet);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 if (sourceTurn.rank >= 1) {
@@ -33316,7 +33368,6 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
 
                 const allies = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let ally of allies) {
                     updateBuff(battleData,ally,buffSheet);
                 }
@@ -33349,7 +33400,6 @@ const turnLogic = {
                 const actualStacksToApply = Math.min(3,shieldsFound);
 
                 const buffCheck = sourceTurn.buffsObject[buffName];
-                const updateBuff = battleActions.updateBuff;
                 if (buffCheck) {//if the buff already exists
                     const currentStacks = buffCheck.currentStacks;
                     if (currentStacks === actualStacksToApply) {return;}//if we're capped on stacks, abort
@@ -33389,7 +33439,7 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
 
                             const queueObject = this.queueObject ??= {
-                                attack: turnLogic[ownerTurn.properName].skillFunctions.aventurineFUA,
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.aventurineFUA,
                                 target: "enemy",
                                 name: this.listenerName,
                                 properName: characterName,
@@ -33545,16 +33595,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.aventurineUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.aventurineUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "enemy",
@@ -33615,7 +33672,7 @@ const turnLogic = {
                         }
                         const buffSheet = this.e4fuaDEFSHEET;
 
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Bingo! ally FUA listener",
@@ -33920,30 +33977,36 @@ const turnLogic = {
                 let ATKObject = ATKObjects.argentiUltimateATKOBJECT;
                 let ATKObject2 = ATKObjects.argentiUltimateATKOBJECT2;
 
-                const maxEnergy = sourceTurn.maxEnergy;
-                const useEnhancedUlt = sourceTurn.currentEnergy === sourceTurn.maxEnergy;
+                const useEnhancedUlt = sourceTurn.thisUltEnhanced;
+                sourceTurn.thisUltEnhanced = false;
 
                 const enemyAmount = battleData.enemyPositions.length;
                 
 
                 if (rank >= 2 && enemyAmount >= 3) {
                     const buffSheet = ATKObjects.argentiE2ATKSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
-                if (useEnhancedUlt) {//account for varying levels of energy drain based on which ult is used
-                    updateEnergy(battleData,-maxEnergy,sourceTurn);
-                    poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"});
+                poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"});
+                
+                if (useEnhancedUlt) {
                     battleActions.attackWrapper(battleData,skillRef2,sourceTurn,ATKObject2);
                 }
                 else {
-                    updateEnergy(battleData,-maxEnergy * 0.5,sourceTurn);
-                    poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"});
                     battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 }
 
 
                 sourceTurn.ultyQueued = false;
+            },
+            argentiUltimateCostCheck(battleData,sourceTurn) {
+                const current = sourceTurn.currentEnergy;
+                const max = sourceTurn.maxEnergy;
+
+                const isEnhanced = current === max;
+                sourceTurn.thisUltEnhanced = true;
+                return isEnhanced ? max : max * 0.5;
             },
             argentiTechnique(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -34019,7 +34082,7 @@ const turnLogic = {
                         if (generalInfo.sourceString != "Turn Start") {
                             //the trace gains a stack at turn start, but it down
                             const totalEnergyGain = pointsGained * values[0];
-                            updateEnergy(battleData,totalEnergyGain,ownerTurn,false,"Talent Energy Gain/Enemy Hit");
+                            updateEnergy(battleData,totalEnergyGain,ownerTurn,false,"Talent Energy Gain/Targets Hit");
                         }
 
                         
@@ -34052,7 +34115,7 @@ const turnLogic = {
                             //only check this if we haven't finished stacking yet, and if the change in points is actually positive
                             const buffSheet = this.argentTalentSTACKSHEET;
                             buffSheet.currentStacks = pointsGained;
-                            battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = buffsObject[buffSheet.buffName];
                             if (buffCheck.currentStacks === maxStacks) {
                                 ownerTurn.argentTalentStackingDONE = true;
@@ -34102,7 +34165,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Argenti Generosity trace energy regen per enemy added to field",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -34138,7 +34200,7 @@ const turnLogic = {
                     };
 
                     if (hpRatio <= hpThreshold) {
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                     else {
                         removeBuff(battleData,ownerTurn,buffSheet);
@@ -34160,21 +34222,28 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
                         const queueObject = this.queueObject ??= {
-                            attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.argentiUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimateCostCheck,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.argentiUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
+                            isAttack: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
                 "listenerName": "Argenti - Ultimate queued",
-                "announce": false,
                 "ownerTurn": {},
             },
             {
@@ -34239,7 +34308,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         }
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Argenti E6 ult shred",
@@ -34434,7 +34503,6 @@ const turnLogic = {
                 const enemyTargets = battleData.enemyPositions.length;
                 const buffSheet = ATKObjects.anaxaSkillPerTargetDMGSHEET;
                 buffSheet.currentStacks = enemyTargets;
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,buffSheet);
 
                 if (rank >= 4) {
@@ -34511,11 +34579,8 @@ const turnLogic = {
                 const ATKObject = ATKObjects.anaxaUltimateATKOBJECT;
 
                 const buffSheet = ATKObjects.anaxaUltSublimationSHEET;
-                
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
 
                 const enemyPositions = battleData.enemyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                     if (enemy.turnState && enemy.enemyType != "boss") {enemy.turnShouldEnd;}//brick actions for enemies that aren't bosses
@@ -34660,7 +34725,7 @@ const turnLogic = {
                             battleValues.extraSkillActive = true;
                             if (slotIsSkill) {
                                 const queueObject = this.queueObjectSkill ??= {
-                                    attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
                                     target: "enemy",
                                     name: this.listenerName,
                                     properName: ownerTurn.properName,
@@ -34676,7 +34741,7 @@ const turnLogic = {
                             }
                             else {
                                 const queueObject = this.queueObjectBasic ??= {
-                                    attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
                                     target: "enemy",
                                     name: this.listenerName,
                                     properName: ownerTurn.properName,
@@ -34796,7 +34861,6 @@ const turnLogic = {
                     };
                     const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
 
-                    const updateBuff = battleActions.updateBuff;
                     if (buffCheck) {
                         const currentStacks = buffCheck.currentStacks;
                         if (currentStacks === weaknessCount) {return;}
@@ -34887,7 +34951,7 @@ const turnLogic = {
 
                     if (discloseQuality) {
                         if (!buffCheck) {
-                            battleActions.updateBuff(battleData,sourceTurn,buffSheet)
+                            updateBuff(battleData,sourceTurn,buffSheet)
                         }
                     }
                     else if (buffCheck){
@@ -34988,7 +35052,7 @@ const turnLogic = {
                         }
                         const buffSheet = ATKObjects.anaxaSoloEruditionSHEET;
 
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -35008,16 +35072,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.anaxaUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "team",
@@ -35107,11 +35178,11 @@ const turnLogic = {
                             const currentDuration = buffCheck.duration;
                             if (currentDuration === 2) {return;}//if the debuff already exists and is already max duration, skip renewal bc there's no point
                             else {
-                                battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                                updateBuff(battleData,targetTurn,buffSheet)
                             }
                         }
                         else {
-                            battleActions.updateBuff(battleData,targetTurn,buffSheet)
+                            updateBuff(battleData,targetTurn,buffSheet)
                         }
                     },
                     "target": "self",
@@ -35141,14 +35212,13 @@ const turnLogic = {
                             "isDebuff": true,
                             "expireType": null
                         };
-                        battleActions.updateBuff(battleData,targetTurn,buffSheet);
+                        updateBuff(battleData,targetTurn,buffSheet);
 
                         const implantFunction = this.implantFunction ??= turnLogic[ownerTurn.properName].skillFunctions.anaxaImplantWeakness;
                         implantFunction(battleData,ownerTurn,targetTurn)
                     },
                     "target": "enemy",
                     "listenerName": "E2 Vuln Zombie Network",
-                    "announce": false,
                     "ownerTurn": {},
                 },
             ],
@@ -35186,7 +35256,7 @@ const turnLogic = {
                         }
                         const multiSheet = this.E6AnaxaFinalDMGSHEET;
 
-                        battleActions.updateBuff(battleData,ownerTurn,multiSheet);
+                        updateBuff(battleData,ownerTurn,multiSheet);
                     },
                     "target": "self",
                     "listenerName": "Everything Is in Everything - final dmg multi for anaxa",
@@ -35202,7 +35272,7 @@ const turnLogic = {
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
 
-                    battleActions.updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Anaxa E1 First Skill Use"});
+                    updateSkillPoints(1,battleData,{sourceTurn,sourceName:"Anaxa E1 First Skill Use"});
 
                     //then remove, bc this is the only time it'll get called
                     battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
@@ -35465,7 +35535,6 @@ const turnLogic = {
 
                 const dmgSheet = ATKObjects.yaoSPD120Sheet;
                 const dmgExtraSheet = ATKObjects.yaoSPDOver120Sheet;
-                const updateBuff = battleActions.updateBuff;
 
                 // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
@@ -35579,7 +35648,6 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.battleValues.skillZoneActive = true;
 
-                const updateBuff = battleActions.updateBuff;
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
                 if (!buffCheck) {
@@ -35699,21 +35767,18 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.yaoUltimatePENSHEET;
 
-                
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"Yao Guang Ultimate");
 
                 const allyPositions = battleData.allyPositions;
-                const updateBuff = battleActions.updateBuff;
                 for (let ally of allyPositions) {
                     updateBuff(battleData,ally,buffSheet);
                 }
 
 
                 const queueObject = ATKObjects.queueAhaInstantObject ??= {
-                    attack: turnLogic["Aha Instant"].skillFunctions.startAhaInstant,
+                    actionCall: turnLogic["Aha Instant"].skillFunctions.startAhaInstant,
                     target: "enemy",
                     name: "Yao Guang Ultimate 'Aha Instant' Queue",
                     properName: battleData.ahaInstantTURNEVENT.properName,
@@ -36005,7 +36070,7 @@ const turnLogic = {
                         "expireType": null,
                     };
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Poised and Sated battlestart critdmg bonus",
@@ -36018,7 +36083,7 @@ const turnLogic = {
                     const sourceTurn = generalInfo.sourceTurn;
                     if (ownerTurn.properName != sourceTurn.properName) {return;}//only her elation skill can trigger this
 
-                    battleActions.updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Poised and Sated: Elation Skill End"})
+                    updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Poised and Sated: Elation Skill End"})
                 },
                 "target": "self",
                 "listenerName": "Poised and Sated elation skill skill point gain",
@@ -36037,7 +36102,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.yaoUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.yaoUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -36045,7 +36118,7 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -36297,7 +36370,6 @@ const turnLogic = {
                 const usableATK = Math.min(maxStacks,Math.floor(validATK/100));
 
                 const dmgExtraSheet = ATKObjects.sparxATKConversionSHEET;
-                const updateBuff = battleActions.updateBuff;
 
                 // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
@@ -36395,14 +36467,13 @@ const turnLogic = {
                 let ATKObject = ATKObjects.sparxUltimateATKOBJECT;
 
                 const isE4 = rank >= 4;
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 const e4PunchlineGain = isE4 ? 5 : 0;
                 battleActions.updatePunchlineValue(battleData,2 + sourceTurn.ultBonusPunchline + e4PunchlineGain,sourceTurn,"Sparxie Ultimate");
                 poke("sparxieThrillGained",battleData,{pointsGained: sourceTurn.ultBonusThrill,sourceString:"Sparxie Ultimate"});
 
                 if (isE4) {
                     const buffSheetE4 = ATKObjects.sparxieE4CRITDMGSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheetE4)
+                    updateBuff(battleData,sourceTurn,buffSheetE4)
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -36473,7 +36544,6 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
-                const updateSkillPoints = battleActions.updateSkillPoints;
                 const battleValues = sourceTurn.battleValues;
 
                 let ignoreInitialCost = false;
@@ -36578,7 +36648,7 @@ const turnLogic = {
 
                 if (rngIndex === 2 && battleValues.skillCounter < 15) {
                     battleActions.updatePunchlineValue(battleData,2,sourceTurn,"Skill: Straight Fire");
-                    battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
+                    updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Skill: Straight Fire"});
                 }
                 else {
                     battleActions.updatePunchlineValue(battleData,1,sourceTurn,"Skill: Unreal Banger");
@@ -36896,7 +36966,7 @@ const turnLogic = {
                 poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
-                battleActions.updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Sparxie Technique"});
+                updateSkillPoints(2,battleData,{sourceTurn,sourceName:"Sparxie Technique"});
                 poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
@@ -36951,7 +37021,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn",
                         };
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
                 },
                 "target": "self",
@@ -37124,16 +37194,23 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.sparxUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparxUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -37179,7 +37256,7 @@ const turnLogic = {
                         const ownerTurn = this.ownerTurn;
 
                         const queueObject = this.queueObject ??= {
-                            attack: sim.turnWrapper,
+                            actionCall: sim.turnWrapper,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -37225,7 +37302,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                         };
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "E6 pen bonus",
@@ -37406,7 +37483,7 @@ const turnLogic = {
 
                 if (rank >= 1) {
                     const buffSheet = ATKObjects.emcE1UltBonusCBSHEET;
-                    battleActions.updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -37448,7 +37525,6 @@ const turnLogic = {
                 const usableATK = Math.min(maxStacks,Math.floor(validATK/200));
 
                 const dmgExtraSheet = ATKObjects.emcATKConversionSHEET;
-                const updateBuff = battleActions.updateBuff;
 
                 // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
                 const buffsObject = currentTurn.buffsObject;
@@ -37595,14 +37671,8 @@ const turnLogic = {
                         "expireType": "EndTurn",
                     }
                 }
-                const updateBuff = battleActions.updateBuff;
                 let buffSheet = ATKObjects.emcUltimateCRITDMGSHEET;
                 
-                
-
-                // console.log(buffSheet)
-
-                updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"EMC Ultimate");
@@ -37640,7 +37710,7 @@ const turnLogic = {
 
 
                     const queueObject = ATKObjects.queueEMCForcedElationSkillObject ??= {
-                        attack: logicRef.skillFunctions.elationSkill,
+                        actionCall: logicRef.skillFunctions.elationSkill,
                         target: "enemy",
                         name: "EMC Ultimate 'Elation Skill' Queue",
                         properName: targetTurn.properName,
@@ -37655,7 +37725,7 @@ const turnLogic = {
                     battleActions.queueInstantUltimateUse(battleData,queueObject);
                 }
                 else {
-                    battleActions.actionAdvance(0.50,targetTurn,battleData,"EMC Ult - Non-Elation Target");
+                    actionAdvance(0.50,targetTurn,battleData,"EMC Ult - Non-Elation Target");
                 }
 
 
@@ -37833,7 +37903,7 @@ const turnLogic = {
                     if (rank >= 6) {
                         const bonusSheet = ATKObjects.emcE6CRITSHEET;
 
-                        battleActions.updateBuff(battleData,sourceTurn,bonusSheet);
+                        updateBuff(battleData,sourceTurn,bonusSheet);
                     }
                 }
                 
@@ -37952,7 +38022,7 @@ const turnLogic = {
                         "expireType": null,
                     };
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Aha, Sic 'Em! elation skill end delayed cb buff gain",
@@ -37993,7 +38063,7 @@ const turnLogic = {
                         "expireType": null,
                     };
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Screw It, We Ball battlestart critrate bonus",
@@ -38006,7 +38076,7 @@ const turnLogic = {
                     const sourceTurn = generalInfo.sourceTurn;
                     if (ownerTurn.properName != sourceTurn.properName) {return;}//only his ult can trigger this
 
-                    battleActions.updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Screw It, We Ball: Ult End"})
+                    updateSkillPoints(1,battleData,{sourceTurn, sourceName: "Screw It, We Ball: Ult End"})
                 },
                 "target": "self",
                 "listenerName": "Screw It, We Ball ult end skill point gain",
@@ -38025,7 +38095,15 @@ const turnLogic = {
                         ownerTurn.ultyQueued = true;
 
                         const queueObject = this.queueObject ??= {
-                            attack: turnLogic[ownerTurn.properName].skillFunctions.emcUltimate,
+                            action: "Ultimate", 
+                            isAttack: false,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.emcUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
@@ -38035,7 +38113,7 @@ const turnLogic = {
                         }
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -38214,7 +38292,6 @@ const turnLogic = {
                 //I suspect for now that is only because we don't have too many other entities that could use it, but this will likely change later
 
                 const dmgExtraSheet = ATKObjects.evaCDMGConversionSHEET;
-                const updateBuff = battleActions.updateBuff;
 
                 const finalBonusValue = 0.2 * currentCDMG;
 
@@ -38293,11 +38370,6 @@ const turnLogic = {
 
                 const exoTurnRef = {sourceTurn};
                 poke("SkillStart",battleData,exoTurnRef);
-
-                // if (rank >= 1) {
-                //     const buffSheet = ATKObjects.emcE1UltBonusCBSHEET;
-                //     battleActions.updateBuff(battleData,sourceTurn,buffSheet);
-                // }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -38549,7 +38621,7 @@ const turnLogic = {
 
                 if (rank >= 1) {
                     const queueObject = ATKObjects.evaE1BonusElationSkillObject ??= {
-                        attack: logicRef.skillFunctions.elationSkill,
+                        actionCall: logicRef.skillFunctions.elationSkill,
                         target: "enemy",
                         name: "E1 FUA 'Elation Skill' Queue",
                         properName: sourceTurn.properName,
@@ -38648,7 +38720,6 @@ const turnLogic = {
                 else {
                     ATKObject2.bounceData.bounceCount = 5 + 1;
                 }
-                updateEnergy(battleData,-sourceTurn.maxEnergy * 0.5,sourceTurn);
 
                 let chainedAttackRef = null;
                 const chainedAttack = battleActions.attackWrapperChained;
@@ -38830,7 +38901,7 @@ const turnLogic = {
                             battleValues.fuaIsQueued = true;
 
                             const queueObject = this.queueObject ??= {
-                                attack: turnLogic[ownerTurn.properName].skillFunctions.evaFUA,
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaFUA,
                                 target: this.target,
                                 name: this.listenerName,
                                 properName: ownerTurn.properName,
@@ -39041,7 +39112,7 @@ const turnLogic = {
                         "expireType": null,
                     };
 
-                    battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,ownerTurn,buffSheet);
                 },
                 "target": "self",
                 "listenerName": "Screw It, We Ball battlestart critrate bonus",
@@ -39060,16 +39131,23 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
                         const queueObject = this.queueObject ??= {
-                            attack: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.evaUltimate,
+                            action: "Ultimate", 
+                            isAttack: true,
+                            isAbility: true,
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy * 0.5,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            actionCall: this.ultPath ??= turnLogic[ownerTurn.properName].skillFunctions.evaUltimate,
                             target: this.target,
                             name: this.listenerName,
                             properName: ownerTurn.properName,
                             sourceTurn: null,
-                            isAttackUlt: true,
                             priority: priorityList.turn.Default,
                         }
                         queueObject.sourceTurn = ownerTurn;
-                        battleActions.queueUltimateUse(battleData,queueObject);
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "self",
@@ -39119,7 +39197,7 @@ const turnLogic = {
                             "expireType": null,
                         };
     
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Home: A Prayer in Dance pen application",
@@ -39147,7 +39225,7 @@ const turnLogic = {
                             "expireType": null,
                         };
     
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Voyage: A Wish for Everbloom crit application",
@@ -39176,7 +39254,7 @@ const turnLogic = {
                             "expireType": null,
                         };
     
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Meadow: A Ruin by Vice shred application",
@@ -39206,9 +39284,7 @@ const turnLogic = {
                             "actionTags": ["Elation"]
                         };
 
-                        const allyArray = battleData.allAlliesArray;
-
-                        battleActions.updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     },
                     "target": "self",
                     "listenerName": "Maiden: A Step into Dreams merrymake application",
@@ -39249,7 +39325,6 @@ const turnLogic = {
                             const buffName = buffSheet.buffName;
 
                             const buffCheck = ownerTurn.buffsObject[buffName];
-                            const updateBuff = battleActions.updateBuff;
 
                             if (buffCheck) {
                                 const currentStacks = buffCheck.currentStacks;
