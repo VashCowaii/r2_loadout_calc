@@ -7030,6 +7030,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -7656,6 +7657,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -8378,6 +8380,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -9004,6 +9007,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -9813,6 +9817,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -10581,6 +10586,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -11310,6 +11316,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -12583,6 +12590,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -13401,6 +13409,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -14311,6 +14320,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -14926,6 +14936,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -15549,6 +15560,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -16337,6 +16349,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -17122,6 +17135,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -17844,6 +17858,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -18411,6 +18426,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -19145,6 +19161,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -19960,6 +19977,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -20641,6 +20659,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -21302,6 +21321,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -21967,6 +21987,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -22875,6 +22896,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -23684,6 +23706,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -24580,6 +24603,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -25294,6 +25318,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -26128,6 +26153,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -26907,6 +26933,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -28032,6 +28059,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -29479,6 +29507,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -30828,6 +30857,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -32186,6 +32216,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -33357,6 +33388,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -34205,6 +34237,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -34853,6 +34886,7 @@ const turnLogic = {
                             energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimateCostCheck,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -35723,6 +35757,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -36774,6 +36809,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -37887,6 +37923,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -38792,6 +38829,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
@@ -39833,6 +39871,7 @@ const turnLogic = {
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
 
+                            isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
                             skipEXDisplay: false,
