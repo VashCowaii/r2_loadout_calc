@@ -798,7 +798,6 @@ const battleActions = {
         else {//if we have no queued ability actions then just push it blindly bc it doesn't fuckin matter
             currentQueue.push(entry);
         }
-        battleData.totalAbilitiesQueued += 1;
 
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueFUA", name: entry.name});}
     },
@@ -16296,7 +16295,7 @@ const turnLogic = {
                     // const ultLength = battleData.ultimateQueue.length;
                     // const fuaLength = battleData.followUpQueue.length;
 
-                    const noFUA = !battleData.totalAbilitiesQueued;
+                    const noFUA = !battleData.followUpQueue.length;
                     const noULT = !battleData.totalUltsQueued;
                     const exTurnQueue = battleData.totalExTurnsQueued;
 
