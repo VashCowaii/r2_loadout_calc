@@ -7029,12 +7029,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.gallagherUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -7640,12 +7643,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.huohuoUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -8347,12 +8353,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -8958,12 +8967,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.lynxUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -9772,12 +9784,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -10522,12 +10537,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.swUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -11233,12 +11251,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.kafkaUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -12488,12 +12509,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.fishladyUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -13288,12 +13312,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -14180,12 +14207,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.weltUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -14777,12 +14807,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.pelaUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
                             
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -15382,12 +15415,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.topazUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -16153,12 +16189,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.archerUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -16920,12 +16959,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.seeleUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -17627,12 +17669,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.tingyunUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
                             
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -18179,12 +18224,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.bronyaUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -18898,12 +18946,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sundayUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -19695,12 +19746,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -20358,12 +20412,15 @@ const turnLogic = {
                             
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.robinUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -21001,12 +21058,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.astaUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -21651,12 +21711,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -22543,13 +22606,16 @@ const turnLogic = {
                             priority: priorityList.turn.Default,
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparkleUltimate,
-                            action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
+                            action: "Ultimate",
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -23336,12 +23402,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.saberUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -24215,12 +24284,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -24912,12 +24984,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.jingliuUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -25731,12 +25806,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -26493,12 +26571,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.hookUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -27604,12 +27685,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.rmcUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -29034,12 +29118,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.aggyUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -30365,12 +30452,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.evernightUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -31708,12 +31798,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.hyacineUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -32864,12 +32957,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -33694,12 +33790,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.aventurineUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -34324,12 +34423,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.argentiUltimateCostCheck,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -35176,12 +35278,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -36209,12 +36314,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.yaoUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -37304,12 +37412,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparxUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -38208,12 +38319,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.emcUltimate,
                             action: "Ultimate", 
-                            isAttack: false,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: false,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
@@ -39246,12 +39360,15 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaUltimate,
                             action: "Ultimate", 
-                            isAttack: true,
-                            isAbility: true,
                             points: 0,
                             energyCost: ownerTurn.maxEnergy * 0.5,
                             // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             // specialEnergyPoke: "SW999GainMMR",
+
+                            isAttack: true,
+                            isAbility: true,
+                            useFUATriggers: false,
+                            useAnyTriggers: true,
 
                             properName: ownerTurn.properName,
                             sourceTurn: null,
