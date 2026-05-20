@@ -36506,12 +36506,12 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.yaoSkillREF ??= ATKObjects.Skill["Decalight Unveils All"].variant1;
                 let values = ATKObjects.yaoSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
                 
                 if (!ATKObjects.yaoSkillOWNERSHEET) {
-                    const rank = sourceTurn.rank;
                     const logicRef = turnLogic[characterName];
                     const buffRef = logicRef.buffNames;
                     ATKObjects.yaoSkillOWNERSHEET = {
@@ -36530,6 +36530,21 @@ const turnLogic = {
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
                     }
+
+                    ATKObjects.yaoSkillBUFFSHEETE2 = {
+                        "stats": [SPDP],
+                        [SPDP]: 0.12,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.decalightE2,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
                 }
 
                 const ownerSheet = ATKObjects.yaoSkillOWNERSHEET;
@@ -36539,6 +36554,11 @@ const turnLogic = {
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.battleValues.skillZoneActive = true;
 
+                if (!buffCheck && rank >= 2) {
+                    const spdSHEET = ATKObjects.yaoSkillBUFFSHEETE2;
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,spdSHEET);
+                }
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
                 if (!buffCheck) {
@@ -36557,10 +36577,9 @@ const turnLogic = {
                     const logicRef = turnLogic[currentTurn.properName];
                     const buffRef = logicRef.buffNames;
                     ATKObjects.yaoSkillBUFFSHEET = {
-                        "stats": [ElationDMGAll,ElationDMGAllNULL,SPDP],
+                        "stats": [ElationDMGAll,ElationDMGAllNULL],
                         [ElationDMGAll]: 0,
                         [ElationDMGAllNULL]: 0,//ratio is values[1],
-                        [SPDP]: rank >= 2 ? 0.12 : 0,
                         "source": "Skill",
                         "sourceOwner": currentTurn.properName,
                         "buffName": buffRef.decalight,
@@ -36610,6 +36629,13 @@ const turnLogic = {
                 const buffSheet = ATKObjects.yaoSkillBUFFSHEET;
                 const allyArray = battleData.allAlliesArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
+
+                const rank = yaoTurn.rank;
+                if (rank >= 2) {
+                    const spdSHEET = ATKObjects.yaoSkillBUFFSHEETE2;
+                    const allyArray = battleData.allAlliesArray;
+                    removeBuffFromBatch(battleData,allyArray,spdSHEET);
+                }
             },
             yaoUltimate(battleData,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -37186,6 +37212,7 @@ const turnLogic = {
 
             "decalight": "Decalight Unveils All",
             "decalightCountdown": "Decalight Unveils All (Countdown)",
+            "decalightE2": "E2: Blind Arrows Guided by Feathers",
             "elationVuln": "Woe's Whisper (Elation Skill)",
             "ultPEN": "Hexagram of Feathered Fortune",
 
