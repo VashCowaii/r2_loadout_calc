@@ -5790,13 +5790,13 @@ const turnLogic = {
             //     let target = "char1";
             //     actionUsed = true;
                 
-            //     return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target, endTurn: true};
+            //     return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target};
             // }
 
 
             if (!actionUsed) {
                 let basicCall = shortCalls.genericBossBasic;
-                return {action: "BasicATK", points: 1, actionCall: basicCall, target: "team", endTurn: true};
+                return {action: "BasicATK", points: 1, actionCall: basicCall, target: "team"};
             }
         },
         "enemyData": {
@@ -6145,12 +6145,12 @@ const turnLogic = {
             //     let target = "char1";
             //     actionUsed = true;
                 
-            //     return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target, endTurn: true};
+            //     return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target};
             // }
 
             if (!actionUsed) {
                 let basicCall = shortCalls.genericBossBasic;
-                return {action: "BasicATK", points: 1, actionCall: basicCall, target: "team", endTurn: true};
+                return {action: "BasicATK", points: 1, actionCall: basicCall, target: "team"};
             }
         },
         "enemyData": {
@@ -6504,8 +6504,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.gallagherSkillHeal, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicEnhCall ??= {
@@ -6514,8 +6513,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.gallagherBasicEnhanced, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
             this.returnBasicCall ??= {
@@ -6524,8 +6522,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.gallagherBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -7188,8 +7185,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.huohuoSkillHeal, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -7198,8 +7194,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.huohuoBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -7870,8 +7865,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.natashaSkillHeal, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -7880,8 +7874,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.natashaBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -8578,8 +8571,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.lynxSkillHeal, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -8588,8 +8580,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.lynxBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -9141,8 +9132,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.luochaSkillHeal, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -9151,8 +9141,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.luochaBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -9977,8 +9966,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.swSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -9986,8 +9974,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.swBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "weaknessIndexConversion": {
@@ -10808,8 +10795,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.kafkaSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -10817,8 +10803,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.kafkaBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -11575,8 +11560,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.fishladySkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -11584,8 +11568,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.fishladyBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -12749,8 +12732,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.blackswanSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -12758,8 +12740,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.blackswanBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -13741,8 +13722,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.weltSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -13750,8 +13730,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.weltBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -14462,8 +14441,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.pelaSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -14471,8 +14449,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.pelaBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -15071,8 +15048,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.topazSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -15080,8 +15056,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.topazBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -15810,12 +15785,10 @@ const turnLogic = {
                 isAbility: true,
                 points: -2, 
                 actionCall: this.skillFunctions.archerSkillInstance, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnSkillCallEnd ??= {
-                action: "EndTurn", 
-                endTurn: true,
+                action: "EndTurn",
                 isAttack: false,
                 isAbility: false,
             }
@@ -15825,8 +15798,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.archerBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -16552,8 +16524,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.seeleSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -16561,8 +16532,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 actionCall: this.skillFunctions.seeleBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -17415,8 +17385,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.tingyunSkill, 
-                target: "char1", 
-                endTurn: true,
+                target: "char1",
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -17425,8 +17394,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.tingyunBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -18034,8 +18002,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.bronyaAdvance, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -18044,8 +18011,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.bronyaBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -18612,8 +18578,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.sundayAdvance, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -18622,8 +18587,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.sundayBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -19326,8 +19290,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.tribbieSkill, 
-                target: "team", 
-                endTurn: true
+                target: "team",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -19335,8 +19298,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.tribbieBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -20134,8 +20096,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.robinSkill, 
-                target: "self", 
-                endTurn: true
+                target: "self",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -20143,8 +20104,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.robinBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -20772,8 +20732,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.astaSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -20781,8 +20740,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.astaBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -21403,8 +21361,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.ruanmeiSkill, 
-                target: "self", 
-                endTurn: true
+                target: "self",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -21412,8 +21369,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.ruanmeiBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -22157,8 +22113,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.sparkleAdvance, 
-                target: null, 
-                endTurn: true,
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -22167,8 +22122,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.sparkleBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -22992,8 +22946,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.saberSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -23001,8 +22954,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.saberBasicEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -23010,8 +22962,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.saberBasicReg, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -23951,8 +23902,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.bladeSkillInstance, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -23960,8 +23910,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 0, 
                 actionCall: this.skillFunctions.bladeBasicEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -23969,8 +23918,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.bladeBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -24761,8 +24709,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.jingliuSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnSkillCall2 ??= {
                 action: "Skill", 
@@ -24770,16 +24717,14 @@ const turnLogic = {
                 isAbility: true,
                 points: 0, 
                 actionCall: this.skillFunctions.jingliuSkillEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {action: "BasicATK", 
                 points: 1, 
                 isAttack: true,
                 isAbility: true,
                 actionCall: this.skillFunctions.jingliuBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -25469,8 +25414,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 0, 
                 actionCall: this.skillFunctions.fireflySkillEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnSkillCallEnh ??= {
                 action: "Skill", 
@@ -25478,8 +25422,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.fireflySkillEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnSkillCall ??= {
                 action: "Skill", 
@@ -25487,8 +25430,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.fireflySkillReg, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -25496,8 +25438,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.fireflyBasicEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -25505,8 +25446,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.fireflyBasicReg, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -26351,8 +26291,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.hookSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnSkillCallEnh ??= {
                 action: "Skill", 
@@ -26360,8 +26299,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.hookSkillEnh, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -26369,8 +26307,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.hookBasicReg, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -27088,8 +27025,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.rmcSkill, 
-                target: "self", 
-                endTurn: true,
+                target: "self",
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicEnhCall ??= {
@@ -27098,8 +27034,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.rmcBasicEnhanced, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATKEnh,
             }
             this.returnBasicCall ??= {
@@ -27108,8 +27043,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.rmcBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -28250,8 +28184,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.aggySkill, 
-                target: "self", 
-                endTurn: true
+                target: "self",
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -28259,8 +28192,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 0, 
                 actionCall: this.skillFunctions.aggyBasicEnhanced, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -28268,8 +28200,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.aggyBasicReg, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -29706,8 +29637,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 0, 
                 actionCall: this.skillFunctions.evernightSkill, 
-                target: "self", 
-                endTurn: true
+                target: "self",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -29715,8 +29645,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.evernightBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -31062,8 +30991,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.hyacineSkill, 
-                target: "self", 
-                endTurn: true,
+                target: "self",
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -31072,8 +31000,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.hyacineBasic, 
-                target: "enemy", 
-                endTurn: true,
+                target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -32395,8 +32322,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.dhptSkill, 
-                target: "self", 
-                endTurn: true,
+                target: "self",
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -32406,7 +32332,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.dhptBasic, 
                 target: "enemy", 
-                endTurn: true,
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
@@ -33506,8 +33431,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.aventurineSkill, 
-                target: "self", 
-                endTurn: true
+                target: "self",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -33515,8 +33439,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.aventurineBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -34399,8 +34322,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.argentiSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK",
@@ -34408,8 +34330,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.argentiBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -34992,8 +34913,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.anaxaSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -35002,7 +34922,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.anaxaBasic, 
                 target: "enemy", 
-                endTurn: true
             }
         },
         "abilityTargetPools": {
@@ -36015,8 +35934,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.yaoSkill, 
-                target: "self", 
-                endTurn: true
+                target: "self",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -36025,7 +35943,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.yaoguangBasic, 
                 target: "enemy", 
-                endTurn: true
             }
         },
         "abilityTargetPools": {
@@ -36959,7 +36876,6 @@ const turnLogic = {
                 points: 0, 
                 actionCall: this.skillFunctions.sparxSkillInstance, 
                 target: "self", 
-                endTurn: true
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -36968,7 +36884,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.sparxBasic, 
                 target: "enemy", 
-                endTurn: true
             }
         },
         "abilityTargetPools": {
@@ -38052,8 +37967,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.emcSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -38061,8 +37975,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.emcBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -38909,8 +38822,7 @@ const turnLogic = {
                 isAbility: true,
                 points: -1, 
                 actionCall: this.skillFunctions.evaSkill, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -38918,8 +38830,7 @@ const turnLogic = {
                 isAbility: true,
                 points: 1, 
                 actionCall: this.skillFunctions.evaBasic, 
-                target: "enemy", 
-                endTurn: true
+                target: "enemy",
             }
         },
         "abilityTargetPools": {
@@ -40145,7 +40056,7 @@ const turnLogic = {
     },
     "Z_Test": {
         logic(thisTurn,battleData) {
-            return {action: "EndTurn", endTurn: true};
+            return {action: "EndTurn"};
         },
         preLogic(thisTurn,battleData) {},
         "skillFunctions": {

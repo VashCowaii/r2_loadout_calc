@@ -19,14 +19,14 @@ const turnLogic = {
                     let target = battleData.nameBasedTurns.char1;
                     actionUsed = true;
                     // console.log("skill logic reached")
-                    return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target, endTurn: true};
+                    return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target};
                 }
             }
 
 
             if (!actionUsed) {
                 // let skillRef = skillPathing["Basic ATK"].Monodrama.variant1;
-                return {action: "BasicATK", points: 1, actionCall: shortCalls.sparkleBasic, target: "enemy", endTurn: true};
+                return {action: "BasicATK", points: 1, actionCall: shortCalls.sparkleBasic, target: "enemy"};
             }
         },
         "skillFunctions": {
@@ -554,12 +554,12 @@ const turnLogic = {
 
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.blackswanSkill, target: "enemy", endTurn: true};
+                const returnSkillCall = this.returnSkillCall ??= {action: "Skill", points: -1, actionCall: this.skillFunctions.blackswanSkill, target: "enemy"};
                 return returnSkillCall;
             }
 
             if (!actionUsed) {
-                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.blackswanBasic, target: "enemy", endTurn: true};
+                return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.blackswanBasic, target: "enemy"};
             }
         },
         "skillFunctions": {
@@ -1533,7 +1533,6 @@ const turnLogic = {
                 points: 0, 
                 actionCall: this.skillFunctions.fireflySkillEnhanced, 
                 target: "enemy", 
-                endTurn: true
             }
             this.returnSkillCallEnh ??= {
                 action: "Skill", 
@@ -1542,7 +1541,6 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.fireflySkillEnhanced, 
                 target: "enemy", 
-                endTurn: true
             }
             this.returnSkillCall ??= {
                 action: "Skill", 
@@ -1551,7 +1549,6 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.fireflySkillReg, 
                 target: "enemy", 
-                endTurn: true
             }
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
@@ -1560,7 +1557,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.fireflyBasicEnhanced, 
                 target: "enemy", 
-                endTurn: true
             }
             this.returnBasicCall ??= {
                 action: "BasicATK", 
@@ -1569,7 +1565,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.fireflyBasicReg, 
                 target: "enemy", 
-                endTurn: true
             }
         },
         "skillFunctions": {
@@ -2302,7 +2297,6 @@ const turnLogic = {
                 points: -1, 
                 actionCall: this.skillFunctions.huohuoSkillHeal, 
                 target: null, 
-                endTurn: true,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnBasicCall ??= {
@@ -2312,7 +2306,6 @@ const turnLogic = {
                 points: 1, 
                 actionCall: this.skillFunctions.huohuoBasic, 
                 target: "enemy", 
-                endTurn: true,
                 poolKey: this.abilityTargetPools.BasicATK,
             }
         },
