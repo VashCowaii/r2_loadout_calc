@@ -1638,6 +1638,8 @@ const battleActions = {
         const ATKObject = generalInfo.ATKObject;
         const baseBreak = toughMulti * levelMulti * baseMulti * (breakMulti ?? 1);
 
+        const isEnemy = false;
+
         // const attackerStats = sourceTurn.statTable;
         // const attackerStatsONHIT = sourceTurn.statTableONHIT;
         
@@ -1699,25 +1701,17 @@ const battleActions = {
 
         let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
-        targetTurn.currentHP -= DMGTotalEndBreak;
-        let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDead = false;
-        if (enemyHasNoHP && !targetTurn.isDead) {
-            enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
-        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        let DMGOverkill = 0;
-        if (enemyHasNoHP) {
-            //only gauge overkill dmg when it would be on an enemy
-            DMGOverkill = targetTurn.currentHP * -1;
-            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-            targetTurn.currentHP = 0;
-        }
+        //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
+        let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalEndBreak,isEnemy) : null;
+        // const enemyIsDead = hurtResult.enemyIsDead;
+        // const DMGOverkill = hurtResult.DMGOverkill;
 
         battleData.battleDamageSUM += DMGTotalEndBreak;
         
         if (battleData.isLoggyLogger) {
+            const enemyIsDead = hurtResult.enemyIsDead;
+            const DMGOverkill = hurtResult.DMGOverkill;
+
             let totalsRef = battleData.battleTotal;
             const charName = sourceTurn.properName;
             let sumSlotRef = totalsRef.DMG[charName] ??= {};
@@ -1764,6 +1758,8 @@ const battleActions = {
         instanceMulti = instanceMulti ?? 1;
         const baseBreak = toughMulti * levelMulti * instanceMulti;
         const ATKObject = generalInfo.ATKObject;
+
+        const isEnemy = false;
 
         // const attackerStats = sourceTurn.statTable;
         // const attackerStatsONHIT = sourceTurn.statTableONHIT;
@@ -1825,23 +1821,11 @@ const battleActions = {
         //TODO: later in the future if some unnamed character happens to have an ability that lets us superbreak when not broken, we do need to factor
         //for the isBroken dr multi.
         let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti;//baseBreak
-        // console.log(baseBreak,sumDMG,sumRES,sumDEF,sumVULN,sumDR)
 
-        targetTurn.currentHP -= DMGTotalEndBreak;
-        let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDead = false;
-        if (enemyHasNoHP && !targetTurn.isDead) {
-            enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
-        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        let DMGOverkill = 0;
-        if (enemyHasNoHP) {
-            //only gauge overkill dmg when it would be on an enemy
-            DMGOverkill = targetTurn.currentHP * -1;
-            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-            targetTurn.currentHP = 0;
-        }
+        //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
+        let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalEndBreak,isEnemy) : null;
+        // const enemyIsDead = hurtResult.enemyIsDead;
+        // const DMGOverkill = hurtResult.DMGOverkill;
 
 
         
@@ -1851,6 +1835,9 @@ const battleActions = {
         // logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken});
         // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead});}
         if (battleData.isLoggyLogger) {
+            const enemyIsDead = hurtResult.enemyIsDead;
+            const DMGOverkill = hurtResult.DMGOverkill;
+
             let totalsRef = battleData.battleTotal;
             const charName = sourceTurn.properName;
             let sumSlotRef = totalsRef.DMG[charName] ??= {};
@@ -2842,32 +2829,18 @@ const battleActions = {
 
         let DMGTotalCrit = DMGTotalEnd * (1 + finalCritDMG);
         let DMGTotalAVG = DMGTotalEnd * (1 + finalCritDMG * finalCritRate);
-        // if (isEnemy) {console.log(DMGTotalAVG)}
 
-
-        targetTurn.currentHP -= DMGTotalAVG;
-        let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
-        let enemyIsDead = false;
-        if (enemyIsDeadCheck) {
-            enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        let DMGOverkill = 0;
-
-        if (!isEnemy && enemyHasNoHP) {
-            //only gauge overkill dmg when it would be on an enemy
-            DMGOverkill = targetTurn.currentHP * -1;
-            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-            targetTurn.currentHP = 0;
-        }
-
+        //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
+        let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy) : null;
+        const enemyIsDead = hurtResult.enemyIsDead;
+        const DMGOverkill = hurtResult.DMGOverkill;
 
         let logger = battleData.isLoggyLogger;
         enemiesAttackedThisAction[targetTurn.name] = targetTurn;
 
         if (battleData.isLoggyLogger) {
+            const enemyIsDead = hurtResult.enemyIsDead;
+            // const DMGOverkill = hurtResult.DMGOverkill;
             let hitData = {
                 scalar,
                 currentMulti,multiOf,tags:DMGTags,element,
@@ -3002,32 +2975,20 @@ const battleActions = {
 
         let DMGTotalCrit = DMGTotalEnd * (1 + finalCritDMG);
         let DMGTotalAVG = DMGTotalEnd * (1 + finalCritDMG * finalCritRate);
-        // if (isEnemy) {console.log(DMGTotalAVG)}
 
-
-        targetTurn.currentHP -= DMGTotalAVG;
-        let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
-        let enemyIsDead = false;
-        if (enemyIsDeadCheck) {
-            enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        let DMGOverkill = 0;
-
-        if (!isEnemy && enemyHasNoHP) {
-            //only gauge overkill dmg when it would be on an enemy
-            DMGOverkill = targetTurn.currentHP * -1;
-            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-            targetTurn.currentHP = 0;
-        }
+        //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
+        let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy) : null;
+        const enemyIsDead = hurtResult.enemyIsDead;
+        const DMGOverkill = hurtResult.DMGOverkill;
 
 
         let logger = battleData.isLoggyLogger;
         enemiesAttackedThisAction[targetTurn.name] = targetTurn;
 
         if (battleData.isLoggyLogger) {
+            // const enemyIsDead = hurtResult.enemyIsDead;
+            // const DMGOverkill = hurtResult.DMGOverkill;
+
             let hitData = {
                 scalar: banger ? "Certified Banger" : "Punchline",
                 elationValueToUse,punchlineMulti,sumMerry,
@@ -3325,26 +3286,9 @@ const battleActions = {
 
 
             XsumDMG = sumDMG; 
-            // XsumPEN = sumPEN; 
-            // XsumSHRED = sumSHRED; 
-            // XsumVULN = sumVULN; 
-            // XsumRES = sumRES; 
-            // XenemyDEF = enemyDEF; 
-            // XsumDEF = sumDEF; 
         }
         else {
             multiOf = 1;
-
-            // tags = ["All",element,"DOT","Break"];
-            // const keyShortcut = basicShorthand.makeKeysArray;
-            // const realDMGKeys = keyShortcut(dmgKeys,tags);
-            // const realPENKeys = keyShortcut(resPENKeys,tags);
-            // const realShredKeys = keyShortcut(defShredKeys,tags);
-            // const realVulnKeys = keyShortcut(vulnKeys,tags);
-
-            // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
-
-
 
             // const actionTagsPre = ATKObject.actionTags;
             // const preCacheTag = ATKObject.compositeCacheTag;
@@ -3371,10 +3315,6 @@ const battleActions = {
             const realPENKeys = currentBreakCaching.realPENKeys;
             const realShredKeys = currentBreakCaching.realShredKeys;
             const realVulnKeys = currentBreakCaching.realVulnKeys;
-
-
-
-
 
 
             // sourceTurn.breakDOTSheet = {
@@ -3432,8 +3372,6 @@ const battleActions = {
             const totalMulti = pulledComposite.totalMulti;
 
 
-
-
             finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;
 
             DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
@@ -3441,68 +3379,19 @@ const battleActions = {
             DMGTotalAVG = DMGTotalEnd * averaged;
             
 
-            XsumDMG = breakDMGBonus; 
-            // XsumPEN = sumPEN; 
-            // XsumSHRED = sumSHRED; 
-            // XsumVULN = sumVULN; 
-            // XsumRES = sumRES; 
-            // XenemyDEF = enemyDEF; 
-            // XsumDEF = sumDEF; 
+            XsumDMG = breakDMGBonus;
         }
 
-
-        // targetTurn.currentHP -= DMGTotalAVG;
-        if (!targetTurn.isEnemy) {
-            const proposedDrain = targetTurn.currentHP - DMGTotalAVG;
-            if (battleData.backupHPOnField && proposedDrain < 1) {
-                const distanceTo1 = Math.max(1,targetTurn.currentHP - 1);
-                let dmgToDeal = DMGTotalAVG - distanceTo1;
-                const backupRefs = battleData.backupHPObject;
-                for (let backup in backupRefs) {
-                    const currentBackup = backupRefs[backup];
-                    leftoverDMG = currentBackup.backupHPFunction(battleData,currentBackup,dmgToDeal);
-                    //if there is a backupHP source like netherwing, then call the backup function defined on its turn object
-                    //which will return the amount of dmg it could not consume
-
-                    //in this case, if the dmg returned is 0 that means all dmg was consumed, and we can break
-                    if (leftoverDMG === 0) {
-                        dmgToDeal = 0;
-                        break;
-                    }
-                    else {
-                        dmgToDeal = leftoverDMG
-                    }
-                }
-                //if the leftover dmg is 0 then the amount of dmg that would breach shields and go beyond 1hp is obv 0
-                DMGTotalAVG = (dmgToDeal === 0 ? 0 : dmgToDeal) + distanceTo1;
-                //otherwise, we need to assign the dmgs that backups couldn't eat, to the target to still deal it
-            }
-            targetTurn.currentHP -= DMGTotalAVG;
-            
-            poke("AllyLostHP",battleData,{targetTurn,HPLost: DMGTotalAVG});
-        }
-        else {targetTurn.currentHP -= DMGTotalAVG;}
-
-        let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
-        let enemyIsDead = false;
-        if (enemyIsDeadCheck) {
-            enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        let DMGOverkill = 0;
-
-        if (!isEnemy && enemyHasNoHP) {
-            //only gauge overkill dmg when it would be on an enemy
-            DMGOverkill = targetTurn.currentHP * -1;
-            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-            targetTurn.currentHP = 0;
-        }
-
+        //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
+        let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy) : null;
+        // const enemyIsDead = hurtResult.enemyIsDead;
+        // const DMGOverkill = hurtResult.DMGOverkill;
 
         let logger = battleData.isLoggyLogger;
         if (logger) {
+
+            const enemyIsDead = hurtResult.enemyIsDead;
+            const DMGOverkill = hurtResult.DMGOverkill;
 
             let hitData = {
                 scalar,isBreakDOT,finalMulti,
@@ -3562,24 +3451,6 @@ const battleActions = {
         let DMGTotalAVG = (trueAVG ?? trueBase) * percentInstance;
 
         let hurtResult = hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy);
-        
-        // targetTurn.currentHP -= DMGTotalAVG;
-        // let enemyHasNoHP = targetTurn.currentHP <= 0;
-        // let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
-        // let enemyIsDead = false;
-        // if (enemyIsDeadCheck) {
-        //     enemyIsDead = true;
-        //     targetTurn.isDead = true;
-        //     killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-        // }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        // let DMGOverkill = 0;
-
-        // if (!isEnemy && enemyHasNoHP) {
-        //     //only gauge overkill dmg when it would be on an enemy
-        //     DMGOverkill = targetTurn.currentHP * -1;
-        //     //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-        //     targetTurn.currentHP = 0;
-        // }
 
         battleData.battleDamageSUM += DMGTotalAVG;
 
