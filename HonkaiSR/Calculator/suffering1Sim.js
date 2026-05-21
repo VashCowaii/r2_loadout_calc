@@ -1307,10 +1307,11 @@ const sim = {
             //I really wish I didn't need to fuckin do this but with Cerydra coming up and her skill action duplication, I need to separate and designate skill functions
             //and presently this is the best way I can think of to do it. Isolate skill functions, and before they are called, poke listeners to say a skill was chosen as the next function
             //so that way cerydra can call the skill function BEFORE the character using it does it themselves. Some horse shit if I've ever seen it, but should be ok in the long-run prayge.
-            poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
+            poke("ActionChosen", battleData, designatedAction, sourceTurn);
+            // poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
             if (isLog) {logToBattle(battleData,{logType: "ActionChosen", actionType: currentAction, on: designatedAction.target, actionCall: actionCall.name, source: charName});}
 
-            if (cost) {updateSkillPoints(cost,battleData,{sourceTurn,sourceName:currentAction});}//costs are applied as the action is launched
+            if (cost) {updateSkillPoints(cost,battleData,sourceTurn,false,currentAction);}//costs are applied as the action is launched
             //aight so I always thought costs were applied before the action(skill usage) and gains were applied AFTER but nope
             //just confirmed with solo archer in a calyx, if he starts with a basic attack that would put him to 4SP total, even before the attack lands he gets that crit dmg buff from guardian. Fuck me man. At least this simplifies the code.
             sourceTurn.actionAssigned = true;
@@ -1345,9 +1346,7 @@ const sim = {
             if (isLog) {logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});}
 
             //enemy actions don't have a sp cost so... don't need that either
-            // if (cost && cost < 0) {battleActions.updateSkillPoints(cost,battleData,{source: charName,sourceName:designatedAction.action});}//costs are applied as the action is launched
             designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
-            // if (cost && cost > 0) {battleActions.updateSkillPoints(cost,battleData,{source: charName,sourceName:designatedAction.action});}//gains are applied after the actions are taken, I think. Thonk.
 
             // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
             //     turnEnded = true;
