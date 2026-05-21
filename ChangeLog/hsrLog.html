@@ -29,6 +29,11 @@
                 <li>Nothing in the calc actually used this value(not even Sparkle's ult, that's different) so this doesn't impact anything, but it was an error nonetheless.</li>
             </ul>
         </li>
+        <li>Fixed an issue where if a final multiplier bonus was applied during the hit-portion of an attack, it could sometimes fail to apply to that hit.
+            <ul>
+                <li>Pretty much Evernight E1 is the only thing this could have impacted between the characters we have now.</li>
+            </ul>
+        </li>
 
         <h4>Optimization</h4>
         <li>Slight tweaks the following handlers to eek out more performance across billions of loops:
@@ -38,6 +43,12 @@
             </ul>
         </li>
         <li>Updated how enemy entities will reference their Basic ATKs, they were using some super old attack construction.</li>
+        <li>Additional DMG procs had some log-specific handling that should have been isolated after a recent change but was overlooked, which is now isolated and should speed up results on Additional DMG heavy teams.</li>
+        <li>Unified RES/DEF/Vuln/DR dmg multiplier outputs to a single composite whenever they would apply, since wherever they DO apply it's always together.
+            <ul>
+                <li>Visually, they will still display on DMG data separately, this is purely for the backend calcs.</li>
+            </ul>
+        </li>
     </ul>
 </div>
 <div>

@@ -715,9 +715,8 @@ const battleActions = {
         let isEnemy = targetTurn.isEnemy;
         let oldAV = targetTurn.AV;
         targetTurn.AV = Math.max(0,oldAV - targetTurn.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
-        //but speed changes do advance the character, based on their remaining AV instead, see speedAdvance()
+        //see speedAdvance() for spd changes
         
-
         if (battleData.isLoggyLogger) {
             // const isEvent = action.eventOverrideImage;isUniqueEvent
             // console.log(targetTurn.eventOverrideImage)
@@ -1213,14 +1212,20 @@ const battleActions = {
             //to get the composite here
         }
 
+        const sumDEF = sourceDepositDEF.cacheValue;
+        const sumVULN = sourceDepositVuln.cacheValue;
+        const sumDR = sourceDepositDR.cacheValue;
+        const sumRES = sourceDepositRES.cacheValue;
+
         return {
             sumPEN:sourceDepositPEN.cacheValue,
             sumSHRED:sourceDepositShred.cacheValue,
-            sumDEF:sourceDepositDEF.cacheValue,
+            sumDEF,
             enemyDEF: null,
-            sumVULN:sourceDepositVuln.cacheValue,
-            sumDR:sourceDepositDR.cacheValue,
-            sumRES:sourceDepositRES.cacheValue,
+            sumVULN,
+            sumDR,
+            sumRES,
+            totalMulti: sumDEF * sumVULN * sumDR * sumRES
         }
     },
     pullCompositeStatsWCrit(element,sourceCache,targetCache,compositeCacheTag,table,enemyTable,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
@@ -1407,12 +1412,22 @@ const battleActions = {
 
 
         // return {totalCritDMG,totalCritRate};//sourceTurn.tagSpecific
-        return {sumPEN:sourceDepositPEN.cacheValue,sumSHRED:sourceDepositShred.cacheValue,sumVULN:sourceDepositVuln.cacheValue,
-            sumDEF:sourceDepositDEF.cacheValue,
+        const sumRES = sourceDepositRES.cacheValue;
+        const sumDR = sourceDepositDR.cacheValue;
+        const sumVULN = sourceDepositVuln.cacheValue;
+        const sumDEF = sourceDepositDEF.cacheValue;
+
+        // const totalCritDMG = sourceDepositCritDMG.cacheValue;
+        // const totalCritRate = sourceDepositCritRate.cacheValue;
+        return {
+            sumPEN: sourceDepositPEN.cacheValue,sumSHRED: sourceDepositShred.cacheValue,
+            sumVULN,
+            sumDEF,
             enemyDEF: null,
-            totalCritDMG: sourceDepositCritDMG.cacheValue,totalCritRate: sourceDepositCritRate.cacheValue,
-            sumDR:sourceDepositDR.cacheValue,
-            sumRES:sourceDepositRES.cacheValue,
+            totalCritDMG: sourceDepositCritDMG.cacheValue, totalCritRate: sourceDepositCritRate.cacheValue,
+            sumDR,
+            sumRES,
+            totalMulti: sumRES * sumDR * sumVULN * sumDEF,
         }
     },
     
@@ -1672,15 +1687,17 @@ const battleActions = {
         //might seem dumb to have this stat stuff redone in the break dmg calcs, but bc the act of breaking something might trigger new bonuses or onhit effects, we HAVE to have new calcs and pokes in here
 
         //resistanced and PEN
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        
+        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const totalMulti = pulledComposite.totalMulti;
+
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         // let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         //SO TURNS OUT THE HIT THAT BREAKS AN ENEMY STILL COUNTS AS NOT BROKEN EVEN ON THE BREAK DMG HOW FUCKIN DUMB IS THAT JESUS DUDE
 
         let sumDMG = pullBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
 
-        let DMGTotalEndBreak = baseBreak * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR;//baseBreak
+        let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
         targetTurn.currentHP -= DMGTotalEndBreak;
         let enemyHasNoHP = targetTurn.currentHP <= 0;
@@ -1688,7 +1705,7 @@ const battleActions = {
         if (enemyHasNoHP && !targetTurn.isDead) {
             enemyIsDead = true;
             targetTurn.isDead = true;
-            battleActions.killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
+            killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
         if (enemyHasNoHP) {
@@ -1717,7 +1734,9 @@ const battleActions = {
                 tags: newTags,enemyIsDead,
                 breakObject,
 
-                enemyDEFRed,sumPEN,sumRES,sumSHRED,sumVULN,enemyDEF,sumDEF,sumDR,isBroken,sumDMG,
+                isBroken,
+                sumDMG,
+                ...pulledComposite,
                 baseMulti,levelMulti,toughMulti,breakMulti,
 
                 playerData: JSON.stringify(sourceTurn),
@@ -1796,14 +1815,16 @@ const battleActions = {
         const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
 
         //might seem dumb to have this stat stuff redone in the break dmg calcs, but bc the act of breaking something might trigger new bonuses or onhit effects, we HAVE to have new calcs and pokes in here
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        
+        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const totalMulti = pulledComposite.totalMulti;
+
         //broken multi doesn't apply on super break dmg bc it can ONLY happen when the taret is already broken, so...
         let sumDMG = pullSuperBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
 
         //TODO: later in the future if some unnamed character happens to have an ability that lets us superbreak when not broken, we do need to factor
         //for the isBroken dr multi.
-        let DMGTotalEndBreak = baseBreak * sumDMG * sumRES * sumDEF * sumVULN * sumDR;//baseBreak
+        let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti;//baseBreak
         // console.log(baseBreak,sumDMG,sumRES,sumDEF,sumVULN,sumDR)
 
         targetTurn.currentHP -= DMGTotalEndBreak;
@@ -1812,7 +1833,7 @@ const battleActions = {
         if (enemyHasNoHP && !targetTurn.isDead) {
             enemyIsDead = true;
             targetTurn.isDead = true;
-            battleActions.killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
+            killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
         if (enemyHasNoHP) {
@@ -1844,8 +1865,9 @@ const battleActions = {
                 DMGTotalEndBreak,
                 DMGTotalAVG:DMGTotalEndBreak,DMGOverkill,element,
 
-                enemyDEFRed,sumPEN,sumRES,sumSHRED,sumVULN,enemyDEF,sumDEF,sumDR,isBroken:targetTurn.isBroken,
+                isBroken:targetTurn.isBroken,
                 sumDMG,
+                ...pulledComposite,
 
                 levelMulti,
                 toughMulti,
@@ -1872,7 +1894,7 @@ const battleActions = {
             instanceTag
         } = ATKObject;
         const realCacheTag = compositeCacheTag + targetTurn.properName;
-        const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
+        const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
         //     statTableONTurn,
@@ -1957,15 +1979,20 @@ const battleActions = {
 
         let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const totalMulti = pulledComposite.totalMulti;
+        const totalCritDMG = pulledComposite.totalCritDMG;
+        const totalCritRate = pulledComposite.totalCritRate;
+        
         // console.log(totalCritDMG,totalCritRate)
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         
-        let finalMulti = finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
+        let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
 
         
-        let DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+        let DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
         // console.log(preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
 
         let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
@@ -2135,7 +2162,10 @@ const battleActions = {
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
 
-                sumDMG,sumPEN,sumSHRED,enemyDEFRed,sumRES,enemyDEF,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
+                sumDMG,
+                ...pulledComposite,
+
+                isBroken,
                 rawReduction,toughnessBase,targetWasAlreadyBroken,
                 // breakerDMG,
                 overBreak,
@@ -2149,7 +2179,7 @@ const battleActions = {
 
         if (enemyIsDead) {
             if (targetTurn.isEnemy) {
-                battleActions.killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+                killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
             }
             else {
                 battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
@@ -2239,7 +2269,7 @@ const battleActions = {
             instanceTag
         } = ATKObject;
         const realCacheTag = compositeCacheTag + targetTurn.properName;
-        const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues,finalMultiCounter} = sourceTurn;
+        const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
         //     statTableONTurn,
@@ -2330,14 +2360,17 @@ const battleActions = {
         let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
         let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
 
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-
+        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const totalMulti = pulledComposite.totalMulti;
+        const totalCritDMG = pulledComposite.totalCritDMG;
+        const totalCritRate = pulledComposite.totalCritRate;
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         
-        let finalMulti = finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
+        let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
 
-        let DMGTotalEnd = preDMG * sumDMG * punchlineMulti * sumMerry * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+        let DMGTotalEnd = preDMG * sumDMG * punchlineMulti * sumMerry * totalMulti * isBroken * finalMulti;
         // console.log(preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
 
         let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
@@ -2507,7 +2540,9 @@ const battleActions = {
                 currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
 
-                sumDMG,sumPEN,sumSHRED,enemyDEFRed,sumRES,enemyDEF,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
+                sumDMG,
+                ...pulledComposite,
+                isBroken,
                 rawReduction,toughnessBase,targetWasAlreadyBroken,
                 // breakerDMG,
                 overBreak,
@@ -2521,7 +2556,7 @@ const battleActions = {
 
         if (enemyIsDead) {
             if (targetTurn.isEnemy) {
-                battleActions.killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+                killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
             }
             else {
                 battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
@@ -2786,15 +2821,18 @@ const battleActions = {
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
         let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-    
+        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const totalMulti = pulledComposite.totalMulti;
+        const totalCritDMG = pulledComposite.totalCritDMG;
+        const totalCritRate = pulledComposite.totalCritRate;
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
 
         // Outgoing DMG = Base DMG * DMG% Multiplier * DEF Multiplier * RES Multiplier * DMG Taken Multiplier * Universal DMG Reduction Multiplier * Weaken Multiplier
 
-        let finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
+        let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;
         // if (isEnemy) {console.log(preDMG, sumDMG, sumRES, sumDEF, isBroken, sumVULN, sumDR)}
-        let DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+        let DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
         // console.log(multiOf,preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
 
 
@@ -2814,7 +2852,7 @@ const battleActions = {
         if (enemyIsDeadCheck) {
             enemyIsDead = true;
             targetTurn.isDead = true;
-            battleActions.killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
 
@@ -2827,25 +2865,30 @@ const battleActions = {
 
 
         let logger = battleData.isLoggyLogger;
-        let hitData = {
-            scalar,
-            currentMulti,multiOf,tags:DMGTags,element,
-            DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
-
-            sumDMG,sumPEN,sumSHRED,enemyDEFRed,sumRES,enemyDEF,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
-
-            enemyIsDead,
-            playerData: logger ? JSON.stringify(sourceTurn) : null,
-            enemyData: logger ? JSON.stringify(targetTurn) : null,
-            AV:battleData.sumAV
-        }
         enemiesAttackedThisAction[targetTurn.name] = targetTurn;
 
-        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "HitEnemy", hitType: "Additional", target: targetTurn.properName, source:charName, hitData,enemyIsDead,sourceString});}
+        if (battleData.isLoggyLogger) {
+            let hitData = {
+                scalar,
+                currentMulti,multiOf,tags:DMGTags,element,
+                DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
+    
+                sumDMG,
+                ...pulledComposite,
+                isBroken,
+    
+                enemyIsDead,
+                playerData: logger ? JSON.stringify(sourceTurn) : null,
+                enemyData: logger ? JSON.stringify(targetTurn) : null,
+                AV:battleData.sumAV
+            }
+
+            logToBattle(battleData,{logType: "HitEnemy", hitType: "Additional", target: targetTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
+        }
         poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG});
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
         
-        return {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
+        return {DMGTotalAVG,DMGOverkill,enemyIsDead}
     },
     additionalDMGWrapper(battleData,sourceTurn,charName,ATKObject,targetTurn,sourceString) {
         let logging = battleData.isLoggyLogger;
@@ -2938,17 +2981,18 @@ const battleActions = {
         const banger = BangerValueOverride ?? sourceTurn.certifiedBanger;
         const elationValueToUse = Math.floor(banger || punchline);
         const punchlineMulti = 1 + ((elationValueToUse*5)/(elationValueToUse+240));
-        // const punchlineMulti = 1 + ((elationValueToUse*5)/elationValueToUse);
-
-
-        //resistance and PEN
-        const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        
+        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const totalMulti = pulledComposite.totalMulti;
+        const totalCritDMG = pulledComposite.totalCritDMG;
+        const totalCritRate = pulledComposite.totalCritRate;
 
         // Outgoing DMG = Base DMG * DMG% Multiplier * DEF Multiplier * RES Multiplier * DMG Taken Multiplier * Universal DMG Reduction Multiplier * Weaken Multiplier
 
-        let finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
+        let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;
         // if (isEnemy) {console.log(preDMG, sumDMG, sumRES, sumDEF, isBroken, sumVULN, sumDR)}
-        let DMGTotalEnd = preDMG * sumDMG * punchlineMulti * sumMerry * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+        let DMGTotalEnd = preDMG * sumDMG * punchlineMulti * sumMerry * totalMulti * isBroken * finalMulti;
         // console.log(multiOf,preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
 
 
@@ -2968,7 +3012,7 @@ const battleActions = {
         if (enemyIsDeadCheck) {
             enemyIsDead = true;
             targetTurn.isDead = true;
-            battleActions.killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
 
@@ -2981,26 +3025,32 @@ const battleActions = {
 
 
         let logger = battleData.isLoggyLogger;
-        let hitData = {
-            scalar: banger ? "Certified Banger" : "Punchline",
-            elationValueToUse,punchlineMulti,sumMerry,
-            currentMulti,multiOf,tags:DMGTags,element,
-            DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
-
-            sumDMG,sumPEN,sumSHRED,enemyDEFRed,sumRES,enemyDEF,sumDEF,isBroken,sumVULN,sumDR,totalCritDMG,totalCritRate,
-
-            enemyIsDead,
-            playerData: logger ? JSON.stringify(sourceTurn) : null,
-            enemyData: logger ? JSON.stringify(targetTurn) : null,
-            AV:battleData.sumAV
-        }
         enemiesAttackedThisAction[targetTurn.name] = targetTurn;
 
-        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:charName, hitData,enemyIsDead,sourceString});}
+        if (battleData.isLoggyLogger) {
+            let hitData = {
+                scalar: banger ? "Certified Banger" : "Punchline",
+                elationValueToUse,punchlineMulti,sumMerry,
+                currentMulti,multiOf,tags:DMGTags,element,
+                DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
+    
+                sumDMG,
+                ...pulledComposite,
+    
+                isBroken,
+    
+                enemyIsDead,
+                playerData: logger ? JSON.stringify(sourceTurn) : null,
+                enemyData: logger ? JSON.stringify(targetTurn) : null,
+                AV:battleData.sumAV
+            }
+
+            logToBattle(battleData,{logType: "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
+        }
         poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG});
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
         
-        return {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
+        return {DMGTotalAVG,DMGOverkill,enemyIsDead}
     },
     elationDMGWrapper(battleData,sourceTurn,charName,ATKObject,targetTurn,sourceString) {
         let logging = battleData.isLoggyLogger;
@@ -3201,13 +3251,8 @@ const battleActions = {
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         let sumDR = 1;
 
+        let pulledComposite = null;
         let XsumDMG = null;
-        let XsumPEN = null;
-        let XsumSHRED = null;
-        let XsumVULN = null;
-        let XsumRES = null;
-        let XenemyDEF = null;
-        let XsumDEF = null;
 
         if (!isBreakDOT) {
             // console.log(element)
@@ -3265,11 +3310,13 @@ const battleActions = {
             let sumDMG = 1 + pullDMG(sourceCache,targetCache,compositeCacheTag,playerStats,playerStatsONHIT,targetStatsSourceBased,realDMGKeys);//sum of all relevant dmg bonuses
 
             //resistanced and PEN
-            const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            
-            finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
+            // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
+            pulledComposite = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
+            const totalMulti = pulledComposite.totalMulti;
 
-            DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+            finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;
+
+            DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
 
 
             //TODO: effect res vs EHR averages, the avg chance to apply is assigned when dots are created since that is when they can reference hits involved in the application
@@ -3278,12 +3325,12 @@ const battleActions = {
 
 
             XsumDMG = sumDMG; 
-            XsumPEN = sumPEN; 
-            XsumSHRED = sumSHRED; 
-            XsumVULN = sumVULN; 
-            XsumRES = sumRES; 
-            XenemyDEF = enemyDEF; 
-            XsumDEF = sumDEF; 
+            // XsumPEN = sumPEN; 
+            // XsumSHRED = sumSHRED; 
+            // XsumVULN = sumVULN; 
+            // XsumRES = sumRES; 
+            // XenemyDEF = enemyDEF; 
+            // XsumDEF = sumDEF; 
         }
         else {
             multiOf = 1;
@@ -3380,22 +3427,27 @@ const battleActions = {
             let sumDMG = 1;//break dot cannot in any capacity, benefit from a dmg bonus that isn't break dmg dealt bonuses
 
             //resistanced and PEN
-            const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            
-            finalMulti = sourceTurn.finalMultiCounter ? battleActions.pullFinalMultiplier(sourceTurn,actionTags) : 1;
+            // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
+            pulledComposite = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
+            const totalMulti = pulledComposite.totalMulti;
 
-            DMGTotalEnd = preDMG * sumDMG * sumRES * sumDEF * isBroken * sumVULN * sumDR * finalMulti;
+
+
+
+            finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;
+
+            DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
             
             DMGTotalAVG = DMGTotalEnd * averaged;
             
 
             XsumDMG = breakDMGBonus; 
-            XsumPEN = sumPEN; 
-            XsumSHRED = sumSHRED; 
-            XsumVULN = sumVULN; 
-            XsumRES = sumRES; 
-            XenemyDEF = enemyDEF; 
-            XsumDEF = sumDEF; 
+            // XsumPEN = sumPEN; 
+            // XsumSHRED = sumSHRED; 
+            // XsumVULN = sumVULN; 
+            // XsumRES = sumRES; 
+            // XenemyDEF = enemyDEF; 
+            // XsumDEF = sumDEF; 
         }
 
 
@@ -3437,7 +3489,7 @@ const battleActions = {
         if (enemyIsDeadCheck) {
             enemyIsDead = true;
             targetTurn.isDead = true;
-            battleActions.killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
 
@@ -3451,21 +3503,14 @@ const battleActions = {
 
         let logger = battleData.isLoggyLogger;
         if (logger) {
+
             let hitData = {
                 scalar,isBreakDOT,finalMulti,
                 currentMulti,multiOf,detonateMulti,tags,element,bleedMultiOf,bleedLimit,
                 DMGTotalEnd,DMGTotalAVG,DMGOverkill,averaged,
 
                 sumDMG: XsumDMG,
-                sumPEN: XsumPEN,
-                sumSHRED: XsumSHRED,
-                sumVULN: XsumVULN,
-                sumRES: XsumRES,
-                enemyDEF: XenemyDEF,
-                sumDEF: XsumDEF,
-
-                enemyDEFRed,
-                sumDR,
+                ...pulledComposite,
                 isBroken,
                 detonateMulti,isDetonated,
                 // baseMulti,levelMulti,toughMulti,breakMulti,
@@ -3516,30 +3561,32 @@ const battleActions = {
         let DMGTotalCrit = trueCrit * percentInstance;
         let DMGTotalAVG = (trueAVG ?? trueBase) * percentInstance;
 
-
-        targetTurn.currentHP -= DMGTotalAVG;
-        let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
-        let enemyIsDead = false;
-        if (enemyIsDeadCheck) {
-            enemyIsDead = true;
-            targetTurn.isDead = true;
-            battleActions.killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
-        let DMGOverkill = 0;
-
-        if (!isEnemy && enemyHasNoHP) {
-            //only gauge overkill dmg when it would be on an enemy
-            DMGOverkill = targetTurn.currentHP * -1;
-            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
-            targetTurn.currentHP = 0;
-        }
-
-
+        let hurtResult = hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy);
         
+        // targetTurn.currentHP -= DMGTotalAVG;
+        // let enemyHasNoHP = targetTurn.currentHP <= 0;
+        // let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
+        // let enemyIsDead = false;
+        // if (enemyIsDeadCheck) {
+        //     enemyIsDead = true;
+        //     targetTurn.isDead = true;
+        //     killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+        // }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
+        // let DMGOverkill = 0;
+
+        // if (!isEnemy && enemyHasNoHP) {
+        //     //only gauge overkill dmg when it would be on an enemy
+        //     DMGOverkill = targetTurn.currentHP * -1;
+        //     //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
+        //     targetTurn.currentHP = 0;
+        // }
+
         battleData.battleDamageSUM += DMGTotalAVG;
 
         if (battleData.isLoggyLogger) {
+            const enemyIsDead = hurtResult.enemyIsDead;
+            const DMGOverkill = hurtResult.DMGOverkill;
+
             let dmgSlot = "True";
             let totalsRef = battleData.battleTotal;
             const dmgTotals = totalsRef.DMG;
@@ -3567,6 +3614,27 @@ const battleActions = {
         poke("TrueDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG});
         
         // return {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
+    },
+    hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy) {
+        targetTurn.currentHP -= DMGTotalAVG;
+        let enemyHasNoHP = targetTurn.currentHP <= 0;
+        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
+        let enemyIsDead = false;
+        if (enemyIsDeadCheck) {
+            enemyIsDead = true;
+            targetTurn.isDead = true;
+            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+        }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
+        let DMGOverkill = 0;
+
+        if (!isEnemy && enemyHasNoHP) {
+            //only gauge overkill dmg when it would be on an enemy
+            DMGOverkill = targetTurn.currentHP * -1;
+            //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
+            targetTurn.currentHP = 0;
+        }
+
+        return {DMGOverkill,enemyIsDead}
     },
     attackWrapper(battleData,ATKPath,sourceTurn,ATKObject,targetTurnSuggestion) {
         let logging = battleData.isLoggyLogger;
@@ -4342,7 +4410,6 @@ const battleActions = {
         // }
     },
     killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn) {
-        // battleActions.killDesignatedEnemies(battleData,targetTurn,false,sourceTurn);
         let giveEnergy = !isEnemy;
         let energyDeath = 10;
         //kinda counterintuitive on my part but if it !isEnemy that means an ally was responsible for killing these targets
@@ -5166,6 +5233,9 @@ const actionAdvance = battleActions.actionAdvance;
 const queueUltimate = battleActions.queueUltimateUse;
 const queueInsertAbility = battleActions.queueFollowUpAttack;
 const queueExtraTurn = battleActions.queueInstantUltimateUse;
+const hurtEnemyHealth = battleActions.hurtEnemyHealth;
+const killDesignatedEnemies = battleActions.killDesignatedEnemies;
+
 
 const turnLogic = {
 
