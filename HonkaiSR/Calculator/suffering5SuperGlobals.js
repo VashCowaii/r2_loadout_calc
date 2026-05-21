@@ -50,6 +50,7 @@ const superGlobal = {
         const allyPositions = battleData.allyPositions;
         let targetOverride = null;
         for (let ally of allyPositions) {
+            if (ally.isUniqueEvent) {continue;}
             const currentTurnLogic = turnLogic[ally.properName];
             const useTechnique = currentTurnLogic.useTechnique;
             const techniqueType = currentTurnLogic.techniqueType;

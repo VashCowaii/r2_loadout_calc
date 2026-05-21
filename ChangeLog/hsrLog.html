@@ -6,7 +6,7 @@
     </ul>
 </div> -->
 <div>
-    <h1>May 21th, 2026</h1>
+    <h1>May 21th, 2026 - THE TECHNIQUES UPDATE</h1>
     <ul>
 
         <!-- <h3>Library</h3>
@@ -21,7 +21,13 @@
 
         <h3>Calculator</h3>
         <h4>Additions</h4>
-        <li>Updated maximum Team Punchline, and individual Certified Banger, from 999 to 9,999</li>
+        <li>Reviewed and updated handling for Techniques on all added characters, which should ensure for completely accurate technique call order even if the technique comes in multiple parts.
+            <ul>
+                <li>If you're used to seeing specific end total team dmg numbers from specific testing that involved technique usage, understand this may change the values slightly since techniques are now called in the correct order.</li>
+            </ul>
+        </li>
+        <li>Updated maximum Team Punchline, and individual Certified Banger, from 999 to 9,999. This actually matters quite a lot for high-investment Evanescia math.</li>
+        
         
         <h4>Fixes</h4>
         <li>Fixed an issue where overflow skill point gain wasn't registered properly for events that might read it.
@@ -34,6 +40,15 @@
                 <li>Pretty much Evernight E1 is the only thing this could have impacted between the characters we have now.</li>
             </ul>
         </li>
+        <li>Fixed an issue where Hyacine's Technique healing came after the Technique buff application, when it actually comes before.</li>
+        <li>Fixed an issue where Techniques that insert Skill uses were causing them to be instantaneous instead of queued Extra Turns on the following characters:
+            <ul>
+                <li>DHPT</li>
+                <li>Ruan Mei</li>
+                <li>Yao Guang</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Black Swan's technique was doing its effects instantaneously within the bounds of the technique instead of queuing an inserted ability like it shoudl.</li>
 
         <h4>Optimization</h4>
         <li>Slight tweaks the following handlers to eek out more performance across billions of loops:

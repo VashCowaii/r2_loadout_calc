@@ -4994,6 +4994,57 @@ const battleActions = {
             }
         }
     },
+    addListenerWithPriority(battleData,listenerObject,trigger) {
+        let listenerRef = battleData.battleListeners[trigger] ??= [];
+
+        if (!listenerRef.length) {listenerRef.push(listenerObject);}
+        else {
+            const objectPriority = listenerObject.priority ?? 0;
+
+            const length = listenerRef.length;
+            let foundInsert = false;
+            for (let i=0;i<length;i++) {
+                const currentListener = listenerRef[i];
+                const currentPriority = currentListener.priority ?? 0;
+
+                if (currentPriority < objectPriority) {
+                    // listenerRef.splice(i+1,0,listenerObject);
+                    listenerRef.splice(i,0,listenerObject);
+                    foundInsert = true;
+                    break;
+                }
+            }
+
+            if (!foundInsert) {
+                listenerRef.push(listenerObject)
+            }
+        }
+    },
+    addListenerPREPPriority(battleData,listenerObject,trigger) {
+        let listenerRef = battleData.battleListeners[trigger] ??= [];
+
+        if (!listenerRef.length) {listenerRef.push(listenerObject);}
+        else {
+            const objectPriority = listenerObject.priority ?? 0;
+
+            const length = listenerRef.length;
+            let foundInsert = false;
+            for (let i=length-1;i>=0;i--) {
+                const currentListener = listenerRef[i];
+                const currentPriority = currentListener.priority ?? 0;
+
+                if (currentPriority > objectPriority) {
+                    listenerRef.splice(i+1,0,listenerObject);
+                    foundInsert = true;
+                    break;
+                }
+            }
+
+            if (!foundInsert) {
+                listenerRef.unshift(listenerObject)
+            }
+        }
+    },
     buffExpireController(battleData,sourceTurn,arrayTarget) {
         for (let i=arrayTarget.length-1;i>=0;i--) {
             let currentBuff = arrayTarget[i];
@@ -5106,6 +5157,8 @@ const queueInsertAbility = battleActions.queueFollowUpAttack;
 const queueExtraTurn = battleActions.queueInstantUltimateUse;
 const hurtEnemyHealth = battleActions.hurtEnemyHealth;
 const killDesignatedEnemies = battleActions.killDesignatedEnemies;
+const addListenerWithPriority = battleActions.addListenerWithPriority;
+const addListenerPREPPriority = battleActions.addListenerPREPPriority;
 
 
 const turnLogic = {
@@ -6379,7 +6432,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Abundance
-    "Gallagher": {
+    "Gallagher": {//TECH DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -6961,27 +7014,46 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
                     if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        gallagherTechnique(battleData,"enemy",ownerTurn);
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Gallagher Technique",
+                "listenerName": "Gallagher Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.gallagherTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Gallagher Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -7588,24 +7660,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const huohuoTechnique = this.huohuoTechnique ??= logicRef.skillFunctions.huohuoTechnique
-                        huohuoTechnique(battleData,"enemy",ownerTurn)
-                    }
-                },
-                "target": "enemy",
-                "listenerName": "Huohuo Technique",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -7630,7 +7684,52 @@ const turnLogic = {
                 "listenerName": "The Cursed One - CC RES application",
                 "ownerTurn": {},
             },
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Huohuo Technique PREP",
+                "ownerTurn": {},
+            },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Huohuo Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -8311,27 +8410,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const natashaTechnique = this.natashaTechnique ??= logicRef.skillFunctions.natashaTechnique;
-                        natashaTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Natasha Technique",
+                "listenerName": "Natasha Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.natashaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Natasha Technique",
+            "ownerTurn": {},
+        },
         "listenersToInjectLater": {
             "e1HealOnceNatasha": {
                 "trigger": "AttackEnd",
@@ -8962,26 +9085,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const lynxTechnique = this.lynxTechnique ??= logicRef.skillFunctions.lynxTechnique;
-                        lynxTechnique(battleData,"team",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Lynx Technique",
+                "listenerName": "Lynx Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.lynxTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Lynx Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -9820,24 +9968,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const luochaTechnique = this.luochaTechnique ??= logicRef.skillFunctions.luochaTechnique
-                        luochaTechnique(battleData,"enemy",ownerTurn)
-                    }
-                },
-                "target": "enemy",
-                "listenerName": "Luocha Technique",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -9862,7 +9992,52 @@ const turnLogic = {
                 "listenerName": "The Cursed One - CC RES application",
                 "ownerTurn": {},
             },
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Luocha Technique PREP",
+                "ownerTurn": {},
+            },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.luochaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Luocha Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -10589,27 +10764,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const swTechnique = this.swTechnique ??= logicRef.skillFunctions.swTechnique
-                        swTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Silver Wolf Technique",
+                "listenerName": "Silver Wolf Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.swTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -70,
+            "listenerName": "Silver Wolf Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [
@@ -11393,26 +11592,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const kafkaTechnique = this.kafkaTechnique ??= logicRef.skillFunctions.kafkaTechnique;
-                        kafkaTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Kafka Technique",
+                "listenerName": "Kafka Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.kafkaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Kafka Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -12243,57 +12467,6 @@ const turnLogic = {
             },
         },
         "listeners": [
-            // {
-            //     "trigger": "DOTDMGEnd",
-            //     condition(battleData,generalInfo) {
-            //         // poke("DOTDMGEnd",battleData,turnMerge)
-            //         // const turnMerge = {targetTurn,sourceTurn,element,isDetonated,sourceOverride};
-            //         // dotDMGWrapper(battleData,sourceTurn,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,currentBuff,sourceOverride)
-
-            //         const sourceOverride = generalInfo.sourceOverride;
-            //         if (sourceOverride) {return;}
-            //         //source override is how we deal this damage at all, by forcing an instance of dot unrelated to any actual dot applied, separate from detonations
-            //         //since the physical dot from ult can't trigger itself, we need to differentiate as such
-
-            //         // let skillRef = sourceTurn.fishladyUltimateREF ??= sourceTurn.Ultimate["Maelstrom Rhapsody"].variant1;
-            //         const ownerTurn = this.ownerTurn;
-
-            //         const logicRef = turnLogic[ownerTurn.properName];
-            //         const ATKObjects = logicRef.ATKObjects;
-
-            //         const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET;
-            //         const buffCheck = ownerTurn.buffsObject[countdownSheet.buffName];
-            //         if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
-
-            //         let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-            //         if (!this.ultyPhysicalRef) {
-            //             const keyShortcut = basicShorthand.makeKeysArray;
-            //             const tags = ["All","Physical","DOT"];
-            //             this.ultyPhysicalRef = {
-            //                 buffName: "Maelstrom Rhapsody",
-            //                 tags,
-            //                 actionTags: ["DOT"],
-            //                 realDMGKeys: keyShortcut(dmgKeys,tags),
-            //                 realPENKeys: keyShortcut(resPENKeys,tags),
-            //                 realShredKeys: keyShortcut(defShredKeys,tags),
-            //                 realVulnKeys: keyShortcut(vulnKeys,tags),
-            //             }
-            //         }
-            //         const ultyPhysicalRef = this.ultyPhysicalRef;
-
-            //         const targetTurn = generalInfo.targetTurn;
-            //         const procCheck = targetTurn.hysilensFieldProcCounter ??= 0;
-            //         const procLimit = ownerTurn.hysilensFieldProcLimit ??= ownerTurn.rank >= 6 ? 12 : 8;
-            //         const procValue = ownerTurn.hysilensFieldProcValue ??= values[3] + (ownerTurn.rank >= 6 ? 0.20 : 0);
-            //         if (procCheck >= procLimit) {return;}
-
-            //         battleActions.dotDMGWrapper(battleData,ownerTurn,targetTurn,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
-            //         targetTurn.hysilensFieldProcCounter += 1;
-            //     },
-            //     "target": "enemy",
-            //     "listenerName": "Zone - dot dmg listener",
-            //     "ownerTurn": {},
-            // },
             {
                 "trigger": "DOTDMGEnd",
                 condition(battleData,generalInfo) {
@@ -12617,26 +12790,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
                     let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique && !dimensionUsed && battleData.techniquesAllowed) {
-                        const fishladyTechnique = this.fishladyTechnique ??= logicRef.skillFunctions.fishladyTechnique;
-                        fishladyTechnique(battleData,"enemy",ownerTurn);
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
                         battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Hysilens Technique",
+                "listenerName": "Hysilens Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.fishladyTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Hysilens Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -13436,24 +13634,91 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const blackswanTechnique = this.blackswanTechnique ??= logicRef.skillFunctions.blackswanTechnique
-                        blackswanTechnique(battleData,"enemy",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Black Swan Technique",
+                "listenerName": "Black Swan PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                // const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanTechnique;
+                // callTech(battleData,null,ownerTurn);
+
+                const queueObject = this.queueObject ??= {
+                    name: "Black Swan Technique Insert",
+                    priority: priorityList.ability.CharacterBuffSelf,
+                    queueTag: "QueuedInsert",
+
+                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanTechnique,
+                    action: "Insert", 
+                    points: 0,
+                    energyCost: null,
+                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    // specialEnergyPoke: "SW999GainMMR",
+                    
+                    isEnhanced: false,
+                    isTieBreaker: false,
+                    isExtraTurn: false,
+                    skipEXDisplay: false,
+                    allowUlts: false,
+                    decrementBuffs: false,
+                    extraTurnHasChoice: false,
+                    dontKeepNextWave: false,//ults always clear out
+                    isAttack: false,
+                    isAbility: false,
+                    useFUATriggers: false,
+                    useAnyTriggers: true,
+                    // eventTypeStartLOG: "GenericAbilityStart",
+                    // eventTypeStart: "GenericAbilityStart",
+                    // eventTypeEnd: "GenericAbilityEnd",
+
+                    properName: ownerTurn.properName,
+                    sourceTurn: null,
+                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png",
+
+                    target: null,
+                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    elationForcedPunchline: null,
+                }
+                queueObject.sourceTurn = ownerTurn;
+                queueInsertAbility(battleData,queueObject);
+            },
+            "target": "self",
+            "priority": -55,
+            "listenerName": "Black Swan Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -14963,27 +15228,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const pelaTechnique = this.pelaTechnique ??= logicRef.skillFunctions.pelaTechnique
-                        pelaTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Pela Technique",
+                "listenerName": "Pela Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.pelaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Pela Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -15610,25 +15899,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const topazTechnique = this.topazTechnique ??= logicRef.skillFunctions.topazTechnique
-                        topazTechnique(battleData,"self",ownerTurn)
-                    }
-                },
-                "target": "self",
-                "listenerName": "Topaz Technique",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "HitEnemyStart",
                 condition(battleData,generalInfo) {
                     const ownerTurn = this.ownerTurn;
@@ -15665,7 +15935,52 @@ const turnLogic = {
                 "listenerName": "Numby's advancement controller",
                 "ownerTurn": {},
             },
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Topaz Technique PREP",
+                "ownerTurn": {},
+            },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.topazTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Topaz Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -16174,6 +16489,21 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+                // poke("SkillEnd",battleData,{source:"Archer"});
+            },
+            archerTechnique2(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.archerTechREF ??= ATKObjects.Technique["Clairvoyance"].variant1;
+
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
                 let chargeRef = sourceTurn.battleValues;
 
                 let newCharge = Math.min(4,chargeRef.charge + 1)
@@ -16483,26 +16813,72 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const archerTechnique = this.archerTechnique ??= logicRef.skillFunctions.archerTechnique;
-                        archerTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
+                        listenerToInject2.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Archer Technique",
+                "listenerName": "Archer Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.archerTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Archer Technique",
+            "ownerTurn": {},
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.archerTechnique2;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Archer Technique2",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -16859,10 +17235,33 @@ const turnLogic = {
                 const exoTurnRef = {sourceTurn}
                 poke("TechniqueStart",battleData,exoTurnRef);
 
-                poke("SeeleEnterAmplification",battleData,null);
-
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                // let chargeRef = sourceTurn.battleValues;
+
+                // let newCharge = Math.min(4,chargeRef.charge + 1)
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
+                // chargeRef.charge = newCharge;
+                poke("TechniqueEnd",battleData,exoTurnRef);
+                // poke("SkillEnd",battleData,{source:"Archer"});
+            },
+            seeleTechnique2(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.seeleTechniqueREF ??= ATKObjects.Technique["Phantom Illusion"].variant1;
+
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const exoTurnRef = {sourceTurn}
+                poke("TechniqueStart",battleData,exoTurnRef);
+
+                poke("SeeleEnterAmplification",battleData,null);
+
                 // let chargeRef = sourceTurn.battleValues;
 
                 // let newCharge = Math.min(4,chargeRef.charge + 1)
@@ -17280,26 +17679,72 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const seeleTechnique = this.seeleTechnique ??= logicRef.skillFunctions.seeleTechnique;
-                        seeleTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
+                        listenerToInject2.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Archer Technique",
+                "listenerName": "Seele Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.seeleTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Seele Technique",
+            "ownerTurn": {},
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.seeleTechnique2;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Seele Technique2",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -18005,24 +18450,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const tingyunTechnique = this.tingyunTechnique ??= logicRef.skillFunctions.tingyunTechnique;
-                        tingyunTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Tingyun Technique",
+                "listenerName": "Tingyun Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.tingyunTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -Infinity,
+            "listenerName": "Tingyun Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -18571,24 +19043,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const bronyaTechnique = this.bronyaTechnique ??= logicRef.skillFunctions.bronyaTechnique
-                        bronyaTechnique(battleData,"self",ownerTurn)
-                    }
-                },
-                "target": "team",
-                "listenerName": "Bronya Technique",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "PreBattleEntersCombat",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -18616,7 +19070,52 @@ const turnLogic = {
                 "listenerName": "Bronya - Major Trace: Command",
                 "ownerTurn": {},
             },
+            {
+                "trigger": "BattlePrep",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+
+                    let logicRef = turnLogic[characterName];
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Bronya Technique PREP",
+                "ownerTurn": {},
+            },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.bronyaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Bronya Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -19331,24 +19830,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const techniqueCall = this.techniqueCall ??= logicRef.skillFunctions.sundayTechnique;
-                        techniqueCall(battleData,"self",ownerTurn)
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Sunday Technique",
+                "listenerName": "Sunday Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.sundayTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Sunday Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [
@@ -20184,24 +20710,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const tribbieTechnique = this.tribbieTechnique ??= logicRef.skillFunctions.tribbieTechnique;
-                        tribbieTechnique(battleData,"self",ownerTurn)
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Tribbie Technique",
+                "listenerName": "Tribbie Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.tribbieTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Tribbie Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -20286,7 +20839,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Robin": {
+    "Robin": {//TECH DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -20710,24 +21263,6 @@ const turnLogic = {
                     addedWrapper(battleData,sourceTurn,characterName,ATKObject,targetFound,"Robin Ult");
                 }
             },
-            robinTechnique(battleData,target,sourceTurn) {
-                let characterName = sourceTurn.properName;
-
-                const logicRef = turnLogic[characterName];
-                const ATKObjects = logicRef.ATKObjects;
-                let skillRef = ATKObjects.robinTechREF ??= ATKObjects.Technique["Overture of Inebriation"].variant1;
-
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
-
-                let attackEndings = battleData.battleListeners.WaveStart ??= [];
-                const listenerToInject = logicRef.listenersToInjectLater.techniqueWaveStart;
-                listenerToInject.ownerTurn = sourceTurn;
-
-                attackEndings.unshift(listenerToInject);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
-            },
         },
         "listeners": [
             {
@@ -20869,7 +21404,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
@@ -20879,9 +21414,13 @@ const turnLogic = {
                     let useTechnique = logicRef.useTechnique;
                     let dimensionUsed = battleData.dimensionTechniqueUsed;
                     if (useTechnique && !dimensionUsed && battleData.techniquesAllowed) {
-                        const techCall = this.techCall ??= logicRef.skillFunctions.robinTechnique;
-                        techCall(battleData,"enemy",ownerTurn);
+                        // const techCall = this.techCall ??= logicRef.skillFunctions.robinTechnique;
+                        // techCall(battleData,"enemy",ownerTurn);
+
                         battleData.dimensionTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
@@ -20889,6 +21428,29 @@ const turnLogic = {
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                let ownerTurn = this.ownerTurn;
+                
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                let skillRef = ATKObjects.robinTechREF ??= ATKObjects.Technique["Overture of Inebriation"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:ownerTurn.properName, target: "Self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn: ownerTurn});
+
+                updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
+
+                battleActions.nonViolentWrapper(battleData,skillRef,ownerTurn.properName);
+                poke("TechniqueEnd",battleData,{sourceTurn: ownerTurn});
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Robin Technique wave start listener",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -20898,19 +21460,6 @@ const turnLogic = {
             6: [],
         },
         "ATKObjects": {},
-        "listenersToInjectLater": {
-            "techniqueWaveStart": {
-                "trigger": "WaveStart",
-                condition(battleData,generalInfo) {
-                    // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
-                    let ownerTurn = this.ownerTurn;
-                    updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
-                },
-                "target": "self",
-                "listenerName": "Robin Technique wave start listener",
-                "ownerTurn": {},
-            }
-        },
         "characterValues": {
             "ariaIsActive": false,
             "robinConcertoActive": false,
@@ -21513,27 +22062,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const astaTechnique = this.astaTechnique ??= logicRef.skillFunctions.astaTechnique
-                        astaTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Asta Technique",
+                "listenerName": "Asta Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.astaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Asta Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -21823,8 +22396,50 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
 
-                const ruanmeiSkill = ATKObjects.ruanmeiSkill ??= turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill;
-                ruanmeiSkill(battleData,"self",sourceTurn)
+                // const ruanmeiSkill = ATKObjects.ruanmeiSkill ??= turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill;
+                // ruanmeiSkill(battleData,"self",sourceTurn)
+
+                const queueObject = ATKObjects.dhptTechSkillCall ??= {
+                    name: "Ruan Mei Technique Skill",
+                    priority: priorityList.turn.Default,
+                    queueTag: "QueuedExtraTurn",
+
+                    actionCall: turnLogic[characterName].skillFunctions.ruanmeiSkill,
+                    action: "Extra Turn",
+                    points: 0,
+                    energyCost: null,
+                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    // specialEnergyPoke: "SW999GainMMR",
+                    
+                    isEnhanced: false,
+                    isTieBreaker: false,
+                    isExtraTurn: true,
+                    skipEXDisplay: true,
+                    allowUlts: false,
+                    decrementBuffs: false,
+                    extraTurnHasChoice: false,
+                    dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+                    isAttack: false,
+                    isAbility: true,
+                    useFUATriggers: false,
+                    useAnyTriggers: false,
+                    // eventTypeStartLOG: "ExtraTurnStart",
+                    // eventTypeStart: "ExtraTurnStart",
+                    // eventTypeEnd: "ExtraTurnEnd",
+                    
+                    properName: sourceTurn.properName,
+                    sourceTurn: null,
+                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                    target: "Self",
+                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    elationForcedPunchline: null,
+                }
+                queueObject.sourceTurn = sourceTurn;
+                // let targetOverride = superGlobal.getStartingAttacker(battleData);
+                // queueObject.target = [targetOverride]
+                queueExtraTurn(battleData,queueObject);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -22203,24 +22818,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const ruanmeiTechnique = this.ruanmeiTechnique ??= logicRef.skillFunctions.ruanmeiTechnique;
-                        ruanmeiTechnique(battleData,"self",ownerTurn)
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Ruan Mei Technique",
+                "listenerName": "Ruan Mei Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.ruanmeiTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -55,
+            "listenerName": "Ruan Mei Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [
@@ -23124,24 +23766,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const sparkleTechnique = this.sparkleTechnique ??= logicRef.skillFunctions.sparkleTechnique;
-                        sparkleTechnique(battleData,"self",ownerTurn)
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Sparkle Technique",
+                "listenerName": "Sparkle Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.sparkleTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Sparkle Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -23922,24 +24591,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const saberTechnique = this.saberTechnique ??= logicRef.skillFunctions.saberTechnique
-                        saberTechnique(battleData,"self",ownerTurn)
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Saber Technique",
+                "listenerName": "Saber Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.saberTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Saber Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -24868,27 +25564,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const bladeTechnique = logicRef.skillFunctions.bladeTechnique;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
 
-                        bladeTechnique(battleData,"enemy",ownerTurn);
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Blade Technique",
+                "listenerName": "Blade Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.bladeTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Blade Technique",
+            "ownerTurn": {},
+        },
         "listenersToInjectLater": {
             "e4BladeListener": {
                 "trigger": "AllyLostHP",
@@ -25607,26 +26327,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
                     let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique && !dimensionUsed && battleData.techniquesAllowed) {
-                        const jingliuTechnique = this.jingliuTechnique ??= logicRef.skillFunctions.jingliuTechnique;
-                        jingliuTechnique(battleData,"self",ownerTurn);
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
                         battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Jingliu Technique",
+                "listenerName": "Jingliu Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.jingliuTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Jingliu Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -26212,6 +26957,25 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags
                     }
+                }
+                const ATKObject = ATKObjects.fireflyTechATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                poke("TechniqueEnd",battleData,{sourceTurn});
+                // poke("SkillEnd",battleData,{source:"Archer"});
+            },
+            fireflyTechniqueIMPLANT(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.fireflyTechREF ??= ATKObjects.Technique["Δ Order: Meteoric Incineration"].variant1;
+
+                if (!ATKObjects.fireflyTechImplantSHEET) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.fireflyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     let buffName = turnLogic[characterName].buffNames.techImplant
                     ATKObjects.fireflyTechImplantSHEET = {
@@ -26229,16 +26993,14 @@ const turnLogic = {
                         "expireType": "EndTurn"
                     }
                 }
-                const ATKObject = ATKObjects.fireflyTechATKObject;
                 const buffSheet = ATKObjects.fireflyTechImplantSHEET;
 
-                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                // poke("TechniqueStart",battleData,{sourceTurn});
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("TechniqueStart",battleData,{sourceTurn});
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // poke("TechniqueEnd",battleData,{sourceTurn});
+                poke("TechniqueEnd",battleData,{sourceTurn});
                 // poke("SkillEnd",battleData,{source:"Archer"});
             },
             statCheck(battleData,currentTurn) {
@@ -26442,27 +27204,72 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const fireflyTechnique = this.fireflyTechnique ??= logicRef.skillFunctions.fireflyTechnique;
-                        
-                        fireflyTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
+                        listenerToInject2.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Firefly Technique",
+                "listenerName": "Firefly Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                // const currentWave = generalInfo.currentWave;
+                // if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.fireflyTechniqueDMG;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Firefly Technique",
+            "ownerTurn": {},
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                // const currentWave = generalInfo.currentWave;
+                // if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.fireflyTechniqueIMPLANT;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Firefly Technique2",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [
@@ -26578,58 +27385,6 @@ const turnLogic = {
             4: [],
             5: [],
             6: [],
-        },
-        "listenersToInjectLater": {
-            "techniqueWaveStart": {
-                "trigger": "WaveStart",
-                condition(battleData,generalInfo) {
-                    // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
-                    let ownerTurn = this.ownerTurn;
-
-                    const queueObject = this.queueObject ??= {
-                        name: "Firefly Technique",
-                        priority: priorityList.ability.CharacterAttackFromSelf,
-                        queueTag: "QueuedInsert",
-
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.fireflyTechniqueDMG,
-                        action: "Insert", 
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
-                        isTieBreaker: false,
-                        isExtraTurn: false,
-                        skipEXDisplay: false,
-                        allowUlts: false,
-                        decrementBuffs: false,
-                        extraTurnHasChoice: false,
-                        dontKeepNextWave: false,//ults always clear out
-                        isAttack: true,
-                        isAbility: true,
-                        useFUATriggers: false,
-                        useAnyTriggers: true,
-                        eventTypeStartLOG: "TechniqueStart",
-                        eventTypeStart: "TechniqueStart",
-                        eventTypeEnd: "TechniqueEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: null,
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                        elationForcedPunchline: null,
-                    }
-                    queueObject.sourceTurn = ownerTurn;
-                    queueInsertAbility(battleData,queueObject);
-                },
-                "target": "self",
-                "listenerName": "Firefly tech wave start listener",
-                "ownerTurn": {},
-            }
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -27268,26 +28023,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const hookTechnique = this.hookTechnique ??= logicRef.skillFunctions.hookTechnique;
-                        hookTechnique(battleData,"enemy",ownerTurn);
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Hook Technique",
+                "listenerName": "Hook Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.hookTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Hook Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -28394,26 +29174,51 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
                     let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique && !dimensionUsed && battleData.techniquesAllowed) {
-                        const rmcTechnique = this.rmcTechnique ??= logicRef.skillFunctions.rmcTechnique
-                        rmcTechnique(battleData,"enemy",ownerTurn);
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
                         battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Trailblazer: Remembrance - Technique",
+                "listenerName": "Trailblazer: Remembrance Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.rmcTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Trailblazer: Remembrance Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [
@@ -29866,26 +30671,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const aggyTechnique = this.aggyTechnique ??= logicRef.skillFunctions.aggyTechnique;
-                        aggyTechnique(battleData,"enemy",ownerTurn);
+                    if (useTechnique 
+                        && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Aggy Technique",
+                "listenerName": "Aggy Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.aggyTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Aggy Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -31117,14 +31944,18 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattleEnterCombat",
+                "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
                     let ownerTurn = this.ownerTurn;
 
                     const addEveyToField = this.addEveyToField ??= turnLogic[ownerTurn.properName].skillFunctions.addEveyToField;
                     addEveyToField(battleData,ownerTurn);
                 },
                 "target": "self",
+                "priority": -92,
                 "listenerName": "battlestart evey summon",
                 "ownerTurn": {},
             },
@@ -31216,24 +32047,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const evernightTechnique = this.evernightTechnique ??= logicRef.skillFunctions.evernightTechnique;
-                        evernightTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Evernight Technique",
+                "listenerName": "Evernight Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.evernightTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Evernight Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -32100,8 +32955,8 @@ const turnLogic = {
                 const healObject = ATKObjects.hyacineTechHealObject;
 
                 const allyPositions = battleData.allyPositions;
-                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -32538,9 +33393,6 @@ const turnLogic = {
                 "listenerName": "Gloomy Grin: crit rate bonus",
                 "ownerTurn": {},
             },
-
-
-
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -32616,26 +33468,49 @@ const turnLogic = {
                 "listenerName": "Ultimate - After Rain - ally added to field while after rain active",
                 "ownerTurn": {},
             },
-            
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const hyacineTechnique = this.hyacineTechnique ??= logicRef.skillFunctions.hyacineTechnique;
-                        hyacineTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Hyacine Technique",
+                "listenerName": "Hyacine Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.hyacineTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Hyacine Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -32750,7 +33625,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Preservation
-    "Dan Heng • Permansor Terrae": {
+    "Dan Heng • Permansor Terrae": {//TECH DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -33549,11 +34424,48 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TechniqueStart",battleData,{sourceTurn});
 
-                const dhptTechSkillCall = ATKObjects.dhptTechSkillCall ??= turnLogic[characterName].skillFunctions.dhptSkill;
-                let targetOverride = superGlobal.getStartingAttacker(battleData);
-                // console.log(targetOverride)
+                const queueObject = ATKObjects.dhptTechSkillCall ??= {
+                    name: "DHPT Technique Skill",
+                    priority: priorityList.turn.Default,
+                    queueTag: "QueuedExtraTurn",
 
-                dhptTechSkillCall(battleData,null,sourceTurn,targetOverride)
+                    actionCall: turnLogic[characterName].skillFunctions.dhptSkill,
+                    action: "Extra Turn",
+                    points: 0,
+                    energyCost: null,
+                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    // specialEnergyPoke: "SW999GainMMR",
+                    
+                    isEnhanced: false,
+                    isTieBreaker: false,
+                    isExtraTurn: true,
+                    skipEXDisplay: true,
+                    allowUlts: false,
+                    decrementBuffs: false,
+                    extraTurnHasChoice: false,
+                    dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+                    isAttack: false,
+                    isAbility: true,
+                    useFUATriggers: false,
+                    useAnyTriggers: false,
+                    // eventTypeStartLOG: "ExtraTurnStart",
+                    // eventTypeStart: "ExtraTurnStart",
+                    // eventTypeEnd: "ExtraTurnEnd",
+                    
+                    properName: sourceTurn.properName,
+                    sourceTurn: null,
+                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                    target: "Enemies",
+                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    elationForcedPunchline: null,
+                }
+                queueObject.sourceTurn = sourceTurn;
+                let targetOverride = superGlobal.getStartingAttacker(battleData);
+                queueObject.target = [targetOverride]
+                queueExtraTurn(battleData,queueObject);
+
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -33818,24 +34730,46 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
                     if (useTechnique && battleData.techniquesAllowed) {
-                        const dhptTechnique = this.dhptTechnique ??= logicRef.skillFunctions.dhptTechnique;
-                        dhptTechnique(battleData,"self",ownerTurn)
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "DHPT Technique",
+                "listenerName": "DHPT Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.dhptTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -55,
+            "listenerName": "DHPT Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -34691,24 +35625,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const aventurineTechnique = this.aventurineTechnique ??= logicRef.skillFunctions.aventurineTechnique;
-                        aventurineTechnique(battleData,"self",ownerTurn)
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Aventurine Technique",
+                "listenerName": "Aventurine Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Aventurine Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -35340,24 +36298,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const argentiTechnique = this.argentiTechnique ??= logicRef.skillFunctions.argentiTechnique;
-                        argentiTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Argenti Technique",
+                "listenerName": "Argenti Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.argentiTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Argenti Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -35426,7 +36408,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Anaxa": {
+    "Anaxa": {//TECH DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -36261,25 +37243,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
                     let logicRef = turnLogic[characterName];
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const anaxaTechnique = this.anaxaTechnique ??= logicRef.skillFunctions.anaxaTechnique
-                        anaxaTechnique(battleData,"enemy",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Anaxa Technique",
+                "listenerName": "Anaxa Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.anaxaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Anaxa Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -37035,7 +38040,50 @@ const turnLogic = {
 
                 const yaoTechSkillCall = ATKObjects.yaoTechSkillCall ??= turnLogic[characterName].skillFunctions.yaoSkill;
 
-                yaoTechSkillCall(battleData,null,sourceTurn);
+                // yaoTechSkillCall(battleData,null,sourceTurn);
+
+                const queueObject = ATKObjects.dhptTechSkillCall ??= {
+                    name: "Yao Guang Technique Skill",
+                    priority: priorityList.turn.Default,
+                    queueTag: "QueuedExtraTurn",
+
+                    actionCall: turnLogic[characterName].skillFunctions.yaoSkill,
+                    action: "Extra Turn",
+                    points: 0,
+                    energyCost: null,
+                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    // specialEnergyPoke: "SW999GainMMR",
+                    
+                    isEnhanced: false,
+                    isTieBreaker: false,
+                    isExtraTurn: true,
+                    skipEXDisplay: true,
+                    allowUlts: false,
+                    decrementBuffs: false,
+                    extraTurnHasChoice: false,
+                    dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+                    isAttack: false,
+                    isAbility: true,
+                    useFUATriggers: false,
+                    useAnyTriggers: false,
+                    // eventTypeStartLOG: "ExtraTurnStart",
+                    // eventTypeStart: "ExtraTurnStart",
+                    // eventTypeEnd: "ExtraTurnEnd",
+                    
+                    properName: sourceTurn.properName,
+                    sourceTurn: null,
+                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                    target: "Self",
+                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    elationForcedPunchline: null,
+                }
+                queueObject.sourceTurn = sourceTurn;
+                // let targetOverride = superGlobal.getStartingAttacker(battleData);
+                // queueObject.target = [targetOverride]
+                queueExtraTurn(battleData,queueObject);
+
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 poke("TechniqueEnd",battleData,{sourceTurn});
@@ -37363,24 +38411,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const yaoTechnique = this.yaoTechnique ??= logicRef.skillFunctions.yaoTechnique;
-                        yaoTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Yao Guang Technique",
+                "listenerName": "Yao Guang Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.yaoTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -55,
+            "listenerName": "Yao Guang Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -38477,24 +39549,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const sparxTechnique = this.sparxTechnique ??= logicRef.skillFunctions.sparxTechnique;
-                        sparxTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Sparxie Technique",
+                "listenerName": "Sparxie Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.sparxTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Sparxie Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {
@@ -39435,24 +40531,48 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleStartTechniquesNormal",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        const emcTechnique = this.emcTechnique ??= logicRef.skillFunctions.emcTechnique;
-                        emcTechnique(battleData,"self",ownerTurn);
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Yao Guang Technique",
+                "listenerName": "EMC Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.emcTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "EMC Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [],
             2: [],
@@ -40500,26 +41620,46 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartBattle",
+                "trigger": "BattlePrep",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
+
                     let logicRef = turnLogic[characterName];
                     let useTechnique = logicRef.useTechnique;
                     let attackUsed = battleData.attackTechniqueUsed;
                     if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        const archerTechnique = this.archerTechnique ??= logicRef.skillFunctions.evaTechnique;
-                        archerTechnique(battleData,"enemy",ownerTurn);
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
                         battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Evanescia Technique",
+                "listenerName": "Evanescia Technique PREP",
                 "ownerTurn": {},
             },
         ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.evaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Evanescia Technique",
+            "ownerTurn": {},
+        },
         "eidolonListeners": {
             1: [
                 {

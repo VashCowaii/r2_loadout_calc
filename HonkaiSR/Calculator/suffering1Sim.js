@@ -920,9 +920,13 @@ const sim = {
                 for (let eachListener of charListeners) {
                     //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
                     const triggerName = eachListener.trigger;
-                    const triggerArray = battleListeners[triggerName] ??= [];
+
                     eachListener.ownerTurn = slotRef;
-                    triggerArray.push(eachListener);
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // const triggerArray = battleListeners[triggerName] ??= [];
+                    // eachListener.ownerTurn = slotRef;
+                    // triggerArray.push(eachListener);
                 }
 
                 const eidoListenerRef = logicRef.eidolonListeners;
@@ -931,9 +935,13 @@ const sim = {
                         currentSet = eidoListenerRef[eidoKey];
                         for (let listenerEntry of currentSet) {
                             const triggerName = listenerEntry.trigger;
-                            const triggerArray = battleListeners[triggerName] ??= [];
+                            
                             listenerEntry.ownerTurn = slotRef;
-                            triggerArray.push(listenerEntry);
+                            addListenerPREPPriority(battleData,listenerEntry,triggerName)
+
+                            // const triggerArray = battleListeners[triggerName] ??= [];
+                            // listenerEntry.ownerTurn = slotRef;
+                            // triggerArray.push(listenerEntry);
                         }
                     }
                 }
@@ -1005,10 +1013,14 @@ const sim = {
                     // eachListener.completedCounter = 0;
                     // eachListener.ownerTurn = slotRef;
 
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                    const triggerName = eachListener.trigger;
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
 
-                    currentListenerArray.push(eachListener);
+                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1028,10 +1040,15 @@ const sim = {
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.rank;
                     }
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
 
-                    currentListenerArray.push(eachListener);
+                    const triggerName = eachListener.trigger
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1050,9 +1067,14 @@ const sim = {
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.setAmount;
                     }
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
-                    currentListenerArray.push(eachListener);
+
+                    const triggerName = eachListener.trigger
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1071,9 +1093,14 @@ const sim = {
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.setAmount;
                     }
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
-                    currentListenerArray.push(eachListener);
+
+                    const triggerName = eachListener.trigger
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1082,9 +1109,13 @@ const sim = {
         const universalRef = turnLogic.Universal;
         if (universalRef?.listeners && universalRef.listeners.length) {
             for (let eachListener of universalRef.listeners) {
-                const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
 
-                currentListenerArray.push(eachListener);
+                // currentListenerArray.push(eachListener);
+
+                const triggerName = eachListener.trigger
+                // eachListener.ownerTurn = slotRef;
+                addListenerPREPPriority(battleData,eachListener,triggerName)
             }
         }
         if (universalRef?.finalListeners && universalRef.finalListeners.length) {
@@ -1095,7 +1126,7 @@ const sim = {
             }
         }
         
-        // console.log(battleListeners)
+        // console.log(battleListeners.BattlePrep)
         return battleData;
     },
     battleStart(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
