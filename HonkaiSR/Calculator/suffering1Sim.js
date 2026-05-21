@@ -1311,7 +1311,7 @@ const sim = {
             // poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
             if (isLog) {logToBattle(battleData,{logType: "ActionChosen", actionType: currentAction, on: designatedAction.target, actionCall: actionCall.name, source: charName});}
 
-            if (cost) {updateSkillPoints(cost,battleData,sourceTurn,false,currentAction);}//costs are applied as the action is launched
+            if (cost) {updateSkillPoints(battleData,cost,sourceTurn,false,currentAction);}//costs are applied as the action is launched
             //aight so I always thought costs were applied before the action(skill usage) and gains were applied AFTER but nope
             //just confirmed with solo archer in a calyx, if he starts with a basic attack that would put him to 4SP total, even before the attack lands he gets that crit dmg buff from guardian. Fuck me man. At least this simplifies the code.
             sourceTurn.actionAssigned = true;
