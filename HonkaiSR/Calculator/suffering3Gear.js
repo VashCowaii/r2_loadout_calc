@@ -8386,7 +8386,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "StartTurn",
                 condition(battleData,generalInfo) {
-                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -8401,7 +8400,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "EndTurn",
                 condition(battleData,generalInfo) {
-                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];

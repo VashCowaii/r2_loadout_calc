@@ -24,7 +24,11 @@
         <li></li>
         
         <h4>Fixes</h4>
-        <li>Fixed an issue where LC Past Self in Mirror did not give energy for the initial wave in a battle, but did for any wave thereafter.</li>
+        <li>Fixed an issue where overflow skill point gain wasn't registered properly for events that might read it.
+            <ul>
+                <li>Nothing in the calc actually used this value(not even Sparkle's ult, that's different) so this doesn't impact anything, but it was an error nonetheless.</li>
+            </ul>
+        </li>
 
         <h4>Optimization</h4>
         <li>Slight tweaks the following handlers to eek out more performance across billions of loops:

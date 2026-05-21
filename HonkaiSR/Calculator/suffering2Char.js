@@ -6,22 +6,19 @@ const battleActions = {
         let sourceName = sourceTurn.properName;
 
         let oldSP = battleData.skillPointCurrent;
-        const proposedValue = Math.max(minimum,Math.min(maximum,battleData.skillPointCurrent + cost));
-        battleData.skillPointCurrent = skipConsume && proposedValue < oldSP ? battleData.skillPointCurrent : proposedValue;
+        const proposedFinal = oldSP + cost;
+        const proposedValue = Math.max(minimum,Math.min(maximum,proposedFinal));
+        battleData.skillPointCurrent = skipConsume && proposedValue < oldSP ? oldSP : proposedValue;
         let newSP = battleData.skillPointCurrent;
         let actualGain = newSP-oldSP;
+        const overflow = proposedFinal > newSP ? proposedFinal - newSP : 0;
 
-        if (!battleData.battleTotal.SP[sourceName]) {battleData.battleTotal.SP[sourceName] = 0;}
-        battleData.battleTotal.SP[sourceName] += actualGain;
-        const overflow = proposedValue > battleData.skillPointCurrent ? proposedValue - battleData.skillPointCurrent : 0;
-        // battleTotal: {
-        //     DMG: {},
-        //     Turns: {},
-        //     Actions: {},
-        //     SP: {},
-        // },
+        if (battleData.isLoggyLogger) {
+            const battleTotalsSP = battleData.battleTotal.SP;
+            battleTotalsSP[sourceName] = (battleTotalsSP[sourceName] ?? 0) + actualGain;
 
-        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SkillPointChange", cost, oldSP, newSP, actualGain, maximum, AV:battleData.sumAV, source:sourceName, sourceName:generalInfo.sourceName});}
+            logToBattle(battleData,{logType: "SkillPointChange", cost, oldSP, newSP, actualGain, maximum, AV:battleData.sumAV, source:sourceName, sourceName:generalInfo.sourceName});
+        }
         poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
     },
     updateEnergy(battleData,amount,sourceTurn,isFixed,sourceName) {
@@ -37255,7 +37252,6 @@ const turnLogic = {
                     let sourceTurn = generalInfo.sourceTurn;
 
                     if (sourceTurn.isEnemy || (sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite)) {return;}
-                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
 
                     if (generalInfo.SPChange < 0) {
                         sourceTurn.yaoSkillPointUsedTracker = true;
@@ -37272,7 +37268,6 @@ const turnLogic = {
                     let sourceTurn = generalInfo.sourceTurn;
 
                     if (sourceTurn.isEnemy || (sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite)) {return;}
-                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
 
                     sourceTurn.yaoSkillPointUsedTracker = false;
                 },
@@ -37287,7 +37282,6 @@ const turnLogic = {
                     let sourceTurn = generalInfo.sourceTurn;
 
                     if (sourceTurn.isEnemy || (sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite)) {return;}
-                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn});
 
                     sourceTurn.yaoSkillPointUsedTracker = false;
                 },
