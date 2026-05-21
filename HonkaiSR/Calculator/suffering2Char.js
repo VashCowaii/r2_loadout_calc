@@ -27,26 +27,16 @@ const battleActions = {
     updateEnergy(battleData,amount,sourceTurn,isFixed,sourceName) {
         if (sourceTurn.specialEnergy) {return;}//for the sake of people like sw999,acheron,cas, and other such headaches.
         if (sourceTurn.isMemosprite) {sourceTurn = battleData.nameBasedTurns[sourceTurn.eventOwner]}
-        // if (!amount) {return}
-        // greatTableIndex
-        // greatTableKeys
-        let minimum = 0;
+
         let maximum = sourceTurn.maxEnergy;
         let oldEnergy = sourceTurn.currentEnergy;
-        let newAmount = isFixed ? amount : amount * (1 + sourceTurn.statTable[EnergyRegenRate]);
-        let overFill = 0;
-        
-        if (amount>0) {
-            const proposedFinal = sourceTurn.currentEnergy + newAmount;
-            sourceTurn.currentEnergy = Math.min(maximum,proposedFinal);//since this can only be gains, we only need a minimum operator
-            const potentialOverfill = proposedFinal - sourceTurn.currentEnergy;
-            overFill = potentialOverfill > 0 ? potentialOverfill : 0;
-        }
-        else {
-            sourceTurn.currentEnergy = Math.max(minimum,sourceTurn.currentEnergy + amount);//whereas this will always be losses, we need a maximum
-        }
+        let newAmount = (isFixed || amount < 0) ? amount : amount * (1 + sourceTurn.statTable[EnergyRegenRate]);
+        const proposedFinal = oldEnergy + newAmount;
+        sourceTurn.currentEnergy = Math.max(0, Math.min(maximum,proposedFinal));//since this can only be gains, we only need a minimum operator
+        const potentialOverfill = proposedFinal - sourceTurn.currentEnergy;
+        let overFill = potentialOverfill > 0 ? potentialOverfill : 0;
+
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnergyChange", target: sourceTurn.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:sourceTurn.currentEnergy, maximum, source:sourceName});}
-        // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
         poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount,sourceName});
     },
     updatePunchlineValue(battleData,amount,sourceTurn,sourceName) {
@@ -5774,27 +5764,7 @@ const turnLogic = {
     //Enemies
     "Generic Boss": {
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
-            let actionUsed = false;
-            const shortCall = this;
-            // let statCalls = shortCall.characterValuesBattle;
-            let shortCalls = shortCall.skillFunctions;
-            // let skillPathing = characters["Generic Boss"].skills;
-
-            // if (skillPointsCheck > 4 || (skillPointsCheck >= 1 && ultySoon)) {
-            //     //basically, are we greater than 4sp for archer, or are we at the minimum to use a skill and then ult afterwards
-            //     let target = "char1";
-            //     actionUsed = true;
-                
-            //     return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target};
-            // }
-
-
-            if (!actionUsed) {
-                let basicCall = shortCalls.genericBossBasic;
-                return {action: "BasicATK", points: 1, actionCall: basicCall, target: "team"};
-            }
+            return this.returnBasicCall ??= {action: "BasicATK", points: 0, actionCall: this.skillFunctions.genericBossBasic, target: "team"}
         },
         "enemyData": {
             "name": "N/A",
@@ -6128,27 +6098,7 @@ const turnLogic = {
     },
     "Generic Boss ST": {
         logic(thisTurn,battleData) {
-            // let skillPointsCheck = battleData.skillPointCurrent > 4;
-            // let ultySoon = (thisTurn.currentEnergy - thisTurn.currentEnergy) <= 30;//TODO: need to make it so this will account for energy regen rate too
-            let actionUsed = false;
-
-            const shortCall = this;
-            // let statCalls = shortCall.characterValuesBattle;
-            let shortCalls = shortCall.skillFunctions;
-            // let skillPathing = characters["Generic Boss"].skills;
-
-            // if (skillPointsCheck > 4 || (skillPointsCheck >= 1 && ultySoon)) {
-            //     //basically, are we greater than 4sp for archer, or are we at the minimum to use a skill and then ult afterwards
-            //     let target = "char1";
-            //     actionUsed = true;
-                
-            //     return {action: "Skill", points: -1, actionCall: shortCalls.sparkleAdvance, target: target};
-            // }
-
-            if (!actionUsed) {
-                let basicCall = shortCalls.genericBossBasic;
-                return {action: "BasicATK", points: 1, actionCall: basicCall, target: "team"};
-            }
+            return this.returnBasicCall ??= {action: "BasicATK", points: 1, actionCall: this.skillFunctions.genericBossBasic, target: "team"}
         },
         "enemyData": {
             "name": "N/A",
