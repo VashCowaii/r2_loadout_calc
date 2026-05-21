@@ -35,6 +35,15 @@ const battleActions = {
         let overFill = potentialOverfill > 0 ? potentialOverfill : 0;
 
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnergyChange", target: sourceTurn.properName, amount: (amount>0 ? newAmount : amount), oldEnergy, newEnergy:sourceTurn.currentEnergy, maximum, source:sourceName});}
+
+        // const energyChangedObject = battleData.energyChangedObject ??= {sourceTurn,newAmount,overFill,amount,sourceName};
+        // energyChangedObject.sourceTurn = sourceTurn;
+        // energyChangedObject.newAmount = newAmount;
+        // energyChangedObject.overFill = overFill;
+        // energyChangedObject.amount = amount;
+        // energyChangedObject.sourceName = sourceName;
+
+        // poke("EnergyChanged",battleData,energyChangedObject);
         poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount,sourceName});
     },
     updatePunchlineValue(battleData,amount,sourceTurn,sourceName) {
@@ -42,7 +51,7 @@ const battleActions = {
         // greatTableIndex
         // greatTableKeys
         let minimum = 0;
-        let maximum = 999;
+        let maximum = 9999;
         let oldEnergy = battleData.punchline;
         let newAmount = amount;
         let overFill = 0;
@@ -107,7 +116,7 @@ const battleActions = {
         // greatTableIndex
         // greatTableKeys
         let minimum = 0;
-        let maximum = 999;
+        let maximum = 9999;
         let oldEnergy = sourceTurn.certifiedBanger;
         // let newAmount = amount;
         let overFill = 0;
