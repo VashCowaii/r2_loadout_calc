@@ -40366,28 +40366,169 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "emcSkillEndingCBGain",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const emcDMG = this.emcCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.emcCertifiedAdditionalDMG
-                    emcDMG(battleData,ownerTurn,ownerTurn,generalInfo);
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
 
-                    const cbFunction = this.cbFunction ??= turnLogic["Aha Instant"].skillFunctions.addCertifiedBanger;
-                    const baseValue = 20;
-                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.traceDelayedCB;
-                    const buffCheck = ownerTurn.buffsObject[buffName];
+                    const passiveListeners = this.passiveListeners;
 
-                    const finalValue = baseValue + (buffCheck ? 2 : 0);
 
-                    if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck)}
-                    //the trace checks at this moment if the delayed buff is active, and if so, gives 2 CB but only once no matter how many times it was applied.
+                    //talent inherent
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
-                    cbFunction(battleData,ownerTurn,finalValue);
+                    //trace cloud 9
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace screw it we ball
+                    const buffSheet = this.emcTraceCritSheet ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.15,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    };
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //trace aha sic em
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Skill End CB Gain + Trace: Aha, Sic 'Em! CB bonus",
+                "listenerName": "EMC Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UpdateStatATK",//ATK stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isUniqueEvent || sourceTurn.properName != ownerTurn.properName) {return;}
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "On Cloud Nine ATK check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "emcSkillEndingCBGain",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const emcDMG = this.emcCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.emcCertifiedAdditionalDMG
+                            emcDMG(battleData,ownerTurn,ownerTurn,generalInfo);
+        
+                            const cbFunction = this.cbFunction ??= turnLogic["Aha Instant"].skillFunctions.addCertifiedBanger;
+                            const baseValue = 20;
+                            const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.traceDelayedCB;
+                            const buffCheck = ownerTurn.buffsObject[buffName];
+        
+                            const finalValue = baseValue + (buffCheck ? 2 : 0);
+        
+                            if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck)}
+                            //the trace checks at this moment if the delayed buff is active, and if so, gives 2 CB but only once no matter how many times it was applied.
+        
+                            cbFunction(battleData,ownerTurn,finalValue);
+                        },
+                        "target": "self",
+                        "listenerName": "Skill End CB Gain + Trace: Aha, Sic 'Em! CB bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ElationSkillEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+                            //the check only wants to know if the elation skill user is part of the player team, it doesn't have an entity type check
+                            //so the only thing we need to give a shit about here, is whether they're an enemy or not.
+        
+                            const buffSheet = this.emcTraceDelayedCBSHEET ??= {
+                                "stats": null,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.traceDelayedCB,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            };
+        
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Aha, Sic 'Em! elation skill end delayed cb buff gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (ownerTurn.properName != sourceTurn.properName) {return;}//only his ult can trigger this
+        
+                            updateSkillPoints(battleData,1,sourceTurn,false,"Screw It, We Ball: Ult End")
+                        },
+                        "target": "self",
+                        "listenerName": "Screw It, We Ball ult end skill point gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            //will only read EMC's attacks
+        
+                            updateEnergy(battleData,10,sourceTurn,true);
+                            battleActions.updatePunchlineValue(battleData,3,sourceTurn,"Trailblazer - Elation: Attack DMG Ended");
+                        },
+                        "target": "self",
+                        "listenerName": "Talent - AttackDMGEnd energy+punchline gain",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "PreBattleEntersCombat",
@@ -40407,116 +40548,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "participant ID battlestart assignment",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatATK",//ATK stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.isUniqueEvent || sourceTurn.properName != ownerTurn.properName) {return;}
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "On Cloud Nine ATK check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "On Cloud Nine ATK check battlestart force proc",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "ElationSkillEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
-                    //the check only wants to know if the elation skill user is part of the player team, it doesn't have an entity type check
-                    //so the only thing we need to give a shit about here, is whether they're an enemy or not.
-
-                    const buffSheet = this.emcTraceDelayedCBSHEET ??= {
-                        "stats": null,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceDelayedCB,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    };
-
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Aha, Sic 'Em! elation skill end delayed cb buff gain",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-                    //will only read EMC's attacks
-
-                    updateEnergy(battleData,10,sourceTurn,true);
-                    battleActions.updatePunchlineValue(battleData,3,sourceTurn,"Trailblazer - Elation: Attack DMG Ended");
-                },
-                "target": "self",
-                "listenerName": "Talent - AttackDMGEnd energy+punchline gain",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.emcTraceCRITRateSHEET ??= {
-                        "stats": [CritRateBase],
-                        [CritRateBase]: 0.15,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    };
-
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Screw It, We Ball battlestart critrate bonus",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UltimateEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (ownerTurn.properName != sourceTurn.properName) {return;}//only his ult can trigger this
-
-                    updateSkillPoints(battleData,1,sourceTurn,false,"Screw It, We Ball: Ult End")
-                },
-                "target": "self",
-                "listenerName": "Screw It, We Ball ult end skill point gain",
                 "ownerTurn": {},
             },
             {
@@ -40577,31 +40608,6 @@ const turnLogic = {
                 "listenerName": "EMC - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "EMC Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -40654,7 +40660,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     
-    "Evanescia": {
+    "Evanescia": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
