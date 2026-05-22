@@ -1146,6 +1146,9 @@ const sim = {
         const enemiesToMake = battleSettings.waveArray1;
         const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
 
+        if (isLoggyLogger) {logToBattle(battleData,{logType: "PassiveCalls"});}
+        poke("PassiveCalls",battleData);
+
         
         poke("EntityConstruction",battleData);
         poke("ElationInitialize",battleData);
@@ -1176,6 +1179,8 @@ const sim = {
         if (isLoggyLogger) {logToBattle(battleData,{logType: "StartBattle"});}
         poke("StartBattle",battleData,{});
         poke("StartBattleEnterCombat",battleData,{});
+
+        logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
         poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
         if (!battleData.attackTechniqueUsed && battleData.battleStartWeaknessReduction) {
             turnLogic.Universal.skillFunctions.battleStartMatchingWeakness(battleData);
