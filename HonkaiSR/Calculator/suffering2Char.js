@@ -6434,7 +6434,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Abundance
-    "Gallagher": {//TECH DONE
+    "Gallagher": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -11786,7 +11786,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Hysilens": {
+    "Hysilens": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -12489,6 +12489,138 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //trace gladius of conquest
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //talent ally atk listener for dot applications
+
+                    //trace fiddle of pearls
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hysilens Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+    
+                            if (!this.E1FinalMultiDOTSHEET) {
+                                const characterName = ownerTurn.properName;
+                                const logicRef = turnLogic[characterName];
+                                const buffNames = logicRef.buffNames;
+                                this.E1FinalMultiDOTSHEET = {
+                                    "stats": null,
+                                    "multiplier": 1.16,
+                                    "source": "Hysilens E1",
+                                    "sourceOwner": characterName,
+                                    "buffName": buffNames.e1dotMulti,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "isFinalMulti": true,
+                                    "actionTags": ["DOT"]
+                                }
+                            }
+                            const multiSheet = this.E1FinalMultiDOTSHEET;
+    
+                            updateBuffBatchTargets(battleData,battleData.allAlliesArray,multiSheet);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "You Ask Why Hearts Cry - DOT team-wide final multi",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const addHysilensField = this.addHysilensField ??= turnLogic[ownerTurn.properName].skillFunctions.addHysilensField;
+                            addHysilensField(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Zone - entered combat creation",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "EHR to DMG battlestart check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.properName != characterName) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "EHR to DMG EHR check",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "DOTDMGEnd",
                 condition(battleData,generalInfo) {
                     // poke("DOTDMGEnd",battleData,turnMerge)
@@ -12694,18 +12826,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const addHysilensField = this.addHysilensField ??= turnLogic[ownerTurn.properName].skillFunctions.addHysilensField;
-                    addHysilensField(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Zone - entered combat creation",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "EnemyCreated",
                 condition(battleData,generalInfo) {
                     // poke("HealEnd",battleData,turnMerge);
@@ -12723,37 +12843,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Zone - enemy added to field listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != characterName) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "EHR to DMG EHR check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "WaveStart",
-                condition(battleData,generalInfo) {
-                    const currentWave = generalInfo.currentWave;
-                    if (currentWave != 1) {return;}
-                    let ownerTurn = this.ownerTurn;
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
-                },
-                "target": "self",
-                "priority": -80,
-                "listenerName": "EHR to DMG battlestart check",
                 "ownerTurn": {},
             },
             {
@@ -12813,34 +12902,6 @@ const turnLogic = {
                 "listenerName": "Hysilens - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Hysilens Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -12859,44 +12920,7 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "AllyCreated",
-                    condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        const ownerTurn = this.ownerTurn;
-                        const targetTurn = generalInfo.targetTurn;
-
-                        if (!this.E1FinalMultiDOTSHEET) {
-                            const characterName = ownerTurn.properName;
-                            const logicRef = turnLogic[characterName];
-                            const buffNames = logicRef.buffNames;
-                            this.E1FinalMultiDOTSHEET = {
-                                "stats": null,
-                                "multiplier": 1.16,
-                                "source": "Hysilens E1",
-                                "sourceOwner": characterName,
-                                "buffName": buffNames.e1dotMulti,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "isFinalMulti": true,
-                                "actionTags": ["DOT"]
-                            }
-                        }
-                        const multiSheet = this.E1FinalMultiDOTSHEET;
-
-                        updateBuff(battleData,targetTurn,multiSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "You Ask Why Hearts Cry - DOT team-wide final multi",
-                    "owners": []
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
