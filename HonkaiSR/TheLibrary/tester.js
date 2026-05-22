@@ -197,8 +197,9 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = "Enemies";
 
         readSelection("customMenuSearchNote").innerHTML = 
-        `Search for an Enemy <span class="descriptionNumberColor">NAME</span>, or <span class="descriptionNumberColor">MASK NAME</span>.
-        <br><br>This search spans BASE enemies, so you may search for a specific name that doesn't show up visibly, but will display as a Mask match.`;
+        `Search for an Enemy <span class="descriptionNumberColor">NAME</span>, <span class="descriptionNumberColor">MASK NAME</span>, or <span class="descriptionNumberColor">ID</span>.
+        <br><br>This search spans BASE enemies, so you may search for a specific name that doesn't show up visibly, but will display as a Mask match.
+        <br><br>ID search will only match ID's that START with your input.`;
         
         globalUI.currentSearchOpen = "enemies";
         globalUI.currentSearchVolume = basicEnemyList;
@@ -3039,10 +3040,11 @@ const customMenu = {
                         if (currentInnermost.name && fuzzy2Inner && currentInput != "") {fuzzy2 = true;}
                     }
 
+                    let fuzzy3 = false;
+                    if (charEntry.startsWith(currentInput) || innerEnemyEntry.startsWith(currentInput)) {fuzzy3 = true;}
 
 
-
-                    if ((!fuzzy && !fuzzy2) && currentInput != "") {continue;}
+                    if ((!fuzzy && !fuzzy2 && !fuzzy3) && currentInput != "") {continue;}
 
                     // console.log(currentEnemyEntry.baseName,charEntry)
 
