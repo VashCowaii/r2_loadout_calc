@@ -4994,8 +4994,9 @@ const battleActions = {
             }
         }
     },
-    addListenerWithPriority(battleData,listenerObject,trigger) {
+    addListenerWithPriority(battleData,listenerObject,trigger,assignOwnerTurn) {
         let listenerRef = battleData.battleListeners[trigger] ??= [];
+        if (assignOwnerTurn) {listenerObject.ownerTurn = assignOwnerTurn;}
 
         if (!listenerRef.length) {listenerRef.push(listenerObject);}
         else {
@@ -5020,8 +5021,9 @@ const battleActions = {
             }
         }
     },
-    addListenerPREPPriority(battleData,listenerObject,trigger) {
+    addListenerPREPPriority(battleData,listenerObject,trigger,assignOwnerTurn) {
         let listenerRef = battleData.battleListeners[trigger] ??= [];
+        if (assignOwnerTurn) {listenerObject.ownerTurn = assignOwnerTurn;}
 
         if (!listenerRef.length) {listenerRef.push(listenerObject);}
         else {
@@ -6580,15 +6582,15 @@ const turnLogic = {
 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
 
-                // let targetTurn = battleData.nameBasedTurns[target];
-                let healObject = ATKObjects.gallagherSkillHealHEALOBJECT
-                healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
-
                 if (e2) {
                     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
                     updateBuff(battleData,targetTurn,buffSheet);
                     battleActions.cleanseDebuff(battleData,targetTurn,1,"any");
                 }
+
+                // let targetTurn = battleData.nameBasedTurns[target];
+                let healObject = ATKObjects.gallagherSkillHealHEALOBJECT
+                healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -6888,6 +6890,132 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    //trace bottoms up  //part of besotted attack end listener
+
+                    //e2    //part of skill logic
+
+                    //trace organic yeast   //part of ult logic
+
+                    //e6
+                    if (rank >= 6) {
+                        let buffSheet = this.buffSheetE6 ??= {
+                            "stats": [DamageBreak,DamageBreakEfficiency],
+                            [DamageBreak]: 0.20,
+                            [DamageBreakEfficiency]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Buff,
+                            "durationInTurn": null,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet)
+                    }
+
+                    //trace novel concoction
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        && battleData.techniquesAllowed) {
+                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
+                        // gallagherTechnique(battleData,"enemy",ownerTurn);
+
+                        battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Novel Concoction B.E. check",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [EffectRES],
+                                [EffectRES]: 0.50,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e1Buff,
+                                "durationInTurn": null,
+                                "duration": null,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            updateBuff(battleData,ownerTurn,buffSheet);
+    
+                            let amount = 20;
+                            updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Gallagher - +Energy & EffectRES/Start - E1",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Gallagher - Novel Concoction start check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatBreak",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Novel Concoction B.E. check",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "AttackEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -6927,33 +7055,6 @@ const turnLogic = {
                 },
                 "target": "allies",
                 "listenerName": "Besotted Healing controller",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatBreak",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Novel Concoction B.E. check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
-                    statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
-                },
-                "target": "self",
-                "listenerName": "Gallagher - Novel Concoction start check",
                 "ownerTurn": {},
             },
             {
@@ -7013,29 +7114,6 @@ const turnLogic = {
                 "listenerName": "Gallagher - Ultimate queued - Ultimate",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Gallagher Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -7055,69 +7133,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        let amount = 20;
-                        updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                        
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [EffectRES],
-                            [EffectRES]: 0.50,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1Buff,
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet)
-                        // When entering the battle, Gallagher regenerates 20 Energy and increases Effect RES by 50%.
-                    },
-                    "target": "self",
-                    "listenerName": "Gallagher - +Energy & EffectRES/Start - E1",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [DamageBreak,DamageBreakEfficiency],
-                            [DamageBreak]: 0.20,
-                            [DamageBreakEfficiency]: 0.20,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Buff,
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet)
-                    },
-                    "target": "self",
-                    "listenerName": "Gallagher - +Break Effect/Efficiency - E6",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {
@@ -12721,14 +12742,17 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     let ownerTurn = this.ownerTurn;
 
                     const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
                     statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "EHR to DMG battlestart check",
                 "ownerTurn": {},
             },
@@ -12822,8 +12846,7 @@ const turnLogic = {
             "trigger": "WaveStart",
             condition(battleData,generalInfo) {
                 // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
-                const currentWave = generalInfo.currentWave;
-                if (currentWave != 1) {return;}
+                
 
                 let ownerTurn = this.ownerTurn;
 
