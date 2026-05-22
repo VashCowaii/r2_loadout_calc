@@ -3058,6 +3058,9 @@ const customMenu = {
             // logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             // logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     
+            if (currentLogType === "PassiveCalls"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Passives<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            
+
             if (currentLogType === "BattlePrep"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
             if (currentLogType === "BattleSettings"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
             if (currentLogType === "EnterCombat"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
@@ -4205,6 +4208,7 @@ const userTriggers = {
 
         "BattlePrep",
         "BattleSettings",
+        "PassiveCalls",
         "EnterCombat",
         "WaveStart",
         "SummonOnFieldAdjustment",
@@ -4213,6 +4217,7 @@ const userTriggers = {
     barActionHeaders: new Set ([
         "BattlePrep",
         "BattleSettings",
+        "PassiveCalls",
         "EnterCombat",
         "WaveStart",
     ]),
@@ -4226,6 +4231,7 @@ const userTriggers = {
         "BattleStartWeakness": "Battle Start Toughness Red.",
         "BattlePrep": "Battle Prep",
         "BattleSettings": "Battle Settings",
+        "PassiveCalls": "Passive Calls",
         "EnterCombat": "Enter Combat",
         "WaveStart": "Wave Start",
 
@@ -4436,6 +4442,14 @@ const userTriggers = {
 
 
             switch (currentType) {
+                case "PassiveCalls": 
+                    returnString = `
+                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">Passive Calls</span></div>
+                    ${controlsString}
+                    <div class="actionDetailBody">This is where bonuses that are unconditions and active from the start of the battle construction, are applied. These do not require specific events to happen first.</div>
+                    `
+                    break;
+
                 case "BattlePrep": 
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">Battle Prep</span></div>
