@@ -1625,7 +1625,7 @@ const configAbility = {
             "name": "OR",
             "conditionList": [
               {
-                "name": "Compare: Target Count SUM",
+                "name": "Compare: Target List Entities",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Function's Target List}}"

@@ -282,7 +282,7 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
                       },
                       {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{All Team Members(Exclude Self)}}"
@@ -456,7 +456,7 @@ const compositeAbilityObject = {
                 "value2": 3
               },
               {
-                "name": "Compare: Target Count SUM",
+                "name": "Compare: Target List Entities",
                 "target": {
                   "name": "Target Name",
                   "target": "{{All Team Members(Exclude Self)}}"
@@ -609,7 +609,7 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Target Count SUM",
+            "name": "Compare: Target List Entities",
             "target": {
               "name": "Target Name",
               "target": "{{All Team Members(Exclude Self)}}"

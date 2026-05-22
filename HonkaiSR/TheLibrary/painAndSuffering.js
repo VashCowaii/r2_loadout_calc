@@ -8431,7 +8431,7 @@ const megaParsingFuckeryPain = {
             
         </div>`;
     },
-    "Compare: Target Count SUM"(parseRef,initialCounter) {
+    "Compare: Target List Entities"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             // "compareType",
@@ -8440,7 +8440,7 @@ const megaParsingFuckeryPain = {
             "target",
             "invertCondition",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Variable");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Target List Entities");
 
         const conditionObject = parseRef.conditions;
         const conditionName = conditionObject?.name;
@@ -8454,9 +8454,12 @@ const megaParsingFuckeryPain = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            Targets ${parseRef.invertCondition ? "NOT " : ""}in ${parseRef.target ? `${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
+            Targets in ${parseRef.target ? `${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""} ${parseRef.invertCondition ? "NOT " : ""}
         </div>
-        ${returnString}`;
+        ${returnString ? `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">&nbsp;Conditions:</div>
+            ${returnString}
+        </div>` : ""}`;
     },
     "Compare: Ability Value"(parseRef,initialCounter) {
         const knownKeySet = new Set ([

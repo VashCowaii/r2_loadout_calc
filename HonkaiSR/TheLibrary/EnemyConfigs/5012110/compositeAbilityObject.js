@@ -2218,7 +2218,7 @@ const compositeAbilityObject = {
                         "flagName": "STAT_Confine"
                       },
                       {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -2234,7 +2234,7 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       },
                       {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"

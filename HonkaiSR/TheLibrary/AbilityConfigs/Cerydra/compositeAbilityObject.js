@@ -3460,7 +3460,7 @@ const compositeAbilityObject = {
                             "value2": 0
                           },
                           {
-                            "name": "Compare: Target Count SUM",
+                            "name": "Compare: Target List Entities",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Player Team All(with Unselectable)}}"

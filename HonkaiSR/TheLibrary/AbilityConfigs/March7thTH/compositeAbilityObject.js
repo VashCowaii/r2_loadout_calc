@@ -1183,7 +1183,7 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
                     "name": "AND",
                     "conditionList": [
                       {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
@@ -1403,7 +1403,7 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
@@ -3260,7 +3260,7 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Player's Aim Target List}}"
@@ -3361,7 +3361,7 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Player's Aim Target List}}"
@@ -3921,7 +3921,7 @@ const compositeAbilityObject = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
@@ -4075,7 +4075,7 @@ const compositeAbilityObject = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
@@ -4187,7 +4187,7 @@ const compositeAbilityObject = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
@@ -4946,7 +4946,7 @@ const compositeAbilityObject = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"

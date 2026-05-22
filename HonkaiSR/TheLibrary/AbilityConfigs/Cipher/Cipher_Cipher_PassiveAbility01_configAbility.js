@@ -297,7 +297,7 @@ const configAbility = {
                 "name": "AND",
                 "conditionList": [
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
