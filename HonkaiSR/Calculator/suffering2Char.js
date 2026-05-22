@@ -38808,8 +38808,8 @@ const turnLogic = {
 
                     const buffNames = logicRef.buffNames;
                     ATKObjects.sparxieE4CRITDMGSHEET = {
-                        "stats": [CritDamageBase],
-                        [CritDamageBase]: 0.36,
+                        "stats": [ElationDMGAll],
+                        [ElationDMGAll]: 0.36,
                         "source": "E4",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffNames.e4CritDMG,
@@ -39329,6 +39329,245 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //trace dazzling
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //trace sweet punchline signing
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace frenzy palette
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    
+
+                    //e4
+
+                    //e6
+                    if (rank >= 6) {
+                        const buffSheet = this.sparxieE6Sheet ??= {
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6PEN,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        };
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sparxie Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UpdateStatATK",//ATK stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isSummon || sourceTurn.properName != ownerTurn.properName) {return;}
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Sweet! Punchline Signing ATK check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "PunchlineChanged",//SPD stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            if (!ATKObjects.sparxieTracePunchlineCRITDMGSHEET) {
+                                const characterName = ownerTurn.properName;
+                                const buffNames = turnLogic[characterName].buffNames;
+                                const rank = ownerTurn.rank;
+                                ATKObjects.sparxieTracePunchlineCRITDMGSHEET = {
+                                    "stats": [CritDamageBase,ResistanceAllPEN],
+                                    [CritDamageBase]: 0.08,
+                                    [ResistanceAllPEN]: rank >= 1 ? 0.015 : 0,
+                                    "source": "Trace",
+                                    "sourceOwner": characterName,
+                                    "buffName": buffNames.traceCritDMG,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 10,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            const buffSheet = ATKObjects.sparxieTracePunchlineCRITDMGSHEET;
+                            const punchline = Math.min(10,battleData.punchline);
+        
+                            const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+        
+                            const allyArray = battleData.allAlliesArray;
+                            if (buffCheck) {
+                                const currentValue = buffCheck.currentStacks;
+                                if (currentValue === punchline) {return;}
+                                
+                                if (currentValue < punchline) {
+                                    const stackDiff = punchline - currentValue;
+                                    buffSheet.currentStacks = stackDiff;
+                                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
+                                    return;//at this point we would be finished so leave
+                                }
+                                else {//if we reach this point it's bc current != punchline, so no if is required on this part
+                                    removeBuffFromBatch(battleData,allyArray,buffCheck,punchline,null,false,punchline);
+                                }
+                            }
+                            if (!punchline) {return;}
+        
+                            buffSheet.currentStacks = punchline;
+                            updateBuffBatchTargets(battleData,allyArray,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Frenzy! Palette of Truth and Lies punchline crit dmg listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AhaInstantEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            battleActions.updatePunchlineValue(battleData,5,ownerTurn,"Sparxie E1");
+                        },
+                        "target": "owner",
+                        "listenerName": "#GoingViral #WhoIsShe aha instant end punchline gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AhaInstantEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+    
+                            const queueObject = this.queueObject ??= {
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedExtraTurn",
+    
+                                actionCall: sim.turnWrapper,
+                                action: "Extra Turn",
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: true,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: true,
+                                dontKeepNextWave: false,
+                                isAttack: false,
+                                isAbility: false,
+                                useFUATriggers: false,
+                                useAnyTriggers: false,
+                                eventTypeStartLOG: "ExtraTurnStart",
+                                eventTypeStart: "ExtraTurnStart",
+                                eventTypeEnd: "ExtraTurnEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: this.target,
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+    
+                                elationForcedPunchline: null,
+                            }
+    
+                            queueObject.sourceTurn = ownerTurn;
+                            queueExtraTurn(battleData,queueObject);
+    
+                            //NOTE: confirmed thrill gain is after queue
+                            poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Sparxie E2"});
+                        },
+                        "target": "owner",
+                        "listenerName": "E2: #AudienceKnows aha instant end extra turn gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const elationCharacters = battleData.elationEntityArray.length;
+                            const punchlineBonusArray = this.punchlineBonusArray ??= [2,4,8];
+                            const thrillBonusArray = this.thrillBonusArray ??= [1,1,4];
+        
+                            
+                            const bonusIndex = Math.min(3,elationCharacters) - 1;
+                            const currentBonusValue = punchlineBonusArray[bonusIndex];
+                            const currentBonusValueThrill = thrillBonusArray[bonusIndex];
+        
+                            ownerTurn.ultBonusPunchline = currentBonusValue;
+                            ownerTurn.ultBonusThrill = currentBonusValueThrill;
+        
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Dazzling! Persona Kaleidoscope battlestart elation count checker",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "sparxieThrillGained",
                 condition(battleData,generalInfo) {
                     // poke("sparxieThrillGained",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -39405,89 +39644,8 @@ const turnLogic = {
                 "listenerName": "participant ID battlestart assignment",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PunchlineChanged",//SPD stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let sourceTurn = generalInfo.sourceTurn;
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    if (!ATKObjects.sparxieTracePunchlineCRITDMGSHEET) {
-                        const characterName = ownerTurn.properName;
-                        const buffNames = turnLogic[characterName].buffNames;
-                        const rank = ownerTurn.rank;
-                        ATKObjects.sparxieTracePunchlineCRITDMGSHEET = {
-                            "stats": [CritDamageBase,ResistanceAllPEN],
-                            [CritDamageBase]: 0.08,
-                            [ResistanceAllPEN]: rank >= 1 ? 0.015 : 0,
-                            "source": "Trace",
-                            "sourceOwner": characterName,
-                            "buffName": buffNames.traceCritDMG,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 10,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                    }
-                    const buffSheet = ATKObjects.sparxieTracePunchlineCRITDMGSHEET;
-                    const punchline = Math.min(10,battleData.punchline);
-
-                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
-
-                    const allyArray = battleData.allAlliesArray;
-                    if (buffCheck) {
-                        const currentValue = buffCheck.currentStacks;
-                        if (currentValue === punchline) {return;}
-                        
-                        if (currentValue < punchline) {
-                            const stackDiff = punchline - currentValue;
-                            buffSheet.currentStacks = stackDiff;
-                            updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                            return;//at this point we would be finished so leave
-                        }
-                        else {//if we reach this point it's bc current != punchline, so no if is required on this part
-                            removeBuffFromBatch(battleData,allyArray,buffCheck,punchline,null,false,punchline);
-                        }
-                    }
-                    if (!punchline) {return;}
-
-                    buffSheet.currentStacks = punchline;
-                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Frenzy! Palette of Truth and Lies punchline crit dmg listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatATK",//SPD stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.isSummon || sourceTurn.properName != ownerTurn.properName) {return;}
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Sweet! Punchline Signing ATK check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Sweet! Punchline Signing ATK check battlestart force proc",
-                "ownerTurn": {},
-            },
+            
+            
             {
                 "trigger": "AdditionalTriggerAttackEnd",
                 condition(battleData,generalInfo) {
@@ -39514,28 +39672,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Talent certified elation additional dmg",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const elationCharacters = battleData.elationEntityArray.length;
-                    const punchlineBonusArray = this.punchlineBonusArray ??= [2,4,8];
-                    const thrillBonusArray = this.thrillBonusArray ??= [1,1,4];
-
-                    
-                    const bonusIndex = Math.min(3,elationCharacters) - 1;
-                    const currentBonusValue = punchlineBonusArray[bonusIndex];
-                    const currentBonusValueThrill = thrillBonusArray[bonusIndex];
-
-                    ownerTurn.ultBonusPunchline = currentBonusValue;
-                    ownerTurn.ultBonusThrill = currentBonusValueThrill;
-
-                },
-                "target": "self",
-                "listenerName": "Dazzling! Persona Kaleidoscope battlestart elation count checker",
                 "ownerTurn": {},
             },
             {
@@ -39595,31 +39731,6 @@ const turnLogic = {
                 "listenerName": "Sparxie - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Sparxie Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -39639,103 +39750,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "AhaInstantEnd",
-                    condition(battleData,generalInfo) {
-                        const ownerTurn = this.ownerTurn;
-                        battleActions.updatePunchlineValue(battleData,5,ownerTurn,"Sparxie E1");
-                    },
-                    "target": "owner",
-                    "listenerName": "#GoingViral #WhoIsShe aha instant end punchline gain",
-                    "ownerTurn": {},
-                },
-            ],
-            2: [
-                {
-                    "trigger": "AhaInstantEnd",
-                    condition(battleData,generalInfo) {
-                        const ownerTurn = this.ownerTurn;
-
-                        const queueObject = this.queueObject ??= {
-                            name: this.listenerName,
-                            priority: priorityList.turn.Default,
-                            queueTag: "QueuedExtraTurn",
-
-                            actionCall: sim.turnWrapper,
-                            action: "Extra Turn",
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: true,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: true,
-                            dontKeepNextWave: false,
-                            isAttack: false,
-                            isAbility: false,
-                            useFUATriggers: false,
-                            useAnyTriggers: false,
-                            eventTypeStartLOG: "ExtraTurnStart",
-                            eventTypeStart: "ExtraTurnStart",
-                            eventTypeEnd: "ExtraTurnEnd",
-
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                            elationForcedPunchline: null,
-                        }
-
-                        queueObject.sourceTurn = ownerTurn;
-                        queueExtraTurn(battleData,queueObject);
-
-                        //NOTE: confirmed thrill gain is after queue
-                        poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Sparxie E2"});
-                    },
-                    "target": "owner",
-                    "listenerName": "E2: #AudienceKnows aha instant end extra turn gain",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
+            2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.yaoguangE1SHREDSHEET ??= {
-                            "stats": [ResistanceAllPEN],
-                            [ResistanceAllPEN]: 0.20,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6PEN,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        };
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "E6 pen bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -39759,7 +39779,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Trailblazer - Elation": {
+    "Trailblazer - Elation": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
