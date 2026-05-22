@@ -41334,6 +41334,292 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //TALENT crit to elation conversion
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+
+                    //trace watch all revels crit chance only
+                    const buffSheet = this.emcTraceCRITRateSHEET ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.30,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    };
+                    updateBuff(battleData,ownerTurn,buffSheet);
+
+                    //e1
+                    if (rank >= 1) {
+                        const buffSheet = this.e1PENSheet ??= {
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1PEN,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        };
+                        updateBuff(battleData,ownerTurn,buffSheet);
+
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    //e2
+                    if (rank >= 2) {
+                        const buffSheet = this.e2CritDMG ??= {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: 0.36,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2Crit,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        };
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const buffSheet = this.e4Shred ??= {
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: 0.15,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4Shred,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        };
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    //e6 merrymake
+                    //e6 ult refund
+                    //e6 banger duration
+                    if (rank >= 6) {
+                        const buffSheet = this.evaE6MerrySHEET ??= {
+                            "stats": [MerryMakeAll],
+                            [MerryMakeAll]: 0.15,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Merry,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["Elation"]
+                        };
+                        updateBuff(battleData,ownerTurn,buffSheet);
+
+                        const listener1 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                        const listener2 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                        const listener3 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Evanescia Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "EvanesciaE1ElationQueue",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const queueObject = this.queueObject ??= {
+                                name: "E1 FUA 'Elation Skill' Queue",
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedExtraTurn",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
+                                action: "Extra Turn",
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: true,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: false,
+                                isAttack: false,
+                                isAbility: false,
+                                useFUATriggers: false,
+                                useAnyTriggers: false,
+                                eventTypeStartLOG: "ExtraTurnStart",
+                                eventTypeStart: "ExtraTurnStart",
+                                eventTypeEnd: "ExtraTurnEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: "enemy",
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                                
+                                elationForcedPunchline: null,
+                            }
+                            queueObject.sourceTurn = ownerTurn;
+                            queueExtraTurn(battleData,queueObject);
+                        },
+                        "target": "self",
+                        "listenerName": "E1 post-FUA Elation Queue Bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "CertifiedBangerChanged",
+                        condition(battleData,generalInfo) {
+                            // poke("CertifiedBangerChangedStart",battleData,{sourceTurn,amount,sourceName});
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isSummon || sourceTurn.isEnemy) {return;}
+        
+                            const targetIsSelf = sourceTurn.properName === ownerTurn.properName;
+                            const changeValue = generalInfo.amount;
+        
+                            if (targetIsSelf) {
+    
+                                const banger = ownerTurn.certifiedBanger;
+                                const usableValue = Math.min(10, Math.floor(banger/100))
+        
+                                const buffSheet = this.evaE6MerrySHEET ??= {
+                                    "stats": [MerryMakeAll],
+                                    [MerryMakeAll]: 0.02,
+                                    "source": "E6",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": turnLogic[ownerTurn.properName].buffNames.e6MerryStack,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 10,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["Elation"]
+                                };
+                                const buffName = buffSheet.buffName;
+    
+                                const buffCheck = ownerTurn.buffsObject[buffName];
+    
+                                if (buffCheck) {
+                                    const currentStacks = buffCheck.currentStacks;
+    
+                                    if (currentStacks < usableValue) {
+                                        const stackDiff = usableValue - currentStacks;
+                                        buffSheet.currentStacks = stackDiff;
+                                        updateBuff(battleData,ownerTurn,buffSheet);
+                                        return;
+                                    }
+                                    else if (currentStacks === usableValue) {return;}
+                                    else {//if we have too many stacks
+                                        removeBuff(battleData,ownerTurn,buffSheet);
+                                    }
+                                }
+                                if (!usableValue) {return;}
+        
+                                buffSheet.currentStacks = usableValue;
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Maiden: A Step into Dreams merrymake stacker",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EvanesciaE6CBChanger",
+                        condition(battleData,generalInfo) {
+                            // poke("EvanesciaE6CBChanger",battleData,null);battleData.elationBangerTurnExceptions
+                            let ownerTurn = this.ownerTurn;
+    
+                            battleData.elationBangerTurnExceptions.Evanescia = ownerTurn.rank >= 6 ? 3 : 2;
+                        },
+                        "target": "self",
+                        "listenerName": "Maiden: A Step into Dreams CB duration extension",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("EvanesciaE6CBChanger",battleData,null);battleData.elationBangerTurnExceptions
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (ownerTurn.properName != sourceTurn.properName) {return;}
+    
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.E6UltCounter === 1) {
+                                updateEnergy(battleData,120,ownerTurn,true,"E6: Post-Ult Regen");
+                                battleValues.E6UltCounter = 4;
+                            }
+                            else {
+                                battleValues.E6UltCounter -= 1;
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Maiden: A Step into Dreams Ult regen listener",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "EnergyChanged",//CritDamage stat family
                 condition(battleData,generalInfo) {
                     // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount,sourceName});
@@ -41506,18 +41792,6 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Talent CritDMG check battlestart force proc",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
                     if (!this.cachedElationID) {
                         const logicRef = turnLogic[ownerTurn.properName];
                         const ATKObjects = logicRef.ATKObjects;
@@ -41584,32 +41858,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.emcTraceCRITRateSHEET ??= {
-                        "stats": [CritRateBase],
-                        [CritRateBase]: 0.30,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    };
-
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Screw It, We Ball battlestart critrate bonus",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -41666,29 +41914,6 @@ const turnLogic = {
                 "listenerName": "Evanescia - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Evanescia Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -41708,264 +41933,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "EvanesciaE1ElationQueue",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const queueObject = this.queueObject ??= {
-                            name: "E1 FUA 'Elation Skill' Queue",
-                            priority: priorityList.turn.Default,
-                            queueTag: "QueuedExtraTurn",
-
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
-                            action: "Extra Turn",
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: true,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
-                            dontKeepNextWave: false,
-                            isAttack: false,
-                            isAbility: false,
-                            useFUATriggers: false,
-                            useAnyTriggers: false,
-                            eventTypeStartLOG: "ExtraTurnStart",
-                            eventTypeStart: "ExtraTurnStart",
-                            eventTypeEnd: "ExtraTurnEnd",
-
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: "enemy",
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                            
-                            elationForcedPunchline: null,
-                        }
-                        queueObject.sourceTurn = ownerTurn;
-                        queueExtraTurn(battleData,queueObject);
-                    },
-                    "target": "self",
-                    "listenerName": "E1 post-FUA Elation Queue Bonus",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.emcTraceCRITRateSHEET ??= {
-                            "stats": [ResistanceAllPEN],
-                            [ResistanceAllPEN]: 0.20,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1PEN,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        };
-    
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Home: A Prayer in Dance pen application",
-                    "ownerTurn": {},
-                },
-            ],
-            2: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.emcTraceCRITRateSHEET ??= {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: 0.36,
-                            "source": "E2",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2Crit,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        };
-    
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Voyage: A Wish for Everbloom crit application",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
+            2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.emcTraceCRITRateSHEET ??= {
-                            "stats": [DEFShredAll],
-                            [DEFShredAll]: 0.15,
-                            "source": "E4",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4Shred,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        };
-    
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Meadow: A Ruin by Vice shred application",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.evaE6MerrySHEET ??= {
-                            "stats": [MerryMakeAll],
-                            [MerryMakeAll]: 0.15,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Merry,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Elation"]
-                        };
-
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Maiden: A Step into Dreams merrymake application",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "CertifiedBangerChanged",//CritDamage stat family
-                    condition(battleData,generalInfo) {
-                        // poke("CertifiedBangerChangedStart",battleData,{sourceTurn,amount,sourceName});
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-    
-                        if (sourceTurn.isSummon || sourceTurn.isEnemy) {return;}
-    
-                        const targetIsSelf = sourceTurn.properName === ownerTurn.properName;
-                        const changeValue = generalInfo.amount;
-    
-                        if (targetIsSelf) {
-
-                            const banger = ownerTurn.certifiedBanger;
-                            const usableValue = Math.min(10, Math.floor(banger/100))
-    
-                            const buffSheet = this.evaE6MerrySHEET ??= {
-                                "stats": [MerryMakeAll],
-                                [MerryMakeAll]: 0.02,
-                                "source": "E6",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": turnLogic[ownerTurn.properName].buffNames.e6MerryStack,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 10,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "actionTags": ["Elation"]
-                            };
-                            const buffName = buffSheet.buffName;
-
-                            const buffCheck = ownerTurn.buffsObject[buffName];
-
-                            if (buffCheck) {
-                                const currentStacks = buffCheck.currentStacks;
-
-                                if (currentStacks < usableValue) {
-                                    const stackDiff = usableValue - currentStacks;
-                                    buffSheet.currentStacks = stackDiff;
-                                    updateBuff(battleData,ownerTurn,buffSheet);
-                                    return;
-                                }
-                                else if (currentStacks === usableValue) {return;}
-                                else {//if we have too many stacks
-                                    removeBuff(battleData,ownerTurn,buffSheet);
-                                }
-                            }
-                            if (!usableValue) {return;}
-    
-                            buffSheet.currentStacks = usableValue;
-                            updateBuff(battleData,ownerTurn,buffSheet);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Maiden: A Step into Dreams merrymake stacker",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "EvanesciaE6CBChanger",//CritDamage stat family
-                    condition(battleData,generalInfo) {
-                        // poke("EvanesciaE6CBChanger",battleData,null);battleData.elationBangerTurnExceptions
-                        let ownerTurn = this.ownerTurn;
-
-                        battleData.elationBangerTurnExceptions.Evanescia = ownerTurn.rank >= 6 ? 3 : 2;
-                    },
-                    "target": "self",
-                    "listenerName": "Maiden: A Step into Dreams CB duration extension",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "UltimateEnd",//CritDamage stat family
-                    condition(battleData,generalInfo) {
-                        // poke("EvanesciaE6CBChanger",battleData,null);battleData.elationBangerTurnExceptions
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-
-                        if (ownerTurn.properName != sourceTurn.properName) {return;}
-
-                        const battleValues = ownerTurn.battleValues;
-                        if (battleValues.E6UltCounter === 1) {
-                            updateEnergy(battleData,120,ownerTurn,true,"E6: Post-Ult Regen");
-                            battleValues.E6UltCounter = 4;
-                        }
-                        else {
-                            battleValues.E6UltCounter -= 1;
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Maiden: A Step into Dreams Ult regen listener",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
