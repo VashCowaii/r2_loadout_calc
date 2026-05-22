@@ -20886,7 +20886,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Robin": {//TECH DONE
+    "Robin": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -33672,7 +33672,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Preservation
-    "Dan Heng • Permansor Terrae": {//TECH DONE
+    "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -36455,7 +36455,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Anaxa": {//TECH DONE
+    "Anaxa": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -37552,7 +37552,7 @@ const turnLogic = {
 
 
     //Elation
-    "Yao Guang": {
+    "Yao Guang": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
@@ -38227,32 +38227,153 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "UpdateStatElation",//SPD stat family
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
 
-                    if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.skillZoneActive) {return;}
-                    const statCheck2 = this.statCheck2 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck2
-                    statCheck2(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Amaze-In Grace SPD check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatSPD",//SPD stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
 
-                    if (sourceTurn.isSummon || sourceTurn.properName != ownerTurn.properName) {return;}
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                    const passiveListeners = this.passiveListeners;
+
+
+                    if (rank >= 1) {
+                        const buffSheet = this.yaoguangE1SHREDSHEET ??= {
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: 0.20,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1Shred,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["Elation"]
+                        };
+
+                        const allyArray = battleData.allAlliesArray;
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
+                    }
+
+                    if (rank >= 4) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 6) {
+                        const buffSheet = this.yaoE6MerrySHEET ??= {
+                            "stats": [MerryMakeAll],
+                            [MerryMakeAll]: 0.25,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Merry,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["Elation"]
+                        };
+
+                        const allyArray = battleData.allAlliesArray;
+
+                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
+                    }
+
+                    //trace amaze in grace
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
                     statCheck(battleData,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace poised and sated
+                    const buffSheet = this.yaoguangTraceCRITDMGSHEET ??= {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 0.60,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    };
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Amaze-In Grace SPD check",
+                "listenerName": "Yao Guang Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AhaInstantEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.e4BonusActive) {return;}
+    
+                            const allyPositions = battleData.allyPositions;
+                            const e4Sheet = this.e4Sheet ??= turnLogic[ownerTurn.properName].ATKObjects.E4FinalMultiElationSkillSHEET;
+                            ownerTurn.battleValues.e4BonusActive = false;
+                            removeBuffFromBatch(battleData,allyPositions,e4Sheet);
+                        },
+                        "target": "owner",
+                        "listenerName": "Threads of Fate Colored by Plumes, e4 aha instant finish, remove final dmg multi",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isSummon || sourceTurn.properName != ownerTurn.properName) {return;}
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Amaze-In Grace SPD check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ElationSkillEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (ownerTurn.properName != sourceTurn.properName) {return;}//only her elation skill can trigger this
+        
+                            updateSkillPoints(battleData,1,sourceTurn,false,"Poised and Sated: Elation Skill End")
+                        },
+                        "target": "self",
+                        "listenerName": "Poised and Sated elation skill skill point gain",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "PreBattleEntersCombat",
@@ -38268,13 +38389,23 @@ const turnLogic = {
                     ownerTurn.participantID = this.cachedElationID;//116;//TODO: remove this later, attach participant ID to the character entity in parsing, just forgot to do that before
 
                     // participantID
-
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
                 },
                 "target": "self",
-                "listenerName": "Amaze-In Grace SPD check battlestart force proc",
+                "listenerName": "elation id assignment",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatElation",//Elation stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.skillZoneActive) {return;}
+                    const statCheck2 = this.statCheck2 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck2
+                    statCheck2(battleData,ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Skill zone elation check",
                 "ownerTurn": {},
             },
             {
@@ -38362,45 +38493,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.yaoguangTraceCRITDMGSHEET ??= {
-                        "stats": [CritDamageBase],
-                        [CritDamageBase]: 0.60,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritDMG,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    };
-
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Poised and Sated battlestart critdmg bonus",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "ElationSkillEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (ownerTurn.properName != sourceTurn.properName) {return;}//only her elation skill can trigger this
-
-                    updateSkillPoints(battleData,1,sourceTurn,false,"Poised and Sated: Elation Skill End")
-                },
-                "target": "self",
-                "listenerName": "Poised and Sated elation skill skill point gain",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -38457,31 +38549,6 @@ const turnLogic = {
                 "listenerName": "Yao Guang - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Yao Guang Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -38501,89 +38568,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.yaoguangE1SHREDSHEET ??= {
-                            "stats": [DEFShredAll],
-                            [DEFShredAll]: 0.20,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1Shred,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Elation"]
-                        };
-
-                        //discord rando confirmed it does work like this, we just weren't sure but still coded it to target nontargetables
-                        const allyArray = battleData.allAlliesArray;
-
-                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Poised and Sated battlestart critdmg bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "AhaInstantEnd",
-                    condition(battleData,generalInfo) {
-                        const ownerTurn = this.ownerTurn;
-                        if (!ownerTurn.battleValues.e4BonusActive) {return;}
-
-                        const allyPositions = battleData.allyPositions;
-                        const e4Sheet = this.e4Sheet ??= turnLogic[ownerTurn.properName].ATKObjects.E4FinalMultiElationSkillSHEET;
-                        ownerTurn.battleValues.e4BonusActive = false;
-                        removeBuffFromBatch(battleData,allyPositions,e4Sheet);
-                    },
-                    "target": "owner",
-                    "listenerName": "Threads of Fate Colored by Plumes, e4 aha instant finish, remove final dmg multi",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.yaoguangE1SHREDSHEET ??= {
-                            "stats": [MerryMakeAll],
-                            [MerryMakeAll]: 0.25,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Merry,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Elation"]
-                        };
-
-                        const allyArray = battleData.allAlliesArray;
-
-                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Poised and Sated battlestart critdmg bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -38615,7 +38605,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sparxie": {
+    "Sparxie": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
@@ -39390,15 +39380,15 @@ const turnLogic = {
 
                     //technique
                     let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let attackUsed = battleData.attackTechniqueUsed;
                     // let dimensionUsed = battleData.dimensionTechniqueUsed;
                     if (useTechnique 
-                        && !attackUsed 
+                        // && !attackUsed 
                         // && !dimensionUsed
                         && battleData.techniquesAllowed) {
 
                         // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
                         const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
                         listenerToInject.ownerTurn = ownerTurn;
                         addListenerWithPriority(battleData,listenerToInject,"WaveStart");
