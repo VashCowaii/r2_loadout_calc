@@ -10157,7 +10157,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Nihility
-    "Silver Wolf": {
+    "Silver Wolf": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -10647,32 +10647,238 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != characterName) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Side Note EHR check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace inject
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    const listener7 = passiveListeners[6];
+                    addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+
+                    //trace generate
+
+                    //trace sidenote
                     const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
                     statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //e1    //part of ult already
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //e6
+                    if (rank >= 4) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //trace implant weakbreak
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Silver Wolf - Side Note start check",
+                "listenerName": "Silver Wolf Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.properName != characterName) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck;
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Side Note EHR check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.slotRef;
+    
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [VulnAll],
+                                [VulnAll]: 0.20,
+                                "source": "E2",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": this.listenerName,
+                                "durationInTurn": null,
+                                "duration": null,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "isDebuff": true,
+                                "expireType": null
+                            };
+        
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E2 Vuln Zombie Network",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AdditionalTriggerAttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
+        
+                            //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
+                            if (sourceTurn.properName != characterName || sourceTurn.rank < 4 || generalInfo.dmgSlot != "Ultimate") {return;}
+    
+                            const swE4DMG = this.swE4DMG ??= turnLogic[characterName].skillFunctions.swE4DMG;
+                            swE4DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                        },
+                        "target": "enemy",
+                        "listenerName": "Silver Wolf E4 additional DMG controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != characterName) {return;}
+    
+                            let targetTurn = generalInfo.targetTurn;
+                            let targetDebuffs = Math.min(5,targetTurn.debuffCounter);
+        
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.20,
+                                "source": "E6",
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogic[characterName].buffNames.e6,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 0,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            let buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+    
+                            if (buffCheck) {//if the buff exists
+                                const currentStacks = buffCheck.currentStacks;
+                                if (currentStacks < targetDebuffs) {//and if the current stacks are lower than the stacks we need
+                                    const stackDiff = targetDebuffs - currentStacks;//then get the diff and add that diff in stacks
+                                    buffSheet.currentStacks = stackDiff;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else if (currentStacks === targetDebuffs) {//but if stacks are equal, then abort bc nothing should be done
+                                    return;
+                                }
+                                else {//but if stacks are greater than they should be, then remove the buff and reapply with the correct amount
+                                    //logging for the removal will be silent if the target has debuffs at all
+                                    removeBuff(battleData,sourceTurn,buffSheet,targetDebuffs>0);
+                                }
+                            }
+        
+                            buffSheet.currentStacks = targetDebuffs;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Silver Wolf E6 bonus DMG ONHIT",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.targetTurn;
+        
+                            //smol ass function, but really all she needs. weakness breaks add a new bug, all there is to it.
+                            const applySWBug = this.applySWBug ??= turnLogic[ownerTurn.properName].skillFunctions.applySWBug
+                            applySWBug(battleData,targetTurn,ownerTurn); 
+                        },
+                        "target": "enemy",
+                        "listenerName": "Silver Wolf weakness break bug implant",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+        
+                            let amount = 20;
+                            updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Silver Wolf - Major Trace: Inject",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (ownerTurn.turnState) {
+                                let amount = 5;
+                                updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Silver Wolf - Major Trace: Inject",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "EnemyDied",
@@ -10711,20 +10917,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "BrokeEnemyWeakness",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let targetTurn = generalInfo.targetTurn;
-
-                    //smol ass function, but really all she needs. weakness breaks add a new bug, all there is to it.
-                    const applySWBug = this.applySWBug ??= turnLogic[ownerTurn.properName].skillFunctions.applySWBug
-                    applySWBug(battleData,targetTurn,ownerTurn); 
-                },
-                "target": "enemy",
-                "listenerName": "Silver Wolf weakness break bug implant",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "HitEnemyStart",
                 condition(battleData,generalInfo) {
                     const sourceTurn = generalInfo.sourceTurn;
@@ -10745,35 +10937,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Silver Wolf Talent Bug Controller",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-
-                    let amount = 20;
-                    updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                },
-                "target": "self",
-                "listenerName": "Silver Wolf - Major Trace: Inject",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    // let sourceTurn = generalInfo.sourceTurn;
-
-                    if (ownerTurn.turnState) {
-                        let amount = 5;
-                        updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Silver Wolf - Major Trace: Inject",
                 "ownerTurn": {},
             },
             {
@@ -10833,34 +10996,6 @@ const turnLogic = {
                 "listenerName": "Silver Wolf - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Silver Wolf Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -10881,113 +11016,11 @@ const turnLogic = {
         },
         "eidolonListeners": {
             1: [],
-            2: [
-                {
-                    "trigger": "EnemyCreated",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let targetTurn = generalInfo.slotRef;
-
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [VulnAll],
-                            [VulnAll]: 0.20,
-                            "source": "E2",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": this.listenerName,
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "isDebuff": true,
-                            "expireType": null
-                        };
-    
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    },
-                    "target": "enemy",
-                    "listenerName": "E2 Vuln Zombie Network",
-                    "ownerTurn": {},
-                },
-            ],
+            2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "AdditionalTriggerAttackEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
-    
-                        //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
-                        if (sourceTurn.properName != characterName || sourceTurn.rank < 4 || generalInfo.dmgSlot != "Ultimate") {return;}
-
-                        const swE4DMG = this.swE4DMG ??= turnLogic[characterName].skillFunctions.swE4DMG;
-                        swE4DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
-                    },
-                    "target": "enemy",
-                    "listenerName": "Silver Wolf E4 additional DMG controller",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "AllyDMGStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != characterName) {return;}
-
-                        let targetTurn = generalInfo.targetTurn;
-                        let targetDebuffs = Math.min(5,targetTurn.debuffCounter);
-    
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [DamageAll],
-                            [DamageAll]: 0.20,
-                            "source": "E6",
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogic[characterName].buffNames.e6,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 5,
-                            "currentStacks": 0,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        let buffName = buffSheet.buffName;
-                        const buffCheck = sourceTurn.buffsObject[buffName];
-
-                        if (buffCheck) {//if the buff exists
-                            const currentStacks = buffCheck.currentStacks;
-                            if (currentStacks < targetDebuffs) {//and if the current stacks are lower than the stacks we need
-                                const stackDiff = targetDebuffs - currentStacks;//then get the diff and add that diff in stacks
-                                buffSheet.currentStacks = stackDiff;
-                                updateBuff(battleData,sourceTurn,buffSheet);
-                            }
-                            else if (currentStacks === targetDebuffs) {//but if stacks are equal, then abort bc nothing should be done
-                                return;
-                            }
-                            else {//but if stacks are greater than they should be, then remove the buff and reapply with the correct amount
-                                //logging for the removal will be silent if the target has debuffs at all
-                                removeBuff(battleData,sourceTurn,buffSheet,targetDebuffs>0);
-                            }
-                        }
-    
-                        buffSheet.currentStacks = targetDebuffs;
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Silver Wolf E6 bonus DMG ONHIT",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {
