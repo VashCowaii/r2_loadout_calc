@@ -14651,7 +14651,7 @@ const turnLogic = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Black Swan Passive",
+                "listenerName": "Welt Passive",
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
@@ -14840,8 +14840,6 @@ const turnLogic = {
                         "listenerName": "Punishment EHR check",
                         "ownerTurn": {},
                     },
-
-
                 ],
             },
             {
@@ -14923,7 +14921,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Pela": {
+    "Pela": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -15286,113 +15284,203 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "AllyCreated",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    let targetTurn = generalInfo.targetTurn;
 
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [EffectHitRate],
-                        [EffectHitRate]: 0.10,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceEHR,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-
-                    updateBuff(battleData,targetTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "The Secret Strategy trace bonus to allies",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyDMGStart",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != characterName) {return;}
-
-                    let targetTurn = generalInfo.targetTurn;
-                    let targetDebuffs = targetTurn.debuffCounter;
-
-                    let buffSheet = this.buffSheet ??= {
-                        "stats": [DamageAll],
-                        [DamageAll]: 0.20,
-                        "source": "Trace",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": turnLogic[characterName].buffNames.traceAgainstDebuffed,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-                    let buffName = buffSheet.buffName;
-                    const buffCheck = sourceTurn.buffsObject[buffName];
-
-                    if (!buffCheck && targetDebuffs) {
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    }
-                    else if (buffCheck && targetDebuffs) {return;}
-                    else {
-                        removeBuff(battleData,sourceTurn,buffSheet);
-                    }
-
-                },
-                "target": "self",
-                "listenerName": "Bash trace bonus DMG ONHIT",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const enemyTurns = battleData.enemyBasedTurns;
-                    let foundDebuff = false;
-                    for (targetHit in targetsGotHit) {
-                        const currentEnemy = enemyTurns[targetHit];
-                        if (currentEnemy.debuffCounter) {
-                            foundDebuff = true;
-                            break;
-                        }
-                    }
-
+                    const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
 
-                    if (foundDebuff) {
-                        let skillRef = ATKObjects.pelaTalentREF ??= ATKObjects["Talent"]["Data Collecting"].variant1;
-                        let values = ATKObjects.pelaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const passiveListeners = this.passiveListeners;
 
-                        updateEnergy(battleData,values[0],sourceTurn,false,"Pela Talent Regen");
+                    //e1
+                    if (rank >= 1) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
                     }
 
-                    
-                    const bonusSheet = ATKObjects.pelaSkillDispelDMGSHEET;
-                    const buffName = bonusSheet?.buffName;
-                    if (ownerTurn.buffsObject[buffName]) {
-                        removeBuff(battleData,ownerTurn,bonusSheet)
+                    //talent energy gain + trace bonus
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //trace bash
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //trace secret
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Wipe Out - Listen to attack end dmg buff removal // TALENT ENERGY REGEN",
+                "listenerName": "Pela Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+        
+                            updateEnergy(battleData,5,ownerTurn,false,"Pela E1 Death Regen");
+                        },
+                        "target": "enemy",
+                        "listenerName": "Pela E1 Enemy Death Regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            let foundDebuff = false;
+                            for (targetHit in targetsGotHit) {
+                                const currentEnemy = enemyTurns[targetHit];
+                                if (currentEnemy.debuffCounter) {
+                                    foundDebuff = true;
+                                    break;
+                                }
+                            }
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            if (foundDebuff) {
+                                let skillRef = ATKObjects.pelaTalentREF ??= ATKObjects["Talent"]["Data Collecting"].variant1;
+                                let values = ATKObjects.pelaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+        
+                                updateEnergy(battleData,values[0],sourceTurn,false,"Pela Talent Regen");
+                            }
+        
+                            
+                            const bonusSheet = ATKObjects.pelaSkillDispelDMGSHEET;
+                            const buffName = bonusSheet?.buffName;
+                            if (ownerTurn.buffsObject[buffName]) {
+                                removeBuff(battleData,ownerTurn,bonusSheet)
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Wipe Out - Listen to attack end dmg buff removal // TALENT ENERGY REGEN",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AdditionalTriggerAttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
+        
+                            //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
+                            if (sourceTurn.properName != characterName) {return;}
+    
+                            const pelaE6DMG = this.pelaE6DMG ??= turnLogic[characterName].skillFunctions.pelaE6DMG;
+                            pelaE6DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                        },
+                        "target": "enemy",
+                        "listenerName": "Pela E6 additional DMG controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != characterName) {return;}
+        
+                            let targetTurn = generalInfo.targetTurn;
+                            let targetDebuffs = targetTurn.debuffCounter;
+        
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.20,
+                                "source": "Trace",
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogic[characterName].buffNames.traceAgainstDebuffed,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            let buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            if (!buffCheck && targetDebuffs) {
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck && targetDebuffs) {return;}
+                            else {
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+        
+                        },
+                        "target": "self",
+                        "listenerName": "Bash trace bonus DMG ONHIT",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            let targetTurn = generalInfo.targetTurn;
+        
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [EffectHitRate],
+                                [EffectHitRate]: 0.10,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.traceEHR,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+        
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "The Secret Strategy trace bonus to allies",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "UltimateReady",
@@ -15451,34 +15539,6 @@ const turnLogic = {
                 "listenerName": "Pela - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Pela Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -15498,45 +15558,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "EnemyDied",
-                    condition(battleData,generalInfo) {
-                        // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                        let ownerTurn = this.ownerTurn;
-    
-                        updateEnergy(battleData,5,ownerTurn,false,"Pela E1 Death Regen");
-                    },
-                    "target": "enemy",
-                    "listenerName": "Pela E1 Enemy Death Regen",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "AdditionalTriggerAttackEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
-    
-                        //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
-                        if (sourceTurn.properName != characterName || sourceTurn.rank < 4 || generalInfo.dmgSlot != "Ultimate") {return;}
-
-                        const pelaE6DMG = this.pelaE6DMG ??= turnLogic[characterName].skillFunctions.pelaE6DMG;
-                        pelaE6DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
-                    },
-                    "target": "enemy",
-                    "listenerName": "Silver Wolf E4 additional DMG controller",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {
