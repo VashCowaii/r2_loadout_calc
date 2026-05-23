@@ -9255,7 +9255,7 @@ const turnLogic = {
     //TODO: add ult enemy buff removal later, also for pela probably as well if I forgot
     //TODO: skill cleanse, when enemy debuffs can be applied later
     //TODO: CC resistance, same as above
-    "Luocha": {
+    "Luocha": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -9715,89 +9715,171 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "luochaAbyssGained",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    // poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-                    const zoneIsActive = valuesRef.zoneIsActive;
-                    if (zoneIsActive && pointsGained > 0) {return;}
 
-                    const oldValue = valuesRef.abyssFlowerStacks;
-                    valuesRef.abyssFlowerStacks = Math.min(2,oldValue + pointsGained);
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
 
-                    if (valuesRef.abyssFlowerStacks>=2 && !zoneIsActive && !valuesRef.zoneIsQueued) {
-                        valuesRef.zoneIsQueued = true;
+                    const passiveListeners = this.passiveListeners;
 
-                        const queueObject = this.queueObject ??= {
-                            name: this.listenerName,
-                            priority: priorityList.ability.CharacterBuffSelf,
-                            queueTag: "QueuedInsert",
 
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
-                            action: "Insert", 
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
-                            dontKeepNextWave: false,//ults always clear out
-                            isAttack: false,
-                            isAbility: true,
-                            useFUATriggers: false,
-                            useAnyTriggers: true,//no need to specify any eventType stuff here since the skill action itself has the pokes already
-                            eventTypeStartLOG: "GenericAbilityStart",
-                            eventTypeStart: "GenericAbilityStart",
-                            eventTypeEnd: "GenericAbilityEnd",
-                            
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+                    //talent inherent stuff
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
 
-                            target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                            elationForcedPunchline: null,
-                        }
-
-                        queueObject.sourceTurn = ownerTurn;
-                        queueInsertAbility(battleData,queueObject);
+                    //trace ccres
+                    let buffSheet = this.luochaCCRES ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.70,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
                     }
+                    updateBuff(battleData,ownerTurn,buffSheet)
 
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Abyss Flower (Luocha): ${oldValue} --> ${valuesRef.abyssFlowerStacks}/2 [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.luochaAbyssSummer ??= 0;
-                            ownerTurn.luochaAbyssSummer += valuesRef.abyssFlowerStacks - oldValue;
-                            // console.log(ownerTurn.saberSumResonance)
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "luochaAbyssSummer",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.abyssFlowerStacks,
-                            currentSumValue: ownerTurn.luochaAbyssSummer,
-                            currentAddedValue: valuesRef.abyssFlowerStacks - oldValue
-                        });
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
-                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                    
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Abyss Flower Handler",
+                "listenerName": "Luocha Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "luochaAbyssGained",
+                        condition(battleData,generalInfo) {
+                            // poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                            let ownerTurn = this.ownerTurn;
+                            // coreResonance
+                            //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                            const pointsGained = generalInfo.pointsGained;
+                            const valuesRef = ownerTurn.battleValues;
+                            const zoneIsActive = valuesRef.zoneIsActive;
+                            if (zoneIsActive && pointsGained > 0) {return;}
+        
+                            const oldValue = valuesRef.abyssFlowerStacks;
+                            valuesRef.abyssFlowerStacks = Math.min(2,oldValue + pointsGained);
+        
+                            if (valuesRef.abyssFlowerStacks>=2 && !zoneIsActive && !valuesRef.zoneIsQueued) {
+                                valuesRef.zoneIsQueued = true;
+        
+                                const queueObject = this.queueObject ??= {
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterBuffSelf,
+                                    queueTag: "QueuedInsert",
+        
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaAddZone,
+                                    action: "Insert", 
+                                    points: 0,
+                                    energyCost: null,
+                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                    // specialEnergyPoke: "SW999GainMMR",
+                                    
+                                    isEnhanced: false,
+                                    isTieBreaker: false,
+                                    isExtraTurn: false,
+                                    skipEXDisplay: false,
+                                    allowUlts: false,
+                                    decrementBuffs: false,
+                                    extraTurnHasChoice: false,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useFUATriggers: false,
+                                    useAnyTriggers: true,//no need to specify any eventType stuff here since the skill action itself has the pokes already
+                                    eventTypeStartLOG: "GenericAbilityStart",
+                                    eventTypeStart: "GenericAbilityStart",
+                                    eventTypeEnd: "GenericAbilityEnd",
+                                    
+                                    properName: ownerTurn.properName,
+                                    sourceTurn: null,
+                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+        
+                                    target: this.target,
+                                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+        
+                                    elationForcedPunchline: null,
+                                }
+        
+                                queueObject.sourceTurn = ownerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                            }
+        
+                            const sourceString = generalInfo.sourceString
+                            if (pointsGained && battleData.isLoggyLogger) {
+                                // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                                logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Abyss Flower (Luocha): ${oldValue} --> ${valuesRef.abyssFlowerStacks}/2 [${sourceString}]`});
+                                
+                                if (pointsGained > 0) {
+                                    ownerTurn.luochaAbyssSummer ??= 0;
+                                    ownerTurn.luochaAbyssSummer += valuesRef.abyssFlowerStacks - oldValue;
+                                    // console.log(ownerTurn.saberSumResonance)
+                                }
+                                logToBattle(battleData,{
+                                    logType: "SUMMARY:SUM",
+                                    function: "luochaAbyssSummer",
+                                    AV: battleData.sumAV,
+                                    currentValue: valuesRef.abyssFlowerStacks,
+                                    currentSumValue: ownerTurn.luochaAbyssSummer,
+                                    currentAddedValue: valuesRef.abyssFlowerStacks - oldValue
+                                });
+                            }
+                            if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                        },
+                        "target": "self",
+                        "listenerName": "Abyss Flower Handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.slotRef;
+        
+                            if (!ownerTurn.battleValues.zoneIsActive) {return;}
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            let buffSheet = ATKObjects.luochaE4WEAKENSHEET;
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E4 enemy created while zone active listener",
+                        "ownerTurn": {},
+                    },
+
+                ],
             },
             {
                 "trigger": "AttackDMGEnd",
@@ -10027,59 +10109,6 @@ const turnLogic = {
                 "listenerName": "Luocha - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    let buffSheet = this.buffSheet ??= {
-                        "stats": [CrowdControlRES],
-                        [CrowdControlRES]: 0.70,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
-                        "durationInTurn": null,
-                        "duration": null,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet)
-                },
-                "target": "self",
-                "listenerName": "The Cursed One - CC RES application",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Luocha Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -10102,26 +10131,7 @@ const turnLogic = {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "EnemyCreated",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let targetTurn = generalInfo.slotRef;
-    
-                        if (!ownerTurn.battleValues.zoneIsActive) {return;}
-    
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-    
-                        let buffSheet = ATKObjects.luochaE4WEAKENSHEET;
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    },
-                    "target": "enemy",
-                    "listenerName": "E4 enemy created while zone active listener",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
