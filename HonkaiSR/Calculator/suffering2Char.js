@@ -26709,7 +26709,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Firefly": {
+    "Firefly": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
 
@@ -27307,6 +27307,219 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent inherent
+                    //TODO: dr effect, honestly forgot to get it done
+                    //would use hpchange
+
+                    //energy regen
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //TODO: energy change listener, to dispel debuffs
+
+                    //e1    //part of combustion state
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+                    //e6    //part of combustion
+
+                    //trace core overload
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
+                        listenerToInject2.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Firefly Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+        
+                            const fiftyPercent = ownerTurn.maxEnergy * 0.5;
+                            const currentEnergy = ownerTurn.currentEnergy;
+                            const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
+        
+                            if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Firefly talent: energy regen on battleStart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "FireflyE2QueueExtraTurn",
+                        condition(battleData,generalInfo) {
+                            // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                            let ownerTurn = this.ownerTurn;
+                            
+                            const queueObject = this.queueObject ??= {
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedExtraTurn",
+    
+                                actionCall: sim.turnWrapper,
+                                action: "Extra Turn",
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: true,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: true,
+                                dontKeepNextWave: false,
+                                isAttack: false,
+                                isAbility: false,
+                                useFUATriggers: false,
+                                useAnyTriggers: false,
+                                eventTypeStartLOG: "ExtraTurnStart",
+                                eventTypeStart: "ExtraTurnStart",
+                                eventTypeEnd: "ExtraTurnEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: this.target,
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+    
+                                elationForcedPunchline: null,
+                            }
+                            queueObject.sourceTurn = ownerTurn;
+                            queueExtraTurn(battleData,queueObject);
+                        },
+                        "target": "self",
+                        "listenerName": "Firefly E2 - Queued Extra Turn",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const logicRefValues = ownerTurn.battleValues;
+                            if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
+        
+                            if (!logicRefValues.e2AdvanceCooldown) {
+                                logicRefValues.e2AdvanceCooldown = true;
+                                poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E2 From Shattered Sky, I Free Fall kill check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const logicRefValues = ownerTurn.battleValues;
+                            
+                            if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
+        
+                            if (!logicRefValues.e2AdvanceCooldown) {
+                                logicRefValues.e2AdvanceCooldown = true;
+                                poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E2 From Shattered Sky, I Free Fall Weakness Break check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const logicRefValues = ownerTurn.battleValues;
+    
+                            logicRefValues.e2AdvanceCooldown = false;
+                        },
+                        "target": "self",
+                        "listenerName": "E2 From Shattered Sky, I Free Fall cooldown increment",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatATK",//ATK stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,sourceTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Firefly Module γ: Core Overload ATK check",
+                        "ownerTurn": {},
+                    },
+
+                ],
+            },
+            {
                 "trigger": "hitWrapSuperBreakCall",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -27353,47 +27566,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Module α: Antilag Outburst - Countdown Delay",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-
-                    const fiftyPercent = ownerTurn.maxEnergy * 0.5;
-                    const currentEnergy = ownerTurn.currentEnergy;
-                    const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
-
-                    if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"Talent: Chrysalid Pyronexus");}
-                },
-                "target": "self",
-                "listenerName": "Firefly talent: energy regen on battleStart",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatATK",//ATK stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.name != ownerTurn.name) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,sourceTurn);
-                },
-                "target": "self",
-                "listenerName": "Firefly Module γ: Core Overload ATK check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Firefly Module γ: Core Overload battle start stat check trigger",
                 "ownerTurn": {},
             },
             {
@@ -27454,38 +27626,6 @@ const turnLogic = {
                 "listenerName": "Firefly - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Firefly Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -27523,115 +27663,7 @@ const turnLogic = {
         },
         "eidolonListeners": {
             1: [],
-            2: [
-                {
-                    "trigger": "FireflyE2QueueExtraTurn",
-                    condition(battleData,generalInfo) {
-                        // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
-                        let ownerTurn = this.ownerTurn;
-                        
-                        const queueObject = this.queueObject ??= {
-                            name: this.listenerName,
-                            priority: priorityList.turn.Default,
-                            queueTag: "QueuedExtraTurn",
-
-                            actionCall: sim.turnWrapper,
-                            action: "Extra Turn",
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: true,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: true,
-                            dontKeepNextWave: false,
-                            isAttack: false,
-                            isAbility: false,
-                            useFUATriggers: false,
-                            useAnyTriggers: false,
-                            eventTypeStartLOG: "ExtraTurnStart",
-                            eventTypeStart: "ExtraTurnStart",
-                            eventTypeEnd: "ExtraTurnEnd",
-
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                            elationForcedPunchline: null,
-                        }
-                        queueObject.sourceTurn = ownerTurn;
-                        queueExtraTurn(battleData,queueObject);
-                    },
-                    "target": "self",
-                    "listenerName": "Firefly E2 - Queued Extra Turn",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "EnemyDied",
-                    condition(battleData,generalInfo) {
-                        // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-    
-                        const logicRefValues = ownerTurn.battleValues;
-                        if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
-    
-                        if (!logicRefValues.e2AdvanceCooldown) {
-                            logicRefValues.e2AdvanceCooldown = true;
-                            poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "From Shattered Sky, I Free Fall kill check",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "BrokeEnemyWeakness",
-                    condition(battleData,generalInfo) {
-                        // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-    
-                        const logicRefValues = ownerTurn.battleValues;
-                        
-                        if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
-    
-                        if (!logicRefValues.e2AdvanceCooldown) {
-                            logicRefValues.e2AdvanceCooldown = true;
-                            poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "From Shattered Sky, I Free Fall Weakness Break check",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        // poke("BrokeEnemyWeakness",battleData,turnMerge);
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-    
-                        const logicRefValues = ownerTurn.battleValues;
-
-                        logicRefValues.e2AdvanceCooldown = false;
-                    },
-                    "target": "self",
-                    "listenerName": "From Shattered Sky, I Free Fall cooldown increment",
-                    "ownerTurn": {},
-                },
-            ],
+            2: [],
             3: [],
             4: [],
             5: [],
@@ -27656,7 +27688,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Hook": {
+    "Hook": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             // let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
