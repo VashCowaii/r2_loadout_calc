@@ -25077,7 +25077,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Blade": {
+    "Blade": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
 
@@ -25528,6 +25528,284 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace neverending
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace cyclone
+                    const buffSheet = this.bladeFUABuffSHEET ??= {
+                        "stats": [DamageFUA],
+                        [DamageFUA]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.fuaDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet);
+
+                    //talent inherents
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    }
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Blade Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [HealingIncoming],
+                                [HealingIncoming]: 0.20,
+                                "statsOnHit": null,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealing,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Neverending Deaths: battlestart inc healing bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const HPLost = generalInfo.HPLost
+                            const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
+                            bladeHPTallyFunction(battleData,ownerTurn,HPLost);
+                        },
+                        "target": "self",
+                        "listenerName": "Blade HP tally - hp lost listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const wasAttack = generalInfo.wasAttack;
+                            if (wasAttack && !ownerTurn.bladeReadyForAttackCharge) {return;}
+                            ownerTurn.bladeReadyForAttackCharge = false;
+                            //blade can only gain 1 charge from an attack, so we have to monitor and make sure that we don't do it every time he loses HP in a single attack
+        
+                            const valuesRef = ownerTurn.battleValues;
+                            const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
+                            const oldValue = valuesRef.charge;
+                            valuesRef.charge = Math.min(chargeCap,valuesRef.charge + 1);
+                            if (battleData.isLoggyLogger && oldValue != valuesRef.charge) {
+                                // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
+                                logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Blade): ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
+                            
+                                // if (pointsGained > 0) {
+                                    ownerTurn.bladeFUAStackSum ??= 0;
+                                    ownerTurn.bladeFUAStackSum += valuesRef.charge - oldValue;
+                                    
+                                // }
+                                logToBattle(battleData,{
+                                    logType: "SUMMARY:SUM",
+                                    function: "bladeFUAStackSum",
+                                    AV: battleData.sumAV,
+                                    currentValue: valuesRef.charge,
+                                    currentSumValue: ownerTurn.bladeFUAStackSum,
+                                    currentAddedValue: valuesRef.charge - oldValue
+                                });
+                            }
+                            
+                            if (valuesRef.charge === chargeCap && !ownerTurn.bladeFUAIsQueued) {
+                                ownerTurn.bladeFUAIsQueued = true;
+        
+                                const queueObject = this.queueObject ??= {
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterAttackFromSelf,
+                                    queueTag: "QueuedInsert",
+        
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
+                                    action: "Insert", 
+                                    points: 0,
+                                    energyCost: null,
+                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                    // specialEnergyPoke: "SW999GainMMR",
+                                    
+                                    isEnhanced: false,
+                                    isTieBreaker: false,
+                                    isExtraTurn: false,
+                                    skipEXDisplay: false,
+                                    allowUlts: false,
+                                    decrementBuffs: false,
+                                    extraTurnHasChoice: false,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: true,
+                                    isAbility: true,
+                                    useFUATriggers: true,
+                                    useAnyTriggers: true,
+                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    // eventTypeStart: "GenericAbilityStart",
+                                    // eventTypeEnd: "GenericAbilityEnd",
+        
+                                    properName: ownerTurn.properName,
+                                    sourceTurn: null,
+                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+        
+                                    target: this.target,
+                                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+        
+                                    elationForcedPunchline: null,
+                                }
+                                queueObject.sourceTurn =  ownerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Blade talent - charge from losing HP",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.isEnemy) {return;}
+                            
+                            ownerTurn.bladeReadyForAttackCharge = true;
+                        },
+                        "target": "self",
+                        "listenerName": "Blade talent - charge from being attacked reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HealEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.targetTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const totalHealed = generalInfo.totalHealed;
+                            const converted = 0.25 * totalHealed;
+        
+                            const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
+                            bladeHPTallyFunction(battleData,ownerTurn,converted);
+                        },
+                        "target": "self",
+                        "listenerName": "Blade was healed, HP tally modification",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            if (!this.bladeE4HPSHEET) {
+                                let characterName = sourceTurn.properName;
+                                let buffName = turnLogic[characterName].buffNames.e4HP;
+                                this.bladeE4HPSHEET = {
+                                    "stats": [HPP],
+                                    [HPP]: 0.20,
+                                    "source": "E4",
+                                    "sourceOwner": characterName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                            }
+        
+                            const HPLost = generalInfo.HPLost;
+                            const currentHP = ownerTurn.currentHP;
+                            const maxHP = ownerTurn.maxHP;
+                            const halfWayPoint = maxHP * 0.5;
+                            const wasAboveHalf = currentHP + HPLost > halfWayPoint;
+                            if (!wasAboveHalf) {return;}
+                            const isBelowHalf = currentHP <= halfWayPoint;
+                            if (!isBelowHalf) {return;}
+                            //we only want to evaluate moments when HP was above half, and was brought below or equal to half, otherwise we don't do anything
+        
+        
+                            const buffSheet = this.bladeE4HPSHEET;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                            const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+                            if (buffCheck.currentStacks === 2) {
+                                battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            }
+                            //once we've reached max stacks, remove the listener so it's not trying to evaluate every fucking hp loss in the rest of the battle
+                        },
+                        "target": "self",
+                        "listenerName": "E4 hp lost listener - hp buff application",
+                        "ownerTurn": {},
+                    }
+                ],
+            },
+            {
                 "trigger": "BladeSkillQueueExtraTurn",
                 condition(battleData,generalInfo) {
                     // poke("BladeSkillQueueExtraTurn",battleData,exoTurnRef);
@@ -25575,186 +25853,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Blade Skill Use - Queued Extra Turn",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyLostHP",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const HPLost = generalInfo.HPLost
-                    const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
-                    bladeHPTallyFunction(battleData,ownerTurn,HPLost);
-                },
-                "target": "self",
-                "listenerName": "Blade HP tally - hp lost listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyLostHP",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const wasAttack = generalInfo.wasAttack;
-                    if (wasAttack && !ownerTurn.bladeReadyForAttackCharge) {return;}
-                    ownerTurn.bladeReadyForAttackCharge = false;
-                    //blade can only gain 1 charge from an attack, so we have to monitor and make sure that we don't do it every time he loses HP in a single attack
-
-                    const valuesRef = ownerTurn.battleValues;
-                    const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
-                    const oldValue = valuesRef.charge;
-                    valuesRef.charge = Math.min(chargeCap,valuesRef.charge + 1);
-                    if (battleData.isLoggyLogger && oldValue != valuesRef.charge) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Blade): ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});
-                    
-                        // if (pointsGained > 0) {
-                            ownerTurn.bladeFUAStackSum ??= 0;
-                            ownerTurn.bladeFUAStackSum += valuesRef.charge - oldValue;
-                            
-                        // }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "bladeFUAStackSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.charge,
-                            currentSumValue: ownerTurn.bladeFUAStackSum,
-                            currentAddedValue: valuesRef.charge - oldValue
-                        });
-                    }
-                    
-                    if (valuesRef.charge === chargeCap && !ownerTurn.bladeFUAIsQueued) {
-                        ownerTurn.bladeFUAIsQueued = true;
-
-                        const queueObject = this.queueObject ??= {
-                            name: this.listenerName,
-                            priority: priorityList.ability.CharacterAttackFromSelf,
-                            queueTag: "QueuedInsert",
-
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
-                            action: "Insert", 
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
-                            dontKeepNextWave: false,//ults always clear out
-                            isAttack: true,
-                            isAbility: true,
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
-                            // eventTypeStartLOG: "GenericAbilityStart",
-                            // eventTypeStart: "GenericAbilityStart",
-                            // eventTypeEnd: "GenericAbilityEnd",
-
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                            elationForcedPunchline: null,
-                        }
-                        queueObject.sourceTurn =  ownerTurn;
-                        queueInsertAbility(battleData,queueObject);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Blade talent - charge from losing HP",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackStart",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (!sourceTurn.isEnemy) {return;}
-                    
-                    ownerTurn.bladeReadyForAttackCharge = true;
-                },
-                "target": "self",
-                "listenerName": "Blade talent - charge from being attacked reset",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "HealEnd",
-                condition(battleData,generalInfo) {
-                    // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.targetTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const totalHealed = generalInfo.totalHealed;
-                    const converted = 0.25 * totalHealed;
-
-                    const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
-                    bladeHPTallyFunction(battleData,ownerTurn,converted);
-                },
-                "target": "self",
-                "listenerName": "Blade was healed, HP tally modification",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [HealingIncoming],
-                        [HealingIncoming]: 0.20,
-                        "statsOnHit": null,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealing,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Neverending Deaths: battlestart inc healing bonus",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [DamageFUA],
-                        [DamageFUA]: 0.20,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.fuaDMG,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Cyclone of Destruction: battlestart FUA bonus",
                 "ownerTurn": {},
             },
             {
@@ -25814,34 +25912,6 @@ const turnLogic = {
                 "listenerName": "Blade - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Blade Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -25860,85 +25930,11 @@ const turnLogic = {
             "listenerName": "Blade Technique",
             "ownerTurn": {},
         },
-        "listenersToInjectLater": {
-            "e4BladeListener": {
-                "trigger": "AllyLostHP",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    if (!this.bladeE4HPSHEET) {
-                        let characterName = sourceTurn.properName;
-                        let buffName = turnLogic[characterName].buffNames.e4HP;
-                        this.bladeE4HPSHEET = {
-                            "stats": [HPP],
-                            [HPP]: 0.20,
-                            "source": "E4",
-                            "sourceOwner": characterName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 2,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                    }
-
-                    const HPLost = generalInfo.HPLost;
-                    const currentHP = ownerTurn.currentHP;
-                    const maxHP = ownerTurn.maxHP;
-                    const halfWayPoint = maxHP * 0.5;
-                    const wasAboveHalf = currentHP + HPLost > halfWayPoint;
-                    if (!wasAboveHalf) {return;}
-                    const isBelowHalf = currentHP <= halfWayPoint;
-                    if (!isBelowHalf) {return;}
-                    //we only want to evaluate moments when HP was above half, and was brought below or equal to half, otherwise we don't do anything
-
-
-                    const buffSheet = this.bladeE4HPSHEET;
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
-                    if (buffCheck.currentStacks === 2) {
-                        battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
-                    }
-                    //once we've reached max stacks, remove the listener so it's not trying to evaluate every fucking hp loss in the rest of the battle
-                },
-                "target": "self",
-                "listenerName": "E4 hp lost listener - hp buff application",
-                "ownerTurn": {},
-            },
-        },
         "eidolonListeners": {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        let characterName = ownerTurn.properName;
-    
-                        const logicRef = turnLogic[characterName];
-                        const ATKObjects = logicRef.ATKObjects;
-        
-        
-                        let attackEndings = battleData.battleListeners.AllyLostHP ??= [];
-                        
-                        const listenerToInejct = ATKObjects.e4BladeListener ??= logicRef.listenersToInjectLater.e4BladeListener;
-                        listenerToInejct.ownerTurn = ownerTurn;
-        
-                        attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
-                    },
-                    "target": "self",
-                    "listenerName": "Exalted Sweep: energy regen on battleStart",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
