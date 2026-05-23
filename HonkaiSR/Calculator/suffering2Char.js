@@ -6959,6 +6959,8 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
                             let ownerTurn = this.ownerTurn;
                             
                             let buffSheet = this.buffSheet ??= {
@@ -6988,6 +6990,7 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {
+                            //no wave check here
                             let ownerTurn = this.ownerTurn;
         
                             const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
@@ -7157,7 +7160,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //TODO: e2: ally revive shit, later when I allow for ally deaths
-    "Huohuo": {
+    "Huohuo": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -7553,34 +7556,212 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "UltimateEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
 
-                    const applyProvision = this.applyProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision;
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
 
-                    applyProvision(battleData,ownerTurn);
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+                    //talent trigger provision skill/ult
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace fearful to act
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //e2, later
+
+                    //trace cursed one
+                    let buffSheet = this.huohuoCCRes ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.35,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet)
+
+                    if (rank >= 4) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Apply Divine Provision - Ult end listener",
+                "listenerName": "Huohuo Passive",
                 "ownerTurn": {},
-            },
-            {
-                "trigger": "SkillEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                "passiveListeners": [
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const applyProvision = this.applyProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision;
+        
+                            applyProvision(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Apply Divine Provision - Ult end listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SkillEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const applyProvision = this.applyProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision;
+        
+                            applyProvision(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Apply Divine Provision - Skill end listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
 
-                    const applyProvision = this.applyProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision;
-
-                    applyProvision(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Apply Divine Provision - Skill end listener",
-                "ownerTurn": {},
+                            let ownerTurn = this.ownerTurn;
+                            updateEnergy(battleData,30,ownerTurn,false,"Fearful to Act");
+        
+                            const huohuoApplyDivineProvision = this.huohuoApplyDivineProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision
+                            huohuoApplyDivineProvision(battleData,ownerTurn,2);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Fearful to Act - battlestart Provision application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HealStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+    
+                            const bonusValue = 0.8 * (1 - hpRatio);
+                            
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [HealingOutgoing], 
+                                [HealingOutgoing]: bonusValue,
+                                "source": "E4",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e4Bonus,
+                                "durationInTurn": null,
+                                "duration": null,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Heal"],
+                            };
+                            const buffName = buffSheet.buffName;
+    
+                            const buffCheck = ownerTurn.buffsObject[buffName];
+    
+                            if (buffCheck) {
+                                if (hpRatio >= 1) {
+                                    removeBuff(battleData,ownerTurn,buffCheck);
+                                    return;
+                                }
+                                
+                                const currentBonus = buffCheck[HealingOutgoing];
+                                if (currentBonus === bonusValue) {return;}
+    
+                                removeBuff(battleData,ownerTurn,buffCheck);
+                            }
+    
+                            if (hpRatio >= 1) {return;}
+        
+                            buffSheet[HealingOutgoing] = bonusValue;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "E4 dynamic HP ratio healing bonus",
+                        "owners": []
+                    },
+                    {
+                        "trigger": "HealEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            // let characterName = ownerTurn.properName;
+        
+                            if (!this.e6DMGBuffSHEET) {
+                                const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                                this.e6DMGBuffSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: 0.50,
+                                    "source": "E6",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e6DMG,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+                            const buffSheet = this.e6DMGBuffSHEET;
+                            const targetTurn = generalInfo.targetTurn;
+                            updateBuff(battleData,targetTurn,buffSheet)
+                        },
+                        "target": "ally",
+                        "listenerName": "Woven Together, Cohere Forever - healed ally listener",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "StartTurn",
@@ -7608,19 +7789,6 @@ const turnLogic = {
                 },
                 "target": "allies",
                 "listenerName": "Divine Provision Healing controller (ultimate used)",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    updateEnergy(battleData,30,ownerTurn,false,"Fearful to Act");
-
-                    const huohuoApplyDivineProvision = this.huohuoApplyDivineProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision
-                    huohuoApplyDivineProvision(battleData,ownerTurn,2);
-                },
-                "target": "self",
-                "listenerName": "Fearful to Act - battlestart Provision application",
                 "ownerTurn": {},
             },
             {
@@ -7680,59 +7848,6 @@ const turnLogic = {
                 "listenerName": "Huohuo - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    let buffSheet = this.buffSheet ??= {
-                        "stats": [CrowdControlRES],
-                        [CrowdControlRES]: 0.35,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
-                        "durationInTurn": null,
-                        "duration": null,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet)
-                },
-                "target": "self",
-                "listenerName": "The Cursed One - CC RES application",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Huohuo Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -7755,98 +7870,9 @@ const turnLogic = {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "HealStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
-    
-                        const targetTurn = generalInfo.targetTurn;
-                        const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
-
-                        const bonusValue = 0.8 * (1 - hpRatio);
-                        
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [HealingOutgoing], 
-                            [HealingOutgoing]: bonusValue,
-                            "source": "E4",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4Bonus,
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Heal"],
-                        };
-                        const buffName = buffSheet.buffName;
-
-                        const buffCheck = ownerTurn.buffsObject[buffName];
-
-                        if (buffCheck) {
-                            if (hpRatio >= 1) {
-                                removeBuff(battleData,ownerTurn,buffCheck);
-                                return;
-                            }
-                            
-                            const currentBonus = buffCheck[HealingOutgoing];
-                            if (currentBonus === bonusValue) {return;}
-
-                            removeBuff(battleData,ownerTurn,buffCheck);
-                        }
-
-                        if (hpRatio >= 1) {return;}
-    
-                        buffSheet[HealingOutgoing] = bonusValue;
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "E4 dynamic HP ratio healing bonus",
-                    "owners": []
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "HealEnd",
-                    condition(battleData,generalInfo) {
-                        // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-                        // let characterName = ownerTurn.properName;
-    
-                        if (!this.e6DMGBuffSHEET) {
-                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
-                            this.e6DMGBuffSHEET = {
-                                "stats": [DamageAll],
-                                [DamageAll]: 0.50,
-                                "source": "E6",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffNames.e6DMG,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                        }
-                        const buffSheet = this.e6DMGBuffSHEET;
-                        const targetTurn = generalInfo.targetTurn;
-                        updateBuff(battleData,targetTurn,buffSheet)
-                    },
-                    "target": "ally",
-                    "listenerName": "Woven Together, Cohere Forever - healed ally listener",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {
@@ -12542,6 +12568,8 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
                             const ownerTurn = this.ownerTurn;
     
                             if (!this.E1FinalMultiDOTSHEET) {
@@ -12577,6 +12605,8 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
                             let ownerTurn = this.ownerTurn;
         
                             const addHysilensField = this.addHysilensField ??= turnLogic[ownerTurn.properName].skillFunctions.addHysilensField;
@@ -37227,6 +37257,9 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+
                             let ownerTurn = this.ownerTurn;
         
                             const charArray = battleData.fullCharacterArray;
@@ -39514,6 +39547,8 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
                             let ownerTurn = this.ownerTurn;
         
                             const elationCharacters = battleData.elationEntityArray.length;
