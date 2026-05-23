@@ -8639,8 +8639,8 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    //TODO: ult cleanse later  //TODO: CC RES, I think a stat exists for it but it doesn't get used anywhere yet //TODO: skill at e2 allowing debuff resistance? That's new
-    "Lynx": {
+    //TODO: ult cleanse later //TODO: skill at e2 allowing debuff resistance? That's new
+    "Lynx": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -8946,11 +8946,16 @@ const turnLogic = {
         },
         "listeners": [//skillHOT
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
                     const ATKObjects = logicRef.ATKObjects;
 
                     let skillRef = ATKObjects.lynxTalentREF ??= ATKObjects.Talent["Outdoor Survival Experience"].variant1;
@@ -8973,10 +8978,125 @@ const turnLogic = {
                         "decay": false,
                         "expireType": "EndTurn"
                     }
+
+
+                    //trace advanced survey
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace exploration
+                    let buffSheet = this.lynxCCRES ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.35,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet)
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Lynx define talent heal sheet/refs on battlestart",
+                "listenerName": "Lynx Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+        
+                            const survivalName = turnLogic[ownerTurn.properName].buffNames.skillHOT;
+        
+                            const allyTurns = battleData.nameBasedTurns;
+                            let totalAlliesHit = 0;
+                            for (let allyHit in targetsGotHit) {
+                                const currentAlly = allyTurns[allyHit];
+                                const buffCheck = currentAlly.buffsObject[survivalName];
+                                if (buffCheck) {totalAlliesHit++;}
+                            }
+        
+                            if (totalAlliesHit) {
+                                updateEnergy(battleData,2 * totalAlliesHit,ownerTurn,false,"Trace: Advance Surveying - Allies hit with Survival Response");
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Advance Surveying trace - allies hit with skill buff",
+                        "owners": []
+                    },
+                    {
+                        "trigger": "HealStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want lynx's healing, not anyone else's
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                            const hpThreshold = 0.50;
+                            
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [HealingOutgoing], 
+                                [HealingOutgoing]: 0.20,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.E1Outgoing,
+                                "durationInTurn": null,
+                                "duration": null,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Heal"],
+                            };
+        
+                            if (hpRatio <= hpThreshold) {
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                            else {
+                                removeBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Lynx E1 <=50%HP Healing bonus",
+                        "owners": []
+                    },
+
+                ],
             },
             {
                 "trigger": "StartTurn",
@@ -9031,36 +9151,8 @@ const turnLogic = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Natasha - E2/Skill HoT turnstart listener",
+                "listenerName": "Lynx - E2/Skill HoT turnstart listener",
                 "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-
-                    const survivalName = turnLogic[ownerTurn.properName].buffNames.skillHOT;
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    let totalAlliesHit = 0;
-                    for (let allyHit in targetsGotHit) {
-                        const currentAlly = allyTurns[allyHit];
-                        const buffCheck = currentAlly.buffsObject[survivalName];
-                        if (buffCheck) {totalAlliesHit++;}
-                    }
-
-                    if (totalAlliesHit) {
-                        updateEnergy(battleData,2 * totalAlliesHit,ownerTurn,false,"Trace: Advance Surveying - Allies hit with Survival Response");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Advance Surveying trace - allies hit with skill buff",
-                "owners": []
             },
             {
                 "trigger": "UltimateReady",
@@ -9119,34 +9211,6 @@ const turnLogic = {
                 "listenerName": "Lynx - Ultimate queued - Ultimate",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Lynx Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -9166,47 +9230,7 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "HealStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want lynx's healing, not anyone else's
-    
-                        const targetTurn = generalInfo.targetTurn;
-                        const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
-                        const hpThreshold = 0.50;
-                        
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [HealingOutgoing], 
-                            [HealingOutgoing]: 0.20,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.E1Outgoing,
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Heal"],
-                        };
-    
-                        if (hpRatio <= hpThreshold) {
-                            updateBuff(battleData,ownerTurn,buffSheet);
-                        }
-                        else {
-                            removeBuff(battleData,ownerTurn,buffSheet);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Lynx E1 <=50%HP Healing bonus",
-                    "owners": []
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
@@ -9224,6 +9248,7 @@ const turnLogic = {
             "talentHOT": "Lynx Talent Heal-Over-Time",
             "E1Outgoing": "E1: Morning of Snow Hike",
             "E4Attack": "E4: Dusk of Warm Campfire",
+            "ccRES": "Exploration Techniques",
         },
         "characterValuesBattle": {},
     },
