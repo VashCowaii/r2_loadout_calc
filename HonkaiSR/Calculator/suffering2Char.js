@@ -15328,7 +15328,7 @@ const turnLogic = {
                         // && !dimensionUsed
                         && battleData.techniquesAllowed) {
 
-                        battleData.dimensionTechniqueUsed = true;
+                        // battleData.dimensionTechniqueUsed = true;
                         battleData.attackTechniqueUsed = true;
 
                         const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
@@ -36086,7 +36086,7 @@ const turnLogic = {
 
 
     //Erudition
-    "Argenti": {
+    "Argenti": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -36386,6 +36386,151 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //ult energy selection binding, technically unused rn due to the special cost function
+
+                    //e2 part of ult
+
+                    //e4
+                    if (rank >= 4) {
+                        const e4Poker = this.e4Poker ??= {pointsGained: 2,sourceString:"Turn Start"};
+                        poke("ArgentiGainApotheosis",battleData,e4Poker);
+                        //I know this says turnstart, but the string here is used to block energy gain
+                        //and since E4 doesn't gain energy with these 2 stacks, we use the same string param
+                    }
+
+                    //trace piety
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace generosity
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e6
+                    if (rank >= 6) {
+                        const buffSheet = this.argentiE6Sheet ??= {
+                            "stats": [DEFShredUltimate],
+                            [DEFShredUltimate]: 0.30,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Shred,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Argenti Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (ownerTurn.turnState) {
+                                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"});
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Argenti Piety trace turnstart stack gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // if (!ownerTurn.battleValues.bondmateSlot) {return;}
+        
+                            updateEnergy(battleData,2,ownerTurn,false,"Generosity (Argenti)");
+                        },
+                        "target": "enemy",
+                        "listenerName": "Argenti Generosity trace energy regen per enemy added to field",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+        
+                            // let skillRef = ATKObjects.natashaTalentREF ??= ATKObjects.Talent["Innervation"].variant1;
+                            // const logicRef = turnLogic[sourceTurn.properName];
+                            // const ATKObjects = logicRef.ATKObjects;
+                            // let values = ATKObjects.natashaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,ATKObjects.Talent["Innervation"].variant1,ownerTurn);
+                            const hpThreshold = 0.5;
+                            
+                            let buffSheet = this.buffSheet ??= {
+                                "statsOnHit": [DamageAll], 
+                                [DamageAll]: 0.15,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.traceDMGUp,
+                                "durationInTurn": null,
+                                "duration": null,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            };
+        
+                            if (hpRatio <= hpThreshold) {
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                            else {
+                                removeBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Argenti Trace Courage <=50%HP DMG% bonus",
+                        "owners": []
+                    },
+
+                ],
+            },
+            {
                 "trigger": "ArgentiGainApotheosis",
                 condition(battleData,generalInfo) {
                     // poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -36469,76 +36614,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    // let sourceTurn = generalInfo.sourceTurn;
-
-                    if (ownerTurn.turnState) {
-                        poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Argenti Piety trace turnstart stack gain",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EnemyCreated",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // if (!ownerTurn.battleValues.bondmateSlot) {return;}
-
-                    updateEnergy(battleData,2,ownerTurn,false,"Generosity (Argenti)");
-                },
-                "target": "enemy",
-                "listenerName": "Argenti Generosity trace energy regen per enemy added to field",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyDMGStart",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
-
-                    const targetTurn = generalInfo.targetTurn;
-                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
-
-                    // let skillRef = ATKObjects.natashaTalentREF ??= ATKObjects.Talent["Innervation"].variant1;
-                    // const logicRef = turnLogic[sourceTurn.properName];
-                    // const ATKObjects = logicRef.ATKObjects;
-                    // let values = ATKObjects.natashaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,ATKObjects.Talent["Innervation"].variant1,ownerTurn);
-                    const hpThreshold = 0.5;
-                    
-                    let buffSheet = this.buffSheet ??= {
-                        "stats": [DamageAll], 
-                        [DamageAll]: 0.15,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceDMGUp,
-                        "durationInTurn": null,
-                        "duration": null,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    };
-
-                    if (hpRatio <= hpThreshold) {
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    }
-                    else {
-                        removeBuff(battleData,ownerTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Argenti Trace Courage <=50%HP DMG% bonus",
-                "owners": []
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -36594,31 +36669,6 @@ const turnLogic = {
                 "listenerName": "Argenti - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Argenti Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -36641,52 +36691,9 @@ const turnLogic = {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // let characterName = ownerTurn.properName;
-                        // let sourceTurn = generalInfo.sourceTurn;
-    
-                        poke("ArgentiGainApotheosis",battleData,{pointsGained: 2,sourceString:"Turn Start"});
-                        //I know this says turnstart, but the string here is used to block energy gain
-                        //and since E4 doesn't gain energy with these 2 stacks, we use the same string param
-                    },
-                    "target": "self",
-                    "listenerName": "E4 Battlestart 2stack gain",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // greatTableIndex
-                        // greatTableKeys
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DEFShredUltimate],
-                            [DEFShredUltimate]: 0.30,
-                            "source": ownerTurn.properName,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Shred,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Argenti E6 ult shred",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
