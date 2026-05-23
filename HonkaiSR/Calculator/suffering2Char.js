@@ -35143,7 +35143,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Aventurine": {
+    "Aventurine": {///PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -35678,6 +35678,256 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent inherent
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace hothand
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace bingo
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //trace leverage
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    if (rank >= 4) {
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 6) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Aventurine Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "ShieldWasHit",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                            let ownerTurn = this.ownerTurn;
+                            const currentShield = generalInfo.currentShield;
+        
+                            if (currentShield.shieldClass != "Fortified Wager") {return;}//if this isn't fortified wager getting hit, then abort
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const stacksToGain = sourceTurn.properName === ownerTurn.properName ? 2 : 1;
+                            poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"});
+                        },
+                        "target": "self",
+                        "listenerName": "Wager shield hit",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+
+                            let ownerTurn = this.ownerTurn;
+                            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Major Trace: Hot Hand", bodyText: `Battlestart shield application`});}
+                            const aventurineSkillShield = this.aventurineSkillShield ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineSkillShield;
+                            aventurineSkillShield(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "priority": -79,
+                        "listenerName": "Hot Hand battle start stat shield application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "FUAEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                            let ownerTurn = this.ownerTurn;
+                            // const currentShield = generalInfo.currentShield;
+                            // let generalInfo = {sourceTurn,actionName};
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName === ownerTurn.properName) {return;}//it doesn't count av himself for this, which is odd frankly
+        
+        
+                            // const isBattleEvent = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            let shieldRef = ATKObjects.aventurineSkillShieldSHIELDSHEET;
+                            if (!shieldRef) {return;}
+                            // ownerTurn.aventurineSkillShieldSHIELDSHEET.buffName
+                            let shieldCheck = sourceTurn.buffsObject[shieldRef.buffName];
+                            const valuesRef = ownerTurn.battleValues;
+        
+                            if (shieldCheck && valuesRef.allyFUABetCounter < 3) {//if the ally had fortified wager and launched a fua, get a point
+                                valuesRef.allyFUABetCounter += 1;//resets on av turnstart
+                                poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"Ally launched FUA"});
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Bingo! ally FUA listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//only av's turn start will reset it
+        
+                            const valuesRef = ownerTurn.battleValues;
+        
+                            valuesRef.allyFUABetCounter = 0;
+                        },
+                        "target": "self",
+                        "listenerName": "Ally fua counter reset for Bingo!",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatDEF",//DEF stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,sourceTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Leverage DEF check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "FUAStart",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                            let ownerTurn = this.ownerTurn;
+                            // const currentShield = generalInfo.currentShield;
+                            // let generalInfo = {sourceTurn,actionName};
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//has to be him
+    
+                            if (!this.e4fuaDEFSHEET) {
+                                const characterName = ownerTurn.properName
+                                buffName = turnLogic[characterName].buffNames.e4DEFBuff;
+                                this.e4fuaDEFSHEET = {
+                                    "stats": [DEFP],
+                                    [DEFP]: 0.40,
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+                            const buffSheet = this.e4fuaDEFSHEET;
+    
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Bingo! ally FUA listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ShieldEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
+                            let ownerTurn = this.ownerTurn;
+                            // const currentShield = generalInfo.currentShield;
+                            // let generalInfo = {sourceTurn,actionName};
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+    
+    
+    
+                            const allyPositions = battleData.allyPositions;
+    
+                            let shieldsFound = 0;
+                            for (let ally of allyPositions) {
+                                if (ally.properName === ownerTurn.properName) {continue;}
+                                if (ally.shieldCounter) {shieldsFound += 1;}
+                            }
+    
+                            const aventurineE6DMGHandler = this.aventurineE6DMGHandler ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineE6DMGHandler;
+                            aventurineE6DMGHandler(battleData,shieldsFound,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Stag Hunt Game shields listener (application)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ShieldsWereBroken",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
+                            let ownerTurn = this.ownerTurn;
+                            // const currentShield = generalInfo.currentShield;
+                            // let generalInfo = {sourceTurn,actionName};
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+    
+    
+    
+                            const allyPositions = battleData.allyPositions;
+    
+                            let shieldsFound = 0;
+                            for (let ally of allyPositions) {
+                                if (ally.properName === ownerTurn.properName) {continue;}
+                                if (ally.shieldCounter) {shieldsFound += 1;}
+                            }
+    
+                            const aventurineE6DMGHandler = this.aventurineE6DMGHandler ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineE6DMGHandler;
+                            aventurineE6DMGHandler(battleData,shieldsFound,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Stag Hunt Game shields listener (removal)",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "aventurineBetGained",
                 condition(battleData,generalInfo) {
                     // poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -35764,107 +36014,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "ShieldWasHit",
-                condition(battleData,generalInfo) {
-                    // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
-                    let ownerTurn = this.ownerTurn;
-                    const currentShield = generalInfo.currentShield;
-
-                    if (currentShield.shieldClass != "Fortified Wager") {return;}//if this isn't fortified wager getting hit, then abort
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const stacksToGain = sourceTurn.properName === ownerTurn.properName ? 2 : 1;
-                    poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"});
-                },
-                "target": "self",
-                "listenerName": "Leverage battle start stat check trigger",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "FUAEnd",
-                condition(battleData,generalInfo) {
-                    // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
-                    let ownerTurn = this.ownerTurn;
-                    // const currentShield = generalInfo.currentShield;
-                    // let generalInfo = {sourceTurn,actionName};
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName === ownerTurn.properName) {return;}//it doesn't count av himself for this, which is odd frankly
-
-
-                    // const isBattleEvent = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
-
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    let shieldRef = ATKObjects.aventurineSkillShieldSHIELDSHEET;
-                    if (!shieldRef) {return;}
-                    // ownerTurn.aventurineSkillShieldSHIELDSHEET.buffName
-                    let shieldCheck = sourceTurn.buffsObject[shieldRef.buffName];
-                    const valuesRef = ownerTurn.battleValues;
-
-                    if (shieldCheck && valuesRef.allyFUABetCounter < 3) {//if the ally had fortified wager and launched a fua, get a point
-                        valuesRef.allyFUABetCounter += 1;//resets on av turnstart
-                        poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"Ally launched FUA"});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Bingo! ally FUA listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    const ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}//only av's turn start will reset it
-
-                    const valuesRef = ownerTurn.battleValues;
-
-                    valuesRef.allyFUABetCounter = 0;
-                },
-                "target": "self",
-                "listenerName": "Ally fua counter reset for Bingo!",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Major Trace: Hot Hand", bodyText: `Battlestart shield application`});}
-                    const aventurineSkillShield = this.aventurineSkillShield ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineSkillShield;
-                    aventurineSkillShield(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Hot Hand battle start stat shield application",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatDEF",//DEF stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.name != ownerTurn.name) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,sourceTurn);
-                },
-                "target": "self",
-                "listenerName": "Leverage DEF check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Leverage battle start stat check trigger",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -35921,31 +36070,6 @@ const turnLogic = {
                 "listenerName": "Aventurine - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Aventurine Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -35968,101 +36092,9 @@ const turnLogic = {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "FUAStart",
-                    condition(battleData,generalInfo) {
-                        // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
-                        let ownerTurn = this.ownerTurn;
-                        // const currentShield = generalInfo.currentShield;
-                        // let generalInfo = {sourceTurn,actionName};
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}//has to be him
-
-                        if (!this.e4fuaDEFSHEET) {
-                            const characterName = ownerTurn.properName
-                            buffName = turnLogic[characterName].buffNames.e4DEFBuff;
-                            this.e4fuaDEFSHEET = {
-                                "stats": [DEFP],
-                                [DEFP]: 0.40,
-                                "source": characterName,
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                        }
-                        const buffSheet = this.e4fuaDEFSHEET;
-
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Bingo! ally FUA listener",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "ShieldEnd",
-                    condition(battleData,generalInfo) {
-                        // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
-                        let ownerTurn = this.ownerTurn;
-                        // const currentShield = generalInfo.currentShield;
-                        // let generalInfo = {sourceTurn,actionName};
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-
-
-
-                        const allyPositions = battleData.allyPositions;
-
-                        let shieldsFound = 0;
-                        for (let ally of allyPositions) {
-                            if (ally.properName === ownerTurn.properName) {continue;}
-                            if (ally.shieldCounter) {shieldsFound += 1;}
-                        }
-
-                        const aventurineE6DMGHandler = this.aventurineE6DMGHandler ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineE6DMGHandler;
-                        aventurineE6DMGHandler(battleData,shieldsFound,ownerTurn);
-                    },
-                    "target": "self",
-                    "listenerName": "Stag Hunt Game shields listener (application)",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "ShieldsWereBroken",
-                    condition(battleData,generalInfo) {
-                        // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
-                        let ownerTurn = this.ownerTurn;
-                        // const currentShield = generalInfo.currentShield;
-                        // let generalInfo = {sourceTurn,actionName};
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-
-
-
-                        const allyPositions = battleData.allyPositions;
-
-                        let shieldsFound = 0;
-                        for (let ally of allyPositions) {
-                            if (ally.properName === ownerTurn.properName) {continue;}
-                            if (ally.shieldCounter) {shieldsFound += 1;}
-                        }
-
-                        const aventurineE6DMGHandler = this.aventurineE6DMGHandler ??= turnLogic[ownerTurn.properName].skillFunctions.aventurineE6DMGHandler;
-                        aventurineE6DMGHandler(battleData,shieldsFound,ownerTurn);
-                    },
-                    "target": "self",
-                    "listenerName": "Stag Hunt Game shields listener (removal)",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {
