@@ -24091,7 +24091,7 @@ const turnLogic = {
     },
     
     //Destruction
-    "Saber": {
+    "Saber": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
@@ -24482,6 +24482,359 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent inherents
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+
+
+                    //trace knight of the dragon
+                    const buffSheet = this.saberCritRateSHEET ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet);
+
+                    const buffSheet2 = this.saberManaBurstSHEET ??= {
+                        "stats": null,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.mana,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    const ATKObjects = logicRef.ATKObjects;
+                    ATKObjects.saberManaBurstNULLSHEET = buffSheet2;
+                    updateBuff(battleData,ownerTurn,buffSheet2);
+
+                    //trace blessing overflow handler
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //trace crown of the star   part of core reso handler
+
+                    //talent advance handler
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const buffSheet = this.saberE1BuffSHEET ??= {
+                            "stats": [DamageUltimate],
+                            [DamageUltimate]: 0.60,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    }
+                    
+                    //e4
+                    if (rank >= 4) {
+                        const buffSheet = this.saberE4Sheet ??= {
+                            "stats": [ResistanceWindPEN],
+                            [ResistanceWindPEN]: 0.08,
+                            "statsOnHit": null,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4Pen,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const buffSheet = this.saberE6SHEET ??= {
+                            "stats": [ResistanceUltimatePEN],
+                            [ResistanceUltimatePEN]: 0.20,
+                            "source": ownerTurn.properName,
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Pen,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Saber Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UltimateStart",
+                        condition(battleData,generalInfo) {
+                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
+                            const ownerTurn = this.ownerTurn;
+                            //NEVER need to check the source turn on this, bc this works if ANY ally uses an ultimate
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            if (!ATKObjects.saberDragonCoreDMGSHEET) {
+                                let skillRef = ATKObjects.saberTalentREF ??= ATKObjects["Talent"]["Dragon Reactor Core"].variant1;
+                                let values = ATKObjects.saberTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                                const characterName = ownerTurn.properName;
+                                const logicRef = turnLogic[characterName];
+                                const buffNames = logicRef.buffNames;
+        
+                                const buffName = buffNames.dragonCore;
+                                // greatTableIndex
+                                // greatTableKeys
+                                ATKObjects.saberDragonCoreDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: values[2],
+                                    "source": "Dragon Reactor Core",
+                                    "sourceOwner": characterName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            const buffSheet = ATKObjects.saberDragonCoreDMGSHEET;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+        
+                            const generalInfo2 = this.generalInfo2 ??= {pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"};
+                            poke("SaberGainCoreResonance",battleData,generalInfo2);
+                        },
+                        "target": "self",
+                        "listenerName": "Dragon Reactor Core ult listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+                            //kinda pepega to have a listener that exists to poke another listener, but it be like that
+                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"Dragon Reactor Core: Battlestart"});
+        
+                            const sixtyPercent = ownerTurn.maxEnergy * 0.6;
+                            const currentEnergy = ownerTurn.currentEnergy;
+                            const energyToRegen = currentEnergy < sixtyPercent ? sixtyPercent-currentEnergy : 0;
+        
+                            if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"Blessing of the Lake");}
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Dragon Reactor Core battlestart +1 Resonance / blessing of the lake start regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnergyChanged",
+                        condition(battleData,generalInfo) {
+                            // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                            const ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+                            
+        
+                            const overflow = generalInfo.overFill;
+                            if (overflow) {
+                                // const characterName = ownerTurn.properName;
+                                // const logicRef = turnLogic[characterName];
+                                const valuesRef = ownerTurn.battleValues;
+                                const rank = ownerTurn.rank;
+                                // overflowEnergy
+                                const oldAmount = valuesRef.overflowEnergy;
+                                const cap = rank>=6 ? 200 : 120;
+                                valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
+                                const amountGained = valuesRef.overflowEnergy - oldAmount;
+                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
+        
+        
+                                if (battleData.isLoggyLogger) {
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
+                                
+                                    if (valuesRef.overflowEnergy > oldAmount) {
+                                        ownerTurn.saberOverflowSummer ??= 0;
+                                        ownerTurn.saberOverflowSummer += amountGained;
+                                        // console.log(ownerTurn.saberSumResonance)
+                                    }
+                                    logToBattle(battleData,{
+                                        logType: "SUMMARY:SUM",
+                                        function: "saberOverflowSummer",
+                                        AV: battleData.sumAV,
+                                        currentValue: valuesRef.overflowEnergy,
+                                        currentSumValue: ownerTurn.saberOverflowSummer,
+                                        currentAddedValue: amountGained
+                                    });
+                                }
+                            }
+        
+                            poke("SaberGainCoreResonance",battleData,{pointsGained: 0,sourceString:null});//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                        },
+                        "target": "self",
+                        "listenerName": "Blessing of the Lake Overflow",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ActionEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                            const ownerTurn = this.ownerTurn;
+                            const battleValues = ownerTurn.battleValues;
+                            if (!battleValues.waitingToAdvance) {return;}
+                            actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
+                            battleValues.waitingToAdvance = false;
+                        },
+                        "target": "self",
+                        "listenerName": "Blessing of the Lake Overflow",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BasicATKEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"});
+                            //was really tempted to slap this into an AttackEnd listener instead to bundle both together
+                            //but realistically, processing-wise it's better to just stick to the specific skill-type listeners
+                            //instead of checking every fucking attack including follow-ups, ults, etc
+                        },
+                        "target": "self",
+                        "listenerName": "The Lost White Walls Basic listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SkillEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"});
+                            //was really tempted to slap this into an AttackEnd listener instead to bundle both together
+                            //but realistically, processing-wise it's better to just stick to the specific skill-type listeners
+                            //instead of checking every fucking attack including follow-ups, ults, etc
+    
+                            //also considered just putting these inside each skill function, but would rather keep these in the eido bracket(for now, at least, might change my mind later)
+                        },
+                        "target": "self",
+                        "listenerName": "The Lost White Walls Skill listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+    
+                            if (!this.saberSagaSixteenDaysPENSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const buffName = logicRef.buffNames.e4PenStack
+                                // greatTableIndex
+                                // greatTableKeys
+                                this.saberSagaSixteenDaysPENSHEET = {
+                                    "stats": [ResistanceWindPEN],
+                                    [ResistanceWindPEN]: 0.04,
+                                    "statsOnHit": null,
+                                    "source": "E4",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                            }
+    
+                            const buffSheet = this.saberSagaSixteenDaysPENSHEET;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                            //TODO: listener self removal later
+                            //also make sure I addressed the issue about removing a listener mid poke and the array length not reflecting in the for let i= loops
+                        },
+                        "target": "self",
+                        "listenerName": "The Saga of Sixteen Winter Days ult listener",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "SaberGainCoreResonance",
                 condition(battleData,generalInfo) {
                     // poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -24607,185 +24960,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "ActionEnd",
-                condition(battleData,generalInfo) {
-                    // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
-                    const ownerTurn = this.ownerTurn;
-                    const battleValues = ownerTurn.battleValues;
-                    if (!battleValues.waitingToAdvance) {return;}
-                    actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
-                    battleValues.waitingToAdvance = false;
-                },
-                "target": "self",
-                "listenerName": "Blessing of the Lake Overflow",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EnergyChanged",
-                condition(battleData,generalInfo) {
-                    // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
-                    const ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.name != ownerTurn.name) {return;}
-                    
-
-                    const overflow = generalInfo.overFill;
-                    if (overflow) {
-                        // const characterName = ownerTurn.properName;
-                        // const logicRef = turnLogic[characterName];
-                        const valuesRef = ownerTurn.battleValues;
-                        const rank = ownerTurn.rank;
-                        // overflowEnergy
-                        const oldAmount = valuesRef.overflowEnergy;
-                        const cap = rank>=6 ? 200 : 120;
-                        valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
-                        const amountGained = valuesRef.overflowEnergy - oldAmount;
-                        // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
-
-
-                        if (battleData.isLoggyLogger) {
-                            logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
-                        
-                            if (valuesRef.overflowEnergy > oldAmount) {
-                                ownerTurn.saberOverflowSummer ??= 0;
-                                ownerTurn.saberOverflowSummer += amountGained;
-                                // console.log(ownerTurn.saberSumResonance)
-                            }
-                            logToBattle(battleData,{
-                                logType: "SUMMARY:SUM",
-                                function: "saberOverflowSummer",
-                                AV: battleData.sumAV,
-                                currentValue: valuesRef.overflowEnergy,
-                                currentSumValue: ownerTurn.saberOverflowSummer,
-                                currentAddedValue: amountGained
-                            });
-                        }
-                    }
-
-                    poke("SaberGainCoreResonance",battleData,{pointsGained: 0,sourceString:null});//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
-                },
-                "target": "self",
-                "listenerName": "Blessing of the Lake Overflow",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UltimateStart",
-                condition(battleData,generalInfo) {
-                    // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
-                    const ownerTurn = this.ownerTurn;
-                    //NEVER need to check the source turn on this, bc this works if ANY ally uses an ultimate
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    if (!ATKObjects.saberDragonCoreDMGSHEET) {
-                        let skillRef = ATKObjects.saberTalentREF ??= ATKObjects["Talent"]["Dragon Reactor Core"].variant1;
-                        let values = ATKObjects.saberTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-                        const characterName = ownerTurn.properName;
-                        const logicRef = turnLogic[characterName];
-                        const buffNames = logicRef.buffNames;
-
-                        const buffName = buffNames.dragonCore;
-                        // greatTableIndex
-                        // greatTableKeys
-                        ATKObjects.saberDragonCoreDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: values[2],
-                            "source": "Dragon Reactor Core",
-                            "sourceOwner": characterName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-                    }
-                    const buffSheet = ATKObjects.saberDragonCoreDMGSHEET;
-                    updateBuff(battleData,ownerTurn,buffSheet);
-
-                    const generalInfo2 = this.generalInfo2 ??= {pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"};
-                    poke("SaberGainCoreResonance",battleData,generalInfo2);
-                },
-                "target": "self",
-                "listenerName": "Dragon Reactor Core ult listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [CritRateBase],
-                        [CritRateBase]: 0.20,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCritRate,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet);
-
-                    const buffSheet2 = this.buffSheet2 ??= {
-                        "stats": null,
-                        "statsOnHit": null,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.mana,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    }
-
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-                    
-                    ATKObjects.saberManaBurstNULLSHEET = buffSheet2;
-                    updateBuff(battleData,ownerTurn,buffSheet2);
-                },
-                "target": "self",
-                "listenerName": "Knight of the Dragon battlestart Crit Rate/Mana Burst",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    // let ownerTurn = this.ownerTurn;
-                    //kinda pepega to have a listener that exists to poke another listener, but it be like that
-                    poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"Dragon Reactor Core: Battlestart"});
-                },
-                "target": "self",
-                "listenerName": "Dragon Reactor Core battlestart +1 Resonance",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-
-                    const sixtyPercent = ownerTurn.maxEnergy * 0.6;
-                    const currentEnergy = ownerTurn.currentEnergy;
-                    const energyToRegen = currentEnergy < sixtyPercent ? sixtyPercent-currentEnergy : 0;
-
-                    if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"Blessing of the Lake");}
-                },
-                "target": "self",
-                "listenerName": "Blessing of the Lake: energy regen on battleStart",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -24841,34 +25015,6 @@ const turnLogic = {
                 "listenerName": "Saber - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Saber Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -24888,165 +25034,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // greatTableIndex
-                        // greatTableKeys
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageUltimate],
-                            [DamageUltimate]: 0.60,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "The Lost White Walls Ult DMG",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "BasicATKEnd",
-                    condition(battleData,generalInfo) {
-                        // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-                        poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"});
-                        //was really tempted to slap this into an AttackEnd listener instead to bundle both together
-                        //but realistically, processing-wise it's better to just stick to the specific skill-type listeners
-                        //instead of checking every fucking attack including follow-ups, ults, etc
-                    },
-                    "target": "self",
-                    "listenerName": "The Lost White Walls Basic listener",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "SkillEnd",
-                    condition(battleData,generalInfo) {
-                        // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-                        poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"});
-                        //was really tempted to slap this into an AttackEnd listener instead to bundle both together
-                        //but realistically, processing-wise it's better to just stick to the specific skill-type listeners
-                        //instead of checking every fucking attack including follow-ups, ults, etc
-
-                        //also considered just putting these inside each skill function, but would rather keep these in the eido bracket(for now, at least, might change my mind later)
-                    },
-                    "target": "self",
-                    "listenerName": "The Lost White Walls Skill listener",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [ResistanceWindPEN],
-                            [ResistanceWindPEN]: 0.08,
-                            "statsOnHit": null,
-                            "source": "E4",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4Pen,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "The Saga of Sixteen Winter Days battlestart RES PEN",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "UltimateEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-
-                        if (!this.saberSagaSixteenDaysPENSHEET) {
-                            const logicRef = turnLogic[ownerTurn.properName];
-                            const buffName = logicRef.buffNames.e4PenStack
-                            // greatTableIndex
-                            // greatTableKeys
-                            this.saberSagaSixteenDaysPENSHEET = {
-                                "stats": [ResistanceWindPEN],
-                                [ResistanceWindPEN]: 0.04,
-                                "statsOnHit": null,
-                                "source": "E4",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 3,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                            }
-                        }
-
-                        const buffSheet = this.saberSagaSixteenDaysPENSHEET;
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                        //TODO: listener self removal later
-                        //also make sure I addressed the issue about removing a listener mid poke and the array length not reflecting in the for let i= loops
-                    },
-                    "target": "self",
-                    "listenerName": "The Saga of Sixteen Winter Days ult listener",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // greatTableIndex
-                        // greatTableKeys
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [ResistanceUltimatePEN],
-                            [ResistanceUltimatePEN]: 0.20,
-                            "source": ownerTurn.properName,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6Pen,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "The Long Fated Night Ult RES PEN",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
