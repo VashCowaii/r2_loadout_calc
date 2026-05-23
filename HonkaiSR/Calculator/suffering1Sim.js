@@ -1147,10 +1147,11 @@ const sim = {
         const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
 
         if (isLoggyLogger) {logToBattle(battleData,{logType: "PassiveCalls"});}
+        poke("EntityConstruction",battleData);
         poke("PassiveCalls",battleData);
 
         
-        poke("EntityConstruction",battleData);
+        
         poke("ElationInitialize",battleData);
         const updateEnergy = battleActions.updateEnergy;
         for (let targetTurn of battleData.allyPositions) {

@@ -33940,10 +33940,8 @@ const turnLogic = {
                     skillFunctions.addDragonToOrder(battleData,sourceTurn,char1);
                     sourceTurn.battleValues.bondmateSlot = char1.name;
                 }
-                
-                skillFunctions.bondmateATKConversion(battleData,sourceTurn,char1);
-                
 
+                skillFunctions.bondmateATKConversion(battleData,sourceTurn,char1);
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
@@ -34004,9 +34002,6 @@ const turnLogic = {
                         skillFunctions.addDragonToOrder(battleData,sourceTurn,targetTurn);
                     }
                     else {return;}
-                    
-                    
-                    // return;
                 }
 
                 if (buffCheck) {
@@ -34666,6 +34661,166 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace sylvanity
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace emp
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //e2    part of stuff already
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    }
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "DHPT Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+        
+                            let ownerTurn = this.ownerTurn;
+                            actionAdvance(0.40,ownerTurn,battleData,"Sylvanity");
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Sylvanity: battlestart action advance",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const bondmateSlot = ownerTurn.battleValues.bondmateSlot
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!bondmateSlot || sourceTurn.isEnemy || sourceTurn.name != bondmateSlot) {return;}
+                            //if the bondmate isn't assigned, the source is an enemy, or if the source isn't the bondmate, then abort
+        
+                            const dragonTurn = ownerTurn.dhptSouldragonTURNEVENT;
+                            updateEnergy(battleData,6,ownerTurn,false,"Sylvanity (Bondmate Attack)");
+                            actionAdvance(0.15,dragonTurn,battleData,"Sylvanity (Bondmate Attack)");
+                        },
+                        "target": "self",
+                        "listenerName": "Sylvanity: Bondmate attack action advance + energy",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatATK",//ATK stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const bondmateSlot = ownerTurn.battleValues.bondmateSlot
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!bondmateSlot || sourceTurn.name != ownerTurn.name) {return;}
+                            //if the bondmate isn't assigned, the source is an enemy, or if the source isn't the bondmate, then abort
+        
+                            const bondmateTurn = battleData.nameBasedTurns[bondmateSlot];
+                            const bondmateATKConversion = this.bondmateATKConversion ??= turnLogic[ownerTurn.properName].skillFunctions.bondmateATKConversion;
+                            bondmateATKConversion(battleData,ownerTurn,bondmateTurn)
+                        },
+                        "target": "self",
+                        "listenerName": "Empyreanity: Bondmate attack update",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            updateSkillPoints(battleData,1,sourceTurn,false,"E1: Shed Scales of Old");
+                        },
+                        "target": "self",
+                        "listenerName": "E1: dan used ult skillpoint gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bondmateSlot) {return;}
+    
+                            let targetTurn = generalInfo.slotRef;
+    
+                            const logicRef = turnLogic[sourceTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+                            let buffSheet = ATKObjects.e6VulnSHEET;
+        
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E6 vuln application enemy added to field while bondmate exists",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AdditionalTriggerAttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const battleValues = ownerTurn.battleValues;
+                            if (!battleValues.bondmateSlot || sourceTurn.properName != characterName || generalInfo.dmgSlot != "Ultimate") {return;}
+                            //if the bondmate isn't assigned yet, or the source of the attack isn't dan, or if it is dan but it's not considered his summon, then abort
+        
+                            // let logicRef = turnLogic[characterName];
+                            let targetTurn = battleData.nameBasedTurns[battleValues.bondmateSlot];
+                            const e6ADDDMG = this.e6ADDDMG ??= turnLogic[characterName].skillFunctions.bondmateAddedDMGE6
+                            e6ADDDMG(battleData,ownerTurn,targetTurn,generalInfo);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E6 Souldragon took action - bondmate additional DMG",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "DHPTFUAQueue",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -34763,12 +34918,12 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "EntityConstruction",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
                     const souldragonTurnAttack = this.souldragonTurnAttack ??= turnLogic[ownerTurn.properName].skillFunctions.souldragonTurnAttack;
-                    const ActionEntry = ownerTurn.dhptSouldragonTURNEVENT ??= {
+                    const souldragonEventEntry = this.souldragonEventEntry ??= {
                         // name:characterEntry,
                         AV:10000/165,
                         AVBase:10000/165,
@@ -34792,13 +34947,24 @@ const turnLogic = {
                         uniqueEventFunction: souldragonTurnAttack,//logicRef.skillFunctions.combustionExpired,
                         eventImage: graphs.summonCustomImages["Souldragon"],
                     };
+
+                    souldragonEventEntry.AV = 10000/165;
+                    souldragonEventEntry.AVBase = 10000/165;
+                    souldragonEventEntry.actionCounter = 0;
+                    souldragonEventEntry.turnState = 0;
+                    souldragonEventEntry.isActive = false;
+                    souldragonEventEntry.eventOwner = ownerTurn.name;
+
+                    ownerTurn.dhptSouldragonTURNEVENT = souldragonEventEntry;
                     ownerTurn.summonEventRef = "dhptSouldragonTURNEVENT";
                     ownerTurn.battleValues.bondmateSlot = null;
                     // ownerTurn.activeSummons += 1;
                     // battleData.nextTurnAV.push(ActionEntry);
-                    battleData.declaredSummons.push(ActionEntry);
-                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    battleData.declaredSummons.push(souldragonEventEntry);
+                    battleData.battleTotal.Turns[souldragonEventEntry.properName] = 0;
                     // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Souldragon Preload", bodyText: `Summon "${souldragonEventEntry.properName}" entity constructed`});}
                 },
                 "target": "self",
                 "listenerName": "DHPT: Souldragon event creation",
@@ -34820,50 +34986,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Souldragon took action - bondmate additional DMG",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatATK",//ATK stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const bondmateSlot = ownerTurn.battleValues.bondmateSlot
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (!bondmateSlot || sourceTurn.name != ownerTurn.name) {return;}
-                    //if the bondmate isn't assigned, the source is an enemy, or if the source isn't the bondmate, then abort
-
-                    const bondmateTurn = battleData.nameBasedTurns[bondmateSlot];
-                    const bondmateATKConversion = this.bondmateATKConversion ??= turnLogic[ownerTurn.properName].skillFunctions.bondmateATKConversion;
-                    bondmateATKConversion(battleData,ownerTurn,bondmateTurn)
-                },
-                "target": "self",
-                "listenerName": "Sylvanity: Bondmate attack update",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackStart",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const bondmateSlot = ownerTurn.battleValues.bondmateSlot
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (!bondmateSlot || sourceTurn.isEnemy || sourceTurn.name != bondmateSlot) {return;}
-                    //if the bondmate isn't assigned, the source is an enemy, or if the source isn't the bondmate, then abort
-
-                    const dragonTurn = ownerTurn.dhptSouldragonTURNEVENT;
-                    updateEnergy(battleData,6,ownerTurn,false,"Sylvanity (Bondmate Attack)");
-                    actionAdvance(0.15,dragonTurn,battleData,"Sylvanity (Bondmate Attack)");
-                },
-                "target": "self",
-                "listenerName": "Sylvanity: Bondmate attack action advance + energy",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    actionAdvance(0.40,ownerTurn,battleData,"Sylvanity");
-                },
-                "target": "self",
-                "listenerName": "Sylvanity: battlestart action advance",
                 "ownerTurn": {},
             },
             {
@@ -34922,29 +35044,6 @@ const turnLogic = {
                 "listenerName": "DHPT - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "DHPT Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -34964,65 +35063,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "UltimateStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-    
-                        updateSkillPoints(battleData,1,sourceTurn,false,"E1: Shed Scales of Old");
-                    },
-                    "target": "self",
-                    "listenerName": "E1: dan used ult skillpoint gain",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "EnemyCreated",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        if (!ownerTurn.battleValues.bondmateSlot) {return;}
-
-                        let targetTurn = generalInfo.slotRef;
-
-                        const logicRef = turnLogic[sourceTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-                        let buffSheet = ATKObjects.e6VulnSHEET;
-    
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    },
-                    "target": "enemy",
-                    "listenerName": "E6 vuln application enemy added to field while bondmate exists",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "AdditionalTriggerAttackEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-    
-                        const sourceTurn = generalInfo.sourceTurn;
-                        const battleValues = ownerTurn.battleValues;
-                        if (!battleValues.bondmateSlot || sourceTurn.properName != characterName || generalInfo.dmgSlot != "Ultimate") {return;}
-                        //if the bondmate isn't assigned yet, or the source of the attack isn't dan, or if it is dan but it's not considered his summon, then abort
-    
-                        // let logicRef = turnLogic[characterName];
-                        let targetTurn = battleData.nameBasedTurns[battleValues.bondmateSlot];
-                        const e6ADDDMG = this.e6ADDDMG ??= turnLogic[characterName].skillFunctions.bondmateAddedDMGE6
-                        e6ADDDMG(battleData,ownerTurn,targetTurn,generalInfo);
-                    },
-                    "target": "enemy",
-                    "listenerName": "Souldragon took action - bondmate additional DMG",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {
