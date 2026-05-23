@@ -10156,6 +10156,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+
     //Nihility
     "Silver Wolf": {//PASSIVE DONE
         logic(thisTurn,battleData) {
@@ -14169,7 +14170,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Welt": {
+    "Welt": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -14594,158 +14595,254 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != characterName) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck;
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Punishment EHR check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent inherent
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //trace retribution
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //trace judgment
+
+                    //trace punishment
                     const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
                     statCheck(battleData,ownerTurn);//side note buff, can be handled in this one since it's already here
-                },
-                "target": "self",
-                "listenerName": "Welt - Punishment start check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "HitEnemyEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
-                    let sourceTurn = generalInfo.sourceTurn;
 
-                    const dmgSlot = generalInfo.slot;
-                    if (sourceTurn.properName != characterName || (dmgSlot != "Skill" && dmgSlot != "Basic ATK")) {return;}
-                    //only read welt's skill/basic ATK, and abort otherwise if not him
 
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const weltTraceAddDMG = this.weltTraceAddDMG ??= turnLogic[characterName].skillFunctions.weltTraceAddDMG;
-                    weltTraceAddDMG(battleData,generalInfo,sourceTurn,targetsGotHit,dmgSlot);
-                },
-                "target": "enemy",
-                "listenerName": "Welt trace additional DMG controller",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UltimateEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
 
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
+                        battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
 
-                    if (!ATKObjects.weltWeightlessDEBUFFSHEET) {
-                        let skillRef = ATKObjects.weltTalentREF ??= ATKObjects["Talent"]["Time Distortion"].variant1;
-                        let values = ATKObjects.weltTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-
-                        ATKObjects.weltWeightlessDEBUFFSHEET = {
-                            "stats": [SPDP,DEFP,ResistanceAll],
-                            [SPDP]: -values[2],
-                            [DEFP]: -values[1],
-                            [ResistanceAll]: ownerTurn.rank >= 4 ? -0.30 : 0,
-                            "source": "Talent",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": logicRef.buffNames.weight,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "isDebuff": true,
-                            "expireType": "EndTurn"
-                        }
-                        ownerTurn.weightlessSheetName = ATKObjects.weltWeightlessDEBUFFSHEET.buffName;
-                    }
-                
-                    let buffSheet = ATKObjects.weltWeightlessDEBUFFSHEET;
-                    const enemyPositions = battleData.enemyPositions;
-                    updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
-
-                    for (let enemy of enemyPositions) {enemy.weltWeightlessCounter = 8;}
-                },
-                "target": "enemy",
-                "listenerName": "Weightless debuff application",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    // ownerTurn.weightlessSheetName
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const targetTurn = generalInfo.targetTurn;
-                    if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, on allied attacks
-
-                    const weightName = ownerTurn.weightlessSheetName;
-                    if (!weightName) {return;}
-
-                    const weightCheck = targetTurn.buffsObject[weightName];
-
-                    if (weightCheck) {
-                        let buffSheet = this.traceHittingWeightlessSHEET ??= {
-                            "stats": [DamageAll],
-                            [DamageAll]: 0.10,
-                            "source": "Trace",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.weightDMG,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 10,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn"
-                        };
-                    
-                        updateBuff(battleData,sourceTurn,buffSheet);
-
-                        actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
-                    }
-                },
-                "target": "enemy",
-                "listenerName": "Ally hit weightless target buff application",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EndTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (!sourceTurn.isEnemy) {return;}
-
-                    const weightName = ownerTurn.weightlessSheetName;
-                    if (!weightName) {return;}
-
-                    const weightCheck = sourceTurn.buffsObject[weightName];
-
-                    if (weightCheck) {
-                        sourceTurn.weltWeightlessCounter = 8;
+                        // const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        // listenerToInject.ownerTurn = ownerTurn;
+                        // addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
                 "target": "self",
-                "listenerName": "Silver Wolf - Major Trace: Inject",
+                "listenerName": "Black Swan Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            if (!ATKObjects.weltWeightlessDEBUFFSHEET) {
+                                let skillRef = ATKObjects.weltTalentREF ??= ATKObjects["Talent"]["Time Distortion"].variant1;
+                                let values = ATKObjects.weltTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+        
+                                ATKObjects.weltWeightlessDEBUFFSHEET = {
+                                    "stats": [SPDP,DEFP,ResistanceAll],
+                                    [SPDP]: -values[2],
+                                    [DEFP]: -values[1],
+                                    [ResistanceAll]: ownerTurn.rank >= 4 ? -0.30 : 0,
+                                    "source": "Talent",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": logicRef.buffNames.weight,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "isDebuff": true,
+                                    "expireType": "EndTurn"
+                                }
+                                ownerTurn.weightlessSheetName = ATKObjects.weltWeightlessDEBUFFSHEET.buffName;
+                            }
+                        
+                            let buffSheet = ATKObjects.weltWeightlessDEBUFFSHEET;
+                            const enemyPositions = battleData.enemyPositions;
+                            updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
+        
+                            for (let enemy of enemyPositions) {enemy.weltWeightlessCounter = 8;}
+                        },
+                        "target": "enemy",
+                        "listenerName": "Weightless debuff application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HitEnemyEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const dmgSlot = generalInfo.slot;
+                            if (sourceTurn.properName != characterName || (dmgSlot != "Skill" && dmgSlot != "Basic ATK")) {return;}
+                            //only read welt's skill/basic ATK, and abort otherwise if not him
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const weltTraceAddDMG = this.weltTraceAddDMG ??= turnLogic[characterName].skillFunctions.weltTraceAddDMG;
+                            weltTraceAddDMG(battleData,generalInfo,sourceTurn,targetsGotHit,dmgSlot);
+                        },
+                        "target": "enemy",
+                        "listenerName": "Welt trace additional DMG controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.isEnemy) {return;}
+        
+                            const weightName = ownerTurn.weightlessSheetName;
+                            if (!weightName) {return;}
+        
+                            const weightCheck = sourceTurn.buffsObject[weightName];
+        
+                            if (weightCheck) {
+                                sourceTurn.weltWeightlessCounter = 8;
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Welt weightless delay count reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != characterName) {return;}
+    
+                            // const slot = generalInfo.slot;
+                            let validDMG = false;
+                            const targetTurn = generalInfo.targetTurn;
+                            if (targetTurn.statTable[SPDP] < 0) {validDMG = true;}
+                            //as stupid as it sounds, the crit bonus here only applies to HITS, and only from ult and skill.
+                            //additional dmg despite being 60-70% of his dmg profile, will not benefit from this eidolon. Actual horse shit.
+    
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [CritRateBase,CritDamageBase],
+                                [CritRateBase]: 0.30,
+                                [CritDamageBase]: 0.60,
+                                "source": "E6",
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogic[characterName].buffNames.e6,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["Ultimate","Skill"]
+                            }
+                            let buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+                            if (validDMG) {
+                                if (buffCheck) {return}
+                                else{updateBuff(battleData,ownerTurn,buffSheet);}
+                            }
+                            else if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck);}
+                        },
+                        "target": "self",
+                        "listenerName": "Welt E6 onhit HIT ONLY crit rate/dmg",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HitEnemyStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            // ownerTurn.weightlessSheetName
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = generalInfo.targetTurn;
+                            if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, on allied attacks
+        
+                            const weightName = ownerTurn.weightlessSheetName;
+                            if (!weightName) {return;}
+        
+                            const weightCheck = targetTurn.buffsObject[weightName];
+        
+                            if (weightCheck) {
+                                let buffSheet = this.traceHittingWeightlessSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: 0.10,
+                                    "source": "Trace",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": turnLogic[ownerTurn.properName].buffNames.weightDMG,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 10,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                };
+                            
+                                updateBuff(battleData,sourceTurn,buffSheet);
+        
+                                actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Ally hit weightless target buff application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.properName != characterName) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[characterName].skillFunctions.statCheck;
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Punishment EHR check",
+                        "ownerTurn": {},
+                    },
+
+
+                ],
             },
             {
                 "trigger": "UltimateReady",
@@ -14804,27 +14901,6 @@ const turnLogic = {
                 "listenerName": "Welt - Ultimate queued",
                 "ownerTurn": {},
             },
-            // {
-            //     "trigger": "StartBattle",
-            //     condition(battleData,generalInfo) {
-            //         let ownerTurn = this.ownerTurn;
-            //         let characterName = ownerTurn.properName;
-
-            //         let logicRef = turnLogic[characterName];
-            //         //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-            //         //StartBattle for dmg techniques that could have conflicts
-            //         let useTechnique = logicRef.useTechnique;
-            //         let attackUsed = battleData.attackTechniqueUsed;
-            //         if (useTechnique && !attackUsed && battleData.techniquesAllowed) {
-            //             const swTechnique = this.swTechnique ??= logicRef.skillFunctions.swTechnique
-            //             swTechnique(battleData,"enemy",ownerTurn);
-            //             battleData.attackTechniqueUsed = true;
-            //         }
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Silver Wolf Technique",
-            //     "ownerTurn": {},
-            // },
         ],
         "eidolonListeners": {
             1: [],
@@ -14832,57 +14908,12 @@ const turnLogic = {
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "AllyDMGStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != characterName) {return;}
-
-                        // const slot = generalInfo.slot;
-                        let validDMG = false;
-                        const targetTurn = generalInfo.targetTurn;
-                        if (targetTurn.statTable[SPDP] < 0) {validDMG = true;}
-                        //as stupid as it sounds, the crit bonus here only applies to HITS, and only from ult and skill.
-                        //additional dmg despite being 60-70% of his dmg profile, will not benefit from this eidolon. Actual horse shit.
-
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [CritRateBase,CritDamageBase],
-                            [CritRateBase]: 0.30,
-                            [CritDamageBase]: 0.60,
-                            "source": "E6",
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogic[characterName].buffNames.e6,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Ultimate","Skill"]
-                        }
-                        let buffName = buffSheet.buffName;
-                        const buffCheck = sourceTurn.buffsObject[buffName];
-                        if (validDMG) {
-                            if (buffCheck) {return}
-                            else{updateBuff(battleData,ownerTurn,buffSheet);}
-                        }
-                        else if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck);}
-                    },
-                    "target": "self",
-                    "listenerName": "Welt E6 onhit HIT ONLY crit rate/dmg",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "characterValues": {},
         "useTechnique": true,
-        "techniqueType": "Attack",
+        "techniqueType": "Dimension",
         "buffNames": {
             "ehrToATK": "Punishment (Trace)",
             "skillSlow": "Slow (Welt Skill)",
@@ -33818,7 +33849,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Preservation
-    "Dan Heng • Permansor Terrae": {
+    "Dan Heng • Permansor Terrae": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
