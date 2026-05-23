@@ -25960,7 +25960,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Jingliu": {
+    "Jingliu": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
@@ -26290,6 +26290,230 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent inherents
+                    //hp loss tracker
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //trace frost wraith
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Jingliu Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            // poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
+                            let ownerTurn = this.ownerTurn;
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            // if (sourceTurn.isE) {return;}
+        
+                            const valuesRef = ownerTurn.battleValues;
+                            const oldValue = valuesRef.hpLossCount;
+                            valuesRef.hpLossCount++;
+        
+                            
+        
+                            if (valuesRef.hpLossCount >= 20) {
+                                valuesRef.hpLossCount -= 20;
+                                const sourceObject = this.sourceObject ??= {pointsGained: 1,sourceString:"HP Loss Counter >= 20"}
+                                poke("jingliuWeirdStackGained",battleData,sourceObject);
+                            }
+        
+                            if (battleData.isLoggyLogger) {
+                                // if (pointsGained > 0) {
+                                    ownerTurn.jingliuHPCounterSUm ??= 0;
+                                    ownerTurn.jingliuHPCounterSUm += 1;
+                                    
+                                // }
+                                logToBattle(battleData,{
+                                    logType: "SUMMARY:SUM",
+                                    function: "jingliuHPCounterSUm",
+                                    AV: battleData.sumAV,
+                                    currentValue: valuesRef.hpLossCount,
+                                    currentSumValue: ownerTurn.jingliuHPCounterSUm,
+                                    currentAddedValue: 1
+                                });
+                            }
+        
+        
+                            if (valuesRef.enhancedActive && !valuesRef.moonlightFinished) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+        
+                                const moonlightSheet = ATKObjects.jingliuTalentEnhancedMoonlightSHEET;
+                                updateBuff(battleData,ownerTurn,moonlightSheet);
+        
+                                const buffCheck = ownerTurn.buffsObject[moonlightSheet.buffName];
+                                if (buffCheck.currentStacks === buffCheck.maxStacks) {
+                                    valuesRef.moonlightFinished = true;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Jingliu - hp lost listener count tracker",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.enhancedActive) {return;}
+        
+                            const valuesRef = ownerTurn.battleValues;
+                            if (valuesRef.weirdStacks === 0) {
+                                valuesRef.enhancedActive = false;
+        
+                                if (battleData.isLoggyLogger) {
+                                    logToBattle(battleData,{logType: "GenericAction", source:"Reached 0 Syzygy", bodyText: `Jingliu exited Spectral Transmigration`});
+                                }
+                                
+                                let buffName1 = this.buffName1 ??= turnLogic[ownerTurn.properName].buffNames.enhancedState;
+                                const buffsObject = ownerTurn.buffsObject;
+                                removeBuff(battleData,ownerTurn,buffsObject[buffName1]);
+        
+                                valuesRef.moonlightFinished = false;
+                                let buffName2 = this.buffName2 ??= turnLogic[ownerTurn.properName].buffNames.moonlight;
+                                if (buffsObject[buffName2]) {
+                                    removeBuff(battleData,ownerTurn,buffsObject[buffName2]);
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Talent - monitor enhanced state end",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.enhancedActive) {return;}
+        
+                            let values = turnLogic[ownerTurn.properName].ATKObjects.jingliuTalentREFVALUES;
+                            battleActions.consumeHP(battleData,true,values[1],ownerTurn,ownerTurn,"Talent",false,false,true);
+                        },
+                        "target": "self",
+                        "listenerName": "Talent - consume from attack in enhanced state",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.traceShredActive) {return;}
+        
+                            const traceShredName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.traceShred;
+                            ownerTurn.battleValues.traceShredActive = false;
+                            const buffCheck = ownerTurn.buffsObject[traceShredName];
+                            removeBuff(battleData,sourceTurn,buffCheck);
+                        },
+                        "target": "self",
+                        "listenerName": "Frost Wraith - remove trace shred after attack",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SkillStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!ownerTurn.enhancedActive || sourceTurn.properName != ownerTurn.properName) {return;}//e1 proc for skill is only for enhanced
+    
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.36,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e1CritDMG,
+                                "durationInTurn": 2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Moon Crashes Tianguan Gate: enhanced skill listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+    
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.36,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e1CritDMG,
+                                "durationInTurn": 2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Moon Crashes Tianguan Gate: ult use listener",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "jingliuWeirdStackGained",
                 condition(battleData,generalInfo) {
                     // poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -26401,126 +26625,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "EndTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.enhancedActive) {return;}
-
-                    const valuesRef = ownerTurn.battleValues;
-                    if (valuesRef.weirdStacks === 0) {
-                        valuesRef.enhancedActive = false;
-
-                        if (battleData.isLoggyLogger) {
-                            logToBattle(battleData,{logType: "GenericAction", source:"Reached 0 Syzygy", bodyText: `Jingliu exited Spectral Transmigration`});
-                        }
-                        
-                        let buffName1 = this.buffName1 ??= turnLogic[ownerTurn.properName].buffNames.enhancedState;
-                        const buffsObject = ownerTurn.buffsObject;
-                        removeBuff(battleData,ownerTurn,buffsObject[buffName1]);
-
-                        valuesRef.moonlightFinished = false;
-                        let buffName2 = this.buffName2 ??= turnLogic[ownerTurn.properName].buffNames.moonlight;
-                        if (buffsObject[buffName2]) {
-                            removeBuff(battleData,ownerTurn,buffsObject[buffName2]);
-                        }
-                    }
-                },
-                "target": "self",
-                "listenerName": "Talent - monitor enhanced state end",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackStart",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.enhancedActive) {return;}
-
-                    let values = turnLogic[ownerTurn.properName].ATKObjects.jingliuTalentREFVALUES;
-                    battleActions.consumeHP(battleData,true,values[1],ownerTurn,ownerTurn,"Talent",false,false,true);
-                },
-                "target": "self",
-                "listenerName": "Talent - consume from attack in enhanced state",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.traceShredActive) {return;}
-
-                    const traceShredName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.traceShred;
-                    ownerTurn.battleValues.traceShredActive = false;
-                    const buffCheck = ownerTurn.buffsObject[traceShredName];
-                    removeBuff(battleData,sourceTurn,buffCheck);
-                },
-                "target": "self",
-                "listenerName": "Frost Wraith - remove trace shred after attack",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyLostHP",
-                condition(battleData,generalInfo) {
-                    // poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
-                    let ownerTurn = this.ownerTurn;
-                    // const sourceTurn = generalInfo.sourceTurn;
-                    // if (sourceTurn.isE) {return;}
-
-                    const valuesRef = ownerTurn.battleValues;
-                    const oldValue = valuesRef.hpLossCount;
-                    valuesRef.hpLossCount++;
-
-                    
-
-                    if (valuesRef.hpLossCount >= 20) {
-                        valuesRef.hpLossCount -= 20;
-                        const sourceObject = this.sourceObject ??= {pointsGained: 1,sourceString:"HP Loss Counter >= 20"}
-                        poke("jingliuWeirdStackGained",battleData,sourceObject);
-                    }
-
-                    if (battleData.isLoggyLogger) {
-                        // if (pointsGained > 0) {
-                            ownerTurn.jingliuHPCounterSUm ??= 0;
-                            ownerTurn.jingliuHPCounterSUm += 1;
-                            
-                        // }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "jingliuHPCounterSUm",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.hpLossCount,
-                            currentSumValue: ownerTurn.jingliuHPCounterSUm,
-                            currentAddedValue: 1
-                        });
-                    }
-
-
-                    if (valuesRef.enhancedActive && !valuesRef.moonlightFinished) {
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-
-                        const moonlightSheet = ATKObjects.jingliuTalentEnhancedMoonlightSHEET;
-                        updateBuff(battleData,ownerTurn,moonlightSheet);
-
-                        const buffCheck = ownerTurn.buffsObject[moonlightSheet.buffName];
-                        if (buffCheck.currentStacks === buffCheck.maxStacks) {
-                            valuesRef.moonlightFinished = true;
-                        }
-                    }
-
-                    
-
-                    // const HPLost = generalInfo.HPLost
-                    // const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
-                    // bladeHPTallyFunction(battleData,ownerTurn,HPLost);
-                },
-                "target": "self",
-                "listenerName": "Jingliu - hp lost listener count tracker",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -26577,34 +26681,6 @@ const turnLogic = {
                 "listenerName": "Jingliu - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Jingliu Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -26624,62 +26700,7 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "SkillStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (!ownerTurn.enhancedActive || sourceTurn.properName != ownerTurn.properName) {return;}//e1 proc for skill is only for enhanced
-
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: 0.36,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1CritDMG,
-                            "durationInTurn": 2,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn"
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Moon Crashes Tianguan Gate: enhanced skill listener",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "UltimateStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: 0.36,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1CritDMG,
-                            "durationInTurn": 2,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn"
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Moon Crashes Tianguan Gate: ult use listener",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
