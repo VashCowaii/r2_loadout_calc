@@ -28124,6 +28124,124 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //e1
+                    if (rank >= 1) {
+                        const buffSheet = this.hookE1BuffSHEET ??= {
+                            "stats": [DamageSkill],
+                            [DamageSkill]: 0.20,
+                            "source": "E1",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["HookEnhSkill"],
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    //trace naivete
+                    const buffSheet = this.hookCCRESSheet ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.35,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCCRES,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hook Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const ownerTurn = this.ownerTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//only look at Hook's dmg to enemies
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            const burnCount = targetTurn.dots.Fire;
+        
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.20,
+                                "source": "E6",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e6BurnDMG,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+    
+                            const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+    
+                            if (buffCheck) {
+                                if (burnCount) {return;}
+                                removeBuff(battleData,ownerTurn,buffSheet);
+                            }
+                            else {
+                                if (!burnCount) {return;}
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Hook E6 burn checker",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "AdditionalTriggerAttackEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -28193,31 +28311,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [CrowdControlRES],
-                        [CrowdControlRES]: 0.35,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCCRES,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Hook Naivete cc res",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -28273,34 +28366,6 @@ const turnLogic = {
                 "listenerName": "Hook - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Hook Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -28320,81 +28385,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // greatTableIndex
-                        // greatTableKeys
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageSkill],
-                            [DamageSkill]: 0.20,
-                            "source": "E1",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["HookEnhSkill"],
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Hook E1 enh skill dmg buff",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "AllyDMGStart",
-                    condition(battleData,generalInfo) {
-                        const sourceTurn = generalInfo.sourceTurn;
-                        const ownerTurn = this.ownerTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}//only look at Hook's dmg to enemies
-    
-                        const targetTurn = generalInfo.targetTurn;
-                        const burnCount = targetTurn.dots.Fire;
-    
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageAll],
-                            [DamageAll]: 0.20,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6BurnDMG,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-
-                        const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
-
-                        if (buffCheck) {
-                            if (burnCount) {return;}
-                            removeBuff(battleData,ownerTurn,buffSheet);
-                        }
-                        else {
-                            if (!burnCount) {return;}
-                            updateBuff(battleData,ownerTurn,buffSheet);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Hook E6 burn checker",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
