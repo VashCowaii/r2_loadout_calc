@@ -11050,7 +11050,7 @@ const turnLogic = {
         "implantBuffNames": ["implantFire","implantIce","implantLightning","implantWind","implantQuantum","implantImaginary","implantPhysical"],
         "characterValuesBattle": {},
     },
-    "Kafka": {
+    "Kafka": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -11498,93 +11498,313 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "AttackEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
+                    let ownerTurn = this.ownerTurn;
 
-                    const ownerTurn = this.ownerTurn;
-                    const characterName = ownerTurn.properName;
-                    
-                    const valuesRef = ownerTurn.battleValues;
-                    const debtCheck = (valuesRef.fuaStacks - valuesRef.fuaStackDebt) > 0;
-                    if (sourceTurn.properName != characterName && debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
-                        // console.log("reached queue")
-                        valuesRef.fuaStackDebt += 1;
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
 
-                        const queueObject = this.queueObject ??= {
-                            name: this.listenerName,
-                            priority: priorityList.ability.CharacterAttackFromSelf,
-                            queueTag: "QueuedInsert",
+                    const passiveListeners = this.passiveListeners;
 
-                            actionCall: turnLogic[characterName].skillFunctions.kafkaFUA,
-                            action: "Insert", 
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
-                            dontKeepNextWave: false,//ults always clear out
-                            isAttack: true,
-                            isAbility: true,
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
-                            // eventTypeStartLOG: "GenericAbilityStart",
-                            // eventTypeStart: "GenericAbilityStart",
-                            // eventTypeEnd: "GenericAbilityEnd",
 
-                            properName: characterName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+                    //talent inherent
+                    //turn end fua count
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    //atk fua queue
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
-                            target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                    //e1
+                    if (rank >= 1) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
 
-                            elationForcedPunchline: null,
-                        }
-                        queueObject.sourceTurn = ownerTurn;
-                        queueInsertAbility(battleData,queueObject);
-                        // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Kafka FUA Stacks ${chargeRef.charge} --> ${chargeRef.charge-1}/2`});}
+                    //e2
+                    if (rank >= 2) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+                    //trace torture
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    const listener7 = passiveListeners[6];
+                    addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+
+                    //trace plunder
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
                     }
                 },
-                "target": "enemy",
-                "listenerName": "Kafka - Follow-up queued - Talent",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    //TODO: check later if this can modify memo stats to give them the ATK buff, for now we assume it does
-                    if (sourceTurn.isEnemy) {return;}
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
-                    statCheck(battleData,sourceTurn,ownerTurn);
-                },
                 "target": "self",
-                "listenerName": "Tortuer EHR check",
+                "listenerName": "Kafka Passive",
                 "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyCreated",
-                condition(battleData,generalInfo) {
-                    // poke("AllyCreated",battleData,{targetTurn});
-
-                    let ownerTurn = this.ownerTurn;
-                    const targetTurn = generalInfo.targetTurn;
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                    statCheck(battleData,targetTurn,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "Tortuer ally added to field stat check trigger",
-                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const valuesRef = ownerTurn.battleValues;
+                            const oldValue = valuesRef.fuaStacks;
+                            valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
+                            if (battleData.isLoggyLogger) {
+                                logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-End stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
+        
+                                if (valuesRef.fuaStacks > oldValue) {
+                                    ownerTurn.kafkaFUAStackSum ??= 0;
+                                    ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                                    
+                                }
+                                logToBattle(battleData,{
+                                    logType: "SUMMARY:SUM",
+                                    function: "kafkaFUAStackSum",
+                                    AV: battleData.sumAV,
+                                    currentValue: valuesRef.fuaStacks,
+                                    currentSumValue: ownerTurn.kafkaFUAStackSum,
+                                    currentAddedValue: valuesRef.fuaStacks - oldValue
+                                });
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Kafka turnend stack gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+        
+                            const ownerTurn = this.ownerTurn;
+                            const characterName = ownerTurn.properName;
+                            
+                            const valuesRef = ownerTurn.battleValues;
+                            const debtCheck = (valuesRef.fuaStacks - valuesRef.fuaStackDebt) > 0;
+                            if (sourceTurn.properName != characterName && debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
+                                // console.log("reached queue")
+                                valuesRef.fuaStackDebt += 1;
+        
+                                const queueObject = this.queueObject ??= {
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterAttackFromSelf,
+                                    queueTag: "QueuedInsert",
+        
+                                    actionCall: turnLogic[characterName].skillFunctions.kafkaFUA,
+                                    action: "Insert", 
+                                    points: 0,
+                                    energyCost: null,
+                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                    // specialEnergyPoke: "SW999GainMMR",
+                                    
+                                    isEnhanced: false,
+                                    isTieBreaker: false,
+                                    isExtraTurn: false,
+                                    skipEXDisplay: false,
+                                    allowUlts: false,
+                                    decrementBuffs: false,
+                                    extraTurnHasChoice: false,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: true,
+                                    isAbility: true,
+                                    useFUATriggers: true,
+                                    useAnyTriggers: true,
+                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    // eventTypeStart: "GenericAbilityStart",
+                                    // eventTypeEnd: "GenericAbilityEnd",
+        
+                                    properName: characterName,
+                                    sourceTurn: null,
+                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+        
+                                    target: this.target,
+                                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+        
+                                    elationForcedPunchline: null,
+                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Kafka FUA Stacks ${chargeRef.charge} --> ${chargeRef.charge-1}/2`});}
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Kafka - Follow-up queued - Talent",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HitEnemyStart",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let targetTurn = generalInfo.targetTurn;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+    
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+    
+                            const targetHits = targetsGotHit[targetTurn.name];
+    
+                            if (targetHits != 1) {return;}
+    
+                            if (!this.e1DOTVulnDEBUFFSHEET) {
+                                const characterName = ownerTurn.properName;
+                                let buffName = turnLogic[characterName].buffNames.e1DOTVuln;
+                                this.e1DOTVulnDEBUFFSHEET = {
+                                    "stats": [VulnDOT],
+                                    [VulnDOT]: 0.30,
+                                    "source": characterName,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true
+                                }
+                            }
+                            const buffSheet = this.e1DOTVulnDEBUFFSHEET;
+                             
+                            // const enemyTurns = battleData.enemyBasedTurns;
+                            updateBuff(battleData,targetTurn,buffSheet);//owner
+                        },
+                        "target": "self",
+                        "listenerName": "E1 Da Capo atk listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            
+                            //TODO: if she dies, remove
+                            //actually does she count as off field if she dies? idk, test later
+                            if (!this.kafkaE2DOTSHEET) {
+                                let characterName = ownerTurn.properName;
+                                let buffName = turnLogic[characterName].buffNames.e2DOTDmg;
+                                this.kafkaE2DOTSHEET = {
+                                    "stats": [DamageDOT],
+                                    [DamageDOT]: 0.33,
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            
+                            const buffSheet = this.kafkaE2DOTSHEET;
+    
+                            const targetTurn = generalInfo.targetTurn;
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "listenerName": "E2 Fortississimo DOT Buff",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "DOTDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("DOTDMGEnd",battleData,turnMerge);
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+                            //has to be shock dmg sourced from kafka, can be ANY shock dmg, not just her ability dots
+    
+                            const element = generalInfo.element;
+                            if (element === "Lightning") {
+                                updateEnergy(battleData,2,ownerTurn,false,"E4: Recitativo");
+                            }
+    
+                        },
+                        "target": "self",
+                        "listenerName": "E4 Recitativo shock dmg listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            //TODO: check later if this can modify memo stats to give them the ATK buff, for now we assume it does
+                            if (sourceTurn.isEnemy) {return;}
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,sourceTurn,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Tortuer EHR check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            // poke("AllyCreated",battleData,{targetTurn});
+        
+                            let ownerTurn = this.ownerTurn;
+                            const targetTurn = generalInfo.targetTurn;
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,targetTurn,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Torture ally added to field stat check trigger",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+        
+                            const enemyKilled = generalInfo.enemyKilled;
+                            const hasShock = enemyKilled.isEnemy && enemyKilled.dots.Lightning;
+                            if (!hasShock) {return;}
+        
+                            const energyToRegen = 5;
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Plunder");
+                            //TODO: verify this works with energy regen, the assumption rn is that it does
+                        },
+                        "target": "self",
+                        "listenerName": "Plunder enemy death listener",
+                        "ownerTurn": {},
+                    },
+                    
+                ],
             },
             {
                 "trigger": "UltimateReady",
@@ -11644,84 +11864,6 @@ const turnLogic = {
                 "listenerName": "Kafka - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "EndTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const valuesRef = ownerTurn.battleValues;
-                    const oldValue = valuesRef.fuaStacks;
-                    valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                    if (battleData.isLoggyLogger) {
-                        logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-start stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
-
-                        if (valuesRef.fuaStacks > oldValue) {
-                            ownerTurn.kafkaFUAStackSum ??= 0;
-                            ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "kafkaFUAStackSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.fuaStacks,
-                            currentSumValue: ownerTurn.kafkaFUAStackSum,
-                            currentAddedValue: valuesRef.fuaStacks - oldValue
-                        });
-                    }
-                },
-                "target": "self",
-                "listenerName": "Kafka turnend stack gain",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EnemyDied",
-                condition(battleData,generalInfo) {
-                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                    let ownerTurn = this.ownerTurn;
-
-                    const enemyKilled = generalInfo.enemyKilled;
-                    const hasShock = enemyKilled.isEnemy && enemyKilled.dots.Lightning;
-                    if (!hasShock) {return;}
-
-                    const energyToRegen = 5;
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Plunder");
-                    //TODO: verify this works with energy regen, the assumption rn is that it does
-                },
-                "target": "self",
-                "listenerName": "Plunder enemy death listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Kafka Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -11741,112 +11883,10 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "HitEnemyStart",
-                    condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let targetTurn = generalInfo.targetTurn;
-                        const targetsGotHit = generalInfo.targetsGotHit;
-
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                        const targetHits = targetsGotHit[targetTurn.name];
-
-                        if (targetHits != 1) {return;}
-
-                        if (!this.e1DOTVulnDEBUFFSHEET) {
-                            const characterName = ownerTurn.properName;
-                            let buffName = turnLogic[characterName].buffNames.e1DOTVuln;
-                            this.e1DOTVulnDEBUFFSHEET = {
-                                "stats": [VulnDOT],
-                                [VulnDOT]: 0.30,
-                                "source": characterName,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                                "isDebuff": true
-                            }
-                        }
-                        const buffSheet = this.e1DOTVulnDEBUFFSHEET;
-                         
-                        // const enemyTurns = battleData.enemyBasedTurns;
-                        updateBuff(battleData,targetTurn,buffSheet);//owner
-                    },
-                    "target": "self",
-                    "listenerName": "Da Capo atk listener",
-                    "ownerTurn": {},
-                    "buffNames": {},
-                },
-            ],
-            2: [
-                {
-                    "trigger": "AllyCreated",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        
-                        //TODO: if she dies, remove
-                        //actually does she count as off field if she dies? idk, test later
-                        if (!this.kafkaE2DOTSHEET) {
-                            let characterName = ownerTurn.properName;
-                            let buffName = turnLogic[characterName].buffNames.e2DOTDmg;
-                            this.kafkaE2DOTSHEET = {
-                                "stats": [DamageDOT],
-                                [DamageDOT]: 0.33,
-                                "source": characterName,
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "removeOnDeath": true,
-                            }
-                        }
-                        
-                        const buffSheet = this.kafkaE2DOTSHEET;
-
-                        const targetTurn = generalInfo.targetTurn;
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    },
-                    "target": "team",
-                    "listenerName": "Fortississimo DOT Buff",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
+            2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "DOTDMGEnd",
-                    condition(battleData,generalInfo) {
-                        // poke("DOTDMGEnd",battleData,turnMerge);
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-                        //has to be shock dmg sourced from kafka, can be ANY shock dmg, not just her ability dots
-
-                        const element = generalInfo.element;
-                        if (element === "Lightning") {
-                            updateEnergy(battleData,2,ownerTurn,false,"E4: Recitativo");
-                        }
-
-                    },
-                    "target": "self",
-                    "listenerName": "Recitativo shock dmg listener",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
