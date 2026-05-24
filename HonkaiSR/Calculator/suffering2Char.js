@@ -17524,6 +17524,287 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //death listener
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
+                        listenerToInject2.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Seele Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.50,
+                                "source": "Trace",
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.traceKillDMG,
+                                "durationInTurn": 4,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                // "actionTags": ["JingliuEnhanced"],
+                            }
+                            updateBuff(battleData,sourceTurn,buffSheet);
+        
+                            const battleValues = ownerTurn.battleValues;
+        
+                            if (battleValues.wasInBasicSkillUlt) {
+                                poke("SeeleEnterAmplification",battleData,null);
+        
+                                if (!battleValues.resurgenceActive) {
+                                    battleValues.readyForKillInject = true;
+                                    //this value is reset on every basic, skill, or ult start from seele, so even if it ends up popping true out of action it'll still get reset to false properly
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Seele Nightshade kill listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            const ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            // const isSkill = generalInfo.slot === "Skill";
+                            //if it's not sourced from nether or cas, abort bc we don't care nor need to remove a buff
+                            
+                            const targetTurn = generalInfo.targetTurn;
+                            const HPRatio = targetTurn.currentHP / targetTurn.maxHP;
+                            const HPCheck80 = HPRatio <= 0.80;
+    
+                            if (!this.E1SUB80SHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+    
+                                this.E1SUB80SHEET = {
+                                    "stats": null,
+                                    "statsOnHit": [DEFShredAll,CritRateBase],
+                                    [DEFShredAll]: 0.20,
+                                    [CritRateBase]: 0.15,
+                                    "source": "E1",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": logicRef.buffNames.e1ShredCrit,
+                                    "durationInTurn": null,
+                                    "duration": 0,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    // "removeOnDeath": true,
+                                }
+                            }
+    
+                            const buffSheet = this.E1SUB80SHEET;
+                            const buffName = buffSheet.buffName;
+    
+                            const buffCheck = ownerTurn.buffsObject[buffName];
+    
+                            if (buffCheck) {
+                                if (HPCheck80) {return;}
+                                else {
+                                    removeBuff(battleData,ownerTurn,buffSheet);
+                                }
+                            }
+                            else if (HPCheck80) {updateBuff(battleData,ownerTurn,buffSheet);}
+                        },
+                        "target": "self",
+                        "listenerName": "E1 <=80%HP Target Checker",
+                        "owners": []
+                    },
+                    {
+                        "trigger": "EnemyDied",//Flitting Phantasm
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            // Flitting Phantasm
+                            updateEnergy(battleData,15,ownerTurn,false,"E4: Flitting Phantasm");
+                        },
+                        "target": "self",
+                        "listenerName": "E4: Flitting Phantasm - Seele got a Kill regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackEnd",//Flitting Phantasm
+                        condition(battleData,generalInfo) {
+                            // poke("AttackEnd",battleData,generalInfo);
+                            // const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+    
+                            // const instanceTag = generalInfo.ATKObject.instanceTag;
+                            const validTag = generalInfo.ATKObject.instanceTag === "SeeleUltDMG";
+                            const buffName = ownerTurn.e6FlurrySheetName;
+    
+                            if (!validTag && !buffName) {return;}
+                            //if we are neither on seele ult to start tracking, or if seele has never ulted yet to have allowed true dmg after, then abort
+    
+                            if (!this.E6FLURRYSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+    
+                                this.E6FLURRYSHEET = {
+                                    "stats": null,
+                                    "source": "E6",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": logicRef.buffNames.e6Flurry,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    // "removeOnDeath": true,
+                                }
+                            }
+                            
+                            if (sourceTurn.name === ownerTurn.name) {
+                                
+                                if (validTag) {
+                                    ownerTurn.battleValues.e6DMGTracked = 0.30 * generalInfo.totals.totalAVGDMG;
+                                    ownerTurn.e6FlurrySheetName = this.E6FLURRYSHEET.buffName;
+                                }
+                                
+                                const buffSheet = this.E6FLURRYSHEET;
+    
+                                const enemyTurns = battleData.enemyBasedTurns;
+                                const targetsGotHit = generalInfo.targetsGotHit;
+                                for (let enemySlot in targetsGotHit) {
+                                    const currentEnemy = enemyTurns[enemySlot];
+    
+                                    const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
+    
+                                    if (targetCheck) {
+                                        const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
+                    
+                                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
+                                    }
+                                    if (validTag) {
+                                        updateBuff(battleData,currentEnemy,buffSheet);
+                                    }
+                                }
+                                
+                            }
+                            else {
+                                const buffSheet = this.E6FLURRYSHEET;
+    
+                                const enemyTurns = battleData.enemyBasedTurns;
+                                const targetsGotHit = generalInfo.targetsGotHit;
+                                for (let enemySlot in targetsGotHit) {
+                                    const currentEnemy = enemyTurns[enemySlot];
+    
+                                    const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
+    
+                                    if (targetCheck) {
+                                        const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
+                    
+                                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
+                                    }
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E6: Butterfly Flurry true dmg track/handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",//Flitting Phantasm
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.enemyKilled;
+    
+                            const flurryName = ownerTurn.e6FlurrySheetName;
+                            if (!targetTurn.isEnemy || !flurryName) {return;}
+    
+                            const flurryCheck = targetTurn.buffsObject[flurryName];
+    
+                            if (flurryCheck) {
+                                //E6 isn't looking for lineup with how resurgence gets queue normally, it only matters that an entity died and had butterly flurry debuff on them,
+                                //so that's the only check we need here.
+                                poke("SeeleEnterAmplification",battleData,null);
+                                poke("SeeleQueueResurgence",battleData,null);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E6: Butterfly Flurry - target died with flurry, queue resurgence",
+                        "ownerTurn": {},
+                    },
+
+                ],
+            },
+            {
                 "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -17609,46 +17890,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Seele Skill - reset skill inject cooldown",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EnemyDied",
-                condition(battleData,generalInfo) {
-                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.name != ownerTurn.name) {return;}
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [DamageAll],
-                        [DamageAll]: 0.50,
-                        "source": "Trace",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceKillDMG,
-                        "durationInTurn": 4,
-                        "duration": 3,
-                        "AVApplied": 0,
-                        "maxStacks": 3,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": "EndTurn",
-                        // "actionTags": ["JingliuEnhanced"],
-                    }
-                    updateBuff(battleData,sourceTurn,buffSheet);
-
-                    const battleValues = ownerTurn.battleValues;
-
-                    if (battleValues.wasInBasicSkillUlt) {
-                        poke("SeeleEnterAmplification",battleData,null);
-
-                        if (!battleValues.resurgenceActive) {
-                            battleValues.readyForKillInject = true;
-                            //this value is reset on every basic, skill, or ult start from seele, so even if it ends up popping true out of action it'll still get reset to false properly
-                        }
-                    }
-                },
-                "target": "self",
-                "listenerName": "From Shattered Sky, I Free Fall kill check",
                 "ownerTurn": {},
             },
             {
@@ -17929,38 +18170,6 @@ const turnLogic = {
                 "listenerName": "Seele - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Seele Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -17997,191 +18206,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "AllyDMGStart",
-                    condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        const ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-                        // const isSkill = generalInfo.slot === "Skill";
-                        //if it's not sourced from nether or cas, abort bc we don't care nor need to remove a buff
-                        
-                        const targetTurn = generalInfo.targetTurn;
-                        const HPRatio = targetTurn.currentHP / targetTurn.maxHP;
-                        const HPCheck80 = HPRatio <= 0.80;
-
-                        if (!this.E1SUB80SHEET) {
-                            const logicRef = turnLogic[ownerTurn.properName];
-
-                            this.E1SUB80SHEET = {
-                                "stats": null,
-                                "statsOnHit": [DEFShredAll,CritRateBase],
-                                [DEFShredAll]: 0.20,
-                                [CritRateBase]: 0.15,
-                                "source": "E1",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": logicRef.buffNames.e1ShredCrit,
-                                "durationInTurn": null,
-                                "duration": 0,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                // "removeOnDeath": true,
-                            }
-                        }
-
-                        const buffSheet = this.E1SUB80SHEET;
-                        const buffName = buffSheet.buffName;
-
-                        const buffCheck = ownerTurn.buffsObject[buffName];
-
-                        if (buffCheck) {
-                            if (HPCheck80) {return;}
-                            else {
-                                removeBuff(battleData,ownerTurn,buffSheet);
-                            }
-                        }
-                        else if (HPCheck80) {updateBuff(battleData,ownerTurn,buffSheet);}
-                    },
-                    "target": "self",
-                    "listenerName": "E1 <=80%HP Target Checker",
-                    "owners": []
-                },
-            ],
+            1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "EnemyDied",//Flitting Phantasm
-                    condition(battleData,generalInfo) {
-                        // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.name != ownerTurn.name) {return;}
-    
-                        // Flitting Phantasm
-                        updateEnergy(battleData,15,ownerTurn,false,"E4: Flitting Phantasm");
-                    },
-                    "target": "self",
-                    "listenerName": "E4: Flitting Phantasm - Seele got a Kill regen",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "AttackEnd",//Flitting Phantasm
-                    condition(battleData,generalInfo) {
-                        // poke("AttackEnd",battleData,generalInfo);
-                        // const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-
-                        // const instanceTag = generalInfo.ATKObject.instanceTag;
-                        const validTag = generalInfo.ATKObject.instanceTag === "SeeleUltDMG";
-                        const buffName = ownerTurn.e6FlurrySheetName;
-
-                        if (!validTag && !buffName) {return;}
-                        //if we are neither on seele ult to start tracking, or if seele has never ulted yet to have allowed true dmg after, then abort
-
-                        if (!this.E6FLURRYSHEET) {
-                            const logicRef = turnLogic[ownerTurn.properName];
-
-                            this.E6FLURRYSHEET = {
-                                "stats": null,
-                                "source": "E6",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": logicRef.buffNames.e6Flurry,
-                                "durationInTurn": 4,
-                                "duration": 3,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                                "isDebuff": true,
-                                // "removeOnDeath": true,
-                            }
-                        }
-                        
-                        if (sourceTurn.name === ownerTurn.name) {
-                            
-                            if (validTag) {
-                                ownerTurn.battleValues.e6DMGTracked = 0.30 * generalInfo.totals.totalAVGDMG;
-                                ownerTurn.e6FlurrySheetName = this.E6FLURRYSHEET.buffName;
-                            }
-                            
-                            const buffSheet = this.E6FLURRYSHEET;
-
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            for (let enemySlot in targetsGotHit) {
-                                const currentEnemy = enemyTurns[enemySlot];
-
-                                const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
-
-                                if (targetCheck) {
-                                    const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
-                
-                                    battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
-                                }
-                                if (validTag) {
-                                    updateBuff(battleData,currentEnemy,buffSheet);
-                                }
-                            }
-                            
-                        }
-                        else {
-                            const buffSheet = this.E6FLURRYSHEET;
-
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            for (let enemySlot in targetsGotHit) {
-                                const currentEnemy = enemyTurns[enemySlot];
-
-                                const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
-
-                                if (targetCheck) {
-                                    const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
-                
-                                    battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
-                                }
-                            }
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "E6: Butterfly Flurry true dmg track/handler",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "EnemyDied",//Flitting Phantasm
-                    condition(battleData,generalInfo) {
-                        // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                        let ownerTurn = this.ownerTurn;
-                        let targetTurn = generalInfo.enemyKilled;
-
-                        const flurryName = ownerTurn.e6FlurrySheetName;
-                        if (!targetTurn.isEnemy || !flurryName) {return;}
-
-                        const flurryCheck = targetTurn.buffsObject[flurryName];
-
-                        if (flurryCheck) {
-                            //E6 isn't looking for lineup with how resurgence gets queue normally, it only matters that an entity died and had butterly flurry debuff on them,
-                            //so that's the only check we need here.
-                            poke("SeeleEnterAmplification",battleData,null);
-                            poke("SeeleQueueResurgence",battleData,null);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "E6: Butterfly Flurry - target died with flurry, queue resurgence",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -18206,7 +18236,7 @@ const turnLogic = {
     },
 
     //Harmony
-    "Tingyun": {
+    "Tingyun": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -18564,27 +18594,22 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    // let sourceTurn = generalInfo.sourceTurn;
-                    
-                    if (ownerTurn.turnState) {
-                        let amount = 5;
-                        updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Tingyun - Major Trace: Jubilant Passage",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    let buffSheet = this.buffSheet ??= {
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace jubilant
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace knell
+                    let buffSheet = this.tingyunBasicDMGSHEET ??= {
                         "stats": [DamageBasic],
                         [DamageBasic]: 0.40,
                         "source": "Trace",
@@ -18599,10 +18624,47 @@ const turnLogic = {
                         "expireType": null,
                     }
                     updateBuff(battleData,ownerTurn,buffSheet)
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Tingyun - Major Trace: Knell Subdual",
+                "listenerName": "Tingyun Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            
+                            if (ownerTurn.turnState) {
+                                let amount = 5;
+                                updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Tingyun - Major Trace: Jubilant Passage",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "AdditionalTriggerAttackEnd",
@@ -18698,34 +18760,6 @@ const turnLogic = {
                 },
                 "target": "char1",
                 "listenerName": "Tingyun - Ultimate queued",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Tingyun Technique PREP",
                 "ownerTurn": {},
             },
         ],
@@ -19236,7 +19270,7 @@ const turnLogic = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Sunday Passive",
+                "listenerName": "Bronya Passive",
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
