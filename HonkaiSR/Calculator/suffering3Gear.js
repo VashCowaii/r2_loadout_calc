@@ -2578,8 +2578,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "BasicATKStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -4902,8 +4905,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "BasicATKStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -6641,8 +6647,11 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "BasicATKStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityStart
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -8592,8 +8601,10 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "BasicATKStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityStart
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;

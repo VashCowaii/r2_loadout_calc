@@ -5268,15 +5268,15 @@ const turnLogic = {
             },
         ],
         "finalListeners": [//AbilityTriggerOverride
-            {
-                "trigger": "BasicATKStart",
-                condition(battleData,generalInfo) {
-                    poke("ActionStart",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action start listener (Basic ATK)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "BasicATKStart",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionStart",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action start listener (Basic ATK)",
+            //     "ownerTurn": {},
+            // },
             // {
             //     "trigger": "SkillStart",
             //     condition(battleData,generalInfo) {
@@ -18022,8 +18022,11 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "BasicATKStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityStart
+
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -30753,8 +30756,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "BasicATKStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}//AbilityStart
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             let isSourcedFromAggy = false;
@@ -32235,8 +32241,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "BasicATKStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}//AbilityStart
+
                             // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
