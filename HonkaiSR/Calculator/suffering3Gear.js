@@ -1757,8 +1757,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -2700,8 +2703,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -4378,8 +4384,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {},
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -4815,8 +4824,11 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -4947,8 +4959,11 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -5438,8 +5453,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -6390,8 +6408,11 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];//setAmount
@@ -7240,8 +7261,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -9151,8 +9175,11 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "UltimateEnd",
+                            "trigger": "AbilityEnd",
                             condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Ultimate") {return;}//AbilityEnd
+
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
         
@@ -9452,8 +9479,11 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "UltimateEnd",
+                            "trigger": "AbilityEnd",
                             condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Ultimate") {return;}//AbilityEnd
+
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
         
@@ -9840,8 +9870,11 @@ const turnLogicRelics = {
                     "ownersSlots": {}
                 },
                 {
-                    "trigger": "UltimateEnd",
+                    "trigger": "AbilityEnd",
                     condition(battleData,generalInfo) {
+                        const action = generalInfo.action;
+                        if (action != "Ultimate") {return;}//AbilityEnd
+
                         let ownersSlots = this.ownersSlots;
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownerRank = ownersSlots[sourceTurn.name]

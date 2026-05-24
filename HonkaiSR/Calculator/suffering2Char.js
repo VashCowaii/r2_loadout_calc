@@ -5344,16 +5344,16 @@ const turnLogic = {
                 "listenerName": "Universal action end listener (Skill)",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "UltimateEnd",
-                condition(battleData,generalInfo) {
-                    poke("ActionEnd",battleData,generalInfo);
-                    poke("AbilityEnd",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action end listener (Ultimate)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "UltimateEnd",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionEnd",battleData,generalInfo);
+            //         poke("AbilityEnd",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action end listener (Ultimate)",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "FUAEnd",
                 condition(battleData,generalInfo) {
@@ -7638,8 +7638,11 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -14634,8 +14637,11 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -17985,8 +17991,11 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "UltimateEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityEnd
+
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -18682,8 +18691,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             let characterName = ownerTurn.properName;
         
@@ -20913,8 +20925,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
                             const rank = ownerTurn.rank;
@@ -24904,8 +24919,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.name != ownerTurn.name) {return;}
@@ -40966,8 +40984,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (ownerTurn.properName != sourceTurn.properName) {return;}//only his ult can trigger this
@@ -42053,8 +42074,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityEnd
+
                             // poke("EvanesciaE6CBChanger",battleData,null);battleData.elationBangerTurnExceptions
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
