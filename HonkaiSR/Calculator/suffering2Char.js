@@ -28615,7 +28615,7 @@ const turnLogic = {
     },
     
     //Remembrance
-    "Trailblazer - Remembrance": {
+    "Trailblazer - Remembrance": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             const summonUp = statCalls.memIsActive;
@@ -29301,6 +29301,175 @@ const turnLogic = {
         },
         "listeners": [//rmcMemTURNEVENT
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent energy listener
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 6) {
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: 1,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6UltCrit,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["Ultimate"]
+                        }
+                        const memTurn = ownerTurn.rmcMemTURNEVENT;
+    
+                        updateBuff(battleData,memTurn,buffSheet);
+                    }
+
+                    //trace rhapsode
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "RMC Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            const listener1 = this.subListeners[0];
+                            addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "RMC energy listener injection",
+                        "ownerTurn": {},
+                        "subListeners": [
+                            {
+                                "trigger": "EnergyChanged",
+                                condition(battleData,generalInfo) {
+                                    // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                                    // const ownerTurn = this.ownerTurn;
+                                    const energyAmount = generalInfo.newAmount - generalInfo.overFill;
+                                    if (energyAmount <= 0) {return;}//we only care about positive energy gains
+                                    //this does count energy gained from ANY source including enemy attacks
+                                    //however it does NOT ever factor overflow energy.
+                
+                                    const conversion = energyAmount/1000;
+                                    poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"});
+                                },
+                                "target": "self",
+                                "listenerName": "Mem charge ally gained energy listener",
+                                "ownerTurn": {},
+                            },
+                        ],
+                    },
+                    {
+                        "trigger": "ActionStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const memTurn = ownerTurn.rmcMemTURNEVENT;
+                            if (!sourceTurn.isMemosprite || sourceTurn.properName === memTurn.properName || ownerTurn.e2EnergyAlreadyProcd) {return;}
+    
+                            updateEnergy(battleData,8,sourceTurn,false,"Gleaner of the Past");
+                            ownerTurn.e2EnergyAlreadyProcd = true;
+                        },
+                        "target": "self",
+                        "listenerName": "E2 energy regen - ally memosprite took action",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (ownerTurn.turnState) {ownerTurn.e2EnergyAlreadyProcd = false;}
+                        },
+                        "target": "self",
+                        "listenerName": "E2 energy regen turn start reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ActionStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            const memExists = ownerTurn.rmcMemTURNEVENT?.isActive;
+                            if (!memExists) {return;}
+                            if (sourceTurn.maxEnergy === 0) {
+                                const e4Object = this.e4Object ??= {pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"}
+                                poke("rmcMemGainedCharge",battleData,e4Object);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E4 ally ability",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+                            actionAdvance(0.30,ownerTurn,battleData,"Rhapsode's Scepter");
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Rhapsode's Scepter: battlestart action advance",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "EntityConstruction",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -29504,33 +29673,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "EnergyChanged",
-                condition(battleData,generalInfo) {
-                    // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
-                    // const ownerTurn = this.ownerTurn;
-                    const energyAmount = generalInfo.newAmount - generalInfo.overFill;
-                    if (energyAmount <= 0) {return;}//we only care about positive energy gains
-                    //this does count energy gained from ANY source including enemy attacks
-                    //however it does NOT ever factor overflow energy.
-
-                    const conversion = energyAmount/1000;
-                    poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"});
-                },
-                "target": "self",
-                "listenerName": "Mem charge ally gained energy listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    actionAdvance(0.30,ownerTurn,battleData,"Rhapsode's Scepter");
-                },
-                "target": "self",
-                "listenerName": "Rhapsode's Scepter: battlestart action advance",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "SummonOnFieldAdjustment",
                 condition(battleData,generalInfo) {
                     // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
@@ -29623,34 +29765,6 @@ const turnLogic = {
                 "listenerName": "Trailblazer: Remembrance - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Trailblazer: Remembrance Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -29671,117 +29785,11 @@ const turnLogic = {
         },
         "eidolonListeners": {
             1: [],
-            2: [
-                {
-                    "trigger": "ActionEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        const memTurn = ownerTurn.rmcMemTURNEVENT;
-                        if (!sourceTurn.isMemosprite || sourceTurn.properName === memTurn.properName || ownerTurn.e2EnergyAlreadyProcd) {return;}
-
-                        updateEnergy(battleData,8,sourceTurn,false,"Gleaner of the Past");
-                        ownerTurn.e2EnergyAlreadyProcd = true;
-                    },
-                    "target": "self",
-                    "listenerName": "E4 energy regen - ally memosprite took action",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        if (ownerTurn.turnState) {ownerTurn.e2EnergyAlreadyProcd = false;}
-                    },
-                    "target": "self",
-                    "listenerName": "E4 energy regen turn start reset",
-                    "ownerTurn": {},
-                },
-            ],
+            2: [],
             3: [],
-            4: [
-                //TODO: I have action as a bundled event, but not active ability use, why not. Add that later
-                //I'm pretty sure aggy E2 also relies on active ability use, and for some reason I defined every ability there as well
-                {
-                    "trigger": "BasicATKStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-                        if (sourceTurn.maxEnergy === 0) {poke("rmcMemGainedCharge",battleData,{pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"});}
-                    },
-                    "target": "self",
-                    "listenerName": "E4 ally ability (Basic ATK)",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "SkillStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-                        if (sourceTurn.maxEnergy === 0) {poke("rmcMemGainedCharge",battleData,{pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"});}
-                    },
-                    "target": "self",
-                    "listenerName": "E4 ally ability (Skill)",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "UltimateStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-                        if (sourceTurn.maxEnergy === 0) {poke("rmcMemGainedCharge",battleData,{pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"});}
-                    },
-                    "target": "self",
-                    "listenerName": "E4 ally ability (Ultimate)",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "MemoSkillStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy) {return;}
-                        if (sourceTurn.maxEnergy === 0) {poke("rmcMemGainedCharge",battleData,{pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"});}
-                    },
-                    "target": "self",
-                    "listenerName": "E4 ally ability (Memo Skill)",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [CritRateBase],
-                            [CritRateBase]: 1,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6UltCrit,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Ultimate"]
-                        }
-                        const memTurn = ownerTurn.rmcMemTURNEVENT;
-    
-                        updateBuff(battleData,memTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "E6 ult crit bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
