@@ -5313,15 +5313,15 @@ const turnLogic = {
             //     "listenerName": "Universal action start listener (Memo Skill)",
             //     "ownerTurn": {},
             // },
-            {
-                "trigger": "ElationSkillStart",
-                condition(battleData,generalInfo) {
-                    poke("ActionStart",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action start listener (Elation Skill)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "ElationSkillStart",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionStart",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action start listener (Elation Skill)",
+            //     "ownerTurn": {},
+            // },
 
 
             // {

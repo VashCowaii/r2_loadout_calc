@@ -8763,8 +8763,11 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "ElationSkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "ElationSkill") {return;}//AbilityStart
+
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -8820,8 +8823,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "ElationSkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "ElationSkill") {return;}//AbilityStart
+
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -8882,8 +8888,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "ElationSkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "ElationSkill") {return;}//AbilityStart
+
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -11527,8 +11536,11 @@ const turnLogicRelics = {
                     "ownersSlots": {}
                 },
                 {
-                    "trigger": "ElationSkillStart",
+                    "trigger": "AbilityStart",
                     condition(battleData,generalInfo) {
+                        const action = generalInfo.action;
+                        if (action != "ElationSkill") {return;}//AbilityStart
+
                         let sourceTurn = generalInfo.sourceTurn;
             
                         let ownersSlots = this.ownersSlots;
