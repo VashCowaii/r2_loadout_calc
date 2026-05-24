@@ -2511,7 +2511,9 @@ const compositeAbilityObject = {
           "afterInjection": [],
           "abortFlags": [
             "STAT_CTRL"
-          ]
+          ],
+          "priorityTag": "AhaInstant",
+          "priorityTagPending": "AhaInstant_ElationSkill"
         },
         {
           "name": "Define Custom Variable",
