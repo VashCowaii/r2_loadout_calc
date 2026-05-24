@@ -22383,7 +22383,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Ruan Mei": {
+    "Ruan Mei": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -22727,97 +22727,25 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "StartTurn",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    // let sourceTurn = generalInfo.sourceTurn;
 
-                    if (ownerTurn.turnState) {
-                        let amount = 5;
-                        updateEnergy(battleData,amount,ownerTurn,false,"Days Wane, Thoughts Wax");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Days Wane, Thoughts Wax - turn start regen",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatBreak",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName || !sourceTurn.battleValues.overtoneIsActive) {return;}
-                    //ruan mei's skill dmg conversion from BE IS dynamic, so while overtone is active, when ruan gets
-                    //more break effect we need to potentially redo the buff
-
+                    const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
 
-                    const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
-                    const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+                    const passiveListeners = this.passiveListeners;
 
-                    const currentBonus = buffCheck?.[DamageAll] ?? 0;
-                    const accurateBonus = (this.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion)(battleData,sourceTurn);
 
-                    if (currentBonus != accurateBonus) {
-                        buffSheet[DamageAll] = accurateBonus;
-
-                        const allyArray = battleData.allAlliesArray;
-
-                        removeBuffFromBatch(battleData,allyArray,buffSheet,true);
-                        updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Overtone reapplication when ruan gains BE",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
-                    const buffNames = logicRef.buffNames;
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [DamageBreak],
-                        [DamageBreak]: 0.20,
-                        "statsOnHit": null,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": buffNames.traceBE,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-
-                    const allyArray = battleData.allAlliesArray;
-                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Inert Respiration trace battlestart break effect",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // const logicRef = turnLogic[ownerTurn.properName];
-                    
-
-                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                    //talent inherents
+                    //team spd boost
                     const ATKObjects = logicRef.ATKObjects;
                     const buffNames = logicRef.buffNames;
 
                     let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
                     let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
 
-                    const buffSheet = this.buffSheet ??= {
+                    const buffSheet = this.ruanTalentSPDSheet ??= {
                         "stats": [SPDP],
                         [SPDP]: values[0],
                         "statsOnHit": null,
@@ -22832,45 +22760,232 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
-
                     const allyArray = battleData.allAlliesArray;
                     for (let allySlot of allyArray) {
                         if (allySlot.properName === ownerTurn.properName) {continue;}
                         updateBuff(battleData,allySlot,buffSheet);
                     }
-                },
-                "target": "self",
-                "listenerName": "Talent battlestart SPD bonus for allies other than ruan",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BrokeEnemyWeakness",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const targetTurn = generalInfo.targetTurn;
 
-                    const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
+                    //trace inert resp
+                    const buffSheet2 = this.ruanTraceBESHEET ??= {
+                        "stats": [DamageBreak],
+                        [DamageBreak]: 0.20,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.traceBE,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet2);
 
-                    let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
-                    let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-                    const breakMulti = values[1] + (ownerTurn.rank >= 6 ? 2 : 0);
-                    const breakObject = generalInfo.breakObject;
-                    const tags = [generalInfo[ownerTurn.element]];
-                    const isBroken =  generalInfo.isBroken;
-
-                    const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
-                        ATKObject: {actionTags: ["Break"]}
+                    //e2
+                    if (rank >= 2) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
                     }
 
-                    battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
+                    //e4
+                    if (rank >= 4) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+                    
+                    //talent break listener
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-                    // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags,isBroken,generalInfo});
+                    //trace days wane
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //skill zone value update when BE updates
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Talent break dmg on break instance",
+                "listenerName": "Ruan Mei Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const targetTurn = generalInfo.targetTurn;
+    
+                            if (!this.ruanmeiE2ATKSHEET) {
+                                const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                                this.ruanmeiE2ATKSHEET = {
+                                    "statsOnHit": [ATKP],
+                                    [ATKP]: 0.40,
+                                    "source": "E2",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e2ATK,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            const buffSheet = this.ruanmeiE2ATKSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+    
+                            //TODO: if we can ever check E2, I need to know whether the ATK buff would technically apply before or after the break dmg
+                            //bc in practice the target would be designated as broken at that point
+                            //why does it matter? someone like firefly, who scales break effect off of ATK
+                            const brokenCheck = targetTurn.isBroken;
+    
+                            if (brokenCheck) {
+                                if (buffCheck) {return;}
+                                else {updateBuff(battleData,sourceTurn,buffSheet);}
+                            }
+                            else {
+                                if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
+                                else {return;}
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Reedside Promenade - ally dealing dmg listner",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // const logicRef = turnLogic[ownerTurn.properName];
+                            // const buffNames = logicRef.buffNames;
+                            
+                            
+                            if (!this.ruanmeiE4BESHEET) {
+                                const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                                this.ruanmeiE4BESHEET = {
+                                    "stats": [DamageBreak],
+                                    [DamageBreak]: 1,
+                                    "source": "E4",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e4BE,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+                            const buffSheet = this.ruanmeiE4BESHEET;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "E4 weakness broken listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const targetTurn = generalInfo.targetTurn;
+        
+                            const logicRef = this.logicRef ??= turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
+                            let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                            const breakMulti = values[1] + (ownerTurn.rank >= 6 ? 2 : 0);
+                            const breakObject = generalInfo.breakObject;
+                            const tags = [generalInfo[ownerTurn.element]];
+                            const isBroken =  generalInfo.isBroken;
+        
+                            const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
+                                ATKObject: {actionTags: ["Break"]}
+                            }
+        
+                            battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
+        
+                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags,isBroken,generalInfo});
+                        },
+                        "target": "self",
+                        "listenerName": "Talent break dmg on break instance",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (ownerTurn.turnState) {
+                                let amount = 5;
+                                updateEnergy(battleData,amount,ownerTurn,false,"Days Wane, Thoughts Wax");
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Days Wane, Thoughts Wax - turn start regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatBreak",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName || !sourceTurn.battleValues.overtoneIsActive) {return;}
+                            //ruan mei's skill dmg conversion from BE IS dynamic, so while overtone is active, when ruan gets
+                            //more break effect we need to potentially redo the buff
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            const buffSheet = ATKObjects.ruanmeiSkillBUFFSHEET;
+                            const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+        
+                            const currentBonus = buffCheck?.[DamageAll] ?? 0;
+                            const accurateBonus = (this.ruanBEConversionFunction ??= turnLogic[sourceTurn.properName].skillFunctions.overtoneBEConversion)(battleData,sourceTurn);
+        
+                            if (currentBonus != accurateBonus) {
+                                buffSheet[DamageAll] = accurateBonus;
+        
+                                const allyArray = battleData.allAlliesArray;
+        
+                                removeBuffFromBatch(battleData,allyArray,buffSheet,true);
+                                updateBuffBatchTargets(battleData,allyArray,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Overtone reapplication when ruan gains BE",
+                        "ownerTurn": {},
+                    },
+                ],
             },
+            
             {
                 "trigger": "AttackEnd",
                 condition(battleData,generalInfo) {
@@ -23068,34 +23183,6 @@ const turnLogic = {
                 "listenerName": "Ruan Mei - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Ruan Mei Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -23116,89 +23203,9 @@ const turnLogic = {
         },
         "eidolonListeners": {
             1: [],
-            2: [
-                {
-                    "trigger": "AllyDMGStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        const targetTurn = generalInfo.targetTurn;
-
-                        if (!this.ruanmeiE2ATKSHEET) {
-                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
-                            this.ruanmeiE2ATKSHEET = {
-                                "statsOnHit": [ATKP],
-                                [ATKP]: 0.40,
-                                "source": "E2",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffNames.e2ATK,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null
-                            }
-                        }
-                        const buffSheet = this.ruanmeiE2ATKSHEET;
-                        const buffName = buffSheet.buffName;
-                        const buffCheck = sourceTurn.buffsObject[buffName];
-
-                        //TODO: if we can ever check E2, I need to know whether the ATK buff would technically apply before or after the break dmg
-                        //bc in practice the target would be designated as broken at that point
-                        //why does it matter? someone like firefly, who scales break effect off of ATK
-                        const brokenCheck = targetTurn.isBroken;
-
-                        if (brokenCheck) {
-                            if (buffCheck) {return;}
-                            else {updateBuff(battleData,sourceTurn,buffSheet);}
-                        }
-                        else {
-                            if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
-                            else {return;}
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Reedside Promenade - ally dealing dmg listner",
-                    "ownerTurn": {},
-                },
-            ],
+            2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "BrokeEnemyWeakness",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // const logicRef = turnLogic[ownerTurn.properName];
-                        // const buffNames = logicRef.buffNames;
-                        
-                        
-                        if (!this.ruanmeiE4BESHEET) {
-                            const buffNames = turnLogic[ownerTurn.properName].buffNames;
-                            this.ruanmeiE4BESHEET = {
-                                "stats": [DamageBreak],
-                                [DamageBreak]: 1,
-                                "source": "E4",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffNames.e4BE,
-                                "durationInTurn": 4,
-                                "duration": 3,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                        }
-                        const buffSheet = this.ruanmeiE4BESHEET;
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "E4 weakness broken listener",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
@@ -23755,7 +23762,7 @@ const turnLogic = {
                     let buffSheet = this.sparkleTraceATKSHEET ??= {
                         "stats": [ATKP],
                         [ATKP]: 0.45,
-                        "source": characterName,
+                        "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.nocturne,
                         "durationInTurn": null,
@@ -23767,7 +23774,7 @@ const turnLogic = {
                         "expireType": null
                     }
                     const allyTargets = battleData.allAllyTargetsArray;
-                    updateBuffBatchTargets(battleData,allyTargets,buffSheet2);
+                    updateBuffBatchTargets(battleData,allyTargets,buffSheet);
 
                     //SP changes
                     const listener3 = passiveListeners[2];
@@ -23912,6 +23919,8 @@ const turnLogic = {
                     {
                         "trigger": "WaveStart",
                         condition(battleData,generalInfo) {//DONE
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
                             let ownerTurn = this.ownerTurn;
                             let characterName = ownerTurn.properName;
         
