@@ -3151,6 +3151,7 @@ const customMenu = {
                 "GenericAbilityStart": "Insert",
                 "SkillStart": "Skill",
                 "ElationSkillStart": "Elation",
+                "EnemyAttackStart": "ATK",
                 "BasicATKStart": "Basic",
                 "TechniqueStart": "Tech.",
                 "MemoSkillStart": "Skill",
@@ -4214,6 +4215,7 @@ const userTriggers = {
         "ElationSkillStart",
         "MemoSkillStart",
         "BasicATKStart",
+        "EnemyAttackStart",
         "TechniqueStart",
         // "TalentStart",
 
@@ -4254,6 +4256,7 @@ const userTriggers = {
         "ElationSkillStart": "Elation Skill Start",
         "MemoSkillStart": "Memosprite Skill Start",
         "BasicATKStart": "Basic ATK Start",
+        "EnemyAttackStart": "Enemy Attack Start",
 
         "StartTurn": "Turn Start",
         "ImmediateExtraTurn": "Extra Turn (Action Queue)",
@@ -4619,16 +4622,9 @@ const userTriggers = {
                 case "TechniqueStart":
                 case "MemoSkillStart":
                 case "BasicATKStart": 
+                case "EnemyAttackStart":
+                case "ElationSkillStart":
                 case "SkillStart": 
-                // case "TalentStart":
-                    // battleData.battleLog.push({logType: "BasicATKStart", name:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV});
-                    returnString = `
-                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s ${action.actionSlot} ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
-                    ${controlsString}
-                    <div class="actionDetailBody">Target: ${action.target}</div>
-                    `
-                    break;
-                case "ElationSkillStart": 
                 // case "TalentStart":
                     // battleData.battleLog.push({logType: "BasicATKStart", name:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV});
                     returnString = `
