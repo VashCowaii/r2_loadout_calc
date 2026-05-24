@@ -15585,7 +15585,7 @@ const turnLogic = {
 
 
     //Hunt
-    "Topaz & Numby": {
+    "Topaz & Numby": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -15873,6 +15873,183 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace fin turmoil
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Archer Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            //ally dmg dealt bc it IS dmg dealt, it's not attack specific, which sucks
+                            //TODO: really doubt I'll ever do it, but consider doing weakness specific sheets in the future
+                            //would let me do things like genius 4pc and this without needing to evaluate every instance of dmg
+                            //the flip-side tho is that we'd need like, multi sheets for those to have weakness + x,y,z etc
+                            //at least I think so, idk. Might be simpler than that, we'll see once I build out more characters in the calc
+                            let ownerTurn = this.ownerTurn;
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+                            // Financial Turmoil
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            let targetTurn = generalInfo.targetTurn;
+        
+                            if (!ATKObjects.topazTurmoilFireWeakSHEET) {
+                                const characterName = sourceTurn.properName;
+                                const logicRef = turnLogic[characterName];
+                                let buffName = logicRef.buffNames.turmoil;
+                                ATKObjects.topazTurmoilFireWeakSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: 0.15,
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            let buffSheet = ATKObjects.topazTurmoilFireWeakSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            if (targetTurn.statTable[WeaknessFire] <= 0) {//if there is no quantum weakness
+                                if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
+                                else {return;}
+                            }
+                            else {//if weakness found, apply buff
+                                if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Financial Turmoil - Fire-weak bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HitEnemyStart",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+    
+                            
+    
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = generalInfo.targetTurn;
+                            const isFUA = generalInfo.ATKObject.isFUA;
+                            if (sourceTurn.isEnemy || !isFUA || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+    
+    
+                            const characterName = ownerTurn.properName;
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+    
+                            const enemyWithDebt = logicRef.characterValuesBattle.enemyWithDebt;
+                            // if (targetTurn.properName != enemyWithDebt.properName) {return}//can only apply to those with proof of debt, aka the primary target
+                            //in theory this is a completely useless check as topaz will only ever do single target dmg, and bc of that only the primary target will be hit
+    
+    
+                            if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
+                            const buffName = logicRef.buffNames.e1Debtor;
+                            if (!ATKObjects.topazE1DebtorSTACKSHEET) {
+        
+                                ATKObjects.topazE1DebtorSTACKSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: 0.25,
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "isDebuff": true,
+                                    "actionTags": ["FUA"]
+                                }
+                            }
+                            let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
+    
+    
+                            updateBuff(battleData,enemyWithDebt,buffSheet);
+                            const buffCheck = enemyWithDebt.buffsObject[buffName];
+                            if (buffCheck.currentStacks === 2) {
+                                enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Future Market Debtor controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
+                            if (numbyTurn.properName != sourceTurn.properName) {return;}
+                            actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
+                        },
+                        "target": "owner",
+                        "listenerName": "E4 Agile Operation",
+                        "ownerTurn": {},
+                    },
+
+                ],
+            },
+            {
                 "trigger": "TopazFUAQueue",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -15926,7 +16103,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "EntityConstruction",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
@@ -15988,7 +16165,23 @@ const turnLogic = {
                         ATKObjects.topazSkillEnhancedREF = skillPath.variant2;
                         ATKObjects.topazTalentEnhancedREF = talentPath.variant2;
                     }
+                },
+                "target": "self",
+                "listenerName": "Topaz: numby event creation",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreBattleSettings",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
 
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const buffNames = logicRef.buffNames;
+                    let charValuesRef = ownerTurn.battleValues;
+                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
+                    let targetTurn = charValuesRef.enemyWithDebt;
 
                     // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     let skillRef = ATKObjects.topazSkillEnhancedREF;
@@ -16011,7 +16204,7 @@ const turnLogic = {
                     updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "Topaz: numby event creation",
+                "listenerName": "Topaz: Assign Proof of Debt initial",
                 "ownerTurn": {},
             },
             {
@@ -16036,60 +16229,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Topaz: Proof of Debt death swap",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyDMGStart",
-                condition(battleData,generalInfo) {
-                    //ally dmg dealt bc it IS dmg dealt, it's not attack specific, which sucks
-                    //TODO: really doubt I'll ever do it, but consider doing weakness specific sheets in the future
-                    //would let me do things like genius 4pc and this without needing to evaluate every instance of dmg
-                    //the flip-side tho is that we'd need like, multi sheets for those to have weakness + x,y,z etc
-                    //at least I think so, idk. Might be simpler than that, we'll see once I build out more characters in the calc
-                    let ownerTurn = this.ownerTurn;
-
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-                    // Financial Turmoil
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    let targetTurn = generalInfo.targetTurn;
-
-                    if (!ATKObjects.topazTurmoilFireWeakSHEET) {
-                        const characterName = sourceTurn.properName;
-                        const logicRef = turnLogic[characterName];
-                        let buffName = logicRef.buffNames.turmoil;
-                        ATKObjects.topazTurmoilFireWeakSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: 0.15,
-                            "source": characterName,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                    }
-                    let buffSheet = ATKObjects.topazTurmoilFireWeakSHEET;
-                    const buffName = buffSheet.buffName;
-                    const buffCheck = sourceTurn.buffsObject[buffName];
-
-                    if (targetTurn.statTable[WeaknessFire] <= 0) {//if there is no quantum weakness
-                        if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
-                        else {return;}
-                    }
-                    else {//if weakness found, apply buff
-                        if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Financial Turmoil - Fire-weak bonus",
                 "ownerTurn": {},
             },
             {
@@ -16186,34 +16325,6 @@ const turnLogic = {
                 "listenerName": "Numby's advancement controller",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Topaz Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -16233,83 +16344,10 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "HitEnemyStart",
-                    condition(battleData,generalInfo) {
-                        const ownerTurn = this.ownerTurn;
-
-                        
-
-                        const sourceTurn = generalInfo.sourceTurn;
-                        const targetsGotHit = generalInfo.targetsGotHit;
-                        const targetTurn = generalInfo.targetTurn;
-                        const isFUA = generalInfo.ATKObject.isFUA;
-                        if (sourceTurn.isEnemy || !isFUA || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
-
-
-                        const characterName = ownerTurn.properName;
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-
-                        const enemyWithDebt = logicRef.characterValuesBattle.enemyWithDebt;
-                        // if (targetTurn.properName != enemyWithDebt.properName) {return}//can only apply to those with proof of debt, aka the primary target
-                        //in theory this is a completely useless check as topaz will only ever do single target dmg, and bc of that only the primary target will be hit
-
-
-                        if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
-                        const buffName = logicRef.buffNames.e1Debtor;
-                        if (!ATKObjects.topazE1DebtorSTACKSHEET) {
-    
-                            ATKObjects.topazE1DebtorSTACKSHEET = {
-                                "stats": [CritDamageBase],
-                                [CritDamageBase]: 0.25,
-                                "source": characterName,
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 2,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "isDebuff": true,
-                                "actionTags": ["FUA"]
-                            }
-                        }
-                        let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
-
-
-                        updateBuff(battleData,enemyWithDebt,buffSheet);
-                        const buffCheck = enemyWithDebt.buffsObject[buffName];
-                        if (buffCheck.currentStacks === 2) {
-                            enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
-                        }
-                    },
-                    "target": "enemy",
-                    "listenerName": "Future Market Debtor controller",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        const ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-
-                        const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
-                        if (numbyTurn.properName != sourceTurn.properName) {return;}
-                        actionAdvance(0.2,ownerTurn,battleData,"E4: Agile Operation");
-                    },
-                    "target": "owner",
-                    "listenerName": "Agile Operation",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
