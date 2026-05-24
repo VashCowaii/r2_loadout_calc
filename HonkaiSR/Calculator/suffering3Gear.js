@@ -1928,8 +1928,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "SkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -2666,8 +2669,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "SkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -2982,8 +2988,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {},
             },
             {
-                "trigger": "SkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityStart
+
                     //ik most debuffs apply as the attack starts, not after they land, but this one is an AFTER application and I did confirm that
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -6645,8 +6654,11 @@ const turnLogicLightcones = {
                 "buffNames": {},
             },
             {
-                "trigger": "SkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityStart
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -9732,8 +9744,11 @@ const turnLogicRelics = {
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "SkillStart",
+                    "trigger": "AbilityStart",
                     condition(battleData,generalInfo) {
+                        const action = generalInfo.action;
+                        if (action != "Skill") {return;}//AbilityStart
+
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
