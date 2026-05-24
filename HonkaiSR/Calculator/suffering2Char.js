@@ -21090,7 +21090,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Robin": {
+    "Robin": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -21517,21 +21517,17 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
-                },
-                "target": "self",
-                "listenerName": "Coloratura Cadenza: battlestart advance",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent crit dmg
                     const ATKObjects = logicRef.ATKObjects;
 
                     if (!ATKObjects.skillRef) {
@@ -21541,7 +21537,7 @@ const turnLogic = {
 
                         // greatTableIndex
                         // greatTableKeys
-                        ATKObjects.buffSheet = {
+                        ATKObjects.robinTalentCRITDMGSHEET = {
                             "stats": [CritDamageBase],
                             [CritDamageBase]: values[0],
                             "source": "Talent",
@@ -21556,27 +21552,69 @@ const turnLogic = {
                             "expireType": null,
                         }
                     }
-
                     const allyArray = battleData.allAlliesArray;
-                    updateBuffBatchTargets(battleData,allyArray,ATKObjects.buffSheet);
+                    updateBuffBatchTargets(battleData,allyArray,ATKObjects.robinTalentCRITDMGSHEET);
+
+                    //talent energy from ally attacks
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace coloratura
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Talent: ally crit dmg application",
+                "listenerName": "Robin Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+                            let ownerTurn = this.ownerTurn;
+                            const energyToRegen = ownerTurn.rank >= 2 ? 3 : 2;
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Tonal Resonance");
+                        },
+                        "target": "self",
+                        "listenerName": "Talent: ally attack listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            
+                            let ownerTurn = this.ownerTurn;
+                            actionAdvance(0.25,ownerTurn,battleData,"Coloratura Cadenza");
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Coloratura Cadenza: battlestart advance",
+                        "ownerTurn": {},
+                    },
+                ],
             },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
-                    let ownerTurn = this.ownerTurn;
-                    const energyToRegen = ownerTurn.rank >= 2 ? 3 : 2;
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Tonal Resonance?");
-                },
-                "target": "self",
-                "listenerName": "Talent: ally attack listener",
-                "ownerTurn": {},
-            },
+            
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -21652,30 +21690,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Robin ult - ally attack listener for additional dmg",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    //PreBattleStartTechniquesNormal for always active techniques that don't need to care
-                    //StartBattle for dmg techniques that could have conflicts
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique && !dimensionUsed && battleData.techniquesAllowed) {
-                        // const techCall = this.techCall ??= logicRef.skillFunctions.robinTechnique;
-                        // techCall(battleData,"enemy",ownerTurn);
-
-                        battleData.dimensionTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Robin Technique",
                 "ownerTurn": {},
             },
         ],
