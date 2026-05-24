@@ -29803,7 +29803,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Aglaea": {
+    "Aglaea": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
@@ -30634,6 +30634,226 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace speeding sol
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace myopics doom
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Aglaea Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+        
+                            const fiftyPercent = ownerTurn.maxEnergy * 0.5;
+                            const currentEnergy = ownerTurn.currentEnergy;
+                            const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
+        
+                            if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"The Speeding Sol");}
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "The Speeding Sol: energy regen on battleStart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isMemosprite) {
+                                const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                                if (ownerTurnRef.name != ownerTurn.name) {return;}
+                            }
+                            else if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "The Myopic's Doom SPD check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+    
+    
+                            if (sourceTurn.isMemosprite) {
+                                const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                                if (ownerTurnRef.name != ownerTurn.name) {return;}
+                            }
+                            else if (sourceTurn.name != ownerTurn.name) {return;}
+                            //e1 is only for aggy or garment attacks
+                            updateEnergy(battleData,20,ownerTurn,false,"E1 Post-attack regen");
+                        },
+                        "target": "self",
+                        "listenerName": "E1 energy bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            //in the future I could probably bundle the statcheck together with the memo talent spd check, but I'd prefer to keep this separate for now
+        
+                            if (sourceTurn.isMemosprite) {
+                                const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
+                                if (ownerTurnRef.name != ownerTurn.name) {return;}
+                            }
+                            else if (sourceTurn.name != ownerTurn.name) {return;}
+        
+                            const statCheckE6 = this.statCheckE6 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheckE6;
+                            statCheckE6(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "listenerName": "Fluctuate in the Tapestry of Fates SPD check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BasicATKStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            let isSourcedFromAggy = false;
+                            if (sourceTurn.isMemosprite) {
+                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                            }
+                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+    
+                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                        },
+                        "target": "self",
+                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SkillStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            let isSourcedFromAggy = false;
+                            if (sourceTurn.isMemosprite) {
+                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                            }
+                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+    
+                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                        },
+                        "target": "self",
+                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            let isSourcedFromAggy = false;
+                            if (sourceTurn.isMemosprite) {
+                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                            }
+                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+    
+                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                        },
+                        "target": "self",
+                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "MemoSkillStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            let isSourcedFromAggy = false;
+                            // console.log(sourceTurn.isMemosprite)
+                            if (sourceTurn.isMemosprite) {
+                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
+                            }
+                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+    
+                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
+                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
+                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
+                        },
+                        "target": "self",
+                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "AglaeaForceGarmentDeath",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -30682,40 +30902,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Aglaea - Garmentmaker Forced Death",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatSPD",//SPD stat family
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.isMemosprite) {
-                        const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
-                        if (ownerTurnRef.name != ownerTurn.name) {return;}
-                    }
-                    else if (sourceTurn.name != ownerTurn.name) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
-                    statCheck(battleData,ownerTurn);
-                },
-                "target": "self",
-                "listenerName": "The Myopic's Doom SPD check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const fiftyPercent = ownerTurn.maxEnergy * 0.5;
-                    const currentEnergy = ownerTurn.currentEnergy;
-                    const energyToRegen = currentEnergy < fiftyPercent ? fiftyPercent-currentEnergy : 0;
-
-                    if (energyToRegen) {updateEnergy(battleData,energyToRegen,ownerTurn,true,"The Speeding Sol");}
-                },
-                "target": "self",
-                "listenerName": "The Speeding Sol: energy regen on battleStart",
                 "ownerTurn": {},
             },
             {
@@ -31120,31 +31306,6 @@ const turnLogic = {
                 "listenerName": "Aglaea - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Aggy Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -31164,131 +31325,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "AttackDMGEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-
-
-                        if (sourceTurn.isMemosprite) {
-                            const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
-                            if (ownerTurnRef.name != ownerTurn.name) {return;}
-                        }
-                        else if (sourceTurn.name != ownerTurn.name) {return;}
-                        //e1 is only for aggy or garment attacks
-                        updateEnergy(battleData,20,ownerTurn,false,"E1 Post-attack regen");
-                    },
-                    "target": "self",
-                    "listenerName": "E1 energy bonus",
-                    "ownerTurn": {},
-                },
-            ],
-            2: [
-                {
-                    "trigger": "BasicATKStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        let isSourcedFromAggy = false;
-                        if (sourceTurn.isMemosprite) {
-                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                        }
-                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-
-                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                    },
-                    "target": "self",
-                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "SkillStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        let isSourcedFromAggy = false;
-                        if (sourceTurn.isMemosprite) {
-                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                        }
-                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-
-                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                    },
-                    "target": "self",
-                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "UltimateStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        let isSourcedFromAggy = false;
-                        if (sourceTurn.isMemosprite) {
-                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                        }
-                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-
-                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                    },
-                    "target": "self",
-                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "MemoSkillStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        let isSourcedFromAggy = false;
-                        // console.log(sourceTurn.isMemosprite)
-                        if (sourceTurn.isMemosprite) {
-                            if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                        }
-                        else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-
-                        const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                        if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                        else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                    },
-                    "target": "self",
-                    "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
+            2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "UpdateStatSPD",//SPD stat family
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        //in the future I could probably bundle the statcheck together with the memo talent spd check, but I'd prefer to keep this separate for now
-    
-                        if (sourceTurn.isMemosprite) {
-                            const ownerTurnRef = battleData.nameBasedTurns[sourceTurn.eventOwner];
-                            if (ownerTurnRef.name != ownerTurn.name) {return;}
-                        }
-                        else if (sourceTurn.name != ownerTurn.name) {return;}
-    
-                        const statCheckE6 = this.statCheckE6 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheckE6;
-                        statCheckE6(battleData,ownerTurn);
-                    },
-                    "target": "self",
-                    "listenerName": "Fluctuate in the Tapestry of Fates SPD check",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
