@@ -6434,7 +6434,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Abundance
-    "Gallagher": {//PASSIVE DONE
+    "Gallagher": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -7135,14 +7135,6 @@ const turnLogic = {
             "listenerName": "Gallagher Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "nextBasicEnhanced": false,
@@ -7160,7 +7152,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //TODO: e2: ally revive shit, later when I allow for ally deaths
-    "Huohuo": {//PASSIVE DONE
+    "Huohuo": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -7866,14 +7858,6 @@ const turnLogic = {
             "listenerName": "Huohuo Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "talentProvisionIsActive": false,
@@ -7894,7 +7878,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //TODO: circle back and add weaken into the dmg calc functions  //TODO: skill cleanse later
-    "Natasha": {//PASSIVE DONE
+    "Natasha": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -8616,14 +8600,6 @@ const turnLogic = {
             "listenerName": "Natasha Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             // "nextBasicEnhanced": false,
@@ -8640,7 +8616,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //TODO: ult cleanse later //TODO: skill at e2 allowing debuff resistance? That's new
-    "Lynx": {//PASSIVE DONE
+    "Lynx": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -9229,14 +9205,6 @@ const turnLogic = {
             "listenerName": "Lynx Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             // "nextBasicEnhanced": false,
@@ -9255,7 +9223,7 @@ const turnLogic = {
     //TODO: add ult enemy buff removal later, also for pela probably as well if I forgot
     //TODO: skill cleanse, when enemy debuffs can be applied later
     //TODO: CC resistance, same as above
-    "Luocha": {//PASSIVE DONE
+    "Luocha": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -10127,14 +10095,6 @@ const turnLogic = {
             "listenerName": "Luocha Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "isReadyToInjectSkill": true,
@@ -10158,7 +10118,7 @@ const turnLogic = {
     },
 
     //Nihility
-    "Silver Wolf": {//PASSIVE DONE
+    "Silver Wolf": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -11015,14 +10975,6 @@ const turnLogic = {
             "listenerName": "Silver Wolf Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "bugCycleCounter": 0,
@@ -11051,7 +11003,7 @@ const turnLogic = {
         "implantBuffNames": ["implantFire","implantIce","implantLightning","implantWind","implantQuantum","implantImaginary","implantPhysical"],
         "characterValuesBattle": {},
     },
-    "Kafka": {//PASSIVE DONE
+    "Kafka": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -11883,14 +11835,6 @@ const turnLogic = {
             "listenerName": "Kafka Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -11909,7 +11853,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Hysilens": {//PASSIVE DONE
+    "Hysilens": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -13046,14 +12990,6 @@ const turnLogic = {
             "listenerName": "Hysilens Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -13080,7 +13016,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Black Swan": {//PASSIVE DONE
+    "Black Swan": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -14133,14 +14069,6 @@ const turnLogic = {
             "listenerName": "Black Swan Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -14170,7 +14098,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Welt": {//PASSIVE DONE
+    "Welt": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -14900,14 +14828,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
         ],
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {},
         "useTechnique": true,
@@ -14921,7 +14841,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Pela": {//PASSIVE DONE
+    "Pela": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -15557,14 +15477,6 @@ const turnLogic = {
             "listenerName": "Pela Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
         },
@@ -15585,7 +15497,7 @@ const turnLogic = {
 
 
     //Hunt
-    "Topaz & Numby": {//PASSIVE DONE
+    "Topaz & Numby": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -16343,14 +16255,6 @@ const turnLogic = {
             "listenerName": "Topaz Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "listenersToInjectLater": {
@@ -16389,7 +16293,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Archer": {//PASSIVE DONE
+    "Archer": {
         logic(thisTurn,battleData) {
             let actionUsed = false;
             const statCalls = thisTurn.battleValues;
@@ -17238,14 +17142,6 @@ const turnLogic = {
             "listenerName": "Archer Technique2",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -17266,7 +17162,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Seele": {//PASSIVE DONE//TODO: see note inside skill function
+    "Seele": {//TODO: see note inside skill function
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
@@ -18245,14 +18141,6 @@ const turnLogic = {
             "listenerName": "Seele Technique2",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -18276,7 +18164,7 @@ const turnLogic = {
     },
 
     //Harmony
-    "Tingyun": {//PASSIVE DONE
+    "Tingyun": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -18663,8 +18551,19 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    updateBuff(battleData,ownerTurn,buffSheet)
+                    updateBuff(battleData,ownerTurn,buffSheet);
 
+                    if (rank >= 1) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 2) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
 
 
                     //technique
@@ -18702,6 +18601,79 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Tingyun - Major Trace: Jubilant Passage",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let charValuesRef = ownerTurn.battleValues;
+                            let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                            if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
+        
+                            let sourceCheck = sourceTurn.properName === targetTurn.properName;
+                            if (!sourceCheck) {return;}
+        
+                            let buffSheet = this.buffSheet ??= {
+                                "stats": [SPDP],
+                                [SPDP]: 0.20,
+                                "source": characterName,
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[characterName].buffNames.e1SPD,
+                                "durationInTurn": 2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Tingyun - E1 spd boost controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let charValuesRef = ownerTurn.battleValues;
+                            let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                            if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
+        
+                            let sourceCheck = sourceTurn.properName === targetTurn.properName;
+                            if (!sourceCheck) {return;}
+                            charValuesRef.benedictorKilledEnemy = false;//reset the kill achieved for the E2 energy regen
+                        },
+                        "target": "self",
+                        "listenerName": "Tingyun - E2 ally kill count reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {//poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let charValuesRef = ownerTurn.battleValues;
+                            let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                            if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
+        
+                            let sourceCheck = sourceTurn.properName === targetTurn.properName;
+                            if (!sourceCheck || charValuesRef.benedictorKilledEnemy) {return;}//if this isn't the ally with benediction, or they've already killed within this turn, then abort
+        
+                            charValuesRef.benedictorKilledEnemy = true;
+                            let amount = 5;
+                            updateEnergy(battleData,amount,targetTurn,false,"Gainfully Gives, Givingly Gains");
+                        },
+                        "target": "self",
+                        "listenerName": "Tingyun - E2 ally energy gain",
                         "ownerTurn": {},
                     },
                 ],
@@ -18820,89 +18792,6 @@ const turnLogic = {
             "listenerName": "Tingyun Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "UltimateEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let charValuesRef = ownerTurn.battleValues;
-                        let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                        if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-    
-                        let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                        if (!sourceCheck) {return;}
-    
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [SPDP],
-                            [SPDP]: 0.20,
-                            "source": characterName,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[characterName].buffNames.e1SPD,
-                            "durationInTurn": 2,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn"
-                        }
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Tingyun - E1 spd boost controller",
-                    "ownerTurn": {},
-                },
-            ],
-            2: [
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let charValuesRef = ownerTurn.battleValues;
-                        let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                        if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-    
-                        let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                        if (!sourceCheck) {return;}
-                        charValuesRef.benedictorKilledEnemy = false;//reset the kill achieved for the E2 energy regen
-                    },
-                    "target": "self",
-                    "listenerName": "Tingyun - E2 ally kill count reset",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "EnemyDied",
-                    condition(battleData,generalInfo) {//poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
-                        let ownerTurn = this.ownerTurn;
-    
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let charValuesRef = ownerTurn.battleValues;
-                        let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                        if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-    
-                        let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                        if (!sourceCheck || charValuesRef.benedictorKilledEnemy) {return;}//if this isn't the ally with benediction, or they've already killed within this turn, then abort
-    
-                        charValuesRef.benedictorKilledEnemy = true;
-                        let amount = 5;
-                        updateEnergy(battleData,amount,targetTurn,false,"Gainfully Gives, Givingly Gains");
-                    },
-                    "target": "self",
-                    "listenerName": "Tingyun - E2 ally energy gain",
-                    "ownerTurn": {},
-                },
-            ],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "charWithBenediction": null,
@@ -18928,7 +18817,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Bronya": {//PASSIVE DONE
+    "Bronya": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -19544,14 +19433,6 @@ const turnLogic = {
             "listenerName": "Bronya Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "e1SPRegenReady": true,
@@ -19570,7 +19451,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sunday": {//PASSIVE DONE
+    "Sunday": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -20270,14 +20151,6 @@ const turnLogic = {
             "listenerName": "Sunday Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "listenersToInjectLater": {
             "techniqueAllyTarget": {
                 "trigger": "TargetAlly",
@@ -20340,7 +20213,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Tribbie": {//PASSIVE DONE
+    "Tribbie": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -21179,14 +21052,6 @@ const turnLogic = {
             "listenerName": "Tribbie Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersToInjectLater": {},
         "characterValues": {
@@ -21205,7 +21070,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Robin": {//PASSIVE DONE
+    "Robin": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -21831,14 +21696,6 @@ const turnLogic = {
             "listenerName": "Robin Technique wave start listener",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "ariaIsActive": false,
@@ -21855,7 +21712,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Asta": {//PASSIVE DONE
+    "Asta": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -22501,14 +22358,6 @@ const turnLogic = {
             "listenerName": "Asta Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "chargeStacks": 0,
@@ -22526,7 +22375,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Ruan Mei": {//PASSIVE DONE
+    "Ruan Mei": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -23344,14 +23193,6 @@ const turnLogic = {
             "listenerName": "Ruan Mei Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersToInjectLater": {},
         "characterValues": {
@@ -23373,7 +23214,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sparkle": {//PASSIVE DONE
+    "Sparkle": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -24223,14 +24064,6 @@ const turnLogic = {
             "listenerName": "Sparkle Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "reservePoints": 0,
@@ -24252,7 +24085,7 @@ const turnLogic = {
     },
     
     //Destruction
-    "Saber": {//PASSIVE DONE
+    "Saber": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
@@ -25194,14 +25027,6 @@ const turnLogic = {
             "listenerName": "Saber Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -25231,7 +25056,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Blade": {//PASSIVE DONE
+    "Blade": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
 
@@ -26084,14 +25909,6 @@ const turnLogic = {
             "listenerName": "Blade Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -26110,7 +25927,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Jingliu": {//PASSIVE DONE
+    "Jingliu": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
@@ -26849,14 +26666,6 @@ const turnLogic = {
             "listenerName": "Jingliu Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -26880,7 +26689,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Firefly": {//PASSIVE DONE
+    "Firefly": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
 
@@ -27832,14 +27641,6 @@ const turnLogic = {
             "listenerName": "Firefly Technique2",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -27859,7 +27660,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Hook": {//PASSIVE DONE
+    "Hook": {
         logic(thisTurn,battleData) {
             // let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
@@ -28587,14 +28388,6 @@ const turnLogic = {
             "listenerName": "Hook Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -28615,7 +28408,7 @@ const turnLogic = {
     },
     
     //Remembrance
-    "Trailblazer - Remembrance": {//PASSIVE DONE
+    "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             const summonUp = statCalls.memIsActive;
@@ -29783,14 +29576,6 @@ const turnLogic = {
             "listenerName": "Trailblazer: Remembrance Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -29811,7 +29596,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Aglaea": {//PASSIVE DONE
+    "Aglaea": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             let currentSP = battleData.skillPointCurrent;
@@ -31332,14 +31117,6 @@ const turnLogic = {
             "listenerName": "Aggy Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -31363,7 +31140,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Evernight": {//PASSIVE DONE
+    "Evernight": {
         logic(thisTurn,battleData) {
             // const skillIsUp = thisTurn.evernightSkillIsActive;
 
@@ -32731,14 +32508,6 @@ const turnLogic = {
             "listenerName": "Evernight Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -32768,7 +32537,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Hyacine": {//PASSIVE DONE
+    "Hyacine": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -34121,14 +33890,6 @@ const turnLogic = {
             "listenerName": "Hyacine Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -34155,7 +33916,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //Preservation
-    "Dan Heng • Permansor Terrae": {//PASSIVE DONE
+    "Dan Heng • Permansor Terrae": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -35399,14 +35160,6 @@ const turnLogic = {
             "listenerName": "DHPT Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "souldragonEnhancedTurns": 0,
@@ -35422,7 +35175,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Aventurine": {///PASSIVE DONE
+    "Aventurine": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -36367,14 +36120,6 @@ const turnLogic = {
             "listenerName": "Aventurine Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "betStacks": 0,
@@ -36397,7 +36142,7 @@ const turnLogic = {
 
 
     //Erudition
-    "Argenti": {//PASSIVE DONE
+    "Argenti": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
@@ -36998,14 +36743,6 @@ const turnLogic = {
             "listenerName": "Argenti Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -37023,7 +36760,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Anaxa": {//PASSIVE DONE
+    "Anaxa": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -38061,14 +37798,6 @@ const turnLogic = {
             "listenerName": "Anaxa Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "characterValues": {
             "implantIndex": 0,
@@ -38102,7 +37831,7 @@ const turnLogic = {
 
 
     //Elation
-    "Yao Guang": {//PASSIVE DONE
+    "Yao Guang": {
         logic(thisTurn,battleData) {
             // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
@@ -39117,14 +38846,6 @@ const turnLogic = {
             "listenerName": "Yao Guang Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -39155,7 +38876,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sparxie": {//PASSIVE DONE
+    "Sparxie": {
         logic(thisTurn,battleData) {
             let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
@@ -40291,14 +40012,6 @@ const turnLogic = {
             "listenerName": "Sparxie Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -40321,7 +40034,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Trailblazer - Elation": {//PASSIVE DONE
+    "Trailblazer - Elation": {
         logic(thisTurn,battleData) {
             // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
@@ -41188,14 +40901,6 @@ const turnLogic = {
             "listenerName": "EMC Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -41222,7 +40927,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     
-    "Evanescia": {//PASSIVE DONE
+    "Evanescia": {
         logic(thisTurn,battleData) {
             // let actionUsed = false;
             let currentSP = battleData.skillPointCurrent;
@@ -42500,14 +42205,6 @@ const turnLogic = {
             "listenerName": "Evanescia Technique",
             "ownerTurn": {},
         },
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
@@ -42541,14 +42238,6 @@ const turnLogic = {
         },
         "listeners": [
         ],
-        "eidolonListeners": {
-            1: [],
-            2: [],
-            3: [],
-            4: [],
-            5: [],
-            6: [],
-        },
         "ATKObjects": {},
         "listenersBattle": [],
         "buffsBattle": {},
