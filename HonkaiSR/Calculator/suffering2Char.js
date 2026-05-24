@@ -20229,7 +20229,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Tribbie": {
+    "Tribbie": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -20452,11 +20452,33 @@ const turnLogic = {
                         isFUA: true,
                         compositeCacheTag,
                     }
+
+                    const characterName = sourceTurn.properName;
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.tribbieFUABuffStackSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.72,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffRef.fuaLamb,
+                        "durationInTurn": 4,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
                 }
                 let ATKObject = ATKObjects.tribbieFUAATKOBJECT;
 
                 poke("TalentStart",battleData,{sourceTurn});
+
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                const buffSheet = ATKObjects.tribbieFUABuffStackSHEET;
+                updateBuff(battleData,sourceTurn,buffSheet);
+
                 poke("TalentEnd",battleData,{sourceTurn});
             },
             tribbieUltimate(battleData,sourceTurn) {
@@ -20719,6 +20741,195 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace pebble
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e6
+                    const buffSheet = this.tribbieE6SHEET ??= {
+                        "stats": [DamageFUA],
+                        [DamageFUA]: 7.29,
+                        "source": "E6",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.e6FUADMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet);
+
+                    //talent ult use listener
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Tribbie Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+                            updateEnergy(battleData,30,ownerTurn,false,"Pebble at Crossroads?");
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Pebble at Crossroads?: energy regen on battleStart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            let ownerTurn = this.ownerTurn;
+                            if (sourceTurn.isEnemy || sourceTurn.properName === ownerTurn.properName) {return;}
+                            //the trace specifies OTHER ally targets
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            enemyCounter = 0;
+                            for (let targetHit in targetsGotHit) {
+                                enemyCounter += 1;
+                            }
+                            const energyToRegen = enemyCounter * 1.5;
+        
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Pebble at Crossroads?");
+                        },
+                        "target": "self",
+                        "listenerName": "Pebble at Crossroads?: ally attack listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const rank = ownerTurn.rank;
+                            if ((sourceTurn.properName === ownerTurn.properName && rank < 6) || sourceTurn.usedTribbieFUA) {return;}
+        
+                            
+                            sourceTurn.usedTribbieFUA = true;
+        
+                            const queueObject = this.queueObject ??= {
+                                name: this.listenerName,
+                                priority: priorityList.ability.CharacterAttackFromSelf,
+                                queueTag: "QueuedInsert",
+        
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieFUA,
+                                action: "Insert", 
+                                points: 0,
+                                energyCost: null,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+                                
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: true,
+                                isAbility: true,
+                                useFUATriggers: true,
+                                useAnyTriggers: true,
+                                // eventTypeStartLOG: "GenericAbilityStart",
+                                // eventTypeStart: "GenericAbilityStart",
+                                // eventTypeEnd: "GenericAbilityEnd",
+        
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+        
+                                target: this.target,
+                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+        
+                                elationForcedPunchline: null,
+                            }
+                            queueObject.sourceTurn = ownerTurn;
+        
+                            queueInsertAbility(battleData,queueObject);
+                        },
+                        "target": "enemy",
+                        "listenerName": "Tribbie - Follow-up queued - Talent",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "TrueTriggerAttackEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("TrueTriggerAttackEnd",battleData,generalInfo);
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy || !ownerTurn.tribbieZoneActive) {return;}
+    
+    
+                            // console.log(sourceTurn.battleValues.highestHPTarget)
+    
+                            const highestHPEnemy = ownerTurn.battleValues.highestHPTarget;
+                            // console.log(battleData.sumAV,highestHPEnemy)
+                            
+                            if (!highestHPEnemy) {return;}
+                            // sourceTurn.battleValues.highestHPTarget = highestHPEnemy;
+                            let trueBase = battleData.addedDMGTallyAttack;
+                            let trueCrit = null;
+                            let trueAVG = null;
+                            const trueDMGMulti = 0.24;
+    
+                            // battleData.attackIsActive = true;
+                            // battleData.addedDMGTallyAttack = 0;
+    
+                            battleActions.trueDMGHitWrapper(battleData,ownerTurn,highestHPEnemy,trueDMGMulti,trueBase,trueCrit,trueAVG,"E1 Tribbie");
+                        },
+                        "target": "self",
+                        "listenerName": "Pebble at Crossroads?: ally attack listener",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "UpdateStatHP",//HP stat family
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -20747,127 +20958,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Enemy created while zone active debuff application",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UltimateEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    const rank = ownerTurn.rank;
-                    if ((sourceTurn.properName === ownerTurn.properName && rank < 6) || sourceTurn.usedTribbieFUA) {return;}
-
-                    
-                    sourceTurn.usedTribbieFUA = true;
-
-                    const queueObject = this.queueObject ??= {
-                        name: this.listenerName,
-                        priority: priorityList.ability.CharacterAttackFromSelf,
-                        queueTag: "QueuedInsert",
-
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.tribbieFUA,
-                        action: "Insert", 
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
-                        isTieBreaker: false,
-                        isExtraTurn: false,
-                        skipEXDisplay: false,
-                        allowUlts: false,
-                        decrementBuffs: false,
-                        extraTurnHasChoice: false,
-                        dontKeepNextWave: false,//ults always clear out
-                        isAttack: true,
-                        isAbility: true,
-                        useFUATriggers: true,
-                        useAnyTriggers: true,
-                        // eventTypeStartLOG: "GenericAbilityStart",
-                        // eventTypeStart: "GenericAbilityStart",
-                        // eventTypeEnd: "GenericAbilityEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: this.target,
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                        elationForcedPunchline: null,
-                    }
-                    queueObject.sourceTurn = ownerTurn;
-
-                    queueInsertAbility(battleData,queueObject);
-                },
-                "target": "enemy",
-                "listenerName": "Tribbie - Follow-up queued - Talent",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "FUAEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    if (!this.tribbieFUABuffStackSHEET) {
-                        const characterName = sourceTurn.properName;
-                        const logicRef = turnLogic[characterName];
-                        const buffRef = logicRef.buffNames;
-                        this.tribbieFUABuffStackSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: 0.72,
-                            "source": "Trace",
-                            "sourceOwner": characterName,
-                            "buffName": buffRef.fuaLamb,
-                            "durationInTurn": 4,
-                            "duration": 3,
-                            "AVApplied": 0,
-                            "maxStacks": 3,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "removeOnDeath": true,
-                        }
-                    }
-                    const buffSheet = this.tribbieFUABuffStackSHEET;
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Lamb Outside the Wall... - FUA listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    updateEnergy(battleData,30,ownerTurn,false,"Pebble at Crossroads?");
-                },
-                "target": "self",
-                "listenerName": "Pebble at Crossroads?: energy regen on battleStart",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-                    let ownerTurn = this.ownerTurn;
-                    if (sourceTurn.isEnemy || sourceTurn.properName === ownerTurn.properName) {return;}
-                    //the trace specifies OTHER ally targets
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    enemyCounter = 0;
-                    for (let targetHit in targetsGotHit) {
-                        enemyCounter += 1;
-                    }
-                    const energyToRegen = enemyCounter * 1.5;
-
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Pebble at Crossroads?");
-                },
-                "target": "self",
-                "listenerName": "Pebble at Crossroads?: ally attack listener",
                 "ownerTurn": {},
             },
             {
@@ -20960,34 +21050,6 @@ const turnLogic = {
                 "listenerName": "Tribbie ult zone attack listener for additional dmg",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Tribbie Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -21007,70 +21069,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "TrueTriggerAttackEnd",
-                    condition(battleData,generalInfo) {
-                        // poke("TrueTriggerAttackEnd",battleData,generalInfo);
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy || !ownerTurn.tribbieZoneActive) {return;}
-
-
-                        // console.log(sourceTurn.battleValues.highestHPTarget)
-
-                        const highestHPEnemy = ownerTurn.battleValues.highestHPTarget;
-                        // console.log(battleData.sumAV,highestHPEnemy)
-                        
-                        if (!highestHPEnemy) {return;}
-                        // sourceTurn.battleValues.highestHPTarget = highestHPEnemy;
-                        let trueBase = battleData.addedDMGTallyAttack;
-                        let trueCrit = null;
-                        let trueAVG = null;
-                        const trueDMGMulti = 0.24;
-
-                        // battleData.attackIsActive = true;
-                        // battleData.addedDMGTallyAttack = 0;
-
-                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,highestHPEnemy,trueDMGMulti,trueBase,trueCrit,trueAVG,"E1 Tribbie");
-                    },
-                    "target": "self",
-                    "listenerName": "Pebble at Crossroads?: ally attack listener",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
             2: [],
             3: [],
             4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageFUA],
-                            [DamageFUA]: 7.29,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6FUADMG,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Morrow of Star Shine - E6 FUA DMG application",
-                    "ownerTurn": {},
-                    "buffNames": {}
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersToInjectLater": {},
