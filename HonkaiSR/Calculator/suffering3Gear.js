@@ -195,8 +195,10 @@ const turnLogicLightcones = {
                 "ownersSlots": {},
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
 
@@ -1802,8 +1804,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     // let ownerRank = ownersSlots[sourceTurn.name];
@@ -2618,8 +2623,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -3232,8 +3240,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {},
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     //ik most debuffs apply as the attack starts, not after they land, but this one is an AFTER application and I did confirm that
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -4322,8 +4333,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -5080,8 +5094,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -5732,8 +5749,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -5823,8 +5843,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -6635,8 +6658,11 @@ const turnLogicLightcones = {
                 "buffNames": {},
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -7713,8 +7739,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -8995,14 +9024,14 @@ const turnLogicLightcones = {
 
 const turnLogicRelics = {
     //BODY SETS
-    "Genius of Brilliant Stars": {
+    "Genius of Brilliant Stars": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "PreBattleEntersCombat",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
                         let ownerRef = this.owners;
                         let relicNameRef = "Genius of Brilliant Stars";
@@ -9027,6 +9056,7 @@ const turnLogicRelics = {
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
@@ -9034,61 +9064,61 @@ const turnLogicRelics = {
                             // buffSheet[DEFShredAll] = values
                             buffSheet.sourceOwner = currentTurn.properName;
                             updateBuff(battleData,currentTurn,buffSheet);
+
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                         }
                     },
                     "target": "self",
                     "listenerName": "Genius of Brilliant Stars - DEF Shred(Any) 4pc",
-                    "owners": []
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+                                let targetTurn = generalInfo.targetTurn;
+        
+                                if (!this.geniusQUANTUMSHREDSHEET) {
+                                    let relicNameRef = "Genius of Brilliant Stars";
+                                    let pcRef = "4pc";
+                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc4ShredQuantum;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    this.geniusQUANTUMSHREDSHEET = {
+                                        "stats": [DEFShredAll],
+                                        [DEFShredAll]: relicPathing[1],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                }
+                                let buffSheet = this.geniusQUANTUMSHREDSHEET;
+                                const buffName = buffSheet.buffName;
+        
+                                if (targetTurn.statTable[WeaknessQuantum] <= 0) {//if there is no quantum weakness
+                                    if (sourceTurn.buffsObject[buffName]) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
+                                    // else {return;}
+                                }
+                                else {//if weakness found, apply buff
+                                    if (sourceTurn.buffsObject[buffName]) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
+                                    
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Genius of Brilliant Stars - DEF Shred(Quantum Enemy) 4pc",
+                        },
+                    ]
                 },
-                {
-                    "trigger": "AllyDMGStart",
-                    condition(battleData,generalInfo) {
-                        let ownerRef = this.owners;
-                        
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let targetTurn = generalInfo.targetTurn;
-
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
-
-                        if (!sourceTurn.geniusQUANTUMSHREDSHEET) {
-                            let relicNameRef = "Genius of Brilliant Stars";
-                            let pcRef = "4pc";
-                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc4ShredQuantum;
-                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                            sourceTurn.geniusQUANTUMSHREDSHEET = {
-                                "stats": [DEFShredAll],
-                                [DEFShredAll]: relicPathing[1],
-                                "source": relicNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null
-                            }
-                        }
-                        let buffSheet = sourceTurn.geniusQUANTUMSHREDSHEET;
-                        const buffName = buffSheet.buffName;
-
-                        if (targetTurn.statTable[WeaknessQuantum] <= 0) {//if there is no quantum weakness
-                            if (sourceTurn.buffsObject[buffName]) {removeBuff(battleData,sourceTurn,buffSheet);}//then remove the buff if we have it
-                            else {return;}
-                        }
-                        else {//if weakness found, apply buff
-                            if (sourceTurn.buffsObject[buffName]) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
-                            
-                            updateBuff(battleData,sourceTurn,buffSheet);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Genius of Brilliant Stars - DEF Shred(Quantum Enemy) 4pc",
-                    "owners": []
-                },
+                
             ],
             "buffNames": {
                 "pc4ShredAny": "Genius' DEF Shred(Any)",
@@ -9096,96 +9126,130 @@ const turnLogicRelics = {
             },
         }
     },
-    "Eagle of Twilight Line": {
+    "Eagle of Twilight Line": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "UltimateEnd",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
+                        let ownerRef = this.owners;
 
-                        if (!ownerRank) {return;}
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
 
-                        let relicNameRef = "Eagle of Twilight Line";
-                        actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
+                        }
                     },
                     "target": "self",
-                    "listenerName": "Eagle - Advance/Ult",
+                    "listenerName": "Eagle 4pc listener setup",
                     "owners": [],
-                    "ownersSlots": {}
+                    "subListeners": [
+                        {
+                            "trigger": "UltimateEnd",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                let relicNameRef = "Eagle of Twilight Line";
+                                actionAdvance(0.25,sourceTurn,battleData,relicNameRef);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Eagle - Advance/Ult",
+                        },
+                    ]
                 },
             ],
             "buffNames": {},
         }
     },
-    "Sacerdos\' Relived Ordeal": {
+    "Sacerdos\' Relived Ordeal": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "TargetAlly",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
+                        let ownerRef = this.owners;
 
-                        //poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:currentTurn, targetTurn:targetTurn, targetSkill:skillRef.slot});
-                        let isNotSingle = generalInfo.targetType != "Single";
-                        const skillType = generalInfo.targetSkill;
-                        let isNotEligibleSkill = skillType != "Skill" && skillType != "Ultimate";
-                        if (isNotSingle || isNotEligibleSkill) {return;}
-                        //we skip team-wide ulty or skill buffs, and then avoid non-ulty and non-skills
-                        let targetTurn = generalInfo.targetTurn;
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
 
-                        if (!sourceTurn.sacerdosCRITDMGSHEET) {
-                            let relicNameRef = "Sacerdos\' Relived Ordeal";
-                            let pcRef = "4pc";
-                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.sacerdos;
-
-                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                            // greatTableIndex
-                            // greatTableKeys
-                            sourceTurn.sacerdosCRITDMGSHEET = {
-                                "stats": [CritDamageBase],
-                                [CritDamageBase]: relicPathing[0],
-                                "source": relicNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 2,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                                "removeOnDeath": true,
-                            }
-                        }
-
-                        let buffSheet = sourceTurn.sacerdosCRITDMGSHEET;
-                        
-                        updateBuff(battleData,targetTurn,buffSheet);
-                        const targetChildEntities = generalInfo.targetChildEntities;
-                        if (targetChildEntities) {
-                            const hasMemosprite = targetTurn.activeMemosprites;
-                            const memospriteEventRef = targetTurn.memospriteEventRef;
-                            const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                            if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                         }
                     },
                     "target": "self",
-                    "listenerName": "Sacerdos targeted ally listener",
-                    "owners": []
+                    "listenerName": "Sacerdos 4pc listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "TargetAlly",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                //poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:currentTurn, targetTurn:targetTurn, targetSkill:skillRef.slot});
+                                let isNotSingle = generalInfo.targetType != "Single";
+                                const skillType = generalInfo.targetSkill;
+                                let isNotEligibleSkill = skillType != "Skill" && skillType != "Ultimate";
+                                if (isNotSingle || isNotEligibleSkill) {return;}
+                                //we skip team-wide ulty or skill buffs, and then avoid non-ulty and non-skills
+                                let targetTurn = generalInfo.targetTurn;
+        
+                                if (!this.sacerdosCRITDMGSHEET) {
+                                    let relicNameRef = "Sacerdos\' Relived Ordeal";
+                                    let pcRef = "4pc";
+                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.sacerdos;
+        
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    // greatTableIndex
+                                    // greatTableKeys
+                                    this.sacerdosCRITDMGSHEET = {
+                                        "stats": [CritDamageBase],
+                                        [CritDamageBase]: relicPathing[0],
+                                        "source": relicNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffName,
+                                        "durationInTurn": 3,
+                                        "duration": 2,
+                                        "AVApplied": 0,
+                                        "maxStacks": 2,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "removeOnDeath": true,
+                                    }
+                                }
+        
+                                let buffSheet = this.sacerdosCRITDMGSHEET;
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                
+                                updateBuff(battleData,targetTurn,buffSheet);
+                                const targetChildEntities = generalInfo.targetChildEntities;
+                                if (targetChildEntities) {
+                                    const hasMemosprite = targetTurn.activeMemosprites;
+                                    const memospriteEventRef = targetTurn.memospriteEventRef;
+                                    const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
+                                    if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
+                                }
+                                //TODO: turns out it's just sunday hardcoded, the childentity extension doesn't work on literally anyone else, lmao?
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Sacerdos targeted ally listener",
+                        },
+                    ]
                 },
             ],
             "buffNames": {
@@ -9193,7 +9257,7 @@ const turnLogicRelics = {
             },
         }
     },
-    "Wavestrider Captain": {
+    "Wavestrider Captain": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
@@ -9225,6 +9289,68 @@ const turnLogicRelics = {
                 }
             },
             "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Wavestrider Captain 4pc listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AbilityStart",
+                            condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Ultimate") {return;}//AbilityStart
+
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                const buffRef = this.buffRef ??= turnLogicRelics["Wavestrider Captain"]["4pc"].buffNames;
+                                let helpCheck = sourceTurn.buffsObject[buffRef.help];
+        
+                                if (helpCheck && helpCheck.currentStacks === 2) {
+                                    removeBuff(battleData,sourceTurn,helpCheck);//clear the help stacks
+        
+                                    if (!this.wavestriderATKSHEET) {
+                                        let relicPathing = this.relicPathing ??= relicSets["Wavestrider Captain"].params[1];//0-2pc 1-4pc
+                                        let buffName2 = buffRef.atkBuff;
+                                        this.wavestriderATKSHEET = {
+                                            "stats": [ATKP],
+                                            [ATKP]: relicPathing[1],
+                                            "source": "Wavestrider Captain",
+                                            "sourceOwner": sourceTurn.properName,
+                                            "buffName": buffName2,
+                                            "durationInTurn": 2,
+                                            "duration": 1,
+                                            "AVApplied": 0,
+                                            "maxStacks": 1,
+                                            "currentStacks": 1,
+                                            "decay": false,
+                                            "expireType": "EndTurn"
+                                        }
+                                    }
+                                    
+                                    let buffSheet = this.wavestriderATKSHEET;
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Wavestrider Captain ATKbuff listener",
+                        },
+                    ]
+                },
                 {
                     "trigger": "TargetAlly",
                     condition(battleData,generalInfo) {
@@ -9272,52 +9398,6 @@ const turnLogicRelics = {
                     "listenerName": "Wavestrider Captain targeted ally listener",
                     "owners": []
                 },
-                {
-                    "trigger": "UltimateStart",
-                    condition(battleData,generalInfo) {
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
-
-                        let relicNameRef = "Wavestrider Captain";
-                        let pcRef = "4pc";
-                        
-
-                        const buffRef = this.buffRef ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
-                        let helpCheck = sourceTurn.buffsObject[buffRef.help];
-
-                        if (helpCheck && helpCheck.currentStacks === 2) {
-                            removeBuff(battleData,sourceTurn,helpCheck);//clear the help stacks
-
-                            if (!sourceTurn.wavestriderATKSHEET) {
-                                let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                                let buffName2 = buffRef.atkBuff;
-                                sourceTurn.wavestriderATKSHEET = {
-                                    "stats": [ATKP],
-                                    [ATKP]: relicPathing[1],
-                                    "source": relicNameRef,
-                                    "sourceOwner": sourceTurn.properName,
-                                    "buffName": buffName2,
-                                    "durationInTurn": 2,
-                                    "duration": 1,
-                                    "AVApplied": 0,
-                                    "maxStacks": 1,
-                                    "currentStacks": 1,
-                                    "decay": false,
-                                    "expireType": "EndTurn"
-                                }
-                            }
-                            
-                            let buffSheet = sourceTurn.wavestriderATKSHEET;
-                            updateBuff(battleData,sourceTurn,buffSheet);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Wavestrider Captain ATKbuff listener",
-                    "owners": [],
-                    "ownersSlots": {}
-                },
             ],
             "buffNames": {
                 "help": "Wavestrider Help",
@@ -9325,30 +9405,28 @@ const turnLogicRelics = {
             },
         }
     },
-    "Scholar Lost in Erudition": {
+    "Scholar Lost in Erudition": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "PreBattleEntersCombat",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        let ownersSlots = this.ownersSlots;
+                        let ownerRef = this.owners;
 
-                        let relicNameRef = "Scholar Lost in Erudition";
-                        let pcRef = "4pc";
-                        // let relicPathing = relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                        let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.skillUltyDmg;
-                        // greatTableIndex
-                        // greatTableKeys
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        const subListeners2 = this.subListeners[1];
+
                         const buffSheet = this.buffSheet ??= {
                             "stats": [DamageUltimate,DamageSkill],
                             [DamageUltimate]: 0.20,
                             [DamageSkill]: 0.20,
-                            "source": relicNameRef,
+                            "source": "Scholar Lost in Erudition",
                             "sourceOwner": "",
-                            "buffName": buffName,
+                            "buffName": turnLogicRelics["Scholar Lost in Erudition"]["4pc"].buffNames.skillUltyDmg,
                             "durationInTurn": null,
                             "duration": 1,
                             "AVApplied": 0,
@@ -9357,82 +9435,80 @@ const turnLogicRelics = {
                             "decay": false,
                             "expireType": null,
                         }
-                        // console.log(buffSheet)
-                        const namedTurns = battleData.nameBasedTurns;
-                        for (let allySlot in ownersSlots) {
-                            const allyTurn = namedTurns[allySlot];
-                            buffSheet.sourceOwner = allyTurn.properName,
-                            updateBuff(battleData,allyTurn,buffSheet);
+
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            buffSheet.sourceOwner = currentTurn.properName,
+                            updateBuff(battleData,currentTurn,buffSheet);
+
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners2,subListeners2.trigger,currentTurn);
                         }
                     },
                     "target": "self",
-                    "listenerName": "Scholar Ulty/Skill DMG application",
+                    "listenerName": "Scholar 4pc listener setup",
                     "owners": [],
-                    "ownersSlots": {}
-                },
-                {
-                    "trigger": "UltimateEnd",
-                    condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
-
-                        if (!sourceTurn.scholarErudtionSKILLDMGSHEET) {
-                            let relicNameRef = "Scholar Lost in Erudition";
-                            let pcRef = "4pc";
-                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.skillDmg;
-                            // greatTableIndex
-                            // greatTableKeys
-                            sourceTurn.scholarErudtionSKILLDMGSHEET = {
-                                "stats": [DamageSkill],
-                                [DamageSkill]: relicPathing[1],
-                                "source": relicNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,//will be removed by custom listener, not enough things get removed on SkillEnd to bother doing a universal, though it is tempting
-                            }
-                        }
-
-                        let buffSheet = sourceTurn.scholarErudtionSKILLDMGSHEET;
-                        const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
-                        if (buffCheck) {return;}//this is a "you have it or you don't" kinda buff since it only applies to the next skill use, duration doesn't matter
-                        
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Scholar ulty listener",
-                    "owners": [],
-                    "ownersSlots": {}
-                },
-                {
-                    "trigger": "SkillEnd",
-                    condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        // let relicNameRef = "Scholar Lost in Erudition";
-                        // let pcRef = "4pc";
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
-
-                        let buffName = sourceTurn.scholarErudtionSKILLDMGSHEET?.buffName;
-                        let hasBuff = sourceTurn.buffsObject[buffName];
-
-                        if (hasBuff) {removeBuff(battleData,sourceTurn,hasBuff);}
-                    },
-                    "target": "self",
-                    "listenerName": "Scholar skill listener",
-                    "owners": [],
-                    "ownersSlots": {}
+                    "subListeners": [
+                        {
+                            "trigger": "UltimateEnd",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                if (!this.scholarErudtionSKILLDMGSHEET) {
+                                    let relicNameRef = "Scholar Lost in Erudition";
+                                    let pcRef = "4pc";
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.skillDmg;
+                                    // greatTableIndex
+                                    // greatTableKeys
+                                    this.scholarErudtionSKILLDMGSHEET = {
+                                        "stats": [DamageSkill],
+                                        [DamageSkill]: relicPathing[1],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                    }
+                                }
+        
+                                let buffSheet = this.scholarErudtionSKILLDMGSHEET;
+                                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                                if (buffCheck) {return;}
+                                
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Scholar ulty listener",
+                        },
+                        {
+                            "trigger": "SkillEnd",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                // let relicNameRef = "Scholar Lost in Erudition";
+                                // let pcRef = "4pc";
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                let buffName = this.buffName ??= turnLogicRelics["Scholar Lost in Erudition"]["4pc"].buffNames.skillDmg;
+                                let hasBuff = sourceTurn.buffsObject[buffName];
+        
+                                if (hasBuff) {removeBuff(battleData,sourceTurn,hasBuff);}
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Scholar skill listener",
+                        },
+                    ]
                 },
             ],
             "buffNames": {
@@ -9441,57 +9517,73 @@ const turnLogicRelics = {
             },
         }
     },
-    "Watchmaker, Master of Dream Machinations": {
+    "Watchmaker, Master of Dream Machinations": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "TargetAlly",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
+                        let ownerRef = this.owners;
 
-                        //poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:currentTurn, targetTurn:targetTurn, targetSkill:skillRef.slot});
-                        let wasTeamTarget = generalInfo.targetType === "Single" || generalInfo.targetType === "Team" || generalInfo.targetType === "Blast";
-                        let isNotEligibleSkill = generalInfo.targetSkill != "Ultimate";
-                        if (!wasTeamTarget || isNotEligibleSkill) {return;}
-                        //skip non ultimate, non ally targeting skills
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
 
-                        if (!sourceTurn.watchmatcherBREAKSHEET) {
-                            let relicNameRef = "Watchmaker, Master of Dream Machinations";
-                            let pcRef = "4pc";
-                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.breakBuff;
-                            sourceTurn.watchmatcherBREAKSHEET = {
-                                "stats": [DamageBreak],
-                                [DamageBreak]: relicPathing[0],
-                                "source": relicNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": 3,
-                                "duration": 2,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                        }
-
-                        let buffSheet = sourceTurn.watchmatcherBREAKSHEET;
-                        const allyPositions = battleData.allyPositions;
-                        for (let targetTurn of allyPositions) {
-                            updateBuff(battleData,targetTurn,buffSheet);
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                         }
                     },
                     "target": "self",
-                    "listenerName": "Watchmaker ult targeted ally listener",
-                    "owners": []
+                    "listenerName": "Watchmaker 4pc listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "TargetAlly",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                //poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:currentTurn, targetTurn:targetTurn, targetSkill:skillRef.slot});
+                                let wasTeamTarget = generalInfo.targetType === "Single" || generalInfo.targetType === "Team" || generalInfo.targetType === "Blast";
+                                let isNotEligibleSkill = generalInfo.targetSkill != "Ultimate";
+                                if (!wasTeamTarget || isNotEligibleSkill) {return;}
+                                //skip non ultimate, non ally targeting skills
+        
+                                if (!this.watchmatcherBREAKSHEET) {
+                                    let relicNameRef = "Watchmaker, Master of Dream Machinations";
+                                    let pcRef = "4pc";
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.breakBuff;
+                                    this.watchmatcherBREAKSHEET = {
+                                        "stats": [DamageBreak],
+                                        [DamageBreak]: relicPathing[0],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffName,
+                                        "durationInTurn": 3,
+                                        "duration": 2,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn"
+                                    }
+                                }
+        
+                                let buffSheet = this.watchmatcherBREAKSHEET;
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                const allyPositions = battleData.allyPositions;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Watchmaker ult targeted ally listener",
+                        },
+                    ]
                 },
             ],
             "buffNames": {
@@ -9832,8 +9924,11 @@ const turnLogicRelics = {
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "UltimateStart",
+                    "trigger": "AbilityStart",
                     condition(battleData,generalInfo) {
+                        const action = generalInfo.action;
+                        if (action != "Ultimate") {return;}//AbilityStart
+
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
@@ -10087,69 +10182,86 @@ const turnLogicRelics = {
             },
         }
     },
-    "Prisoner in Deep Confinement": {
+    "Prisoner in Deep Confinement": {//REDONE
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "AllyDMGStart",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                        if (!ownerRank) {return;}
-                        let targetTurn = generalInfo.targetTurn;
+                        let ownerRef = this.owners;
 
-                        if (!sourceTurn.prisonerConfinementDEFSHREDSHEET) {
-                            let relicNameRef = "Prisoner in Deep Confinement";
-                            let pcRef = "4pc";
-                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc4ShredAny;
-                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                            sourceTurn.prisonerConfinementDEFSHREDSHEET = {
-                                "stats": [DEFShredAll],
-                                [DEFShredAll]: relicPathing[0],
-                                "source": relicNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 3,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null
-                            }
-                        }
-                        let buffSheet = sourceTurn.prisonerConfinementDEFSHREDSHEET;
-                        const buffName = buffSheet.buffName;
-                        const buffCheck = sourceTurn.buffsObject[buffName];
-                        const DOTCount = Math.min(3,targetTurn.DOTCounter);//TODO: dots have been added(functionally at least), verify this works later
-
-                        if (buffCheck) {//if the buff already exists
-                            const currentStacks = buffCheck.currentStacks;
-                            if (currentStacks === DOTCount) {return;}//if we're already maxed on stacks and the enemy has that many dots or more, then abort early
-                            else if (DOTCount > currentStacks) {
-                                
-                                buffSheet.currentStacks = DOTCount - currentStacks;//if dot count is 2 but someone already had 1 stack, we can't stack 2 more, gotta stack just the diff
-                                updateBuff(battleData,sourceTurn,buffSheet);
-                                return;//can abort early if all we did was stack it
-                            }
-                            //otherwise remove the buff bc that means the stacks are mismatched and less than
-                            removeBuff(battleData,sourceTurn,buffCheck);
-                        }
-
-                        if (DOTCount) {//then, if the dots > 0, apply the buff as it is now
-                            
-                            buffSheet.currentStacks = DOTCount;
-                            updateBuff(battleData,sourceTurn,buffSheet);
+                        const namedTurns = battleData.nameBasedTurns;
+                        // const boundFunction = this.boundFunction;
+                        const subListener = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+                            addListenerWithPriority(battleData,subListener,subListener.trigger,currentTurn);
                         }
                     },
                     "target": "self",
-                    "listenerName": "Prisoner in Deep Confinement - DEF Shred(Quantum Enemy) 4pc",
-                    "owners": []
+                    "listenerName": "Prisoner in Deep Confinement - Listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+                                let targetTurn = generalInfo.targetTurn;
+        
+                                if (!this.prisonerConfinementDEFSHREDSHEET) {
+                                    let relicNameRef = "Prisoner in Deep Confinement";
+                                    let pcRef = "4pc";
+                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc4ShredAny;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    this.prisonerConfinementDEFSHREDSHEET = {
+                                        "stats": [DEFShredAll],
+                                        [DEFShredAll]: relicPathing[0],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                }
+                                let buffSheet = this.prisonerConfinementDEFSHREDSHEET;
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+                                const DOTCount = Math.min(3,targetTurn.DOTCounter);//TODO: dots have been added(functionally at least), verify this works later
+        
+                                if (buffCheck) {//if the buff already exists
+                                    const currentStacks = buffCheck.currentStacks;
+                                    if (currentStacks === DOTCount) {return;}//if we're already maxed on stacks and the enemy has that many dots or more, then abort early
+                                    else if (DOTCount > currentStacks) {
+                                        
+                                        buffSheet.currentStacks = DOTCount - currentStacks;//if dot count is 2 but someone already had 1 stack, we can't stack 2 more, gotta stack just the diff
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                        return;//can abort early if all we did was stack it
+                                    }
+                                    //otherwise remove the buff bc that means the stacks are mismatched and less than
+                                    removeBuff(battleData,sourceTurn,buffCheck);
+                                }
+        
+                                if (DOTCount) {//then, if the dots > 0, apply the buff as it is now
+                                    
+                                    buffSheet.currentStacks = DOTCount;
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Prisoner in Deep Confinement - DEF Shred(Quantum Enemy) 4pc",
+                        },
+                    ]
                 },
             ],
             "buffNames": {

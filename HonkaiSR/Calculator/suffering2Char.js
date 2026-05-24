@@ -5272,7 +5272,6 @@ const turnLogic = {
                 "trigger": "BasicATKStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
-                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Basic ATK)",
@@ -5282,27 +5281,24 @@ const turnLogic = {
                 "trigger": "SkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
-                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Skill)",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "UltimateStart",
-                condition(battleData,generalInfo) {
-                    poke("ActionStart",battleData,generalInfo);
-                    poke("AbilityStart",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action start listener (Ultimate)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "UltimateStart",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionStart",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action start listener (Ultimate)",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "FUAStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
-                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (FUA)",
@@ -5312,7 +5308,6 @@ const turnLogic = {
                 "trigger": "MemoSkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
-                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Memo Skill)",
@@ -5322,7 +5317,6 @@ const turnLogic = {
                 "trigger": "ElationSkillStart",
                 condition(battleData,generalInfo) {
                     poke("ActionStart",battleData,generalInfo);
-                    poke("AbilityStart",battleData,generalInfo);
                 },
                 "target": "self",
                 "listenerName": "Universal action start listener (Elation Skill)",
@@ -7794,8 +7788,11 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.isEnemy || !ownerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
@@ -17970,8 +17967,11 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -20124,8 +20124,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -24738,8 +24741,11 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "UltimateStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+                            
                             // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
                             const ownerTurn = this.ownerTurn;
                             //NEVER need to check the source turn on this, bc this works if ANY ally uses an ultimate
@@ -26572,8 +26578,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -30749,8 +30758,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             let isSourcedFromAggy = false;
@@ -32199,8 +32211,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+
                             // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -35022,8 +35037,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "UltimateStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -38902,8 +38920,11 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "UltimateStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}//AbilityStart
+
                     // let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
 
