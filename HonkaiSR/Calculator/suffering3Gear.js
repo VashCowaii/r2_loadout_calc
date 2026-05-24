@@ -58,8 +58,11 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -620,8 +623,11 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownersSlots = this.ownersSlots;
                     let ownerRank = ownersSlots[sourceTurn.name];//setAmount
@@ -2249,8 +2255,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -2413,8 +2422,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -2728,8 +2740,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -3031,8 +3046,11 @@ const turnLogicLightcones = {
                 "ownersSlots": {},
             },
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -5405,8 +5423,11 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     // let lcNameRef = "But the Battle Isn't Over";
@@ -6809,8 +6830,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "SkillEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Skill") {return;}//AbilityEnd
+
                     let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
 
@@ -9534,8 +9558,11 @@ const turnLogicRelics = {
                             "listenerName": "Scholar ulty listener",
                         },
                         {
-                            "trigger": "SkillEnd",
+                            "trigger": "AbilityEnd",
                             condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Skill") {return;}//AbilityEnd
+
                                 // let ownerRef = this.owners;
                                 // let relicNameRef = "Scholar Lost in Erudition";
                                 // let pcRef = "4pc";
@@ -10839,8 +10866,11 @@ const turnLogicRelics = {
                     "ownersSlots": {}
                 },
                 {
-                    "trigger": "SkillEnd",
+                    "trigger": "AbilityEnd",
                     condition(battleData,generalInfo) {
+                        const action = generalInfo.action;
+                        if (action != "Skill") {return;}//AbilityEnd
+
                         // poke("FUAStart",battleData,{sourceTurn});
 
                         const sourceTurn = generalInfo.sourceTurn;
