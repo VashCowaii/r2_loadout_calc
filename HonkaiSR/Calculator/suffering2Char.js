@@ -5364,16 +5364,16 @@ const turnLogic = {
                 "listenerName": "Universal action end listener (FUA)",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "MemoSkillEnd",
-                condition(battleData,generalInfo) {
-                    poke("ActionEnd",battleData,generalInfo);
-                    poke("AbilityEnd",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action end listener (Memo Skill)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "MemoSkillEnd",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionEnd",battleData,generalInfo);
+            //         poke("AbilityEnd",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action end listener (Memo Skill)",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "ElationSkillEnd",
                 condition(battleData,generalInfo) {
