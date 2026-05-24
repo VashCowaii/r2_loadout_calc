@@ -53,7 +53,11 @@ let enemyData = {
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater",
         "Theater_Rogue"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     },
     "300204301": {
       "name": "Banacademic Office's Dreamweaver BananAdvisor",
@@ -92,7 +96,11 @@ let enemyData = {
         "MonsterType_W3_Theater",
         "Theater_Rogue",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     }
   }
 }

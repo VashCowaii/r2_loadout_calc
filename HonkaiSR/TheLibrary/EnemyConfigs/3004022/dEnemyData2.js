@@ -81,7 +81,10 @@ let enemyData = {
           "over": 3002043,
           "base": 3002043
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     },
     "300402201": {
       "name": "Wonder Forest's Banacademic Office Staff",
@@ -146,7 +149,10 @@ let enemyData = {
           "over": 300204301,
           "base": 3002043
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

@@ -68,7 +68,13 @@ let enemyData = {
           "over": 8012147,
           "base": 8012147
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 8012146,
+        "PartEntity2_MonsterID": 8013145,
+        "PartEntity3_MonsterID": 8012147,
+        "HardLevel": 1
+      }
     },
     "801501201": {
       "name": -1,
@@ -120,7 +126,13 @@ let enemyData = {
           "over": 801214701,
           "base": 8012147
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 801214601,
+        "PartEntity2_MonsterID": 801314501,
+        "PartEntity3_MonsterID": 801214701,
+        "HardLevel": 1
+      }
     },
     "801501202": {
       "name": -1,
@@ -172,7 +184,13 @@ let enemyData = {
           "over": 801214702,
           "base": 8012147
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 801214602,
+        "PartEntity2_MonsterID": 801314502,
+        "PartEntity3_MonsterID": 801214702,
+        "HardLevel": 2
+      }
     },
     "801501203": {
       "name": -1,
@@ -224,7 +242,13 @@ let enemyData = {
           "over": 801214703,
           "base": 8012147
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 801214603,
+        "PartEntity2_MonsterID": 801314503,
+        "PartEntity3_MonsterID": 801214703,
+        "HardLevel": 3
+      }
     },
     "801501204": {
       "name": -1,
@@ -276,7 +300,13 @@ let enemyData = {
           "over": 801214704,
           "base": 8012147
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 801214604,
+        "PartEntity2_MonsterID": 801314504,
+        "PartEntity3_MonsterID": 801214704,
+        "HardLevel": 4
+      }
     }
   }
 }

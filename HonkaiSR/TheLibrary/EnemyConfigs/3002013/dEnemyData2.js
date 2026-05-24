@@ -53,7 +53,11 @@ let enemyData = {
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater",
         "Theater_Rogue"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     },
     "300201301": {
       "name": "Banacademic Office's Assistanana",
@@ -91,7 +95,11 @@ let enemyData = {
         "MonsterType_W3_Theater",
         "Theater_Rogue",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     }
   }
 }

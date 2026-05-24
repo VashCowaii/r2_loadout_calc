@@ -51,7 +51,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "BattleScore_Horse"
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_AML_Elite01_00_AICounter_01": 4
+      }
     }
   }
 }

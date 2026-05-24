@@ -81,7 +81,11 @@ let enemyData = {
           "over": 200202101,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202001,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202101
+      }
     },
     "200402401": {
       "name": -1,
@@ -146,7 +150,11 @@ let enemyData = {
           "over": 200202101,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202001,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202101
+      }
     },
     "200402402": {
       "name": -1,
@@ -212,7 +220,11 @@ let enemyData = {
           "over": 200202105,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202005,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202105
+      }
     },
     "200402403": {
       "name": -1,
@@ -294,6 +306,10 @@ let enemyData = {
           "-",
           "-"
         ]
+      },
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202006,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202106
       }
     }
   }

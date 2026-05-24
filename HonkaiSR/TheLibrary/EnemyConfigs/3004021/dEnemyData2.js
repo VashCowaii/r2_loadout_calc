@@ -74,7 +74,10 @@ let enemyData = {
           "over": 3002042,
           "base": 3002042
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "300402101": {
       "name": -1,
@@ -131,7 +134,10 @@ let enemyData = {
           "over": 3002042,
           "base": 3002042
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "300402102": {
       "name": -1,
@@ -188,7 +194,10 @@ let enemyData = {
           "over": 3002042,
           "base": 3002042
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2
+      }
     },
     "300402103": {
       "name": -1,
@@ -245,7 +254,10 @@ let enemyData = {
           "over": 3002042,
           "base": 3002042
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3
+      }
     },
     "300402104": {
       "name": -1,
@@ -302,7 +314,10 @@ let enemyData = {
           "over": 3002042,
           "base": 3002042
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

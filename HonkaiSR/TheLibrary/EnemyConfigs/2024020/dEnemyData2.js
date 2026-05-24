@@ -37,7 +37,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 10
+      }
     },
     "202402001": {
       "name": -1,
@@ -58,7 +61,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 10
+      }
     },
     "202402002": {
       "name": -1,
@@ -79,7 +85,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 3
+      }
     },
     "202402003": {
       "name": -1,
@@ -100,7 +109,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 16
+      }
     },
     "202402004": {
       "name": -1,
@@ -121,7 +133,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 24
+      }
     },
     "202402005": {
       "name": -1,
@@ -142,7 +157,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 15
+      }
     },
     "202402006": {
       "name": -1,
@@ -163,7 +181,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 20
+      }
     },
     "202402007": {
       "name": "Karmic Hinkypunk",
@@ -184,7 +205,10 @@ let enemyData = {
         812,
         813,
         814
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 54
+      }
     }
   }
 }

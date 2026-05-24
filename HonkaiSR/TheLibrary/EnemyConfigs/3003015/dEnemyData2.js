@@ -60,7 +60,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     },
     "300301501": {
       "name": -1,
@@ -104,7 +108,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     },
     "300301502": {
       "name": -1,
@@ -148,7 +156,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 2
+      }
     },
     "300301503": {
       "name": -1,
@@ -192,7 +204,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 3
+      }
     },
     "300301504": {
       "name": -1,
@@ -236,7 +252,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     },
     "300301505": {
       "name": -1,
@@ -281,7 +301,11 @@ let enemyData = {
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     }
   }
 }

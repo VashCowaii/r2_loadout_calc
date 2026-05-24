@@ -52,7 +52,11 @@ let enemyData = {
       "enemyTag": [
         "XP_Elite02_03_Mark",
         "XP_Elite02_03_Small_Mark"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID1": 5023011,
+        "SummonID2": 5023012
+      }
     },
     "502301201": {
       "name": -1,
@@ -87,7 +91,11 @@ let enemyData = {
       "enemyTag": [
         "XP_Elite02_03_Mark",
         "XP_Elite02_03_Small_Mark"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID1": 502301101,
+        "SummonID2": 502301201
+      }
     }
   }
 }

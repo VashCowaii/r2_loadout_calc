@@ -49,7 +49,8 @@ let enemyData = {
         2104,
         2105,
         2106
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202601": {
       "name": -1,
@@ -82,7 +83,10 @@ let enemyData = {
         2104,
         2105,
         2106
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1
+      }
     },
     "403202602": {
       "name": -1,
@@ -115,7 +119,10 @@ let enemyData = {
         2104,
         2105,
         2106
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2
+      }
     },
     "403202603": {
       "name": -1,
@@ -148,7 +155,10 @@ let enemyData = {
         2104,
         2105,
         2106
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     }
   }
 }

@@ -58,7 +58,13 @@ let enemyData = {
           "over": 8012145,
           "base": 8012145
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 8012143,
+        "PartEntity2_MonsterID": 8013144,
+        "PartEntity3_MonsterID": 8012145,
+        "_IsWeeklyBoss": 1
+      }
     }
   }
 }

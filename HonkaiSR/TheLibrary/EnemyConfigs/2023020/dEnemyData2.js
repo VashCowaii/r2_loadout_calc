@@ -49,7 +49,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302001": {
       "name": -1,
@@ -81,7 +85,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302002": {
       "name": "Phantylia",
@@ -113,7 +121,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302003": {
       "name": -1,
@@ -145,7 +157,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302004": {
       "name": -1,
@@ -177,7 +193,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302005": {
       "name": -1,
@@ -209,7 +229,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302006": {
       "name": -1,
@@ -239,7 +263,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302007": {
       "name": -1,
@@ -271,7 +299,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302008": {
       "name": -1,
@@ -303,7 +335,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302009": {
       "name": -1,
@@ -335,7 +371,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302011": {
       "name": -1,
@@ -367,7 +407,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302012": {
       "name": -1,
@@ -399,7 +443,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302013": {
       "name": -1,
@@ -431,7 +479,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302014": {
       "name": -1,
@@ -463,7 +515,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302015": {
       "name": -1,
@@ -495,7 +551,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     },
     "202302016": {
       "name": -1,
@@ -530,7 +590,11 @@ let enemyData = {
       ],
       "enemyTag": [
         "MGrid_4005"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 202205008,
+        "SummonID02": 202204006
+      }
     },
     "202302017": {
       "name": -1,
@@ -562,7 +626,11 @@ let enemyData = {
         718,
         719,
         720
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     }
   }
 }

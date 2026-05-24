@@ -54,7 +54,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301001": {
       "name": "Borderland Poet",
@@ -91,7 +94,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301002": {
       "name": -1,
@@ -128,7 +134,10 @@ let enemyData = {
           "over": 202202003,
           "base": 2022020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 202202003
+      }
     },
     "201301003": {
       "name": -1,
@@ -165,7 +174,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301004": {
       "name": -1,
@@ -202,7 +214,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301005": {
       "name": -1,
@@ -239,7 +254,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301006": {
       "name": -1,
@@ -276,7 +294,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 201201008
+      }
     },
     "201301007": {
       "name": -1,
@@ -313,7 +334,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301008": {
       "name": -1,
@@ -350,7 +374,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 201201009
+      }
     },
     "201301009": {
       "name": -1,
@@ -387,7 +414,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301010": {
       "name": -1,
@@ -424,7 +454,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 201201009
+      }
     },
     "201301011": {
       "name": -1,
@@ -461,7 +494,10 @@ let enemyData = {
           "over": 201201011,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 201201011
+      }
     }
   }
 }

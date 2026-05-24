@@ -75,7 +75,11 @@ let enemyData = {
           "over": 200202103,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202003,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202103
+      }
     }
   }
 }

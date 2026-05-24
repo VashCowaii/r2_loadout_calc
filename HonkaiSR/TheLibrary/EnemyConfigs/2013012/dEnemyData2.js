@@ -54,7 +54,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     }
   }
 }

@@ -49,7 +49,10 @@ let enemyData = {
         1723,
         1724,
         1725
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "401207701": {
       "name": -1,
@@ -82,7 +85,10 @@ let enemyData = {
         1723,
         1724,
         1725
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "401207702": {
       "name": -1,
@@ -115,7 +121,10 @@ let enemyData = {
         1723,
         1724,
         1725
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2
+      }
     },
     "401207703": {
       "name": -1,
@@ -148,7 +157,10 @@ let enemyData = {
         1723,
         1724,
         1725
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3
+      }
     },
     "401207704": {
       "name": -1,
@@ -181,7 +193,10 @@ let enemyData = {
         1723,
         1724,
         1725
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

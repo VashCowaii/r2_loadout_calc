@@ -49,7 +49,8 @@ let enemyData = {
         2094,
         2095,
         2096
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202401": {
       "name": -1,
@@ -82,7 +83,8 @@ let enemyData = {
         2094,
         2095,
         2096
-      ]
+      ],
+      "itNeverEnds": {}
     }
   }
 }

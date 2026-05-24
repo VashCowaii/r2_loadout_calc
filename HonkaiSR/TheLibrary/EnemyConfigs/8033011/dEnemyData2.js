@@ -66,7 +66,11 @@ let enemyData = {
           "over": 803202002,
           "base": 8032020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 803201002,
+        "SummonID1": 803202002
+      }
     },
     "803301101": {
       "name": -1,
@@ -115,7 +119,11 @@ let enemyData = {
           "over": 803202002,
           "base": 8032020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 803201002,
+        "SummonID1": 803202002
+      }
     },
     "803301102": {
       "name": -1,
@@ -164,7 +172,11 @@ let enemyData = {
           "over": 803202002,
           "base": 8032020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 803201002,
+        "SummonID1": 803202002
+      }
     }
   }
 }

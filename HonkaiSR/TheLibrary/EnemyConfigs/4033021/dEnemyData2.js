@@ -74,7 +74,12 @@ let enemyData = {
           "over": 4013016,
           "base": 4013016
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 4032052,
+        "SummonID02": 4032042,
+        "SummonID03": 4013016
+      }
     },
     "403302101": {
       "name": -1,
@@ -171,6 +176,11 @@ let enemyData = {
           "-",
           "-"
         ]
+      },
+      "itNeverEnds": {
+        "SummonID01": 4032052,
+        "SummonID02": 4032042,
+        "SummonID03": 401301601
       }
     }
   }

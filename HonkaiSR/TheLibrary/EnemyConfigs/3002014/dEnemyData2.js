@@ -50,7 +50,10 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_Scot"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201401": {
       "name": -1,
@@ -84,7 +87,10 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_Scot"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     }
   }
 }

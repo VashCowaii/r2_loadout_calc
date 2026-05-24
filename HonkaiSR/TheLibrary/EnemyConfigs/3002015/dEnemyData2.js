@@ -52,7 +52,10 @@ let enemyData = {
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater",
         "MonsterType_Scot"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201501": {
       "name": "Arrogant Skott",
@@ -88,7 +91,10 @@ let enemyData = {
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater",
         "MonsterType_Scot"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     }
   }
 }

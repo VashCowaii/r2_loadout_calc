@@ -54,7 +54,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301101": {
       "name": -1,
@@ -91,7 +94,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 2012010
+      }
     },
     "201301102": {
       "name": "Aurumaton Gatekeeper (Rampage Mode)",
@@ -128,7 +134,10 @@ let enemyData = {
           "over": 2012010,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 201201009
+      }
     },
     "201301103": {
       "name": "Aurumaton Gatekeeper",
@@ -168,7 +177,10 @@ let enemyData = {
           "over": 201201013,
           "base": 2012010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Mecha03_00_SummonID": 201201013
+      }
     }
   }
 }

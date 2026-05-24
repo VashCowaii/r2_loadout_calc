@@ -55,7 +55,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301001": {
       "name": -1,
@@ -93,7 +96,10 @@ let enemyData = {
           "over": 202201001,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 202201001
+      }
     },
     "202301002": {
       "name": -1,
@@ -131,7 +137,10 @@ let enemyData = {
           "over": 202201001,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 202201001
+      }
     },
     "202301003": {
       "name": "Differently Appearing Enemy",
@@ -169,7 +178,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301004": {
       "name": -1,
@@ -207,7 +219,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301005": {
       "name": "Yutie",
@@ -245,7 +260,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301006": {
       "name": -1,
@@ -283,7 +301,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301007": {
       "name": "Furtive Assassin",
@@ -321,7 +342,10 @@ let enemyData = {
           "over": 202201003,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 202201003
+      }
     },
     "202301008": {
       "name": -1,
@@ -359,7 +383,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301009": {
       "name": -1,
@@ -397,7 +424,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301010": {
       "name": -1,
@@ -435,7 +465,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301011": {
       "name": -1,
@@ -473,7 +506,10 @@ let enemyData = {
           "over": 202201007,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 202201007
+      }
     },
     "202301012": {
       "name": -1,
@@ -511,7 +547,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301013": {
       "name": -1,
@@ -549,7 +588,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301014": {
       "name": -1,
@@ -587,7 +629,10 @@ let enemyData = {
           "over": 2022010,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301015": {
       "name": -1,
@@ -628,7 +673,10 @@ let enemyData = {
           "over": 202201016,
           "base": 2022010
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 202201016
+      }
     }
   }
 }

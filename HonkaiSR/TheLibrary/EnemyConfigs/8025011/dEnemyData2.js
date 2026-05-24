@@ -78,7 +78,12 @@ let enemyData = {
           "over": 8022021,
           "base": 8022021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1,
+        "SummonMonsterID01": 8022031,
+        "SummonMonsterID02": 8022021
+      }
     },
     "802501101": {
       "name": -1,
@@ -139,7 +144,12 @@ let enemyData = {
           "over": 802202101,
           "base": 8022021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1,
+        "SummonMonsterID01": 802203101,
+        "SummonMonsterID02": 802202101
+      }
     },
     "802501102": {
       "name": -1,
@@ -200,7 +210,12 @@ let enemyData = {
           "over": 802202102,
           "base": 8022021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2,
+        "SummonMonsterID01": 802203102,
+        "SummonMonsterID02": 802202102
+      }
     },
     "802501103": {
       "name": -1,
@@ -261,7 +276,12 @@ let enemyData = {
           "over": 802202103,
           "base": 8022021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3,
+        "SummonMonsterID01": 802203103,
+        "SummonMonsterID02": 802202103
+      }
     },
     "802501104": {
       "name": -1,
@@ -322,7 +342,12 @@ let enemyData = {
           "over": 802202104,
           "base": 8022021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4,
+        "SummonMonsterID01": 802203104,
+        "SummonMonsterID02": 802202104
+      }
     }
   }
 }

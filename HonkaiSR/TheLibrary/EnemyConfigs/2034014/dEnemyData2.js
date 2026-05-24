@@ -78,7 +78,12 @@ let enemyData = {
           "over": 2032022,
           "base": 2032022
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 2032011,
+        "WolfSummon02": 2032022,
+        "HardLevel": 4
+      }
     },
     "203401401": {
       "name": -1,
@@ -139,7 +144,12 @@ let enemyData = {
           "over": 2032022,
           "base": 2032022
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 2032011,
+        "WolfSummon02": 2032022,
+        "HardLevel": 1
+      }
     },
     "203401402": {
       "name": -1,
@@ -200,7 +210,12 @@ let enemyData = {
           "over": 2032022,
           "base": 2032022
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 2032011,
+        "WolfSummon02": 2032022,
+        "HardLevel": 2
+      }
     },
     "203401403": {
       "name": -1,
@@ -261,7 +276,12 @@ let enemyData = {
           "over": 2032022,
           "base": 2032022
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 2032011,
+        "WolfSummon02": 2032022,
+        "HardLevel": 3
+      }
     },
     "203401404": {
       "name": -1,
@@ -322,7 +342,12 @@ let enemyData = {
           "over": 2032022,
           "base": 2032022
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 2032011,
+        "WolfSummon02": 2032022,
+        "HardLevel": 4
+      }
     }
   }
 }

@@ -52,7 +52,10 @@ let enemyData = {
         "MonsterType_W1_Mecha01_02",
         "MonsterType_W3_Theater",
         "MonsterType_Scot"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     }
   }
 }

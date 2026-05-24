@@ -101,7 +101,11 @@ let enemyData = {
           "over": 4012093,
           "base": 4012093
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 4012092,
+        "PartEntity3_MonsterID": 4012093
+      }
     },
     "401502001": {
       "name": -1,
@@ -151,7 +155,11 @@ let enemyData = {
           "over": 4012093,
           "base": 4012093
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "PartEntity1_MonsterID": 4012092,
+        "PartEntity3_MonsterID": 4012093
+      }
     }
   }
 }

@@ -50,7 +50,10 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300204101": {
       "name": -1,
@@ -85,7 +88,10 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300204102": {
       "name": -1,
@@ -121,7 +127,10 @@ let enemyData = {
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     }
   }
 }

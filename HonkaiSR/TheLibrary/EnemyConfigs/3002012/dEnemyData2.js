@@ -52,7 +52,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     },
     "300201201": {
       "name": -1,
@@ -88,7 +92,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     },
     "300201202": {
       "name": -1,
@@ -124,7 +132,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 2
+      }
     },
     "300201203": {
       "name": -1,
@@ -160,7 +172,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 3
+      }
     },
     "300201204": {
       "name": -1,
@@ -196,7 +212,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     },
     "300201205": {
       "name": -1,
@@ -233,7 +253,11 @@ let enemyData = {
         "MonsterType_W3_TV_00",
         "MonsterType_W3_Theater",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     }
   }
 }

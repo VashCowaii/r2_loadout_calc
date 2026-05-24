@@ -51,7 +51,10 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "403202111": {
       "name": -1,
@@ -86,7 +89,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1,
+        "HardLevel": 1
+      }
     },
     "403202112": {
       "name": -1,
@@ -121,7 +128,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2,
+        "HardLevel": 1
+      }
     },
     "403202113": {
       "name": -1,
@@ -156,7 +167,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3,
+        "HardLevel": 1
+      }
     },
     "403202114": {
       "name": -1,
@@ -194,7 +209,11 @@ let enemyData = {
       ],
       "enemyTag": [
         "MGrid_4009"
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3,
+        "HardLevel": 1
+      }
     },
     "403202121": {
       "name": -1,
@@ -229,7 +248,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1,
+        "HardLevel": 2
+      }
     },
     "403202122": {
       "name": -1,
@@ -264,7 +287,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2,
+        "HardLevel": 2
+      }
     },
     "403202123": {
       "name": -1,
@@ -299,7 +326,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3,
+        "HardLevel": 2
+      }
     },
     "403202131": {
       "name": -1,
@@ -334,7 +365,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1,
+        "HardLevel": 3
+      }
     },
     "403202132": {
       "name": -1,
@@ -369,7 +404,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2,
+        "HardLevel": 3
+      }
     },
     "403202133": {
       "name": -1,
@@ -404,7 +443,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3,
+        "HardLevel": 3
+      }
     },
     "403202141": {
       "name": -1,
@@ -439,7 +482,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1,
+        "HardLevel": 4
+      }
     },
     "403202142": {
       "name": -1,
@@ -474,7 +521,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2,
+        "HardLevel": 4
+      }
     },
     "403202143": {
       "name": -1,
@@ -509,7 +560,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3,
+        "HardLevel": 4
+      }
     },
     "403202151": {
       "name": -1,
@@ -544,7 +599,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1,
+        "HardLevel": 1
+      }
     },
     "403202152": {
       "name": -1,
@@ -579,7 +638,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2,
+        "HardLevel": 1
+      }
     },
     "403202153": {
       "name": -1,
@@ -614,7 +677,11 @@ let enemyData = {
         2082,
         2083,
         2084
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3,
+        "HardLevel": 1
+      }
     }
   }
 }

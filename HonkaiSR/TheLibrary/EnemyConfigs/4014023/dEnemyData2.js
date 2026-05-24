@@ -59,7 +59,11 @@ let enemyData = {
           "over": 4012063,
           "base": 4012063
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 4014016,
+        "SummonID1": 4012063
+      }
     }
   }
 }

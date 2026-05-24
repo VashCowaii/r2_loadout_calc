@@ -91,7 +91,10 @@ let enemyData = {
           "over": 101203005,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_SummonID0": 1012041
+      }
     },
     "101401101": {
       "name": -1,
@@ -166,7 +169,10 @@ let enemyData = {
           "over": 101203005,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_SummonID0": 1012041
+      }
     }
   }
 }

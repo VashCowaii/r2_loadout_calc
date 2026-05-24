@@ -48,7 +48,11 @@ let enemyData = {
         2979,
         2980,
         2981
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonerID": 8015022,
+        "SummonID": 8012214
+      }
     }
   }
 }

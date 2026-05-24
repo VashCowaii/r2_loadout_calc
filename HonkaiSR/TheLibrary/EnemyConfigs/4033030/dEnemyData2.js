@@ -54,7 +54,10 @@ let enemyData = {
           "over": 403205002,
           "base": 4032050
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 403205002
+      }
     },
     "403303001": {
       "name": -1,
@@ -94,7 +97,10 @@ let enemyData = {
           "over": 403205001,
           "base": 4032050
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 403205001
+      }
     },
     "403303002": {
       "name": -1,
@@ -131,7 +137,10 @@ let enemyData = {
           "over": 403205002,
           "base": 4032050
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 403205002
+      }
     },
     "403303003": {
       "name": -1,
@@ -168,7 +177,10 @@ let enemyData = {
           "over": 403205002,
           "base": 4032050
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 403205002
+      }
     },
     "403303004": {
       "name": -1,
@@ -205,7 +217,10 @@ let enemyData = {
           "over": 403205002,
           "base": 4032050
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 403205002
+      }
     }
   }
 }
