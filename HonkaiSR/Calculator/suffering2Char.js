@@ -21726,7 +21726,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Asta": {
+    "Asta": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -22014,6 +22014,132 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //talent charge gain handler
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    //charge loss handler
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    //skip first charge decay
+                    const battleValues = ownerTurn.battleValues;
+                    battleValues.skipCost = true;
+
+                    //trace ignite
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Asta Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyTurns = battleData.enemyBasedTurns;
+        
+                            let chargeGain = 0;
+                            for (targetHit in targetsGotHit) {
+                                const currentEnemy = enemyTurns[targetHit];
+                                // console.log(currentEnemy.statTable)
+                                const weakness = currentEnemy.statTable[WeaknessFire];
+        
+                                chargeGain += 1 + (weakness ? 1 : 0);
+                            }
+                            if (chargeGain) {
+                                poke("astaChargeGained",battleData,{pointsGained: chargeGain,sourceString:"Unique Enemies Hit"});
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Charge gain on enemies hit Handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            const battleValues = ownerTurn.battleValues;
+                            // battleValues.skipCost = true;
+                            if (battleValues.skipCost) {battleValues.skipCost = false;}
+                            else {
+                                const amountToLose = ownerTurn.rank >= 6 ? 2 : 3;
+
+                                const chargeLossObject = this.chargeLossObject ??= {pointsGained: -amountToLose,sourceString:"Turn-Start Charge Decay"};
+                                chargeLossObject.pointsGained = -amountToLose;
+                                poke("astaChargeGained",battleData,chargeLossObject);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Asta turnstart charge decay handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            let targetTurn = generalInfo.targetTurn;
+        
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [DamageFire],
+                                [DamageFire]: 0.18,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.fireDMGTrace,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+        
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "listenerName": "Ignite trace bonus to allies",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "astaChargeGained",
                 condition(battleData,generalInfo) {
                     // poke("astaChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -22172,90 +22298,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const enemyTurns = battleData.enemyBasedTurns;
-
-                    let chargeGain = 0;
-                    for (targetHit in targetsGotHit) {
-                        const currentEnemy = enemyTurns[targetHit];
-                        // console.log(currentEnemy.statTable)
-                        const weakness = currentEnemy.statTable[WeaknessFire];
-
-                        chargeGain += 1 + (weakness ? 1 : 0);
-                    }
-                    if (chargeGain) {
-                        poke("astaChargeGained",battleData,{pointsGained: chargeGain,sourceString:"Unique Enemies Hit"});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Charge gain on enemies hit Handler",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyCreated",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    let targetTurn = generalInfo.targetTurn;
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [DamageFire],
-                        [DamageFire]: 0.18,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.fireDMGTrace,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-
-                    updateBuff(battleData,targetTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Ignite trace bonus to allies",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-                    const battleValues = ownerTurn.battleValues;
-                    // battleValues.skipCost = true;
-                    if (battleValues.skipCost) {battleValues.skipCost = false;}
-                    else {
-                        const amountToLose = ownerTurn.rank >= 6 ? 2 : 3;
-                        poke("astaChargeGained",battleData,{pointsGained: -amountToLose,sourceString:"Turn-Start Charge Decay"});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Tingyun - Major Trace: Jubilant Passage",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const battleValues = ownerTurn.battleValues;
-                    battleValues.skipCost = true;
-                },
-                "target": "self",
-                "listenerName": "Asta - first turn prevent charge loss modifier",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -22310,34 +22352,6 @@ const turnLogic = {
                 },
                 "target": "team",
                 "listenerName": "Asta - Ultimate queued",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Asta Technique PREP",
                 "ownerTurn": {},
             },
         ],
