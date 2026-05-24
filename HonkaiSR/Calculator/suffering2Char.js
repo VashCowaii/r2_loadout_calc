@@ -19483,7 +19483,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sunday": {
+    "Sunday": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -20012,16 +20012,101 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    updateEnergy(battleData,25,ownerTurn,false,"Exalted Sweep");
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace exalted
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    if (rank >= 2) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
                 "target": "self",
-                "listenerName": "Exalted Sweep: energy regen on battleStart",
+                "listenerName": "Sunday Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+        
+                            updateEnergy(battleData,25,ownerTurn,false,"Exalted Sweep");
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Exalted Sweep: energy regen on battleStart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+    
+                            updateSkillPoints(battleData,2,sourceTurn,false,"E2: Faith Outstrips Frailty");
+        
+                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                        },
+                        "target": "self",
+                        "listenerName": "Faith Outstrips Frailty - SP regen on first ult",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (ownerTurn.turnState) {
+                                let amount = 8;
+                                updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Sculpture's Preamble - turn start energy gain",
+                        "ownerTurn": {},
+                    },
+                ],
             },
+            
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -20080,34 +20165,6 @@ const turnLogic = {
                 "listenerName": "Sunday - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Sunday Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -20128,42 +20185,9 @@ const turnLogic = {
         },
         "eidolonListeners": {
             1: [],
-            2: [
-                {
-                    "trigger": "UltimateStart",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                        updateSkillPoints(battleData,2,sourceTurn,false,"E2: Faith Outstrips Frailty");
-    
-                        battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
-                    },
-                    "target": "self",
-                    "listenerName": "Faith Outstrips Frailty - SP regen on first ult",
-                    "ownerTurn": {},
-                }
-            ],
+            2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // let characterName = ownerTurn.properName;
-                        // let sourceTurn = generalInfo.sourceTurn;
-    
-                        if (ownerTurn.turnState) {
-                            let amount = 8;
-                            updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Sculpture's Preamble - turn start energy gain",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
