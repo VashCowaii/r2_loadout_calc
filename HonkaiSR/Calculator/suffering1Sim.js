@@ -928,31 +928,6 @@ const sim = {
                     // eachListener.ownerTurn = slotRef;
                     // triggerArray.push(eachListener);
                 }
-
-                const eidoListenerRef = logicRef.eidolonListeners;
-                for (let eidoKey in eidoListenerRef) {
-                    if (eidoKey <= rank) {
-                        currentSet = eidoListenerRef[eidoKey];
-                        for (let listenerEntry of currentSet) {
-                            const triggerName = listenerEntry.trigger;
-                            
-                            listenerEntry.ownerTurn = slotRef;
-                            addListenerPREPPriority(battleData,listenerEntry,triggerName)
-
-                            // const triggerArray = battleListeners[triggerName] ??= [];
-                            // listenerEntry.ownerTurn = slotRef;
-                            // triggerArray.push(listenerEntry);
-                        }
-                    }
-                }
-                // "eidolonListeners": {
-                //     1: [],
-                //     2: [],
-                //     3: [],
-                //     4: [],
-                //     5: [],
-                //     6: [],
-                // },
             }
 
 
