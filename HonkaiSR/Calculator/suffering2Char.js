@@ -18854,7 +18854,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Bronya": {
+    "Bronya": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -19172,69 +19172,228 @@ const turnLogic = {
         },
         "listeners": [
             {
-                "trigger": "AllyCreated",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    if (!this.bronyaMightDMGSHEET) {
-                        let characterName = ownerTurn.properName;
-                        let buffName = turnLogic[characterName].buffNames.might;
-                        this.bronyaMightDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: 0.10,
-                            "source": characterName,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                    }
-                    const buffSheet = this.bronyaMightDMGSHEET;
-                    const targetTurn = generalInfo.targetTurn;
-                    updateBuff(battleData,targetTurn,buffSheet);
-                },
-                "target": "team",
-                "listenerName": "Bronya - Major Trace: Military Might",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AllyCreated",
-                condition(battleData,generalInfo) {
-                    //this one is super weird, it says on battle start, but tested with aggy and garment, it applies to garment EACH time it is added to the field.
-                    let ownerTurn = this.ownerTurn;
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
 
-                    if (!this.bronyaBattlefieldDEFSHEET) {
-                        let characterName = ownerTurn.properName;
-                        let buffName = turnLogic[characterName].buffNames.battlefield;
-                        this.bronyaBattlefieldDEFSHEET = {
-                            "stats": [DEFP],
-                            [DEFP]: 0.20,
-                            "source": characterName,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "removeOnDeath": true
-                        }
-                    }
-                    const buffSheet = this.bronyaBattlefieldDEFSHEET;
+                    const passiveListeners = this.passiveListeners;
 
-                    const targetTurn = generalInfo.targetTurn;
-                    updateBuff(battleData,targetTurn,buffSheet);
+
+                    //e4
+                    if (rank >= 4) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    //trace battlefield
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //trace military might
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //trace commands
+                    const buffSheet = this.bronyaBasicCRITSHEET ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 1,
+                        "target": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.command,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Basic"]
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet);
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
                 },
-                "target": "team",
-                "listenerName": "Bronya - Major Trace: Battlefield",
+                "target": "self",
+                "listenerName": "Sunday Passive",
                 "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            ownerTurn.battleValues.e4FUAReady = true;
+                        },
+                        "target": "self",
+                        "listenerName": "Bronya E4 FUA stack reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy || sourceTurn.properName === characterName) {return;}//can't self proc off basic atk, only happens at e4+ as well
+        
+                            let logicRef = turnLogic[characterName];
+                            let valuesRef = ownerTurn.battleValues;
+    
+                            if (!valuesRef.e4FUAReady || generalInfo.dmgSlot != "Basic ATK") {return;}//abort on non basic atk ends and if the fua wasn't ready
+    
+                            const targetsGotHit = generalInfo.targetsGotHit;
+    
+                            let enemyToFUA = null;
+                            const enemyTurns = battleData.enemyBasedTurns;
+    
+                            for (let enemySlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[enemySlot];
+                                if (currentEnemy.statTable[WeaknessWind]) {
+                                    enemyToFUA = currentEnemy;
+                                    break;
+                                }
+                            }
+        
+                            if (enemyToFUA && !enemyToFUA.isDead) {
+                                valuesRef.e4FUAReady = false;
+        
+                                const queueObject = this.queueObject ??= {
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterAttackFromSelf,
+                                    queueTag: "QueuedInsert",
+    
+                                    actionCall: logicRef.skillFunctions.bronyaFUABasic,
+                                    action: "Insert", 
+                                    points: 0,
+                                    energyCost: null,
+                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                    // specialEnergyPoke: "SW999GainMMR",
+                                    
+                                    isEnhanced: false,
+                                    isTieBreaker: false,
+                                    isExtraTurn: false,
+                                    skipEXDisplay: false,
+                                    allowUlts: false,
+                                    decrementBuffs: false,
+                                    extraTurnHasChoice: false,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: true,
+                                    isAbility: true,
+                                    useFUATriggers: true,
+                                    useAnyTriggers: true,
+                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    // eventTypeStart: "GenericAbilityStart",
+                                    // eventTypeEnd: "GenericAbilityEnd",
+    
+                                    properName: characterName,
+                                    sourceTurn: null,
+                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                    target: this.target,
+                                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+    
+                                    elationForcedPunchline: null,
+                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                queueObject.target = enemyToFUA;
+                                queueInsertAbility(battleData,queueObject);
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Bronya E4 FUA controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            //this one is super weird, it says on battle start, but tested with aggy and garment, it applies to garment EACH time it is added to the field.
+                            let ownerTurn = this.ownerTurn;
+        
+                            if (!this.bronyaBattlefieldDEFSHEET) {
+                                let characterName = ownerTurn.properName;
+                                let buffName = turnLogic[characterName].buffNames.battlefield;
+                                this.bronyaBattlefieldDEFSHEET = {
+                                    "stats": [DEFP],
+                                    [DEFP]: 0.20,
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true
+                                }
+                            }
+                            const buffSheet = this.bronyaBattlefieldDEFSHEET;
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "listenerName": "Bronya - Major Trace: Battlefield",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            if (!this.bronyaMightDMGSHEET) {
+                                let characterName = ownerTurn.properName;
+                                let buffName = turnLogic[characterName].buffNames.might;
+                                this.bronyaMightDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: 0.10,
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": null,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            const buffSheet = this.bronyaMightDMGSHEET;
+                            const targetTurn = generalInfo.targetTurn;
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "listenerName": "Bronya - Major Trace: Military Might",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "UltimateReady",
@@ -19293,62 +19452,6 @@ const turnLogic = {
                 "listenerName": "Bronya - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [CritRateBase],
-                        [CritRateBase]: 1,
-                        "target": null,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.command,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "actionTags": ["Basic"]
-                    }
-
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "team",
-                "listenerName": "Bronya - Major Trace: Command",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Bronya Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -19371,97 +19474,7 @@ const turnLogic = {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let sourceTurn = generalInfo.sourceTurn;
-    
-                        if (sourceTurn.properName != ownerTurn.properName) {return;}
-                        ownerTurn.battleValues.e4FUAReady = true;
-                    },
-                    "target": "self",
-                    "listenerName": "Bronya E4 FUA stack reset",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "AttackEnd",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        let characterName = ownerTurn.properName;
-                        
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isEnemy || sourceTurn.properName === characterName) {return;}//can't self proc off basic atk, only happens at e4+ as well
-    
-                        let logicRef = turnLogic[characterName];
-                        let valuesRef = ownerTurn.battleValues;
-
-                        if (!valuesRef.e4FUAReady || generalInfo.dmgSlot != "Basic ATK") {return;}//abort on non basic atk ends and if the fua wasn't ready
-
-                        const targetsGotHit = generalInfo.targetsGotHit;
-
-                        let enemyToFUA = null;
-                        const enemyTurns = battleData.enemyBasedTurns;
-
-                        for (let enemySlot in targetsGotHit) {
-                            const currentEnemy = enemyTurns[enemySlot];
-                            if (currentEnemy.statTable[WeaknessWind]) {
-                                enemyToFUA = currentEnemy;
-                                break;
-                            }
-                        }
-    
-                        if (enemyToFUA && !enemyToFUA.isDead) {
-                            valuesRef.e4FUAReady = false;
-    
-                            const queueObject = this.queueObject ??= {
-                                name: this.listenerName,
-                                priority: priorityList.ability.CharacterAttackFromSelf,
-                                queueTag: "QueuedInsert",
-
-                                actionCall: logicRef.skillFunctions.bronyaFUABasic,
-                                action: "Insert", 
-                                points: 0,
-                                energyCost: null,
-                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                                // specialEnergyPoke: "SW999GainMMR",
-                                
-                                isEnhanced: false,
-                                isTieBreaker: false,
-                                isExtraTurn: false,
-                                skipEXDisplay: false,
-                                allowUlts: false,
-                                decrementBuffs: false,
-                                extraTurnHasChoice: false,
-                                dontKeepNextWave: false,//ults always clear out
-                                isAttack: true,
-                                isAbility: true,
-                                useFUATriggers: true,
-                                useAnyTriggers: true,
-                                // eventTypeStartLOG: "GenericAbilityStart",
-                                // eventTypeStart: "GenericAbilityStart",
-                                // eventTypeEnd: "GenericAbilityEnd",
-
-                                properName: characterName,
-                                sourceTurn: null,
-                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                                target: this.target,
-                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                                elationForcedPunchline: null,
-                            }
-                            queueObject.sourceTurn = ownerTurn;
-                            queueObject.target = enemyToFUA;
-                            queueInsertAbility(battleData,queueObject);
-                        }
-                    },
-                    "target": "enemy",
-                    "listenerName": "Bronya E4 FUA controller",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
             6: [],
         },
