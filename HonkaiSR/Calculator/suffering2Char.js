@@ -23223,7 +23223,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Sparkle": {
+    "Sparkle": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
@@ -23263,6 +23263,7 @@ const turnLogic = {
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
+            "Ultimate": null,
         },
         "skillFunctions": {
             sparkleBasic(battleData,target,sourceTurn) {
@@ -23728,6 +23729,225 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //initial skill point modification
+                    let e4 = ownerTurn.rank >= 4;
+                    const finalBonus = 2 + (e4 ? 1 : 0);
+                    battleData.battleTable.SPMax += finalBonus;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Skill Point Max +${finalBonus}`});}
+
+                    //trace artifical flower
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace nocturne
+                    let buffSheet = this.sparkleTraceATKSHEET ??= {
+                        "stats": [ATKP],
+                        [ATKP]: 0.45,
+                        "source": characterName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.nocturne,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    const allyTargets = battleData.allAllyTargetsArray;
+                    updateBuffBatchTargets(battleData,allyTargets,buffSheet2);
+
+                    //SP changes
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    if (rank >= 1) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sparkle Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return};
+                            //only evaluate turn starts from character entities
+        
+                            sourceTurn.sparkleTraceSpentTracking = 0;
+                        },
+                        "target": "self",
+                        "listenerName": "Sparkle - SP Spent tracker reset (turn start)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return};
+                            //only evaluate turn starts from character entities
+        
+                            sourceTurn.sparkleTraceSpentTracking = 0;
+                        },
+                        "target": "self",
+                        "listenerName": "Sparkle - SP Spent tracker reset (turn end)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SPChange",//RESERVE SP ADDED
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            //fail condition if the change isn't for points spent
+                            let spChange = generalInfo.SPChange;
+                            let changeIsNegative = spChange < 0;
+        
+                            // poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
+        
+                            if (changeIsNegative) {
+                                const fullChange = -spChange;
+                                const battleValues = ownerTurn.battleValues;
+        
+                                const reservePoints = battleValues.reservePoints;
+                                if (reservePoints) {
+                                    const maximum = battleData.battleTable.SPMax;
+                                    const current = battleData.skillPointCurrent;
+                                    const actualDiff = maximum - current;
+        
+                                    if (actualDiff) {
+                                        const amountToGain = reservePoints > actualDiff ? actualDiff : reservePoints;
+                                        // battleValues.reservePoints -= amountToGain;
+                                        poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"});
+                                        updateSkillPoints(battleData,amountToGain,ownerTurn,false,"Sparkle: Reserve Skill Points");
+                                    }
+                                }
+        
+                                const sourceTurn = generalInfo.sourceTurn;
+                                if (!ownerTurn.nextSkillFree) {//TRACE: Artificial Flower
+                                    
+                                    sourceTurn.sparkleTraceSpentTracking ??= 0;
+                                    sourceTurn.sparkleTraceSpentTracking += fullChange;
+        
+                                    if (sourceTurn.sparkleTraceSpentTracking >= 3) {
+                                        ownerTurn.nextSkillFree = true;
+                                        if (battleData.isLoggyLogger) {
+                                            // GenericActionWithImage
+                                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point07.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Ally spent >=3 SP in a turn, next Sparkle Skill is free`});
+                                            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                                        }
+                                    }
+                                }
+        
+        
+                                let totalChange = Math.min(3, fullChange);//since the bonus caps out at 3 stacks we limit it to a maximum of 3 total spent that can stack here
+                                const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
+                                sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
+        
+                                const dreamDiverBuffName = this.dreamName ??= turnLogic[ownerTurn.properName].buffNames.dreamdiver;
+                                if (sourceTurn.buffsObject[dreamDiverBuffName]) {
+                                    updateEnergy(battleData,1,ownerTurn,false,"Ally with Dreamdiver used SP");
+                                }
+                            }
+                        },
+                        "target": "team",
+                        "listenerName": "Sparkle - Applied: Red Herring - Talent",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.talentZoneActive) {return;}
+        
+        
+                            let targetTurn = generalInfo.slotRef;
+        
+                            let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
+        
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "Talent vuln(fake) application for new enemies added to field",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {//DONE
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+        
+                            const logicRef = turnLogic[characterName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+        
+                            if (!ATKObjects.sparkleE1SPDSheet) {
+                                ATKObjects.sparkleE1SPDSheet = this.sparkleE1SPDSheet ??= {
+                                    "stats": [SPDP],
+                                    [SPDP]: 0.15,
+                                    "source": "E1",
+                                    "sourceOwner": characterName,
+                                    "buffName": logicRef.buffNames.e1SPD,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+        
+                            const buffSheet = ATKObjects.sparkleE1SPDSheet;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Sparkle E1 SPD boost",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "sparkleReserveSPGained",
                 condition(battleData,generalInfo) {
                     // poke("sparkleReserveSPGained",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -23762,189 +23982,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Reserve SP Handler",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "SPChange",//RESERVE SP ADDED
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    // let sourceTurn = generalInfo.sourceTurn;
-                    //fail condition if the change isn't for points spent
-                    let spChange = generalInfo.SPChange;
-                    let changeIsNegative = spChange < 0;
-
-                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
-
-                    if (changeIsNegative) {
-                        const fullChange = -spChange;
-                        const battleValues = ownerTurn.battleValues;
-
-                        const reservePoints = battleValues.reservePoints;
-                        if (reservePoints) {
-                            const maximum = battleData.battleTable.SPMax;
-                            const current = battleData.skillPointCurrent;
-                            const actualDiff = maximum - current;
-
-                            if (actualDiff) {
-                                const amountToGain = reservePoints > actualDiff ? actualDiff : reservePoints;
-                                // battleValues.reservePoints -= amountToGain;
-                                poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"});
-                                updateSkillPoints(battleData,amountToGain,ownerTurn,false,"Sparkle: Reserve Skill Points");
-                            }
-                        }
-
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (!ownerTurn.nextSkillFree) {//TRACE: Artificial Flower
-                            
-                            sourceTurn.sparkleTraceSpentTracking ??= 0;
-                            sourceTurn.sparkleTraceSpentTracking += fullChange;
-
-                            if (sourceTurn.sparkleTraceSpentTracking >= 3) {
-                                ownerTurn.nextSkillFree = true;
-                                if (battleData.isLoggyLogger) {
-                                    // GenericActionWithImage
-                                    logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point07.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Ally spent >=3 SP in a turn, next Sparkle Skill is free`});
-                                    // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
-                                }
-                            }
-                        }
-
-
-                        let totalChange = Math.min(3, fullChange);//since the bonus caps out at 3 stacks we limit it to a maximum of 3 total spent that can stack here
-                        const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
-                        sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
-
-                        const dreamDiverBuffName = this.dreamName ??= turnLogic[ownerTurn.properName].buffNames.dreamdiver;
-                        if (sourceTurn.buffsObject[dreamDiverBuffName]) {
-                            updateEnergy(battleData,1,ownerTurn,false,"Ally with Dreamdiver used SP");
-                        }
-                    }
-                },
-                "target": "team",
-                "listenerName": "Sparkle - Applied: Red Herring - Talent",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EnemyCreated",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    if (!ownerTurn.battleValues.talentZoneActive) {return;}
-
-
-                    let targetTurn = generalInfo.slotRef;
-
-                    let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
-
-                    updateBuff(battleData,targetTurn,buffSheet);
-                },
-                "target": "enemy",
-                "listenerName": "Talent vuln(fake) application for new enemies added to field",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return};
-                    //only evaluate turn starts from character entities
-
-                    sourceTurn.sparkleTraceSpentTracking = 0;
-                },
-                "target": "self",
-                "listenerName": "Sparkle - SP Spent tracker reset (turn start)",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "EndTurn",
-                condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return};
-                    //only evaluate turn starts from character entities
-
-                    sourceTurn.sparkleTraceSpentTracking = 0;
-                },
-                "target": "self",
-                "listenerName": "Sparkle - SP Spent tracker reset (turn end)",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleSettings",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let e4 = ownerTurn.rank >= 4;
-                    battleData.battleTable.SPMax += 2 + (e4 ? 1 : 0);
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: "Skill Point Max +2"});}
-                },
-                "target": "self",
-                "listenerName": "Sparkle - +SP Max - Talent",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {//DONE
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    const logicRef = turnLogic[characterName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-
-                    if (!ATKObjects.sparkleE1SPDSheet) {
-                        ATKObjects.sparkleE1SPDSheet = this.sparkleE1SPDSheet ??= {
-                            "stats": [SPDP],
-                            [SPDP]: 0.15,
-                            "source": "E1",
-                            "sourceOwner": characterName,
-                            "buffName": logicRef.buffNames.e1SPD,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "removeOnDeath": true,
-                        }
-                    }
-
-                    const buffSheet = ATKObjects.sparkleE1SPDSheet;
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {//DONE
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let buffSheet2 = this.buffSheet2 ??= {
-                        "stats": [ATKP],
-                        [ATKP]: 0.45,
-                        "source": characterName,
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.nocturne,
-                        "durationInTurn": null,
-                        "duration": null,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-
-                    const allyTargets = battleData.allAllyTargetsArray;
-                    updateBuffBatchTargets(battleData,allyTargets,buffSheet2);
-                },
-                "target": "self",
-                "listenerName": "Sparkle - ATK Bonus - Major Trace: Nocturne",
                 "ownerTurn": {},
             },
             {
@@ -24014,34 +24051,6 @@ const turnLogic = {
                 },
                 "target": "team",
                 "listenerName": "Sparkle - Ultimate queued",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Sparkle Technique PREP",
                 "ownerTurn": {},
             },
         ],
