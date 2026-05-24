@@ -16351,7 +16351,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Archer": {
+    "Archer": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let actionUsed = false;
             const statCalls = thisTurn.battleValues;
@@ -16766,6 +16766,250 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //SP change
+                    battleData.battleTable.SPMax += 2;
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: "Skill Point Max +2"});}
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                        let buffSheet = this.archerE6SkillSHRESHEET ??= {
+                            "stats": [DEFShredSkill],
+                            [DEFShredSkill]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": "E6: The Endless Pilgrimage",
+                            "durationInTurn": null,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    //talent fua listener
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace hero of justice
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //e4
+                    if (rank >= 4) {
+                        let buffSheet = this.archerE4DMGSheet ??= {
+                            "stats": [DamageUltimate],
+                            [DamageUltimate]: 1.5,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": "E4: The Unsung Life",
+                            "durationInTurn": null,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    //trace guardian
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
+                        listenerToInject2.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Archer Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (ownerTurn.turnState) {
+                                let cost = 1;
+                                updateSkillPoints(battleData,cost,sourceTurn,false,this.listenerName);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Archer - +SP/StartTurn - E6",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let logicRef = turnLogic[characterName];
+                            let chargeRef = ownerTurn.battleValues;
+        
+                            if (sourceTurn.isEnemy) {return;}
+                            if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
+        
+                                const queueObject = this.queueObject ??= {
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterAttackFromSelf,
+                                    queueTag: "QueuedInsert",
+        
+                                    actionCall: turnLogic[characterName].skillFunctions.archerFUA,
+                                    action: "Insert", 
+                                    points: 0,
+                                    energyCost: null,
+                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                    // specialEnergyPoke: "SW999GainMMR",
+                                    
+                                    isEnhanced: false,
+                                    isTieBreaker: false,
+                                    isExtraTurn: false,
+                                    skipEXDisplay: false,
+                                    allowUlts: false,
+                                    decrementBuffs: false,
+                                    extraTurnHasChoice: false,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: true,
+                                    isAbility: true,
+                                    useFUATriggers: true,
+                                    useAnyTriggers: true,
+                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    // eventTypeStart: "GenericAbilityStart",
+                                    // eventTypeEnd: "GenericAbilityEnd",
+        
+                                    properName: characterName,
+                                    sourceTurn: null,
+                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+        
+                                    target: this.target,
+                                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+        
+                                    elationForcedPunchline: null,
+                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Archer Charge ${chargeRef.charge} --> ${chargeRef.charge-1}/4`});}
+                                // chargeRef.charge -= 1;
+                                chargeRef.chargeDebt += 1;
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Archer - Follow-up queued - Talent",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+        
+                            let ownerTurn = this.ownerTurn;
+        
+                            let valuesRef = ownerTurn.battleValues;
+                            const oldValue = valuesRef.charge
+                            let newCharge = Math.min(4,valuesRef.charge + 1);
+                            if (battleData.isLoggyLogger) {
+                                logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${valuesRef.charge} --> ${newCharge}/4`});
+        
+                                if (newCharge > oldValue) {
+                                    ownerTurn.archerFUAStackSum ??= 0;
+                                    ownerTurn.archerFUAStackSum += newCharge - oldValue;
+                                    
+                                }
+                                logToBattle(battleData,{
+                                    logType: "SUMMARY:SUM",
+                                    function: "archerFUAStackSum",
+                                    AV: battleData.sumAV,
+                                    currentValue: newCharge,
+                                    currentSumValue: ownerTurn.archerFUAStackSum,
+                                    currentAddedValue: newCharge - oldValue
+                                });
+                            }
+                            valuesRef.charge = newCharge;
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Archer - +Charge - Major Trace: Hero of Justice",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SPChange",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            //fail condition right off if no source exists or it's a negative change, or if not enough points to actually trigger
+                            let changeIsPositive = generalInfo && generalInfo.SPChange > 0;
+                            let highEnoughSP = battleData.skillPointCurrent >= 4;
+                            if (changeIsPositive && highEnoughSP) {
+        
+                                if (!this.spChangeGuardianCRITDMGSHEET) {
+                                    let buffName = turnLogic[characterName].buffNames.guardian;
+                                    this.spChangeGuardianCRITDMGSHEET = {
+                                        "stats": [CritDamageBase],
+                                        [CritDamageBase]: 1.20,
+                                        "source": "Trace",
+                                        "sourceOwner": ownerTurn.properName,
+                                        "buffName": buffName,
+                                        "durationInTurn": 2,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn"
+                                    }
+                                }
+        
+                                let buffSheet = this.spChangeGuardianCRITDMGSHEET;
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Archer - Applied: Guardian - Major Trace: Guardian",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
                 "trigger": "UltimateQueueBlockedOrDone",
                 condition(battleData,generalInfo) {
                     // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
@@ -16865,111 +17109,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "PreBattleSettings",
-                condition(battleData,generalInfo) {
-                    // let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-
-                    battleData.battleTable.SPMax += 2;
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: "Skill Point Max +2"});}
-                },
-                "target": "self",
-                "listenerName": "Archer - +SP Max - Major Trace: Projection Magecraft",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    let valuesRef = ownerTurn.battleValues;
-                    const oldValue = valuesRef.charge
-                    let newCharge = Math.min(4,valuesRef.charge + 1);
-                    if (battleData.isLoggyLogger) {
-                        logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${valuesRef.charge} --> ${newCharge}/4`});
-
-                        if (newCharge > oldValue) {
-                            ownerTurn.archerFUAStackSum ??= 0;
-                            ownerTurn.archerFUAStackSum += newCharge - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "archerFUAStackSum",
-                            AV: battleData.sumAV,
-                            currentValue: newCharge,
-                            currentSumValue: ownerTurn.archerFUAStackSum,
-                            currentAddedValue: newCharge - oldValue
-                        });
-                    }
-                    valuesRef.charge = newCharge;
-                },
-                "target": "self",
-                "listenerName": "Archer - +Charge - Major Trace: Hero of Justice",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let logicRef = turnLogic[characterName];
-                    let chargeRef = ownerTurn.battleValues;
-
-                    if (sourceTurn.isEnemy) {return;}
-                    if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
-
-                        const queueObject = this.queueObject ??= {
-                            name: this.listenerName,
-                            priority: priorityList.ability.CharacterAttackFromSelf,
-                            queueTag: "QueuedInsert",
-
-                            actionCall: turnLogic[characterName].skillFunctions.archerFUA,
-                            action: "Insert", 
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
-                            dontKeepNextWave: false,//ults always clear out
-                            isAttack: true,
-                            isAbility: true,
-                            useFUATriggers: true,
-                            useAnyTriggers: true,
-                            // eventTypeStartLOG: "GenericAbilityStart",
-                            // eventTypeStart: "GenericAbilityStart",
-                            // eventTypeEnd: "GenericAbilityEnd",
-
-                            properName: characterName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                            elationForcedPunchline: null,
-                        }
-                        queueObject.sourceTurn = ownerTurn;
-                        queueInsertAbility(battleData,queueObject);
-                        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Archer Charge ${chargeRef.charge} --> ${chargeRef.charge-1}/4`});}
-                        // chargeRef.charge -= 1;
-                        chargeRef.chargeDebt += 1;
-                    }
-                },
-                "target": "enemy",
-                "listenerName": "Archer - Follow-up queued - Talent",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -17026,75 +17165,6 @@ const turnLogic = {
                 "listenerName": "Archer - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "SPChange",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    // let sourceTurn = generalInfo.sourceTurn;
-                    //fail condition right off if no source exists or it's a negative change, or if not enough points to actually trigger
-                    let changeIsPositive = generalInfo && generalInfo.SPChange > 0;
-                    let highEnoughSP = battleData.skillPointCurrent >= 4;
-                    if (changeIsPositive && highEnoughSP) {
-
-                        if (!this.spChangeGuardianCRITDMGSHEET) {
-                            let buffName = turnLogic[characterName].buffNames.guardian;
-                            this.spChangeGuardianCRITDMGSHEET = {
-                                "stats": [CritDamageBase],
-                                [CritDamageBase]: 1.20,
-                                "source": "Trace",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": 2,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                        }
-
-                        let buffSheet = this.spChangeGuardianCRITDMGSHEET;
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Archer - Applied: Guardian - Major Trace: Guardian",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Archer Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -17134,77 +17204,9 @@ const turnLogic = {
             1: [],
             2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [DamageUltimate],
-                            [DamageUltimate]: 1.5,
-                            "source": "E4",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": "E4: The Unsung Life",
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Archer - +Ult DMG - E4",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "StartTurn",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // let characterName = ownerTurn.properName;
-                        let sourceTurn = generalInfo.sourceTurn;
-    
-                        if (ownerTurn.turnState) {
-                            let cost = 1;
-                            updateSkillPoints(battleData,cost,sourceTurn,false,this.listenerName);
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Archer - +SP/StartTurn - E6",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-    
-                        let buffSheet = this.buffSheet ??= {
-                            "stats": [DEFShredSkill],
-                            [DEFShredSkill]: 0.20,
-                            "source": "E6",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": "E6: The Endless Pilgrimage",
-                            "durationInTurn": null,
-                            "duration": null,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Archer - Skill DEF Shred - E6",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -17226,7 +17228,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Seele": {//TODO: see note inside skill function
+    "Seele": {//PASSIVE DONE//TODO: see note inside skill function
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
