@@ -5374,16 +5374,16 @@ const turnLogic = {
             //     "listenerName": "Universal action end listener (Memo Skill)",
             //     "ownerTurn": {},
             // },
-            {
-                "trigger": "ElationSkillEnd",
-                condition(battleData,generalInfo) {
-                    poke("ActionEnd",battleData,generalInfo);
-                    poke("AbilityEnd",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action end listener (Memo Skill)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "ElationSkillEnd",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionEnd",battleData,generalInfo);
+            //         poke("AbilityEnd",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action end listener (Memo Skill)",
+            //     "ownerTurn": {},
+            // },
 
 
             {
@@ -38887,8 +38887,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "ElationSkillEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "ElationSkill") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (ownerTurn.properName != sourceTurn.properName) {return;}//only her elation skill can trigger this
@@ -40995,8 +40998,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "ElationSkillEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "ElationSkill") {return;}//AbilityEnd
+
                             let ownerTurn = this.ownerTurn;
         
                             const sourceTurn = generalInfo.sourceTurn;
