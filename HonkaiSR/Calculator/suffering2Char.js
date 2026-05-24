@@ -5324,16 +5324,16 @@ const turnLogic = {
             },
 
 
-            {
-                "trigger": "BasicATKEnd",
-                condition(battleData,generalInfo) {
-                    poke("ActionEnd",battleData,generalInfo);
-                    poke("AbilityEnd",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action end listener (Basic ATK)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "BasicATKEnd",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionEnd",battleData,generalInfo);
+            //         poke("AbilityEnd",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action end listener (Basic ATK)",
+            //     "ownerTurn": {},
+            // },
             // {
             //     "trigger": "SkillEnd",
             //     condition(battleData,generalInfo) {
@@ -18040,8 +18040,11 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "BasicATKEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityEnd
+
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -24897,8 +24900,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "BasicATKEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}//AbilityEnd
+
                             // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;

@@ -605,8 +605,11 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "BasicATKEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityEnd
+
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownersSlots = this.ownersSlots;
                     let ownerRank = ownersSlots[sourceTurn.name];//setAmount
@@ -2137,8 +2140,11 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "BasicATKEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -2404,8 +2410,11 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "BasicATKEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK") {return;}//AbilityEnd
+
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -10852,8 +10861,11 @@ const turnLogicRelics = {
             },
             "listeners": [
                 {
-                    "trigger": "BasicATKEnd",
+                    "trigger": "AbilityEnd",
                     condition(battleData,generalInfo) {
+                        const action = generalInfo.action;
+                        if (action != "BasicATK") {return;}//AbilityEnd
+
                         // poke("FUAStart",battleData,{sourceTurn});
 
                         const sourceTurn = generalInfo.sourceTurn;
