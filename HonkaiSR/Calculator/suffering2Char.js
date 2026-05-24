@@ -5304,15 +5304,15 @@ const turnLogic = {
                 "listenerName": "Universal action start listener (FUA)",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "MemoSkillStart",
-                condition(battleData,generalInfo) {
-                    poke("ActionStart",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action start listener (Memo Skill)",
-                "ownerTurn": {},
-            },
+            // {
+            //     "trigger": "MemoSkillStart",
+            //     condition(battleData,generalInfo) {
+            //         poke("ActionStart",battleData,generalInfo);
+            //     },
+            //     "target": "self",
+            //     "listenerName": "Universal action start listener (Memo Skill)",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "ElationSkillStart",
                 condition(battleData,generalInfo) {
@@ -30828,8 +30828,11 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "MemoSkillStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "MemoSkill") {return;}//AbilityStart
+
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             let isSourcedFromAggy = false;
@@ -32214,8 +32217,11 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "MemoSkillStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "MemoSkill") {return;}//AbilityStart
+
                             // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const energyToRegen = 5;

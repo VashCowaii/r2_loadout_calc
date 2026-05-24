@@ -6493,8 +6493,11 @@ const turnLogicLightcones = {
                 "buffNames": {},
             },
             {
-                "trigger": "MemoSkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "MemoSkill") {return;}//AbilityStart
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
                     const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
@@ -6767,8 +6770,11 @@ const turnLogicLightcones = {
                 "buffNames": {},
             },
             {
-                "trigger": "MemoSkillStart",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "MemoSkill") {return;}//AbilityStart
+
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
                     const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
