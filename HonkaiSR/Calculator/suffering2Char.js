@@ -36008,7 +36008,6 @@ const turnLogic = {
                             // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
-                            // let generalInfo = {sourceTurn,actionName};
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName === ownerTurn.properName) {return;}//it doesn't count av himself for this, which is odd frankly
         
@@ -36068,7 +36067,6 @@ const turnLogic = {
                             // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
-                            // let generalInfo = {sourceTurn,actionName};
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}//has to be him
     
@@ -36104,7 +36102,6 @@ const turnLogic = {
                             // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
-                            // let generalInfo = {sourceTurn,actionName};
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy) {return;}
     
@@ -36131,7 +36128,6 @@ const turnLogic = {
                             // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
-                            // let generalInfo = {sourceTurn,actionName};
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy) {return;}
     
