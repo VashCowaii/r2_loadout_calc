@@ -31313,7 +31313,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Evernight": {
+    "Evernight": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             // const skillIsUp = thisTurn.evernightSkillIsActive;
 
@@ -32047,6 +32047,359 @@ const turnLogic = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+                    
+
+                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                    //trace dark
+                    const buffSheet = this.evernightTraceDARKCRITSHEET ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.35,
+                        "statsOnHit": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    updateBuff(battleData,eveyTurn,buffSheet);
+
+                    //e2
+                    if (rank >= 2) {
+                        const buffSheet = this.evernightE2SHEET ??= {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: 0.40,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2CritDMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                        updateBuff(battleData,eveyTurn,buffSheet);
+                    }
+
+                    //trace rouse the flame listeners
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //talent evey battlestart trigger
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //talent hp listener
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    }
+
+                    //e4
+                    if (rank >= 4) {
+                        const buffSheet = this.evernightE4BreakSHEET ??= {
+                            "stats": [DamageBreakEfficiency],
+                            [DamageBreakEfficiency]: 0.25,
+                            "statsOnHit": null,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4AllyBreakEff,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuff(battleData,eveyTurn,buffSheet);//evey gets the bonus twice, so we just cheat and say 2 stacks by applying once here and later when applying to all memos
+
+                        //then adjust to one stack before applying to others
+                        const declaredMemosprites = battleData.declaredMemosprites;
+                        updateBuffBatchTargets(battleData,declaredMemosprites,buffSheet);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener9 = passiveListeners[8];
+                        addListenerWithPriority(battleData,listener9,listener9.trigger,ownerTurn);
+                    }
+
+                    //trace rouse the flame start energy
+                    const listener10 = passiveListeners[9];
+                    addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
+
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    // let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        // && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        // battleData.attackTechniqueUsed = true;
+
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "Evernight Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "MemoSkillStart",
+                        condition(battleData,generalInfo) {
+                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                            let ownerTurn = this.ownerTurn;
+                            const energyToRegen = 5;
+                            
+        
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                        },
+                        "target": "self",
+                        "listenerName": "Rouse the Flame, Lull the Light: ally memosprite skill",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "SkillStart",
+                        condition(battleData,generalInfo) {
+                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            const energyToRegen = 5;
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                        },
+                        "target": "self",
+                        "listenerName": "Rouse the Flame, Lull the Light: everynight skill",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BasicATKStart",
+                        condition(battleData,generalInfo) {
+                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            const energyToRegen = 5;
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                        },
+                        "target": "self",
+                        "listenerName": "Rouse the Flame, Lull the Light: everynight basic",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UltimateStart",
+                        condition(battleData,generalInfo) {
+                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            const energyToRegen = 5;
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                        },
+                        "target": "self",
+                        "listenerName": "Rouse the Flame, Lull the Light: everynight ult",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+        
+                            let ownerTurn = this.ownerTurn;
+        
+                            const addEveyToField = this.addEveyToField ??= turnLogic[ownerTurn.properName].skillFunctions.addEveyToField;
+                            addEveyToField(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "priority": -92,
+                        "listenerName": "battlestart evey summon",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const eveyTurn = ownerTurn.everEveyTURNEVENT;
+                            const everName = ownerTurn.properName;
+                            const eveyName = eveyTurn.properName;
+                            if (sourceTurn.properName != eveyName && sourceTurn.properName != everName) {return;}
+                            //we only monitor hp loss from evey and evernight, not anyone else
+        
+                            const wasAttack = generalInfo.wasAttack;
+                            const alreadyHappenedEvernight = ownerTurn.talentHPLossFromAttack;
+                            const alreadyHappenedEvey = eveyTurn.talentHPLossFromAttack;
+        
+                            if (wasAttack) {
+                                if (sourceTurn.properName === everName) {
+                                    if (alreadyHappenedEvernight) {return;}
+                                    else {
+                                        sourceTurn.talentHPLossFromAttack = true;
+                                    }
+                                }
+                                if (sourceTurn.properName === eveyName) {
+                                    if (alreadyHappenedEvey) {return;}
+                                    else {
+                                        sourceTurn.talentHPLossFromAttack = true;
+                                    }
+                                }
+                            }
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 2,sourceString:"Evernight or Evey lost HP"});
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            if (!ATKObjects.talentHPLostCRITDMGSHEET) {
+                                let skillRef = ATKObjects.evernightTalentREF ??= ATKObjects["Talent"]["With Me, This Night"].variant1;
+                                let values = ATKObjects.evernightTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                                ATKObjects.talentHPLostCRITDMGSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: values[1],
+                                    "statsOnHit": null,
+                                    "source": "Talent",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": logicRef.buffNames.talentHPLossCrit,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            const buffSheet = ATKObjects.talentHPLostCRITDMGSHEET;
+                            
+                            buffSheet.duration = ownerTurn.turnState ? 3 : 2;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                            if (eveyTurn.isActive) {
+                                buffSheet.duration = eveyTurn.turnState ? 3 : 2;
+                                updateBuff(battleData,eveyTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Talent ally lost HP memoria gain + CRIT DMG Bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // let targetTurn = generalInfo.slotRef;
+                            const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
+                            evernightE1FinalMulti(battleData,ownerTurn);
+                        },
+                        "target": "team",
+                        "listenerName": "Enemy created E1 buff application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            //so I took Marr's E1 evernight into echo of war divine seed, and the two buds the lady summons can both be killed with evey enhanced skill
+                            //however the damage dealt to each of them VARIES, bc the left one dies first, the multiplier is adjusted, and the right one takes more dmg bc of it
+                            const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
+                            evernightE1FinalMulti(battleData,ownerTurn);
+                        },
+                        "target": "team",
+                        "listenerName": "Enemy killed E1 buff application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+    
+                            if (!this.e6RESPENSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const buffName = logicRef.buffNames.e6AllyRESPEN;
+                                this.e6RESPENSHEET = {
+                                    "stats": [ResistanceAllPEN],
+                                    [ResistanceAllPEN]: 0.20,
+                                    "source": "E6",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                }
+                            }
+        
+                            const buffSheet = this.e6RESPENSHEET;
+                            const targetTurn = generalInfo.targetTurn;
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "listenerName": "E6 Like This, Always: ally res pen bonus",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const energyToRegen = 70;
+        
+                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Rouse the Flame, Lull the Light: battlestart energy regen + memoria gain",
+                        "ownerTurn": {},
+                    },
+
+                ],
+            },
+            {
                 "trigger": "EvernightGainMemoria",
                 condition(battleData,generalInfo) {
                     // poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"asdf"});
@@ -32199,74 +32552,6 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "AllyLostHP",
-                condition(battleData,generalInfo) {
-                    // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
-                    const everName = ownerTurn.properName;
-                    const eveyName = eveyTurn.properName;
-                    if (sourceTurn.properName != eveyName && sourceTurn.properName != everName) {return;}
-                    //we only monitor hp loss from evey and evernight, not anyone else
-
-                    const wasAttack = generalInfo.wasAttack;
-                    const alreadyHappenedEvernight = ownerTurn.talentHPLossFromAttack;
-                    const alreadyHappenedEvey = eveyTurn.talentHPLossFromAttack;
-
-                    if (wasAttack) {
-                        if (sourceTurn.properName === everName) {
-                            if (alreadyHappenedEvernight) {return;}
-                            else {
-                                sourceTurn.talentHPLossFromAttack = true;
-                            }
-                        }
-                        if (sourceTurn.properName === eveyName) {
-                            if (alreadyHappenedEvey) {return;}
-                            else {
-                                sourceTurn.talentHPLossFromAttack = true;
-                            }
-                        }
-                    }
-                    poke("EvernightGainMemoria",battleData,{pointsGained: 2,sourceString:"Evernight or Evey lost HP"});
-
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    if (!ATKObjects.talentHPLostCRITDMGSHEET) {
-                        let skillRef = ATKObjects.evernightTalentREF ??= ATKObjects["Talent"]["With Me, This Night"].variant1;
-                        let values = ATKObjects.evernightTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-                        ATKObjects.talentHPLostCRITDMGSHEET = {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: values[1],
-                            "statsOnHit": null,
-                            "source": "Talent",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": logicRef.buffNames.talentHPLossCrit,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "removeOnDeath": true,
-                        }
-                    }
-                    const buffSheet = ATKObjects.talentHPLostCRITDMGSHEET;
-                    
-                    buffSheet.duration = ownerTurn.turnState ? 3 : 2;
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                    if (eveyTurn.isActive) {
-                        buffSheet.duration = eveyTurn.turnState ? 3 : 2;
-                        updateBuff(battleData,eveyTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Talent ally lost HP memoria gain + CRIT DMG Bonus",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "AttackStart",
                 condition(battleData,generalInfo) {
                     // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
@@ -32318,124 +32603,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Evernight turnstart riddle expiration",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const energyToRegen = 70;
-
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                },
-                "target": "self",
-                "listenerName": "Rouse the Flame, Lull the Light: battlestart energy regen + memoria gain",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "MemoSkillStart",
-                condition(battleData,generalInfo) {
-                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-                    let ownerTurn = this.ownerTurn;
-                    const energyToRegen = 5;
-                    
-
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                },
-                "target": "self",
-                "listenerName": "Rouse the Flame, Lull the Light: ally memosprite skill",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "SkillStart",
-                condition(battleData,generalInfo) {
-                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-                    const energyToRegen = 5;
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                },
-                "target": "self",
-                "listenerName": "Rouse the Flame, Lull the Light: everynight skill",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "BasicATKStart",
-                condition(battleData,generalInfo) {
-                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-                    const energyToRegen = 5;
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                },
-                "target": "self",
-                "listenerName": "Rouse the Flame, Lull the Light: everynight basic",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "UltimateStart",
-                condition(battleData,generalInfo) {
-                    // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-                    const energyToRegen = 5;
-                    updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                    poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                },
-                "target": "self",
-                "listenerName": "Rouse the Flame, Lull the Light: everynight ult",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "WaveStart",
-                condition(battleData,generalInfo) {
-                    const currentWave = generalInfo.currentWave;
-                    if (currentWave != 1) {return;}
-
-                    let ownerTurn = this.ownerTurn;
-
-                    const addEveyToField = this.addEveyToField ??= turnLogic[ownerTurn.properName].skillFunctions.addEveyToField;
-                    addEveyToField(battleData,ownerTurn);
-                },
-                "target": "self",
-                "priority": -92,
-                "listenerName": "battlestart evey summon",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    const eveyTurn = ownerTurn.everEveyTURNEVENT;
-                    
-                    // const rank = sourceTurn.rank;
-                    const buffSheet = this.buffSheet ??= {
-                        "stats": [CritRateBase],
-                        [CritRateBase]: 0.35,
-                        "statsOnHit": null,
-                        "source": "Trace",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCrit,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-                    updateBuff(battleData,ownerTurn,buffSheet);
-                    updateBuff(battleData,eveyTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Dark the Night, Still the Moon: crit rate bonus",
                 "ownerTurn": {},
             },
             {
@@ -32496,31 +32663,6 @@ const turnLogic = {
                 "listenerName": "Evernight - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "BattlePrep",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let logicRef = turnLogic[characterName];
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
-                },
-                "target": "self",
-                "listenerName": "Evernight Technique PREP",
-                "ownerTurn": {},
-            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -32540,133 +32682,12 @@ const turnLogic = {
             "ownerTurn": {},
         },
         "eidolonListeners": {
-            1: [
-                {
-                    "trigger": "EnemyCreated",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        // let targetTurn = generalInfo.slotRef;
-                        const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
-                        evernightE1FinalMulti(battleData,ownerTurn);
-                    },
-                    "target": "team",
-                    "listenerName": "Enemy created E1 buff application",
-                    "ownerTurn": {},
-                },
-                {
-                    "trigger": "EnemyDied",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        //so I took Marr's E1 evernight into echo of war divine seed, and the two buds the lady summons can both be killed with evey enhanced skill
-                        //however the damage dealt to each of them VARIES, bc the left one dies first, the multiplier is adjusted, and the right one takes more dmg bc of it
-                        const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
-                        evernightE1FinalMulti(battleData,ownerTurn);
-                    },
-                    "target": "team",
-                    "listenerName": "Enemy killed E1 buff application",
-                    "ownerTurn": {},
-                },
-            ],
-            2: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const eveyTurn = ownerTurn.everEveyTURNEVENT;
-    
-                        // const rank = sourceTurn.rank;
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: 0.40,
-                            "source": "E2",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2CritDMG,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,ownerTurn,buffSheet);
-                        updateBuff(battleData,eveyTurn,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Listen Up, the Slumber Speaks Soft: crit DMG bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            1: [],
+            2: [],
             3: [],
-            4: [
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-                        const eveyTurn = ownerTurn.everEveyTURNEVENT;
-                        
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageBreakEfficiency],
-                            [DamageBreakEfficiency]: 0.25,
-                            "statsOnHit": null,
-                            "source": "E4",
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": turnLogic[ownerTurn.properName].buffNames.e4AllyBreakEff,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 2,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                        updateBuff(battleData,eveyTurn,buffSheet);//evey gets the bonus twice, so we just cheat and say 2 stacks by applying once here and later when applying to all memos
-
-                        //then adjust to one stack before applying to others
-                        const declaredMemosprites = battleData.declaredMemosprites;
-                        updateBuffBatchTargets(battleData,declaredMemosprites,buffSheet);
-                    },
-                    "target": "self",
-                    "listenerName": "Wake Up, the Tomorrow is Yours: memosprite break eff bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            4: [],
             5: [],
-            6: [
-                {
-                    "trigger": "AllyCreated",
-                    condition(battleData,generalInfo) {
-                        let ownerTurn = this.ownerTurn;
-
-                        if (!this.e6RESPENSHEET) {
-                            const logicRef = turnLogic[ownerTurn.properName];
-                            const buffName = logicRef.buffNames.e6AllyRESPEN;
-                            this.e6RESPENSHEET = {
-                                "stats": [ResistanceAllPEN],
-                                [ResistanceAllPEN]: 0.20,
-                                "source": "E6",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": buffName,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 2,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "removeOnDeath": true,
-                            }
-                        }
-    
-                        const buffSheet = this.e6RESPENSHEET;
-                        const targetTurn = generalInfo.targetTurn;
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    },
-                    "target": "team",
-                    "listenerName": "Like This, Always: ally res pen bonus",
-                    "ownerTurn": {},
-                },
-            ],
+            6: [],
         },
         "ATKObjects": {},
         "listenersBattle": [],
@@ -32697,7 +32718,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Hyacine": {
+    "Hyacine": {//PASSIVE DONE
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP>0;
