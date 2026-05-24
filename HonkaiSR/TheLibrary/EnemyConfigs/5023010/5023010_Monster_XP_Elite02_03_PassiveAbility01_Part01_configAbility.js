@@ -58,7 +58,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Modifier Holder}}"
             },
-            "value": "XP_Elite02_03_Small_Mark"
+            "value": "XP_Elite02_03_Middle_Mark"
           }
         ]
       },

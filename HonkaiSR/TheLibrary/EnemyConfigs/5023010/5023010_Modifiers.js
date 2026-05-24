@@ -52,7 +52,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "UNKNOWN_OBJECT_BOOLEAN_828080"
+                    "value": "XP_Elite02_03_Small_Mark"
                   }
                 ]
               },
