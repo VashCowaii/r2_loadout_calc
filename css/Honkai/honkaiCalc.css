@@ -3396,12 +3396,12 @@ details[open] > summary::before {
 }
 .actionDetailBodyDetailExpandHeaderBackgroundINNER {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     overflow: hidden;
     z-index: 1;
 }
 .buffNameBreakdownClickerHeaderBox {
-    width: auto;
+    width: 95%;
     /* background-color: #ffffff1A; */
     position: relative;
     display: flex;
@@ -3532,6 +3532,16 @@ details[open] > summary::before {
     z-index: 0;
     scale: 1.5;
     transform: translateY(-7%);
+    padding-left: 2px;
+    padding-right: 2px;
+    /* border: 1px solid red; */
+}
+.buffDOTIcon {
+    height: 20px;
+    width: 20px;
+    z-index: 0;
+    scale: 1.5;
+    transform: translateY(9%);
     padding-left: 2px;
     padding-right: 2px;
     /* border: 1px solid red; */

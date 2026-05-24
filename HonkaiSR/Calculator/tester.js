@@ -1618,60 +1618,71 @@ const customMenu = {
                 // shieldRemaining,shieldCap
                 // ${currentBuff.isShield ? "<br>[SHIELD] " : ""}
 
-                if (currentBuff.isShield) {
+                let shieldStringer = "";
+                if (currentBuff.isShield) { 
 
                     // console.log(currentBuff)
                     const currentShield = currentBuff.shieldRemaining;
                     const shieldCap = currentBuff.shieldCap;
                     const percentFilled = currentShield/shieldCap;
                     const percentMissing = 1 - percentFilled;
-                    buffStringer += `
-                    <details class="actionDetailBodyDetailExpandBuffs" open>
-                        <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
-                            <div class="buffNameBreakdownClickerHeaderBox">
-                                <img src="/HonkaiSR/misc/Icon_Shield.png" class="buffShieldIcon"/>
-                                <div class="buffNameBreakdownClickerHeaderBoxBUFFROWOUTER">
-                                    <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
-                                        <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
-                                            ${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
-                                        </div>
-                                        ${currentBuff.expireType ? `
-                                            <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
-                                            ${currentBuff.duration}
-                                            <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
-                                            </div>
-                                            ` : ""}
-                                    </div>
-                                    <div class="buffNameBreakdownClickerHeaderBoxSHIELDROW">
-                                        <div class="buffShieldHealthDisplayFilled" style="width: ${percentFilled*100}%"></div>
-                                        <div class="buffShieldHealthDisplayMissing" style="width: ${percentMissing*100}%"></div>
-                                        <div class="buffShieldHealthValueDisplay">${currentShield.toLocaleString()} / ${shieldCap.toLocaleString()}</div>
-                                    </div>
+                    shieldStringer += `<div class="buffNameBreakdownClickerHeaderBox">
+                            <img src="/HonkaiSR/misc/Icon_Shield.png" class="buffShieldIcon"/>
+                            <div class="buffNameBreakdownClickerHeaderBoxBUFFROWOUTER">
+                                <div class="buffNameBreakdownClickerHeaderBoxSHIELDROW">
+                                    <div class="buffShieldHealthDisplayFilled" style="width: ${percentFilled*100}%"></div>
+                                    <div class="buffShieldHealthDisplayMissing" style="width: ${percentMissing*100}%"></div>
+                                    <div class="buffShieldHealthValueDisplay">${currentShield.toLocaleString()} / ${shieldCap.toLocaleString()}</div>
                                 </div>
                             </div>
-                        </summary>
-                    `;
+                        </div>`;
                 }
-                else {
-                    buffStringer += `
-                    <details class="actionDetailBodyDetailExpandBuffs" open>
-                        <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
-                            <div class="buffNameBreakdownClickerHeaderBox">
-                                <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
-                                    <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
-                                        ${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
-                                    </div>
-                                    ${currentBuff.expireType ? `
-                                        <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
-                                        ${currentBuff.duration}
-                                        <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
-                                        </div>
-                                        ` : ""}
+                let dotStringer = "";
+                if (currentBuff.isDOT) { 
+                    // isAllDOTTypes
+
+                    const dots = {
+                        "Wind": "Icon_Wind_Shear.png",
+                        "Lightning": "Icon_Shock.png",
+                        "Physical": "Icon_Bleed.png",
+                        "Fire": "Icon_Burn.png",
+                        "All": "Icon_DoT.png",
+                    }
+
+                    // element
+
+                    // console.log(currentBuff)
+                    const currentShield = currentBuff.shieldRemaining;
+                    const shieldCap = currentBuff.shieldCap;
+                    const percentFilled = currentShield/shieldCap;
+                    const percentMissing = 1 - percentFilled;
+                    dotStringer += `
+                            <img src="/HonkaiSR/misc/${currentBuff.isAllDOTTypes ? dots.All : dots[currentBuff.element]}" class="buffDOTIcon"/>
+                        `;
+                }
+
+
+
+                buffStringer += `
+                <details class="actionDetailBodyDetailExpandBuffs" open>
+                    <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
+                        <div class="buffNameBreakdownClickerHeaderBox">
+                            <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
+                                <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
+                                    ${dotStringer}${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
                                 </div>
+                                ${currentBuff.expireType ? `
+                                    <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
+                                    ${currentBuff.duration}
+                                    <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
+                                    </div>
+                                    ` : ""}
                             </div>
-                        </summary>
-                    `;
-                }
+                        </div>
+                    </summary>
+                    ${shieldStringer}
+                `;
+                // }
 
                 // tagSpecific
                 buffStringer += `<div class="expandedBuffBodyIndented">`;
