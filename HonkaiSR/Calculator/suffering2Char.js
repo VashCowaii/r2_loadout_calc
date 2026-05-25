@@ -5268,29 +5268,6 @@ const turnLogic = {
             },
         ],
         "finalListeners": [//AbilityTriggerOverride
-            {
-                "trigger": "FUAStart",
-                condition(battleData,generalInfo) {
-                    poke("ActionStart",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action start listener (FUA)",
-                "ownerTurn": {},
-            },
-
-
-            {
-                "trigger": "FUAEnd",
-                condition(battleData,generalInfo) {
-                    poke("ActionEnd",battleData,generalInfo);
-                    poke("AbilityEnd",battleData,generalInfo);
-                },
-                "target": "self",
-                "listenerName": "Universal action end listener (FUA)",
-                "ownerTurn": {},
-            },
-
-
 
             {
                 "trigger": "EnemyDied",
@@ -15677,9 +15654,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.topazBasicATKOBJECT;
 
-                poke("FUAStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("FUAEnd",battleData,{sourceTurn});
             },
             topazSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -15732,7 +15707,6 @@ const turnLogic = {
                 }
                 else {ATKObject.bonusMultiplier = 0;}
 
-                poke("FUAStart",battleData,{sourceTurn});
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//no split energy, all at once before dmg
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
@@ -15749,7 +15723,6 @@ const turnLogic = {
                     updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
                 }
                 if (sourceTurn.rank>=2) {updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
-                poke("FUAEnd",battleData,{sourceTurn});
             },
             numbyTurnAttack(battleData,eventTurn) {
                 poke("TopazFUAQueue",battleData,{eventTurn});
@@ -15804,9 +15777,6 @@ const turnLogic = {
                 }
                 else {ATKObject.bonusMultiplier = 0;}
 
-                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "FUAStart", name:eventTurn.properName, target: "enemy", AV: battleData.sumAV, fuaName: "numbyTurnAttack", isEnhanced, eventOverrideImage: eventTurn.eventImage});}
-                
-                // poke("FUAStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 if (isEnhanced) {
@@ -15820,7 +15790,6 @@ const turnLogic = {
                     updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
                 }
                 if (sourceTurn.rank>=2) {updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
-                // poke("FUAEnd",battleData,{sourceTurn});
             },
             topazUltimate(battleData,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -15993,13 +15962,20 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             const ownerTurn = this.ownerTurn;
     
-                            
-    
                             const sourceTurn = generalInfo.sourceTurn;
                             const targetsGotHit = generalInfo.targetsGotHit;
                             const targetTurn = generalInfo.targetTurn;
-                            const isFUA = generalInfo.ATKObject.isFUA;
-                            if (sourceTurn.isEnemy || !isFUA || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+                            if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
     
     
                             const characterName = ownerTurn.properName;
@@ -16322,7 +16298,14 @@ const turnLogic = {
                     const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
                     if (numbyTurn.turnState) {return}//numby can't advance himself, but topaz can advance him
 
-                    const isFUA = generalInfo.ATKObject.isFUA;
+                    let isFUA = false;
+                    const actionTags = generalInfo.ATKObject.actionTags;
+                    for (let tag of actionTags) {
+                        if (tag === "FUA") {
+                            isFUA = true;
+                            break;
+                        }
+                    }
                     if (isFUA) {
                         actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
                     }
@@ -36079,14 +36062,23 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "FUAEnd",
+                        "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName === ownerTurn.properName) {return;}//it doesn't count av himself for this, which is odd frankly
-        
+
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
         
                             // const isBattleEvent = sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite;
         
@@ -36105,6 +36097,7 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "priority": -100,
                         "listenerName": "Bingo! ally FUA listener",
                         "ownerTurn": {},
                     },
@@ -36138,13 +36131,23 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "FUAStart",
+                        "trigger": "AttackStart",
                         condition(battleData,generalInfo) {
                             // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}//has to be him
+
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
     
                             if (!this.e4fuaDEFSHEET) {
                                 const characterName = ownerTurn.properName
@@ -36169,7 +36172,7 @@ const turnLogic = {
                             updateBuff(battleData,ownerTurn,buffSheet);
                         },
                         "target": "self",
-                        "listenerName": "Bingo! ally FUA listener",
+                        "listenerName": "Aventurine E4 listener",
                         "ownerTurn": {},
                     },
                     {

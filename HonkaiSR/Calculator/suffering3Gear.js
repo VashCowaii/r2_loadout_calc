@@ -268,13 +268,23 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "FUAStart",
+                "trigger": "AttackStart",
                 condition(battleData,generalInfo) {
                     // let ownerRef = this.owners;
                     const ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}
+
+                    let isFUA = false;
+                    const actionTags = generalInfo.ATKObject.actionTags;
+                    for (let tag of actionTags) {
+                        if (tag === "FUA") {
+                            isFUA = true;
+                            break;
+                        }
+                    }
+                    if (!isFUA) {return;}
                     
                     const buffName = this.buffName ??= turnLogicLightcones["I Venture Forth to Hunt"].buffNames.buff1;
                     const buffCheck = sourceTurn.buffsObject[buffName];
@@ -737,7 +747,16 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}
-                    if (!generalInfo.ATKObject.isFUA) {return;}
+
+                    let isFUA = false;
+                    const actionTags = generalInfo.ATKObject.actionTags;
+                    for (let tag of actionTags) {
+                        if (tag === "FUA") {
+                            isFUA = true;
+                            break;
+                        }
+                    }
+                    if (!isFUA) {return;}
 
                     const targetsGotHit = generalInfo.targetsGotHit;
 
@@ -798,7 +817,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "AllyDMGStart",
                 condition(battleData,generalInfo) {
-                    // poke("FUAStart",battleData,{sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
@@ -905,7 +923,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "AttackStart",
                 condition(battleData,generalInfo) {
-                    // poke("FUAStart",battleData,{sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
@@ -946,7 +963,6 @@ const turnLogicLightcones = {
                     //CONFIRMED USING TOPAZ, ASHBLAZING, AND SWORDPLAY
                     //swordplay takes effect after a hit, ashblazing takes place before a hit
 
-                    // poke("FUAStart",battleData,{sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
@@ -973,7 +989,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "AttackEnd",
                 condition(battleData,generalInfo) {
-                    // poke("FUAEnd",battleData,{sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
@@ -5756,12 +5771,22 @@ const turnLogicLightcones = {
                 "ownersSlots": {}
             },
             {
-                "trigger": "FUAStart",
-                condition(battleData,generalInfo) {//.isFUA
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}//abort non-owners
+
+                    let isFUA = false;
+                    const actionTags = generalInfo.ATKObject.actionTags;
+                    for (let tag of actionTags) {
+                        if (tag === "FUA") {
+                            isFUA = true;
+                            break;
+                        }
+                    }
+                    if (!isFUA) {return;}
 
                     let lcNameRef = "If Time Were a Flower";
                     const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
@@ -7807,13 +7832,22 @@ const turnLogicLightcones = {
                 condition(battleData,generalInfo) {
                     // const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject};
                     // poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
-                    const isFUA = generalInfo.ATKObject.isFUA;
+                    let isFUA = false;
+                    const actionTags = generalInfo.ATKObject.actionTags;
+                    for (let tag of actionTags) {
+                        if (tag === "FUA") {
+                            isFUA = true;
+                            break;
+                        }
+                    }
+                    if (!isFUA) {return;}
+
                     const targetTurn = generalInfo.targetTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     let ownersSlots = this.ownersSlots;
                     let ownerRank = ownersSlots[sourceTurn.name];
                     const targetHits = generalInfo.targetsGotHit[targetTurn.name];
-                    if (!isFUA || targetHits > 1 || !ownerRank) {return}//we only care about first hits for this, no point in evaluating it every fuckin time
+                    if (targetHits > 1 || !ownerRank) {return}//we only care about first hits for this, no point in evaluating it every fuckin time
                     //have confirmed unjust applies before the dmg takes place, assuming it actually applies
 
                     if (!sourceTurn.inherentlyUnjustDEBUFFSHEET) {
@@ -10464,13 +10498,22 @@ const turnLogicRelics = {
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "FUAStart",
+                    "trigger": "AttackStart",
                     condition(battleData,generalInfo) {
-                        // poke("FUAStart",battleData,{sourceTurn});
                         let ownersSlots = this.ownersSlots;
                         const sourceTurn = generalInfo.sourceTurn;
                         const ownerRank = ownersSlots[sourceTurn.name];
                         if (!ownerRank) {return;}
+
+                        let isFUA = false;
+                        const actionTags = generalInfo.ATKObject.actionTags;
+                        for (let tag of actionTags) {
+                            if (tag === "FUA") {
+                                isFUA = true;
+                                break;
+                            }
+                        }
+                        if (!isFUA) {return;}
 
 
                         if (!sourceTurn.ashblazing4pcATKSHEET) {
@@ -10507,7 +10550,6 @@ const turnLogicRelics = {
                 {
                     "trigger": "HitEnemyStart",
                     condition(battleData,generalInfo) {
-                        // poke("FUAStart",battleData,{sourceTurn});
                         let ownersSlots = this.ownersSlots;
                         const sourceTurn = generalInfo.sourceTurn;
                         const ownerRank = ownersSlots[sourceTurn.name];
@@ -10530,9 +10572,8 @@ const turnLogicRelics = {
                     "ownersSlots": {}
                 },
                 {
-                    "trigger": "FUAEnd",
+                    "trigger": "AttackDMGEnd",
                     condition(battleData,generalInfo) {
-                        // poke("FUAEnd",battleData,{sourceTurn});
                         let ownersSlots = this.ownersSlots;
                         const sourceTurn = generalInfo.sourceTurn;
                         const ownerRank = ownersSlots[sourceTurn.name];
@@ -10557,12 +10598,22 @@ const turnLogicRelics = {
             "skillFunctions": {},
             "listeners": [
                 {
-                    "trigger": "FUAStart",
+                    "trigger": "AttackStart",
                     condition(battleData,generalInfo) {
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank) {return;}
+
+                        let isFUA = false;
+                        const actionTags = generalInfo.ATKObject.actionTags;
+                        for (let tag of actionTags) {
+                            if (tag === "FUA") {
+                                isFUA = true;
+                                break;
+                            }
+                        }
+                        if (!isFUA) {return;}
 
                         if (!sourceTurn.windSoaringValorousULTDMGSHEET) {
                             let relicNameRef = "The Wind-Soaring Valorous";
@@ -10768,7 +10819,6 @@ const turnLogicRelics = {
                 {
                     "trigger": "AttackStart",
                     condition(battleData,generalInfo) {
-                        // poke("FUAStart",battleData,{sourceTurn});
 
                         const sourceTurn = generalInfo.sourceTurn;
                         if (!sourceTurn.isMemosprite) {return}//can abort early if the attack isn't even from a memosprite
@@ -10914,8 +10964,6 @@ const turnLogicRelics = {
                         const action = generalInfo.action;
                         if (action != "BasicATK") {return;}//AbilityEnd
 
-                        // poke("FUAStart",battleData,{sourceTurn});
-
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.isMemosprite || !sourceTurn.memospriteEventRef) {return}//we're only looking for memo owners, not memosprites. 
 
@@ -10941,8 +10989,6 @@ const turnLogicRelics = {
                     condition(battleData,generalInfo) {
                         const action = generalInfo.action;
                         if (action != "Skill") {return;}//AbilityEnd
-
-                        // poke("FUAStart",battleData,{sourceTurn});
 
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.isMemosprite || !sourceTurn.activeMemosprites) {return}//we're only looking for memo owners, not memosprites. 
@@ -12923,12 +12969,22 @@ const turnLogicRelics = {
                     "ownersSlots": {}
                 },
                 {
-                    "trigger": "FUAStart",
+                    "trigger": "AttackStart",
                     condition(battleData,generalInfo) {
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
                         let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                         if (!ownerRank || sourceTurn.duranDynastyStacksFinished) {return;}//if we've already finished an owner's stacking, skip
+
+                        let isFUA = false;
+                        const actionTags = generalInfo.ATKObject.actionTags;
+                        for (let tag of actionTags) {
+                            if (tag === "FUA") {
+                                isFUA = true;
+                                break;
+                            }
+                        }
+                        if (!isFUA) {return;}
 
                         if (!sourceTurn.duranDynastyMERITSHEET) {
                             let relicNameRef = "Duran, Dynasty of Running Wolves";
