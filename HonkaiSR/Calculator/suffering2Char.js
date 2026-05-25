@@ -4984,7 +4984,10 @@ const battleActions = {
         battleData.bounceOrderEnemy = bounceOrder;
         battleData.AOETargetsEnemy = newPositions;
     },
-    removeListenerInBattle(battleData,listenerName,trigger) {
+    removeListenerInBattle(battleData,listenerObject) {
+        const listenerName = listenerObject.listenerName;
+        const trigger = listenerObject.trigger;
+
         let listenerRef = battleData.battleListeners[trigger];
         for (let i=0;i<listenerRef.length;i++) {
             let currentListener = listenerRef[i];
@@ -5164,6 +5167,7 @@ const hurtEnemyHealth = battleActions.hurtEnemyHealth;
 const killDesignatedEnemies = battleActions.killDesignatedEnemies;
 const addListenerWithPriority = battleActions.addListenerWithPriority;
 const addListenerPREPPriority = battleActions.addListenerPREPPriority;
+const removeListener = battleActions.removeListenerInBattle;
 
 
 const turnLogic = {
@@ -8426,7 +8430,7 @@ const turnLogic = {
                                     queueObject.sourceTurn = ownerTurn;
                                     queueInsertAbility(battleData,queueObject);
         
-                                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                                    removeListener(battleData,this,ownerTurn);
                                     //remove listener as it an only happen once per fight.
                                 }
                             }
@@ -16365,7 +16369,7 @@ const turnLogic = {
 
                     updateEnergy(battleData,60,sourceTurn,false,"Technique: Explicit Subsidy");
                     //then remove, bc this is the only time it'll get called
-                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                    removeListener(battleData,this,ownerTurn);
                 },
                 "target": "self",
                 "listenerName": "Topaz Technique attack listener",
@@ -20121,7 +20125,7 @@ const turnLogic = {
     
                             updateSkillPoints(battleData,2,sourceTurn,false,"E2: Faith Outstrips Frailty");
         
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,ownerTurn);
                         },
                         "target": "self",
                         "listenerName": "E2 Faith Outstrips Frailty - SP regen on first ult",
@@ -20258,7 +20262,7 @@ const turnLogic = {
                     updateBuff(battleData,targetTurn,buffSheet);
                     if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
                     //then remove, bc this is the only time it'll get called
-                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                    removeListener(battleData,this,ownerTurn);
                 },
                 "target": "self",
                 "listenerName": "Sunday Technique ability target listener",
@@ -25888,7 +25892,7 @@ const turnLogic = {
                             updateBuff(battleData,ownerTurn,buffSheet);
                             const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
                             if (buffCheck.currentStacks === 2) {
-                                battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                                removeListener(battleData,this,ownerTurn);
                             }
                             //once we've reached max stacks, remove the listener so it's not trying to evaluate every fucking hp loss in the rest of the battle
                         },
@@ -29602,7 +29606,7 @@ const turnLogic = {
                     if (summonWas != "Apply" || summonAssignedTo.properName != ownerTurn.properName || summonEvent.properName != memTurn.properName) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
                     poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"Rhapsode's Scepter"});
 
-                    battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                    removeListener(battleData,this,ownerTurn);
                     //since it only applies to the very first summon, we have to remove this listener from the battle state
                     //so it doesn't try to evaluate every single summon on field adjustment for the rest of the fight
                 },
@@ -37732,7 +37736,7 @@ const turnLogic = {
                             updateSkillPoints(battleData,1,sourceTurn,false,"Anaxa E1 First Skill Use");
         
                             //then remove, bc this is the only time it'll get called
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,ownerTurn);
                         },
                         "target": "self",
                         "listenerName": "Anaxa E1 bonus skill point listener",

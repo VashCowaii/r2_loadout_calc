@@ -104,7 +104,7 @@ const turnLogicLightcones = {
                         burnRef.completed += 1;
 
                         if (burnRef.completed === burnRef.total) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                     }
                 },
@@ -3384,7 +3384,7 @@ const turnLogicLightcones = {
                         patienceNihilityLCRef.completed += 1;
 
                         if (patienceNihilityLCRef.completed === patienceNihilityLCRef.total) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                     }
                 },
@@ -3752,7 +3752,7 @@ const turnLogicLightcones = {
                         reforgedRef.completed += 1;
 
                         if (reforgedRef.completed === reforgedRef.total) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                     }
                 },
@@ -4486,7 +4486,7 @@ const turnLogicLightcones = {
                         aeonRef.completed += 1;
 
                         if (aeonRef.completed === aeonRef.total) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                     }
                 },
@@ -6275,7 +6275,9 @@ const turnLogicLightcones = {
                         }
 
                         if (wovenRef.completed === wovenRef.total) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
+                            //sourceTurn for now but when personalized later we need to remove from both the memo and memo owner
+                            //wherever applicable
                         }
                     }
                 },
@@ -6504,7 +6506,7 @@ const turnLogicLightcones = {
                     ownerTurn.toEvernightsStarsBonusCompleted = true;
 
                     if (evernightRef.completed === evernightRef.total) {
-                        battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                        removeListener(battleData,this,sourceTurn);
                     }
                 },
                 "target": "self",
@@ -7507,7 +7509,7 @@ const turnLogicLightcones = {
                         battleData.lcShadowburnFIRSTSUMMONDONECOUNTER++;
 
                         if (battleData.lcShadowburnFIRSTSUMMONDONECOUNTER === this.owners.length) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                     }
                 },
@@ -8814,7 +8816,7 @@ const turnLogicLightcones = {
                             battleData.elationTodaysGoodLuckTRACKCOUNT++;
 
                             if (battleData.elationTodaysGoodLuckTRACKCOUNT === ownerRef.length) {
-                                battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                                removeListener(battleData,this,sourceTurn);
                             }
                         }
                     }
@@ -9611,12 +9613,6 @@ const turnLogicRelics = {
 
                         boxingRef.completed += 1;
                         targetTurn.streetwiseBoxingSTACKINGCOMPLETED = true;
-                        if (boxingRef.completed === boxingRef.total) {
-                            const removeListener = battleActions.removeListenerInBattle;
-                            removeListener(battleData,"Streetwise attack launched check","AttackStart");
-                            removeListener(battleData,"Streetwise attack received check","AttackEnd");
-                            //kill the listeners so we don't keep popping them on every attack launched/received from everyone
-                        }
                     } 
                 }
             },
@@ -9633,6 +9629,13 @@ const turnLogicRelics = {
 
                         const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
                         streetwise(battleData,sourceTurn);
+
+                        const tempLogic = battleData.battleLogicTemp;
+                        const boxingRef = tempLogic.streetwiseBoxing;
+                        if (boxingRef.completed === boxingRef.total) {
+                            removeListener(battleData,this,sourceTurn);
+                            //kill the listeners so we don't keep popping them on every attack launched/received from everyone
+                        }
                     },
                     "target": "self",
                     "listenerName": "Streetwise attack launched check",
@@ -9651,6 +9654,13 @@ const turnLogicRelics = {
                         const namedTurns = battleData.nameBasedTurns;
                         for (let allyHit in targetsGotHit) {
                             if (ownersSlots[allyHit]) {streetwise(battleData,namedTurns[allyHit]);}
+                        }
+
+                        const tempLogic = battleData.battleLogicTemp;
+                        const boxingRef = tempLogic.streetwiseBoxing;
+                        if (boxingRef.completed === boxingRef.total) {
+                            removeListener(battleData,this,sourceTurn);//TODO: we have sourceTurn in here for uniformity atm but when moved to personal listeners later
+                            //we really need to redo that to instead check if the personal owner was in targetsGotHit and monitor for ownerTurn in that context
                         }
                     },
                     "target": "self",
@@ -11435,7 +11445,7 @@ const turnLogicRelics = {
                         const allyArray = battleData.allAlliesArray;
                         updateBuffBatchTargets(battleData,allyArray,buffSheet1);
 
-                        battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                        removeListener(battleData,this,sourceTurn);
                     },
                     "target": "self",
                     "listenerName": "Diviner of Distant Reach First Elation Skill",
@@ -11525,7 +11535,7 @@ const turnLogicRelics = {
 
                         if (stacksToAdd === 0) {
                             //if we have nothing to add it's bc we are already capped and can kill this listener since it is teamwide and not individual
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                         battleData.everGloriousMagicalTrackerStacks += stacksToAdd;
 
@@ -12718,7 +12728,7 @@ const turnLogicRelics = {
 
                         if (celestialRef.completed === celestialRef.total) {
                             //we don't want to evaluate every single attack end in the battle cause that'd be shit, so we kill the listener once all owners are marked completed
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                         // turnLogicRelics["Celestial Differentiator"]["2pc"].skillFunctions.statCheck(battleData,sourceTurn);
                     },
@@ -12824,7 +12834,7 @@ const turnLogicRelics = {
 
                             if (duranRef.completed === duranRef.total) {
                                 //when all owners have completed, remove the listener so it's not constantly checking for shit
-                                battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                                removeListener(battleData,this,sourceTurn);
                             }
                         }
                     },
@@ -12904,7 +12914,7 @@ const turnLogicRelics = {
 
                         if (sigoniaRef.completed >= sigoniaRef.total) {
                             //when all owners have completed, remove the listener so it's not constantly checking for shit
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                         }
                     },
                     "target": "self",
@@ -13767,7 +13777,7 @@ const turnLogicRelics = {
 
 
                         if (battleData.relicPunklordeUsersCompleted === battleData.relicPunklordeUsersMax) {
-                            battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
+                            removeListener(battleData,this,sourceTurn);
                             //we don't need to bother doing this in the listener below bc that's just a battlestart listener, this
                             //is the only one with the potential to get called a billion times, and if we remove it mid battle we're set
                         }
