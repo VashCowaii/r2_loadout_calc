@@ -3162,8 +3162,12 @@ const customMenu = {
             if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[actionNameSource];
                 
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
-                    <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : (action.isExTurnQueue ? "turnStarterBarUltimate" : "turnStarterBarMiniAction")} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                    
+                    ${action.isInsertedAbility ? `<div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemyInsert" : "weirdSideSemiCircleThingerAllyInsert"}"></div>` 
+                        : `<div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>`}
+
+
                     ${action.isEnemy ? `<img src="/HonkaiSR/${isEvent ? isEvent : `misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBox">${currentLogType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[currentLogType]}${action.isEnhanced ? " Enh." : ""}</div>
                 </div>`;

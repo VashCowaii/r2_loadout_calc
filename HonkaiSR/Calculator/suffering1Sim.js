@@ -1510,7 +1510,7 @@ const sim = {
                     if (isFUATrigger) {
                         if (isLog) {
                             const isEnhanced = currentFUA.isEnhanced;
-                            logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
+                            logToBattle(battleData,{logType: "FUAStart",isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
                         }
                         poke("FUAStart",battleData,generalInfo);
                         currentFUA.actionCall(battleData,targetTurn,sourceTurn);
@@ -1522,7 +1522,7 @@ const sim = {
 
                         if (isLog) {
                             const displayTypeStart = currentFUA.eventTypeStartLOG;
-                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                            logToBattle(battleData,{logType: displayTypeStart,isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                         }
                         poke(typeStart,battleData,generalInfo);
                         currentFUA.actionCall(battleData,targetTurn,sourceTurn);
@@ -1660,7 +1660,7 @@ const sim = {
                     }
                     else {
                         if (isLog) {
-                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
+                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
                             // eventTypeStartLOG
                         }
                         const actionHasForcedPL = currentUltimate.elationForcedPunchline;
