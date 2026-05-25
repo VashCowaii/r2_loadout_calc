@@ -7806,7 +7806,7 @@ const turnLogic = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -17955,11 +17955,13 @@ const turnLogic = {
                 "listenerName": "Extra Turn Ending marker",
                 "ownerTurn": {},
             },
+
+
             {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityStart
+                    if (action != "Skill" && action != "BasicATK" && action != "Ultimate") {return;}
 
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
@@ -17970,14 +17972,14 @@ const turnLogic = {
                     battleValues.wasInBasicSkillUlt = true;
                 },
                 "target": "self",
-                "listenerName": "Ability Start Resurgence Checker Reset - Skill",
+                "listenerName": "Ability Start Resurgence Checker Reset - Skill/Ult/Basic",
                 "ownerTurn": {},
             },
             {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
+                    if (action != "Skill" && action != "Ultimate" && action != "BasicATK") {return;}
 
                     let ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
@@ -17993,87 +17995,7 @@ const turnLogic = {
                     battleValues.wasInBasicSkillUlt = false;
                 },
                 "target": "self",
-                "listenerName": "Ability End Resurgence Checker - Skill",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
-
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const battleValues = ownerTurn.battleValues;
-                    battleValues.readyForKillInject = false;
-                    battleValues.wasInBasicSkillUlt = true;
-                },
-                "target": "self",
-                "listenerName": "Ability Start Resurgence Checker Reset - Ultimate",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
-
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const battleValues = ownerTurn.battleValues;
-                    // battleValues.readyForKillInject = true;
-                    if (battleValues.readyForKillInject) {
-                        poke("SeeleQueueResurgence",battleData,null);
-                        battleValues.readyForKillInject = false;
-                    }
-                    battleValues.wasInBasicSkillUlt = false;
-                },
-                "target": "self",
-                "listenerName": "Ability End Resurgence Checker - Ult",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityStart
-
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const battleValues = ownerTurn.battleValues;
-                    battleValues.readyForKillInject = false;
-                    battleValues.wasInBasicSkillUlt = true;
-                },
-                "target": "self",
-                "listenerName": "Ability Start Resurgence Checker Reset - Basic ATK",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityEnd
-
-                    let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const battleValues = ownerTurn.battleValues;
-                    // battleValues.readyForKillInject = true;
-                    if (battleValues.readyForKillInject) {
-                        poke("SeeleQueueResurgence",battleData,null);
-                        battleValues.readyForKillInject = false;
-                    }
-                    battleValues.wasInBasicSkillUlt = false;
-                },
-                "target": "self",
-                "listenerName": "Ability End Resurgence Checker - Basic ATK",
+                "listenerName": "Ability End Resurgence Checker - Skill/Ult/Basic",
                 "ownerTurn": {},
             },
             {
@@ -20169,7 +20091,7 @@ const turnLogic = {
                         "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityStart
+                            if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -20180,7 +20102,7 @@ const turnLogic = {
                             battleActions.removeListenerInBattle(battleData,this.listenerName,this.trigger);
                         },
                         "target": "self",
-                        "listenerName": "Faith Outstrips Frailty - SP regen on first ult",
+                        "listenerName": "E2 Faith Outstrips Frailty - SP regen on first ult",
                         "ownerTurn": {},
                     },
                     {
@@ -24717,8 +24639,6 @@ const turnLogic = {
 
                         const listener5 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
-                        const listener6 = passiveListeners[5];
-                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
                     
                     //e4
@@ -24740,7 +24660,7 @@ const turnLogic = {
                         }
                         updateBuff(battleData,ownerTurn,buffSheet);
 
-                        const listener7 = passiveListeners[6];
+                        const listener7 = passiveListeners[5];
                         addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
                     }
 
@@ -24974,7 +24894,7 @@ const turnLogic = {
                             //also make sure I addressed the issue about removing a listener mid poke and the array length not reflecting in the for let i= loops
                         },
                         "target": "self",
-                        "listenerName": "The Saga of Sixteen Winter Days ult listener",
+                        "listenerName": "E4 The Saga of Sixteen Winter Days ult listener",
                         "ownerTurn": {},
                     },
                 ],
@@ -26447,8 +26367,6 @@ const turnLogic = {
                     if (rank >= 1) {
                         const listener5 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
-                        const listener6 = passiveListeners[5];
-                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
 
@@ -26591,11 +26509,13 @@ const turnLogic = {
                         "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Skill") {return;}//AbilityStart
+                            // if (action != "Skill") {return;}
 
                             let ownerTurn = this.ownerTurn;
+                            if (action === "Skill" && !ownerTurn.enhancedActive) {return;}
+
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (!ownerTurn.enhancedActive || sourceTurn.properName != ownerTurn.properName) {return;}//e1 proc for skill is only for enhanced
+                            if (sourceTurn.properName != ownerTurn.properName) {return;}//e1 proc for skill is only for enhanced
     
                             const buffSheet = this.buffSheet ??= {
                                 "stats": [CritDamageBase],
@@ -26614,37 +26534,7 @@ const turnLogic = {
                             updateBuff(battleData,ownerTurn,buffSheet);
                         },
                         "target": "self",
-                        "listenerName": "Moon Crashes Tianguan Gate: enhanced skill listener",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-    
-                            const buffSheet = this.buffSheet ??= {
-                                "stats": [CritDamageBase],
-                                [CritDamageBase]: 0.36,
-                                "source": "E1",
-                                "sourceOwner": ownerTurn.properName,
-                                "buffName": turnLogic[ownerTurn.properName].buffNames.e1CritDMG,
-                                "durationInTurn": 2,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                            updateBuff(battleData,ownerTurn,buffSheet);
-                        },
-                        "target": "self",
-                        "listenerName": "Moon Crashes Tianguan Gate: ult use listener",
+                        "listenerName": "Moon Crashes Tianguan Gate: enhanced skill/ult listener",
                         "ownerTurn": {},
                     },
                 ],
@@ -30712,12 +30602,6 @@ const turnLogic = {
                     if (rank >= 2) {
                         const listener5 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
-                        const listener6 = passiveListeners[5];
-                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
-                        const listener7 = passiveListeners[6];
-                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
-                        const listener8 = passiveListeners[7];
-                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     }
 
 
@@ -30821,8 +30705,8 @@ const turnLogic = {
                     {
                         "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "BasicATK") {return;}//AbilityStart
+                            // const action = generalInfo.action;
+                            // if (action != "BasicATK") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -30837,74 +30721,7 @@ const turnLogic = {
                             else {aggyE2Handler(battleData,ownerTurn,"Remove");}
                         },
                         "target": "self",
-                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Skill") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            let isSourcedFromAggy = false;
-                            if (sourceTurn.isMemosprite) {
-                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                            }
-                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-    
-                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                        },
-                        "target": "self",
-                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            let isSourcedFromAggy = false;
-                            if (sourceTurn.isMemosprite) {
-                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                            }
-                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-    
-                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                        },
-                        "target": "self",
-                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "MemoSkill") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            let isSourcedFromAggy = false;
-                            // console.log(sourceTurn.isMemosprite)
-                            if (sourceTurn.isMemosprite) {
-                                if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
-                            }
-                            else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
-    
-                            const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
-                            if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
-                            else {aggyE2Handler(battleData,ownerTurn,"Remove");}
-                        },
-                        "target": "self",
-                        "listenerName": "Sail on the Raft of Eyelids DEF SHRED",
+                        "listenerName": "E2 Sail on the Raft of Eyelids DEF SHRED",
                         "ownerTurn": {},
                     },
                 ],
@@ -32231,26 +32048,26 @@ const turnLogic = {
                     //trace rouse the flame listeners
                     const listener1 = passiveListeners[0];
                     addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
-                    const listener2 = passiveListeners[1];
-                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
-                    const listener3 = passiveListeners[2];
-                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
-                    const listener4 = passiveListeners[3];
-                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    // const listener2 = passiveListeners[1];
+                    // addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    // const listener3 = passiveListeners[2];
+                    // addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    // const listener4 = passiveListeners[3];
+                    // addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
 
                     //talent evey battlestart trigger
-                    const listener5 = passiveListeners[4];
+                    const listener5 = passiveListeners[1];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
                     //talent hp listener
-                    const listener6 = passiveListeners[5];
+                    const listener6 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
                     //e1
                     if (rank >= 1) {
-                        const listener7 = passiveListeners[6];
+                        const listener7 = passiveListeners[3];
                         addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
-                        const listener8 = passiveListeners[7];
+                        const listener8 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     }
 
@@ -32280,12 +32097,12 @@ const turnLogic = {
 
                     //e6
                     if (rank >= 6) {
-                        const listener9 = passiveListeners[8];
+                        const listener9 = passiveListeners[5];
                         addListenerWithPriority(battleData,listener9,listener9.trigger,ownerTurn);
                     }
 
                     //trace rouse the flame start energy
-                    const listener10 = passiveListeners[9];
+                    const listener10 = passiveListeners[6];
                     addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
 
 
@@ -32314,69 +32131,18 @@ const turnLogic = {
                     {
                         "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "MemoSkill") {return;}//AbilityStart
-
                             let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            if (!sourceTurn.isMemosprite || sourceTurn.properName != ownerTurn.properName) {return}
+
                             const energyToRegen = 5;
-                            
         
                             updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
                             poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
                         },
                         "target": "self",
-                        "listenerName": "Rouse the Flame, Lull the Light: ally memosprite skill",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Skill") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-                            const energyToRegen = 5;
-                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                        },
-                        "target": "self",
-                        "listenerName": "Rouse the Flame, Lull the Light: everynight skill",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "BasicATK") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-                            const energyToRegen = 5;
-                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                        },
-                        "target": "self",
-                        "listenerName": "Rouse the Flame, Lull the Light: everynight basic",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityStart",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityStart
-
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-                            const energyToRegen = 5;
-                            updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
-                        },
-                        "target": "self",
-                        "listenerName": "Rouse the Flame, Lull the Light: everynight ult",
+                        "listenerName": "Rouse the Flame, Lull the Light: Memosprite ability or Evernight ability",
                         "ownerTurn": {},
                     },
                     {
@@ -35290,7 +35056,7 @@ const turnLogic = {
                         "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityStart
+                            if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -39231,7 +38997,7 @@ const turnLogic = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     // let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;

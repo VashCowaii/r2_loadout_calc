@@ -1227,7 +1227,7 @@ const sim = {
             if (sourceTurn.isUniqueEvent && !isMemo) {
                 let isActualTurn = sourceTurn.isSummon;
                 if (isActualTurn) {//things like firefly countdown or robin/aggy countdowns, don't function as actual turns, so we need to make sure they don't actually trigger turn-based events.
-                    poke("StartTurn", battleData, exoTurnRef);
+                    poke("StartTurn", battleData, exoTurnRef,sourceTurn);
                     summaryTurns[turnName] += 1;
                     sourceTurn.actionAssigned = true;
 
@@ -1238,7 +1238,7 @@ const sim = {
                 sourceTurn.uniqueEventFunction(battleData,sourceTurn);
 
                 if (isActualTurn) {
-                    poke("EndTurn", battleData, exoTurnRef);
+                    poke("EndTurn", battleData, exoTurnRef,sourceTurn);
                     // clearULT(battleData);
                     sourceTurn.actionAssigned = false;
                 }
@@ -1246,12 +1246,12 @@ const sim = {
                 sourceTurn.turnState = false;
                 continue;
             }
-            poke("StartTurn", battleData, exoTurnRef);
+            poke("StartTurn", battleData, exoTurnRef,sourceTurn);
             
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
             summaryTurns[turnName] += 1;
-            poke("StartTurnEnd", battleData, exoTurnRef);
+            poke("StartTurnEnd", battleData, exoTurnRef,sourceTurn);
 
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
@@ -1290,13 +1290,13 @@ const sim = {
                 turnWrapper(turnName,sourceTurn,battleData);
             }
 
-            poke("EndTurn", battleData, exoTurnRef);
+            poke("EndTurn", battleData, exoTurnRef,sourceTurn);
             
 
             const endTurnBuffs = sourceTurn.buffsEndTurn;
             if (canLoseBuffsThisTurn && endTurnBuffs.length) {expireControl(battleData,sourceTurn,endTurnBuffs);}
             
-            poke("EndTurnEnd", battleData, exoTurnRef);
+            poke("EndTurnEnd", battleData, exoTurnRef,sourceTurn);
             sourceTurn.actionAssigned = false;
             sourceTurn.turnState = false;
             sourceTurn.turnShouldEnd = false
@@ -1346,12 +1346,13 @@ const sim = {
 
 
 
-            const typeStart = designatedAction.eventTypeStart;
-            const typeEnd = designatedAction.eventTypeEnd;
+            // const typeStart = designatedAction.eventTypeStart;
+            // const typeEnd = designatedAction.eventTypeEnd;
 
-            if (typeStart) {poke(typeStart,battleData,{sourceTurn},sourceTurn);}
+            const isAbility = designatedAction.isAbility;
+            if (isAbility) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
             actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
-            if (typeEnd) {poke(typeEnd,battleData,{sourceTurn},sourceTurn);}
+            if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
 
 
@@ -1398,9 +1399,9 @@ const sim = {
 
             
 
-            poke("AbilityStart",battleData,{sourceTurn},sourceTurn);
+            poke("AbilityStart",battleData,designatedAction,sourceTurn);
             designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);
-            poke("AbilityEnd",battleData,{sourceTurn},sourceTurn);
+            poke("AbilityEnd",battleData,designatedAction,sourceTurn);
 
             // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
             //     turnEnded = true;
@@ -1489,8 +1490,8 @@ const sim = {
                 let currentFUA = queue.shift();
                 let characterName = currentFUA.properName;
                 let sourceTurn = currentFUA.sourceTurn;
-                let actionName = currentFUA.name;
-                let generalInfo = {sourceTurn,actionName};
+                // let actionName = currentFUA.name;
+                // let generalInfo = {sourceTurn,actionName};
                 const targetTurn = currentFUA.target;
 
                 const isFUATrigger = currentFUA.useFUATriggers;
@@ -1512,9 +1513,9 @@ const sim = {
                             const isEnhanced = currentFUA.isEnhanced;
                             logToBattle(battleData,{logType: "FUAStart",isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
                         }
-                        poke("FUAStart",battleData,generalInfo);
+                        poke("FUAStart",battleData,currentFUA,sourceTurn);
                         currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                        poke("FUAEnd",battleData,generalInfo);
+                        poke("FUAEnd",battleData,currentFUA,sourceTurn);
                     }
                     else {
                         const typeStart = currentFUA.eventTypeStart;
@@ -1524,9 +1525,13 @@ const sim = {
                             const displayTypeStart = currentFUA.eventTypeStartLOG;
                             logToBattle(battleData,{logType: displayTypeStart,isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                         }
-                        poke(typeStart,battleData,generalInfo);
+                        const isAbility = currentFUA.isAbility;
+                        if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
+                        // poke(typeStart,battleData,generalInfo);
+                        
                         currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                        poke(typeEnd,battleData,generalInfo);
+                        if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
+                        // poke(typeEnd,battleData,generalInfo);
                     }
                 }
                 else {
@@ -1592,11 +1597,11 @@ const sim = {
                 let currentUltimate = queue.shift();
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
-                let actionName = currentUltimate.name;
+                // let actionName = currentUltimate.name;
                 let target = currentUltimate.target;
                 const isAttack = currentUltimate.isAttack;
                 const queueTag = currentUltimate.queueTag;
-                let generalInfo = {sourceTurn,actionName,target,isAttack,queueTag};
+                // let generalInfo = {sourceTurn,target,isAttack,queueTag};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
                 
 
@@ -1644,12 +1649,9 @@ const sim = {
 
                     if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     
-                    // if (extraTurnHasChoice) {
-                    //     poke("StartTurnEnd", battleData, generalInfo);
-                    // }
 
                     battleData.isInExtraTurn = true;
-                    poke("ExtraTurnStart",battleData,generalInfo);
+                    poke("ExtraTurnStart",battleData,currentUltimate,sourceTurn);
                     if (battleData.inExtraTurnUseUlts) {clearULT(battleData);}
                     
                     const extraTurnHasChoice = currentUltimate.extraTurnHasChoice;
@@ -1684,7 +1686,7 @@ const sim = {
                     battleData.inExtraTurnUseUlts = false;
                     battleData.isInExtraTurn = false;
 
-                    poke("ExtraTurnEnd",battleData,generalInfo);
+                    poke("ExtraTurnEnd",battleData,currentUltimate,sourceTurn);
                     
                 }
 
