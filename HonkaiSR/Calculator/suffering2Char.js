@@ -5268,33 +5268,6 @@ const turnLogic = {
             },
         ],
         "finalListeners": [//AbilityTriggerOverride
-            // {
-            //     "trigger": "BasicATKStart",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionStart",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action start listener (Basic ATK)",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "SkillStart",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionStart",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action start listener (Skill)",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "UltimateStart",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionStart",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action start listener (Ultimate)",
-            //     "ownerTurn": {},
-            // },
             {
                 "trigger": "FUAStart",
                 condition(battleData,generalInfo) {
@@ -5304,56 +5277,8 @@ const turnLogic = {
                 "listenerName": "Universal action start listener (FUA)",
                 "ownerTurn": {},
             },
-            // {
-            //     "trigger": "MemoSkillStart",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionStart",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action start listener (Memo Skill)",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "ElationSkillStart",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionStart",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action start listener (Elation Skill)",
-            //     "ownerTurn": {},
-            // },
 
 
-            // {
-            //     "trigger": "BasicATKEnd",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionEnd",battleData,generalInfo);
-            //         poke("AbilityEnd",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action end listener (Basic ATK)",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "SkillEnd",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionEnd",battleData,generalInfo);
-            //         poke("AbilityEnd",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action end listener (Skill)",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "UltimateEnd",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionEnd",battleData,generalInfo);
-            //         poke("AbilityEnd",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action end listener (Ultimate)",
-            //     "ownerTurn": {},
-            // },
             {
                 "trigger": "FUAEnd",
                 condition(battleData,generalInfo) {
@@ -5364,26 +5289,7 @@ const turnLogic = {
                 "listenerName": "Universal action end listener (FUA)",
                 "ownerTurn": {},
             },
-            // {
-            //     "trigger": "MemoSkillEnd",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionEnd",battleData,generalInfo);
-            //         poke("AbilityEnd",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action end listener (Memo Skill)",
-            //     "ownerTurn": {},
-            // },
-            // {
-            //     "trigger": "ElationSkillEnd",
-            //     condition(battleData,generalInfo) {
-            //         poke("ActionEnd",battleData,generalInfo);
-            //         poke("AbilityEnd",battleData,generalInfo);
-            //     },
-            //     "target": "self",
-            //     "listenerName": "Universal action end listener (Memo Skill)",
-            //     "ownerTurn": {},
-            // },
+
 
 
             {
@@ -5445,7 +5351,7 @@ const turnLogic = {
                     blockWaveAVReset: true,
                     currentlyOwnedBy: "Neutral",
                     eventOwner: "Neutral",//pass through the slot of the character who owns the event, avoids cyclic issues when logging
-                    uniqueEventFunction: logicRef.skillFunctions.startAhaInstant,//logicRef.skillFunctions.combustionExpired,
+                    uniqueEventFunction: logicRef.skillFunctions.queueAhaInstant,//logicRef.skillFunctions.combustionExpired,
                     eventImage: "BEicons/HoshinoKami_007.png",
                 };
                 // ownerTurn.summonEventRef = "topazNUMBYTURNEVENT";
@@ -5526,20 +5432,22 @@ const turnLogic = {
                 buffSheet.expireParam = {sourceTurn: targetTurn.name, stackCount: amount};
                 updateBuff(battleData,targetTurn,buffSheet);
             },
+            queueAhaInstant(battleData,ahaTurn) {
+                poke("AhaInstantQueueStarting",battleData,null);
+            },
             startAhaInstant(battleData,ahaTurn) {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantStart", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
-                poke("AhaInstantStart",battleData,{});
+                poke("AhaInstantStart",battleData,null);
 
-                const forcedPunchline = battleData.punchlineForced;
-                const punchlineConsume = battleData.punchlineConsume;
+                // const forcedPunchline = battleData.punchlineForced;
+                // const punchlineConsume = battleData.punchlineConsume;
 
-                let usablePunchline = battleData.punchline;
-                if (forcedPunchline) {
-                    battleData.punchlineForced = forcedPunchline;
-                    usablePunchline = forcedPunchline;
-                }
+                // let usablePunchline = battleData.punchline;
+                // if (forcedPunchline) {
+                //     battleData.punchlineForced = forcedPunchline;
+                //     usablePunchline = forcedPunchline;
+                // }
                 
-
                 const elationEntityArray = battleData.elationEntityArray;
                 elationEntityArray.sort((a, b) => a.participantID - b.participantID);
 
@@ -5548,7 +5456,7 @@ const turnLogic = {
                     for (let entity of elationEntityArray) {
     
                         const logicRef = turnLogic[entity.properName];
-                        const elationSkill = logicRef.skillFunctions.elationSkill;
+                        const elationSkill = logicRef.elationSkillObject;
 
                         elationSkillObject[entity.participantID] = elationSkill;
                     }
@@ -5561,9 +5469,24 @@ const turnLogic = {
                     const currentElationSkill = elationSkillObject[entity.participantID];
                     // entity.certifiedBanger += battleData.punchline;
 
-                    currentElationSkill(battleData,"enemy",entity);
+                    // currentElationSkill(battleData,"enemy",entity);
+                    queueExtraTurn(battleData,currentElationSkill);
                 }
+            },
+            endAhaInstant(battleData,ahaTurn) {
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantEnd", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: false, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
+                
+                const forcedPunchline = battleData.punchlineForced;
+                const punchlineConsume = battleData.punchlineConsume;
 
+                // let usablePunchline = battleData.punchline;
+                // if (forcedPunchline) {
+                    // battleData.punchlineForced = forcedPunchline;
+                    // usablePunchline = forcedPunchline;
+                // }
+                
+
+                const elationEntityArray = battleData.elationEntityArray;
                 const cbFunction = turnLogic["Aha Instant"].skillFunctions.addCertifiedBanger;
 
                 for (let entity of elationEntityArray) {
@@ -5572,15 +5495,14 @@ const turnLogic = {
                     cbFunction(battleData,entity,applicablePunchline);
                 }
 
-                if (!elationEntityArray.length) {
-                    turnLogic["Aha Instant"].skillFunctions.ahaInstantAdditionalDMG(battleData,ahaTurn)
-                    // turnLogic["Aha Instant"].skillFunctions.ahaInstantAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo)
-                }
+                // if (!elationEntityArray.length) {
+                //     turnLogic["Aha Instant"].skillFunctions.ahaInstantAdditionalDMG(battleData,ahaTurn)
+                //     // turnLogic["Aha Instant"].skillFunctions.ahaInstantAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo)
+                // }
                 
 
                 if (punchlineConsume) {
                     battleActions.updatePunchlineValue(battleData,-battleData.punchline,null,"Aha Instant End: Punchline Consume");
-                    //TODO: if we can verify that the n character count reset value is a GAIN, then add it here
                 }
                 battleActions.updatePunchlineValue(battleData,battleData.elationEntityArray.length,null,"Aha Instant End: Gain N Elation Character Points");
 
@@ -5588,7 +5510,7 @@ const turnLogic = {
                 battleData.punchlineConsume = true;
 
                 // battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("AhaInstantEnd",battleData,{});
+                poke("AhaInstantEnd",battleData,null);
             },
             expireCertified(battleData,expireParam) {
                 // {sourceTurn: entity.name, stackCount: usablePunchline}
@@ -5664,6 +5586,55 @@ const turnLogic = {
             },
         },
         "listeners": [
+            {
+                "trigger": "AhaInstantQueueStarting",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = battleData.ahaInstantTURNEVENT;
+
+                    const queueObject = this.queueObject ??= {
+                        name: "Aha Instant Starting",
+                        priority: priorityList.turn.AhaInstantStart,
+                        queueTag: "AhaInstantQueueStarting",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.startAhaInstant,
+                        action: "AhaInstantQueueStarting",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: false,
+                        isAbility: false,
+                        useFUATriggers: false,
+                        useAnyTriggers: false,
+                        // eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+                    queueExtraTurn(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Aha Instant queue proc",
+                "ownerTurn": {},
+            },
             {
                 "trigger": "ElationInitialize",
                 condition(battleData,generalInfo) {
@@ -5757,6 +5728,67 @@ const turnLogic = {
                 "target": "self",
                 "listenerName": "Aha Instant SPD Controller",
             },
+            {
+                "trigger": "ExtraTurnEnd",//SPD stat change
+                condition(battleData,generalInfo) {
+                    const queueTag = generalInfo.queueTag;
+                    if (queueTag != "AhaInstantElationSkill") {return;}
+
+                    battleData.elationSkillsDone += 1;
+                    const elationEntityArray = battleData.elationEntityArray;
+
+                    if (battleData.elationSkillsDone < elationEntityArray.length) {return;}
+                    battleData.elationSkillsDone = 0;
+
+                    let ownerTurn = battleData.ahaInstantTURNEVENT;
+
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.ability.STAGE_CharacterInsert,
+                        queueTag: "AhaInstantEnd",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.endAhaInstant,
+                        action: "AhaInstantEnd", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: false,
+                        isAbility: false,
+                        useFUATriggers: false,
+                        useAnyTriggers: false,
+                        eventTypeStartLOG: "AhaInstantEnd",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Aha Instant end queue",
+            },
+
+
+            
         ],
         "finalListeners": [],
         "characterValues": {},
@@ -38552,7 +38584,7 @@ const turnLogic = {
                     priority: priorityList.turn.Default,
                     queueTag: "QueuedExtraTurn",
 
-                    actionCall: turnLogic["Aha Instant"].skillFunctions.startAhaInstant,
+                    actionCall: turnLogic["Aha Instant"].skillFunctions.queueAhaInstant,
                     action: "Extra Turn",
                     points: 0,
                     energyCost: null,
@@ -38668,10 +38700,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.yaoElationSkillREF ??= ATKObjects["Elation Skill"]["Let Thy Fortune Burst in Flames"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "ElationSkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("ElationSkillStart",battleData,{sourceTurn});
-
-
 
                 if (!ATKObjects.yaoElationSkillATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].elation;
@@ -38747,8 +38775,6 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                poke("ElationSkillEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -38761,6 +38787,48 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+
+                    const queueObject = logicRef.elationSkillObject ??= {
+                        name: "Yao Guang Elation Skill",
+                        priority: priorityList.turn.AhaInstant,
+                        queueTag: "AhaInstantElationSkill",
+
+                        actionCall: logicRef.skillFunctions.elationSkill,
+                        action: "ElationSkill",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+
+
 
 
                     if (rank >= 1) {
@@ -39725,8 +39793,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.sparxElationSkillREF ??= ATKObjects["Elation Skill"]["Signal Overflow: The Great Encore!"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "ElationSkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("ElationSkillStart",battleData,{sourceTurn});
                 const rank = sourceTurn.rank;
 
 
@@ -39789,8 +39855,6 @@ const turnLogic = {
                 poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Elation Skill"});
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                
-                poke("ElationSkillEnd",battleData,{sourceTurn});
             },
             sparxTechnique(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -39851,6 +39915,48 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+
+                    const queueObject = logicRef.elationSkillObject ??= {
+                        name: "Sparxie Elation Skill",
+                        priority: priorityList.turn.AhaInstant,
+                        queueTag: "AhaInstantElationSkill",
+
+                        actionCall: logicRef.skillFunctions.elationSkill,
+                        action: "ElationSkill",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+
+
 
                     //e2
                     if (rank >= 2) {
@@ -40667,7 +40773,7 @@ const turnLogic = {
                         queueTag: "QueuedExtraTurn",
 
                         actionCall: logicRef.skillFunctions.elationSkill,
-                        action: "Extra Turn",
+                        action: "ElationSkill",
                         points: 0,
                         energyCost: null,
                         // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
@@ -40685,9 +40791,9 @@ const turnLogic = {
                         isAbility: false,
                         useFUATriggers: false,
                         useAnyTriggers: false,
-                        eventTypeStartLOG: "ExtraTurnStart",
-                        eventTypeStart: "ExtraTurnStart",
-                        eventTypeEnd: "ExtraTurnEnd",
+                        eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
 
                         properName: targetTurn.properName,
                         sourceTurn: null,
@@ -40754,8 +40860,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.emcElationSkillREF ??= ATKObjects["Elation Skill"][`I Said "Elation," Did I Stutter?`].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "ElationSkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("ElationSkillStart",battleData,{sourceTurn});
                 const rank = sourceTurn.rank;
 
 
@@ -40885,10 +40989,6 @@ const turnLogic = {
                 
                 chainedAttackRef = chainedAttack(battleData,skillRef,sourceTurn,ATKObject1,"Start",chainedAttackRef);
                 chainedAttack(battleData,skillRef,sourceTurn,ATKObject2,"End",chainedAttackRef);
-
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-
-                poke("ElationSkillEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -40901,6 +41001,46 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+
+                    const queueObject = logicRef.elationSkillObject ??= {
+                        name: "EMC Elation Skill",
+                        priority: priorityList.turn.AhaInstant,
+                        queueTag: "AhaInstantElationSkill",
+
+                        actionCall: logicRef.skillFunctions.elationSkill,
+                        action: "ElationSkill",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
 
 
                     //talent inherent
@@ -41780,8 +41920,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.evaElationSkillREF ??= ATKObjects["Elation Skill"]["Scarlet: Elation or Execution"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "ElationSkillStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("ElationSkillStart",battleData,{sourceTurn});
                 const rank = sourceTurn.rank;
 
 
@@ -41853,8 +41991,6 @@ const turnLogic = {
                 if (rank >= 1) {
                     cbFunction(battleData,sourceTurn,10);
                 }
-
-                poke("ElationSkillEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -41867,6 +42003,49 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+
+                    const queueObject = logicRef.elationSkillObject ??= {
+                        name: "Evanescia Elation Skill",
+                        priority: priorityList.turn.AhaInstant,
+                        queueTag: "AhaInstantElationSkill",
+
+                        actionCall: logicRef.skillFunctions.elationSkill,
+                        action: "ElationSkill",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useFUATriggers: false,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+
+
+
 
                     //TALENT crit to elation conversion
                     const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
@@ -42010,7 +42189,7 @@ const turnLogic = {
                                 queueTag: "QueuedExtraTurn",
     
                                 actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
-                                action: "Extra Turn",
+                                action: "ElationSkill",
                                 points: 0,
                                 energyCost: null,
                                 // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
@@ -42028,9 +42207,9 @@ const turnLogic = {
                                 isAbility: false,
                                 useFUATriggers: false,
                                 useAnyTriggers: false,
-                                eventTypeStartLOG: "ExtraTurnStart",
-                                eventTypeStart: "ExtraTurnStart",
-                                eventTypeEnd: "ExtraTurnEnd",
+                                eventTypeStartLOG: "ElationSkillStart",
+                                // eventTypeStart: "ExtraTurnStart",
+                                // eventTypeEnd: "ExtraTurnEnd",
     
                                 properName: ownerTurn.properName,
                                 sourceTurn: null,

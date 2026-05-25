@@ -3151,6 +3151,7 @@ const customMenu = {
                 "GenericAbilityStart": "Insert",
                 "SkillStart": "Skill",
                 "ElationSkillStart": "Elation",
+                "AhaInstantEnd": "End",
                 "EnemyAttackStart": "ATK",
                 "BasicATKStart": "Basic",
                 "TechniqueStart": "Tech.",
@@ -4213,6 +4214,7 @@ const userTriggers = {
         "GenericAbilityStart",
         "SkillStart",
         "ElationSkillStart",
+        "AhaInstantEnd",
         "MemoSkillStart",
         "BasicATKStart",
         "EnemyAttackStart",
@@ -4254,6 +4256,7 @@ const userTriggers = {
         "GenericAbilityStart": "Insert Instance",
         "SkillStart": "Skill Start",
         "ElationSkillStart": "Elation Skill Start",
+        "AhaInstantEnd": "Aha Instant End",
         "MemoSkillStart": "Memosprite Skill Start",
         "BasicATKStart": "Basic ATK Start",
         "EnemyAttackStart": "Enemy Attack Start",
@@ -4643,7 +4646,7 @@ const userTriggers = {
                     `
                     break;
 
-                    
+                case "AhaInstantEnd":  
                 case "GenericAbilityStart": 
                     // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
                     returnString = `

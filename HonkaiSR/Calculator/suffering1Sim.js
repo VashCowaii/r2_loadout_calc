@@ -702,6 +702,7 @@ const sim = {
             "actionCounter": 0,
             totalUltsQueued: 0,
             totalExTurnsQueued: 0,
+            elationSkillsDone: 0,
             "battleListeners": {},
             "battleListenersPersonal": {},
             "followUpQueue": [],
@@ -1494,6 +1495,11 @@ const sim = {
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
 
+
+                // if (isAbility) {poke("AbilityStart",battleData,currentUltimate,sourceTurn);}
+                // currentUltyFunction(battleData,target,sourceTurn);
+                // if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
+
                 if (useAnyTrigger) {
                     if (isFUATrigger) {
                         if (isLog) {
@@ -1647,16 +1653,23 @@ const sim = {
                         // turnWrapper(charName,sourceTurn,battleData)
                     }
                     else {
+                        if (isLog) {
+                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action});
+                            // eventTypeStartLOG
+                        }
                         const actionHasForcedPL = currentUltimate.elationForcedPunchline;
+                        const isAbility = currentUltimate.isAbility;
                         if (actionHasForcedPL) {
-                            battleData.punchlineForced = actionHasForcedPL;
+                            battleData.punchlineForced += actionHasForcedPL;
                             battleData.punchlineConsume = false;
                         }
 
+                        if (isAbility) {poke("AbilityStart",battleData,currentUltimate,sourceTurn);}
                         currentUltyFunction(battleData,target,sourceTurn);
+                        if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
 
                         if (actionHasForcedPL) {
-                            battleData.punchlineForced = 0;
+                            battleData.punchlineForced -= actionHasForcedPL;
                             battleData.punchlineConsume = true;
                         }
                     }
