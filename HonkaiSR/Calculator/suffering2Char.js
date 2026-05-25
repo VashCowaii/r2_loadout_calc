@@ -5774,7 +5774,7 @@ const turnLogic = {
     //Enemies
     "Generic Boss": {
         logic(thisTurn,battleData) {
-            return this.returnBasicCall ??= {
+            const returnCall = this.returnBasicCall ??= {
                 action: "EnemyAttack",
                 points: 0,
                 properName: thisTurn.properName,
@@ -5784,8 +5784,11 @@ const turnLogic = {
                 eventTypeStart: "GenericAbilityStart",
                 eventTypeEnd: "GenericAbilityEnd",
                 actionCall: this.skillFunctions.genericBossBasic,
-                target: "team"
+                target: "team",
+                sourceTurn:null,
             }
+            returnCall.sourceTurn = thisTurn;
+            return returnCall;
         },
         "enemyData": {
             "name": "N/A",
@@ -6113,7 +6116,7 @@ const turnLogic = {
     },
     "Generic Boss ST": {
         logic(thisTurn,battleData) {
-            return this.returnBasicCall ??= {
+            const returnCall = this.returnBasicCall ??= {
                 action: "EnemyAttack",
                 points: 0,
                 properName: thisTurn.properName,
@@ -6123,8 +6126,11 @@ const turnLogic = {
                 eventTypeStart: "GenericAbilityStart",
                 eventTypeEnd: "GenericAbilityEnd",
                 actionCall: this.skillFunctions.genericBossBasic,
-                target: "team"
+                target: "team",
+                sourceTurn: null,
             }
+            returnCall.sourceTurn = thisTurn;
+            return returnCall
         },
         "enemyData": {
             "name": "N/A",
@@ -6465,7 +6471,7 @@ const turnLogic = {
             return thisTurn.battleValues.nextBasicEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -6480,7 +6486,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicEnhCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -6495,7 +6502,8 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
-            this.returnBasicCall ??= {
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -6510,6 +6518,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call3.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -7190,7 +7199,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -7205,7 +7214,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -7220,6 +7230,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -7587,18 +7598,16 @@ const turnLogic = {
 
                     //e6
                     if (rank >= 6) {
-                        const listener5 = passiveListeners[4];
+                        const listener5 = passiveListeners[3];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
                     //talent trigger provision skill/ult
                     const listener1 = passiveListeners[0];
                     addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
-                    const listener2 = passiveListeners[1];
-                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
                     //trace fearful to act
-                    const listener3 = passiveListeners[2];
+                    const listener3 = passiveListeners[1];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
                     //e2, later
@@ -7621,7 +7630,7 @@ const turnLogic = {
                     updateBuff(battleData,ownerTurn,buffSheet)
 
                     if (rank >= 4) {
-                        const listener4 = passiveListeners[3];
+                        const listener4 = passiveListeners[2];
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
@@ -7650,7 +7659,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityEnd
+                            if (action != "Ultimate" && action != "Skill") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -7661,25 +7670,7 @@ const turnLogic = {
                             applyProvision(battleData,ownerTurn);
                         },
                         "target": "self",
-                        "listenerName": "Apply Divine Provision - Ult end listener",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityEnd",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Skill") {return;}//AbilityEnd
-
-                            let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-        
-                            const applyProvision = this.applyProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision;
-        
-                            applyProvision(battleData,ownerTurn);
-                        },
-                        "target": "self",
-                        "listenerName": "Apply Divine Provision - Skill end listener",
+                        "listenerName": "Apply Divine Provision - Ult/skill end listener",
                         "ownerTurn": {},
                     },
                     {
@@ -7928,7 +7919,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -7943,7 +7934,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -7958,6 +7950,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -8669,7 +8662,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -8684,7 +8677,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -8699,6 +8693,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -9281,7 +9276,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -9296,7 +9291,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -9311,6 +9307,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -10181,7 +10178,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -10195,7 +10192,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.swSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -10209,6 +10207,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.swBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "weaknessIndexConversion": {
             "Fire": WeaknessFire,
@@ -11067,7 +11066,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -11081,7 +11080,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.kafkaSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -11095,6 +11095,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.kafkaBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -11919,7 +11920,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -11933,7 +11934,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fishladySkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -11947,6 +11949,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fishladyBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -13095,7 +13098,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -13109,7 +13112,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.blackswanSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -13123,6 +13127,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.blackswanBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -14170,7 +14175,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -14184,7 +14189,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.weltSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -14198,6 +14204,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.weltBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -14652,7 +14659,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityEnd
+                            if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -14922,7 +14929,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -14936,7 +14943,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.pelaSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -14950,6 +14958,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.pelaBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -15581,7 +15590,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -15595,7 +15604,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.topazSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -15609,6 +15619,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.topazBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -16413,7 +16424,7 @@ const turnLogic = {
             //default to basic atk when all else fails
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -16427,7 +16438,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.archerSkillInstance, 
                 target: "enemy",
             }
-            this.returnSkillCallEnd ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnSkillCallEnd ??= {
                 action: "EndTurn",
                 isAttack: false,
                 isAbility: false,
@@ -16439,7 +16451,8 @@ const turnLogic = {
                 // eventTypeStart: "BasicATKStart",
                 // eventTypeEnd: "BasicATKEnd",
             }
-            this.returnBasicCall ??= {
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -16453,6 +16466,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.archerBasic, 
                 target: "enemy",
             }
+            call3.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -17267,7 +17281,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -17281,7 +17295,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.seeleSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 points: 1, 
                 properName: thisTurn.properName,
@@ -17295,6 +17310,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.seeleBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -18211,7 +18227,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -18226,7 +18242,8 @@ const turnLogic = {
                 target: "char1",
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -18241,6 +18258,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -18646,7 +18664,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityEnd
+                            if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             let characterName = ownerTurn.properName;
@@ -18873,7 +18891,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -18888,7 +18906,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -18903,6 +18922,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -19512,7 +19532,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -19527,7 +19547,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -19542,6 +19563,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Characters",
@@ -20274,7 +20296,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -20288,7 +20310,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.tribbieSkill, 
                 target: "team",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -20302,6 +20325,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.tribbieBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -20881,7 +20905,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityEnd
+                            if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -21137,7 +21161,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -21151,7 +21175,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.robinSkill, 
                 target: "self",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -21165,6 +21190,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.robinBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -21783,7 +21809,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -21797,7 +21823,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.astaSkill, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -21811,6 +21838,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.astaBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -22452,7 +22480,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -22466,7 +22494,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.ruanmeiSkill, 
                 target: "self",
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -22480,6 +22509,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.ruanmeiBasic, 
                 target: "enemy",
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -23299,7 +23329,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -23314,7 +23344,8 @@ const turnLogic = {
                 target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
-            this.returnBasicCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -23329,6 +23360,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -24172,7 +24204,7 @@ const turnLogic = {
             return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -24186,7 +24218,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.saberSkill, 
                 target: "enemy",
             }
-            this.returnBasicEnhCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -24200,7 +24233,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.saberBasicEnhanced, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -24214,6 +24248,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.saberBasicReg, 
                 target: "enemy",
             }
+            call3.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -25142,7 +25177,7 @@ const turnLogic = {
             return actionChosen;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: false,
                 isAbility: true,
@@ -25156,7 +25191,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.bladeSkillInstance, 
                 target: "enemy",
             }
-            this.returnBasicEnhCall ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -25170,7 +25206,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.bladeBasicEnhanced, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -25184,6 +25221,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.bladeBasic, 
                 target: "enemy",
             }
+            call3.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -26019,7 +26057,7 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
+            const call1 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -26033,7 +26071,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.jingliuSkill, 
                 target: "enemy",
             }
-            this.returnSkillCall2 ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnSkillCall2 ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -26047,7 +26086,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.jingliuSkillEnhanced, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 points: 1, 
                 properName: thisTurn.properName,
@@ -26061,6 +26101,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.jingliuBasic, 
                 target: "enemy",
             }
+            call3.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -26773,7 +26814,7 @@ const turnLogic = {
             //default to basic atk when all else fails
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCallEnhE1 ??= {
+            const call1 = this.returnSkillCallEnhE1 ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -26787,7 +26828,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fireflySkillEnhanced, 
                 target: "enemy",
             }
-            this.returnSkillCallEnh ??= {
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnSkillCallEnh ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -26801,7 +26843,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fireflySkillEnhanced, 
                 target: "enemy",
             }
-            this.returnSkillCall ??= {
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnSkillCall ??= {
                 action: "Skill", 
                 isAttack: true,
                 isAbility: true,
@@ -26815,7 +26858,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fireflySkillReg, 
                 target: "enemy",
             }
-            this.returnBasicEnhCall ??= {
+            call3.sourceTurn = thisTurn;
+            const call4 = this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -26829,7 +26873,8 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fireflyBasicEnhanced, 
                 target: "enemy",
             }
-            this.returnBasicCall ??= {
+            call4.sourceTurn = thisTurn;
+            const call5 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
@@ -26843,6 +26888,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.fireflyBasicReg, 
                 target: "enemy",
             }
+            call5.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -27756,6 +27802,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.hookSkill, 
                 target: "enemy",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnSkillCallEnh ??= {
                 action: "Skill", 
                 isAttack: true,
@@ -27770,6 +27817,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.hookSkillEnh, 
                 target: "enemy",
             }
+            this.returnSkillCallEnh.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -27784,6 +27832,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.hookBasicReg, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -28517,6 +28566,7 @@ const turnLogic = {
                 target: "self",
                 poolKey: this.abilityTargetPools.Skill,
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -28532,6 +28582,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATKEnh,
             }
+            this.returnBasicEnhCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -28547,6 +28598,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             // "Skill": "Allies (On-Field)",
@@ -29705,6 +29757,7 @@ const turnLogic = {
                     target: "self",
                     poolKey: null,//this.abilityTargetPools.Skill,
                 }
+                returnSkillCall.sourceTurn = thisTurn;
                 // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
                 return returnSkillCall;
             }
@@ -29725,6 +29778,7 @@ const turnLogic = {
                     target: null,
                     poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,//this.abilityTargetPools.BasicATKEnh,
                 }
+                returnBasicEnhCall.sourceTurn = thisTurn;
                 // skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);
                 returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
                 return returnBasicEnhCall;
@@ -29770,6 +29824,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.aggySkill, 
                 target: "self",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -29784,6 +29839,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.aggyBasicEnhanced, 
                 target: "enemy",
             }
+            this.returnBasicEnhCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -29798,6 +29854,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.aggyBasicReg, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -31253,6 +31310,7 @@ const turnLogic = {
                 target: "self",
                 poolKey: null,//this.abilityTargetPools.Skill,
             }
+            returnSkillCall.sourceTurn = thisTurn;
             // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
             return returnSkillCall;
         },
@@ -31289,6 +31347,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.evernightSkill, 
                 target: "self",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -31303,6 +31362,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.evernightBasic, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -32669,6 +32729,7 @@ const turnLogic = {
                     target: "self",
                     poolKey: null,//this.abilityTargetPools.Skill,
                 }
+                returnSkillCall.sourceTurn = thisTurn;
                 // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
                 return returnSkillCall;
             }
@@ -32689,6 +32750,7 @@ const turnLogic = {
                     target: null,
                     poolKey: null,//turnLogic[evernightTurn.properName].abilityTargetPools.MemoSkillEnh,//this.abilityTargetPools.BasicATKEnh,
                 }
+                returnBasicEnhCall.sourceTurn = thisTurn;
                 // skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);
                 // returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
                 return returnBasicEnhCall;
@@ -32730,6 +32792,7 @@ const turnLogic = {
                 target: "self",
                 poolKey: this.abilityTargetPools.Skill,
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -32745,6 +32808,7 @@ const turnLogic = {
                 target: "enemy",
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
@@ -34127,6 +34191,7 @@ const turnLogic = {
                 target: "self",
                 poolKey: this.abilityTargetPools.Skill,
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -34142,6 +34207,7 @@ const turnLogic = {
                 target: "enemy", 
                 poolKey: this.abilityTargetPools.BasicATK,
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Characters",
@@ -35391,6 +35457,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.aventurineSkill, 
                 target: "self",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -35405,6 +35472,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.aventurineBasic, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -36377,6 +36445,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.argentiSkill, 
                 target: "enemy",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK",
                 isAttack: true,
@@ -36391,6 +36460,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.argentiBasic, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -36998,6 +37068,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.anaxaSkill, 
                 target: "enemy",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -37012,6 +37083,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.anaxaBasic, 
                 target: "enemy", 
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -37651,7 +37723,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Skill") {return;}//AbilityEnd
+                            if (action != "Skill") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -38078,6 +38150,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.yaoSkill, 
                 target: "self",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -38092,6 +38165,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.yaoguangBasic, 
                 target: "enemy", 
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -38902,7 +38976,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "ElationSkill") {return;}//AbilityEnd
+                            if (action != "ElationSkill") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -39168,6 +39242,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.sparxSkillInstance, 
                 target: "self", 
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -39182,6 +39257,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.sparxBasic, 
                 target: "enemy", 
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -40364,6 +40440,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.emcSkill, 
                 target: "enemy",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -40378,6 +40455,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.emcBasic, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Enemies (On-Field)",
@@ -41085,7 +41163,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "ElationSkill") {return;}//AbilityEnd
+                            if (action != "ElationSkill") {return;}
 
                             let ownerTurn = this.ownerTurn;
         
@@ -41118,7 +41196,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityEnd
+                            if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -41296,6 +41374,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.evaSkill, 
                 target: "enemy",
             }
+            this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -41310,6 +41389,7 @@ const turnLogic = {
                 actionCall: this.skillFunctions.evaBasic, 
                 target: "enemy",
             }
+            this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Skill": "Enemies (On-Field)",
@@ -42247,7 +42327,7 @@ const turnLogic = {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}//AbilityEnd
+                            if (action != "Ultimate") {return;}
 
                             // poke("EvanesciaE6CBChanger",battleData,null);battleData.elationBangerTurnExceptions
                             let ownerTurn = this.ownerTurn;

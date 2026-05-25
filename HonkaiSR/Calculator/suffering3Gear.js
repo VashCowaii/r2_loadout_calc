@@ -61,7 +61,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
+                    if (action != "Skill") {return;}
 
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -201,7 +201,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
 
@@ -635,7 +635,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityEnd
+                    if (action != "BasicATK" && action != "Skill") {return;}
 
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownersSlots = this.ownersSlots;
@@ -649,28 +649,7 @@ const turnLogicLightcones = {
                     statCheck(battleData,sourceTurn,ownersSlots);
                 },
                 "target": "self",
-                "listenerName": "Sleep Like the Dead basic check",
-                "owners": []
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
-
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                    if (!ownerRank) {return;}
-
-                    sourceTurn.lcSleepLikeDeadCooldown ??= 0;
-                    if (!sourceTurn.lcSleepLikeDeadCooldown) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogicLightcones["Sleep Like the Dead"].skillFunctions.statCheck;
-                    statCheck(battleData,sourceTurn,ownersSlots);
-                },
-                "target": "self",
-                "listenerName": "Sleep Like the Dead skill check",
+                "listenerName": "Sleep Like the Dead basic/skill check",
                 "owners": []
             },
             {
@@ -1819,7 +1798,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -1869,7 +1848,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -1990,7 +1969,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityStart
+                    if (action != "Skill") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2193,7 +2172,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityEnd
+                    if (action != "BasicATK") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2314,7 +2293,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
+                    if (action != "Skill") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2463,7 +2442,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityEnd
+                    if (action != "BasicATK" && action != "Skill") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2476,28 +2455,7 @@ const turnLogicLightcones = {
                     healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
                 },
                 "target": "team",
-                "listenerName": "Warmth Shortens Cold Nights basic atk end listener",
-                "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
-
-                    const allyTargets = battleData.allAllyTargetsArray;
-                    healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
-                },
-                "target": "team",
-                "listenerName": "Warmth Shortens Cold Nights skill end listener",
+                "listenerName": "Warmth Shortens Cold Nights basic atk/skill end listener",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -2640,7 +2598,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityStart
+                    if (action != "BasicATK") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2706,7 +2664,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate" && action != "Skill") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2738,47 +2696,7 @@ const turnLogicLightcones = {
                     updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "team",
-                "listenerName": "Cornucopia ult start listener",
-                "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityStart
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-
-                    if (!sourceTurn.lcCornucopiaBONUSUSHEET) {
-                        let lcNameRef = "Cornucopia";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        sourceTurn.lcCornucopiaBONUSUSHEET = {
-                            "stats": [HealingOutgoing],
-                            [HealingOutgoing]: rankParams[0],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                    }
-                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "team",
-                "listenerName": "Cornucopia skill start listener",
+                "listenerName": "Cornucopia ult/skill start listener",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -2786,7 +2704,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate" && action != "Skill") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -2797,26 +2715,7 @@ const turnLogicLightcones = {
                     removeBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "team",
-                "listenerName": "Cornucopia ult end listener",
-                "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
-                    removeBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "team",
-                "listenerName": "Cornucopia skill end listener",
+                "listenerName": "Cornucopia ult/skill end listener",
                 "owners": [],
                 "ownersSlots": {}
             },
@@ -3068,7 +2967,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityStart
+                    if (action != "Skill") {return;}
 
                     //ik most debuffs apply as the attack starts, not after they land, but this one is an AFTER application and I did confirm that
                     // let ownerRef = this.owners;
@@ -3111,7 +3010,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
+                    if (action != "Skill") {return;}
 
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -3338,7 +3237,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     //ik most debuffs apply as the attack starts, not after they land, but this one is an AFTER application and I did confirm that
                     // let ownerRef = this.owners;
@@ -4431,7 +4330,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -4466,22 +4365,7 @@ const turnLogicLightcones = {
 
                     const buffSheet = sourceTurn.thanklessCoronationATKSHEET;
                     updateBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "A Thankless Coronation - ult buff trigger",
-                "owners": [],
-                "ownersSlots": {},
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
 
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
 
                     const energyMax = sourceTurn.maxEnergy;
                     const energyCheck = energyMax >= 300;
@@ -4491,10 +4375,9 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "A Thankless Coronation - ult energy regen check",
+                "listenerName": "A Thankless Coronation - ult buff trigger",
                 "owners": [],
                 "ownersSlots": {},
-                "buffNames": {},
             },
         ],
         "buffNames": {
@@ -4916,7 +4799,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -4967,7 +4850,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityStart
+                    if (action != "BasicATK") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -5054,7 +4937,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -5205,7 +5088,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -5492,7 +5375,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
+                    if (action != "Skill") {return;}
 
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -5552,7 +5435,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate") {return;}
 
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -5876,7 +5759,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -5970,7 +5853,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -6024,6 +5907,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Past Self in Mirror wave start listener",
                 "ownerTurn": {},
             }
@@ -6517,7 +6401,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
@@ -6557,7 +6441,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "MemoSkill") {return;}//AbilityStart
+                    if (action != "MemoSkill") {return;}
 
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -6624,7 +6508,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Make Farewells More Beautiful - ally hp lost listener",
+                "listenerName": "To Evernight's Stars - memoskill listener",
                 "owners": [],
             },
             {
@@ -6722,8 +6606,9 @@ const turnLogicLightcones = {
             {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityStart
+                    // const action = generalInfo.action;
+                    // if (action != "BasicATK") {return;}
+                    //ACTION IS NOT ACTUALLY FACTORED, the LC is only looking for use, not usetype, I was jebaited
 
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -6752,7 +6637,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Long May Rainbows Adorn the Sky - owner basic atk listener",
+                "listenerName": "Long May Rainbows Adorn the Sky - owner ability listener",
                 "owners": [],
                 "buffNames": {},
             },
@@ -6760,81 +6645,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityStart
-
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.longMayRainbowsVALUES) {
-                        let lcNameRef = "Long May Rainbows Adorn the Sky";
-                        // const logicRef = turnLogicLightcones[lcNameRef];
-                        let lcPathing = lightcones[lcNameRef].params;
-                        sourceTurn.longMayRainbowsVALUES = lcPathing[ownerRank-1];
-                    }
-                    const values = sourceTurn.longMayRainbowsVALUES;
-                    // console.log(values[1])
-                    const consumeValue = battleActions.consumeHP(battleData,true,values[1],null,sourceTurn,"Lightcone",false,true).totalEaten;
-                    // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
-                    // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
-
-                    const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
-                    sourceTurn.longMayRainbowsHPTally += + consumeValue;
-                    if (battleData.isLoggyLogger) {
-                        logToBattle(battleData,
-                            {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Long May Rainbows Adorn the Sky - owner skill listener",
-                "owners": [],
-                "buffNames": {},
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
-
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.longMayRainbowsVALUES) {
-                        let lcNameRef = "Long May Rainbows Adorn the Sky";
-                        // const logicRef = turnLogicLightcones[lcNameRef];
-                        let lcPathing = lightcones[lcNameRef].params;
-                        sourceTurn.longMayRainbowsVALUES = lcPathing[ownerRank-1];
-                    }
-                    const values = sourceTurn.longMayRainbowsVALUES;
-                    // console.log(values[1])
-                    const consumeValue = battleActions.consumeHP(battleData,true,values[1],null,sourceTurn,"Lightcone",false,true).totalEaten;
-                    // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
-                    // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
-
-                    const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
-                    sourceTurn.longMayRainbowsHPTally += + consumeValue;
-                    if (battleData.isLoggyLogger) {
-                        logToBattle(battleData,
-                            {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Long May Rainbows Adorn the Sky - owner ult listener",
-                "owners": [],
-                "buffNames": {},
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "MemoSkill") {return;}//AbilityStart
+                    if (action != "MemoSkill") {return;}
 
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -6918,7 +6729,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}//AbilityEnd
+                    if (action != "Skill") {return;}
 
                     let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -7385,7 +7196,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityEnd
+                    if (action != "Ultimate") {return;}
 
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -7894,7 +7705,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}//AbilityStart
+                    if (action != "Ultimate") {return;}
 
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -7989,7 +7800,7 @@ const turnLogicLightcones = {
                     healAlly(battleData,healObject,lowestHPAlly,sourceTurn,"Lightcone",1);
                 },
                 "target": "self",
-                "listenerName": "Though Worlds Apart - ATK% Stack - Hrunting Stack",
+                "listenerName": "Though Worlds Apart - ult start listener",
                 "owners": [],
             },
         ],
@@ -8685,7 +8496,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}//AbilityStart
+                    if (action != "BasicATK") {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -8832,7 +8643,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "ElationSkill") {return;}//AbilityStart
+                    if (action != "ElationSkill") {return;}
 
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -8892,7 +8703,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "ElationSkill") {return;}//AbilityStart
+                    if (action != "ElationSkill") {return;}
 
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -8957,7 +8768,7 @@ const turnLogicLightcones = {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "ElationSkill") {return;}//AbilityStart
+                    if (action != "ElationSkill") {return;}
 
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -9315,7 +9126,7 @@ const turnLogicRelics = {
                             "trigger": "AbilityEnd",
                             condition(battleData,generalInfo) {
                                 const action = generalInfo.action;
-                                if (action != "Ultimate") {return;}//AbilityEnd
+                                if (action != "Ultimate") {return;}
 
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
@@ -9475,7 +9286,7 @@ const turnLogicRelics = {
                             "trigger": "AbilityStart",
                             condition(battleData,generalInfo) {
                                 const action = generalInfo.action;
-                                if (action != "Ultimate") {return;}//AbilityStart
+                                if (action != "Ultimate") {return;}
 
                                 let sourceTurn = generalInfo.sourceTurn;
         
@@ -9619,7 +9430,7 @@ const turnLogicRelics = {
                             "trigger": "AbilityEnd",
                             condition(battleData,generalInfo) {
                                 const action = generalInfo.action;
-                                if (action != "Ultimate") {return;}//AbilityEnd
+                                if (action != "Ultimate") {return;}
 
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
@@ -9662,7 +9473,7 @@ const turnLogicRelics = {
                             "trigger": "AbilityEnd",
                             condition(battleData,generalInfo) {
                                 const action = generalInfo.action;
-                                if (action != "Skill") {return;}//AbilityEnd
+                                if (action != "Skill") {return;}
 
                                 // let ownerRef = this.owners;
                                 // let relicNameRef = "Scholar Lost in Erudition";
@@ -9875,7 +9686,7 @@ const turnLogicRelics = {
                     "trigger": "AbilityStart",
                     condition(battleData,generalInfo) {
                         const action = generalInfo.action;
-                        if (action != "Skill") {return;}//AbilityStart
+                        if (action != "Skill") {return;}
 
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
@@ -10016,7 +9827,7 @@ const turnLogicRelics = {
                     "trigger": "AbilityEnd",
                     condition(battleData,generalInfo) {
                         const action = generalInfo.action;
-                        if (action != "Ultimate") {return;}//AbilityEnd
+                        if (action != "Ultimate") {return;}
 
                         let ownersSlots = this.ownersSlots;
                         let sourceTurn = generalInfo.sourceTurn;
@@ -10103,7 +9914,7 @@ const turnLogicRelics = {
                     "trigger": "AbilityStart",
                     condition(battleData,generalInfo) {
                         const action = generalInfo.action;
-                        if (action != "Ultimate") {return;}//AbilityStart
+                        if (action != "Ultimate") {return;}
 
                         let sourceTurn = generalInfo.sourceTurn;
                         let ownersSlots = this.ownersSlots;
@@ -10962,7 +10773,7 @@ const turnLogicRelics = {
                     "trigger": "AbilityEnd",
                     condition(battleData,generalInfo) {
                         const action = generalInfo.action;
-                        if (action != "BasicATK") {return;}//AbilityEnd
+                        if (action != "BasicATK" && action != "Skill") {return;}
 
                         const sourceTurn = generalInfo.sourceTurn;
                         if (sourceTurn.isMemosprite || !sourceTurn.memospriteEventRef) {return}//we're only looking for memo owners, not memosprites. 
@@ -10977,35 +10788,9 @@ const turnLogicRelics = {
 
                         const addBuffs = this.addBuffs ??= turnLogicRelics["World-Remaking Deliverer"]["4pc"].skillFunctions.addBuffs;
                         addBuffs(battleData,sourceTurn,memoTurn);
-
                     },
                     "target": "self",
-                    "listenerName": "World-Remaking Deliverer - basic attack listener",
-                    "owners": [],
-                    "ownersSlots": {}
-                },
-                {
-                    "trigger": "AbilityEnd",
-                    condition(battleData,generalInfo) {
-                        const action = generalInfo.action;
-                        if (action != "Skill") {return;}//AbilityEnd
-
-                        const sourceTurn = generalInfo.sourceTurn;
-                        if (sourceTurn.isMemosprite || !sourceTurn.activeMemosprites) {return}//we're only looking for memo owners, not memosprites. 
-
-                        const memospriteEventRef = sourceTurn.memospriteEventRef;
-                        const memoTurn = sourceTurn[memospriteEventRef];
-
-                        const ownerSlot = sourceTurn.name;
-                        let ownersSlots = this.ownersSlots;
-                        const ownerRank = ownersSlots[ownerSlot];
-                        if (!ownerRank) {return;}//using the owner's slot name, check against relic owners
-
-                        const addBuffs = this.addBuffs ??= turnLogicRelics["World-Remaking Deliverer"]["4pc"].skillFunctions.addBuffs
-                        addBuffs(battleData,sourceTurn,memoTurn);
-                    },
-                    "target": "self",
-                    "listenerName": "World-Remaking Deliverer - skill listener",
+                    "listenerName": "World-Remaking Deliverer - basic attack/skill listener",
                     "owners": [],
                     "ownersSlots": {}
                 },
@@ -11618,7 +11403,7 @@ const turnLogicRelics = {
                     "trigger": "AbilityStart",
                     condition(battleData,generalInfo) {
                         const action = generalInfo.action;
-                        if (action != "ElationSkill") {return;}//AbilityStart
+                        if (action != "ElationSkill") {return;}
 
                         let sourceTurn = generalInfo.sourceTurn;
             
