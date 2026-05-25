@@ -3975,7 +3975,7 @@ const userTriggers = {
                             }
                         }
 
-
+                        let skillMuted = compositeAbilityObject.abilityObject[entryFileName].skillMuted;
                         
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
@@ -4018,6 +4018,10 @@ const userTriggers = {
                                     ${phasesStringerOverride ? `<div class="traceToughnessBoxOverviewSkill">
                                         <div class="traceToughnessTitleBox">Phase Allowed</div>
                                         <div class="traceToughnessValueBox">${phasesStringerOverride}</div>
+                                    </div>` : ""}
+                                    ${skillMuted ? `<div class="traceToughnessBoxOverviewSkill">
+                                        <div class="traceToughnessTitleBox">Muted</div>
+                                        <div class="traceToughnessValueBox">${skillMuted}</div>
                                     </div>` : ""}
 
                                     

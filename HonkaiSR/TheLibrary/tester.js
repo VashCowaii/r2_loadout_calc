@@ -4433,6 +4433,8 @@ const userTriggers = {
                                 }
                             }
                             
+                            let skillMuted = compositeAbilityObject.abilityObject[entryFileName].skillMuted
+                            
                             entryString += `
                                 <div class="rotationsSectionRowHolder3Overview">
                                     <div class="eidolonRowBoxHolder">
@@ -4463,6 +4465,10 @@ const userTriggers = {
                                         ${currentInnerSkillVariant.energyRegen ? `<div class="traceToughnessBoxOverviewSkill">
                                             <div class="traceToughnessTitleBox">Energy</div>
                                             <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
+                                        </div>` : ""}
+                                        ${skillMuted ? `<div class="traceToughnessBoxOverviewSkill">
+                                            <div class="traceToughnessTitleBox">Muted</div>
+                                            <div class="traceToughnessValueBox">${skillMuted}</div>
                                         </div>` : ""}
 
                                         ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">

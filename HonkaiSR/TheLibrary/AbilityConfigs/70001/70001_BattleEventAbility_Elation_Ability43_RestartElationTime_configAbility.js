@@ -4,6 +4,7 @@ const configAbility = {
     "70001_BattleEventAbility_Elation_Ability43_RestartElationTime"
   ],
   "skillTrigger": "Skill43",
+  "skillMuted": true,
   "abilityType": "Elation",
   "toughnessList": null,
   "parse": [

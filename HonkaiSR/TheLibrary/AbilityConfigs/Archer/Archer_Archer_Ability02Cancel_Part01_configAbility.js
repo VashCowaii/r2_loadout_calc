@@ -5,6 +5,7 @@ const configAbility = {
     "Archer_Archer_Ability02Cancel_Part02"
   ],
   "skillTrigger": "Skill21",
+  "skillMuted": true,
   "abilityType": "Skill",
   "energy": null,
   "toughnessList": [

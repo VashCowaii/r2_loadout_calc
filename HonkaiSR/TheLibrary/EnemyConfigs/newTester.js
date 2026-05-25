@@ -642,6 +642,7 @@ const megaParsingFuckery = {
                     {leftHand: "trash", keyValue: "trash"},
                     {leftHand: "Ability", keyValue: "abilityType"},
                     {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
+                    {leftHand: "Muted", keyValue: "skillMuted"},
                     {leftHand: "Element", keyValue: "element"},
                     {leftHand: "Energy", keyValue: "energy"},
                     
@@ -699,6 +700,14 @@ const megaParsingFuckery = {
                                 <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
                             </div>`;
                         },
+                        skillMuted(keyValue) {
+                            return `<div class="toughnessTableRowBox">
+                                <div class="toughnessTableRowItemBox">
+                                    <div class="toughnessTableRowItemHeader">Muted</div>
+                                    <div class="toughnessTableRowItemValue">${keyValue}</div>
+                                </div>
+                            </div>`;
+                        },
                         // abilityType(keyValue) {
                         //     return `<div class="imageRowStatisticBoxWithIcon">
                         //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
@@ -722,7 +731,7 @@ const megaParsingFuckery = {
                                     
                                     configAbility["abilityType"] = testCurrentEntry["abilityType"];
                                     configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
-                                    // configAbility["energy"] = testCurrentEntry["energy"];
+                                    configAbility["skillMuted"] = testCurrentEntry["skillMuted"];
                                     configAbility["energy"] = configAbility["energy"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["energy"];
                                     configAbility["element"] = configAbility["element"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["element"];
                                     // console.log("EEEEEEEEEEEEE",configAbility["energy"])

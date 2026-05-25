@@ -6,6 +6,7 @@ const configAbility = {
     "70001_BattleEventAbility_Elation_Ability04_02_Camera"
   ],
   "skillTrigger": "Skill04",
+  "skillMuted": true,
   "abilityType": "Elation",
   "energy": null,
   "toughnessList": [
