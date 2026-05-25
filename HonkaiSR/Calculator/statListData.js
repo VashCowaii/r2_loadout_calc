@@ -38,7 +38,8 @@ const greatTableKnowerOfAll = {
     //DMG
     "DamageAll": 0,
     "DamageBasic": 0,"DamageSkill": 0,"DamageUltimate": 0,
-    "DamageDOT": 0,"DamageFUA": 0,
+    "DamageDOT": 0,
+    // "DamageFUA": 0,
     "DamageBreak": 0,"DamageBreakSuper": 0,"DamageBreakEfficiency": 0,"DamageBreakBonus": 0,"ToughnessRatioAdjustment": 0,
     "DamageBreakNULL": 0,
 
@@ -46,12 +47,16 @@ const greatTableKnowerOfAll = {
 
     "VulnAll": 0,
     "VulnBasic": 0,"VulnSkill": 0,"VulnUltimate": 0,
-    "VulnDOT": 0,"VulnFUA": 0,"VulnBreak": 0,
+    "VulnDOT": 0,
+    // "VulnFUA": 0,
+    "VulnBreak": 0,
     "VulnIce": 0,"VulnLightning": 0,"VulnFire": 0,"VulnQuantum": 0,"VulnImaginary": 0,"VulnWind": 0,"VulnPhysical": 0,
 
     "DEFShredAll": 0,
     "DEFShredBasic": 0,"DEFShredSkill": 0,"DEFShredUltimate": 0,
-    "DEFShredDOT": 0,"DEFShredFUA": 0,"DEFShredBreak": 0,"DEFShredBreakSuper": 0,
+    "DEFShredDOT": 0,
+    // "DEFShredFUA": 0,
+    "DEFShredBreak": 0,"DEFShredBreakSuper": 0,
     "DEFShredIce": 0,"DEFShredLightning": 0,"DEFShredFire": 0,"DEFShredQuantum": 0,"DEFShredImaginary": 0,"DEFShredWind": 0,"DEFShredPhysical": 0,
 
     "Toughness": 0,
@@ -60,7 +65,9 @@ const greatTableKnowerOfAll = {
     "ResistanceAllPEN": 0,
 
     "ResistanceBasicPEN": 0,"ResistanceSkillPEN": 0,"ResistanceUltimatePEN": 0,
-    "ResistanceDOTPEN": 0,"ResistanceFUAPEN": 0,"ResistanceBreakPEN": 0,"ResistanceBreakSuperPEN": 0,
+    "ResistanceDOTPEN": 0,
+    // "ResistanceFUAPEN": 0,
+    "ResistanceBreakPEN": 0,"ResistanceBreakSuperPEN": 0,
 
     "ResistanceImaginary": 0,
     "ResistanceImaginaryPEN": 0,
@@ -467,7 +474,11 @@ const battleTableKnowerOfAll = {
 const possibleTags = [
     "All",
     "Basic","Skill","Ultimate",
-    "DOT","FUA","Break","BreakSuper","Elation",
+    "DOT",
+    // "FUA",
+    "Break",
+    "BreakSuper",
+    "Elation",
     "Ice","Lightning","Fire","Quantum","Imaginary","Wind","Physical",
 ]
 const possibleScalars = [

@@ -16199,8 +16199,8 @@ const turnLogic = {
                     // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     let skillRef = ATKObjects.topazSkillEnhancedREF;
                     let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
-                        "stats": [VulnFUA],
-                        [VulnFUA]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
+                        "stats": [VulnAll],
+                        [VulnAll]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
                         "source": ownerTurn.properName,
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.debt,
@@ -20889,8 +20889,8 @@ const turnLogic = {
 
                     //e6
                     const buffSheet = this.tribbieE6SHEET ??= {
-                        "stats": [DamageFUA],
-                        [DamageFUA]: 7.29,
+                        "stats": [DamageAll],
+                        [DamageAll]: 7.29,
                         "source": "E6",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.e6FUADMG,
@@ -20900,7 +20900,8 @@ const turnLogic = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
-                        "expireType": null
+                        "expireType": null,
+                        "actionTags": ["FUA"],
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
@@ -25713,8 +25714,8 @@ const turnLogic = {
 
                     //trace cyclone
                     const buffSheet = this.bladeFUABuffSHEET ??= {
-                        "stats": [DamageFUA],
-                        [DamageFUA]: 0.20,
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.fuaDMG,
@@ -25724,7 +25725,8 @@ const turnLogic = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
-                        "expireType": null
+                        "expireType": null,
+                        "actionTags": ["FUA"],
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 

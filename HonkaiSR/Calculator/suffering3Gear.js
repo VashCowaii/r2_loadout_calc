@@ -217,9 +217,8 @@ const turnLogicLightcones = {
                         let rankParams = lcPathing[ownerRank-1];
                         
                         sourceTurn.baptismOfPureThoughDISPSHEET = {
-                            "stats": [DamageAll,DEFShredFUA],
+                            "stats": [DamageAll],
                             [DamageAll]: rankParams[3],
-                            [DEFShredFUA]: rankParams[4],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
@@ -231,9 +230,26 @@ const turnLogicLightcones = {
                             "decay": false,
                             "expireType": "EndTurn",
                         }
+                        sourceTurn.baptismOfPureThoughDISPSHEETFUA = {
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: rankParams[4],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2FUA,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            "actionTags": ["FUA"],
+                        }
                     }
                     let buffSheet = sourceTurn.baptismOfPureThoughDISPSHEET;
+                    let buffSheet2 = sourceTurn.baptismOfPureThoughDISPSHEETFUA;
                     updateBuff(battleData,sourceTurn,buffSheet);
+                    updateBuff(battleData,sourceTurn,buffSheet2);
                 },
                 "target": "self",
                 "listenerName": "Baptism of Pure Thought - ult start listener",
@@ -243,7 +259,8 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "buff1": "Baptism of Pure Thought (Crit DMG)",
-            "buff2": "Disputation (LC)"
+            "buff2": "Disputation (LC)",
+            "buff2FUA": "Disputation FUA (LC)"
         },
     },
     "I Venture Forth to Hunt": {
@@ -679,8 +696,8 @@ const turnLogicLightcones = {
 
                     // let buffName = this.buffNames.fuaDMG;
                     let buffSheet = this.buffSheet ??= {
-                        "stats": [DamageFUA],
-                        [DamageFUA]: 0,
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
                         "source": lcNameRef,
                         "sourceOwner": "",
                         "buffName": turnLogicLightcones[lcNameRef].buffNames.fuaDMG,
@@ -690,14 +707,15 @@ const turnLogicLightcones = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
-                        "expireType": null
+                        "expireType": null,
+                        "actionTags": ["FUA"],
                     }
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
                         let rankParams = lcPathing[owner.rank-1];
                         let currentTurn = battleData.nameBasedTurns[charSlot];
 
-                        buffSheet[DamageFUA] = rankParams[1]
+                        buffSheet[DamageAll] = rankParams[1]
                         buffSheet.sourceOwner = currentTurn.properName;
                         updateBuff(battleData,currentTurn,buffSheet);
                     }
@@ -1235,10 +1253,9 @@ const turnLogicLightcones = {
                         let currentTurn = battleData.nameBasedTurns[charSlot];
                         let ownerName = currentTurn.properName;
 
-                        let buffSheet = currentTurn.lcRiverFlowsSpringBONUSSHEET ??= {
-                            "stats": [DamageSkill,DamageFUA],
-                            [DamageSkill]: rankParams[1],
-                            [DamageFUA]: rankParams[1],
+                        let buffSheet = currentTurn.lcSeetYouAtTheEndSHEET ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[1],
                             "source": lcNameRef,
                             "sourceOwner": ownerName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
@@ -1248,10 +1265,27 @@ const turnLogicLightcones = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["Skill"]
+                        }
+                        let buffSheet2 = currentTurn.lcSeetYouAtTheEndSHEET2 ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": ownerName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river2,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["FUA"]
                         }
                         
                         updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet2);
                     }
                 },
                 "target": "self",
@@ -1260,7 +1294,8 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {
-            "river": "See You at the End (LC)",
+            "river": "See You at the End SKILL (LC)",
+            "river2": "See You at the End FUA (LC)",
         },
     },
     "Shadowed by Night": {
@@ -5018,8 +5053,8 @@ const turnLogicLightcones = {
                         let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
 
                         sourceTurn.lcDanceAtSunsetDMGSHEET = {
-                            "stats": [DamageFUA],
-                            [DamageFUA]: rankParams[2],
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[2],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": buffName,
@@ -5030,6 +5065,7 @@ const turnLogicLightcones = {
                             "currentStacks": 1,
                             "decay": false,
                             "expireType": "EndTurn",
+                            "actionTags": ["FUA"],
                         }
                     }
 
@@ -5721,7 +5757,7 @@ const turnLogicLightcones = {
             },
             {
                 "trigger": "FUAStart",
-                condition(battleData,generalInfo) {
+                condition(battleData,generalInfo) {//.isFUA
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -7769,8 +7805,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "HitEnemyStart",
                 condition(battleData,generalInfo) {
-                    // poke("FUAStart",battleData,{sourceTurn});
-
                     // const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject};
                     // poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
                     const isFUA = generalInfo.ATKObject.isFUA;
@@ -8090,7 +8124,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "AllyDMGStart",
                 condition(battleData,generalInfo) {
-                    // poke("FUAStart",battleData,{sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
@@ -8188,7 +8221,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "AllyDMGStart",
                 condition(battleData,generalInfo) {
-                    // poke("FUAStart",battleData,{sourceTurn});
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
                     const ownerRank = ownersSlots[sourceTurn.name];
@@ -10395,8 +10427,8 @@ const turnLogicRelics = {
                         let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.fuaBuff;
 
                         let buffSheet = this.buffSheet ??= {
-                            "stats": [DamageFUA],
-                            [DamageFUA]: relicPathing[0],
+                            "stats": [DamageAll],
+                            [DamageAll]: relicPathing[0],
                             "source": relicNameRef,
                             "sourceOwner": "",
                             "buffName": buffName,
@@ -10406,7 +10438,8 @@ const turnLogicRelics = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["FUA"],
                         }
 
                         const namedTurns = battleData.nameBasedTurns;
@@ -11807,15 +11840,14 @@ const turnLogicRelics = {
                 statCheck(battleData,currentTurn) {
                     if (!currentTurn.salsottoDMGbyCRITSHEET) {
                         let relicNameRef = "Inert Salsotto";
-                        let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames.basicSkillBuff;
+                        let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames;
                         let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
                         currentTurn.salsottoDMGbyCRITSHEET = {
-                            "stats": [DamageUltimate,DamageFUA],
+                            "stats": [DamageUltimate],
                             [DamageUltimate]: relicPathing[2],
-                            [DamageFUA]: relicPathing[2],
                             "source": relicNameRef,
                             "sourceOwner": currentTurn.properName,
-                            "buffName": buffName,
+                            "buffName": buffName.basicSkillBuff,
                             "durationInTurn": null,
                             "duration": 1,
                             "AVApplied": 0,
@@ -11824,17 +11856,35 @@ const turnLogicRelics = {
                             "decay": false,
                             "expireType": null
                         }
+                        currentTurn.salsottoDMGbyCRITSHEETFUA = {
+                            "stats": [DamageAll],
+                            [DamageAll]: relicPathing[2],
+                            "source": relicNameRef,
+                            "sourceOwner": currentTurn.properName,
+                            "buffName": buffName.basicSkillBuff2,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["FUA"],
+                        }
                     }
                     let buffSheet = currentTurn.salsottoDMGbyCRITSHEET;
+                    let buffSheet2 = currentTurn.salsottoDMGbyCRITSHEETFUA;
                     const buffName = buffSheet.buffName;
                     const buffCheck = currentTurn.buffsObject[buffName];
 
                     if (currentTurn.statTable[CritRateBase] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
                         if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
                         updateBuff(battleData,currentTurn,buffSheet);
+                        updateBuff(battleData,currentTurn,buffSheet2);
                     }
                     else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
                         removeBuff(battleData,currentTurn,buffSheet);
+                        removeBuff(battleData,currentTurn,buffSheet2);
                     }
                 }
             },
@@ -11876,7 +11926,8 @@ const turnLogicRelics = {
                 },
             ],
             "buffNames": {
-                "basicSkillBuff": "Salsotto Ult & FUA DMG",
+                "basicSkillBuff": "Salsotto Ult DMG",
+                "basicSkillBuff2": "Salsotto FUA DMG",
             },
         }
     },
@@ -12888,8 +12939,8 @@ const turnLogicRelics = {
                             let buffName2 = buffRef.critBuff;
 
                             sourceTurn.duranDynastyMERITSHEET = {
-                                "stats": [DamageFUA],
-                                [DamageFUA]: relicPathing[1],
+                                "stats": [DamageAll],
+                                [DamageAll]: relicPathing[1],
                                 "source": relicNameRef,
                                 "sourceOwner": sourceTurn.properName,
                                 "buffName": buffName,
@@ -12899,7 +12950,8 @@ const turnLogicRelics = {
                                 "maxStacks": 5,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["FUA"],
                             }
                             sourceTurn.duranDynastyCRITDMGSHEET = {
                                 "stats": [CritDamageBase],
