@@ -24895,14 +24895,15 @@ const turnLogic = {
                                 }
                             }
         
-                            poke("SaberGainCoreResonance",battleData,{pointsGained: 0,sourceString:null});//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                            const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
+                            poke("SaberGainCoreResonance",battleData,pseudoObject);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
                         },
                         "target": "self",
                         "listenerName": "Blessing of the Lake Overflow",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "ActionEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
                             const ownerTurn = this.ownerTurn;
@@ -24912,14 +24913,15 @@ const turnLogic = {
                             battleValues.waitingToAdvance = false;
                         },
                         "target": "self",
-                        "listenerName": "Blessing of the Lake Overflow",
+                        "priority": Infinity,
+                        "listenerName": "Blessing of the Lake advancement listener",
                         "ownerTurn": {},
                     },
                     {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
-                            if (action != "BasicATK") {return;}//AbilityEnd
+                            if (action != "BasicATK" && action != "Skill") {return;}//AbilityEnd
 
                             // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
                             let ownerTurn = this.ownerTurn;
@@ -24931,28 +24933,7 @@ const turnLogic = {
                             //instead of checking every fucking attack including follow-ups, ults, etc
                         },
                         "target": "self",
-                        "listenerName": "The Lost White Walls Basic listener",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AbilityEnd",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Skill") {return;}//AbilityEnd
-
-                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
-                            let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.name != ownerTurn.name) {return;}
-                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"});
-                            //was really tempted to slap this into an AttackEnd listener instead to bundle both together
-                            //but realistically, processing-wise it's better to just stick to the specific skill-type listeners
-                            //instead of checking every fucking attack including follow-ups, ults, etc
-    
-                            //also considered just putting these inside each skill function, but would rather keep these in the eido bracket(for now, at least, might change my mind later)
-                        },
-                        "target": "self",
-                        "listenerName": "The Lost White Walls Skill listener",
+                        "listenerName": "The Lost White Walls Basic/Skill listener",
                         "ownerTurn": {},
                     },
                     {
@@ -28954,7 +28935,10 @@ const turnLogic = {
                 if (!isEnhanced) {skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);}
                 else {skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);}
             },
-            memBasicAttack(battleData,memoTurn,sourceTurn) {
+            memBasicAttack(battleData,target,memoTurn) {
+                // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29027,19 +29011,18 @@ const turnLogic = {
                 const ATKObject1 = ATKObjects.memBasicAttackATKOBJECT1;
                 const ATKObject2 = ATKObjects.memBasicAttackATKOBJECT2;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: false, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
-                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-
                 let chainedAttackRef = null;
                 const chainedAttack = battleActions.attackWrapperChained;
                 
                 chainedAttackRef = chainedAttack(battleData,skillRef,memoTurn,ATKObject1,"Start",chainedAttackRef);
                 chainedAttack(battleData,skillRef,memoTurn,ATKObject2,"End",chainedAttackRef);
 
-                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
                 poke("rmcMemGainedCharge",battleData,{pointsGained: 0.05,sourceString:"Petite Parable"});
             },
-            memSkillAdvance(battleData,memoTurn,sourceTurn) {
+            memSkillAdvance(battleData,target,memoTurn) {
+                // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29083,15 +29066,9 @@ const turnLogic = {
                     }
                 }
 
-                const currentPool = ATKObjects.memAdvancePoolKey ??= logicRef.abilityTargetPools.MemoSkillEnh;
-
-                const char1 = checkAbilityTarget(battleData,sourceTurn,currentPool,"char1","MemoSkillEnhTarget")[0];
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:char1.name, isEnemy: false, isCharacter: true, AV: battleData.sumAV, isEnhanced: true, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
-                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-
+                const char1 = target[0];
                 poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"});
 
-                
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
                 actionAdvance(1,char1,battleData,"Mem's Support");
 
@@ -29100,7 +29077,6 @@ const turnLogic = {
 
                 updateBuff(battleData,char1,buffSheet);
                 char1.rmcCharHasMemSupport = true;
-                //TODO: for now we force char1 as the assumed target of mem's support, but remember to hook this up as a parameter for user defined conditions later
 
                 const hasMemo = char1.memospriteEventRef;
                 if (rank>=1 && hasMemo) {
@@ -29111,7 +29087,6 @@ const turnLogic = {
                 }
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
                 sourceTurn.battleValues.memIsEnhanced = false;
             },
             memsSupportExpired(battleData,expireParam) {
@@ -29412,7 +29387,7 @@ const turnLogic = {
                         ],
                     },
                     {
-                        "trigger": "ActionStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -29437,7 +29412,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "ActionStart",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -29445,7 +29420,7 @@ const turnLogic = {
 
                             const memExists = ownerTurn.rmcMemTURNEVENT?.isActive;
                             if (!memExists) {return;}
-                            if (sourceTurn.maxEnergy === 0) {
+                            if (sourceTurn.maxEnergy <= 0) {
                                 const e4Object = this.e4Object ??= {pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"}
                                 poke("rmcMemGainedCharge",battleData,e4Object);
                             }
@@ -29803,6 +29778,76 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Mem": {
+        logic(thisTurn,battleData) {
+            // let currentSP = battleData.skillPointCurrent;
+            // const minimum = currentSP>0;
+
+            // if (minimum && checkSkill(battleData,thisTurn)) {
+            //     const returnSkillCall = this.returnSkillCall;
+            //     return returnSkillCall;
+            // }
+
+            // return this.returnBasicCall;
+
+            const rmcTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
+            // const logicRef = turnLogic[rmcTurn.properName];
+            // const skillFunctions = logicRef.skillFunctions;
+
+            const isEnhanced = rmcTurn.battleValues.memIsEnhanced;
+
+            
+            
+
+            if (!isEnhanced) {
+                const returnSkillCall = this.returnSkillCall ??= {
+                    action: "MemoSkill", 
+                    isAttack: true,
+                    isAbility: true,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useFUATriggers: false,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    // eventTypeStart: "SkillStart",
+                    // eventTypeEnd: "SkillEnd",
+                    actionCall: turnLogic[rmcTurn.properName].skillFunctions.memBasicAttack, 
+                    target: "self",
+                    poolKey: null,//this.abilityTargetPools.Skill,
+                }
+                // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
+                return returnSkillCall;
+            }
+            else {
+                const returnBasicEnhCall = this.returnBasicEnhCall ??= {
+                    action: "MemoSkill", 
+                    isAttack: false,
+                    isAbility: true,
+                    isEnhanced: true,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useFUATriggers: false,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    // eventTypeStart: "BasicATKStart",
+                    // eventTypeEnd: "BasicATKEnd",
+                    actionCall: turnLogic[rmcTurn.properName].skillFunctions.memSkillAdvance, 
+                    target: null,
+                    poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,//this.abilityTargetPools.BasicATKEnh,
+                }
+                // skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);
+                returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
+                return returnBasicEnhCall;
+            }
+        },
+        preLogic(thisTurn,battleData) {},
+        "abilityTargetPools": {},
+        "skillFunctions": {},
+        "listeners": [],
+        "characterValues": {},
+        "buffNames": {},
+        "characterValuesBattle": {},
+    },
     "Aglaea": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
@@ -30080,7 +30125,7 @@ const turnLogic = {
 
                 actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
             },
-            garmentTurnAttack(battleData,memoTurn) {
+            garmentTurnAttack(battleData,target,memoTurn) {
                 // eventOwner: ownerTurn.name
                 const aggyTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const logicRef = turnLogic[aggyTurn.properName];
@@ -30108,12 +30153,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.garmentTurnAttackATKOBJECT;
 
-                // console.log(memoTurn)
-
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
-                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                 battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
-                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
             },
             aggyUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -31363,6 +31403,50 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Garmentmaker": {
+        logic(thisTurn,battleData) {
+            // let currentSP = battleData.skillPointCurrent;
+            // const minimum = currentSP>0;
+
+            // if (minimum && checkSkill(battleData,thisTurn)) {
+            //     const returnSkillCall = this.returnSkillCall;
+            //     return returnSkillCall;
+            // }
+
+            // return this.returnBasicCall;
+
+            // const aggyTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
+            // const logicRef = turnLogic[rmcTurn.properName];
+            // const skillFunctions = logicRef.skillFunctions;
+
+            // const isEnhanced = rmcTurn.battleValues.memIsEnhanced;
+
+            const returnSkillCall = this.returnSkillCall ??= {
+                action: "MemoSkill", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                properName: thisTurn.properName,
+                useFUATriggers: false,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "MemoSkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: turnLogic[battleData.nameBasedTurns[thisTurn.eventOwner].properName].skillFunctions.garmentTurnAttack, 
+                target: "self",
+                poolKey: null,//this.abilityTargetPools.Skill,
+            }
+            // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
+            return returnSkillCall;
+        },
+        preLogic(thisTurn,battleData) {},
+        "abilityTargetPools": {},
+        "skillFunctions": {},
+        "listeners": [],
+        "characterValues": {},
+        "buffNames": {},
+        "characterValuesBattle": {},
+    },
     "Evernight": {
         logic(thisTurn,battleData) {
             // const skillIsUp = thisTurn.evernightSkillIsActive;
@@ -31671,7 +31755,9 @@ const turnLogic = {
                     skillFunctions.eveyBasicAttack(battleData,memoTurn,evernightTurn);
                 }
             },
-            eveyBasicAttack(battleData,memoTurn,evernightTurn) {
+            eveyBasicAttack(battleData,target,memoTurn) {
+                const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+
                 const logicRef = turnLogic[evernightTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -31713,11 +31799,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.eveyTurnAttackATKOBJECT;
 
-                // console.log(memoTurn)
-
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
-                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
-
                 //trace HP consume
                 logicRef.skillFunctions.traceHPConsume(battleData,evernightTurn,memoTurn);
                 const memoria = evernightTurn.battleValues.memoria;
@@ -31725,10 +31806,11 @@ const turnLogic = {
                 ATKObject.bonusMultiplier = values[1] *  extraMulti;
 
                 battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
-                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
                 poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Remembrance, Whirling, Like Rain"});
             },
-            eveyEnhancedAttack(battleData,memoTurn,evernightTurn) {
+            eveyEnhancedAttack(battleData,target,memoTurn) {
+                const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+
                 const logicRef = turnLogic[evernightTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -31774,8 +31856,6 @@ const turnLogic = {
                 let ATKObject = ATKObjects.eveyTurnAttackEnhancedATKOBJECT;
                 const multipliers = ATKObject.multipliers;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot,isEnhanced:true, eventOverrideImage: memoTurn.eventImage});}
-                poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                 evernightTurn.memoriaIsReadyForAdvance = true;
 
                 //trace HP consume
@@ -31802,8 +31882,6 @@ const turnLogic = {
                     const flooredRefund = Math.floor(memoria * 0.30);
                     poke("EvernightGainMemoria",battleData,{pointsGained: flooredRefund,sourceString:"E6 Memoria Refund"});
                 }
-
-                poke("MemoSkillEnd",battleData,{sourceTurn:memoTurn});
             },
             eveyDeathFunction(battleData,deathTurn,deathParam,memoriaStacks) {
                 const ownerTurn = battleData.nameBasedTurns[deathTurn.eventOwner];
@@ -32239,7 +32317,6 @@ const turnLogic = {
                             const action = generalInfo.action;
                             if (action != "MemoSkill") {return;}//AbilityStart
 
-                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const energyToRegen = 5;
                             
@@ -32257,7 +32334,6 @@ const turnLogic = {
                             const action = generalInfo.action;
                             if (action != "Skill") {return;}//AbilityStart
 
-                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -32275,7 +32351,6 @@ const turnLogic = {
                             const action = generalInfo.action;
                             if (action != "BasicATK") {return;}//AbilityStart
 
-                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -32293,7 +32368,6 @@ const turnLogic = {
                             const action = generalInfo.action;
                             if (action != "Ultimate") {return;}//AbilityStart
 
-                            // poke("MemoSkillStart",battleData,{sourceTurn:memoTurn});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.properName != ownerTurn.properName) {return;}
@@ -32775,6 +32849,93 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Evey": {
+        logic(thisTurn,battleData) {
+            // let currentSP = battleData.skillPointCurrent;
+            // const minimum = currentSP>0;
+
+            // if (minimum && checkSkill(battleData,thisTurn)) {
+            //     const returnSkillCall = this.returnSkillCall;
+            //     return returnSkillCall;
+            // }
+
+            // return this.returnBasicCall;
+
+            const evernightTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
+            const valuesRef = evernightTurn.battleValues
+            const memoriaCheck = valuesRef.memoria;
+            // const logicRef = turnLogic[rmcTurn.properName];
+            // const skillFunctions = logicRef.skillFunctions;
+
+            // const isEnhanced = evernightTurn.battleValues.memIsEnhanced;
+
+
+            // const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+            // const logicRef = turnLogic[evernightTurn.properName];
+            // const valuesRef = evernightTurn.battleValues
+            // const skillFunctions = logicRef.skillFunctions;
+
+            // const memoriaCheck = valuesRef.memoria;
+
+            // if (memoriaCheck >= 16) {
+            //     skillFunctions.eveyEnhancedAttack(battleData,memoTurn,evernightTurn);
+            // }
+            // else {
+            //     skillFunctions.eveyBasicAttack(battleData,memoTurn,evernightTurn);
+            // }
+
+            
+            
+
+            if (memoriaCheck < 16) {
+                const returnSkillCall = this.returnSkillCall ??= {
+                    action: "MemoSkill", 
+                    isAttack: true,
+                    isAbility: true,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useFUATriggers: false,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    // eventTypeStart: "SkillStart",
+                    // eventTypeEnd: "SkillEnd",
+                    actionCall: turnLogic[evernightTurn.properName].skillFunctions.eveyBasicAttack, 
+                    target: "self",
+                    poolKey: null,//this.abilityTargetPools.Skill,
+                }
+                // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
+                return returnSkillCall;
+            }
+            else {
+                const returnBasicEnhCall = this.returnBasicEnhCall ??= {
+                    action: "MemoSkill", 
+                    isAttack: true,
+                    isAbility: true,
+                    isEnhanced: true,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useFUATriggers: false,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    // eventTypeStart: "BasicATKStart",
+                    // eventTypeEnd: "BasicATKEnd",
+                    actionCall: turnLogic[evernightTurn.properName].skillFunctions.eveyEnhancedAttack, 
+                    target: null,
+                    poolKey: null,//turnLogic[evernightTurn.properName].abilityTargetPools.MemoSkillEnh,//this.abilityTargetPools.BasicATKEnh,
+                }
+                // skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);
+                // returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
+                return returnBasicEnhCall;
+            }
+        },
+        preLogic(thisTurn,battleData) {},
+        "abilityTargetPools": {},
+        "skillFunctions": {},
+        "listeners": [],
+        "characterValues": {},
+        "buffNames": {},
+        "characterValuesBattle": {},
+    },
     "Hyacine": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -32982,12 +33143,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.icaTurnAttackATKOBJECT;
 
-                // console.log(memoTurn)
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "MemoSkillStart", name:memoTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot, eventOverrideImage: memoTurn.eventImage});}
-                
-                const exoTurnRef = {sourceTurn:memoTurn}
-                poke("MemoSkillStart",battleData,exoTurnRef);
-
                 const oldValue = hyacineTurn.hyacineBattleHealingTally;
                 ATKObject.scalarAmountOverride = oldValue;
 
@@ -32996,8 +33151,6 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hyacine heal tally", bodyText: `Heal tally (Hyacine): ${oldValue.toLocaleString()} --> ${hyacineTurn.hyacineBattleHealingTally.toLocaleString()}`});}
                 battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
-                // updateEnergy(battleData,skillRef.energyRegen,hyacineTurn);
-                poke("MemoSkillEnd",battleData,exoTurnRef);
             },
             addIcaToField(battleData,sourceTurn) {
                 // const eveyTurn = sourceTurn.everEveyTURNEVENT;
@@ -33916,7 +34069,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "ActionEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -33929,7 +34082,7 @@ const turnLogic = {
                         queueTag: "QueuedExtraTurn",
 
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.icaTurnAttack,
-                        action: "Extra Turn",
+                        action: "MemoSkill",
                         points: 0,
                         energyCost: null,
                         // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
@@ -33944,12 +34097,12 @@ const turnLogic = {
                         extraTurnHasChoice: false,
                         dontKeepNextWave: true,
                         isAttack: false,
-                        isAbility: false,
+                        isAbility: true,
                         useFUATriggers: false,
-                        useAnyTriggers: false,
-                        // eventTypeStartLOG: "ExtraTurnStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "MemoSkillStart",
+                        // eventTypeStart: "MemoSkillStart",
+                        // eventTypeEnd: "MemoSkillEnd",
                         
                         properName: icaTurn.properName,
                         sourceTurn: null,
@@ -34007,7 +34160,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "ActionEnd",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
@@ -34024,7 +34177,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartTurn",
+                "trigger": "StartTurnEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
@@ -34156,6 +34309,26 @@ const turnLogic = {
             "e6IcaOnField": "E6: O Sky, Heed My Plea",
             "techHP": "Day So Right, Life So Fine!",
         },
+        "characterValuesBattle": {},
+    },
+    "Little Ica": {
+        logic(thisTurn,battleData) {
+            // let currentSP = battleData.skillPointCurrent;
+            // const minimum = currentSP>0;
+
+            // if (minimum && checkSkill(battleData,thisTurn)) {
+            //     const returnSkillCall = this.returnSkillCall;
+            //     return returnSkillCall;
+            // }
+
+            // return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {},
+        "abilityTargetPools": {},
+        "skillFunctions": {},
+        "listeners": [],
+        "characterValues": {},
+        "buffNames": {},
         "characterValuesBattle": {},
     },
     //Preservation
@@ -40793,9 +40966,9 @@ const turnLogic = {
                         extraTurnHasChoice: false,
                         dontKeepNextWave: false,
                         isAttack: false,
-                        isAbility: false,
+                        isAbility: true,
                         useFUATriggers: false,
-                        useAnyTriggers: false,
+                        useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
                         // eventTypeStart: "ExtraTurnStart",
                         // eventTypeEnd: "ExtraTurnEnd",
@@ -42208,10 +42381,10 @@ const turnLogic = {
                                 decrementBuffs: false,
                                 extraTurnHasChoice: false,
                                 dontKeepNextWave: false,
-                                isAttack: false,
-                                isAbility: false,
+                                isAttack: true,
+                                isAbility: true,
                                 useFUATriggers: false,
-                                useAnyTriggers: false,
+                                useAnyTriggers: true,
                                 eventTypeStartLOG: "ElationSkillStart",
                                 // eventTypeStart: "ExtraTurnStart",
                                 // eventTypeEnd: "ExtraTurnEnd",

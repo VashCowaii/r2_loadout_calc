@@ -1222,8 +1222,10 @@ const sim = {
             
             if (isLoggyLogger) {logToBattle(battleData,{logType: "StartTurn", name:turnName, isEnemy: sourceTurn.isEnemy, position:sourceTurn.isEnemy ? enemyPositions.indexOf(sourceTurn) : null,positionCount:sourceTurn.isEnemy ? enemyPositions.length : null, isCharacter:true, AV: battleData.sumAV, turnRef: JSON.stringify(sourceTurn)});}
             // poke("StartTurn", battleData, {sourceTurn});
-            if (sourceTurn.isUniqueEvent) {
-                let isActualTurn = sourceTurn.isSummon || sourceTurn.isMemosprite;
+            
+            const isMemo = sourceTurn.isMemosprite;
+            if (sourceTurn.isUniqueEvent && !isMemo) {
+                let isActualTurn = sourceTurn.isSummon;
                 if (isActualTurn) {//things like firefly countdown or robin/aggy countdowns, don't function as actual turns, so we need to make sure they don't actually trigger turn-based events.
                     poke("StartTurn", battleData, exoTurnRef);
                     summaryTurns[turnName] += 1;
@@ -1245,9 +1247,11 @@ const sim = {
                 continue;
             }
             poke("StartTurn", battleData, exoTurnRef);
+            
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
             summaryTurns[turnName] += 1;
+            poke("StartTurnEnd", battleData, exoTurnRef);
 
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
@@ -1287,10 +1291,12 @@ const sim = {
             }
 
             poke("EndTurn", battleData, exoTurnRef);
+            
 
             const endTurnBuffs = sourceTurn.buffsEndTurn;
             if (canLoseBuffsThisTurn && endTurnBuffs.length) {expireControl(battleData,sourceTurn,endTurnBuffs);}
             
+            poke("EndTurnEnd", battleData, exoTurnRef);
             sourceTurn.actionAssigned = false;
             sourceTurn.turnState = false;
             sourceTurn.turnShouldEnd = false
@@ -1329,7 +1335,7 @@ const sim = {
                 const displayTypeStart = designatedAction.eventTypeStartLOG;
                 if (displayTypeStart) {
                     // logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
-                    logToBattle(battleData,{logType: displayTypeStart, name:designatedAction.properName, target:"N/A", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action});
+                    logToBattle(battleData,{logType: displayTypeStart, name:designatedAction.properName, target:"N/A", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action, isEnhanced: designatedAction.isEnhanced});
                 }
             }
 
@@ -1392,9 +1398,9 @@ const sim = {
 
             
 
-            poke("EnemyAttackStart",battleData,{sourceTurn},sourceTurn);
+            poke("AbilityStart",battleData,{sourceTurn},sourceTurn);
             designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);
-            poke("EnemyAttackEnd",battleData,{sourceTurn},sourceTurn);
+            poke("AbilityEnd",battleData,{sourceTurn},sourceTurn);
 
             // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
             //     turnEnded = true;
@@ -1516,7 +1522,7 @@ const sim = {
 
                         if (isLog) {
                             const displayTypeStart = currentFUA.eventTypeStartLOG;
-                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
+                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                         }
                         poke(typeStart,battleData,generalInfo);
                         currentFUA.actionCall(battleData,targetTurn,sourceTurn);
@@ -1654,7 +1660,7 @@ const sim = {
                     }
                     else {
                         if (isLog) {
-                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action});
+                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
                             // eventTypeStartLOG
                         }
                         const actionHasForcedPL = currentUltimate.elationForcedPunchline;
