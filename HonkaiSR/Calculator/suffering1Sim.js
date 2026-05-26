@@ -1333,6 +1333,7 @@ const sim = {
                 logToBattle(battleData,{logType: "ActionChosen", actionType: currentAction, on: designatedAction.target, actionCall: actionCall.name, source: charName});
 
                 const displayTypeStart = designatedAction.eventTypeStartLOG;
+                battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
                 if (displayTypeStart) {
                     // logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
                     logToBattle(battleData,{logType: displayTypeStart, name:designatedAction.properName, target:"N/A", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action, isEnhanced: designatedAction.isEnhanced});
@@ -1392,6 +1393,7 @@ const sim = {
             poke("ActionChosen", battleData, {actionType: designatedAction.action, actionCall: designatedAction.actionCall, sourceTurn},sourceTurn);
             if (isLog) {
                 logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
+                battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
 
                 // logToBattle(battleData,{logType: "EnemyAttackStart", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
                 logToBattle(battleData,{logType: "EnemyAttackStart", name:designatedAction.properName, target:"N/A", isEnemy: true, isCharacter: false, AV: battleData.sumAV, actionSlot:designatedAction.action});
@@ -1512,6 +1514,7 @@ const sim = {
                         if (isLog) {
                             const isEnhanced = currentFUA.isEnhanced;
                             logToBattle(battleData,{logType: "FUAStart",isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
+                            battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                         }
                         poke("FUAStart",battleData,currentFUA,sourceTurn);
                         currentFUA.actionCall(battleData,targetTurn,sourceTurn);
@@ -1524,6 +1527,7 @@ const sim = {
                         if (isLog) {
                             const displayTypeStart = currentFUA.eventTypeStartLOG;
                             logToBattle(battleData,{logType: displayTypeStart,isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                            battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                         }
                         const isAbility = currentFUA.isAbility;
                         if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
@@ -1621,7 +1625,10 @@ const sim = {
                     //     continue;
                     // }
 
-                    if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name : target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    if (isLog) {
+                        logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name : target, AV: currentAV, ultName: currentUltyFunction.name});
+                        battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
+                    }
                     // alliedPoolKeys
 
                     const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn) ?? currentUltimate.energyCost;
@@ -1663,6 +1670,7 @@ const sim = {
                     else {
                         if (isLog) {
                             logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
+                            battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
                             // eventTypeStartLOG
                         }
                         const actionHasForcedPL = currentUltimate.elationForcedPunchline;
