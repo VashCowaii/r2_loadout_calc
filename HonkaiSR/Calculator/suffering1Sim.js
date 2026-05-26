@@ -1369,22 +1369,7 @@ const sim = {
             // const typeEnd = designatedAction.eventTypeEnd;
 
             const isAbility = designatedAction.isAbility;
-            if (isAbility) {
-                poke("AbilityStart",battleData,designatedAction,sourceTurn);
-
-                
-                // if (poolKey) {
-                //     const isAlliedKey = alliedPoolKeys.has(poolKey);
-
-                //     if (isAlliedKey) {
-                //         // target
-                //         poke("TargetAlly",battleData,{targetType:null, sourceTurn, targetTurn:target, targetSkill:designatedAction.action},sourceTurn);
-                //         // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
-                //     }
-                // }
-
-                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
-            }
+            if (isAbility) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
             actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
             if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
@@ -1676,9 +1661,6 @@ const sim = {
                     else {
                         updateEnergy(battleData,-energyCost,sourceTurn,true,"Ultimate Cost");
                     }
-                    
-
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
 
                     poke("AbilityStart",battleData,currentUltimate,sourceTurn);
                     sourceTurn.ultsUsed++;

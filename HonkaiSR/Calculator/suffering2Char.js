@@ -6622,8 +6622,6 @@ const turnLogic = {
     
                 }
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot},sourceTurn);
-
                 if (e2) {
                     let buffSheet = ATKObjects.gallagherSkillHealEFFECTRESSHEET;
                     updateBuff(battleData,targetTurn,buffSheet);
@@ -7192,7 +7190,9 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                const targetResults = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget","BLAST");
+                returnSkillCall.target = targetResults[0];
+                returnSkillCall.subTarget = targetResults[1];
                 return returnSkillCall;
             }
 
@@ -7232,6 +7232,7 @@ const turnLogic = {
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -7309,9 +7310,6 @@ const turnLogic = {
                         actionTags,compositeCacheTag
                     }
                 }
-
-                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
-                poke("TargetAlly",battleData,{targetType:"Blast", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
                 let healObject = ATKObjects.huohuoSkillHealHealHEALOBJECT;
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
@@ -7514,8 +7512,6 @@ const turnLogic = {
                 //ATKObjects as an object is always started fresh between each battle since if the user changes something like an eidolon or a superimposition, we can't prebind a lot of diff things
                 //and they need to be reconstructed, in the case of an ultQueue object we continually assign sourceTurn bc the ultQueue is bound to the listener not ATKObjects
                 //but here since this is always bound to ATKObjects and that always starts fresh, sourceturn can just be defined once here and it will always be reset with ATKObjects anyways
-                
-                poke("TargetAlly",battleData,teamCallObject,sourceTurn);
 
                 //energy DOES come first before the ATK buff, which afaik doesn't matter right now but it probably will later, so keep it this way
                 for (let ally of charactersOnly) {
@@ -7841,12 +7837,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -7939,7 +7936,9 @@ const turnLogic = {
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
+            "E1": "Self",
         },
         "skillFunctions": {
             natashaBasic(battleData,target,sourceTurn) {
@@ -8040,8 +8039,6 @@ const turnLogic = {
                 }
                 const skillHOTSheet = ATKObjects.natashaSkillHealHOTSHEET;
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot},sourceTurn);
-
                 updateBuff(battleData,targetTurn,skillHOTSheet);
 
                 let healObject = ATKObjects.natashaSkillHealHEALOBJECT;
@@ -8119,7 +8116,6 @@ const turnLogic = {
                     }
                 }
 
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot},sourceTurn);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
@@ -8392,20 +8388,21 @@ const turnLogic = {
                                         isAbility: true,
                                         useAnyTriggers: true,
                                         eventTypeStartLOG: "GenericAbilityStart",
-                                        eventTypeStart: "GenericAbilityStart",
-                                        eventTypeEnd: "GenericAbilityEnd",
+                                        // eventTypeStart: "GenericAbilityStart",
+                                        // eventTypeEnd: "GenericAbilityEnd",
         
                                         properName: ownerTurn.properName,
                                         sourceTurn: null,
                                         // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
         
-                                        target: this.target,
-                                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                                        target: null,
+                                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.E1,
         
                                         elationForcedPunchline: null,
                                     }
             
                                     queueObject.sourceTurn = ownerTurn;
+                                    queueObject.target = [ownerTurn];
                                     queueInsertAbility(battleData,queueObject);
         
                                     removeListener(battleData,this,ownerTurn);
@@ -8582,12 +8579,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -8676,6 +8674,7 @@ const turnLogic = {
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -8754,8 +8753,6 @@ const turnLogic = {
                         actionTags,compositeCacheTag,
                     }
                 }
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot},sourceTurn);
 
                 logicRef.skillFunctions.lynxHPConversion(battleData,sourceTurn,targetTurn);
 
@@ -8905,8 +8902,6 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn: null, targetSkill:skillRef.slot},sourceTurn);
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
 
                 for (let ally of allyPositions) {
@@ -9187,12 +9182,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -9416,8 +9412,6 @@ const turnLogic = {
                     // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
                 }
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
-
                 if (rank >= 2) {
                     const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
                     const hpThreshold = 0.50;
@@ -9450,16 +9444,18 @@ const turnLogic = {
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
-            luochaQueuedSkillHeal(battleData,targetTurn,sourceTurn) {
+            // luochaQueuedSkillHeal(battleData,targetTurn,sourceTurn) {
+            luochaQueuedSkillHeal(battleData,queueObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
-                const healFunction = logicRef.skillFunctions.luochaSkillHeal;
+
+                const targetTurn = queueObject.target[0];
 
                 const hpRatioPrior = targetTurn.currentHP / targetTurn.maxHP;
                 const hpThreshold = 0.50;
                 const targetCanSkillHeal = targetTurn.currentHP > 0 && hpRatioPrior <= hpThreshold;
 
                 if (targetCanSkillHeal) {
-                    healFunction(battleData,[targetTurn],sourceTurn);
+                    return false;
                 }
                 else {
                     const isLoggyLogger = battleData.isLoggyLogger;
@@ -9479,7 +9475,8 @@ const turnLogic = {
                     }
 
                     if (newHPRatio <= hpThreshold) {
-                        healFunction(battleData,[newTarget],sourceTurn);
+                        queueObject.target = [newTarget];
+                        return false;
                     }
                     else {
                         if (isLoggyLogger) {
@@ -9489,6 +9486,7 @@ const turnLogic = {
 
                         valuesRef.isReadyToInjectSkill = true;
                         valuesRef.skillInjectCooldown = 0;
+                        return true;
                     }
                 }
             },
@@ -9970,7 +9968,7 @@ const turnLogic = {
                             priority: priorityList.ability.CharacterHealOthers,
                             queueTag: "QueuedInsert",
 
-                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaSkillHeal,
                             action: "Skill", 
                             points: 0,
                             energyCost: null,
@@ -9981,6 +9979,8 @@ const turnLogic = {
                             isTieBreaker: false,
                             isExtraTurn: false,
                             isInserted: true,
+                            abortCheck: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
+
                             skipEXDisplay: false,
                             allowUlts: false,
                             decrementBuffs: false,
@@ -9998,13 +9998,13 @@ const turnLogic = {
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: null,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
 
                             elationForcedPunchline: null,
                         }
 
                         queueObject.sourceTurn = ownerTurn;
-                        queueObject.target = sourceTurn;
+                        queueObject.target = [sourceTurn];
                         queueInsertAbility(battleData,queueObject);
                     }
                 },
@@ -10076,7 +10076,7 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
@@ -12570,10 +12570,6 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
-                    //trace gladius of conquest
-                    const listener2 = passiveListeners[1];
-                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
-
                     //talent ally atk listener for dot applications
 
                     //trace fiddle of pearls
@@ -12581,6 +12577,10 @@ const turnLogic = {
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     const listener4 = passiveListeners[3];
                     addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //trace gladius of conquest
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
                     //e1
                     if (rank >= 1) {
@@ -15545,7 +15545,7 @@ const turnLogic = {
             call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Ultimate": "Self",
         },
         "skillFunctions": {
             topazBasic(battleData,target,sourceTurn) {
@@ -16193,12 +16193,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -18199,8 +18200,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.tingyunSkillREF ??= ATKObjects.Skill["Soothing Melody"].variant1;
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 
                 let values = ATKObjects.tingyunSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 let baseATKTarget = targetTurn.statTable[ATKBase] * values[1];
@@ -18412,7 +18411,6 @@ const turnLogic = {
                     }
                 }
                 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 let buffSheet = ATKObjects.tingyunUltimateDMGSHEET;
                 updateBuff(battleData,targetTurn,buffSheet);
 
@@ -18789,6 +18787,7 @@ const turnLogic = {
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -18909,8 +18908,6 @@ const turnLogic = {
                 let e2 = rank >= 2;
                 let e6 = rank >= 6;
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
-
                 if (!ATKObjects.bronyaAdvanceSHEET) {
                     let values = ATKObjects.bronyaAdvanceREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     
@@ -18976,8 +18973,6 @@ const turnLogic = {
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.bronyaUltimateREF ??= ATKObjects.Ultimate["The Belobog March"].variant1;
-
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 //team wide buffs already cycle through the allyPositions array, in which case active memos will get targeted without needing targetChildEntities to be true
                 
                 let values = ATKObjects.bronyaUltimateREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -19041,12 +19036,8 @@ const turnLogic = {
                 }
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
-                for (let targetTurn of battleData.allyPositions) {
-                    buffSheet.target = targetTurn.properName;
-                    updateBuff(battleData,targetTurn,buffSheet)
-                }
+                updateBuffBatchTargets(battleData,battleData.allyPositions,buffSheet)
             },
         },
         "listeners": [
@@ -19317,12 +19308,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -19486,7 +19478,6 @@ const turnLogic = {
                 const rank = sourceTurn.rank;
                 const e1 = rank >= 1;
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: true},sourceTurn);
                 //TODO: add the cleanse that the skill does, mega fuckin low priority though
 
                 if (!ATKObjects.sundayAdvanceBUFFSHEET) {
@@ -19642,7 +19633,6 @@ const turnLogic = {
 
                 const allyTurns = battleData.nameBasedTurns;
                 const targetTurn = target[0];
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: true},sourceTurn);
                 
                 const maxEnergy = targetTurn.maxEnergy;
                 if (maxEnergy) {
@@ -19844,7 +19834,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                let attackEndings = battleData.battleListeners.TargetAlly ??= [];
+                let attackEndings = battleData.battleListeners.AbilityStart ??= [];
                 
                 const listenerToInejct = ATKObjects.techListener ??= logicRef.listenersToInjectLater.techniqueAllyTarget;
                 listenerToInejct.ownerTurn = sourceTurn;
@@ -20065,14 +20055,19 @@ const turnLogic = {
         },
         "listenersToInjectLater": {
             "techniqueAllyTarget": {
-                "trigger": "TargetAlly",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const poolKey = generalInfo.poolKey;
+                    if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
+
+                    const action = generalInfo.action;
+                    if (action != "Skill" && action != "Ultimate") {return;}
+
+
                     let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
                     // const dmgSlot = generalInfo.dmgSlot;
                     // if (dmgSlot != "Skill" && dmgSlot != "Talent") {return;}
-                    const targetTurn = generalInfo.targetTurn;
+                    const targetTurn = generalInfo.target[0];
 
                     // greatTableIndex
                     // greatTableKeys
@@ -20102,6 +20097,7 @@ const turnLogic = {
                     removeListener(battleData,this,ownerTurn);
                 },
                 "target": "self",
+                "isPersonal": true,
                 "listenerName": "Sunday Technique ability target listener",
                 "ownerTurn": {},
             }
@@ -20148,9 +20144,11 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.tribbieSkill, 
-                target: "team",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             call1.sourceTurn = thisTurn;
+            call1.target = [thisTurn];
             const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -20167,6 +20165,7 @@ const turnLogic = {
             call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
+            "Skill": "Self",
             "Ultimate": null,
         },
         "skillFunctions": {
@@ -20228,8 +20227,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.tribbieSkillREF ??= ATKObjects.Skill["Where'd the Gifts Go"].variant1;
                 let values = ATKObjects.tribbieSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
                 
                 if (!ATKObjects.tribbieSkillOWNERSHEET) {
@@ -21001,9 +20998,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.robinSkill, 
-                target: "self",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             call1.sourceTurn = thisTurn;
+            call1.target = [thisTurn];
+
             const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -21020,7 +21020,8 @@ const turnLogic = {
             call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Ultimate": "Self",
+            "Skill": "Self",
         },
         "skillFunctions": {
             robinBasic(battleData,target,sourceTurn) {
@@ -21082,8 +21083,6 @@ const turnLogic = {
                 // const ATKObjects = logicRef.ATKObjects;
                 let skillRef = ATKObjects.robinSkillREF ??= ATKObjects.Skill["Pinion's Aria"].variant1;
                 let values = ATKObjects.robinSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 //a weird one, but this does only target herself
 
                 
@@ -21165,8 +21164,6 @@ const turnLogic = {
                 // const ATKObjects = logicRef.ATKObjects;
                 let skillRef = ATKObjects.robinUltimateREF ??= ATKObjects.Ultimate["Vox Harmonique, Opus Cosmique"].variant1;
                 let values = ATKObjects.robinUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
                 const rank = sourceTurn.rank;
                 sourceTurn.battleValues.robinConcertoActive = true;
@@ -21549,12 +21546,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -21658,7 +21656,7 @@ const turnLogic = {
             call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Ultimate": "Allies (On-Field)",
         },
         "skillFunctions": {
             astaBasic(battleData,target,sourceTurn) {
@@ -21846,7 +21844,6 @@ const turnLogic = {
                     }
                 }
                 
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 let buffSheet = ATKObjects.astaUltimateSPDSHEET;
 
                 const allyPositions = battleData.allyPositions;
@@ -22239,6 +22236,7 @@ const turnLogic = {
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -22303,10 +22301,13 @@ const turnLogic = {
                 eventTypeStartLOG: "SkillStart",
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.ruanmeiSkill, 
-                target: "self",
+                actionCall: this.skillFunctions.ruanmeiSkill,
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             call1.sourceTurn = thisTurn;
+            call1.target = [thisTurn];
+
             const call2 = this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -22323,7 +22324,8 @@ const turnLogic = {
             call2.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Skill": "Self",
+            "Ultimate": "Allies (On-Field)",
         },
         "skillFunctions": {
             ruanmeiBasic(battleData,target,sourceTurn) {
@@ -22372,8 +22374,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.ruanmeiSkillREF ??= ATKObjects.Skill["String Sings Slow Swirls"].variant1;
                 let values = ATKObjects.ruanmeiSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
                 if (!ATKObjects.ruanmeiSkillOWNERSHEET) {
                     const rank = sourceTurn.rank;
@@ -22464,8 +22464,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.ruanmeiUltimateREF ??= ATKObjects.Ultimate["Petals to Stream, Repose in Dream"].variant1;
-
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
                 if (!ATKObjects.ruanmeiUltimateZoneCountdownSHEET) {
                     const buffNames = logicRef.buffNames;
@@ -22579,18 +22577,20 @@ const turnLogic = {
                     sourceTurn: null,
                     // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                    target: "Self",
-                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                    target: null,
+                    poolKey: turnLogic[sourceTurn.properName].abilityTargetPools.Skill,
 
                     elationForcedPunchline: null,
                 }
                 queueObject.sourceTurn = sourceTurn;
+                queueObject.target = [sourceTurn];
                 // let targetOverride = superGlobal.getStartingAttacker(battleData);
                 // queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
             },
-            ruanmeiReBreak(battleData,targetTurn,sourceTurn) {
+            ruanmeiReBreak(battleData,target,sourceTurn) {
                 // console.log(targetTurn)
+                const targetTurn = target[0];
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -22607,7 +22607,10 @@ const turnLogic = {
                 //we can just pass through true here on the break instance and that's fine
 
                 const genInfoNew = logicRef.ruanTalentBreakInstanceObject ??= {
-                    ATKObject: {actionTags: ["Break"]}
+                    ATKObject: {
+                        actionTags: ["Break"],
+                        compositeCacheTag: "Break" + "RuanReBreak"
+                    }
                 }
 
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,true,genInfoNew,breakMulti);
@@ -23001,7 +23004,7 @@ const turnLogic = {
                     }
 
                     queueObject.sourceTurn = ownerTurn;
-                    queueObject.target = sourceTurn;
+                    queueObject.target = [sourceTurn];
                     queueInsertAbility(battleData,queueObject);
                 },
                 "target": "self",
@@ -23063,12 +23066,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -23167,7 +23171,7 @@ const turnLogic = {
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
-            "Ultimate": null,
+            "Ultimate": "Allies (On-Field)",
         },
         "skillFunctions": {
             sparkleBasic(battleData,target,sourceTurn) {
@@ -23290,8 +23294,6 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 let rank = sourceTurn.rank;
                 let e6 = rank >= 6;
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 
                 let diver = ATKObjects.diverFunction ??= logicRef.skillFunctions.applyDreamdiver;
                 diver(battleData,targetTurn,sourceTurn,e6);
@@ -23371,7 +23373,6 @@ const turnLogic = {
                 let buffSheet = ATKObjects.sparkleUltimateCIPHERSHEET;
                 
                 let dreamDiverFound = false;
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
                 const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
                 for (let targetTurn of battleData.allyPositions) {
                     const currentBuffs = targetTurn.buffsObject;
@@ -23911,12 +23912,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
 
 
@@ -24963,9 +24965,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.bladeSkillInstance, 
-                target: "enemy",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             call1.sourceTurn = thisTurn;
+            call1.target = [thisTurn];
+
             const call2 = this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -24996,6 +25001,7 @@ const turnLogic = {
             call3.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
+            "Skill": "Self",
             "Ultimate": null,
         },
         "skillFunctions": {
@@ -26433,12 +26439,13 @@ const turnLogic = {
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                             target: this.target,
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
 
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
                         queueInsertAbility(battleData,queueObject);
                     }
                 },
@@ -26640,7 +26647,7 @@ const turnLogic = {
             call5.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Ultimate": "Self",
         },
         "skillFunctions": {
             fireflyBasicReg(battleData,target,sourceTurn) {
@@ -27431,12 +27438,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -28261,6 +28269,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = [summonUp ? thisTurn.rmcMemTURNEVENT : thisTurn];
                 return returnSkillCall;
             }
 
@@ -28279,10 +28288,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.rmcSkill, 
-                target: "self",
+                target: null,
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
+            // this.returnSkillCall.target = [thisTurn];
+
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -28315,7 +28326,7 @@ const turnLogic = {
             this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            // "Skill": "Allies (On-Field)",
+            "Skill": "Self",
             "BasicATK": "Enemies (On-Field)",
             "MemoSkillEnh": "Allies (On-Field)",
         },
@@ -28444,7 +28455,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.rmcSkillREF ??= ATKObjects.Skill["I Choose You!"].variant1;
                 let values = ATKObjects.rmcSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot},sourceTurn);
                 const summonUp = sourceTurn.battleValues.memIsActive;
 
                 if (summonUp) {
@@ -28724,7 +28734,6 @@ const turnLogic = {
                 const char1 = target[0];
                 poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"},null);
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
                 actionAdvance(1,char1,battleData,"Mem's Support");
 
                 const buffSheet = ATKObjects.rmcMemsSupportSHEET;
@@ -29507,6 +29516,10 @@ const turnLogic = {
             const isEnhanced = statCalls.supremeStanceActive;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
+                const returnSkillCall = this.returnSkillCall;
+                const garmentTurn = thisTurn.aggyGarmentTURNEVENT;
+                const garmentUp = garmentTurn.isActive;
+                returnSkillCall.target = [garmentUp ? garmentTurn : thisTurn];
                 return this.returnSkillCall;
             }
 
@@ -29528,9 +29541,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.aggySkill, 
-                target: "self",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
+            // this.returnSkillCall.target = [thisTurn];
+
             this.returnBasicEnhCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -29562,7 +29578,8 @@ const turnLogic = {
             this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Ultimate": "Self",
+            "Skill": "Self",
         },
         "skillFunctions": {
             aggyBasicReg(battleData,target,sourceTurn) {
@@ -29626,7 +29643,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.aggySkillREF ??= ATKObjects.Skill["Rise, Exalted Renown"].variant1;
                 let values = ATKObjects.aggySkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn:sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot},sourceTurn);
                 const summonUp = logicRef.characterValuesBattle.garmentIsActive;
 
                 if (summonUp) {
@@ -30922,12 +30938,13 @@ const turnLogic = {
                             sourceTurn: null,
                             // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                            target: this.target,
+                            target: null,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -31042,9 +31059,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.evernightSkill, 
-                target: "self",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
+
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -31062,6 +31082,7 @@ const turnLogic = {
         },
         "abilityTargetPools": {
             "Ultimate": null,
+            "Skill": "Self",
         },
         "skillFunctions": {
             evernightBasic(battleData,target,sourceTurn) {
@@ -31116,7 +31137,6 @@ const turnLogic = {
 
                 logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
                 battleActions.consumeHP(battleData,false,0.10,sourceTurn,sourceTurn,"Skill",false,true);
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot},sourceTurn);
                 //this is batshit crazy, but using the skill does count as an ally single target, for the sake of something like sacerdos
                 
                 const eveyTurn = sourceTurn.everEveyTURNEVENT;
@@ -32480,6 +32500,8 @@ const turnLogic = {
                 poolKey: this.abilityTargetPools.Skill,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = battleData.allyPositions;
+
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -32498,6 +32520,7 @@ const turnLogic = {
         },
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -32553,7 +32576,6 @@ const turnLogic = {
 
                 // logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
                 // battleActions.consumeHP(battleData,false,0.10,sourceTurn,sourceTurn,"Skill",false,true);
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot},sourceTurn);
                 
                 // const eveyTurn = sourceTurn.everEveyTURNEVENT;
                 const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
@@ -33752,6 +33774,7 @@ const turnLogic = {
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -33955,7 +33978,6 @@ const turnLogic = {
                 // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 //moved this into the actual shielf function, makes more sense there
                 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
 
                 const skillFunctions = logicRef.skillFunctions;
                 const shieldCall = skillFunctions.dhptSkillShield;
@@ -35123,9 +35145,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.aventurineSkill, 
-                target: "self",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = battleData.allyPositions;
+
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -35142,6 +35167,7 @@ const turnLogic = {
             this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
             "Ultimate": null,
         },
         "skillFunctions": {
@@ -35266,7 +35292,6 @@ const turnLogic = {
 
                 // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 //moved this into the actual shielf function, makes more sense there
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot},sourceTurn);
 
                 const shieldCall = ATKObjects.aventurineSkillShield ??= logicRef.skillFunctions.aventurineSkillShield;
                 //more than one thing can reference the skill shield itself, but may not be a skill cast
@@ -37794,9 +37819,12 @@ const turnLogic = {
                 // eventTypeStart: "SkillStart",
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.yaoSkill, 
-                target: "self",
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
+
             this.returnBasicCall ??= {
                 action: "BasicATK", 
                 isAttack: true,
@@ -37813,7 +37841,8 @@ const turnLogic = {
             this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
-            "Ultimate": null,
+            "Skill": "Self",
+            "Ultimate": "Allies (On-Field)",
         },
         "skillFunctions": {
             yaoguangBasic(battleData,target,sourceTurn) {
@@ -38053,9 +38082,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.yaoSkillREF ??= ATKObjects.Skill["Decalight Unveils All"].variant1;
                 let values = ATKObjects.yaoSkillREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 const rank = sourceTurn.rank;
-
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
-
                 
                 if (!ATKObjects.yaoSkillOWNERSHEET) {
                     const logicRef = turnLogic[characterName];
@@ -38230,8 +38256,6 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.yaoUltimatePENSHEET;
 
-                poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
-
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"Yao Guang Ultimate");
 
                 const allyPositions = battleData.allyPositions;
@@ -38336,12 +38360,13 @@ const turnLogic = {
                     sourceTurn: null,
                     // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                    target: "Self",
-                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                    target: null,
+                    poolKey: turnLogic[characterName].abilityTargetPools.Skill,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
 
                     elationForcedPunchline: null,
                 }
                 queueObject.sourceTurn = sourceTurn;
+                queueObject.target = [sourceTurn];
                 // let targetOverride = superGlobal.getStartingAttacker(battleData);
                 // queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
@@ -38793,6 +38818,7 @@ const turnLogic = {
                             elationForcedPunchline: null,
                         }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -40376,8 +40402,6 @@ const turnLogic = {
                     }
                 }
                 let buffSheet = ATKObjects.emcUltimateCRITDMGSHEET;
-                
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
 
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"EMC Ultimate");
 

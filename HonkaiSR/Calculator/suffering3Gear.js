@@ -5325,79 +5325,54 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "TargetAlly",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownerSlot = sourceTurn.name;
-                    if (!ownersSlots[ownerSlot]) {return;}//abort non-owners
-                    let targetTurn = generalInfo.targetTurn;
-                    //abort non-ultimate casts, and abort ults that target the self. remember that target turn doesn't always exist if it's a team-wide targeting
-                    //but the fact that target ally was poked at all is enough to say a targeting happened
-                    if (generalInfo.targetSkill != "Ultimate" || (targetTurn && targetTurn.properName === sourceTurn.properName)) {return;}//needs to be on an ally, can't be on self
-
-                    const logicRef = turnLogic[sourceTurn.properName];
-                    const quickRef = logicRef.characterValuesBattle;
-
-                    quickRef.battleIsntOverUltyCount = (quickRef.battleIsntOverUltyCount ?? 2) + 1;
-                    //if the character never used it yet, we start them at the point that the sp regen can happen anyways
-                    //then after that it is business as usual
-                    if (quickRef.battleIsntOverUltyCount === 3) {
-                        quickRef.battleIsntOverUltyCount = 1;
-                        let lcNameRef = "But the Battle Isn't Over";
-                        updateSkillPoints(battleData,1,sourceTurn,false,lcNameRef);
-                    }
-                },
-                "target": "self",
-                "listenerName": "But the Battle Isn't Over SP Regen controller",
-                "owners": []
-            },
-            {
                 "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
-                    if (action != "Skill") {return;}
+                    if (action != "Skill" && action != "Ultimate") {return;}
 
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    // let lcNameRef = "But the Battle Isn't Over";
                     let sourceTurn = generalInfo.sourceTurn;
 
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
+                    if (action === "Ultimate") {
+                        const poolKey = generalInfo.poolKey;
+                        if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
 
-                    const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
-                    if (!nextAllyTurn) {return;}
-
-                    if (!sourceTurn.battleIsntOverSkillEndSHEET) {
-                        let lcNameRef = "But the Battle Isn't Over";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let values = rankParams[1];
-
-                        sourceTurn.battleIsntOverSkillEndSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: values,
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
-                            "durationInTurn": 1,
-                            "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn"
+                        sourceTurn.battleIsntOverUltyCount = (sourceTurn.battleIsntOverUltyCount ?? 2) + 1;
+                        //if the character never used it yet, we start them at the point that the sp regen can happen anyways
+                        //then after that it is business as usual
+                        if (sourceTurn.battleIsntOverUltyCount === 3) {
+                            sourceTurn.battleIsntOverUltyCount = 1;
+                            updateSkillPoints(battleData,1,sourceTurn,false,"But the Battle Isn't Over");
                         }
                     }
+                    else {
+                        const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
+                        if (!nextAllyTurn) {return;}
 
-                    let buffSheet = sourceTurn.battleIsntOverSkillEndSHEET
-                    updateBuff(battleData,nextAllyTurn,buffSheet);
+                        if (!sourceTurn.battleIsntOverSkillEndSHEET) {
+                            let lcNameRef = "But the Battle Isn't Over";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+                            let values = rankParams[1];
 
-                    //confirmed it works like this by using the skill on a character when souldragon from dan was next, and archer was after souldragon.
-                    //the moment the skill ended, archer got the buff bc souldragon was not a valid entity for buffing.
+                            sourceTurn.battleIsntOverSkillEndSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: values,
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
+                                "durationInTurn": 1,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+
+                        let buffSheet = sourceTurn.battleIsntOverSkillEndSHEET
+                        updateBuff(battleData,nextAllyTurn,buffSheet);
+                    }
                 },
                 "target": "self",
                 "listenerName": "But the Battle Isn't Over buff prep controller",
@@ -5454,81 +5429,86 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "TargetAlly",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownerSlot = sourceTurn.name;
-                    const ownerRank = ownersSlots[ownerSlot];
-                    if (!ownerRank) {return;}//abort non-owners
-                    let targetTurn = generalInfo.targetTurn;
-                    const skillType = generalInfo.targetSkill;
-                    const skillCheck = skillType === "Ultimate" || skillType === "Skill";
-                    const targetType = generalInfo.targetType;
-                    if (!targetTurn || !skillCheck || targetType != "Single") {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
-
-                    if (!sourceTurn.groundedAscentHymnSHEET) {
-                        let lcNameRef = "A Grounded Ascent";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        sourceTurn.groundedAscentHymnPARAMS = rankParams;
-                        let values = rankParams[1];
-                        // greatTableIndex
-                        // greatTableKeys
-                        sourceTurn.groundedAscentHymnSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: values,
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
-                            "durationInTurn": 4,
-                            "duration": 3,//does this count as applied within own turn or applied before designating the turn as next?
-                            "AVApplied": 0,
-                            "maxStacks": 3,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "removeOnDeath": true,
-                        }
-                    }
-                    const values = sourceTurn.groundedAscentHymnPARAMS;
-                    const buffSheet = sourceTurn.groundedAscentHymnSHEET;
-
-                    updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
-
-
-                    sourceTurn.groundedAscentTargetStacks ??= 0;
-                    sourceTurn.groundedAscentTargetStacks += 1;
-                    if (sourceTurn.groundedAscentTargetStacks === 2) {
-                        sourceTurn.groundedAscentTargetStacks = 0;
-                        updateSkillPoints(battleData,1,sourceTurn,false,"A Grounded Ascent - Departing Anew");
-                        //for now assume that either or on skill/ulty will stack this
-                        //it DOES actually work that way, thankfully
-                    }
-
-
-
-                    const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
-                    const hasMemosprite = targetTurn.activeMemosprites;
-                    const memospriteEventRef = targetTurn.memospriteEventRef;
-                    const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
+                    const action = generalInfo.action;
+                    if (action != "Skill" && action != "Ultimate") {return}
                     
-                    const ownerFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
-                    // if (!memoTurn && ownerFinished) {return;}
-
-                    const targetChildEntities = generalInfo.targetChildEntities;
-                    if (targetChildEntities && !memoTurn) {
-                        if (ownerFinished) {return;}
-                        updateBuff(battleData,targetTurn,buffSheet);
+                    let sourceTurn = generalInfo.sourceTurn;
+                    const poolKey = generalInfo.poolKey;
+                    if (!alliedPoolKeys.has(poolKey)) {
+                        //kill the SP counter if we ever have a skill or ult touching an enemy instead of an ally with targeting
+                        sourceTurn.groundedAscentTargetStacks = 0;
                     }
                     else {
-                        if (!ownerFinished) {updateBuff(battleData,targetTurn,buffSheet);}
-                        if (targetChildEntities) {
-                            const buffCheck = memoTurn.buffsObject[buffSheet.buffName];
-                            const memoFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
-                            if (!memoFinished) {updateBuff(battleData,memoTurn,buffSheet);}
+                        const targets = generalInfo.target;
+                        const subTarget = generalInfo.subTarget;
+                        if (targets.length + (subTarget?.length ?? 0) > 1) {return};
+
+                        const targetTurn = targets[0];
+
+                        if (!sourceTurn.groundedAscentHymnSHEET) {
+                            let lcNameRef = "A Grounded Ascent";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerSlot = sourceTurn.name;
+                            let ownersSlots = this.ownersSlots;
+                            const ownerRank = ownersSlots[ownerSlot];
+                            let rankParams = lcPathing[ownerRank-1];
+                            sourceTurn.groundedAscentHymnPARAMS = rankParams;
+                            let values = rankParams[1];
+                            // greatTableIndex
+                            // greatTableKeys
+                            sourceTurn.groundedAscentHymnSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: values,
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
+                                "durationInTurn": 4,
+                                "duration": 3,//does this count as applied within own turn or applied before designating the turn as next?
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                "removeOnDeath": true,
+                            }
+                        }
+                        const values = sourceTurn.groundedAscentHymnPARAMS;
+                        const buffSheet = sourceTurn.groundedAscentHymnSHEET;
+
+                        updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
+
+
+                        sourceTurn.groundedAscentTargetStacks ??= 0;
+                        sourceTurn.groundedAscentTargetStacks += 1;
+                        if (sourceTurn.groundedAscentTargetStacks === 2) {
+                            sourceTurn.groundedAscentTargetStacks = 0;
+                            updateSkillPoints(battleData,1,sourceTurn,false,"A Grounded Ascent - Departing Anew");
+                            //for now assume that either or on skill/ulty will stack this
+                            //it DOES actually work that way, thankfully
+                        }
+
+                        const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                        const hasMemosprite = targetTurn.activeMemosprites;
+                        const memospriteEventRef = targetTurn.memospriteEventRef;
+                        const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
+                        
+                        const ownerFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
+                        // if (!memoTurn && ownerFinished) {return;}
+
+                        const targetChildEntities = sourceTurn.properName === "Sunday";
+                        if (targetChildEntities && !memoTurn) {
+                            if (ownerFinished) {return;}
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        }
+                        else {
+                            if (!ownerFinished) {updateBuff(battleData,targetTurn,buffSheet);}
+                            if (targetChildEntities) {
+                                const buffCheck = memoTurn.buffsObject[buffSheet.buffName];
+                                const memoFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
+                                if (!memoFinished) {updateBuff(battleData,memoTurn,buffSheet);}
+                            }
                         }
                     }
                 },
@@ -7399,8 +7379,10 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "TargetAlly",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const poolKey = generalInfo.poolKey;
+                    if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
                     // let ownersSlots = this.ownersSlots;
                     // let sourceTurn = generalInfo.sourceTurn;
 
@@ -8225,20 +8207,17 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "TargetAlly",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const poolKey = generalInfo.poolKey;
+                    if (!alliedPoolKeys.has(poolKey) || generalInfo.action != "Ultimate") {return;}//preempt nonally targeting instances
+
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
                     let ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}//then abort non-owners
 
-                    // let targetTurn = generalInfo.targetTurn;
-                    const skillType = generalInfo.targetSkill;
-                    const skillCheck = skillType === "Ultimate";
-                    // const targetType = generalInfo.targetType;
-                    // if (!targetTurn || !skillCheck || targetType != "Single") {return;}
-                    if (!skillCheck) {return;}
 
                     const updateFortune = this.shortRef ??= turnLogicLightcones["When She Decided to See"].skillFunctions.updateFortune;
                     updateFortune(battleData,sourceTurn,ownerRank);
@@ -8437,8 +8416,18 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "TargetAlly",
+                "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
+                    const poolKey = generalInfo.poolKey;
+                    if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
+
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}
+
+                    const targets = generalInfo.target;
+                    const subTarget = generalInfo.subTarget;
+                    if (targets.length + (subTarget?.length ?? 0) > 1 || targets[0].properName != sourceTurn.properName) {return;}
+
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -8448,13 +8437,6 @@ const turnLogicLightcones = {
                     let ownerSlot = sourceTurn.name;
                     const ownerRank = ownersSlots[ownerSlot];
                     if (!ownerRank) {return;}//abort non-owners
-                    let targetTurn = generalInfo.targetTurn;
-                    const skillType = generalInfo.targetSkill;
-                    const skillCheck = skillType === "Ultimate";
-                    const targetType = generalInfo.targetType;
-                    if (!targetTurn || !skillCheck || targetType != "Single") {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
-                    if (targetTurn.properName != sourceTurn.properName) {return;}
-                    //the lc requires you to target YOURSELF, otherwise this proc flops.
 
                     if (!sourceTurn.lcCosmicCityPLGainValue) {
                         let lcNameRef = "Welcome to the Cosmic City";
@@ -8471,7 +8453,7 @@ const turnLogicLightcones = {
                 "owners": [],
             },
             {
-                "trigger": "AbilityStart",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
                     const action = generalInfo.action;
                     if (action != "BasicATK") {return;}
@@ -8501,8 +8483,18 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "TargetAlly",
+                "trigger": "AbilityEnd",
                 condition(battleData,generalInfo) {
+                    const poolKey = generalInfo.poolKey;
+                    if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
+
+                    const action = generalInfo.action;
+                    if (action != "Skill" && action != "Ultimate") {return;}
+
+                    const targets = generalInfo.target;
+                    if (targets.length > 1) {return}
+
+
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -8510,12 +8502,7 @@ const turnLogicLightcones = {
                     let ownerSlot = sourceTurn.name;
                     const ownerRank = ownersSlots[ownerSlot];
                     if (!ownerRank) {return;}//abort non-owners
-                    let targetTurn = generalInfo.targetTurn;
-                    const skillType = generalInfo.targetSkill;
-                    const skillCheck = skillType === "Ultimate" || skillType === "Skill";
-                    const targetType = generalInfo.targetType;
-                    if (!targetTurn || !skillCheck || targetType != "Single") {return;}//target turn SHOULD be left null on team-wide targets, so in theory we should be able to just check if a target turn is passed or not to check if it's single or no
-
+                    let targetTurn = targets[0];
                     if (!sourceTurn.lcElationBrimmingELATIONSHEET) {
                         let lcNameRef = "Elation Brimming With Blessings";
                         let lcPathing = lightcones[lcNameRef].params;
@@ -8970,8 +8957,6 @@ const turnLogicLightcones = {
 }
 
 
-
-//TODO: TargetAlly rework
 const turnLogicRelics = {
     //BODY SETS
     "Genius of Brilliant Stars": {//REDONE
@@ -9147,18 +9132,24 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "TargetAlly",
+                            "trigger": "AbilityStart",
                             condition(battleData,generalInfo) {
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
                                 // if (targetTurn.properName != sourceTurn.properName) {return;}
-        
-                                let isNotSingle = generalInfo.targetType != "Single";
-                                const skillType = generalInfo.targetSkill;
-                                let isNotEligibleSkill = skillType != "Skill" && skillType != "Ultimate";
-                                if (isNotSingle || isNotEligibleSkill) {return;}
+
+                                const poolKey = generalInfo.poolKey;
+                                if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
+
+                                const action = generalInfo.action;
+                                const actionInvalid = action != "Ultimate" && action != "Skill";
+
+                                let target = generalInfo.target;
+                                const subTarget = generalInfo.subTarget;
+                                let isNotSingle = target.length + (subTarget?.length ?? 0) > 1;//TODO: set up subtargeting on sunday later, and when I do so then change the condition here to be in line with the reader
+                                if (isNotSingle || actionInvalid) {return;}
                                 //we skip team-wide ulty or skill buffs, and then avoid non-ulty and non-skills
-                                let targetTurn = generalInfo.targetTurn;
+                                targetTurn = target[0];
         
                                 if (!this.sacerdosCRITDMGSHEET) {
                                     let relicNameRef = "Sacerdos\' Relived Ordeal";
@@ -9189,7 +9180,7 @@ const turnLogicRelics = {
                                 buffSheet.sourceOwner = sourceTurn.properName;
                                 
                                 updateBuff(battleData,targetTurn,buffSheet);
-                                const targetChildEntities = generalInfo.targetChildEntities;
+                                const targetChildEntities = sourceTurn.properName === "Sunday";
                                 if (targetChildEntities) {
                                     const hasMemosprite = targetTurn.activeMemosprites;
                                     const memospriteEventRef = targetTurn.memospriteEventRef;
@@ -9305,45 +9296,30 @@ const turnLogicRelics = {
                     ]
                 },
                 {
-                    "trigger": "TargetAlly",//is global
+                    "trigger": "AbilityStart",//is global
                     condition(battleData,generalInfo) {
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (sourceTurn.isEnemy) {return;}//needs to be ally targeting
+
+                        const poolKey = generalInfo.poolKey;
+                        if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
+
+                        const targets = generalInfo.target;
                         let ownersSlots = this.ownersSlots;
-                        let targetTurn = generalInfo.targetTurn;
-                        //TODO: probably a better way to handle this, later
+                        let giveHelp = this.giveHelp ??= turnLogicRelics["Wavestrider Captain"]["4pc"].skillFunctions.giveHelp;
 
-                        // targetTurn
+                        for (let targetTurn of targets) {
+                            const targetIsOwner = ownersSlots[targetTurn.name];
 
-                        if (targetTurn && generalInfo.targetType === "Single") {
-                            let ownerRank = ownersSlots[targetTurn.name];//setAmount
-                            if (!ownerRank) {return;}//if we are targeting one ally, and the ally doesn't own the 4pc set, then abort
-                            let relicNameRef = "Wavestrider Captain";
-                            let pcRef = "4pc";
-                            let giveHelp = this.giveHelp ??= turnLogicRelics[relicNameRef][pcRef].skillFunctions.giveHelp;
-                            giveHelp(battleData,targetTurn);
+                            if (targetIsOwner && targetTurn.properName != sourceTurn.properName) {giveHelp(battleData,targetTurn);}
                         }
-                        else if (generalInfo.targetType === "Blast") {
-                            const positionArray = battleData.allyPositions;
-                            const indexer = positionArray.indexOf(targetTurn);
-
-                            let fullBlastArray = [targetTurn];
-
-                            if (positionArray[indexer-1]) {fullBlastArray.push(positionArray[indexer-1])}
-                            if (positionArray[indexer+1]) {fullBlastArray.push(positionArray[indexer+1])}
-
-                            for (let ownerSlot of fullBlastArray) {
-                                giveHelp(battleData,ownerSlot);
+                        const subTarget = generalInfo.subTarget;
+                        if (subTarget) {
+                            for (let targetTurn of subTarget) {
+                                const targetIsOwner = ownersSlots[targetTurn.name];
+    
+                                if (targetIsOwner && targetTurn.properName != sourceTurn.properName) {giveHelp(battleData,targetTurn);}
                             }
-                        }
-                        else {
-                            let relicNameRef = "Wavestrider Captain";
-                            let pcRef = "4pc";
-                            let giveHelp = this.giveHelp ??= turnLogicRelics[relicNameRef][pcRef].skillFunctions.giveHelp;
-                            const namedTurns = battleData.nameBasedTurns;
-                            for (let ownerSlot in ownersSlots) {
-                                let currentOwner = namedTurns[ownerSlot];
-                                giveHelp(battleData,currentOwner);
-                            }
-                            //in the scenario that it was a team-wide targeting, we apply help to every owner
                         }
                     },
                     "target": "self",
@@ -9500,16 +9476,16 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "TargetAlly",
+                            "trigger": "AbilityStart",
                             condition(battleData,generalInfo) {
+                                const poolKey = generalInfo.poolKey;
+                                if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
                                 // const targetTurn = generalInfo.targetTurn;
                                 // if (sourceTurn.properName != targetTurn.properName) {return}
-        
-                                let wasTeamTarget = generalInfo.targetType === "Single" || generalInfo.targetType === "Team" || generalInfo.targetType === "Blast";
-                                let isNotEligibleSkill = generalInfo.targetSkill != "Ultimate";
-                                if (!wasTeamTarget || isNotEligibleSkill) {return;}
+
+                                if (generalInfo.action != "Ultimate") {return;}
                                 //skip non ultimate, non ally targeting skills
         
                                 if (!this.watchmatcherBREAKSHEET) {
@@ -10069,14 +10045,14 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "TargetAlly",//later target ally events will be reworked, will revisit this one at that time but not yet
+                            "trigger": "AbilityStart",
                             condition(battleData,generalInfo) {
+                                const poolKey = generalInfo.poolKey;
+                                if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
                                 // let ownerRef = this.owners;
-                                let sourceTurn = generalInfo.sourceTurn;
+                                if (generalInfo.action != "Ultimate") {return;}//needs to be from an ulty, who it targets is irrelevant bc if TargetAlly event is called it did target at least one
         
-                                const skillType = generalInfo.targetSkill;
-                                if (skillType != "Ultimate") {return;}//needs to be from an ulty, who it targets is irrelevant bc if TargetAlly event is called it did target at least one
-        
+                                const sourceTurn = generalInfo.sourceTurn;
                                 if (!this.traversingHackerspaceSPDSHEET) {
                                     let relicNameRef = "Messenger Traversing Hackerspace";
                                     let pcRef = "4pc";
@@ -10099,7 +10075,7 @@ const turnLogicRelics = {
                                     }
                                 }
                                 let buffSheet = this.traversingHackerspaceSPDSHEET;
-                                buffSheet.sourceOwner = sourceTurn;
+                                buffSheet.sourceOwner = sourceTurn.properName;
                                 const allyPositions = battleData.allyPositions;
                                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
                             },
