@@ -1329,14 +1329,32 @@ const sim = {
             //so that way cerydra can call the skill function BEFORE the character using it does it themselves. Some horse shit if I've ever seen it, but should be ok in the long-run prayge.
             poke("ActionChosen", battleData, designatedAction, sourceTurn);
             // poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
+
+
+            const poolKey = designatedAction.poolKey;
+            const target = designatedAction.target;
             if (isLog) {
-                logToBattle(battleData,{logType: "ActionChosen", actionType: currentAction, on: designatedAction.target, actionCall: actionCall.name, source: charName});
+
+
+
+
+                logToBattle(battleData,{
+                    logType: "ActionChosen",
+                    actionType: currentAction,
+                    on: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                    actionCall: actionCall.name,
+                    source: charName
+                });
 
                 const displayTypeStart = designatedAction.eventTypeStartLOG;
                 battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
                 if (displayTypeStart) {
                     // logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
-                    logToBattle(battleData,{logType: displayTypeStart, name:designatedAction.properName, target:"N/A", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action, isEnhanced: designatedAction.isEnhanced});
+                    logToBattle(battleData,{
+                        logType: displayTypeStart,
+                        name:designatedAction.properName,
+                        target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                        isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action, isEnhanced: designatedAction.isEnhanced});
                 }
             }
 
@@ -1351,7 +1369,22 @@ const sim = {
             // const typeEnd = designatedAction.eventTypeEnd;
 
             const isAbility = designatedAction.isAbility;
-            if (isAbility) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
+            if (isAbility) {
+                poke("AbilityStart",battleData,designatedAction,sourceTurn);
+
+                
+                // if (poolKey) {
+                //     const isAlliedKey = alliedPoolKeys.has(poolKey);
+
+                //     if (isAlliedKey) {
+                //         // target
+                //         poke("TargetAlly",battleData,{targetType:null, sourceTurn, targetTurn:target, targetSkill:designatedAction.action},sourceTurn);
+                //         // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
+                //     }
+                // }
+
+                // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
+            }
             actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
             if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
@@ -1498,6 +1531,10 @@ const sim = {
 
                 const useAnyTrigger = currentFUA.useAnyTriggers;
 
+
+                const shouldAbort = currentFUA.abortCheck?.(battleData,currentFUA,sourceTurn);
+                if (shouldAbort) {continue;}
+
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
 
@@ -1510,9 +1547,16 @@ const sim = {
                     // const typeStart = currentFUA.eventTypeStart;
                     // const typeEnd = currentFUA.eventTypeEnd;
 
+                    const poolKey = currentFUA.poolKey;
+                    const target = currentFUA.target;
                     if (isLog) {
                         const displayTypeStart = currentFUA.eventTypeStartLOG;
-                        logToBattle(battleData,{logType: displayTypeStart,isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                        logToBattle(battleData,{
+                            logType: displayTypeStart,
+                            isInsertedAbility: true,
+                            name:characterName,
+                            target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                            AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                         battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                     }
                     const isAbility = currentFUA.isAbility;
@@ -1587,7 +1631,7 @@ const sim = {
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
                 // let actionName = currentUltimate.name;
-                let target = currentUltimate.target;
+                // let target = currentUltimate.target;
                 const isAttack = currentUltimate.isAttack;
                 const queueTag = currentUltimate.queueTag;
                 // let generalInfo = {sourceTurn,target,isAttack,queueTag};
@@ -1597,6 +1641,8 @@ const sim = {
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
                 const currentUltyFunction = currentUltimate.actionCall;
+                const poolKey = currentUltimate.poolKey;
+                const target = currentUltimate.target;
 
                 if (!isExtraTurn) {
                     // totalUltsQueued: 0,
@@ -1611,7 +1657,11 @@ const sim = {
                     // }
 
                     if (isLog) {
-                        logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name : target, AV: currentAV, ultName: currentUltyFunction.name});
+                        logToBattle(battleData,{
+                            logType: "UltimateStart",
+                            name:characterName,
+                            target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                            AV: currentAV, ultName: currentUltyFunction.name});
                         battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
                     }
                     // alliedPoolKeys
@@ -1654,7 +1704,9 @@ const sim = {
                     }
                     else {
                         if (isLog) {
-                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
+                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName,
+                                target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                                isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
                             battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
                             // eventTypeStartLOG
                         }

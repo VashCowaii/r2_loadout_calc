@@ -56,6 +56,14 @@
         <li>Fixed an issue where World Remaking Deliverer could fail to remove a wearer's team buff on use of the next basic/skill.</li>
         <li>Fixed an issue where Longevous Disciple could fail to apply its buff in some cases.</li>
         <li>Fixed an issue where Aglaea's E2 could clear its shred stacks if FUA/Inserted actions from other entities took place, when they don't count to clear it.</li>
+        <li>Fixed an issue where Wavestrider could fail to give Help stacks on blast targeting abilities.</li>
+        <li>Fixed an issue where the following abilities were not counting for things that read ally targeting instances:
+            <ul>
+                <li>Hyacine Ultimate</li>
+                <li>Aglaea Ultimate</li>
+                <li>Bronya Technique(this was actually one where I had it acting as a targeting, but it shouldn't)</li>
+            </ul>
+        </li>
 
         <h4>Optimization</h4>
         <li>Slight tweaks the following handlers to eek out more performance across billions of loops:
