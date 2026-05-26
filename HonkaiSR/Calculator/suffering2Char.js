@@ -6910,7 +6910,6 @@ const turnLogic = {
                 const ATKObject = ATKObjects.gallagherTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
                 let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
@@ -6920,7 +6919,6 @@ const turnLogic = {
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -7557,7 +7555,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.huohuoTechREF ??= ATKObjects.Technique["Fiend: Impeachment of Evil"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 // turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity(battleData,sourceTurn);
                 if (!ATKObjects.huohuoTechBUFFSHEET) {
@@ -7583,7 +7580,6 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -8201,7 +8197,6 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.natashaTechWEAKENSHEET;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
                 // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
@@ -8214,9 +8209,7 @@ const turnLogic = {
 
 
                 const enemyPositions = battleData.enemyPositions;
-                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet)
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
             },
             natashaE1InsertHeal(battleData,targetTurn,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -8950,15 +8943,11 @@ const turnLogic = {
                 let skillRef = ATKObjects.lynxTechniqueREF ??= ATKObjects.Technique["Chocolate Energy Bar"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const allyPositions = battleData.allyPositions;
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
-
                 updateBuffBatchTargets(battleData,allyPositions,talentHealSheet);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [//skillHOT
@@ -9720,12 +9709,10 @@ const turnLogic = {
                 let skillRef = ATKObjects.luochaTechniqueREF ??= ATKObjects.Technique["Mercy of a Fool"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 poke("luochaAbyssGained",battleData,{pointsGained: 2,sourceString:"Luocha Technique"});
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -10608,9 +10595,7 @@ const turnLogic = {
                 const ATKObject = ATKObjects.swTechATKObject
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             swE4DMG(battleData,generalInfo,allyTurn,allTargetsArray) {
                 const logicRef = turnLogic[allyTurn.properName];
@@ -11501,9 +11486,7 @@ const turnLogic = {
                 const ATKObject = ATKObjects.kafkaTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -12605,7 +12588,6 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const enemyTurns = battleData.enemyPositions;
                 const hysilensTalentDOT = ATKObjects.hysilensTalentDOT ??= turnLogic[characterName].skillFunctions.hysilensTalentDOT;
@@ -12614,7 +12596,6 @@ const turnLogic = {
                     hysilensTalentDOT(battleData,sourceTurn,enemy,null);
                 }
 
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -13539,7 +13520,6 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const enemyTurns = battleData.enemyPositions;
                 const dotProc = ATKObjects.blackswanArcanaDOT ??= turnLogic[characterName].skillFunctions.blackswanArcanaDOT;
@@ -13560,8 +13540,6 @@ const turnLogic = {
                     }
                     dotProc(battleData,sourceTurn,enemy,null,timesToApply);
                 }
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -14591,9 +14569,7 @@ const turnLogic = {
             //     const ATKObject = ATKObjects.swTechATKObject
 
             //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-            //     poke("TechniqueStart",battleData,{sourceTurn});
             //     battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-            //     poke("TechniqueEnd",battleData,{sourceTurn});
             // },
         },
         "listeners": [
@@ -15230,14 +15206,10 @@ const turnLogic = {
                 // defDebuffTech
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 let buffSheet = ATKObjects.pelaTechniqueDEFDEBUFFSHEET;
-                for (let enemySlot of battleData.enemyPositions) {
-                    updateBuff(battleData,enemySlot,buffSheet);
-                }
-                poke("TechniqueEnd",battleData,{sourceTurn});
+                updateBuffBatchTargets(battleData,battleData.enemyPositions,buffSheet);
             },
             pelaE6DMG(battleData,generalInfo,allyTurn,allTargetsArray) {
                 const logicRef = turnLogic[allyTurn.properName];
@@ -15855,7 +15827,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.Technique["Explicit Subsidy"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 let attackEndings = battleData.battleListeners.AttackEnd ??= [];
                 const listenerToInejct = logicRef.listenersToInjectLater.techniqueEnergyGain;
@@ -15863,7 +15834,6 @@ const turnLogic = {
 
                 attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -16791,9 +16761,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.archerTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             archerTechnique2(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -16806,13 +16774,11 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 let chargeRef = sourceTurn.battleValues;
 
                 let newCharge = Math.min(4,chargeRef.charge + 1)
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
                 chargeRef.charge = newCharge;
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -17532,17 +17498,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                const exoTurnRef = {sourceTurn}
-                poke("TechniqueStart",battleData,exoTurnRef);
-
-
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // let chargeRef = sourceTurn.battleValues;
-
-                // let newCharge = Math.min(4,chargeRef.charge + 1)
-                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
-                // chargeRef.charge = newCharge;
-                poke("TechniqueEnd",battleData,exoTurnRef);
             },
             seeleTechnique2(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -17556,17 +17512,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                const exoTurnRef = {sourceTurn}
-                poke("TechniqueStart",battleData,exoTurnRef);
-
                 poke("SeeleEnterAmplification",battleData,null);
-
-                // let chargeRef = sourceTurn.battleValues;
-
-                // let newCharge = Math.min(4,chargeRef.charge + 1)
-                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
-                // chargeRef.charge = newCharge;
-                poke("TechniqueEnd",battleData,exoTurnRef);
             },
         },
         "listeners": [
@@ -18561,22 +18507,16 @@ const turnLogic = {
                 //TODO: later look into technique use count specification(if needed)
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 let amount = 50;//4th param true for fixed amount
                 updateEnergy(battleData,amount,sourceTurn,true,"Tingyun Technique");
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
-                poke("TechniqueEnd",battleData,{sourceTurn});
-
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 // let amount = 50;//4th param true for fixed amount
                 updateEnergy(battleData,amount,sourceTurn,true,"Tingyun Technique");
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             }
         },
         "listeners": [
@@ -19190,7 +19130,6 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TargetAlly",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot,targetChildEntities: false},sourceTurn);
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 for (let targetTurn of battleData.allyPositions) {
                     buffSheet.target = targetTurn.properName;
@@ -19198,7 +19137,6 @@ const turnLogic = {
                 }
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -20000,7 +19938,6 @@ const turnLogic = {
                 let skillRef = this.sundayTechPath ??= ATKObjects.Technique["The Glorious Mysteries"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 let attackEndings = battleData.battleListeners.TargetAlly ??= [];
                 
@@ -20009,7 +19946,6 @@ const turnLogic = {
 
                 attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             statCheck(battleData,currentTurn,sourceTurn) {
                 // sourceTurn.sundayTalentCRITe6SHEET
@@ -20470,13 +20406,11 @@ const turnLogic = {
                 let skillRef = ATKObjects.tribbieTechREF ??= ATKObjects.Technique["If You're Happy and You Know It"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const applyNuminosity = ATKObjects.applyNuminosity ??= turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity;
                 applyNuminosity(battleData,sourceTurn);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             tribbieFUA(battleData,targetTurn,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -21771,12 +21705,10 @@ const turnLogic = {
                 let skillRef = ATKObjects.robinTechREF ??= ATKObjects.Technique["Overture of Inebriation"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:ownerTurn.properName, target: "Self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn: ownerTurn});
 
                 updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
 
                 battleActions.nonViolentWrapper(battleData,skillRef,ownerTurn.properName);
-                poke("TechniqueEnd",battleData,{sourceTurn: ownerTurn});
             },
             "target": "self",
             "priority": -80,
@@ -22088,9 +22020,7 @@ const turnLogic = {
                 const ATKObject = ATKObjects.astaTechniqueATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -22736,7 +22666,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.ruanmeiTechREF ??= ATKObjects.Technique["Silken Serenade"].variant1;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 // const ruanmeiSkill = ATKObjects.ruanmeiSkill ??= turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill;
                 // ruanmeiSkill(battleData,"self",sourceTurn)
@@ -22784,7 +22713,6 @@ const turnLogic = {
                 queueExtraTurn(battleData,queueObject);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             ruanmeiReBreak(battleData,targetTurn,sourceTurn) {
                 // console.log(targetTurn)
@@ -23815,14 +23743,11 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 let spRecovery = 3;
                 updateSkillPoints(battleData,spRecovery,sourceTurn,false,"Sparkle Technique");
                 updateEnergy(battleData,20,sourceTurn,false,"Sparkle Technique");
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -24580,15 +24505,10 @@ const turnLogic = {
                 }
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 updateBuff(battleData,sourceTurn,buffSheet);
                 poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"});
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
-
-                
             },
         },
         "listeners": [
@@ -25612,12 +25532,9 @@ const turnLogic = {
                 const ATKObject = ATKObjects.bladeTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -26373,12 +26290,9 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 updateEnergy(battleData,15,sourceTurn,false,"Shine of Truth");
                 poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Technique Use"});
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -27262,7 +27176,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.fireflyTechREF ??= ATKObjects.Technique["Δ Order: Meteoric Incineration"].variant1;
 
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                // poke("TechniqueStart",battleData,{sourceTurn});
 
                 let attackEndings = battleData.battleListeners.WaveStart ??= [];
                 const listenerToInject = logicRef.listenersToInjectLater.techniqueWaveStart;
@@ -27270,7 +27183,6 @@ const turnLogic = {
 
                 attackEndings.unshift(listenerToInject);
                 // battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                // poke("TechniqueEnd",battleData,{sourceTurn});
             },
             fireflyTechniqueDMG(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -27309,9 +27221,7 @@ const turnLogic = {
                 const ATKObject = ATKObjects.fireflyTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             fireflyTechniqueIMPLANT(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -27343,11 +27253,9 @@ const turnLogic = {
                 const buffSheet = ATKObjects.fireflyTechImplantSHEET;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -28189,15 +28097,11 @@ const turnLogic = {
                 let ATKObject = ATKObjects.hookTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 const techDotFunction = logicRef.skillFunctions.hookTechDOT;
                 techDotFunction(battleData,sourceTurn,null)
-
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             hookTechDOT(battleData,sourceTurn,generalInfo) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -29207,15 +29111,12 @@ const turnLogic = {
                 const ATKObject = ATKObjects.rmcTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const enemyPositions = battleData.enemyPositions;
                 for (let enemy of enemyPositions) {
                     actionAdvance(-values[1],enemy,battleData,"RMC Technique Delay");
                 }
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [//rmcMemTURNEVENT
@@ -30534,11 +30435,9 @@ const turnLogic = {
                 let ATKObject = ATKObjects.aggyTechATKObject
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 logicRef.characterValuesBattle.enemyWithSeam = battleData.primaryTarget;
                 logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             seamStitchAdditionalDMG(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -32005,13 +31904,11 @@ const turnLogic = {
                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Technique - Let it Rain Cold On Thee"});
                 logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             evernightE1FinalMulti(battleData,ownerTurn) {
                 if (battleData.battleIsOver) {return;}
@@ -33427,7 +33324,6 @@ const turnLogic = {
                 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 const buffNames = logicRef.buffNames;
 
                 if (!ATKObjects.hyacineTechHPSHEET) {
@@ -33478,7 +33374,6 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -34964,7 +34859,6 @@ const turnLogic = {
                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const queueObject = ATKObjects.dhptTechSkillCall ??= {
                     name: "DHPT Technique Skill",
@@ -35009,8 +34903,6 @@ const turnLogic = {
                 queueExtraTurn(battleData,queueObject);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -35919,15 +35811,12 @@ const turnLogic = {
                 //like obv if the other 3 used theirs and they are one time use, he can use his twice instead, or if there are 2 dmg techniques, he can use his 3 times
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const allies = battleData.allyPositions;
                 for (let ally of allies) {
                     updateBuff(battleData,ally,buffSheet);
                 }
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             aventurineE6DMGHandler(battleData,shieldsFound,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -36719,10 +36608,8 @@ const turnLogic = {
                 let ATKObject = ATKObjects.argentiTechATKObject
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,values[2],sourceTurn,false,"Argenti Technique");
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -37343,7 +37230,6 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const attacker = superGlobal.getStartingAttacker(battleData);
                 const attackerElement = attacker.element;
@@ -37358,7 +37244,6 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Anaxa Technique", bodyText: `Forced matching weakness enabled for BattleStart toughness reduction, this is separate from attack techniques.`});}
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             anaxaImplantWeakness(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -38662,7 +38547,6 @@ const turnLogic = {
                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 const yaoTechSkillCall = ATKObjects.yaoTechSkillCall ??= turnLogic[characterName].skillFunctions.yaoSkill;
 
@@ -38711,8 +38595,6 @@ const turnLogic = {
                 queueExtraTurn(battleData,queueObject);
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             elationSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -39921,11 +39803,9 @@ const turnLogic = {
                 let ATKObject = ATKObjects.argentiTechATKObject
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 updateSkillPoints(battleData,2,sourceTurn,false,"Sparxie Technique");
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
         },
         "listeners": [
@@ -40851,7 +40731,6 @@ const turnLogic = {
                 // let values = ATKObjects.emcTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
 
                 if (!ATKObjects.emcTechELATIONSHEET) {
                     const buffNames = logicRef.buffNames;
@@ -40876,7 +40755,6 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet)
 
                 battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             elationSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -41931,14 +41809,11 @@ const turnLogic = {
                 let ATKObject = ATKObjects.evaTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TechniqueStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 // let chargeRef = sourceTurn.battleValues;
 
                 const cbFunction = ATKObjects.cbFunction ??= turnLogic["Aha Instant"].skillFunctions.addCertifiedBanger;
                 cbFunction(battleData,sourceTurn,20,"Technique");
-
-                poke("TechniqueEnd",battleData,{sourceTurn});
             },
             elationSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
