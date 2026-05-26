@@ -20,7 +20,7 @@ const battleActions = {
 
             logToBattle(battleData,{logType: "SkillPointChange", cost, oldSP, newSP, actualGain, maximum, AV:battleData.sumAV, source:charName, sourceName:sourceString});
         }
-        poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
+        poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow},sourceTurn);
     },
     updateEnergy(battleData,amount,sourceTurn,isFixed,sourceName) {
         if (sourceTurn.specialEnergy) {return;}//for the sake of people like sw999,acheron,cas, and other such headaches.
@@ -44,7 +44,7 @@ const battleActions = {
         // energyChangedObject.sourceName = sourceName;
 
         // poke("EnergyChanged",battleData,energyChangedObject);
-        poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount,sourceName});
+        poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount,sourceName},sourceTurn);
     },
     updatePunchlineValue(battleData,amount,sourceTurn,sourceName) {
         // if (!amount) {return}
@@ -108,7 +108,7 @@ const battleActions = {
             }
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
-        poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount});
+        poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount},sourceTurn);
         
     },
     updateBangerValue(battleData,amount,sourceTurn,sourceName) {
@@ -122,7 +122,7 @@ const battleActions = {
         let overFill = 0;
 
         const generalInfo = {sourceTurn,amount,sourceName};
-        poke("CertifiedBangerChangedStart",battleData,generalInfo);
+        poke("CertifiedBangerChangedStart",battleData,generalInfo,sourceTurn);
 
         amount = generalInfo.amount;
         
@@ -157,7 +157,7 @@ const battleActions = {
             });
         }
         // console.log(`${battleDataCharacterRow.properName} Energy: ${battleDataCharacterRow.currentEnergy}/${battleDataCharacterRow.maxEnergy} ${sourceName ? `-- ${sourceName}` : ""}`);
-        poke("CertifiedBangerChanged",battleData,{sourceTurn,amount,sourceName});
+        poke("CertifiedBangerChanged",battleData,{sourceTurn,amount,sourceName},sourceTurn);
     },
     updateBuff(battleData,sourceTurn,buffSheet,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes,turnOverride) {
         let buffRef = sourceTurn.buffsObject;
@@ -293,14 +293,14 @@ const battleActions = {
         }
         if (isDebuff) {
             sourceTurn.debuffCounter += 1;
-            if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference});}
+            if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
 
             if (isDOT) {
                 sourceTurn.DOTCounter += 1;
                 if (!isAllDOTTypes) {
                     const element = currentReference.element;
                     sourceTurn.dots[element] += 1;
-                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element});
+                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element},sourceTurn);
                 }
                 if (isSpecialDOTLast) {sourceTurn.specialDotsArray.push(currentReference);}
                 else {sourceTurn.currentDotsArray.push(currentReference);}
@@ -313,7 +313,7 @@ const battleActions = {
                 enemyElementalRef.Fire += 1;
                 enemyElementalRef.Lightning += 1;
                 enemyElementalRef.Physical += 1;
-                poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element:null});
+                poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element:null},sourceTurn);
             }
         }//we add a debuff to the target's counter only when a new one is applied, not when stacked though that might bite me later I guess, idk if stacks count or unique debuffs each
         if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Apply", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: timesToApply});}
@@ -339,7 +339,7 @@ const battleActions = {
         // console.log(currentReference.source,currentReference.sourceOwner)
         
         if (isDebuff) {
-            if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference});}
+            if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
             
             if (isDOT) {
                 currentReference.avgChanceApplied = buffSheet.avgChanceApplied;
@@ -419,9 +419,9 @@ const battleActions = {
                 if (familyRef.size && !ignoreFamilyPokes) {
                     // console.log(familyRef)
                     const genInfo = {sourceTurn};
-                    pokeSet(familyRef,battleData,genInfo)
+                    pokeSet(familyRef,battleData,genInfo,sourceTurn)
                     // for (let familyName of familyRef) {
-                    //     poke(familyName,battleData,genInfo);//onhit properties do NOT trigger conditionals since they exist outside the stat sheet
+                    //     poke(familyName,battleData,genInfo,sourceTurn);//onhit properties do NOT trigger conditionals since they exist outside the stat sheet
                     // }
                 }
             }
@@ -502,7 +502,7 @@ const battleActions = {
 
         if (currentReference.isDebuff) {
             sourceTurn.debuffCounter -= 1;
-            if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference});}
+            if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference},sourceTurn);}
 
             //IT WILL NEVER BE A DOT OR ALLTYPE DOT IF IT IS NOT A DEBUFF TOO, so we bundle it in there
             const isAllDOTTypes = currentReference.isAllDOTTypes;
@@ -511,7 +511,7 @@ const battleActions = {
                 if (!isAllDOTTypes) {
                     const element = currentReference.element;
                     sourceTurn.dots[element] -= 1;
-                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element});
+                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                 }
 
                 const currentDots = sourceTurn.currentDotsArray;
@@ -526,7 +526,7 @@ const battleActions = {
                 enemyElementalRef.Fire -= 1;
                 enemyElementalRef.Lightning -= 1;
                 enemyElementalRef.Physical -= 1;
-                poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element:null});
+                poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element:null},sourceTurn);
             }
         }
         if (currentReference.isShield) {
@@ -556,7 +556,7 @@ const battleActions = {
                 sourceTurn.shieldValueMax = currentHighestCap;
             }
 
-            poke("ShieldLost",battleData,{sourceTurn,currentReference});
+            poke("ShieldLost",battleData,{sourceTurn,currentReference},sourceTurn);
         }
         if (currentReference.isFinalMulti) {
             sourceTurn.finalMultiCounter -= 1;
@@ -591,7 +591,7 @@ const battleActions = {
 
             if (isDebuff) {
                 sourceTurn.debuffCounter -= 1;
-                if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference});}
+                if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference},sourceTurn);}
 
                 //IT WILL NEVER BE A DOT OR ALLTYPE DOT IF IT IS NOT A DEBUFF TOO, so we bundle it in there
                 
@@ -600,7 +600,7 @@ const battleActions = {
                     if (!isAllDOTTypes) {
                         const element = currentReference.element;
                         sourceTurn.dots[element] -= 1;
-                        poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element});
+                        poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                     }
                     const currentDots = sourceTurn.currentDotsArray;
                     const currentSpecialDots = sourceTurn.specialDotsArray;
@@ -614,7 +614,7 @@ const battleActions = {
                     enemyElementalRef.Fire -= 1;
                     enemyElementalRef.Lightning -= 1;
                     enemyElementalRef.Physical -= 1;
-                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element:null});
+                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element:null},sourceTurn);
                 }
             }
             if (isShield) {
@@ -642,7 +642,7 @@ const battleActions = {
                     sourceTurn.shieldValueCurrent = currentHighest;
                     sourceTurn.shieldValueMax = currentHighestCap;
                 }
-                poke("ShieldLost",battleData,{sourceTurn,currentReference});
+                poke("ShieldLost",battleData,{sourceTurn,currentReference},sourceTurn);
             }
             if (isFinalMulti) {
                 sourceTurn.finalMultiCounter -= 1;
@@ -766,7 +766,7 @@ const battleActions = {
         sourceTurn.currentHP = Math.max(0,newHPRemaining);
         sourceTurn.maxHP = newMaxHP;
 
-        if (HPChange != 0 && !isEnemy && !isSilentUpdate) {poke("TeamMaxHPChanged",battleData);}
+        if (HPChange != 0 && !isEnemy && !isSilentUpdate) {poke("TeamMaxHPChanged",battleData,sourceTurn);}
     },
     queueFollowUpAttack(battleData,entry) {
         const currentQueue = battleData.followUpQueue;
@@ -1681,7 +1681,7 @@ const battleActions = {
         //base * abilityMulti * 1+breakEffect * 1+breakDMGIncrease
         //*DEFstuff * RESstuff * VULNstuff * brokenMulti
         const turnMerge = {targetTurn,sourceTurn};
-        poke("BreakDMGStart",battleData,turnMerge);
+        poke("BreakDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
 
         const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
@@ -1743,8 +1743,8 @@ const battleActions = {
 
             logToBattle(battleData,{logType: "HitEnemy", hitType: "Break", target: targetTurn.properName, source:charName, hitData:hitDataBreak,enemyIsDead});
         }
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEndBreak});
-        poke("BreakDMGEnd",battleData,turnMerge);
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEndBreak},sourceTurn);
+        poke("BreakDMGEnd",battleData,turnMerge,sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalEndBreak;}
 
         return DMGTotalEndBreak
@@ -1805,7 +1805,7 @@ const battleActions = {
         //*DEFstuff * RESstuff * VULNstuff * brokenMulti
         
         const turnMerge = {targetTurn,sourceTurn,isSuperBreak};
-        poke("BreakDMGStart",battleData,turnMerge);
+        poke("BreakDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
 
         const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
@@ -1868,8 +1868,8 @@ const battleActions = {
             // console.log("reached super break")
             logToBattle(battleData,{logType: "HitEnemy", hitType: superString, target: targetTurn.properName, source:charName, hitData:hitDataBreakSuper,enemyIsDead,sourceString:sourceName});
         }
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,isSuperBreak,DMGTotalEndBreak});
-        poke("BreakDMGEnd",battleData,turnMerge);
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,isSuperBreak,DMGTotalEndBreak},sourceTurn);
+        poke("BreakDMGEnd",battleData,turnMerge,sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalEndBreak;}
 
         // console.log(DMGTotalEndBreak)
@@ -1908,7 +1908,7 @@ const battleActions = {
         
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
+        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
@@ -2001,7 +2001,7 @@ const battleActions = {
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
-                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});}
+                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
                 if (currentShield.shieldRemaining < 0) {
                     shieldsWereBroken = true;
                     shieldsBroken += 1;
@@ -2027,7 +2027,7 @@ const battleActions = {
                 // currentReference.shieldCap = totalShieldCap;
             }
             shieldOverflow = smallestOverflow;
-            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});}
+            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
         }
         else {shieldOverflow = DMGTotalAVG;}
 
@@ -2067,7 +2067,7 @@ const battleActions = {
                     //otherwise, we need to assign the dmgs that backups couldn't eat, to the target to still deal it
                 }
                 targetTurn.currentHP -= shieldOverflow;
-                poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true});
+                poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true},targetTurn);
             }
             else {targetTurn.currentHP -= shieldOverflow;}
             
@@ -2181,7 +2181,7 @@ const battleActions = {
                     rawReduction
                 }
                 // console.log(DMGTags)
-                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
                 generalInfo.enemiesThatBroke.push(targetTurn);
 
@@ -2222,7 +2222,7 @@ const battleActions = {
                     updateBuff(battleData,targetTurn,dotSheet);
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
 
                 if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
@@ -2240,8 +2240,8 @@ const battleActions = {
         }
 
 
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag});
-        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge);
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
+        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
 
         // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
@@ -2279,7 +2279,7 @@ const battleActions = {
         targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge);
+        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         let atkEntryRef = atkEntry[hitType];
@@ -2378,7 +2378,7 @@ const battleActions = {
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
-                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});}
+                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
                 if (currentShield.shieldRemaining < 0) {
                     shieldsWereBroken = true;
                     shieldsBroken += 1;
@@ -2404,7 +2404,7 @@ const battleActions = {
                 // currentReference.shieldCap = totalShieldCap;
             }
             shieldOverflow = smallestOverflow;
-            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});}
+            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
         }
         else {shieldOverflow = DMGTotalAVG;}
 
@@ -2444,7 +2444,7 @@ const battleActions = {
                     //otherwise, we need to assign the dmgs that backups couldn't eat, to the target to still deal it
                 }
                 targetTurn.currentHP -= shieldOverflow;
-                poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true});
+                poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true},targetTurn);
             }
             else {targetTurn.currentHP -= shieldOverflow;}
             
@@ -2558,7 +2558,7 @@ const battleActions = {
                     rawReduction
                 }
                 // console.log(DMGTags)
-                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
                 battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
                 generalInfo.enemiesThatBroke.push(targetTurn);
 
@@ -2593,7 +2593,7 @@ const battleActions = {
                     updateBuff(battleData,targetTurn,dotSheet);
                 }
                 // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
 
                 if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
             }
@@ -2611,8 +2611,8 @@ const battleActions = {
         }
 
 
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag});
-        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge);
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
+        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
 
         // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
@@ -2729,7 +2729,7 @@ const battleActions = {
             }
             breakerDMG = battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo);
             // generalInfo.enemiesThatBroke.push(targetTurn);
-            poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit:null,ATKObject,breakObject,tags,isBroken,generalInfo});
+            poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit:null,ATKObject,breakObject,tags,isBroken,generalInfo},sourceTurn);
             const isDOT = battleActions.breakDOTisDOT[element];
             if (isDOT) {
                 if (!sourceTurn.breakDOTSheet) {
@@ -2762,7 +2762,7 @@ const battleActions = {
                 updateBuff(battleData,targetTurn,dotSheet);
             }
             // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-            poke("BrokeEnemyWeakness",battleData,turnMerge);
+            poke("BrokeEnemyWeakness",battleData,turnMerge,sourceTurn);
         }
 
         // const totalsRef = generalInfo.totals;
@@ -2858,7 +2858,7 @@ const battleActions = {
 
             logToBattle(battleData,{logType: "HitEnemy", hitType: "Additional", target: targetTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
         }
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG});
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG},sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
         
         return {DMGTotalAVG,DMGOverkill,enemyIsDead}
@@ -2867,7 +2867,7 @@ const battleActions = {
         let logging = battleData.isLoggyLogger;
         if (logging) {logToBattle(battleData,{logType: "AdditionalDMGStart"});}
         let dmgSlot = "Additional DMG";
-        poke("AdditionalDMGStart",battleData,{sourceTurn,skillSlot:dmgSlot});
+        poke("AdditionalDMGStart",battleData,{sourceTurn,skillSlot:dmgSlot},sourceTurn);
 
         let totalHits = 0;
         let totalAVGDMG = 0;
@@ -2891,7 +2891,7 @@ const battleActions = {
 
         battleData.battleDamageSUM += totalAVGDMG;
 
-        poke("AdditionalDMGEnd",battleData,{sourceTurn, enemiesAttackedThisAction,dmgSlot,sourceString});
+        poke("AdditionalDMGEnd",battleData,{sourceTurn, enemiesAttackedThisAction,dmgSlot,sourceString},sourceTurn);
         if (logging) {
             let totalsRef = battleData.battleTotal;
             let sumSlotRef = totalsRef.DMG[charName] ??= {};
@@ -3008,7 +3008,7 @@ const battleActions = {
 
             logToBattle(battleData,{logType: "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
         }
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG});
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG},sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
         
         return {DMGTotalAVG,DMGOverkill,enemyIsDead}
@@ -3017,7 +3017,7 @@ const battleActions = {
         let logging = battleData.isLoggyLogger;
         if (logging) {logToBattle(battleData,{logType: "ElationDMGStart"});}
         let dmgSlot = "Elation DMG";
-        poke("ElationDMGStart",battleData,{sourceTurn,skillSlot:dmgSlot});
+        poke("ElationDMGStart",battleData,{sourceTurn,skillSlot:dmgSlot},sourceTurn);
 
         let totalHits = 0;
         let totalAVGDMG = 0;
@@ -3041,7 +3041,7 @@ const battleActions = {
 
         battleData.battleDamageSUM += totalAVGDMG;
 
-        poke("ElationDMGEnd",battleData,{sourceTurn, enemiesAttackedThisAction,dmgSlot,sourceString});
+        poke("ElationDMGEnd",battleData,{sourceTurn, enemiesAttackedThisAction,dmgSlot,sourceString},sourceTurn);
         if (logging) {
             let totalsRef = battleData.battleTotal;
             let sumSlotRef = totalsRef.DMG[charName] ??= {};
@@ -3067,7 +3067,7 @@ const battleActions = {
         const isDetonated = !isTurnStartTrigger;
         if (isDetonated) {
             if (logging) {logToBattle(battleData,{logType: "DOTDetonateStart"});}
-            poke("DOTDetonateStart",battleData,turnMerge);
+            poke("DOTDetonateStart",battleData,turnMerge,sourceTurn);
         }
 
 
@@ -3163,7 +3163,7 @@ const battleActions = {
             }
         }
 
-        if (isDetonated) {poke("DOTDetonateEnd",battleData,turnMerge);}
+        if (isDetonated) {poke("DOTDetonateEnd",battleData,turnMerge,sourceTurn);}
         if (logging) {logToBattle(battleData,{logType: "DOTDetonateEnd"});}
     },
     dotDMGWrapper(battleData,sourceTurn,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,currentBuff,sourceOverride) {
@@ -3193,7 +3193,7 @@ const battleActions = {
 
         const stackCount = currentBuff.currentStacks;
         let currentMulti = multi;//the %multi from the description of the current attack
-        poke("DOTDMGStart",battleData,turnMerge);
+        poke("DOTDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
         let targetStatsSourceBased = targetTurn[characterName] ?? emptyTableNeverAdd;
         // let detonateMulti //passed through as a param, no need to define
@@ -3427,8 +3427,8 @@ const battleActions = {
         battleData.battleDamageSUM += DMGTotalAVG;
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
 
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,element,isDetonated,sourceOverride,isBreakDOT,DMGTotalEnd,DMGTotalAVG});
-        poke("DOTDMGEnd",battleData,turnMerge);
+        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,element,isDetonated,sourceOverride,isBreakDOT,DMGTotalEnd,DMGTotalAVG},sourceTurn);
+        poke("DOTDMGEnd",battleData,turnMerge,sourceTurn);
     },
     trueDMGHitWrapper(battleData,sourceTurn,targetTurn,percentInstance,trueBase,trueCrit,trueAVG,sourceString) {
         // let playerStats = sourceTurn.statTable;
@@ -3441,7 +3441,7 @@ const battleActions = {
         // const actionTags = ATKObject.actionTags;
         let isEnemy = false;//sourceTurn.isEnemy
 
-        poke("TrueDMGStart",battleData,{targetTurn,sourceTurn});
+        poke("TrueDMGStart",battleData,{targetTurn,sourceTurn},sourceTurn);
         //TODO: seems I forgot to add shield handling to the additional dmg wrapper, which is why this is missing it too, go add that later when we let enemies hold shields as well, low priority
     
 
@@ -3482,7 +3482,7 @@ const battleActions = {
 
             logToBattle(battleData,{logType: "HitEnemy", hitType: "True", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,sourceString});
         }
-        poke("TrueDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG});
+        poke("TrueDMGEnd",battleData,{targetTurn,sourceTurn,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG},sourceTurn);
         
         // return {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
     },
@@ -3553,7 +3553,7 @@ const battleActions = {
         let hitTypeAll = "all";
 
         const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
-        poke("AttackStart",battleData,generalInfo);
+        poke("AttackStart",battleData,generalInfo,sourceTurn);
 
         const allLength = allTargetArray.length;
         const blastLength = enemyBlastTargets.length;
@@ -3704,13 +3704,13 @@ const battleActions = {
         }
 
 
-        poke("AttackDMGEnd",battleData,generalInfo);
+        poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
         // // kafkaUltimateDOT(battleData,sourceTurn,targetTurn,usableHits)
         // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT
         ATKObject.dotApplyFunction?.(battleData,sourceTurn,generalInfo);
         // if (ATKObject.dotApplyFunction)
 
-        poke("AdditionalTriggerAttackEnd",battleData,generalInfo);
+        poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
         
 
     
@@ -3719,13 +3719,13 @@ const battleActions = {
 
         // const possibleDotMulti = ATKObject.detonateDotsByMulti;
         ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
-        poke("AttackDMGDetonateEnd",battleData,generalInfo);
+        poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
 
-        poke("TrueTriggerAttackEnd",battleData,generalInfo);
+        poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
         // if (possibleDotMulti) {battleActions.dotDetonateWrapper(battleData,sourceTurn,possibleDotMulti,targetTurn);}
         // battleActions.dotDetonateWrapper(battleData,sourceTurn,detonateDotsByMulti,targetTurn,"Kafka Talent Detonate");
 
-        poke("AttackEnd",battleData,generalInfo);
+        poke("AttackEnd",battleData,generalInfo,sourceTurn);
 
         ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
 
@@ -3839,7 +3839,7 @@ const battleActions = {
         // const hasTagTables = !isEnemy && Object.keys(sourceTurn.tagSpecific).length;
         const generalInfo = chainedAttackRef ?? {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
         generalInfo.ATKObject = ATKObject;
-        if (!attackState || attackState === "Start") {poke("AttackStart",battleData,generalInfo);}
+        if (!attackState || attackState === "Start") {poke("AttackStart",battleData,generalInfo,sourceTurn);}
         
         const allLength = allTargetArray.length;
         const blastLength = enemyBlastTargets.length;
@@ -3950,24 +3950,24 @@ const battleActions = {
         // let addedDMGTally = 0;
         const newTotals = generalInfo.totals;
         if (!attackState || attackState === "End" || battleData.battleIsOver) {
-            poke("AttackDMGEnd",battleData,generalInfo);
+            poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
 
             // // kafkaUltimateDOT(battleData,sourceTurn,targetTurn,usableHits)
             // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT
             ATKObject.dotApplyFunction?.(battleData,sourceTurn,generalInfo);
             // if (ATKObject.dotApplyFunction)
 
-            poke("AdditionalTriggerAttackEnd",battleData,generalInfo);
+            poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             
             // poke("DetonateDOTTriggerAttackEnd",battleData,generalInfo);
 
             // const possibleDotMulti = ATKObject.detonateDotsByMulti;
             ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
-            poke("AttackDMGDetonateEnd",battleData,generalInfo);
-            poke("TrueTriggerAttackEnd",battleData,generalInfo);
+            poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
+            poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
 
 
-            poke("AttackEnd",battleData,generalInfo);
+            poke("AttackEnd",battleData,generalInfo,sourceTurn);
 
             ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
 
@@ -4076,7 +4076,8 @@ const battleActions = {
         const isJointAttack = true;
         const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,isJointAttack};
         const generalInfo2 = {sourceTurn:sourceTurn2,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject:ATKObject2,element,totals:totals2,overBreakTotals,overKillTotals,isJointAttack};
-        poke("AttackStart",battleData,generalInfo);
+        poke("AttackStart",battleData,generalInfo,sourceTurn);
+        //TODO: joints alternate sources between memo and owner, unify a param to check whether the atkEntry is memo or not rather than checking on each eventpoke like a tard
         const allLength = allTargetArray.length;
         const blastLength = enemyBlastTargets.length;
 
@@ -4122,9 +4123,9 @@ const battleActions = {
                     hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,infoRef,isLastHit,false,allLength,true);
                 }
                 if (atkEntry.isSourceLastHit) {
-                    poke("AttackDMGEnd",battleData,infoRef);
-                    poke("AdditionalTriggerAttackEnd",battleData,infoRef);
-                    poke("TrueTriggerAttackEnd",battleData,infoRef);
+                    poke("AttackDMGEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+                    poke("AdditionalTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+                    poke("TrueTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
                 }
                 // for (let ee=0;ee<allLength;ee++) {hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo2,isLastHit,false);}
             }
@@ -4139,8 +4140,8 @@ const battleActions = {
                 hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,infoRef,isLastHit,false,blastLength+1);
                 if (atkEntry.blast) {for (let enemyEntry of enemyBlastTargets) {hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,infoRef,isLastHit,false,blastLength+1);}}
                 if (atkEntry.isSourceLastHit) {
-                    poke("AttackDMGEnd",battleData,infoRef);
-                    poke("AdditionalTriggerAttackEnd",battleData,infoRef);
+                    poke("AttackDMGEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+                    poke("AdditionalTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
                     // for (let addedDMG of battleData.addedDMGTallyAttack) {
                     //     addedDMGTally += addedDMG.DMGTotalAVG;
                     //     // {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
@@ -4163,9 +4164,9 @@ const battleActions = {
                 let infoRef = atkEntry.isMemo ? generalInfo2 : generalInfo;
                 hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,infoRef,isLastHit,false);
                 if (atkEntry.isSourceLastHit) {
-                    poke("AttackDMGEnd",battleData,infoRef);
-                    poke("AdditionalTriggerAttackEnd",battleData,infoRef);
-                    poke("TrueTriggerAttackEnd",battleData,infoRef);
+                    poke("AttackDMGEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+                    poke("AdditionalTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+                    poke("TrueTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
                 }
                 // hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo2,isLastHit,false);
             }
@@ -4223,7 +4224,7 @@ const battleActions = {
             }
         }
 
-        poke("AttackEnd",battleData,generalInfo);
+        poke("AttackEnd",battleData,generalInfo,sourceTurn);
         ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
         // if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:(totals.totalAVGDMG + totals.totalBreakDMG + totals.totalBreakSuperDMG), isEnemy});}
 
@@ -4300,7 +4301,7 @@ const battleActions = {
             battleData.enemyPositions.splice(indexToRemove, 1);
             battleData.nextTurnAV.splice(indexToRemove2, 1);
 
-            poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+            poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed},sourceTurn);
             
             if (battleData.isLoggyLogger) {
                 logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName});
@@ -4343,7 +4344,7 @@ const battleActions = {
         let killer = sourceTurn;
         let killed = targetTurn;
         // console.log(enemyDeath.properName)
-        poke("AllyDied",battleData,{sourceTurn, targetTurn:killed});
+        poke("AllyDied",battleData,{sourceTurn, targetTurn:killed},killed);
         // poke("AllyDied",battleData,{targetTurn:deathTurn});
         if (battleData.isLoggyLogger) {
             logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName, isEnemy: true});
@@ -4423,7 +4424,7 @@ const battleActions = {
         // console.log(sourceTurn,targetTurn)
 
         const turnMerge = {targetTurn,sourceTurn}
-        poke("HealStart",battleData,turnMerge);
+        poke("HealStart",battleData,turnMerge,sourceTurn);
         const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
 
         const healObject = generalInfo.healObject;
@@ -4477,7 +4478,7 @@ const battleActions = {
             logToBattle(battleData,{logType: "HealAlly", target: targetTurn.properName, source:sourceTurn.properName, hitData});
         }
         
-        poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+        poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal},sourceTurn);
         const totals = generalInfo.totals;
         totals.totalHeal += totalHealed;
         totals.actualHeal += actualHeal;
@@ -4537,14 +4538,14 @@ const battleActions = {
             let flat = flatAmounts[hitTypePrimary] ?? 0;
 
             if (logger) {logToBattle(battleData,{logType: "HealAllyStart"});}
-            poke("HealAllyStart",battleData,{sourceTurn,targetTurn});
+            poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
             for (let i=0;i<timesToHeal;i++) {
                 for (let batchMember of batchArray) {
                     if (batchMember.cantBeHealed && !forceHeal) {continue}
                     healer(battleData,batchMember,skillSlot,percent,flat,generalInfo,isFixedHealing);
                 }
             }
-            poke("HealAllyEnd",battleData,{sourceTurn,targetTurn});
+            poke("HealAllyEnd",battleData,{sourceTurn,targetTurn},sourceTurn);
             if (logger) {logToBattle(battleData,{logType: "HealAllyEnd", targetsHealed, totalHeal:totals.totalHeal});}
         }
         else if (isAll) {
@@ -4553,7 +4554,7 @@ const battleActions = {
             const allyPositions = battleData.allyPositions;
 
             if (logger) {logToBattle(battleData,{logType: "HealAllyStart"});}
-            poke("HealAllyStart",battleData,{sourceTurn,targetTurn});
+            poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
             for (let i=0;i<timesToHeal;i++) {
                 for (let ally of allyPositions) {
 
@@ -4563,7 +4564,7 @@ const battleActions = {
                     // targetsHealed++;
                 }
             }
-            poke("HealAllyEnd",battleData,{sourceTurn,targetTurn});
+            poke("HealAllyEnd",battleData,{sourceTurn,targetTurn},sourceTurn);
             if (logger) {logToBattle(battleData,{logType: "HealAllyEnd", targetsHealed, totalHeal:totals.totalHeal});}
         }
         else {
@@ -4597,11 +4598,11 @@ const battleActions = {
                 let flat = flatAmounts[hitTypePrimary] ?? 0;
                 if (targetTurn.cantBeTargeted && !forceHeal) {return;}
                 if (logger && timesToHeal>1) {logToBattle(battleData,{logType: "HealAllyStart"});}
-                poke("HealAllyStart",battleData,{sourceTurn,targetTurn});
+                poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
                 for (let i=0;i<timesToHeal;i++) {
                     healer(battleData,targetTurn,skillSlot,percent,flat,generalInfo,isFixedHealing);
                 }
-                poke("HealAllyEnd",battleData,{sourceTurn,targetTurn});
+                poke("HealAllyEnd",battleData,{sourceTurn,targetTurn},sourceTurn);
                 if (logger && timesToHeal>1) {logToBattle(battleData,{logType: "HealAllyEnd", targetsHealed, totalHeal:totals.totalHeal});}
                 // hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo);
             }
@@ -4667,7 +4668,7 @@ const battleActions = {
         const sourceStatsONHIT = sourceTurn.statTableONHIT;
 
         const turnMerge = {targetTurn,sourceTurn}
-        poke("ShieldStart",battleData,turnMerge);
+        poke("ShieldStart",battleData,turnMerge,sourceTurn);
         // let sourceMulti = 1 + sourceStats[ShieldOutgoing] + targetStats[ShieldIncoming];
 
         const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
@@ -4747,7 +4748,7 @@ const battleActions = {
             sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + overShield;
         }
         
-        poke("ShieldEnd",battleData,turnMerge);
+        poke("ShieldEnd",battleData,turnMerge,sourceTurn);
         // ShieldAmount: {},
         // Shields: {},
         // Overshield: {}
@@ -4778,8 +4779,8 @@ const battleActions = {
                 totalEaten += amountEaten;
                 // totalEaten += calcs.customTruncate(amountEaten,1);
                 if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:ally.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
-                poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn:ally,amountEaten,sourceTurn,skillSlot});
-                poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn});
+                poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn:ally,amountEaten,sourceTurn,skillSlot},ally);
+                poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn},ally);
             }
             if (logger) {logToBattle(battleData,{logType: "ConsumeHPEnd", name:sourceTurn.properName,totalEaten,targetTurn:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
         }
@@ -4790,12 +4791,12 @@ const battleActions = {
             targetTurn.currentHP -= amountEaten;
             totalEaten += amountEaten;
             if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
-            poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn,amountEaten,sourceTurn,skillSlot});
-            poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: amountEaten,lossSource: sourceTurn});
+            poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn,amountEaten,sourceTurn,skillSlot},targetTurn);
+            poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: amountEaten,lossSource: sourceTurn},targetTurn);
         }
 
         const returnObject = {isAllAllies,targetTurn,totalEaten,sourceTurn,skillSlot};
-        poke("ConsumedAllyHPList",battleData,{isAllAllies,targetTurn,totalEaten,sourceTurn,skillSlot});//for characters that need a running total on the full HP consume across the team
+        poke("ConsumedAllyHPList",battleData,{isAllAllies,targetTurn,totalEaten,sourceTurn,skillSlot},sourceTurn);//for characters that need a running total on the full HP consume across the team
         return returnObject
     },
     cleanseDebuff(battleData,targetTurn,amountToRemove,removeType) {
@@ -6670,10 +6671,7 @@ const turnLogic = {
                 
                 let healObject = ATKObjects.gallagherTalentHealHEALOBJECT;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:sourceTurn.properName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TalentStart",battleData,{sourceTurn});
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,timesToHeal,batchArray);
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             gallagherBasicEnhanced(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -29833,6 +29831,7 @@ const turnLogic = {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
+                isEnhanced: true,
                 points: 0, 
                 properName: thisTurn.properName,
                 useFUATriggers: false,

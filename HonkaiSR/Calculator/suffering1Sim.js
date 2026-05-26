@@ -156,7 +156,7 @@ const sim = {
                 logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
                 logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             }
-            poke("WaveStart",battleData,{currentWave: waveID});
+            poke("WaveStart",battleData,{currentWave: waveID},null,null);
             battleData.readyForNewWave = false;
 
             for (let battleEntity of nextTurnAV) {
@@ -177,7 +177,7 @@ const sim = {
             battleData.cycleAV = AVToRevertTo;
 
             sim.createEnemyTargets(battleData,enemiesToMake);
-            poke("WaveStartFinished",battleData,{});
+            poke("WaveStartFinished",battleData,null,null);
             sim.clearUltimateQueue(battleData)
 
             const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
@@ -333,7 +333,7 @@ const sim = {
     //             logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     //             logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     //         }
-    //         poke("WaveStart",battleData,{});
+    //         poke("WaveStart",battleData,null,null);
     //         battleData.readyForNewWave = false;
 
     //         for (let battleEntity of nextTurnAV) {
@@ -354,7 +354,7 @@ const sim = {
     //         battleData.cycleAV = AVToRevertTo;
 
     //         sim.createEnemyTargets(battleData,enemiesToMake);
-    //         poke("WaveStartFinished",battleData,{});
+    //         poke("WaveStartFinished",battleData,null,null);
     //         sim.clearUltimateQueue(battleData)
 
     //         const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
@@ -675,7 +675,7 @@ const sim = {
             enemyPositions.push(slotRef);
 
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:slot, AV: battleData.sumAV, turnRef: JSON.stringify(battleData.enemyBasedTurns[slot])});}
-            poke("EnemyCreated",battleData,{slotRef});
+            poke("EnemyCreated",battleData,{slotRef},slotRef);
             battleData.enemiesRemaining += 1;
         }
         // battleData.enemyPositions = sim.sortEnemyTargets(enemyPositions);
@@ -971,10 +971,10 @@ const sim = {
                 extra2pc.push(push2pc);
             }
 
-            if (!logicRef.preLogicCompleted) {
-                logicRef.preLogic(slotRef,battleData);
-                logicRef.preLogicCompleted = true;
-            }
+            // if (!logicRef.preLogicCompleted) {
+            logicRef.preLogic(slotRef,battleData);
+                // logicRef.preLogicCompleted = true;
+            // }
         }
 
 
@@ -1124,12 +1124,12 @@ const sim = {
         const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
 
         if (isLoggyLogger) {logToBattle(battleData,{logType: "PassiveCalls"});}
-        poke("EntityConstruction",battleData);
-        poke("PassiveCalls",battleData);
+        poke("EntityConstruction",battleData,null,null);
+        poke("PassiveCalls",battleData,null,null);
 
         
         
-        poke("ElationInitialize",battleData);
+        poke("ElationInitialize",battleData,null,null);
         const updateEnergy = battleActions.updateEnergy;
         for (let targetTurn of battleData.allyPositions) {
 
@@ -1139,27 +1139,27 @@ const sim = {
                 updateEnergy(battleData,amount,targetTurn,true,"Set Battlestart Energy");
             }
         }
-        poke("ElationFinalizePre",battleData);
-        poke("BattlePrep",battleData);//this DOES need to go here before prebattle settings
+        poke("ElationFinalizePre",battleData,null,null);
+        poke("BattlePrep",battleData,null,null);//this DOES need to go here before prebattle settings
         sim.createEnemyTargets(battleData,enemiesToMake);
 
         if (isLoggyLogger) {logToBattle(battleData,{logType: "BattleSettings"});}
-        poke("PreBattleSettings",battleData);//trigger shit like skill point max benefits, if any. Things that need to take place before combat starts.
+        poke("PreBattleSettings",battleData,null,null);//trigger shit like skill point max benefits, if any. Things that need to take place before combat starts.
         if (isLoggyLogger) {logToBattle(battleData,{logType: "EnterCombat"});}
         for (let targetTurn of battleData.allyPositions) {
-            poke("AllyCreated",battleData,{targetTurn});
+            poke("AllyCreated",battleData,{targetTurn},targetTurn);
         }
         // console.log(battleData.nameBasedTurns.char1.statTable)
-        poke("PreBattleEntersCombat",battleData,{});//things that happen once the character creation is done and characters are inserted into the turn order, but battle hasn't technically started yet
+        poke("PreBattleEntersCombat",battleData,null,null);//things that happen once the character creation is done and characters are inserted into the turn order, but battle hasn't technically started yet
         // console.log(battleData.nameBasedTurns.char1.statTable)
 
-        poke("PreBattleStartTechniquesNormal",battleData,{});
+        poke("PreBattleStartTechniquesNormal",battleData,null,null);
         if (isLoggyLogger) {logToBattle(battleData,{logType: "StartBattle"});}
-        poke("StartBattle",battleData,{});
-        poke("StartBattleEnterCombat",battleData,{});
+        poke("StartBattle",battleData,null,null);
+        poke("StartBattleEnterCombat",battleData,null,null);
 
         logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
-        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1},null);
         if (!battleData.attackTechniqueUsed && battleData.battleStartWeaknessReduction) {
             turnLogic.Universal.skillFunctions.battleStartMatchingWeakness(battleData);
             // poke("StartBattle",battleData,{});
@@ -1258,7 +1258,7 @@ const sim = {
             if (sourceTurn.isEnemy) {
                 if (sourceTurn.DOTCounter) {
                     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-                    poke("TurnStartDotEnd", battleData, exoTurnRef);
+                    poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
                 }
                 if (!sourceTurn.isDead) {
                     let turnShouldEnd = false;
@@ -1266,7 +1266,7 @@ const sim = {
                         // currentToughness: finalStats.Toughness,
                         // maxToughness: finalStats.Toughness,
 
-                        poke("RecoveringFromBreak", battleData, exoTurnRef);
+                        poke("RecoveringFromBreak", battleData, exoTurnRef,sourceTurn);
                         if (sourceTurn.turnShouldEnd) {
                             turnShouldEnd = true;
                             sourceTurn.turnShouldEnd = false;
@@ -1276,7 +1276,7 @@ const sim = {
                             sourceTurn.currentToughness = sourceTurn.maxToughness;//restore enemy toughness on their turn starts
                             sourceTurn.isBroken = false;
                             if (isLoggyLogger) {logToBattle(battleData,{logType: "RecoveredFromBreak", name:turnName, isEnemy: sourceTurn.isEnemy, isCharacter:true, AV: battleData.sumAV, turnRef: null});}
-                            poke("RecoveredFromBreak", battleData, exoTurnRef);
+                            poke("RecoveredFromBreak", battleData, exoTurnRef,sourceTurn);
                         }
                     }
                     if (!turnShouldEnd) {
@@ -1389,7 +1389,7 @@ const sim = {
             // let cost = designatedAction.points;
 
             //not sure we need to bother designating enemy actions, but we'll leave it here for now just to be safe. Was only added for duping skills for cerydra on the ally side
-            poke("ActionChosen", battleData, {actionType: designatedAction.action, actionCall: designatedAction.actionCall, sourceTurn});
+            poke("ActionChosen", battleData, {actionType: designatedAction.action, actionCall: designatedAction.actionCall, sourceTurn},sourceTurn);
             if (isLog) {
                 logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
 
@@ -1629,7 +1629,7 @@ const sim = {
                     const checkSpecial = currentUltimate.specialEnergyPoke;
                             // specialEnergyPoke: "SW999GainMMR",
                     if (checkSpecial) {
-                        poke(checkSpecial,battleData,{pointsGained: -energyCost,sourceString:"Ultimate Cost [SPECIAL]"});
+                        poke(checkSpecial,battleData,{pointsGained: -energyCost,sourceString:"Ultimate Cost [SPECIAL]"},sourceTurn);
                     }
                     else {
                         updateEnergy(battleData,-energyCost,sourceTurn,true,"Ultimate Cost");
