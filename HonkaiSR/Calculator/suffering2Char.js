@@ -7432,9 +7432,6 @@ const turnLogic = {
                     }
                 }
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:sourceTurn.properName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TalentStart",battleData,{sourceTurn});
-
                 let healObject = ATKObjects.provisionHealHEALOBJECT;
                 updateEnergy(battleData,1,sourceTurn,false,"Stress Reaction to Horror");
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
@@ -7467,8 +7464,6 @@ const turnLogic = {
                     updateEnergy(battleData,1,sourceTurn,false,"Stress Reaction to Horror");
                     healAlly(battleData,healObject,ally,sourceTurn,skillRef.slot,1,null);
                 }
-
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             huohuoUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -10493,13 +10488,8 @@ const turnLogic = {
                 const bugToApply = bugIndex[charValuesRef.bugCycleCounter-1];
                 const buffSheet = bugToApply.buffSheet;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TalentStart",battleData,{sourceTurn});
-
                 updateBuff(battleData,targetTurn,buffSheet);
                 if (charValuesRef.bugCycleCounter === 3) {charValuesRef.bugCycleCounter = 0;}//reset the bug rotation
-
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -11289,10 +11279,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.kafkaFUAATKOBJECT;
 
-                poke("TalentStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             kafkaTalentDetonate(battleData,sourceTurn,generalInfo) {
                 const talentMulti = 0.80;
@@ -16534,10 +16521,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.archerFUAATKOBJECT;
-
-                poke("TalentStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("TalentEnd",battleData,{sourceTurn});
 
                 //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
                 updateSkillPoints(battleData,1,sourceTurn,false,"Archer - +SP - Talent")
@@ -18899,7 +18883,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 const bronyaTalent = ATKObjects.bronyaTalent ??= logicRef.skillFunctions.bronyaTalent;
-                bronyaTalent(battleData,sourceTurn);
+                bronyaTalent(battleData,sourceTurn);//TODO: just move the function contents inside here later nbd
             },
             bronyaFUABasic(battleData,targetTurn,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -18945,10 +18929,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bronyaFUABasic
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TalentStart",battleData,{sourceTurn});
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject,targetTurn);
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             bronyaTalent(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -18959,11 +18940,8 @@ const turnLogic = {
                 // let skillPathing = characters[characterName].skills;
                 let skillRef = ATKObjects.bronyaTalentREF ??= ATKObjects.Talent["Leading the Way"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                poke("TalentStart",battleData,{sourceTurn});
                 let values = ATKObjects.bronyaTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             bronyaAdvance(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -20444,13 +20422,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.tribbieFUAATKOBJECT;
 
-                poke("TalentStart",battleData,{sourceTurn});
-
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 const buffSheet = ATKObjects.tribbieFUABuffStackSHEET;
                 updateBuff(battleData,sourceTurn,buffSheet);
-
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             tribbieUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -23534,11 +23508,6 @@ const turnLogic = {
                 let skillRef = ATKObjects.sparkleCreateHerringBuffREF ??= ATKObjects.Talent["Red Herring"].variant1;
                 let values = ATKObjects.sparkleCreateHerringBuffREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                if (!isRedone && !silent) {
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:"team", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                    poke("TalentStart",battleData,{sourceTurn});
-                }
-
                 const buffNames = turnLogic[characterName].buffNames;
                 let buffName = buffNames.redHerring;
                 let cipherName = buffNames.cipher;
@@ -23675,10 +23644,6 @@ const turnLogic = {
                     const fakeSheet = ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
                     const enemyPositions = battleData.enemyPositions;
                     updateBuffBatchTargets(battleData,enemyPositions,fakeSheet,false,null,true)
-                }
-
-                if (!isRedone && !silent) {
-                    poke("TalentEnd",battleData,{sourceTurn});
                 }
             },
             talentZoneExpired(battleData,expireParam) {
@@ -25329,16 +25294,12 @@ const turnLogic = {
                 const ATKObject = ATKObjects.bladeFUAATKOBJECT;
                 const healObject = ATKObjects.bladeFUAHEALOBJECT;
 
-                poke("TalentStart",battleData,{sourceTurn});
-
                 healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1);
                 //the %healing is fixed, lines up with all other %healing I've seen done against max HP so far
                 //TODO: later, if a buff ever exists that give an ally or self a buff when healing is done, use that to check when the healing happens here, before or after dmg
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,15,sourceTurn,false,"Cyclone of Destruction");
-
-                poke("TalentEnd",battleData,{sourceTurn});
 
                 const valuesRef = sourceTurn.battleValues;
                 const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
@@ -35545,8 +35506,6 @@ const turnLogic = {
 
                 const valuesRef = sourceTurn.battleValues;
 
-                poke("TalentStart",battleData,{sourceTurn});
-
                 poke("aventurineBetGained",battleData,{pointsGained: -7,sourceString:"FUA Launched"});
                 valuesRef.fuaStackDebt -= 7;
 
@@ -35554,7 +35513,6 @@ const turnLogic = {
 
                 const shieldCall = ATKObjects.aventurineTalentShield ??= logicRef.skillFunctions.aventurineTalentShield;
                 shieldCall(battleData,sourceTurn);
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             aventurineTalentShield(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -41573,8 +41531,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.evaFUAATKOBJECT;
 
-                poke("TalentStart",battleData,{sourceTurn});
-
                 const battleValues = sourceTurn.battleValues;
                 battleValues.fuaTrackerValue -= 240;
                 battleValues.fuaIsQueued = false;
@@ -41591,7 +41547,6 @@ const turnLogic = {
                 }
 
                 updateEnergy(battleData,10,sourceTurn,false,"Master Fox FUA Ended");
-                poke("TalentEnd",battleData,{sourceTurn});
             },
             evaUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
