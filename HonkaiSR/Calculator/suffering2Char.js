@@ -3737,8 +3737,8 @@ const battleActions = {
                 let characterName = sourceTurn.properName;
                 let sumSlotRef = totalsRef.DMG[characterName] ??= {};
                 sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + totals.totalAVGDMG;
-                let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
-                sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+                // let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+                // sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
                 let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
                 sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + totals.totalOverkill;
             }
@@ -3973,14 +3973,17 @@ const battleActions = {
 
 
             
-            let totalsRef = battleData.battleTotal;
-            let characterName = sourceTurn.properName;
-            let sumSlotRef = totalsRef.DMG[characterName] ??= {};
-            sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + newTotals.totalAVGDMG;
-            let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
-            sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
-            let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
-            sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + newTotals.totalOverkill;
+            if (battleData.isLoggyLogger) {
+                let totalsRef = battleData.battleTotal;
+                let characterName = sourceTurn.properName;
+                let sumSlotRef = totalsRef.DMG[characterName] ??= {};
+                sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + newTotals.totalAVGDMG;
+                // let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+                // sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+                let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
+                sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + newTotals.totalOverkill;
+            }
+            
 
             if (!isEnemy) {battleData.battleDamageSUM += newTotals.totalAVGDMG;}
         }
@@ -4245,16 +4248,16 @@ const battleActions = {
             let characterName = sourceTurn.properName;
             let sumSlotRef = totalsRef.DMG[characterName] ??= {};
             sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + totals.totalAVGDMG;
-            let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
-            sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+            // let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+            // sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
             let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
             sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + totals.totalOverkill;
 
             let characterName2 = sourceTurn2.properName;
             let _2sumSlotRef = totalsRef.DMG[characterName2] ??= {};
             _2sumSlotRef[dmgSlot] = (_2sumSlotRef[dmgSlot] ?? 0) + totals2.totalAVGDMG;
-            let _2sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
-            _2sumSlotRef2[dmgSlot] = (_2sumSlotRef2[dmgSlot] ?? 0) + 1;
+            // let _2sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+            // _2sumSlotRef2[dmgSlot] = (_2sumSlotRef2[dmgSlot] ?? 0) + 1;
             let _2sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
             _2sumSlotRef3[dmgSlot] = (_2sumSlotRef3[dmgSlot] ?? 0) + totals2.totalOverkill;
             
@@ -4379,10 +4382,10 @@ const battleActions = {
         battleActions.assignAttackTargetsEnemy(battleData);
         // console.log(battleData.enemiesRemaining)
     },
-    nonViolentWrapper(battleData,ATKPath,charName) {
-        let dmgSlot = ATKPath.slot;
+    actionLogWrapper(battleData,action,charName) {
+        battleData.battleTotal.Actions ??= {};
         let sumSlotRef2 = battleData.battleTotal.Actions[charName] ??= {};
-        sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+        sumSlotRef2[action] = (sumSlotRef2[action] ?? 0) + 1;
     },
     pullCompositeHealBonus(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
@@ -5491,7 +5494,6 @@ const turnLogic = {
                 battleData.punchlineForced = 0;
                 battleData.punchlineConsume = true;
 
-                // battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 poke("AhaInstantEnd",battleData,null);
             },
             expireCertified(battleData,expireParam) {
@@ -7542,7 +7544,6 @@ const turnLogic = {
                     }
                 }
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 sourceTurn.ultyQueued = false;
@@ -7578,8 +7579,6 @@ const turnLogic = {
 
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -9711,8 +9710,6 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 poke("luochaAbyssGained",battleData,{pointsGained: 2,sourceString:"Luocha Technique"});
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -10501,7 +10498,6 @@ const turnLogic = {
 
                 updateBuff(battleData,targetTurn,buffSheet);
                 if (charValuesRef.bugCycleCounter === 3) {charValuesRef.bugCycleCounter = 0;}//reset the bug rotation
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 poke("TalentEnd",battleData,{sourceTurn});
             },
@@ -15813,7 +15809,6 @@ const turnLogic = {
                 valuesRef.bonanzaStacks = rank>=6 ? 3 : 2;
                 valuesRef.isBonanzaActive = true;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Windfall Bonanza Stacks --> ${valuesRef.bonanzaStacks}`});}
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
@@ -15833,7 +15828,6 @@ const turnLogic = {
                 listenerToInejct.ownerTurn = sourceTurn;
 
                 attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -18344,9 +18338,6 @@ const turnLogic = {
                 //major trace Nourished Joviality for spd boost
                 let buffSheet2 = ATKObjects.tingyunSkillBENEDICTIONSHEETSPD;
                 updateBuff(battleData,sourceTurn,buffSheet2);
-
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             benedictionDMG(battleData,sourceTurn,allyTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -18438,7 +18429,6 @@ const turnLogic = {
                 let targetTurn = battleData.primaryTarget;
                 if (targetTurn) {
                     battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,targetTurn,"Violet Sparknado");
-                    battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 }
                 
 
@@ -18490,7 +18480,6 @@ const turnLogic = {
                 updateBuff(battleData,targetTurn,buffSheet);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
             tingyunTechnique(battleData,target,sourceTurn) {
@@ -18510,13 +18499,11 @@ const turnLogic = {
 
                 let amount = 50;//4th param true for fixed amount
                 updateEnergy(battleData,amount,sourceTurn,true,"Tingyun Technique");
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // let amount = 50;//4th param true for fixed amount
                 updateEnergy(battleData,amount,sourceTurn,true,"Tingyun Technique");
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             }
         },
         "listeners": [
@@ -18975,7 +18962,6 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TalentStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("TalentStart",battleData,{sourceTurn});
                 let values = ATKObjects.bronyaTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
                 poke("TalentEnd",battleData,{sourceTurn});
             },
@@ -19033,7 +19019,6 @@ const turnLogic = {
                 }
 
                 if (targetTurn.properName != characterName) {actionAdvance(1,targetTurn,battleData,"Bronya Skill");}//prevent self advancement
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 if (e2) {
                     if (!ATKObjects.bronyaAdvanceE2SHEET) {
@@ -19102,7 +19087,6 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
             bronyaTechnique(battleData,target,sourceTurn) {
@@ -19135,8 +19119,6 @@ const turnLogic = {
                     buffSheet.target = targetTurn.properName;
                     updateBuff(battleData,targetTurn,buffSheet)
                 }
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -19720,7 +19702,6 @@ const turnLogic = {
                     actionAdvance(1,targetTurn,battleData,"Sunday Skill");
                 }//prevent self advancement or harmony characters as the skill describes
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 const charWithBeatified = sourceTurn.battleValues.charWithBeatifiedNameSlot;
@@ -19841,7 +19822,6 @@ const turnLogic = {
                 updateBuff(battleData,sourceTurn,sundayCountdown);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
             sundayTalent(battleData,sourceTurn,targetTurn) {
@@ -19945,7 +19925,6 @@ const turnLogic = {
                 listenerToInejct.ownerTurn = sourceTurn;
 
                 attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             statCheck(battleData,currentTurn,sourceTurn) {
                 // sourceTurn.sundayTalentCRITe6SHEET
@@ -20318,7 +20297,6 @@ const turnLogic = {
                 const applyNuminosity = ATKObjects.applyNuminosity ??= turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity;
                 applyNuminosity(battleData,sourceTurn);
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             applyNuminosity(battleData,sourceTurn) {
@@ -20409,8 +20387,6 @@ const turnLogic = {
 
                 const applyNuminosity = ATKObjects.applyNuminosity ??= turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity;
                 applyNuminosity(battleData,sourceTurn);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             tribbieFUA(battleData,targetTurn,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -21251,7 +21227,6 @@ const turnLogic = {
                     updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 updateEnergy(battleData,5,sourceTurn,false,"Sequential Passage");//trace regen on skill use
             },
@@ -21356,8 +21331,6 @@ const turnLogic = {
                 //     }
                 // }
 
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 const ActionEntry = sourceTurn.robinUltimateCONCERTOTURNEVENT ??= {
@@ -21707,8 +21680,6 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:ownerTurn.properName, target: "Self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 updateEnergy(battleData,5,ownerTurn,false,"Robin Technique");
-
-                battleActions.nonViolentWrapper(battleData,skillRef,ownerTurn.properName);
             },
             "target": "self",
             "priority": -80,
@@ -21976,7 +21947,6 @@ const turnLogic = {
                 }
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
             astaTechnique(battleData,target,sourceTurn) {
@@ -22550,7 +22520,6 @@ const turnLogic = {
                     updateBuffBatchTargets(battleData,allyArray,buffSheet);
                 }
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             overtoneBEConversion(battleData,sourceTurn) {
@@ -22711,8 +22680,6 @@ const turnLogic = {
                 // let targetOverride = superGlobal.getStartingAttacker(battleData);
                 // queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             ruanmeiReBreak(battleData,targetTurn,sourceTurn) {
                 // console.log(targetTurn)
@@ -23440,7 +23407,6 @@ const turnLogic = {
                     }
                 }
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 if (targetTurn.properName != "Sparkle") {actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
             },
             sparkleUltimate(battleData,sourceTurn) {
@@ -23533,7 +23499,6 @@ const turnLogic = {
                 }
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 sourceTurn.ultyQueued = false;
             },
             cipherExpired(battleData,param) {
@@ -23713,7 +23678,6 @@ const turnLogic = {
                 }
 
                 if (!isRedone && !silent) {
-                    battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                     poke("TalentEnd",battleData,{sourceTurn});
                 }
             },
@@ -23747,7 +23711,6 @@ const turnLogic = {
                 let spRecovery = 3;
                 updateSkillPoints(battleData,spRecovery,sourceTurn,false,"Sparkle Technique");
                 updateEnergy(battleData,20,sourceTurn,false,"Sparkle Technique");
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -24508,7 +24471,6 @@ const turnLogic = {
 
                 updateBuff(battleData,sourceTurn,buffSheet);
                 poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"});
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -25279,8 +25241,6 @@ const turnLogic = {
                 
                 sourceTurn.battleValues.hellscapeActive = true;
                 poke("BladeSkillQueueExtraTurn",battleData,exoTurnRef);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,sourceTurn.properName);
             },
             hellscapeExpired(battleData,bladeSlot) {
                 const bladeTurn = battleData.nameBasedTurns[bladeSlot];
@@ -27168,22 +27128,6 @@ const turnLogic = {
                 const conversion = hitType === "blast" ? 0.1 * totalBreak + values[1] : 0.2 * totalBreak + values[0];
                 return conversion;
             },
-            fireflyTechnique(battleData,target,sourceTurn) {
-                let characterName = sourceTurn.properName;
-
-                const logicRef = turnLogic[characterName];
-                const ATKObjects = logicRef.ATKObjects;
-                let skillRef = ATKObjects.fireflyTechREF ??= ATKObjects.Technique["Δ Order: Meteoric Incineration"].variant1;
-
-                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-
-                let attackEndings = battleData.battleListeners.WaveStart ??= [];
-                const listenerToInject = logicRef.listenersToInjectLater.techniqueWaveStart;
-                listenerToInject.ownerTurn = sourceTurn;
-
-                attackEndings.unshift(listenerToInject);
-                // battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-            },
             fireflyTechniqueDMG(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -28672,7 +28616,6 @@ const turnLogic = {
                     logicRef.skillFunctions.addMemToField(battleData,sourceTurn);
                 }
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             addMemToField(battleData,sourceTurn) {
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
@@ -29860,7 +29803,6 @@ const turnLogic = {
                     actionAdvance(1,sourceTurn,battleData,"Skill summoned garment, Aglaea advanced");
                 }
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             aggyGenerateEBAObjects(battleData,skillRef,sourceTurn) {
                 // let skillRef = ATKObjects.aggyBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant1;
@@ -30114,11 +30056,6 @@ const turnLogic = {
                     updateBuff(battleData,garmentTurn,buffSheet);
                 }
 
-
-
-
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
 
@@ -31361,7 +31298,6 @@ const turnLogic = {
 
                 poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"});
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             evernightSkillCritDMG(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -31907,8 +31843,6 @@ const turnLogic = {
 
                 poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Technique - Let it Rain Cold On Thee"});
                 logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             evernightE1FinalMulti(battleData,ownerTurn) {
                 if (battleData.battleIsOver) {return;}
@@ -32825,7 +32759,6 @@ const turnLogic = {
                 // logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
                 // poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"});
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             icaTurnAttack(battleData,target,memoTurn) {
                 // // eventOwner: ownerTurn.name
@@ -33372,8 +33305,6 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -34195,7 +34126,6 @@ const turnLogic = {
 
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             bondmateATKConversion(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -34901,8 +34831,6 @@ const turnLogic = {
                 let targetOverride = superGlobal.getStartingAttacker(battleData);
                 queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
         },
         "listeners": [
@@ -35816,7 +35744,6 @@ const turnLogic = {
                 for (let ally of allies) {
                     updateBuff(battleData,ally,buffSheet);
                 }
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             aventurineE6DMGHandler(battleData,shieldsFound,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -38280,8 +38207,6 @@ const turnLogic = {
 
                 const applySkillZone = ATKObjects.applySkillZone ??= turnLogic[sourceTurn.properName].skillFunctions.applySkillZone;
                 applySkillZone(battleData,sourceTurn);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
                 // if (sourceTurn.battleValues.skillZoneActive) {
@@ -38533,7 +38458,6 @@ const turnLogic = {
                     valuesRef.e4BonusActive = true;
                     updateBuffBatchTargets(battleData,allyPositions,e4Sheet);
                 }
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
@@ -38593,8 +38517,6 @@ const turnLogic = {
                 // let targetOverride = superGlobal.getStartingAttacker(battleData);
                 // queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             elationSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -40717,8 +40639,6 @@ const turnLogic = {
                     actionAdvance(0.50,targetTurn,battleData,"EMC Ult - Non-Elation Target");
                 }
 
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
-
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
@@ -40753,8 +40673,6 @@ const turnLogic = {
 
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet)
-
-                battleActions.nonViolentWrapper(battleData,skillRef,characterName);
             },
             elationSkill(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
