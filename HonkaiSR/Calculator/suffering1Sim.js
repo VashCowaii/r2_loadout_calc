@@ -1496,10 +1496,7 @@ const sim = {
                 // let generalInfo = {sourceTurn,actionName};
                 const targetTurn = currentFUA.target;
 
-                const isFUATrigger = currentFUA.useFUATriggers;
                 const useAnyTrigger = currentFUA.useAnyTriggers;
-                // useFUATriggers: false,
-                // useAnyTriggers: false,
 
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
@@ -1510,33 +1507,21 @@ const sim = {
                 // if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
 
                 if (useAnyTrigger) {
-                    if (isFUATrigger) {
-                        if (isLog) {
-                            const isEnhanced = currentFUA.isEnhanced;
-                            logToBattle(battleData,{logType: "FUAStart",isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
-                            battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
-                        }
-                        poke("FUAStart",battleData,currentFUA,sourceTurn);
-                        currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                        poke("FUAEnd",battleData,currentFUA,sourceTurn);
-                    }
-                    else {
-                        const typeStart = currentFUA.eventTypeStart;
-                        const typeEnd = currentFUA.eventTypeEnd;
+                    // const typeStart = currentFUA.eventTypeStart;
+                    // const typeEnd = currentFUA.eventTypeEnd;
 
-                        if (isLog) {
-                            const displayTypeStart = currentFUA.eventTypeStartLOG;
-                            logToBattle(battleData,{logType: displayTypeStart,isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
-                            battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
-                        }
-                        const isAbility = currentFUA.isAbility;
-                        if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
-                        // poke(typeStart,battleData,generalInfo);
-                        
-                        currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                        if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
-                        // poke(typeEnd,battleData,generalInfo);
+                    if (isLog) {
+                        const displayTypeStart = currentFUA.eventTypeStartLOG;
+                        logToBattle(battleData,{logType: displayTypeStart,isInsertedAbility: true, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                        battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                     }
+                    const isAbility = currentFUA.isAbility;
+                    if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
+                    // poke(typeStart,battleData,generalInfo);
+                    
+                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                    if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
+                    // poke(typeEnd,battleData,generalInfo);
                 }
                 else {
                     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
