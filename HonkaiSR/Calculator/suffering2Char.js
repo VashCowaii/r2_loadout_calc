@@ -9427,7 +9427,7 @@ const turnLogic = {
                         updateBuff(battleData,targetTurn,bonusHealing);
                     }
                     else {
-                        poke("TargetShield",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot});
+                        poke("TargetShield",battleData,{targetType:"Single", sourceTurn, targetTurn, targetSkill:skillRef.slot},sourceTurn);
                         const e2ShieldSHEET = ATKObjects.luochaE2SHIELDSHEET;
                         updateBuff(battleData,targetTurn,e2ShieldSHEET,false,sourceTurn);
                     }
@@ -9443,7 +9443,7 @@ const turnLogic = {
                     }
                 }
 
-                poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Skill Use"});
+                poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Skill Use"},sourceTurn);
 
                 // logicRef.skillFunctions.huohuoApplyDivineProvision(battleData,sourceTurn);
 
@@ -9556,7 +9556,7 @@ const turnLogic = {
                     }
                 }
 
-                poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Ult Use"});
+                poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Ult Use"},sourceTurn);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
@@ -9631,7 +9631,7 @@ const turnLogic = {
                 updateBuff(battleData,sourceTurn,countdownSheet);
                 battleValues.zoneIsActive = true;
                 battleValues.zoneIsQueued = false;
-                poke("luochaAbyssGained",battleData,{pointsGained: -2,sourceString:"Zone Deployed"});
+                poke("luochaAbyssGained",battleData,{pointsGained: -2,sourceString:"Zone Deployed"},sourceTurn);
 
                 if (rank >= 1) {
                     const atkSheet = ATKObjects.luochaE1ATKSHEET;
@@ -9691,7 +9691,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                poke("luochaAbyssGained",battleData,{pointsGained: 2,sourceString:"Luocha Technique"});
+                poke("luochaAbyssGained",battleData,{pointsGained: 2,sourceString:"Luocha Technique"},sourceTurn);
             },
         },
         "listeners": [
@@ -15659,7 +15659,7 @@ const turnLogic = {
                 if (sourceTurn.rank>=2) {updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
             },
             numbyTurnAttack(battleData,eventTurn) {
-                poke("TopazFUAQueue",battleData,{eventTurn});
+                poke("TopazFUAQueue",battleData,{eventTurn},null);
             },
             numbyTurnAttackAction(battleData,targetTurn,sourceTurn) {
                 // const sourceTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
@@ -16059,7 +16059,7 @@ const turnLogic = {
                     battleData.declaredSummons.push(ActionEntry);
                     battleData.nextTurnAV.push(ActionEntry);
                     battleData.battleTotal.Turns[ActionEntry.properName] = 0;
-                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT});
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.topazNUMBYTURNEVENT},ownerTurn);
 
                     const buffNames = logicRef.buffNames;
                     let charValuesRef = logicRef.characterValuesBattle;
@@ -16997,7 +16997,7 @@ const turnLogic = {
                     if (pass && ownerTurn.ArcherCanDoExtraTurn) {
 
                         if (battleData.skillPointCurrent >= 2) {
-                            poke("ArcherQueueExtraTurn",battleData);
+                            poke("ArcherQueueExtraTurn",battleData,null);
                             ownerTurn.ArcherCanDoExtraTurn = false;
                         }
                         else if (noFUA && noULT && !exTurnQueue) {
@@ -21973,7 +21973,7 @@ const turnLogic = {
                                 chargeGain += 1 + (weakness ? 1 : 0);
                             }
                             if (chargeGain) {
-                                poke("astaChargeGained",battleData,{pointsGained: chargeGain,sourceString:"Unique Enemies Hit"});
+                                poke("astaChargeGained",battleData,{pointsGained: chargeGain,sourceString:"Unique Enemies Hit"},null);
                             }
                         },
                         "target": "self",
@@ -21995,7 +21995,7 @@ const turnLogic = {
 
                                 const chargeLossObject = this.chargeLossObject ??= {pointsGained: -amountToLose,sourceString:"Turn-Start Charge Decay"};
                                 chargeLossObject.pointsGained = -amountToLose;
-                                poke("astaChargeGained",battleData,chargeLossObject);
+                                poke("astaChargeGained",battleData,chargeLossObject,null);
                             }
                         },
                         "target": "self",
@@ -23339,7 +23339,7 @@ const turnLogic = {
                 if (adjusted > maximum) {
                     const reserve = adjusted - maximum;
                     // battleValues.reservePoints += reserve;
-                    poke("sparkleReserveSPGained",battleData,{pointsGained: reserve,sourceString:"Ult caused Overflow SP"});
+                    poke("sparkleReserveSPGained",battleData,{pointsGained: reserve,sourceString:"Ult caused Overflow SP"},null);
                 }
 
 
@@ -23738,7 +23738,7 @@ const turnLogic = {
                                     if (actualDiff) {
                                         const amountToGain = reservePoints > actualDiff ? actualDiff : reservePoints;
                                         // battleValues.reservePoints -= amountToGain;
-                                        poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"});
+                                        poke("sparkleReserveSPGained",battleData,{pointsGained: -amountToGain,sourceString:"Used reserve SP"},null);
                                         updateSkillPoints(battleData,amountToGain,ownerTurn,false,"Sparkle: Reserve Skill Points");
                                     }
                                 }
@@ -24145,11 +24145,11 @@ const turnLogic = {
                     updateEnergy(battleData,possibleEnergy,sourceTurn,true);
                     const rank = sourceTurn.rank;
                     ATKObject.bonusMultiplier = (values[3] + (rank>=2 ? 0.07 : 0)) * resoRef;
-                    poke("SaberGainCoreResonance",battleData,{pointsGained: -resoRef,sourceString:"Consumed Core Resonance (Skill Enhance)"});
+                    poke("SaberGainCoreResonance",battleData,{pointsGained: -resoRef,sourceString:"Consumed Core Resonance (Skill Enhance)"},null);
                 }
                 else {
                     ATKObject.bonusMultiplier = 0;
-                    poke("SaberGainCoreResonance",battleData,{pointsGained: 3,sourceString:"Skill"});
+                    poke("SaberGainCoreResonance",battleData,{pointsGained: 3,sourceString:"Skill"},null);
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -24329,7 +24329,7 @@ const turnLogic = {
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.advanceReady = true;
-                poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Enhanced Basic"});
+                poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Enhanced Basic"},null);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 battleValues.isEnhanced = false;
@@ -24362,7 +24362,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 updateBuff(battleData,sourceTurn,buffSheet);
-                poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"});
+                poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"},null);
             },
         },
         "listeners": [
@@ -24558,7 +24558,7 @@ const turnLogic = {
                             updateBuff(battleData,ownerTurn,buffSheet);
         
                             const generalInfo2 = this.generalInfo2 ??= {pointsGained: 3,sourceString:"Dragon Reactor Core: Ally Ultimate"};
-                            poke("SaberGainCoreResonance",battleData,generalInfo2);
+                            poke("SaberGainCoreResonance",battleData,generalInfo2,null);
                         },
                         "target": "self",
                         "listenerName": "Dragon Reactor Core ult listener",
@@ -24571,7 +24571,7 @@ const turnLogic = {
                             if (currentWave != 1) {return;}
                             let ownerTurn = this.ownerTurn;
                             //kinda pepega to have a listener that exists to poke another listener, but it be like that
-                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"Dragon Reactor Core: Battlestart"});
+                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"Dragon Reactor Core: Battlestart"},null);
         
                             const sixtyPercent = ownerTurn.maxEnergy * 0.6;
                             const currentEnergy = ownerTurn.currentEnergy;
@@ -24627,7 +24627,7 @@ const turnLogic = {
                             }
         
                             const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
-                            poke("SaberGainCoreResonance",battleData,pseudoObject);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                            poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
                         },
                         "target": "self",
                         "listenerName": "Blessing of the Lake Overflow",
@@ -24658,7 +24658,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.name != ownerTurn.name) {return;}
-                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"});
+                            poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"E1: The Lost White Walls"},null);
                             //was really tempted to slap this into an AttackEnd listener instead to bundle both together
                             //but realistically, processing-wise it's better to just stick to the specific skill-type listeners
                             //instead of checking every fucking attack including follow-ups, ults, etc
@@ -25128,7 +25128,7 @@ const turnLogic = {
                 updateBuff(battleData,sourceTurn,buffSheet);
                 
                 sourceTurn.battleValues.hellscapeActive = true;
-                poke("BladeSkillQueueExtraTurn",battleData,exoTurnRef);
+                poke("BladeSkillQueueExtraTurn",battleData,exoTurnRef,null);
             },
             hellscapeExpired(battleData,bladeSlot) {
                 const bladeTurn = battleData.nameBasedTurns[bladeSlot];
@@ -25941,7 +25941,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.jingliuSkillATKOBJECT;
 
-                poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Skill Use"});
+                poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Skill Use"},null);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
                 updateEnergy(battleData,15,sourceTurn,false,"Sword Champion");
@@ -26006,7 +26006,7 @@ const turnLogic = {
                 // const oldAmount = sourceTurn.bladeHPTally;
                 // sourceTurn.bladeHPTally *= 0.5
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ult used halving", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${sourceTurn.bladeHPTally.toLocaleString()}`});}
-                poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Ult Use"});
+                poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Ult Use"},null);
 
                 if (rank >= 2) {
                     const buffSheet2 = ATKObjects.jingliuE2PostUltDMGSHEET;
@@ -26065,7 +26065,7 @@ const turnLogic = {
                 valuesRef.enhancedQueued = false;
 
                 const pointsGainedObject = ATKObjects.pointsGainedObject ??= {pointsGained: 1 + (rank >= 6 ? 2 : 0),sourceString:"Entered Spectral Transmigration state"}
-                poke("jingliuWeirdStackGained",battleData,pointsGainedObject);
+                poke("jingliuWeirdStackGained",battleData,pointsGainedObject,null);
             },
             jingliuSkillEnhanced(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -26108,7 +26108,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
 
 
-                poke("jingliuWeirdStackGained",battleData,{pointsGained: -1,sourceString:"Enhanced Skill Use"});
+                poke("jingliuWeirdStackGained",battleData,{pointsGained: -1,sourceString:"Enhanced Skill Use"},null);
 
                 if (rank >= 2) {
                     const buffSheet2 = ATKObjects.jingliuE2PostUltDMGSHEET;
@@ -26131,7 +26131,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 updateEnergy(battleData,15,sourceTurn,false,"Shine of Truth");
-                poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Technique Use"});
+                poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Technique Use"},null);
             },
         },
         "listeners": [
@@ -26204,7 +26204,7 @@ const turnLogic = {
                             if (valuesRef.hpLossCount >= 20) {
                                 valuesRef.hpLossCount -= 20;
                                 const sourceObject = this.sourceObject ??= {pointsGained: 1,sourceString:"HP Loss Counter >= 20"}
-                                poke("jingliuWeirdStackGained",battleData,sourceObject);
+                                poke("jingliuWeirdStackGained",battleData,sourceObject,null);
                             }
         
                             if (battleData.isLoggyLogger) {
@@ -27277,7 +27277,7 @@ const turnLogic = {
         
                             if (!logicRefValues.e2AdvanceCooldown) {
                                 logicRefValues.e2AdvanceCooldown = true;
-                                poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
+                                poke("FireflyE2QueueExtraTurn",battleData,null,null);
                             }
                         },
                         "target": "self",
@@ -27298,7 +27298,7 @@ const turnLogic = {
         
                             if (!logicRefValues.e2AdvanceCooldown) {
                                 logicRefValues.e2AdvanceCooldown = true;
-                                poke("FireflyE2QueueExtraTurn",battleData,{sourceTurn});
+                                poke("FireflyE2QueueExtraTurn",battleData,null,null);
                             }
                         },
                         "target": "self",
@@ -28434,7 +28434,7 @@ const turnLogic = {
                 battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,memTurn,ATKObject,ATKObject2);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: values[2],sourceString:"Enhanced Basic ATK"});
+                poke("rmcMemGainedCharge",battleData,{pointsGained: values[2],sourceString:"Enhanced Basic ATK"},null);
             },
             rmcSkill(battleData,targetTurn,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -28474,7 +28474,7 @@ const turnLogic = {
                     const memTurn = sourceTurn.rmcMemTURNEVENT;
                     healAlly(battleData,healObject,memTurn,sourceTurn,skillRef.slot,1);
 
-                    poke("rmcMemGainedCharge",battleData,{pointsGained: values[1],sourceString:"RMC Skill"});
+                    poke("rmcMemGainedCharge",battleData,{pointsGained: values[1],sourceString:"RMC Skill"},null);
                 }
                 else {
                     logicRef.skillFunctions.addMemToField(battleData,sourceTurn);
@@ -28512,14 +28512,14 @@ const turnLogic = {
                 //inserting into the actual turn order
                 battleData.nextTurnAV.push(memTurn);
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: memTurn.eventImage, AV: battleData.sumAV});}
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: memTurn});
-                poke("AllyCreated",battleData,{targetTurn:memTurn});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: memTurn},sourceTurn);
+                poke("AllyCreated",battleData,{targetTurn:memTurn},memTurn);
                 battleActions.assignAttackTargetsEnemy(battleData);
 
 
                 logicRef.skillFunctions.memTalentCritDMG(battleData,sourceTurn);
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.5,sourceString:"Memo Talent: Go, Mem, Go!"});
+                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.5,sourceString:"Memo Talent: Go, Mem, Go!"},null);
             },
             memTalentCritDMG(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -28672,7 +28672,7 @@ const turnLogic = {
                 chainedAttackRef = chainedAttack(battleData,skillRef,memoTurn,ATKObject1,"Start",chainedAttackRef);
                 chainedAttack(battleData,skillRef,memoTurn,ATKObject2,"End",chainedAttackRef);
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.05,sourceString:"Petite Parable"});
+                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.05,sourceString:"Petite Parable"},null);
             },
             memSkillAdvance(battleData,target,memoTurn) {
                 // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
@@ -28722,7 +28722,7 @@ const turnLogic = {
                 }
 
                 const char1 = target[0];
-                poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"});
+                poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"},null);
 
                 poke("TargetAlly",battleData,{targetType:"Single", sourceTurn: memoTurn, targetTurn:char1, targetSkill:skillRef.slot},sourceTurn);
                 actionAdvance(1,char1,battleData,"Mem's Support");
@@ -28807,8 +28807,8 @@ const turnLogic = {
                 battleActions.assignAttackTargetsEnemy(battleData);
 
 
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
-                poke("AllyDied",battleData,{targetTurn:deathTurn});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn},ownerTurn);
+                poke("AllyDied",battleData,{targetTurn:deathTurn},deathTurn);
 
                 actionAdvance(0.25,ownerTurn,battleData,"Mem Died");
             },
@@ -28862,7 +28862,7 @@ const turnLogic = {
                 const summonUp = sourceTurn.battleValues.memIsActive;
                 if (!summonUp) {logicRef.skillFunctions.addMemToField(battleData,sourceTurn);}
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"RMC: Ultimate used"});
+                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"RMC: Ultimate used"},null);
 
                 const oldValue = valuesRef.epicStacks;
                 valuesRef.epicStacks = Math.min(2,valuesRef.epicStacks + 1);
@@ -29030,7 +29030,7 @@ const turnLogic = {
                                     //however it does NOT ever factor overflow energy.
                 
                                     const conversion = energyAmount/1000;
-                                    poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"});
+                                    poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"},null);
                                 },
                                 "target": "self",
                                 "listenerName": "Mem charge ally gained energy listener",
@@ -29074,7 +29074,7 @@ const turnLogic = {
                             if (!memExists) {return;}
                             if (sourceTurn.maxEnergy <= 0) {
                                 const e4Object = this.e4Object ??= {pointsGained: 0.03,sourceString:"E4 - ally ability with 0 max energy"}
-                                poke("rmcMemGainedCharge",battleData,e4Object);
+                                poke("rmcMemGainedCharge",battleData,e4Object,null);
                             }
                         },
                         "target": "self",
@@ -29310,7 +29310,7 @@ const turnLogic = {
                     const summonEvent = generalInfo.summonEvent;
                     
                     if (summonWas != "Apply" || summonAssignedTo.properName != ownerTurn.properName || summonEvent.properName != memTurn.properName) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
-                    poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"Rhapsode's Scepter"});
+                    poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"Rhapsode's Scepter"},null);
 
                     removeListener(battleData,this,ownerTurn);
                     //since it only applies to the very first summon, we have to remove this listener from the battle state
@@ -29770,8 +29770,8 @@ const turnLogic = {
 
                 //inserting into the actual turn order
                 battleData.nextTurnAV.push(garmentTurnObject);
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: garmentTurnObject});
-                poke("AllyCreated",battleData,{targetTurn:garmentTurnObject});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: garmentTurnObject},sourceTurn);
+                poke("AllyCreated",battleData,{targetTurn:garmentTurnObject},garmentTurnObject);
                 battleActions.assignAttackTargetsEnemy(battleData);
 
                 actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
@@ -29994,8 +29994,8 @@ const turnLogic = {
 
                     updateEnergy(battleData,20,aggyTurn,false,"MemoTalent: Bloom of Drying Grass");
 
-                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: aggyTurn, summonedBy: aggyTurn, summonEvent: garmentTurn});
-                    poke("AllyDied",battleData,{targetTurn:garmentTurn});
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: aggyTurn, summonedBy: aggyTurn, summonEvent: garmentTurn},aggyTurn);
+                    poke("AllyDied",battleData,{targetTurn:garmentTurn},garmentTurn);
                 }
 
                 
@@ -30042,7 +30042,7 @@ const turnLogic = {
                         }
                     }
 
-                    if (garmentTurn.isActive) {poke("AglaeaForceGarmentDeath",battleData,{eventTurn:garmentTurn});}
+                    if (garmentTurn.isActive) {poke("AglaeaForceGarmentDeath",battleData,{eventTurn:garmentTurn},null);}
                 }
             },
             statCheck(battleData,currentTurn) {
@@ -31153,7 +31153,7 @@ const turnLogic = {
 
                 logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
 
-                poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"});
+                poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"},null);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             evernightSkillCritDMG(battleData,sourceTurn) {
@@ -31277,8 +31277,8 @@ const turnLogic = {
                 //inserting into the actual turn order
                 battleData.nextTurnAV.push(eveyTurn);
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: eveyTurn.eventImage, AV: battleData.sumAV});}
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: eveyTurn});
-                poke("AllyCreated",battleData,{targetTurn:eveyTurn});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: eveyTurn},sourceTurn);
+                poke("AllyCreated",battleData,{targetTurn:eveyTurn},eveyTurn);
                 battleActions.assignAttackTargetsEnemy(battleData);
 
 
@@ -31378,7 +31378,7 @@ const turnLogic = {
                 ATKObject.bonusMultiplier = values[1] *  extraMulti;
 
                 battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
-                poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Remembrance, Whirling, Like Rain"});
+                poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Remembrance, Whirling, Like Rain"},null);
             },
             eveyEnhancedAttack(battleData,target,memoTurn) {
                 const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
@@ -31441,7 +31441,7 @@ const turnLogic = {
 
                 updateSkillPoints(battleData,1,evernightTurn,false,"Evey enhanced skill");
                 const finalMemoria = valuesRef.memoria;
-                poke("EvernightGainMemoria",battleData,{pointsGained: -finalMemoria,sourceString:"Consumed Memoria [Enhanced Skill]"});
+                poke("EvernightGainMemoria",battleData,{pointsGained: -finalMemoria,sourceString:"Consumed Memoria [Enhanced Skill]"},null);
                 logicRef.skillFunctions.eveyDeathFunction(battleData,memoTurn,null,finalMemoria);
 
                 if (evernightTurn.riddleIsActive) {
@@ -31452,7 +31452,7 @@ const turnLogic = {
 
                 if (evernightTurn.rank >= 6) {
                     const flooredRefund = Math.floor(memoria * 0.30);
-                    poke("EvernightGainMemoria",battleData,{pointsGained: flooredRefund,sourceString:"E6 Memoria Refund"});
+                    poke("EvernightGainMemoria",battleData,{pointsGained: flooredRefund,sourceString:"E6 Memoria Refund"},null);
                 }
             },
             eveyDeathFunction(battleData,deathTurn,deathParam,memoriaStacks) {
@@ -31528,8 +31528,8 @@ const turnLogic = {
                 normalSPDSheet[SPDP] = SPDValue;
                 updateBuff(battleData,ownerTurn,normalSPDSheet);
 
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
-                poke("AllyDied",battleData,{targetTurn:deathTurn});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn},ownerTurn);
+                poke("AllyDied",battleData,{targetTurn:deathTurn},deathTurn);
             },
             traceHPConsume(battleData,evernightTurn,consumeTarget) {
 
@@ -31698,7 +31698,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Technique - Let it Rain Cold On Thee"});
+                poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Technique - Let it Rain Cold On Thee"},null);
                 logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
             },
             evernightE1FinalMulti(battleData,ownerTurn) {
@@ -31890,7 +31890,7 @@ const turnLogic = {
                             const energyToRegen = 5;
         
                             updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"},null);
                         },
                         "target": "self",
                         "listenerName": "Rouse the Flame, Lull the Light: Memosprite ability or Evernight ability",
@@ -31942,7 +31942,7 @@ const turnLogic = {
                                     }
                                 }
                             }
-                            poke("EvernightGainMemoria",battleData,{pointsGained: 2,sourceString:"Evernight or Evey lost HP"});
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 2,sourceString:"Evernight or Evey lost HP"},null);
         
                             const logicRef = turnLogic[ownerTurn.properName];
                             const ATKObjects = logicRef.ATKObjects;
@@ -32045,7 +32045,7 @@ const turnLogic = {
                             const energyToRegen = 70;
         
                             updateEnergy(battleData,energyToRegen,ownerTurn,false,"Rouse the Flame, Lull the Light");
-                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"});
+                            poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Rouse the Flame, Lull the Light"},null);
                         },
                         "target": "self",
                         "priority": -80,
@@ -32730,8 +32730,8 @@ const turnLogic = {
                 //ICA DOES NOT TAKE TURNS, UNLESS HE WILLS IT
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: icaTurn.eventImage, AV: battleData.sumAV});}
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: icaTurn});
-                poke("AllyCreated",battleData,{targetTurn:icaTurn});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: icaTurn},sourceTurn);
+                poke("AllyCreated",battleData,{targetTurn:icaTurn},icaTurn);
                 battleActions.assignAttackTargetsEnemy(battleData);
 
                 const amountToRegen = 15;
@@ -32771,7 +32771,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Remove", assignedTo: ownerTurn.properName, summonedBy: ownerTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: icaTurn.eventImage, AV: battleData.sumAV});}
 
-                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: icaTurn});
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: icaTurn},ownerTurn);
 
                 ownerTurn.hyacineTargetReadyForTalentHealCounter = 0;
 
@@ -34023,7 +34023,7 @@ const turnLogic = {
 
                     if (dragonTurn.isActive) {
                         bondmateTurn.activeSummons -= 1;
-                        poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: bondmateTurn, summonedBy: sourceTurn, summonEvent: dragonTurn});
+                        poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: bondmateTurn, summonedBy: sourceTurn, summonEvent: dragonTurn},bondmateTurn);
                         sourceTurn.battleValues.bondmateSlot = null;
                         const skillFunctions = logicRef.skillFunctions;
                         skillFunctions.addDragonToOrder(battleData,sourceTurn,targetTurn);
@@ -34090,7 +34090,7 @@ const turnLogic = {
                     // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
                 }
 
-                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot},sourceTurn);
                 const shieldBuffObject = ATKObjects.dhptSkillShieldSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,shieldBuffObject,false,sourceTurn);
@@ -34287,7 +34287,7 @@ const turnLogic = {
                 }
             },
             souldragonTurnAttack(battleData,eventTurn) {
-                poke("DHPTFUAQueue",battleData,{eventTurn});
+                poke("DHPTFUAQueue",battleData,{eventTurn},null);
             },
             souldragonTurnAttackEnhanced(battleData,targetTurn,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -34450,7 +34450,7 @@ const turnLogic = {
 
                 const shieldBuffObject = ATKObjects.dhptUltimateSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
-                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRefUlt.slot});
+                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRefUlt.slot},sourceTurn);
                 
                 for (let ally of allyPositions) {
                     updateBuff(battleData,ally,shieldBuffObject,false,sourceTurn);
@@ -35328,7 +35328,7 @@ const turnLogic = {
                     // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
                 }
 
-                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot},sourceTurn);
                 const shieldBuffObject = ATKObjects.aventurineSkillShieldSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,shieldBuffObject,false,sourceTurn);
@@ -35389,7 +35389,7 @@ const turnLogic = {
 
                 const valuesRef = sourceTurn.battleValues;
 
-                poke("aventurineBetGained",battleData,{pointsGained: -7,sourceString:"FUA Launched"});
+                poke("aventurineBetGained",battleData,{pointsGained: -7,sourceString:"FUA Launched"},null);
                 valuesRef.fuaStackDebt -= 7;
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -35453,7 +35453,7 @@ const turnLogic = {
                 const shieldBuffObject = ATKObjects.aventurineTraceShieldSHIELDSHEET;
                 
                 const allyPositions = battleData.allyPositions;
-                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
+                poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot},sourceTurn);
                 
                 let allyWithLowestShield = null;
                 let allyLowestAmount = 0;
@@ -35485,7 +35485,7 @@ const turnLogic = {
                 // let charSlot = sourceTurn.name;
                 // let skillPathing = characters[characterName].skills;
                 let skillRef = ATKObjects.archerUltimateREF ??= ATKObjects.Ultimate["Roulette Shark"].variant1;
-                poke("aventurineBetGained",battleData,{pointsGained: 4,sourceString:"Ult cast - AVG gain"});
+                poke("aventurineBetGained",battleData,{pointsGained: 4,sourceString:"Ult cast - AVG gain"},null);
 
                 if (!ATKObjects.aventurineUltimateATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
@@ -35706,7 +35706,7 @@ const turnLogic = {
         
                             const sourceTurn = generalInfo.sourceTurn;
                             const stacksToGain = sourceTurn.properName === ownerTurn.properName ? 2 : 1;
-                            poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"});
+                            poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"},null);
                         },
                         "target": "self",
                         "listenerName": "Wager shield hit",
@@ -35760,7 +35760,7 @@ const turnLogic = {
         
                             if (shieldCheck && valuesRef.allyFUABetCounter < 3) {//if the ally had fortified wager and launched a fua, get a point
                                 valuesRef.allyFUABetCounter += 1;//resets on av turnstart
-                                poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"Ally launched FUA"});
+                                poke("aventurineBetGained",battleData,{pointsGained: 1,sourceString:"Ally launched FUA"},null);
                             }
                         },
                         "target": "self",
@@ -36160,7 +36160,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.argentiBasicATKOBJECT;
 
-                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Basic ATK"});
+                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Basic ATK"},null);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
             argentiSkill(battleData,target,sourceTurn) {
@@ -36203,7 +36203,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.argentiSkillATKOBJECT;
 
                 const enemyAmount = battleData.enemyPositions.length;
-                poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Skill"});
+                poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Skill"},null);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
@@ -36311,7 +36311,7 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
-                poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"});
+                poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"},null);
                 
                 if (useEnhancedUlt) {
                     battleActions.attackWrapper(battleData,skillRef2,sourceTurn,ATKObject2);
@@ -36396,7 +36396,7 @@ const turnLogic = {
                     //e4
                     if (rank >= 4) {
                         const e4Poker = this.e4Poker ??= {pointsGained: 2,sourceString:"Turn Start"};
-                        poke("ArgentiGainApotheosis",battleData,e4Poker);
+                        poke("ArgentiGainApotheosis",battleData,e4Poker,null);
                         //I know this says turnstart, but the string here is used to block energy gain
                         //and since E4 doesn't gain energy with these 2 stacks, we use the same string param
                     }
@@ -36458,7 +36458,7 @@ const turnLogic = {
                             // let sourceTurn = generalInfo.sourceTurn;
         
                             if (ownerTurn.turnState) {
-                                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"});
+                                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"},null);
                             }
                         },
                         "target": "self",
@@ -39069,7 +39069,7 @@ const turnLogic = {
                 const isE4 = rank >= 4;
                 const e4PunchlineGain = isE4 ? 5 : 0;
                 battleActions.updatePunchlineValue(battleData,2 + sourceTurn.ultBonusPunchline + e4PunchlineGain,sourceTurn,"Sparxie Ultimate");
-                poke("sparxieThrillGained",battleData,{pointsGained: sourceTurn.ultBonusThrill,sourceString:"Sparxie Ultimate"});
+                poke("sparxieThrillGained",battleData,{pointsGained: sourceTurn.ultBonusThrill,sourceString:"Sparxie Ultimate"},null);
 
                 if (isE4) {
                     const buffSheetE4 = ATKObjects.sparxieE4CRITDMGSHEET;
@@ -39149,7 +39149,7 @@ const turnLogic = {
                 let ignoreInitialCost = false;
                 if (battleValues.thrill) {
                     ignoreInitialCost = true;
-                    poke("sparxieThrillGained",battleData,{pointsGained: -1,sourceString:"Thrill subverted Skill Point cost"});
+                    poke("sparxieThrillGained",battleData,{pointsGained: -1,sourceString:"Thrill subverted Skill Point cost"},null);
                 }
                 updateSkillPoints(battleData,-1,sourceTurn,ignoreInitialCost,"Skill");
 
@@ -39203,7 +39203,7 @@ const turnLogic = {
 
                     if (battleValues.thrill) {
                         ignoreContinueCost = true;
-                        poke("sparxieThrillGained",battleData,{pointsGained: -1,sourceString:"Thrill subverted Skill Point cost"});
+                        poke("sparxieThrillGained",battleData,{pointsGained: -1,sourceString:"Thrill subverted Skill Point cost"},null);
                     }
                     else {ignoreContinueCost = false;}
                     updateSkillPoints(battleData,-1,sourceTurn,ignoreContinueCost,"Skill: Engagement Farming");
@@ -39503,7 +39503,7 @@ const turnLogic = {
                     bounceData.bounceCount = Math.min(40,20 + battleData.punchline);
                 }
                 
-                poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Elation Skill"});
+                poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Elation Skill"},null);
                 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
@@ -39803,7 +39803,7 @@ const turnLogic = {
                             queueExtraTurn(battleData,queueObject);
     
                             //NOTE: confirmed thrill gain is after queue
-                            poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Sparxie E2"});
+                            poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Sparxie E2"},null);
                         },
                         "target": "owner",
                         "listenerName": "E2: #AudienceKnows aha instant end extra turn gain",
@@ -40193,7 +40193,7 @@ const turnLogic = {
                 }
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                poke("emcSkillEndingCBGain",battleData,exoTurnRef);
+                poke("emcSkillEndingCBGain",battleData,exoTurnRef,null);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -41399,7 +41399,7 @@ const turnLogic = {
 
 
                 if (rank >= 1) {
-                    poke("EvanesciaE1ElationQueue",battleData,null);
+                    poke("EvanesciaE1ElationQueue",battleData,null,null);
                 }
 
                 updateEnergy(battleData,10,sourceTurn,false,"Master Fox FUA Ended");
@@ -41491,7 +41491,7 @@ const turnLogic = {
                 const chainedAttack = battleActions.attackWrapperChained;
                 
                 chainedAttackRef = chainedAttack(battleData,skillRef,sourceTurn,ATKObject,"Start",chainedAttackRef);
-                poke("EvaMidUltForceElationDMG",battleData,chainedAttackRef);
+                poke("EvaMidUltForceElationDMG",battleData,chainedAttackRef,null);
 
                 chainedAttack(battleData,skillRef,sourceTurn,ATKObject2,"End",chainedAttackRef);
 
