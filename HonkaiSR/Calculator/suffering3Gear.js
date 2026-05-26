@@ -11757,7 +11757,7 @@ const turnLogicRelics = {
 
                         if (stacksToAdd === 0) {
                             //if we have nothing to add it's bc we are already capped and can kill this listener since it is teamwide and not individual
-                            removeListener(battleData,this,sourceTurn);
+                            removeListener(battleData,this,null);
                         }
                         battleData.everGloriousMagicalTrackerStacks += stacksToAdd;
 
@@ -13134,7 +13134,7 @@ const turnLogicRelics = {
 
                         if (sigoniaRef.completed >= sigoniaRef.total) {
                             //when all owners have completed, remove the listener so it's not constantly checking for shit
-                            removeListener(battleData,this,sourceTurn);
+                            removeListener(battleData,this,null);
                         }
                     },
                     "target": "self",
