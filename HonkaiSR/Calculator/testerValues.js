@@ -949,6 +949,41 @@ const conditionLibrary = {
     "Enemies (On-Field)"(battleData,sourceTurn,condition) {
         return battleData.allAllyTargetsArray;
     },
+    BLAST(battleData,sourceTurn,targetResult) {
+        if (targetResult.length === 0) {return [];}//if we don't even have a primary target, wtf is the point
+
+        const primaryTarget = targetResult[0];
+        if (primaryTarget.isEnemy) {
+            const enemyPositions = battleData.enemyPositions;
+            if (enemyPositions.length === 1) {return [];}//if the primary target is the only target, then we have no subs
+
+            const targetIndex = enemyPositions.indexOf(primaryTarget);
+            if (targetIndex === -1) {return [];}//if the target is somehow unselectable, that means it's not on field to HAVE blast targets, think like Netherwing
+
+            let returnArray = [];
+            const subCheck1 = enemyPositions[targetIndex - 1];
+            const subCheck2 = enemyPositions[targetIndex + 1];
+            if (subCheck1) {returnArray.push(subCheck1)}
+            if (subCheck2) {returnArray.push(subCheck2)}
+
+            return returnArray;
+        }
+        else {
+            const allyPositions = battleData.allyPositions;
+            if (allyPositions.length === 1) {return [];}//if the primary target is the only target, then we have no subs
+
+            const targetIndex = allyPositions.indexOf(primaryTarget);
+            if (targetIndex === -1) {return [];}//if the target is somehow unselectable, that means it's not on field to HAVE blast targets, think like Netherwing
+
+            let returnArray = [];
+            const subCheck1 = allyPositions[targetIndex - 1];
+            const subCheck2 = allyPositions[targetIndex + 1];
+            if (subCheck1) {returnArray.push(subCheck1)}
+            if (subCheck2) {returnArray.push(subCheck2)}
+
+            return returnArray;
+        }
+    },
 
 
 
@@ -1335,7 +1370,7 @@ const defaultConditions = {
         
         return result
     },
-    getAbilityTargetCondition(battleData,sourceTurn,poolKey,fallbackTarget,refKey) { 
+    getAbilityTargetCondition(battleData,sourceTurn,poolKey,fallbackTarget,refKey,subTargetKey) { 
         const conditionPath = battleData[sourceTurn.name]?.[refKey];
         // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
         if (!conditionPath) {return conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);}//if someone doesn't have an ulty condition, then default to fallback targeting
@@ -1352,8 +1387,19 @@ const defaultConditions = {
         initialGlobalTargetPool = null;
 
         // console.log(result,"AAAAAAAAAAAAAAAAAAA")
+
+        let finalTargetResult = result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
+
+        if (subTargetKey) {
+            const subTargets = conditionLibrary[subTargetKey](battleData,sourceTurn,finalTargetResult);
+
+            return [finalTargetResult,subTargets];
+        }
+        else {
+            return finalTargetResult;
+        }
         
-        return result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
+        // return result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
     },
 
     //DESTRUCTION
