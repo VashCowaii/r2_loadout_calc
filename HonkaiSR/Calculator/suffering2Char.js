@@ -7041,6 +7041,7 @@ const turnLogic = {
                             statCheck(battleData,ownerTurn);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Novel Concoction B.E. check",
                         "ownerTurn": {},
                     },
