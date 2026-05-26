@@ -4988,11 +4988,15 @@ const battleActions = {
         battleData.bounceOrderEnemy = bounceOrder;
         battleData.AOETargetsEnemy = newPositions;
     },
-    removeListenerInBattle(battleData,listenerObject) {
+    removeListenerInBattle(battleData,listenerObject,ownership) {
         const listenerName = listenerObject.listenerName;
         const trigger = listenerObject.trigger;
 
-        let listenerRef = battleData.battleListeners[trigger];
+        const isPersonal = listenerObject.isPersonal;
+        const personalRef = isPersonal ? (battleData.battleListenersPersonal[assignOwnerTurn.properName]) : null;
+
+        // let listenerRef = battleData.battleListeners[trigger];
+        let listenerRef = (isPersonal ? (personalRef[trigger]) : battleData.battleListeners[trigger]);
         for (let i=0;i<listenerRef.length;i++) {
             let currentListener = listenerRef[i];
             if (currentListener.listenerName === listenerName) {
@@ -5740,6 +5744,7 @@ const turnLogic = {
                         isEnhanced: false,
                         isTieBreaker: false,
                         isExtraTurn: false,
+                        isInserted: true,
                         skipEXDisplay: false,
                         allowUlts: false,
                         decrementBuffs: false,
@@ -8377,6 +8382,7 @@ const turnLogic = {
                                         isEnhanced: false,
                                         isTieBreaker: false,
                                         isExtraTurn: false,
+                                        isInserted: true,
                                         skipEXDisplay: false,
                                         allowUlts: false,
                                         decrementBuffs: false,
@@ -9783,6 +9789,7 @@ const turnLogic = {
                                     isEnhanced: false,
                                     isTieBreaker: false,
                                     isExtraTurn: false,
+                                    isInserted: true,
                                     skipEXDisplay: false,
                                     allowUlts: false,
                                     decrementBuffs: false,
@@ -9973,6 +9980,7 @@ const turnLogic = {
                             isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
+                            isInserted: true,
                             skipEXDisplay: false,
                             allowUlts: false,
                             decrementBuffs: false,
@@ -11577,6 +11585,7 @@ const turnLogic = {
                                     isEnhanced: false,
                                     isTieBreaker: false,
                                     isExtraTurn: false,
+                                    isInserted: true,
                                     skipEXDisplay: false,
                                     allowUlts: false,
                                     decrementBuffs: false,
@@ -14032,6 +14041,7 @@ const turnLogic = {
                     isEnhanced: false,
                     isTieBreaker: false,
                     isExtraTurn: false,
+                    isInserted: true,
                     skipEXDisplay: false,
                     allowUlts: false,
                     decrementBuffs: false,
@@ -15981,6 +15991,7 @@ const turnLogic = {
                         isEnhanced: false,
                         isTieBreaker: false,
                         isExtraTurn: false,
+                        isInserted: true,
                         skipEXDisplay: false,
                         allowUlts: false,
                         decrementBuffs: false,
@@ -16848,6 +16859,7 @@ const turnLogic = {
                                     isEnhanced: false,
                                     isTieBreaker: false,
                                     isExtraTurn: false,
+                                    isInserted: true,
                                     skipEXDisplay: false,
                                     allowUlts: false,
                                     decrementBuffs: false,
@@ -19164,6 +19176,7 @@ const turnLogic = {
                                     isEnhanced: false,
                                     isTieBreaker: false,
                                     isExtraTurn: false,
+                                    isInserted: true,
                                     skipEXDisplay: false,
                                     allowUlts: false,
                                     decrementBuffs: false,
@@ -20747,6 +20760,7 @@ const turnLogic = {
                                 isEnhanced: false,
                                 isTieBreaker: false,
                                 isExtraTurn: false,
+                                isInserted: true,
                                 skipEXDisplay: false,
                                 allowUlts: false,
                                 decrementBuffs: false,
@@ -22963,6 +22977,7 @@ const turnLogic = {
                         isEnhanced: false,
                         isTieBreaker: false,
                         isExtraTurn: false,
+                        isInserted: true,
                         skipEXDisplay: false,
                         allowUlts: false,
                         decrementBuffs: false,
@@ -25534,6 +25549,7 @@ const turnLogic = {
                                     isEnhanced: false,
                                     isTieBreaker: false,
                                     isExtraTurn: false,
+                                    isInserted: true,
                                     skipEXDisplay: false,
                                     allowUlts: false,
                                     decrementBuffs: false,
@@ -26399,6 +26415,7 @@ const turnLogic = {
                             isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
+                            isInserted: true,
                             skipEXDisplay: false,
                             allowUlts: false,
                             decrementBuffs: false,
@@ -30452,6 +30469,9 @@ const turnLogic = {
                                 if (sourceTurn.eventOwner === ownerTurn.name) {isSourcedFromAggy = true;}
                             }
                             else if (sourceTurn.properName === ownerTurn.properName) {isSourcedFromAggy = true;}
+
+                            if (!isSourcedFromAggy && generalInfo.isInserted) {return;}
+                            //inserts or FUA actions will not clear e2 if from other people, and WILL STACK more e2 if from aggy/garment
     
                             const aggyE2Handler = this.aggyE2Handler ??= turnLogic[ownerTurn.properName].skillFunctions.aggyE2Handler;
                             if (isSourcedFromAggy) {aggyE2Handler(battleData,ownerTurn,"Apply");}
@@ -30485,6 +30505,7 @@ const turnLogic = {
                         isEnhanced: false,
                         isTieBreaker: false,
                         isExtraTurn: false,
+                        isInserted: true,
                         skipEXDisplay: false,
                         allowUlts: false,
                         decrementBuffs: false,
@@ -34849,6 +34870,7 @@ const turnLogic = {
                             isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
+                            isInserted: true,
                             skipEXDisplay: false,
                             allowUlts: false,
                             decrementBuffs: false,
@@ -34889,6 +34911,7 @@ const turnLogic = {
                             isEnhanced: false,
                             isTieBreaker: false,
                             isExtraTurn: false,
+                            isInserted: true,
                             skipEXDisplay: false,
                             allowUlts: false,
                             decrementBuffs: false,
@@ -35907,6 +35930,7 @@ const turnLogic = {
                                 isEnhanced: false,
                                 isTieBreaker: false,
                                 isExtraTurn: false,
+                                isInserted: true,
                                 skipEXDisplay: false,
                                 allowUlts: false,
                                 decrementBuffs: false,
@@ -41980,6 +42004,7 @@ const turnLogic = {
                                 isEnhanced: false,
                                 isTieBreaker: false,
                                 isExtraTurn: false,
+                                isInserted: true,
                                 skipEXDisplay: false,
                                 allowUlts: false,
                                 decrementBuffs: false,
