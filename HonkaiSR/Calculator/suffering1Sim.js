@@ -1450,19 +1450,19 @@ const sim = {
             }
         }
     },
-    pokeListenersSet(triggerNameArray,battleData,generalInfo) {
-        const arrayLength = triggerNameArray.size;
+    pokeListenersSet(triggerNameArray,battleData,generalInfo,personalOwner) {
+        if (personalOwner) {
+            const triggerRef = battleData.battleListenersPersonal[personalOwner.properName] ??= {};
+            // const listenerRef = triggerRef[triggerName] ??= [];
 
-        // console.log(triggerNameArray)
-
-        // for (let ii=0;ii<arrayLength;ii++) {
-        //     const triggerName = triggerNameArray[ii];
-        //     const triggerRef = battleData.battleListeners[triggerName] ??= [];
-        //     console.log(triggerName,triggerNameArray)
-        //     for (let i = triggerRef.length-1; i>=0; i--) {
-        //         triggerRef[i].condition(battleData,generalInfo);
-        //     }
-        // }
+            for (let triggerName of triggerNameArray) {
+                const listenerRef = triggerRef[triggerName] ??= [];
+                // console.log(triggerName,triggerNameArray)
+                for (let i = listenerRef.length-1; i>=0; i--) {
+                    listenerRef[i].condition(battleData,generalInfo);
+                }
+            }
+        }
 
         for (let triggerName of triggerNameArray) {
             const triggerRef = battleData.battleListeners[triggerName] ??= [];
