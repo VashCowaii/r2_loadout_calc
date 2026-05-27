@@ -5353,7 +5353,7 @@ const turnLogicLightcones = {
     },
 
     //HARMONY
-    "Earthly Escapade": {
+    "Earthly Escapade": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             updateMask(battleData,currentTurn,ownerRank,battleStartOverride) {
@@ -5436,13 +5436,82 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Earthly Escapade listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "SPChange",
+                        condition(battleData,generalInfo) {
+                            let SPDiff = generalInfo.SPChange;
+                            if (SPDiff <= 0) {return;}//don't care about non sp gains, regardless of the source
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            let lcNameRef = "Earthly Escapade";
+                            let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+                            let buffSheet = this.radiantFlameBUFFSHEET ??= {
+                                "stats": null,
+                                "source": lcNameRef,
+                                "sourceOwner": sourceTurn.properName,
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 4,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                            buffSheet.currentStacks = SPDiff;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+        
+                            let buffRef = sourceTurn.buffsObject[buffName];
+                            if (buffRef.currentStacks >= 4) {
+                                //clear radiant flame first
+                                removeBuff(battleData,sourceTurn,buffRef);
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+        
+                                //then apply/update mask
+                                const updateMask = this.shortRef ??= turnLogicLightcones[lcNameRef].skillFunctions.updateMask;
+                                updateMask(battleData,sourceTurn,ownerRank,null);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Earthly Escapade - SP Mask check",
+                    }
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let ownersSlots = this.ownersSlots;
-                    let lcNameRef = "Earthly Escapade";
 
-                    const updateMask = this.shortRef ??= turnLogicLightcones[lcNameRef].skillFunctions.updateMask;
+                    const updateMask = this.shortRef ??= turnLogicLightcones["Earthly Escapade"].skillFunctions.updateMask;
+                    
                     const namedTurns = battleData.nameBasedTurns;
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
@@ -5453,55 +5522,10 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Earthly Escapade - Mask Application Battlestart",
                 "owners": []
             },
-            {
-                "trigger": "SPChange",
-                condition(battleData,generalInfo) {
-                    let SPDiff = generalInfo.SPChange;
-                    if (SPDiff <= 0) {return;}//don't care about non sp gains, regardless of the source
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//then abort non-owners
-
-                    let lcNameRef = "Earthly Escapade";
-                    let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
-                    let buffSheet = this.radiantFlameBUFFSHEET ??= {
-                        "stats": null,
-                        "source": lcNameRef,
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffName,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 4,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    }
-                    
-                    
-                    buffSheet.currentStacks = SPDiff;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-
-                    let buffRef = sourceTurn.buffsObject[buffName];
-                    if (buffRef.currentStacks >= 4) {
-                        //clear radiant flame first
-                        removeBuff(battleData,sourceTurn,buffRef);
-
-                        //then apply/update mask
-                        const updateMask = this.shortRef ??= turnLogicLightcones[lcNameRef].skillFunctions.updateMask;
-                        updateMask(battleData,sourceTurn,ownerRank,null);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Earthly Escapade - SP Mask check",
-                "owners": [],
-                "ownersSlots": {}
-            }
         ],
         "buffNames": {
             "buff1": "Radiant Flame",
@@ -5511,63 +5535,87 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
-    "But the Battle Isn't Over": {
+    "But the Battle Isn't Over": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill" && action != "Ultimate") {return;}
-
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (action === "Ultimate") {
-                        const poolKey = generalInfo.poolKey;
-                        if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
-
-                        sourceTurn.battleIsntOverUltyCount = (sourceTurn.battleIsntOverUltyCount ?? 2) + 1;
-                        //if the character never used it yet, we start them at the point that the sp regen can happen anyways
-                        //then after that it is business as usual
-                        if (sourceTurn.battleIsntOverUltyCount === 3) {
-                            sourceTurn.battleIsntOverUltyCount = 1;
-                            updateSkillPoints(battleData,1,sourceTurn,false,"But the Battle Isn't Over");
-                        }
-                    }
-                    else {
-                        const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
-                        if (!nextAllyTurn) {return;}
-
-                        if (!sourceTurn.battleIsntOverSkillEndSHEET) {
-                            let lcNameRef = "But the Battle Isn't Over";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let rankParams = lcPathing[ownerRank-1];
-                            let values = rankParams[1];
-
-                            sourceTurn.battleIsntOverSkillEndSHEET = {
-                                "stats": [DamageAll],
-                                [DamageAll]: values,
-                                "source": lcNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
-                                "durationInTurn": 1,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn"
-                            }
-                        }
-
-                        let buffSheet = sourceTurn.battleIsntOverSkillEndSHEET
-                        updateBuff(battleData,nextAllyTurn,buffSheet);
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "But the Battle Isn't Over buff prep controller",
-                "owners": []
+                "listenerName": "But the Battle Isn't Over listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (action === "Ultimate") {
+                                const poolKey = generalInfo.poolKey;
+                                if (!alliedPoolKeys.has(poolKey)) {return;}//preempt nonally targeting instances
+        
+                                sourceTurn.battleIsntOverUltyCount = (sourceTurn.battleIsntOverUltyCount ?? 2) + 1;
+                                //if the character never used it yet, we start them at the point that the sp regen can happen anyways
+                                //then after that it is business as usual
+                                if (sourceTurn.battleIsntOverUltyCount === 3) {
+                                    sourceTurn.battleIsntOverUltyCount = 1;
+                                    updateSkillPoints(battleData,1,sourceTurn,false,"But the Battle Isn't Over");
+                                }
+                            }
+                            else {
+                                const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
+                                if (!nextAllyTurn) {return;}
+        
+                                if (!sourceTurn.battleIsntOverSkillEndSHEET) {
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
+                                    let lcNameRef = "But the Battle Isn't Over";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let rankParams = lcPathing[ownerRank-1];
+                                    let values = rankParams[1];
+        
+                                    sourceTurn.battleIsntOverSkillEndSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: values,
+                                        "source": lcNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
+                                        "durationInTurn": 1,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn"
+                                    }
+                                }
+        
+                                let buffSheet = sourceTurn.battleIsntOverSkillEndSHEET
+                                updateBuff(battleData,nextAllyTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "But the Battle Isn't Over buff prep controller",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -5576,136 +5624,179 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
-    "Dance! Dance! Dance!": {
+    "Dance! Dance! Dance!": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    let lcNameRef = "Dance! Dance! Dance!";
-                    if (!sourceTurn.danceDanceDanceREF) {
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        sourceTurn.danceDanceDanceREF = rankParams[0];//advancement value
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    let values = sourceTurn.danceDanceDanceREF;
-                    
-                    for (let targetTurn of battleData.allyPositions) {
-                        actionAdvance(values,targetTurn,battleData,lcNameRef);
-                    }
-                    //quick note for myself in the future, just checked to be certain and tingyun doing double technique
-                    //to get full energy entering the battle, and insta casting ult, DOES cast it at 0 AV, ergo
-                    //it CAN advance everyone preemptively. Kinda cool, never knew that.
-                    //calc already allowed it to work like that, just wanted to be sure. Go calc, lmao.
                 },
                 "target": "self",
-                "listenerName": "Dance! Dance! Dance! - Team Advance",
-                "owners": []
+                "listenerName": "A Grounded Ascent listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            let lcNameRef = "Dance! Dance! Dance!";
+                            if (!sourceTurn.danceDanceDanceREF) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                sourceTurn.danceDanceDanceREF = rankParams[0];//advancement value
+                            }
+                            let values = sourceTurn.danceDanceDanceREF;
+                            
+                            for (let targetTurn of battleData.allyPositions) {
+                                actionAdvance(values,targetTurn,battleData,lcNameRef);
+                            }
+                            //quick note for myself in the future, just checked to be certain and tingyun doing double technique
+                            //to get full energy entering the battle, and insta casting ult, DOES cast it at 0 AV, ergo
+                            //it CAN advance everyone preemptively. Kinda cool, never knew that.
+                            //calc already allowed it to work like that, just wanted to be sure. Go calc, lmao.
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dance! Dance! Dance! - Team Advance",
+                    },
+                ]
             },
         ],
         "buffNames": {},
     },
-    "A Grounded Ascent": {
+    "A Grounded Ascent": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill" && action != "Ultimate") {return}
-                    
-                    let sourceTurn = generalInfo.sourceTurn;
-                    const poolKey = generalInfo.poolKey;
-                    if (!alliedPoolKeys.has(poolKey)) {
-                        //kill the SP counter if we ever have a skill or ult touching an enemy instead of an ally with targeting
-                        sourceTurn.groundedAscentTargetStacks = 0;
-                    }
-                    else {
-                        const targets = generalInfo.target;
-                        const subTarget = generalInfo.subTarget;
-                        if (targets.length + (subTarget?.length ?? 0) > 1) {return};
-
-                        const targetTurn = targets[0];
-
-                        if (!sourceTurn.groundedAscentHymnSHEET) {
-                            let lcNameRef = "A Grounded Ascent";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let ownerSlot = sourceTurn.name;
-                            let ownersSlots = this.ownersSlots;
-                            const ownerRank = ownersSlots[ownerSlot];
-                            let rankParams = lcPathing[ownerRank-1];
-                            sourceTurn.groundedAscentHymnPARAMS = rankParams;
-                            let values = rankParams[1];
-                            // greatTableIndex
-                            // greatTableKeys
-                            sourceTurn.groundedAscentHymnSHEET = {
-                                "stats": [DamageAll],
-                                [DamageAll]: values,
-                                "source": lcNameRef,
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
-                                "durationInTurn": 4,
-                                "duration": 3,//does this count as applied within own turn or applied before designating the turn as next?
-                                "AVApplied": 0,
-                                "maxStacks": 3,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                                "removeOnDeath": true,
-                            }
-                        }
-                        const values = sourceTurn.groundedAscentHymnPARAMS;
-                        const buffSheet = sourceTurn.groundedAscentHymnSHEET;
-
-                        updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
-
-
-                        sourceTurn.groundedAscentTargetStacks ??= 0;
-                        sourceTurn.groundedAscentTargetStacks += 1;
-                        if (sourceTurn.groundedAscentTargetStacks === 2) {
-                            sourceTurn.groundedAscentTargetStacks = 0;
-                            updateSkillPoints(battleData,1,sourceTurn,false,"A Grounded Ascent - Departing Anew");
-                            //for now assume that either or on skill/ulty will stack this
-                            //it DOES actually work that way, thankfully
-                        }
-
-                        const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
-                        const hasMemosprite = targetTurn.activeMemosprites;
-                        const memospriteEventRef = targetTurn.memospriteEventRef;
-                        const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
-                        
-                        const ownerFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
-                        // if (!memoTurn && ownerFinished) {return;}
-
-                        const targetChildEntities = sourceTurn.properName === "Sunday";
-                        if (targetChildEntities && !memoTurn) {
-                            if (ownerFinished) {return;}
-                            updateBuff(battleData,targetTurn,buffSheet);
-                        }
-                        else {
-                            if (!ownerFinished) {updateBuff(battleData,targetTurn,buffSheet);}
-                            if (targetChildEntities) {
-                                const buffCheck = memoTurn.buffsObject[buffSheet.buffName];
-                                const memoFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
-                                if (!memoFinished) {updateBuff(battleData,memoTurn,buffSheet);}
-                            }
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "A Grounded Ascent - buff application and SP regen",
+                "listenerName": "A Grounded Ascent listener setup",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "Ultimate") {return}
+                            
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const poolKey = generalInfo.poolKey;
+                            if (!alliedPoolKeys.has(poolKey)) {
+                                //kill the SP counter if we ever have a skill or ult touching an enemy instead of an ally with targeting
+                                sourceTurn.groundedAscentTargetStacks = 0;
+                            }
+                            else {
+                                const targets = generalInfo.target;
+                                const subTarget = generalInfo.subTarget;
+                                if (targets.length + (subTarget?.length ?? 0) > 1) {return};
+        
+                                const targetTurn = targets[0];
+        
+                                if (!sourceTurn.groundedAscentHymnSHEET) {
+                                    let lcNameRef = "A Grounded Ascent";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let ownerSlot = sourceTurn.name;
+                                    let ownersSlots = this.ownersSlots;
+                                    const ownerRank = ownersSlots[ownerSlot];
+                                    let rankParams = lcPathing[ownerRank-1];
+                                    sourceTurn.groundedAscentHymnPARAMS = rankParams;
+                                    let values = rankParams[1];
+                                    // greatTableIndex
+                                    // greatTableKeys
+                                    sourceTurn.groundedAscentHymnSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: values,
+                                        "source": lcNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
+                                        "durationInTurn": 4,
+                                        "duration": 3,//does this count as applied within own turn or applied before designating the turn as next?
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "removeOnDeath": true,
+                                    }
+                                }
+                                const values = sourceTurn.groundedAscentHymnPARAMS;
+                                const buffSheet = sourceTurn.groundedAscentHymnSHEET;
+        
+                                updateEnergy(battleData,values[0],sourceTurn,false,"A Grounded Ascent - Ally targeted");
+        
+        
+                                sourceTurn.groundedAscentTargetStacks ??= 0;
+                                sourceTurn.groundedAscentTargetStacks += 1;
+                                if (sourceTurn.groundedAscentTargetStacks === 2) {
+                                    sourceTurn.groundedAscentTargetStacks = 0;
+                                    updateSkillPoints(battleData,1,sourceTurn,false,"A Grounded Ascent - Departing Anew");
+                                    //for now assume that either or on skill/ulty will stack this
+                                    //it DOES actually work that way, thankfully
+                                }
+        
+                                const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                                const hasMemosprite = targetTurn.activeMemosprites;
+                                const memospriteEventRef = targetTurn.memospriteEventRef;
+                                const memoTurn = hasMemosprite ? targetTurn[memospriteEventRef] : null;
+                                
+                                const ownerFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
+                                // if (!memoTurn && ownerFinished) {return;}
+        
+                                const targetChildEntities = sourceTurn.properName === "Sunday";
+                                if (targetChildEntities && !memoTurn) {
+                                    if (ownerFinished) {return;}
+                                    updateBuff(battleData,targetTurn,buffSheet);
+                                }
+                                else {
+                                    if (!ownerFinished) {updateBuff(battleData,targetTurn,buffSheet);}
+                                    if (targetChildEntities) {
+                                        const buffCheck = memoTurn.buffsObject[buffSheet.buffName];
+                                        const memoFinished = buffCheck && buffCheck.currentStacks === buffCheck.maxStacks;
+                                        if (!memoFinished) {updateBuff(battleData,memoTurn,buffSheet);}
+                                    }
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "A Grounded Ascent - buff application and SP regen",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -5714,7 +5805,7 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
-    "If Time Were a Flower": {
+    "If Time Were a Flower": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             updatePresage(battleData,currentTurn,ownerRank) {
@@ -5785,8 +5876,59 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Past Self in Mirror listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
+
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+        
+                            let lcNameRef = "If Time Were a Flower";
+                            const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                            updatePresage(battleData,sourceTurn,ownerRank);
+                            updateEnergy(battleData,12,sourceTurn,false,"If Time Were a Flower [FUA Started]");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "If Time Were a Flower - FUA launched listener",
+                    }
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     let lcNameRef = "If Time Were a Flower";
@@ -5803,38 +5945,11 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "If Time Were a Flower - Presage Application Battlestart + energy regen",
                 "owners": [],
                 "ownersSlots": {}
             },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    let isFUA = false;
-                    const actionTags = generalInfo.ATKObject.actionTags;
-                    for (let tag of actionTags) {
-                        if (tag === "FUA") {
-                            isFUA = true;
-                            break;
-                        }
-                    }
-                    if (!isFUA) {return;}
-
-                    let lcNameRef = "If Time Were a Flower";
-                    const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
-                    updatePresage(battleData,sourceTurn,ownerRank);
-                    updateEnergy(battleData,12,sourceTurn,false,"If Time Were a Flower [FUA Started]");
-                },
-                "target": "self",
-                "listenerName": "If Time Were a Flower - FUA launched listener",
-                "owners": [],
-                "ownersSlots": {}
-            }
         ],
         "buffNames": {
             "buff2": "Presage (Countdown) [LC]",
@@ -5844,7 +5959,7 @@ const turnLogicLightcones = {
             "buff3": "Presage Crit DMG [LC]",
         }
     },
-    "Flowing Nightglow": {
+    "Flowing Nightglow": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             expireFunction(battleData,expireParam) {
@@ -5859,6 +5974,103 @@ const turnLogicLightcones = {
             },
         },
         "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Past Self in Mirror listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const sourceBuffs = sourceTurn.buffsObject;
+                            const buffSheet = sourceTurn.flowingNightglowCantillationSheet;
+                            const buffCheck = buffSheet ? sourceBuffs[buffSheet.buffName] : null;
+                            // if (!buffCheck || buffCheck && buffCheck.currentStacks < 5) {return;}
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
+                            
+        
+                            if (!sourceTurn.flowingNightglowCadenzaSheet) {
+                                let lcNameRef = "Flowing Nightglow";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+        
+                                const customName = `${buffNames.allyDMG} (${sourceTurn.properName})`;
+                                if (!buffNames[customName]) {buffNames[customName] = customName;}
+        
+                                // greatTableIndex
+                                // greatTableKeys
+                                sourceTurn.flowingNightglowCadenzaSheet = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.ultCountdown,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    expireFunction: logicRef.skillFunctions.expireFunction,
+                                    expireParam: {ownerName:sourceTurn.name,uniqueBuffName:customName},
+                                }
+                                
+                                sourceTurn.flowingNightglowCadenzaAllySheet = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": customName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                            }
+                            const countdownSheet = sourceTurn.flowingNightglowCadenzaSheet;
+        
+                            const buffCheck2 = sourceBuffs[countdownSheet.buffName];
+                            updateBuff(battleData,sourceTurn,countdownSheet);
+        
+                            if (!buffCheck2) {
+                                const allyArray = battleData.allAlliesArray;
+                                const allySheet = sourceTurn.flowingNightglowCadenzaAllySheet;
+        
+                                updateBuffBatchTargets(battleData,allyArray,allySheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Flowing Nightglow - ult listener",
+                    }
+                ]
+            },
             {
                 "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
@@ -5909,85 +6121,6 @@ const turnLogicLightcones = {
                 "owners": [],
                 "ownersSlots": {}
             },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//then abort non-owners
-
-                    const sourceBuffs = sourceTurn.buffsObject;
-                    const buffSheet = sourceTurn.flowingNightglowCantillationSheet;
-                    const buffCheck = buffSheet ? sourceBuffs[buffSheet.buffName] : null;
-                    // if (!buffCheck || buffCheck && buffCheck.currentStacks < 5) {return;}
-                    if (buffCheck) {removeBuff(battleData,sourceTurn,buffSheet);}
-                    
-
-                    if (!sourceTurn.flowingNightglowCadenzaSheet) {
-                        let lcNameRef = "Flowing Nightglow";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        const logicRef = turnLogicLightcones[lcNameRef];
-                        const buffNames = logicRef.buffNames;
-
-                        const customName = `${buffNames.allyDMG} (${sourceTurn.properName})`;
-                        if (!buffNames[customName]) {buffNames[customName] = customName;}
-
-                        // greatTableIndex
-                        // greatTableKeys
-                        sourceTurn.flowingNightglowCadenzaSheet = {
-                            "stats": [ATKP],
-                            [ATKP]: rankParams[3],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffNames.ultCountdown,
-                            "durationInTurn": 2,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            expireFunction: logicRef.skillFunctions.expireFunction,
-                            expireParam: {ownerName:sourceTurn.name,uniqueBuffName:customName},
-                        }
-                        
-                        sourceTurn.flowingNightglowCadenzaAllySheet = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": customName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                    }
-                    const countdownSheet = sourceTurn.flowingNightglowCadenzaSheet;
-
-                    const buffCheck2 = sourceBuffs[countdownSheet.buffName];
-                    updateBuff(battleData,sourceTurn,countdownSheet);
-
-                    if (!buffCheck2) {
-                        const allyArray = battleData.allAlliesArray;
-                        const allySheet = sourceTurn.flowingNightglowCadenzaAllySheet;
-
-                        updateBuffBatchTargets(battleData,allyArray,allySheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Flowing Nightglow - ult listener",
-                "owners": [],
-                "ownersSlots": {}
-            }
         ],
         "buffNames": {
             "attackStack": "Cantillation [LC]",
@@ -5999,57 +6132,77 @@ const turnLogicLightcones = {
             "allyDMG": "Cadenza (Ally) [LC]",
         },
     },
-    "Past Self in Mirror": {
+    "Past Self in Mirror": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//then abort non-owners
-
-                    if (!sourceTurn.pastSelfInMirrorDMGSheet) {
-                        let lcNameRef = "Past Self in Mirror";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        const logicRef = turnLogicLightcones[lcNameRef];
-                        const buffNames = logicRef.buffNames;
-
-                        sourceTurn.pastSelfInMirrorDMGSheet = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffNames.allyDMG,
-                            "durationInTurn": 4,
-                            "duration": 3,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-                    }
-
-                    const allySheet = sourceTurn.pastSelfInMirrorDMGSheet;
-                    const allyPositions = battleData.allyPositions;
-                    updateBuffBatchTargets(battleData,allyPositions,allySheet);
-
-                    const breakCheck = sourceTurn.statTable[DamageBreak] >= 1.5;
-                    if (breakCheck) {
-                        updateSkillPoints(battleData,1,sourceTurn,false,"Past Self in Mirror [LC]");
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Past Self in Mirror - ult listener",
+                "listenerName": "Past Self in Mirror listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.pastSelfInMirrorDMGSheet) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Past Self in Mirror";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+        
+                                sourceTurn.pastSelfInMirrorDMGSheet = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.allyDMG,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const allySheet = sourceTurn.pastSelfInMirrorDMGSheet;
+                            const allyPositions = battleData.allyPositions;
+                            updateBuffBatchTargets(battleData,allyPositions,allySheet);
+        
+                            const breakCheck = sourceTurn.statTable[DamageBreak] >= 1.5;
+                            if (breakCheck) {
+                                updateSkillPoints(battleData,1,sourceTurn,false,"Past Self in Mirror [LC]");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Past Self in Mirror - ult listener",
+                    },
+                ]
             },
             {
                 "trigger": "WaveStart",
@@ -6057,7 +6210,7 @@ const turnLogicLightcones = {
                     // let ownerTurn = this.ownerTurn;
                     const allyPositions = battleData.allyPositions;
                     for (let ally of allyPositions) {
-                        updateEnergy(battleData,10,ally,false,"Past Self in Mirror [LC]");
+                        updateEnergy(battleData,10,ally,true,"Past Self in Mirror [LC]");
                     }
                 },
                 "target": "self",
@@ -6071,7 +6224,7 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
-    "Memories of the Past": {
+    "Memories of the Past": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             lcRegenEnergy(battleData,targetTurn,energyToRegen) {
@@ -6081,50 +6234,67 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "EndTurn",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    // let sourceTurn = generalInfo.sourceTurn;
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    for (let ownerSlotter in ownersSlots) {
-                        const currentOwner = allyTurns[ownerSlotter];
-                        currentOwner.lcMemoriesOfThePastCanRegen = true;
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Memories of the Past endturn regen reset listener",
+                "listenerName": "Memories of the Past listener setup",
                 "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
+                "subListeners": [
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let ownersSlots = this.ownersSlots;
+                            let sourceTurn = generalInfo.sourceTurn;
 
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank || !sourceTurn.lcMemoriesOfThePastCanRegen) {return;}//then abort non-owners
-
-                    let lcNameRef = "Memories of the Past";
-                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
-
-                    let lcPathing = lightcones[lcNameRef].params;
-                    let rankParams = lcPathing[ownerRank-1];
-                    const regenValue = rankParams[1];
-
-                    regenFunction(battleData,sourceTurn,regenValue);
-                },
-                "target": "self",
-                "listenerName": "Memories of the Past - owner attacked listener",
-                "owners": [],
-                "ownersSlots": {}
+                            sourceTurn.lcMemoriesOfThePastCanRegen = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Memories of the Past endturn regen reset listener",
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            
+                            if (!sourceTurn.lcMemoriesOfThePastCanRegen) {return;}//then abort non-owners
+        
+                            let lcNameRef = "Memories of the Past";
+                            const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+        
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+                            const regenValue = rankParams[1];
+        
+                            regenFunction(battleData,sourceTurn,regenValue);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Memories of the Past - owner attacked listener",
+                    },
+                ]
             },
         ],
         "buffNames": {},
     },
-    "Meshing Cogs": {
+    "Meshing Cogs": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             lcRegenEnergy(battleData,targetTurn,energyToRegen) {
@@ -6134,45 +6304,60 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "EndTurn",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    // let sourceTurn = generalInfo.sourceTurn;
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    for (let ownerSlotter in ownersSlots) {
-                        const currentOwner = allyTurns[ownerSlotter];
-                        currentOwner.lcMeshingCogsCanRegen = true;
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Meshing Cogs endturn regen reset listener",
+                "listenerName": "Meshing Cogs listener setup",
                 "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
+                "subListeners": [
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
 
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank || !sourceTurn.lcMeshingCogsCanRegen) {return;}//then abort non-owners
-
-                    let lcNameRef = "Meshing Cogs";
-                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
-
-                    let lcPathing = lightcones[lcNameRef].params;
-                    let rankParams = lcPathing[ownerRank-1];
-                    const regenValue = rankParams[0];
-
-                    regenFunction(battleData,sourceTurn,regenValue);
-                },
-                "target": "self",
-                "listenerName": "Meshing Cogs - owner attack listener",
-                "owners": [],
-                "ownersSlots": {}
+                            sourceTurn.lcMeshingCogsCanRegen = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Meshing Cogs endturn regen reset listener",
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcMeshingCogsCanRegen) {return;}//then abort non-owners
+        
+                            let lcNameRef = "Meshing Cogs";
+                            const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+        
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+                            const regenValue = rankParams[0];
+        
+                            regenFunction(battleData,sourceTurn,regenValue);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Meshing Cogs - owner attack listener",
+                    },
+                ]
             },
             {
                 "trigger": "AttackDMGEnd",
@@ -6211,12 +6396,12 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
-    "Poised to Bloom": {
+    "Poised to Bloom": {//partial rework
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -6282,9 +6467,8 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Poised to Bloom - battlestart pathcounts>=2 buff",
-                "owners": [],
-                "ownersSlots": {}
             },
         ],
         "buffNames": {
