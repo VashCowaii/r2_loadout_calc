@@ -1312,8 +1312,9 @@ const sim = {
         const queueRef = battleData.followUpQueue;
 
         const charLogic = turnLogic[charName];
+        let isContinuousTurn = false;
         while (!turnEnded && !battleData.battleIsOver) {
-            clearFUA(battleData);
+            if (!isContinuousTurn) {clearFUA(battleData);}
 
             let designatedAction = charLogic.logic(sourceTurn,battleData);//gotta be .logic here to use "this" later in logic itself, and I do use it there
             const currentAction = designatedAction.action;
@@ -1334,9 +1335,6 @@ const sim = {
             const poolKey = designatedAction.poolKey;
             const target = designatedAction.target;
             if (isLog) {
-
-
-
 
                 logToBattle(battleData,{
                     logType: "ActionChosen",
@@ -1374,26 +1372,25 @@ const sim = {
             if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
 
+            const preCheckContinue = designatedAction.isContinuousTurn;
+            isContinuousTurn = preCheckContinue;
 
 
+            if (!preCheckContinue) {
 
+                // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
+                //     turnEnded = true;
+                //     if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
+                //     if (sourceTurn.turnShouldEnd) {return;}
+                // }//return turn ending for everyone else
+                turnEnded = true;
+                if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
 
-
-
-
-
-
-            // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
-            //     turnEnded = true;
-            //     if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
-            //     if (sourceTurn.turnShouldEnd) {return;}
-            // }//return turn ending for everyone else
-            turnEnded = true;
-            if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
-
-            if (queueRef.length) {clearFUA(battleData);}
-            clearULT(battleData);//readiness poke is inside the function on this one
-            sourceTurn.actionAssigned = false;
+                if (queueRef.length) {clearFUA(battleData);}
+                clearULT(battleData);//readiness poke is inside the function on this one
+                sourceTurn.actionAssigned = false;
+                isContinuousTurn = false;
+            }
         }
     },
     turnWrapperEnemy(charName,enemyTypeAttack,sourceTurn,battleData) {

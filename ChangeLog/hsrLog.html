@@ -73,7 +73,13 @@
         <li>Fixed an issue where Izumo was evaluating teammate path count too early in the battlestart process, though nothing in the calculator actually cared about the timing on this.</li>
         <li>Fixed an issue where Vonwaq was evaluating SPD for the advance just barely too early. This could actually matter quite a bit, but only in some very specific cases.</li>
         <li>Fixed an issue where Broken Keel was evaluating the battlestart Effect RES check just barely too early, which only would have mattered for Celestial Differentiator users but lmao there are none?</li>
-        <li></li>
+        <li>Fixed an issue where When She Decided to See wasn't applying the wave-start fixed energy gain.</li>
+        <li>Fixed an issue where The Hell Where Ideals Burn could apply the battlestart ATK bonus to entities even if the team had less than a 6 Skill Point max.
+            <ul>
+                <li>Might seem like a silly thing to miss, but Archer was the first character ever coded into the calc, along with his LC when I was still building things out, so I think I just forgot to add it since he always had it equipped.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Baptism of Pure Thought could fail to properly assign the enemy debuff count to the buff stack count, but only for the first time it was ever applied.</li>
 
         <h4>Optimization</h4>
         <li>Slight tweaks the following handlers to eek out more performance across billions of loops:
