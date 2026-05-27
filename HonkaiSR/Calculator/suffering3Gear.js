@@ -6875,55 +6875,73 @@ const turnLogicLightcones = {
             "vuln": "Long May Rainbows Adorn the Sky",
         },
     },
-    "Memory's Curtain Never Falls": {
+    "Memory's Curtain Never Falls": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}
-
                     let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
 
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
 
-                    if (!sourceTurn.memoryCurtainDMGSHEET) {
-                        let lcNameRef = "Memory's Curtain Never Falls";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                        sourceTurn.memoryCurtainDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.allyDMG,
-                            "durationInTurn": 4,
-                            "duration": 3,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "removeOnDeath": true,
-                        }
-                    }
-                    let buffSheet = sourceTurn.memoryCurtainDMGSHEET;
-                    
-
-                    const allyPositions = battleData.allyPositions;
-                    for (let ally of allyPositions) {
-                        updateBuff(battleData,ally,buffSheet);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Memory's Curtain Never Falls - Skill end listener",
+                "listenerName": "Memory's Curtain Never Falls listener setup",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.memoryCurtainDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Memory's Curtain Never Falls";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.memoryCurtainDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.allyDMG,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            let buffSheet = sourceTurn.memoryCurtainDMGSHEET;
+                            
+        
+                            const allyPositions = battleData.allyPositions;
+                            updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Memory's Curtain Never Falls - Skill end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -7250,15 +7268,14 @@ const turnLogicLightcones = {
     //     }
     // },
         //4star
-    "Fly Into a Pink Tomorrow": {
+    "Fly Into a Pink Tomorrow": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;
-
 
                     const nameBasedTurns = battleData.nameBasedTurns;
 
@@ -7341,55 +7358,77 @@ const turnLogicLightcones = {
             "jointDMG": "Fly Into a Pink Tomorrow (Joint ATK DMG) [LC]"
         },
     },
-    "Geniuses' Greetings": {
+    "Geniuses' Greetings": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
+                    let ownerRef = this.owners;
 
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
 
-                    if (!sourceTurn.lcGeniusGreetingsBASICSHEET) {
-                        let lcNameRef = "Geniuses' Greetings";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                        sourceTurn.lcGeniusGreetingsBASICSHEET = {
-                            "stats": [DamageBasic],
-                            [DamageBasic]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 4,
-                            "duration": 3,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-
-                    const buffSheet = sourceTurn.lcGeniusGreetingsBASICSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-
-                    const memoTurnRef = sourceTurn.memospriteEventRef;
-                    const memoTurn = sourceTurn[memoTurnRef];
-
-                    if (memoTurn?.isActive) {updateBuff(battleData,memoTurn,buffSheet);}
                 },
                 "target": "self",
-                "listenerName": "Geniuses' Greetings ult end listener",
+                "listenerName": "Geniuses' Greetings listener setup",
                 "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            
+                            if (!sourceTurn.lcGeniusGreetingsBASICSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Geniuses' Greetings";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                sourceTurn.lcGeniusGreetingsBASICSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "actionTags": ["Basic"],
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcGeniusGreetingsBASICSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+        
+                            const memoTurnRef = sourceTurn.memospriteEventRef;
+                            const memoTurn = sourceTurn[memoTurnRef];
+        
+                            if (memoTurn?.isActive) {updateBuff(battleData,memoTurn,buffSheet);}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Geniuses' Greetings ult end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -7454,12 +7493,12 @@ const turnLogicLightcones = {
             "deathFlower": "Sweat Now, Cry Less [LC]",
         },
     },
-    "The Flower Remembers": {
+    "The Flower Remembers": {//partial change
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
