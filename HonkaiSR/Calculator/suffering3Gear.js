@@ -1022,6 +1022,7 @@ const turnLogicLightcones = {
         },
     },
         //4star
+    //TODO: rework this later, swordplay needs some tweaking after the event rework, but it functions for now just not ideally
     "Swordplay": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -8014,7 +8015,7 @@ const turnLogicLightcones = {
 
 
     //ERUDITON
-    "An Instant Before A Gaze": {
+    "An Instant Before A Gaze": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -8027,8 +8028,8 @@ const turnLogicLightcones = {
 
                     // let buffName = this.buffNames.fuaDMG;
                     let buffSheet = this.buffSheet ??= {
-                        "stats": [DamageUltimate],
-                        [DamageUltimate]: 0,
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
                         "source": lcNameRef,
                         "sourceOwner": "",
                         "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
@@ -8038,7 +8039,8 @@ const turnLogicLightcones = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
-                        "expireType": null
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
                     }
 
                     for (let owner of ownerRef) {
@@ -8063,12 +8065,12 @@ const turnLogicLightcones = {
             "ultDMGBonus": "A Knight's Pilgrimage [LC]",
         },
     },
-    "Today Is Another Peaceful Day": {
+    "Today Is Another Peaceful Day": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Today Is Another Peaceful Day";
@@ -8112,189 +8114,224 @@ const turnLogicLightcones = {
             "ultDMGBonus": "A Storm Is Coming [LC]",
         },
     },
-    "The Great Cosmic Enterprise": {
+    "The Great Cosmic Enterprise": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AllyDMGStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    let ownerRef = this.owners;
 
-                    const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
 
-                    const targetTurn = generalInfo.targetTurn;
-                    const targetStats = targetTurn.statTable;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                    let weaknessCount = 0;
-                    for (let weakName of checkWeakArray) {
-                        weaknessCount += targetStats[weakName] ? 1 : 0;
-                    }
-
-                    if (!sourceTurn.greatCosmicDMGSHEET) {
-                        let lcNameRef = "The Great Cosmic Enterprise";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
-                        sourceTurn.greatCosmicDMGSHEET = {
-                            "statsOnHit": [DamageAll],
-                            [DamageAll]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 7,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.greatCosmicDMGSHEET;
-                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
-
-                    if (buffCheck) {
-                        const currentStacks = buffCheck.currentStacks;
-                        if (currentStacks === weaknessCount) {return;}
-                        else if (currentStacks < weaknessCount) {
-                            const stackDiff = weaknessCount - currentStacks;
-                            buffSheet.currentStacks = stackDiff;
-                            updateBuff(battleData,sourceTurn,buffSheet);
-                        }
-                        else {//if stacks are higher than they should be
-                            if (weaknessCount) {//if we have stacks then update
-                                removeBuff(battleData,sourceTurn,buffSheet,true,null,true);
-                                buffSheet.currentStacks = weaknessCount;
-                                updateBuff(battleData,sourceTurn,buffSheet,false,null)
-                            }
-                            else {//otherwise remove
-                                removeBuff(battleData,sourceTurn,buffSheet);
-                            }
-                        }
-                    }
-                    else if (weaknessCount) {
-                        buffSheet.currentStacks = weaknessCount;
-                        updateBuff(battleData,sourceTurn,buffSheet,false,null);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "The Great Cosmic Enterprise weakness dmg listener",
+                "listenerName": "The Great Cosmic Enterprise listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            const targetStats = targetTurn.statTable;
+        
+                            let weaknessCount = 0;
+                            for (let weakName of checkWeakArray) {
+                                weaknessCount += targetStats[weakName] ? 1 : 0;
+                            }
+        
+                            if (!sourceTurn.greatCosmicDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "The Great Cosmic Enterprise";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
+                                sourceTurn.greatCosmicDMGSHEET = {
+                                    "statsOnHit": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 7,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.greatCosmicDMGSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+        
+                            if (buffCheck) {
+                                const currentStacks = buffCheck.currentStacks;
+                                if (currentStacks === weaknessCount) {return;}
+                                else if (currentStacks < weaknessCount) {
+                                    const stackDiff = weaknessCount - currentStacks;
+                                    buffSheet.currentStacks = stackDiff;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else {//if stacks are higher than they should be
+                                    if (weaknessCount) {//if we have stacks then update
+                                        removeBuff(battleData,sourceTurn,buffSheet,true,null,true);
+                                        buffSheet.currentStacks = weaknessCount;
+                                        updateBuff(battleData,sourceTurn,buffSheet,false,null)
+                                    }
+                                    else {//otherwise remove
+                                        removeBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                            }
+                            else if (weaknessCount) {
+                                buffSheet.currentStacks = weaknessCount;
+                                updateBuff(battleData,sourceTurn,buffSheet,false,null);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Great Cosmic Enterprise weakness dmg listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             "cosmicDMG": "The Great Cosmic Enterprise",
         },
     },
-    "Life Should Be Cast to Flames": {
+    "Life Should Be Cast to Flames": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "StartTurn",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    let ownerRef = this.owners;
 
-                    //NOTE: the energy regen is uniform, not reliant upon superimposition
-                    updateEnergy(battleData,10,sourceTurn,false,"Life Should Be Cast to Flames (LC)");
-                },
-                "target": "self",
-                "listenerName": "Life Should Be Cast to Flames - energy on turnstart",
-                "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AllyDMGStart",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
 
-                    const targetTurn = generalInfo.targetTurn;
-                    // const targetStats = targetTurn.statTable;
-                    const targetBuffs = targetTurn.buffsObject;
-                    let foundImplantedByOwner = false;
-                    for (let buffObject in targetBuffs) {
-                        const currentBuff = targetBuffs[buffObject];
-                        if (currentBuff && currentBuff.isImplant && currentBuff.sourceOwner === sourceTurn.properName) {
-                            foundImplantedByOwner = true;
-                            break;
-                        }
-                    }
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-
-                    if (!sourceTurn.lifeShouldBeCastFlamesDMGSHEET) {
-                        let lcNameRef = "Life Should Be Cast to Flames";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        const lcBuffNames = turnLogicLightcones[lcNameRef].buffNames;
-                        let buffName = lcBuffNames.dmgBonus;
-                        let buffName2 = lcBuffNames.defShred;
-                        sourceTurn.lifeShouldBeCastFlamesDMGSHEET = {
-                            "statsOnHit": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-
-                        sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
-                            "stats": [DEFP],
-                            [DEFP]: -rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName2,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "isDebuff": true,
-                            "expireType": "EndTurn"
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.lifeShouldBeCastFlamesDMGSHEET;
-                    const buffCheck = targetBuffs[buffSheet.buffName];
-                    if (foundImplantedByOwner) {
-                        if (!buffCheck) {
-                            updateBuff(battleData,sourceTurn,buffSheet);
-                        }
-                    }
-                    else if (buffCheck) {
-                        removeBuff(battleData,sourceTurn,buffSheet);
-                    }
-
-                    const buffJustApplied = buffCheck && buffCheck.AVApplied === battleData.sumAV;
-                    if (!buffJustApplied) {
-                        const buffSheet2 = sourceTurn.lifeShouldBeCastFlamesDEFSHEET;
-                        updateBuff(battleData,targetTurn,buffSheet2);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Life Should Be Cast to Flames, implant check and def reduction",
+                "listenerName": "Life Should Be Cast to Flames listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+        
+                            //NOTE: the energy regen is uniform, not reliant upon superimposition
+                            updateEnergy(battleData,10,sourceTurn,false,"Life Should Be Cast to Flames (LC)");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Life Should Be Cast to Flames - energy on turnstart",
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const targetTurn = generalInfo.targetTurn;
+                            // const targetStats = targetTurn.statTable;
+                            const targetBuffs = targetTurn.buffsObject;
+                            let foundImplantedByOwner = false;
+                            for (let buffObject in targetBuffs) {
+                                const currentBuff = targetBuffs[buffObject];
+                                if (currentBuff && currentBuff.isImplant && currentBuff.sourceOwner === sourceTurn.properName) {
+                                    foundImplantedByOwner = true;
+                                    break;
+                                }
+                            }
+        
+                            if (!sourceTurn.lifeShouldBeCastFlamesDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Life Should Be Cast to Flames";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                const lcBuffNames = turnLogicLightcones[lcNameRef].buffNames;
+                                let buffName = lcBuffNames.dmgBonus;
+                                let buffName2 = lcBuffNames.defShred;
+                                sourceTurn.lifeShouldBeCastFlamesDMGSHEET = {
+                                    "statsOnHit": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+        
+                                sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
+                                    "stats": [DEFP],
+                                    [DEFP]: -rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName2,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "isDebuff": true,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lifeShouldBeCastFlamesDMGSHEET;
+                            const buffCheck = targetBuffs[buffSheet.buffName];
+                            if (foundImplantedByOwner) {
+                                if (!buffCheck) {
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+        
+                            const buffJustApplied = buffCheck && buffCheck.AVApplied === battleData.sumAV;
+                            if (!buffJustApplied) {
+                                const buffSheet2 = sourceTurn.lifeShouldBeCastFlamesDEFSHEET;
+                                updateBuff(battleData,targetTurn,buffSheet2);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Life Should Be Cast to Flames, implant check and def reduction",
+                    },
+                ]
             },
         ],
         "buffNames": {
