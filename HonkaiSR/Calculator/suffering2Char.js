@@ -11388,7 +11388,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     }
                 }
-                // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 const dotSheet = ATKObjects.kafkaUltimateDOTSHEET;
 
                 const enemiesHit = generalInfo.targetsGotHit;
@@ -12449,7 +12448,6 @@ const turnLogic = {
                     const dotSheetBleed = ATKObjects.hysilensTalentDOTSHEETPhysical;
                     ATKObjects.hysilensTalentDOTArray = [dotSheetShock,dotSheetBurn,dotSheetShear,dotSheetBleed];
                 }
-                // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
                 const dotsArray = ATKObjects.hysilensTalentDOTArray;
                 const valuesRef = sourceTurn.battleValues;
 
@@ -33992,10 +33990,6 @@ const turnLogic = {
     
                 const char1 = targetOverride ?? target[0];
 
-                // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
-                //moved this into the actual shielf function, makes more sense there
-                
-
                 const skillFunctions = logicRef.skillFunctions;
                 const shieldCall = skillFunctions.dhptSkillShield;
                 // //more than one thing can reference the skill shield itself, but may not be a skill cast
@@ -35305,10 +35299,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.aventurineSkillShieldREF ??= ATKObjects.Skill["Cornerstone Deluxe"].variant1;
-
-
-                // poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRef.slot});
-                //moved this into the actual shielf function, makes more sense there
 
                 const shieldCall = ATKObjects.aventurineSkillShield ??= logicRef.skillFunctions.aventurineSkillShield;
                 //more than one thing can reference the skill shield itself, but may not be a skill cast

@@ -7747,100 +7747,121 @@ const turnLogicLightcones = {
     },
 
     //PRESERVATIONN
-    "Inherently Unjust Destiny": {
+    "Inherently Unjust Destiny": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "TargetShield",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
+                    let ownerRef = this.owners;
 
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-                    //who we target with the shield specifically, doesn't matter, only that a shield target proc happened to begin with
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
 
-                    
-                    if (!sourceTurn.inherentlyUnjustCRITDMGSHEET) {
-                        let lcNameRef = "Inherently Unjust Destiny";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                        sourceTurn.inherentlyUnjustCRITDMGSHEET = {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.unjust,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
-                    let buffSheet = sourceTurn.inherentlyUnjustCRITDMGSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "Inherently Unjust Destiny - ATK% Stack - Hrunting Stack",
+                "listenerName": "Inherently Unjust Destiny listener setup",
                 "owners": [],
-            },
-            {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    // const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject};
-                    let isFUA = false;
-                    const actionTags = generalInfo.ATKObject.actionTags;
-                    for (let tag of actionTags) {
-                        if (tag === "FUA") {
-                            isFUA = true;
-                            break;
-                        }
-                    }
-                    if (!isFUA) {return;}
-
-                    const targetTurn = generalInfo.targetTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    const targetHits = generalInfo.targetsGotHit[targetTurn.name];
-                    if (targetHits > 1 || !ownerRank) {return}//we only care about first hits for this, no point in evaluating it every fuckin time
-                    //have confirmed unjust applies before the dmg takes place, assuming it actually applies
-
-                    if (!sourceTurn.inherentlyUnjustDEBUFFSHEET) {
-                        let lcNameRef = "Inherently Unjust Destiny";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-
-                        sourceTurn.inherentlyUnjustDEBUFFSHEET = {
-                            "stats": [VulnAll],
-                            [VulnAll]: rankParams[4],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.unjustVuln,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "isDebuff": true,
-                        }
-                    }
-                    let buffSheet = sourceTurn.inherentlyUnjustDEBUFFSHEET;
-                    updateBuff(battleData,targetTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Inherently Unjust Destiny - Hit scaling",
-                "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "TargetShield",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            //who we target with the shield specifically, doesn't matter, only that a shield target proc happened to begin with
+        
+                            if (!sourceTurn.inherentlyUnjustCRITDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Inherently Unjust Destiny";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.inherentlyUnjustCRITDMGSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.unjust,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            let buffSheet = sourceTurn.inherentlyUnjustCRITDMGSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Inherently Unjust Destiny - ATK% Stack - Hrunting Stack",
+                    },
+                    {
+                        "trigger": "HitEnemyStart",
+                        condition(battleData,generalInfo) {
+                            // const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject};
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            
+                            const targetHits = generalInfo.targetsGotHit[targetTurn.name];
+                            if (targetHits > 1) {return}//we only care about first hits for this, no point in evaluating it every fuckin time
+                            //have confirmed unjust applies before the dmg takes place, assuming it actually applies
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.inherentlyUnjustDEBUFFSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Inherently Unjust Destiny";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+        
+                                sourceTurn.inherentlyUnjustDEBUFFSHEET = {
+                                    "stats": [VulnAll],
+                                    [VulnAll]: rankParams[4],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.unjustVuln,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                }
+                            }
+                            let buffSheet = sourceTurn.inherentlyUnjustDEBUFFSHEET;
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Inherently Unjust Destiny - Hit scaling",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -7848,111 +7869,131 @@ const turnLogicLightcones = {
             "unjustVuln": "Inherently Unjust Destiny (Vuln)"
         },
     },
-    "Though Worlds Apart": {
+    "Though Worlds Apart": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
+                    let ownerRef = this.owners;
 
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
 
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-                    //who we target with the shield specifically, doesn't matter, only that a shield target proc happened to begin with
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                    if (!sourceTurn.thoughWorldsDMGSHEET) {
-                        let lcNameRef = "Though Worlds Apart";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        sourceTurn.thoughWorldsDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.redoubt,
-                            "durationInTurn": 4,
-                            "duration": 3,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-
-                        sourceTurn.thoughWorldsDMGSummonSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.redoubtSummon,
-                            "durationInTurn": 4,
-                            "duration": 3,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-
-
-                        const actionTags = ["Gear","Heal"];
-                        const compositeCacheTag = actionTags + sourceTurn.properName;
-
-                        sourceTurn.thoughWorldsHealObject = {
-                            multipliers: {
-                                primary: rankParams[4],
-                                blast: null,
-                                all: null,
-                            },
-                            flatAmounts: {
-                                primary: null,
-                                blast: null,
-                                all: null,
-                            },
-                            scalar: "ATK",
-                            DMGTags: [],
-                            allToughness: false,
-                            slot: "Lightcone",
-                            actionTags,compositeCacheTag
-                        }
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    const buffSheet = sourceTurn.thoughWorldsDMGSHEET;
-                    const buffSheet2 = sourceTurn.thoughWorldsDMGSummonSHEET;
-                    const healObject = sourceTurn.thoughWorldsHealObject;
-
-                    const allyPositions = battleData.allyPositions;
-
-                    let lowestHPValue = Infinity;
-                    let lowestHPAlly = null;
-                    for (let ally of allyPositions) {
-                        updateBuff(battleData,ally,buffSheet);
-
-                        if (ally.activeMemosprites || ally.activeSummons) {
-                            updateBuff(battleData,ally,buffSheet2);
-                        }
-
-                        const currentHP = ally.currentHP;
-                        if (currentHP < lowestHPValue) {
-                            lowestHPValue = currentHP;
-                            lowestHPAlly = ally;
-                        }
-                    }
-
-                    healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,allyPositions);
-
-                    // console.log(allyPositions,lowestHPAlly)
-                    healAlly(battleData,healObject,lowestHPAlly,sourceTurn,"Lightcone",1);
                 },
                 "target": "self",
-                "listenerName": "Though Worlds Apart - ult start listener",
+                "listenerName": "Though Worlds Apart listener setup",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            //who we target with the shield specifically, doesn't matter, only that a shield target proc happened to begin with
+        
+                            if (!sourceTurn.thoughWorldsDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Though Worlds Apart";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.thoughWorldsDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.redoubt,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+        
+                                sourceTurn.thoughWorldsDMGSummonSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.redoubtSummon,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+        
+                                const actionTags = ["Gear","Heal"];
+                                const compositeCacheTag = actionTags + sourceTurn.properName;
+        
+                                sourceTurn.thoughWorldsHealObject = {
+                                    multipliers: {
+                                        primary: rankParams[4],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "ATK",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            const buffSheet = sourceTurn.thoughWorldsDMGSHEET;
+                            const buffSheet2 = sourceTurn.thoughWorldsDMGSummonSHEET;
+                            const healObject = sourceTurn.thoughWorldsHealObject;
+        
+                            const allyPositions = battleData.allyPositions;
+        
+                            let lowestHPValue = Infinity;
+                            let lowestHPAlly = null;
+                            for (let ally of allyPositions) {
+                                updateBuff(battleData,ally,buffSheet);
+        
+                                if (ally.activeMemosprites || ally.activeSummons) {
+                                    updateBuff(battleData,ally,buffSheet2);
+                                }
+        
+                                const currentHP = ally.currentHP;
+                                if (currentHP < lowestHPValue) {
+                                    lowestHPValue = currentHP;
+                                    lowestHPAlly = ally;
+                                }
+                            }
+        
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,allyPositions);
+        
+                            // console.log(allyPositions,lowestHPAlly)
+                            healAlly(battleData,healObject,lowestHPAlly,sourceTurn,"Lightcone",1);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Though Worlds Apart - ult start listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -7960,12 +8001,12 @@ const turnLogicLightcones = {
             "redoubtSummon": "Redoubt (Summon) [LC]"
         },
     },
-    "Landau's Choice": {
+    "Landau's Choice": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let ownersSlots = this.ownersSlots;
@@ -8132,7 +8173,6 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
 
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
@@ -8533,6 +8573,8 @@ const turnLogicLightcones = {
 
                         currentTurn.dazzleFlowerTracker = 0;
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
@@ -8662,6 +8704,7 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
 
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
 
                         if (!currentTurn.lcCosmicCitySHREDSHEET) {
                             let lcNameRef = "Welcome to the Cosmic City";
