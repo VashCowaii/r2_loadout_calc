@@ -8,6 +8,7 @@ const configAbility = {
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge"
   ],
   "skillTrigger": "Skill03",
+  "realAttacker": "Servant",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

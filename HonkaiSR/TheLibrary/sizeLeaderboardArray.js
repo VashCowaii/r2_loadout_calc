@@ -114,8 +114,8 @@ let sizeLeaderboardArray = [
     "entryName": "Evernight",
     "trimCharacterName": "Evernight",
     "entryIcon": "icon/character/1413.png",
-    "lineCount": 10869,
-    "sizeCount": 402909
+    "lineCount": 10870,
+    "sizeCount": 402942
   },
   {
     "entryType": "enemy",
@@ -170,8 +170,8 @@ let sizeLeaderboardArray = [
     "entryName": "Castorice",
     "trimCharacterName": "Castorice",
     "entryIcon": "icon/character/1407.png",
-    "lineCount": 9946,
-    "sizeCount": 360348
+    "lineCount": 9950,
+    "sizeCount": 360464
   },
   {
     "entryType": "enemy",
@@ -294,8 +294,8 @@ let sizeLeaderboardArray = [
     "entryName": "Acheron",
     "trimCharacterName": "Acheron",
     "entryIcon": "icon/character/1308.png",
-    "lineCount": 7916,
-    "sizeCount": 286661
+    "lineCount": 7920,
+    "sizeCount": 286777
   },
   {
     "entryType": "enemy",
@@ -1136,8 +1136,8 @@ let sizeLeaderboardArray = [
     "entryName": "Dan Heng • Imbibitor Lunae",
     "trimCharacterName": "DanHengIL",
     "entryIcon": "icon/character/1213.png",
-    "lineCount": 5001,
-    "sizeCount": 162206
+    "lineCount": 5003,
+    "sizeCount": 162258
   },
   {
     "entryType": "char",
@@ -1152,8 +1152,8 @@ let sizeLeaderboardArray = [
     "entryName": "Rappa",
     "trimCharacterName": "Rappa",
     "entryIcon": "icon/character/1317.png",
-    "lineCount": 4685,
-    "sizeCount": 161207
+    "lineCount": 4694,
+    "sizeCount": 161556
   },
   {
     "entryType": "enemy",
@@ -1264,8 +1264,8 @@ let sizeLeaderboardArray = [
     "entryName": "Trailblazer - Remembrance",
     "trimCharacterName": "TrailblazerRemembrance",
     "entryIcon": "icon/character/8007.png",
-    "lineCount": 4395,
-    "sizeCount": 153904
+    "lineCount": 4396,
+    "sizeCount": 153937
   },
   {
     "entryType": "enemy",
@@ -1436,8 +1436,8 @@ let sizeLeaderboardArray = [
     "entryName": "Sparxie",
     "trimCharacterName": "Sparxie",
     "entryIcon": "icon/character/1501.png",
-    "lineCount": 4087,
-    "sizeCount": 141104
+    "lineCount": 4089,
+    "sizeCount": 141156
   },
   {
     "entryType": "char",
@@ -1552,8 +1552,8 @@ let sizeLeaderboardArray = [
     "entryName": "Archer",
     "trimCharacterName": "Archer",
     "entryIcon": "icon/character/1015.png",
-    "lineCount": 3802,
-    "sizeCount": 126633
+    "lineCount": 3803,
+    "sizeCount": 126659
   },
   {
     "entryType": "enemy",

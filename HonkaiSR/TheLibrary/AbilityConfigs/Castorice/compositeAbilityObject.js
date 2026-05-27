@@ -7052,6 +7052,7 @@ const compositeAbilityObject = {
         "NetherwingPollux_Servant_CastoriceServant_Ability23_ReadytoFly_Camera03"
       ],
       "skillTrigger": "Skill23",
+      "isInsertable": false,
       "abilityType": "Memosprite",
       "energy": null,
       "toughnessList": [
@@ -7596,6 +7597,7 @@ const compositeAbilityObject = {
         "NetherwingPollux_Servant_CastoriceServant_Ability22_Skill01toSkill22_Camera"
       ],
       "skillTrigger": "Skill22",
+      "isInsertable": false,
       "abilityType": "Memosprite",
       "energy": null,
       "toughnessList": [
@@ -8150,6 +8152,7 @@ const compositeAbilityObject = {
         "NetherwingPollux_Servant_CastoriceServant_Ability21_Skill01toSkill21_Camera"
       ],
       "skillTrigger": "Skill21",
+      "isInsertable": false,
       "abilityType": "Memosprite",
       "energy": null,
       "toughnessList": [
@@ -8684,6 +8687,7 @@ const compositeAbilityObject = {
         "NetherwingPollux_Servant_CastoriceServant_Ability02_Camera"
       ],
       "skillTrigger": "Skill02",
+      "isInsertable": false,
       "abilityType": "Memosprite",
       "energy": null,
       "toughnessList": [

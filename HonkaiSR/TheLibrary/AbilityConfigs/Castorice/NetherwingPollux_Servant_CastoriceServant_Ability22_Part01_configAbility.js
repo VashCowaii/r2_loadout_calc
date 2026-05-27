@@ -7,6 +7,7 @@ const configAbility = {
     "NetherwingPollux_Servant_CastoriceServant_Ability22_Skill01toSkill22_Camera"
   ],
   "skillTrigger": "Skill22",
+  "isInsertable": false,
   "abilityType": "Memosprite",
   "energy": null,
   "toughnessList": [

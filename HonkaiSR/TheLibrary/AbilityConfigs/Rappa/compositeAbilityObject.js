@@ -2912,6 +2912,15 @@ const compositeAbilityObject = {
         "Rappa_Rappa_Ability03_SP0_Part01"
       ],
       "skillTrigger": "Skill03",
+      "condition": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"-1748394699\">Rappa_UltraMode</a>[<span class=\"descriptionNumberColor\">Nindō Supreme: Aishiteru</span>]",
+        "invertCondition": true
+      },
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [

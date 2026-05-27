@@ -10,6 +10,7 @@ const configAbility = {
     "NetherwingPollux_Servant_CastoriceServant_Ability23_ReadytoFly_Camera03"
   ],
   "skillTrigger": "Skill23",
+  "isInsertable": false,
   "abilityType": "Memosprite",
   "energy": null,
   "toughnessList": [
