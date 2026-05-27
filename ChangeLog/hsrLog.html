@@ -6,7 +6,7 @@
     </ul>
 </div> -->
 <div>
-    <h1>May 25th, 2026 - THE TECHNIQUES UPDATE(But really way more than that)</h1>
+    <h1>May 27th, 2026 - THE TECHNIQUES UPDATE(But really way more than that)</h1>
     <ul>
 
         <h3>Calculator</h3>
@@ -68,6 +68,12 @@
                 <li>Firefly Ultimate</li>
             </ul>
         </li>
+        <li>Fixed an issue where Duran planar set failed to stack on allied FUA and instead was only listening to owner FUA.</li>
+        <li>Fixed an issue where Celestial Differentiator was evaluating CritDMG SUM for the battlestart bonus, too early. But nobody noticed because lmao who uses this.</li>
+        <li>Fixed an issue where Izumo was evaluating teammate path count too early in the battlestart process, though nothing in the calculator actually cared about the timing on this.</li>
+        <li>Fixed an issue where Vonwaq was evaluating SPD for the advance just barely too early. This could actually matter quite a bit, but only in some very specific cases.</li>
+        <li>Fixed an issue where Broken Keel was evaluating the battlestart Effect RES check just barely too early, which only would have mattered for Celestial Differentiator users but lmao there are none?</li>
+        <li></li>
 
         <h4>Optimization</h4>
         <li>Slight tweaks the following handlers to eek out more performance across billions of loops:

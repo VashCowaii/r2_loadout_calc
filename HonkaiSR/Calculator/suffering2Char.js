@@ -4993,7 +4993,7 @@ const battleActions = {
         const trigger = listenerObject.trigger;
 
         const isPersonal = listenerObject.isPersonal;
-        const personalRef = isPersonal ? (battleData.battleListenersPersonal[assignOwnerTurn.properName]) : null;
+        const personalRef = isPersonal ? (battleData.battleListenersPersonal[ownership.properName]) : null;
 
         // let listenerRef = battleData.battleListeners[trigger];
         let listenerRef = (isPersonal ? (personalRef[trigger]) : battleData.battleListeners[trigger]);
@@ -11594,7 +11594,7 @@ const turnLogic = {
                                     isAttack: true,
                                     isAbility: true,
                                     useAnyTriggers: true,
-                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    eventTypeStartLOG: "GenericAbilityStart",
                                     // eventTypeStart: "GenericAbilityStart",
                                     // eventTypeEnd: "GenericAbilityEnd",
         
@@ -13909,6 +13909,7 @@ const turnLogic = {
                             }
                         },
                         "target": "enemy",
+                        "isPersonal": true,
                         "listenerName": "Viscera's Disquiet - attack dmg end listener",
                         "ownerTurn": {},
                     },
@@ -13936,6 +13937,7 @@ const turnLogic = {
                             }
                         },
                         "target": "enemy",
+                        "isPersonal": true,
                         "listenerName": "Goblet's Dredges - attack dmg end listener",
                         "ownerTurn": {},
                     },
@@ -13952,6 +13954,7 @@ const turnLogic = {
                             statCheck(battleData,ownerTurn);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "EHR to DMG EHR check",
                         "ownerTurn": {},
                     },
@@ -14050,7 +14053,7 @@ const turnLogic = {
                     isAttack: false,
                     isAbility: false,
                     useAnyTriggers: true,
-                    // eventTypeStartLOG: "GenericAbilityStart",
+                    eventTypeStartLOG: "GenericAbilityStart",
                     // eventTypeStart: "GenericAbilityStart",
                     // eventTypeEnd: "GenericAbilityEnd",
 
@@ -16000,7 +16003,7 @@ const turnLogic = {
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
-                        // eventTypeStartLOG: "GenericAbilityStart",
+                        eventTypeStartLOG: "GenericAbilityStart",
                         // eventTypeStart: "GenericAbilityStart",
                         // eventTypeEnd: "GenericAbilityEnd",
 
@@ -16869,7 +16872,7 @@ const turnLogic = {
                                     isAttack: true,
                                     isAbility: true,
                                     useAnyTriggers: true,
-                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    eventTypeStartLOG: "GenericAbilityStart",
                                     // eventTypeStart: "GenericAbilityStart",
                                     // eventTypeEnd: "GenericAbilityEnd",
         
@@ -17927,7 +17930,7 @@ const turnLogic = {
                         isAttack: false,
                         isAbility: false,
                         useAnyTriggers: false,
-                        // eventTypeStartLOG: "ExtraTurnStart",
+                        eventTypeStartLOG: "ExtraTurnStart",
                         // eventTypeStart: "ExtraTurnStart",
                         // eventTypeEnd: "ExtraTurnEnd",
 
@@ -19176,7 +19179,7 @@ const turnLogic = {
                                     isAttack: true,
                                     isAbility: true,
                                     useAnyTriggers: true,
-                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    eventTypeStartLOG: "GenericAbilityStart",
                                     // eventTypeStart: "GenericAbilityStart",
                                     // eventTypeEnd: "GenericAbilityEnd",
     
@@ -20766,7 +20769,7 @@ const turnLogic = {
                                 isAttack: true,
                                 isAbility: true,
                                 useAnyTriggers: true,
-                                // eventTypeStartLOG: "GenericAbilityStart",
+                                eventTypeStartLOG: "GenericAbilityStart",
                                 // eventTypeStart: "GenericAbilityStart",
                                 // eventTypeEnd: "GenericAbilityEnd",
         
@@ -25564,7 +25567,7 @@ const turnLogic = {
                                     isAttack: true,
                                     isAbility: true,
                                     useAnyTriggers: true,
-                                    // eventTypeStartLOG: "GenericAbilityStart",
+                                    eventTypeStartLOG: "GenericAbilityStart",
                                     // eventTypeStart: "GenericAbilityStart",
                                     // eventTypeEnd: "GenericAbilityEnd",
         
@@ -25696,7 +25699,7 @@ const turnLogic = {
                         isAttack: false,
                         isAbility: false,
                         useAnyTriggers: false,
-                        // eventTypeStartLOG: "ExtraTurnStart",
+                        eventTypeStartLOG: "ExtraTurnStart",
                         // eventTypeStart: "ExtraTurnStart",
                         // eventTypeEnd: "ExtraTurnEnd",
 
@@ -27251,7 +27254,7 @@ const turnLogic = {
                                 isAttack: false,
                                 isAbility: false,
                                 useAnyTriggers: false,
-                                // eventTypeStartLOG: "ExtraTurnStart",
+                                eventTypeStartLOG: "ExtraTurnStart",
                                 // eventTypeStart: "ExtraTurnStart",
                                 // eventTypeEnd: "ExtraTurnEnd",
     
@@ -34901,7 +34904,7 @@ const turnLogic = {
                             isAttack: true,
                             isAbility: true,
                             useAnyTriggers: true,
-                            // eventTypeStartLOG: "GenericAbilityStart",
+                            eventTypeStartLOG: "GenericAbilityStart",
                             // eventTypeStart: "GenericAbilityStart",
                             // eventTypeEnd: "GenericAbilityEnd",
 
@@ -35964,7 +35967,7 @@ const turnLogic = {
                                 isAttack: true,
                                 isAbility: true,
                                 useAnyTriggers: true,
-                                // eventTypeStartLOG: "GenericAbilityStart",
+                                eventTypeStartLOG: "GenericAbilityStart",
                                 // eventTypeStart: "GenericAbilityStart",
                                 // eventTypeEnd: "GenericAbilityEnd",
 
@@ -38287,7 +38290,7 @@ const turnLogic = {
                     isAttack: false,
                     isAbility: false,
                     useAnyTriggers: false,
-                    // eventTypeStartLOG: "ExtraTurnStart",
+                    eventTypeStartLOG: "ExtraTurnStart",
                     // eventTypeStart: "ExtraTurnStart",
                     // eventTypeEnd: "ExtraTurnEnd",
 
@@ -42037,7 +42040,7 @@ const turnLogic = {
                                 isAttack: true,
                                 isAbility: true,
                                 useAnyTriggers: true,
-                                // eventTypeStartLOG: "GenericAbilityStart",
+                                eventTypeStartLOG: "GenericAbilityStart",
                                 // eventTypeStart: "GenericAbilityStart",
                                 // eventTypeEnd: "GenericAbilityEnd",
 

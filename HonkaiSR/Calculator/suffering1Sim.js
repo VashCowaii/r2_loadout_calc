@@ -1437,12 +1437,21 @@ const sim = {
     },
     pokeListenersOwnership(triggerName,battleData,generalInfo,personalOwner) {
         if (personalOwner) {
-            const triggerRef = battleData.battleListenersPersonal[personalOwner.properName] ??= {};
-            const listenerRef = triggerRef[triggerName] ??= [];
+            // const triggerRef = battleData.battleListenersPersonal[personalOwner.properName] ??= {};
+            // const triggerRef = battleData.battleListenersPersonal[personalOwner.properName];
 
-            for (let i = listenerRef.length-1; i>=0; i--) {
-                listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+
+            const listenerRef = battleData.battleListenersPersonal[personalOwner.properName]?.[triggerName];
+            if (listenerRef) {
+                for (let i = listenerRef.length-1; i>=0; i--) {
+                    listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+                }
             }
+            // const listenerRef = triggerRef[triggerName] ??= [];
+
+            // for (let i = listenerRef.length-1; i>=0; i--) {
+            //     listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+            // }
         }
 
         const triggerRef = battleData.battleListeners[triggerName] ??= [];
