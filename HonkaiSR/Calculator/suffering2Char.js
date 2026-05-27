@@ -190,7 +190,7 @@ const battleActions = {
             timesToApply = newCheck.timesToApply;
         }
         else {
-            if (!isDebuff && !isShield && (currentReference.maxStacks === 1 || currentReference.maxStacks === currentReference.currentStacks)) {
+            if (!isDebuff && !isShield && (currentReference.maxStacks === 1 || (currentReference.maxStacks === currentReference.currentStacks && buffSheet.currentStacks > 0))) {
                 if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                 return;
             }
@@ -353,14 +353,15 @@ const battleActions = {
         }
         //inherit the avg'd chance to apply from the newest application, such that we can relfect changes in EHR or enemy effect RES
 
-        if (maxStacks > currentStacks && maxStacks > 1) {
+        if ((maxStacks > currentStacks || buffSheet.currentStacks < 0) && maxStacks > 1) {
             changeStats = true;
 
             const stackSumTemp = currentStacks + buffSheet.currentStacks;
-            timesToApply = Math.min(maxStacks, stackSumTemp) - currentStacks;
+            timesToApply = Math.max(-currentStacks + 1, Math.min(maxStacks, stackSumTemp) - currentStacks);
             //if we had 1 stack, with a max of 5, but 10 were applied, we'd do (current:1 + applied:10)cap at max 5, minus current:1 = 4 NEW stacks applied due to cap, despite the 10 stacks earned from the action
+            //if we had 5 stacks, and -10 were applied, we'd need to max between the resulting negative value, and the current stack value as a negative, but plus 1 to allow at least one stack to remain
 
-            currentReference.currentStacks = Math.min(maxStacks, stackSumTemp);//pulling the stacks to apply from the sheet bc this can vary based on how many buff procs happen in a single action
+            currentReference.currentStacks = Math.max(1, Math.min(maxStacks, stackSumTemp));//pulling the stacks to apply from the sheet bc this can vary based on how many buff procs happen in a single action
             //right now this assumes that all stack values are uniform. If they end up pulling shit like TFD did with first stack x value then subsequent as y value, that's gonna suck
             if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Stack", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
         }
@@ -5005,12 +5006,13 @@ const battleActions = {
             }
         }
     },
-    addListenerWithPriority(battleData,listenerObject,trigger,assignOwnerTurn) {
+    addListenerWithPriority(battleData,listenerObject,trigger,assignOwnerTurn,ownersSlots) {
         const isPersonal = listenerObject.isPersonal;
         const personalRef = isPersonal ? (battleData.battleListenersPersonal[assignOwnerTurn.properName] ??= {}) : null;
 
         let listenerRef = (isPersonal ? (personalRef[trigger] ??= []) : battleData.battleListeners[trigger] ??= []);
         if (assignOwnerTurn) {listenerObject.ownerTurn = assignOwnerTurn;}
+        if (ownersSlots) {listenerObject.ownersSlots = ownersSlots;}
 
         if (!listenerRef.length) {listenerRef.push(listenerObject);}
         else {
@@ -14103,6 +14105,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    //TODO: revisit buff stack removal clearing and reapplications like the punishment trace here
     "Welt": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -14228,9 +14231,20 @@ const turnLogic = {
                         return;
                     }
                     else {//lastly, if current stacks is greater than the converted stacks, then remove the buff so we can apply it with the correct amount
-                        //this removal in the log will be silent only if there are still stacks to apply
-                        //if no stacks to apply exist, then we would log the buff removal wholly
-                        removeBuff(battleData,currentTurn,buffSheet,stacksToApply > 0);
+                        // //this removal in the log will be silent only if there are still stacks to apply
+                        // //if no stacks to apply exist, then we would log the buff removal wholly
+                        // removeBuff(battleData,currentTurn,buffSheet,stacksToApply > 0);
+
+                        const newStacks = stacksToApply - currentStacks;
+
+                        if (-newStacks === currentStacks) {
+                            removeBuff(battleData,currentTurn,buffSheet);
+                            return;
+                        }
+
+                        buffSheet.currentStacks = newStacks;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                        return;
                     }
                 }
                 if (!stacksToApply) {return;}
@@ -38883,11 +38897,12 @@ const turnLogic = {
             let currentSP = battleData.skillPointCurrent;
             const statCalls = thisTurn.battleValues;
             const minimum = currentSP>0 || statCalls.thrill>0;
+            const isEnhanced = statCalls.forceBasic;
 
-            if (minimum && checkSkill(battleData,thisTurn)) {
+            if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {
                 return this.returnSkillCall;
             }
-            return this.returnBasicCall
+            return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= {
@@ -38902,6 +38917,7 @@ const turnLogic = {
                 // eventTypeEnd: "SkillEnd",
                 actionCall: this.skillFunctions.sparxSkillInstance, 
                 target: "self", 
+                isContinuousTurn: true,
             }
             this.returnSkillCall.sourceTurn = thisTurn;
             this.returnBasicCall ??= {
@@ -38918,6 +38934,22 @@ const turnLogic = {
                 target: "enemy", 
             }
             this.returnBasicCall.sourceTurn = thisTurn;
+
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.sparxBasicEnhanced, 
+                target: "enemy", 
+            }
+            this.returnBasicEnhCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
             "Ultimate": null,
@@ -39219,7 +39251,6 @@ const turnLogic = {
                     battleActions.updatePunchlineValue(battleData,1,sourceTurn,"Skill: Unreal Banger");
                 }
 
-                const skillFunctions = logicRef.skillFunctions;
                 const repeatSkillFunction = logicRef.skillFunctions.sparxRepeatSkillFunction;
                 const currentSP = battleData.skillPointCurrent;
                 let canContinue = currentSP && checkSkill(battleData,sourceTurn);
@@ -39241,7 +39272,7 @@ const turnLogic = {
                     canContinue = currentSP2 && battleValues.skillCounter < 20 && checkSkill(battleData,sourceTurn);
                 }
 
-                skillFunctions.sparxBasicEnhanced(battleData,target,sourceTurn);
+                sourceTurn.battleValues.forceBasic = true;
             },
             sparxRepeatSkillFunction(battleData,sourceTurn) {
                 const battleValues = sourceTurn.battleValues;
@@ -39279,6 +39310,7 @@ const turnLogic = {
                 }
             },
             sparxBasicEnhanced(battleData,target,sourceTurn) {
+                sourceTurn.battleValues.forceBasic = false;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const battleValues = sourceTurn.battleValues;
