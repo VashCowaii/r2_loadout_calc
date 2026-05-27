@@ -901,64 +901,81 @@ const turnLogicLightcones = {
             "tame": "Tame [Worrisome, Blissful]"
         },
     },
-    "Cruising in the Stellar Sea": {
+    "Cruising in the Stellar Sea": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AllyDMGStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    let ownerRef = this.owners;
 
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
 
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                    if (!sourceTurn.cruisingStellarCRITSHEET) {
-                        let lcNameRef = "Cruising in the Stellar Sea";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.critBonus;
-                        sourceTurn.cruisingStellarCRITSHEET = {
-                            "statsOnHit": [CritRateBase],
-                            [CritRateBase]: rankParams[0],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 5,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null
-                        }
-                    }
-
-
-                    const targetTurn = generalInfo.targetTurn;
-
-                    const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
-                    const hpThreshold = 0.50;
-
-                    const buffSheet = sourceTurn.cruisingStellarCRITSHEET;
-                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
-                    if (hpRatio <= hpThreshold) {
-                        if (buffCheck) {return;}
-                        else {
-                            updateBuff(battleData,sourceTurn,buffSheet);
-                        }
-                    }
-                    else if (buffCheck) {
-                        removeBuff(battleData,sourceTurn,buffSheet);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Cruising <= 50%HP crit buff",
+                "listenerName": "In the Night listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.cruisingStellarCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Cruising in the Stellar Sea";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.critBonus;
+                                sourceTurn.cruisingStellarCRITSHEET = {
+                                    "statsOnHit": [CritRateBase],
+                                    [CritRateBase]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 5,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+        
+                            const targetTurn = generalInfo.targetTurn;
+        
+                            const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
+                            const hpThreshold = 0.50;
+        
+                            const buffSheet = sourceTurn.cruisingStellarCRITSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                            if (hpRatio <= hpThreshold) {
+                                if (buffCheck) {return;}
+                                else {
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cruising <= 50%HP crit buff",
+                    },
+                ]
             },
             {
                 "trigger": "EnemyDied",
@@ -967,8 +984,6 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
                     const ownerRank = ownersSlots[sourceTurn.name];
                     if (!ownerRank) {return;}//abort if the kill owner was not a lc owner
-
-
 
                     if (!sourceTurn.cruisingStellarATKSHEET) {
                         let lcNameRef = "Cruising in the Stellar Sea";
@@ -1148,54 +1163,73 @@ const turnLogicLightcones = {
             "dmgStack": "Answers of Their Own"
         },
     },
-    "Final Victor": {
+    "Final Victor": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AllyDMGEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownerRef = this.owners;
 
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
 
-                    if (!sourceTurn.worrisomBlissfulTameSTACKSHEET) {
-                        let lcNameRef = "Final Victor";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        // let ownerName = sourceTurn.properName;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                        sourceTurn.worrisomBlissfulTameSTACKSHEET = {
-                            "stats": [CritDamageBase],
-                            [CritDamageBase]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.fortune,
-                            "durationInTurn": 1,
-                            "duration": 1,//expires at the end of the turn regardless
-                            "AVApplied": 0,
-                            "maxStacks": 4,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    const buffSheet = sourceTurn.worrisomBlissfulTameSTACKSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "Final Victor dmg end listener",
+                "listenerName": "Final Victor listener setup",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcFinalVictorCritSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Final Victor";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                // let ownerName = sourceTurn.properName;
+        
+                                sourceTurn.lcFinalVictorCritSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.fortune,
+                                    "durationInTurn": 1,
+                                    "duration": 1,//expires at the end of the turn regardless
+                                    "AVApplied": 0,
+                                    "maxStacks": 4,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcFinalVictorCritSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Final Victor dmg end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             "fortune": "Good Fortune (LC, FV)",
         },
     },
-    "Only Silence Remains": {
+    "Only Silence Remains": {//NO CHANGE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -1255,13 +1289,68 @@ const turnLogicLightcones = {
             "silenceCrit": "Only Silence Remains (LC)",
         },
     },
-    "River Flows in Spring": {
+    "River Flows in Spring": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "River Flows in Spring listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            const wasAttack = generalInfo.wasAttack;
+        
+                            if (!wasAttack) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.lcRiverFlowsSpringWASACTIVE) {
+                                removeBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
+                                sourceTurn.lcRiverFlowsSpringWASACTIVE = false;
+                            }
+                        },
+                        "isPersonal": true,
+                        "listenerName": "River Flows in Spring - lost hp listener",
+                    },
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcRiverFlowsSpringWASACTIVE) {
+                                updateBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
+                                sourceTurn.lcRiverFlowsSpringWASACTIVE = true;
+                            }
+                        },
+                        "isPersonal": true,
+                        "listenerName": "River Flows in Spring - end turn listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "River Flows in Spring";
                     let lcPathing = lightcones[lcNameRef].params;
@@ -1293,45 +1382,8 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "River Flows in Spring - battlestart buff application",
-                "owners": [],
-            },
-            {
-                "trigger": "AllyLostHP",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    const wasAttack = generalInfo.wasAttack;
-
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank || !wasAttack) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
-
-
-                    if (sourceTurn.lcRiverFlowsSpringWASACTIVE) {
-                        removeBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
-                        sourceTurn.lcRiverFlowsSpringWASACTIVE = false;
-                    }
-                },
-                "target": "self",
-                "listenerName": "River Flows in Spring - lost hp listener",
-                "owners": [],
-            },
-            {
-                "trigger": "EndTurn",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
-
-
-                    if (!sourceTurn.lcRiverFlowsSpringWASACTIVE) {
-                        updateBuff(battleData,sourceTurn,sourceTurn.lcRiverFlowsSpringBONUSSHEET)
-                        sourceTurn.lcRiverFlowsSpringWASACTIVE = true;
-                    }
-                },
-                "target": "self",
-                "listenerName": "River Flows in Spring - end turn listener",
                 "owners": [],
             },
         ],
@@ -1339,12 +1391,12 @@ const turnLogicLightcones = {
             "river": "River Flows in Spring (LC)",
         },
     },
-    "See You at the End": {
+    "See You at the End": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "See You at the End";
@@ -1402,13 +1454,64 @@ const turnLogicLightcones = {
             "river2": "See You at the End FUA (LC)",
         },
     },
-    "Shadowed by Night": {
+    "Shadowed by Night": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Shadowed by Night listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "BreakDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcShadowedByNightALREADYACTIVE) {
+                                updateBuff(battleData,sourceTurn,sourceTurn.lcShadowedByNightSPDSHEET)
+                                sourceTurn.lcShadowedByNightALREADYACTIVE = true;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Shadowed by Night - break dmg end turn listener",
+                    },
+                    {
+                        "trigger": "TurnStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            sourceTurn.lcShadowedByNightALREADYACTIVE = false;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Shadowed by Night - start turn listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Shadowed by Night";
                     let lcPathing = lightcones[lcNameRef].params;
@@ -1439,39 +1542,8 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Shadowed by Night - battlestart buff application",
-                "owners": [],
-            },
-            {
-                "trigger": "BreakDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
-
-
-                    if (!sourceTurn.lcShadowedByNightALREADYACTIVE) {
-                        updateBuff(battleData,sourceTurn,sourceTurn.lcShadowedByNightSPDSHEET)
-                        sourceTurn.lcShadowedByNightALREADYACTIVE = true;
-                    }
-                },
-                "target": "self",
-                "listenerName": "Shadowed by Night - break dmg end turn listener",
-                "owners": [],
-            },
-            {
-                "trigger": "TurnStart",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
-
-                    sourceTurn.lcShadowedByNightALREADYACTIVE = false;
-                },
-                "target": "self",
-                "listenerName": "Shadowed by Night - start turn listener",
                 "owners": [],
             },
         ],
@@ -1479,28 +1551,34 @@ const turnLogicLightcones = {
             "river": "Shadowed by Night (LC)",
         },
     },
-    "Subscribe for More!": {
+    "Subscribe for More!": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
                     let lcNameRef = "Subscribe for More!";
                     let lcPathing = lightcones[lcNameRef].params;
-                
+
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
 
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+
                         let ownerName = currentTurn.properName;
 
+                        let rankParams = lcPathing[ownerRank-1];
                         let buffSheet = currentTurn.lcSubForMoreDMGSHEET ??= {
-                            "stats": [DamageSkill,DamageBasic],
-                            [DamageSkill]: rankParams[0],
-                            [DamageBasic]: rankParams[0],
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[0],
                             "source": lcNameRef,
                             "sourceOwner": ownerName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
@@ -1510,69 +1588,69 @@ const turnLogicLightcones = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["Basic","Skill"],
                         }
                         
                         updateBuff(battleData,currentTurn,buffSheet);
                     }
                 },
                 "target": "self",
-                "listenerName": "Subscribe for More! - battlestart buff application",
+                "listenerName": "Subscribe for More! listener setup",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "EnergyChanged",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const isFull = sourceTurn.currentEnergy === sourceTurn.maxEnergy;
+                            if (!sourceTurn.lcSubForMoreDMGSHEET2) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+        
+                                let lcNameRef = "Subscribe for More!";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                let ownerName = sourceTurn.properName;
+        
+                                sourceTurn.lcSubForMoreDMGSHEET2 = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": ownerName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.river2,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["Basic","Skill"],
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcSubForMoreDMGSHEET2;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+        
+                            if (isFull) {
+                                if (buffCheck) {return;}
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Subscribe for More! - energy change listener",
+                    },
+                ]
             },
-            {
-                "trigger": "EnergyChanged",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//if the ally losing hp was a non owner, OR the loss wasn't from DMG, then abort
-
-
-                    const isFull = sourceTurn.currentEnergy === sourceTurn.maxEnergy;
-                    if (!sourceTurn.lcSubForMoreDMGSHEET2) {
-                        let ownersSlots = this.ownersSlots;
-                        let ownerRank = ownersSlots[sourceTurn.name];
-
-                        let lcNameRef = "Subscribe for More!";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        let ownerName = sourceTurn.properName;
-
-                        sourceTurn.lcSubForMoreDMGSHEET2 = {
-                            "stats": [DamageSkill,DamageBasic],
-                            [DamageSkill]: rankParams[0],
-                            [DamageBasic]: rankParams[0],
-                            "source": lcNameRef,
-                            "sourceOwner": ownerName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river2,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.lcSubForMoreDMGSHEET2;
-                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
-
-                    if (isFull) {
-                        if (buffCheck) {return;}
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    }
-                    else if (buffCheck) {
-                        removeBuff(battleData,sourceTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Subscribe for More! - energy change listener",
-                "owners": [],
-            },
+            
         ],
         "buffNames": {
             "river": "Subscribe for More! (LC)",
@@ -1580,7 +1658,7 @@ const turnLogicLightcones = {
         },
     },
         //3star
-    "Adversarial": {
+    "Adversarial": {//NO CHANGE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -1631,12 +1709,12 @@ const turnLogicLightcones = {
             "river": "Adversarial (LC)",
         },
     },
-    "Arrows": {
+    "Arrows": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Arrows";
@@ -1676,7 +1754,7 @@ const turnLogicLightcones = {
             "river": "Arrows (LC)",
         },
     },
-    "Darting Arrow": {
+    "Darting Arrow": {//NO CHANGE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
