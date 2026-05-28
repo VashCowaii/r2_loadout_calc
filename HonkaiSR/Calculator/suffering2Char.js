@@ -40978,7 +40978,2053 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Silver Wolf LV.999": {
+        logic(thisTurn,battleData) {
+            // let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+            const isEnhanced = thisTurn.battleValues.godModeActive;
+
+            if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
+            }
+
+            return isEnhanced ? this.returnBasicCallEnh : this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                actionCall: this.skillFunctions.sw999Skill, 
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                properName: thisTurn.properName,
+                // eventTypeStart: "UltimateStart",
+                // eventTypeEnd: "UltimateEnd",
+                target: "enemy",
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.Skill,
+            }
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                actionCall: this.skillFunctions.sw999Basic, 
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                properName: thisTurn.properName,
+                // eventTypeStart: "UltimateStart",
+                // eventTypeEnd: "UltimateEnd",
+                target: "enemy",
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK,
+            }
+            this.returnBasicCall.sourceTurn = thisTurn;
+            this.returnBasicCallEnh ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                actionCall: this.skillFunctions.sw999BasicEnh,
+                useAnyTriggers: true, 
+                eventTypeStartLOG: "BasicATKStart",
+                properName: thisTurn.properName,
+                // eventTypeStart: "UltimateStart",
+                // eventTypeEnd: "UltimateEnd",
+                target: "enemy",
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK,
+            }
+            this.returnBasicCallEnh.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Self",
+            "BasicATK": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            sw999Basic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.sw999BasicREF ??= ATKObjects["Basic ATK"]["One Punch!"].variant1;
+
+                if (!ATKObjects.sw999BasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    
+                    ATKObjects.sw999BasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.sw999BasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            sw999BasicEnh(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const skillFunctions = logicRef.skillFunctions;
+
+                let skillRef = ATKObjects.sw999BasicEnhREF ??= ATKObjects["Basic ATK"]["Bonus Stage: αWolf Instant"].variant1;
+
+                if (!ATKObjects.sw999BasicEnhATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basicEnh;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    
+                    ATKObjects.sw999BasicEnhATKOBJECTEarlyEnd = {//empty attack for the sake of ending triggers
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        // scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        // realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                        // isElation: true,
+                        bounceData: null,
+                    }
+
+                    ATKObjects.sw999BasicEnhATKOBJECT = {//burst normal
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        // scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        // realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                        // isElation: true,
+                        bounceData: {
+                            multi: values[0] / 100,
+                            bounceCount: 34,
+                            hitSplit: {
+                                "primary": {//
+                                    "hitRatio": 1,
+                                    // "energyRatio": 1,
+                                    "toughness": 50 / 100,
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+                    ATKObjects.sw999BasicEnhATKOBJECT3 = {//final hit normal
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[3],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        // realElationDMGKeys,realMerryDMGKeys,
+                        // realPENKeys: realPENKeys2,
+                        // realShredKeys: realShredKeys2,
+                        // realVulnKeys: realVulnKeys2,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                        // isElation: true,
+                        // useCertifiedBanger: true,
+                        isDistributed: true,
+                    }
+
+                    const tags2 = ["All","Elation","Imaginary","Basic"];
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags2);
+                    const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags2);
+                    // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys2 = keyShortcut(resPENKeys,tags2);
+                    const realShredKeys2 = keyShortcut(defShredKeys,tags2);
+                    const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
+                    const actionTags2 = ["Elation","Attack","Basic"];
+                    const compositeCacheTag2 = tags2 + actionTags2 + sourceTurn.properName;
+                    ATKObjects.sw999BasicEnhATKOBJECT01 = {//burst elation
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        // scalar,
+                        // scalar,
+                        DMGTags: tags2,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        // realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        realElationDMGKeys,realMerryDMGKeys,
+                        realPENKeys: realPENKeys2,
+                        realShredKeys: realShredKeys2,
+                        realVulnKeys: realVulnKeys2,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2,
+                        isFUA: false,
+                        isElation: true,
+                        useCertifiedBanger: true,
+                        bounceData: {
+                            multi: values[0] / 100,
+                            bounceCount: 34,
+                            hitSplit: {
+                                "primary": {//
+                                    "hitRatio": 1,
+                                    // "energyRatio": 1,
+                                    "toughness": 50 / 100,
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+                    ATKObjects.sw999BasicEnhATKOBJECT31 = {//final hit elation
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[3],
+                        },
+                        // scalar,
+                        // scalar,
+                        DMGTags: tags2,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        // realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        realElationDMGKeys,realMerryDMGKeys,
+                        realPENKeys: realPENKeys2,
+                        realShredKeys: realShredKeys2,
+                        realVulnKeys: realVulnKeys2,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2,
+                        isFUA: false,
+                        isElation: true,
+                        useCertifiedBanger: true,
+                        isDistributed: true,
+                    }
+
+
+                    ATKObjects.sw999e6MERRYSHEET = {
+                        "stats": [MerryMakeAll],
+                        [MerryMakeAll]: 0.50,
+                        "source": "E6",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e6Merry,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    sourceTurn.sw999MMRScalarSHEET = {
+                        "stats": null,
+                        "multiplier": 1.15,
+                        "source": "BasicATK",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.talentMMRScale,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isFinalMulti": true,
+                        "actionTags": ["All"]
+                    }
+                }
+                const rank = sourceTurn.rank;
+                if (rank >= 6) {
+                    const buffSheet = ATKObjects.sw999e6MERRYSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+                const battleValues = sourceTurn.battleValues;
+                battleValues.inBasicATK = true;
+                poke("SW999GainMMR",battleData,{pointsGained: 0,sourceString:"BasicATK PseudoCheck"});
+                const finalSheet = sourceTurn.sw999MMRScalarSHEET;
+                const buffsObject = sourceTurn.buffsObject;
+
+                const hasCB = sourceTurn.certifiedBanger;
+                let ATKObject1 = hasCB ? ATKObjects.sw999BasicEnhATKOBJECT01 : ATKObjects.sw999BasicEnhATKOBJECT;
+                let ATKObject3 = hasCB ? ATKObjects.sw999BasicEnhATKOBJECT31 : ATKObjects.sw999BasicEnhATKOBJECT3;
+                
+
+                let chainedAttackRef = null;
+                const chainedAttack = battleActions.attackWrapperChained;
+                const rollFunctions = ATKObjects.boxRollIndex;
+                const sw999GetRoll = skillFunctions.sw999GetRoll;
+                
+                // const sw999VerifyHits = skillFunctions.sw999VerifyHits;
+
+                const itemsTotal = battleValues.ebaItemsLeft;
+                const hitsTotal = battleValues.ebaHitsLeft;
+                let itemsLeft = itemsTotal;
+                let hitsLeft = hitsTotal;
+                let firstAttackDone = false;
+                let attackEndedEarly = false;
+
+                const burstBounceData = ATKObject1.bounceData;
+                // console.log(battleData.enemyPositions.length)
+                while (itemsLeft && !battleData.battleIsOver) {
+
+                    const hitCountPre = chainedAttackRef?.totals?.totalHits ?? 0;
+                    const chainState = firstAttackDone ? "Middle" : "Start";
+                    if (!firstAttackDone) {firstAttackDone = true;}
+
+                    const hitsThisTime = itemsLeft === 1 ? hitsLeft : Math.ceil(hitsTotal/itemsTotal);
+                    burstBounceData.bounceCount = hitsThisTime;
+                    chainedAttackRef = chainedAttack(battleData,skillRef,sourceTurn,ATKObject1,chainState,chainedAttackRef);
+                    const hitCountPost = chainedAttackRef.totals.totalHits - hitCountPre;
+                    hitsLeft -= hitCountPost;
+
+                    if (hitCountPost === 0 || hitCountPost != hitsThisTime) {
+                        attackEndedEarly = true;
+                        break;
+                    }
+                    chainedAttackRef = rollFunctions[sw999GetRoll(battleData,sourceTurn) - 1](battleData,null,sourceTurn,chainedAttackRef);
+                    itemsLeft -= 1;
+
+                    if (!battleData.enemyPositions.length) {
+                        attackEndedEarly = true;
+                        break;
+                    }
+                }
+
+                
+                if (attackEndedEarly) {
+                    let endObject = ATKObjects.sw999BasicEnhATKOBJECTEarlyEnd;
+
+                    // const returnATKData = battleActions.attackWrapper(battleData,skillRef,sourceTurn,endObject);
+                    battleActions.attackWrapperChained(battleData,skillRef,sourceTurn,endObject,"End",chainedAttackRef);
+
+                    battleValues.ebaHitsLeft = hitsLeft;
+                    battleValues.ebaItemsLeft = itemsLeft;
+
+                    const queueObject = this.queueObject ??= {
+                        name: "SW999 EBA Unfinished, Defer to Next Wave",
+                        priority: priorityList.turn.CharacterChainedSkill,
+                        queueTag: "SW999DeferEBA",
+
+                        actionCall: sim.turnWrapper,
+                        action: "Extra Turn",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: true,
+                        dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+                        isAttack: false,
+                        isAbility: false,
+                        useAnyTriggers: false,
+                        eventTypeStartLOG: "ExtraTurnStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+                        
+                        properName: sourceTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "Enemies",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = sourceTurn;
+                    queueExtraTurn(battleData,queueObject);
+
+                    if (battleValues.ebaBuffExtendReady) {
+                        const buffsObject = sourceTurn.buffsObject;
+                        for (let buffKey in buffsObject) {
+                            const currentBuff = buffsObject[buffKey];
+
+
+                            if (currentBuff?.expireType) {
+                                currentBuff.duration += 1;
+                            }
+                        }
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "GenericAction", source:"Buff Extension", bodyText: `SW999 Once-Per-Turn buff extension triggered`});
+                        }
+                        battleValues.ebaBuffExtendReady = false;
+                    }
+
+                    if (rank >= 6) {
+                        const buffSheet = ATKObjects.sw999e6MERRYSHEET;
+                        removeBuff(battleData,sourceTurn,buffSheet);
+                    }
+                    battleValues.inBasicATK = false;
+                    if (buffsObject[finalSheet.buffName]) {removeBuff(battleData,sourceTurn,finalSheet);}
+                    
+                    return;
+                }
+                //FINAL HIT IF VALID
+                chainedAttack(battleData,skillRef,sourceTurn,ATKObject3,"End",chainedAttackRef);
+
+                //if we complete a real EBA then reset hit count
+                battleValues.ebaHitsLeft = 100;
+                battleValues.ebaItemsLeft = 3;
+                battleValues.ebaAttacksLeft -= 1;
+                if (rank >= 6) {
+                    const buffSheet = ATKObjects.sw999e6MERRYSHEET;
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                }
+                battleValues.inBasicATK = false;
+                if (buffsObject[finalSheet.buffName]) {
+                    
+                    removeBuff(battleData,sourceTurn,finalSheet);
+                }
+
+                if (battleValues.ebaAttacksLeft <= 0) {
+                    const queueObject = ATKObjects.sw999ExitGodMode ??= {
+                        name: "SW999 God-Mode Exit Queued",
+                        priority: priorityList.ability.CharacterBuffSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[sourceTurn.properName].skillFunctions.sw999ExitGodMode,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: false,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: sourceTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: null,
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+
+                    queueObject.sourceTurn = sourceTurn;
+                    queueInsertAbility(battleData,queueObject);
+                }
+                
+            },
+            sw999ExitGodMode(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const battleValues = sourceTurn.battleValues;
+                const buffSheet = ATKObjects.sw999UltimateGODSHEET;
+                battleValues.godModeActive = false;
+                removeBuff(battleData,sourceTurn,buffSheet);
+
+                const rank = sourceTurn.rank;
+                if (rank >= 1) {
+                    let buffSheet = ATKObjects.sw999E1VulnSHEET;
+                    
+                    const enemyPositions = battleData.enemyPositions;
+                    removeBuffFromBatch(battleData,enemyPositions,buffSheet);
+
+                    if (rank >= 2) {
+                        battleValues.e2Accumulation = 0;
+                    }
+                }
+
+                const clearValue = Math.ceil((sourceTurn.specialEnergyCurrent + battleValues.MMROverflow) * (rank >= 1 ? 0.8 : 1));
+                poke("SW999GainMMR",battleData,{pointsGained: -clearValue,sourceString:"Exited God-Mode-Player State"});
+            },
+            sw999GetRoll(battleData,sourceTurn) {
+                const battleValues = sourceTurn.battleValues;
+                const lastRoll = battleValues.lastRoll;
+                const lastRollValue = battleValues.lastRollValue;
+
+                const skillPoints = battleData.skillPointCurrent;
+                const skillPointsMax = battleData.battleTable.SPMax;
+
+                const currentMMR = sourceTurn.specialEnergyCurrent + battleValues.MMROverflow;
+                const maxMMR = 300;
+
+                let roll1 = 1 * (lastRoll === 1 ? 0.01 * lastRollValue : 1);
+                let roll2 = 1 * (lastRoll === 2 ? 0.01 * lastRollValue : 1);
+                let roll3 = 1 * (lastRoll === 3 ? 0.01 * lastRollValue : 1);
+
+                if (skillPoints <= 1) {
+                    roll2 *= 10;
+                }
+                else {
+                    if (skillPoints === skillPointsMax) {roll2 *= 0.001;}
+                    else if (skillPoints >= 4) {roll2 *= 0.1;}
+                }
+
+
+                if (currentMMR <= 60) {
+                    roll3 *= 10;
+                }
+                else {
+                    if (currentMMR === maxMMR) {roll3 *= 0.001;}
+                    else if (currentMMR >= 120) {roll3 *= 0.1;}
+                }
+
+                if (roll1 > roll2 && roll1 > roll3) {
+                    battleValues.lastRollValue = roll1;
+                    return 1;
+                }
+                if (roll2 > roll1 && roll2 > roll3) {
+                    battleValues.lastRollValue = roll2;
+                    return 2;
+                }
+                if (roll3 > roll1 && roll3 > roll2) {
+                    battleValues.lastRollValue = roll3;
+                    return 3;
+                }
+
+
+                const match12 = roll1 === roll2;
+                const match13 = roll1 === roll3;
+                const match23 = roll2 === roll3;
+
+                const currentRNG = battleValues.rollRNGIndex;
+                battleValues.rollRNGIndex = !battleValues.rollRNGIndex;
+
+                if (roll1 > roll3 && match12) {
+                    if (currentRNG) {
+                        battleValues.lastRollValue = roll1;
+                        return 1;
+                    }
+                    else {
+                        battleValues.lastRollValue = roll2;
+                        return 2;
+                    }
+                }
+                if (roll1 > roll2 && match13) {
+                    if (currentRNG) {
+                        battleValues.lastRollValue = roll1;
+                        return 1;
+                    }
+                    else {
+                        battleValues.lastRollValue = roll3;
+                        return 3;
+                    }
+                }
+                if (roll3 > roll1 && match23) {
+                    if (currentRNG) {
+                        battleValues.lastRollValue = roll2;
+                        return 2;
+                    }
+                    else {
+                        battleValues.lastRollValue = roll3;
+                        return 3;
+                    }
+                }
+
+                if (roll1 === roll2 && roll1 === roll3) {
+                    battleValues.lastRollValue = roll1;
+                    return 1;
+                }
+
+                throw new Error("If you can see this it's bc Vash fucked up on the SW999 lootbox logic. Hopefully you never see this though.\n\nIf you do see it however, join the discord and let Vash know.")
+            },
+            sw999Sword(battleData,targetTurn,sourceTurn,chainedAttackRef) {
+                sourceTurn.battleValues.lastRoll = 1;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let sumATKDMG = 0;
+                
+                if (chainedAttackRef) {
+                    let skillRef3 = ATKObjects.sw999BasicEnhREFSword ??= ATKObjects["Basic ATK"]["Big Flipping Sword"].variant1;
+                    let spinObject = ATKObjects.sw999LootSwordSpinObject;
+
+                    const preDMG = chainedAttackRef.totals.totalAVGDMG;
+                    chainedAttackRef = battleActions.attackWrapperChained(battleData,skillRef3,sourceTurn,spinObject,"Middle",chainedAttackRef);//loot box
+                    const postDMG = chainedAttackRef.totals.totalAVGDMG;
+                    sumATKDMG = postDMG - preDMG;
+                }
+                else {//IF THE INSTANCE IS INSERTED, AND NOT FROM BASIC ENH
+                    let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
+                    let LootObject = ATKObjects.sw999LootBoxObject;
+                    const returnATKData = battleActions.attackWrapper(battleData,skillRef4,sourceTurn,LootObject);
+
+                    sumATKDMG = returnATKData.generalInfo.totals.totalAVGDMG;
+                }
+
+                const enemyPositions = battleData.enemyPositions;
+                if (enemyPositions.length) {
+                    let starterTarget = enemyPositions[0];
+                    for (let enemy of enemyPositions) {
+                        let compareHP = enemy.currentHP > starterTarget.currentHP;
+                        if (compareHP) {starterTarget = enemy;}
+                    }
+
+                    const convertedDMG = sumATKDMG * 0.2;
+                    battleActions.trueDMGHitWrapper(battleData,sourceTurn,starterTarget,1,convertedDMG,convertedDMG,convertedDMG,"SW999: Sword");
+                }
+
+                return chainedAttackRef;
+            },
+            sw999Chomper(battleData,targetTurn,sourceTurn,chainedAttackRef,bangerOverride) {
+                sourceTurn.battleValues.lastRoll = 3;
+
+                battleActions.updatePunchlineValue(battleData,3,sourceTurn,"SW999: Chomper");
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                let LootObject = ATKObjects.sw999LootBoxObject;
+                let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
+
+                if (chainedAttackRef) {
+                    chainedAttackRef = battleActions.attackWrapperChained(battleData,skillRef4,sourceTurn,LootObject,"Middle",chainedAttackRef);//loot box
+                    return chainedAttackRef;
+                }
+                else {//IF THE INSTANCE IS INSERTED, AND NOT FROM BASIC ENH
+
+                    if (bangerOverride) {LootObject.BangerValueOverride = 99;}//technique only
+                    battleActions.attackWrapper(battleData,skillRef4,sourceTurn,LootObject);
+                    if (bangerOverride) {LootObject.BangerValueOverride = null;}
+                }
+                
+            },
+            sw999Bomb(battleData,targetTurn,sourceTurn,chainedAttackRef) {
+                sourceTurn.battleValues.lastRoll = 2;
+
+                // battleActions.updatePunchlineValue(battleData,3,sourceTurn,"Chomper");
+                updateSkillPoints(battleData,2,sourceTurn,false,"SW999: Bomb");
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                let LootObject = ATKObjects.sw999LootBoxObject;
+                let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
+
+                if (chainedAttackRef) {
+                    chainedAttackRef = battleActions.attackWrapperChained(battleData,skillRef4,sourceTurn,LootObject,"Middle",chainedAttackRef);//loot box
+                    return chainedAttackRef;
+                }
+                else {//IF THE INSTANCE IS INSERTED, AND NOT FROM BASIC ENH
+                    battleActions.attackWrapper(battleData,skillRef4,sourceTurn,LootObject);
+                }
+            },
+            sw999LootBoxPain(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const rollFunctions = ATKObjects.boxRollIndex;
+                const sw999GetRoll = logicRef.skillFunctions.sw999GetRoll;
+
+                rollFunctions[sw999GetRoll(battleData,sourceTurn) - 1](battleData,null,sourceTurn);
+            },
+            sw999TechInsert(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const rollFunctions = ATKObjects.boxRollIndex;
+
+                rollFunctions[3 - 1](battleData,null,sourceTurn,null,99);
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.sw999SPD160Sheet) {
+                    const characterName = currentTurn.properName;
+                    const buffNames = turnLogic[characterName].buffNames;
+                    ATKObjects.sw999SPD160Sheet = {
+                        "stats": [ElationDMGAll],
+                        [ElationDMGAll]: 0.50,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.spdAt160,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    ATKObjects.sw999SPDOver160Sheet = {
+                        "stats": [ElationDMGAll],
+                        [ElationDMGAll]: 0.02,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.spdOver160,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 100,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+
+                const SPDBeyondThis = 160;
+                const maxStacks = 100;
+                const currentStats = currentTurn.statTable;
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNull];
+                const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
+                const usableSPD = Math.min(maxStacks,Math.floor(validSPD));
+
+                const dmgSheet = ATKObjects.sw999SPD160Sheet;
+                const dmgExtraSheet = ATKObjects.sw999SPDOver160Sheet;
+
+                // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
+                const buffsObject = currentTurn.buffsObject;
+
+                const buffCheck1 = buffsObject[dmgSheet.buffName];
+                if (buffCheck1) {//if the HP buff exists
+                    if (!validSPD) {//but we have no valid spd, then remove
+                        removeBuff(battleData,currentTurn,buffCheck1);
+                    }
+                }
+                else if (validSPD) {//but if the buff doesn't exist yet and we have valid spd, then apply
+                    updateBuff(battleData,currentTurn,dmgSheet);
+                }
+
+                const buffCheck2 = buffsObject[dmgExtraSheet.buffName];
+                if (buffCheck2) {//if the outgoing healing buff exists
+                    const currentStacks = buffCheck2.currentStacks;
+                    if (!validSPD) {//but we're under 200spd, then remove it
+                        removeBuff(battleData,currentTurn,buffCheck2);
+                        // removeBuff(battleData,demiTurn,buffCheck2);
+                    }
+                    else if (currentStacks < usableSPD) {//otherwise if we don't have enough healing bonus, then add the diff in stacks
+                        const stackDiff = usableSPD-currentStacks;
+                        dmgExtraSheet.currentStacks = stackDiff;
+                        
+                        updateBuff(battleData,currentTurn,dmgExtraSheet);
+                        // updateBuff(battleData,demiTurn,dmgExtraSheet);
+                        return;
+                    }
+                    else if (currentStacks === usableSPD) {return;}//if the healing stacks is equal to what we already have, then abort
+                    else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
+                        removeBuff(battleData,currentTurn,buffCheck2,usableSPD,null,false,usableSPD);
+                        // removeBuff(battleData,demiTurn,buffCheck2,true);
+                    }
+                }
+                else if (!usableSPD) {return;}//if we have no whole number spd above 200, then abort at this point
+                
+                //the only reason we should reach this far, is if we should actually apply a buff
+                dmgExtraSheet.currentStacks = usableSPD;
+                updateBuff(battleData,currentTurn,dmgExtraSheet);
+                // updateBuff(battleData,demiTurn,dmgExtraSheet);
+            },
+            sw999Skill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.sw999SkillREF ??= ATKObjects["Skill"]["Trigger Happy"].variant1;
+
+                if (!ATKObjects.sw999SkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.sw999SkillATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+
+                    // const buffNames = logicRef.buffNames;
+                    // ATKObjects.emcE1UltBonusCBSHEET = {
+                    //     "stats": null,
+                    //     "source": "E1",
+                    //     "sourceOwner": sourceTurn.properName,
+                    //     "buffName": buffNames.e1UltBonus,
+                    //     "durationInTurn": 1,
+                    //     "duration": 1,
+                    //     "AVApplied": 0,
+                    //     "maxStacks": 3,
+                    //     "currentStacks": 1,
+                    //     "decay": false,
+                    //     "expireType": null,
+                    // }
+                }
+                let ATKObject = ATKObjects.sw999SkillATKOBJECT;
+
+                battleActions.updatePunchlineValue(battleData,5,sourceTurn,"SW999 Skill");
+
+                // if (rank >= 1) {
+                //     const buffSheet = ATKObjects.emcE1UltBonusCBSHEET;
+                //     updateBuff(battleData,sourceTurn,buffSheet);
+                // }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                // poke("emcSkillEndingCBGain",battleData,exoTurnRef);
+            },
+            statCheck2(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.sw999CritMMRSheet) {
+                    let skillRef = ATKObjects.sw999TalentREF ??= ATKObjects["Talent"]["I Carry, We Win"].variant1;
+                    let values = ATKObjects.sw999TalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
+
+                    const characterName = currentTurn.properName;
+                    const buffNames = turnLogic[characterName].buffNames;
+
+                    ATKObjects.sw999CritMMRInc = values[3];
+                    ATKObjects.sw999CritMMRSheet = {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: values[3],
+                        "source": "Talent",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.mmrCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 300,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    ATKObjects.sw999CritDMGMMRSheet = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: values[5],
+                        "source": "Talent",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.mmrCritDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 300,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+
+                const currentStats = currentTurn.statTable;
+                const maxCrit = 1;
+                const critInc = ATKObjects.sw999CritMMRInc;
+
+                const rateSheet = ATKObjects.sw999CritMMRSheet;
+                const DMGSheet = ATKObjects.sw999CritDMGMMRSheet;
+
+                const buffsObject = currentTurn.buffsObject;
+                const buffCheck1 = buffsObject[rateSheet.buffName];
+                const currentStacks1 = buffCheck1?.currentStacks;
+                //NORMALLY IF WE WERE EXCLUDING CONVERTED STATS WE WOULD DO + HERE BC NULL STATS ARE ALWAYS NEGATIVE
+                //HOWEVER, THIS CONVERSION ALLOWS FOR SUM CRIT WHICH INCLUDES CONVERTED, SO -- = +
+                const currentCrit = (currentStats[CritRateBase] - currentStats[CritRateBaseNULL]) - (currentStacks1 ? currentStacks1 * critInc : 0);
+                const critDiff = Math.max(0, maxCrit - currentCrit);
+                const validCritStacks = Math.ceil(critDiff / critInc);
+
+                const valuesRef = currentTurn.battleValues;
+                const sumMMR = valuesRef.MMROverflow + currentTurn.specialEnergyCurrent;
+
+                const canUseForRate = Math.min(validCritStacks,sumMMR);
+                let critDMGDiff = 0;
+
+                if (sumMMR > canUseForRate) {critDMGDiff = sumMMR - canUseForRate;}
+                
+
+                // const demiTurn = currentTurn.cyreneDemiTURNEVENT;
+                
+                let shouldApplyBuff1 = true;
+                if (buffCheck1) {//if the outgoing healing buff exists
+                    
+                    if (!canUseForRate) {//but we're under 200spd, then remove it
+                        removeBuff(battleData,currentTurn,buffCheck1);
+                        shouldApplyBuff1 = false;
+                        // removeBuff(battleData,demiTurn,buffCheck2);
+                    }
+                    else if (currentStacks1 < canUseForRate) {//otherwise if we don't have enough healing bonus, then add the diff in stacks
+                        const stackDiff = canUseForRate-currentStacks1;
+                        rateSheet.currentStacks = stackDiff;
+                        
+                        updateBuff(battleData,currentTurn,rateSheet,false,null,false,true);
+                        shouldApplyBuff1 = false;
+                        // updateBuff(battleData,demiTurn,dmgExtraSheet);
+                        // return;
+                    }
+                    else if (currentStacks1 === canUseForRate) {shouldApplyBuff1 = false;}//if the healing stacks is equal to what we already have, then abort
+                    else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
+                        removeBuff(battleData,currentTurn,buffCheck1,canUseForRate,null,false,canUseForRate);
+                        shouldApplyBuff1 = true;
+                        // removeBuff(battleData,demiTurn,buffCheck2,true);
+                    }
+                }
+                //Normally we are only considering one stat value that needs to be monitored and adjusted as we go, however, since this monitors 2 stats
+                //based on changes in two other stats, we can't just abort at the earliest opportunity, and need to reach this point no matter what so we
+                //can check the 2nd stat.
+                if (shouldApplyBuff1 && canUseForRate) {
+                    rateSheet.currentStacks = canUseForRate;
+                    updateBuff(battleData,currentTurn,rateSheet,false,null,false,true);
+                    //gotta ignore family pokes here lest you get infinite callstacks
+                    //the crit rate is valid, not converted, and the conversion is based on sum crit rate anyways, meaning any crit rate change
+                    //will always pop the family event, and recall this check
+                    //so with ignorefamilypokes we skip the check that would ensue after applying its own bonus
+                }
+
+                
+                //on the second check though we CAN leave the abort checks in since we're gonna be done anyways
+                const buffCheck2 = buffsObject[DMGSheet.buffName];
+                if (buffCheck2) {//if the outgoing healing buff exists
+                    const currentStacks = buffCheck2.currentStacks;
+                    if (!critDMGDiff) {//but we're under 200spd, then remove it
+                        removeBuff(battleData,currentTurn,buffCheck2);
+                        // removeBuff(battleData,demiTurn,buffCheck2);
+                    }
+                    else if (currentStacks < critDMGDiff) {//otherwise if we don't have enough healing bonus, then add the diff in stacks
+                        const stackDiff = critDMGDiff-currentStacks;
+                        DMGSheet.currentStacks = stackDiff;
+                        
+                        updateBuff(battleData,currentTurn,DMGSheet);
+                        // updateBuff(battleData,demiTurn,dmgExtraSheet);
+                        return;
+                    }
+                    else if (currentStacks === critDMGDiff) {return;}//if the healing stacks is equal to what we already have, then abort
+                    else {//otheriwse if we have too many stacks, remove it with a silent log tag, so we can apply the correct buff after
+                        removeBuff(battleData,currentTurn,buffCheck2,critDMGDiff,null,false,critDMGDiff);
+                        // removeBuff(battleData,demiTurn,buffCheck2,true);
+                    }
+                }
+                if (!critDMGDiff) {return;}//if we have no whole number spd above 200, then abort at this point
+                
+                //the only reason we should reach this far, is if we should actually apply a buff
+                DMGSheet.currentStacks = critDMGDiff;
+                updateBuff(battleData,currentTurn,DMGSheet);
+                // updateBuff(battleData,demiTurn,dmgExtraSheet);
+            },
+            sw999TalentCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo) {
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const targetsGotHit = generalInfo.targetsGotHit;
+                // const primaryTarget = battleData.primaryTarget;
+
+                let skillRef = ATKObjects.sw999TalentREF ??= ATKObjects["Talent"]["I Carry, We Win"].variant1;
+
+                if (!ATKObjects.sw999TalentCertifiedElationADDEDATKOBJECT) {
+                    let values = ATKObjects.sw999TalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
+                    // const scalar = "ATK";
+                    const tags = ["All","Imaginary","Elation"];
+                    const actionTags = ["Elation"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                    const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.sw999TalentCertifiedElationADDEDATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            elation: values[2]
+                        },
+                        // scalar,
+                        element: "Imaginary",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        forcePunchline: null,
+                        ElationPercentOverride: null,
+                        BangerValueOverride: null,
+                    }
+                }
+                let ATKObject = ATKObjects.sw999TalentCertifiedElationADDEDATKOBJECT;
+
+                const enemyTurns = battleData.enemyBasedTurns;
+                const addProc = battleActions.elationDMGWrapper;
+                for (let enemySlot in targetsGotHit) {
+                    const currentEnemy = enemyTurns[enemySlot];
+                    if (currentEnemy.isDead) {continue;}
+
+                    addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"SW999 Basic/Skill Elation DMG");
+                }
+                
+                // // let targetTurn = battleData.primaryTarget;
+                // const enemyPositions = battleData.enemyPositions;
+                // const addProc = battleActions.elationDMGWrapper;
+                // if (enemyPositions.length) {
+                //     for (let enemy of enemyPositions) {
+                //         addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"SW999 Basic/Skill Elation DMG");
+                //     }
+                // }
+            },
+            elationSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const battleValues = sourceTurn.battleValues;
+                const isEnhanced = battleValues.godModeActive;
+                const rank = sourceTurn.rank;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.sw999ElationSkillREF ??= ATKObjects["Elation Skill"][`Pro-Gamer Move`].variant1;
+                let skillRef2 = ATKObjects.sw999ElationSkillREF2 ??= ATKObjects["Elation Skill"][`Honkai-DMG Demo`].variant1;
+                
+                // const rank = sourceTurn.rank;
+
+                if (isEnhanced) {
+                    if (!ATKObjects.sw999ElationSkillATKOBJECT) {
+                        skillRef2.hitSplits = hitSplitters[sourceTurn.properName].elation2;
+                        const values = ATKObjects.sw999ElationSkillREFVALUES2 ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                        // const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                        // const scalar = null;
+                        const tags = ["All","Elation","ElationSkill","Imaginary"];
+                        const keyShortcut = basicShorthand.makeKeysArray;
+                        const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                        const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
+                        // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                        const realPENKeys = keyShortcut(resPENKeys,tags);
+                        const realShredKeys = keyShortcut(defShredKeys,tags);
+                        const realVulnKeys = keyShortcut(vulnKeys,tags);
+                        const actionTags = ["Elation","ElationSkill","Attack"];
+                        const compositeCacheTag = tags + actionTags + sourceTurn.properName;
     
+                        // const rank = sourceTurn.rank;
+                        //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                        ATKObjects.sw999ElationSkillATKOBJECT = {
+                            multipliers: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            // scalar,
+                            DMGTags: tags,
+                            allToughness: false,
+                            slot: skillRef2.slot,
+                            realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                            actionTags,
+                            compositeCacheTag,
+                            isElation: true,
+                            bounceData: {
+                                multi: values[0],
+                                bounceCount: 6,
+                                hitSplit: {
+                                    "primary": {//
+                                        "hitRatio": 1,
+                                        // "energyRatio": 1,
+                                        "toughness": 10
+                                    },
+                                    "blast": null,
+                                    "all": null,
+                                    "allEnemiesHit": null,
+                                    "unknownTypers": false
+                                },
+                            }
+                        }
+                    }
+
+                    let ATKObject = ATKObjects.sw999ElationSkillATKOBJECT;
+
+                    const wasForcedPL = battleData.punchlineForced;
+                    const initialPL = battleData.punchlineForced || battleData.punchline;
+                    const addedPLForced = initialPL * (wasForcedPL ? 5 : 6);
+                    //If PL was already forced, then the battledata value will already be x1, + the x5 we get here
+                    //but if PL was team PL, then we want to add to forced, the value of the team PL + the x5, so x6 total
+                    //ONLY FOR E4
+
+                    if (rank >= 4) {battleData.punchlineForced += addedPLForced;}
+                    battleActions.attackWrapper(battleData,skillRef2,sourceTurn,ATKObject);
+                    if (rank >= 4) {battleData.punchlineForced -= addedPLForced;}
+
+
+
+                    //Enh elation skill resets loot box odds
+                    battleValues.skillPointTally = 0;
+                    battleValues.chance1Ready = true;
+                    battleValues.chance2Ready = true;
+                    battleValues.chance3Ready = true;
+                }
+                else {
+                    //this MMR gain is 
+                    poke("SW999GainMMR",battleData,{pointsGained: 15,sourceString:"SW999 Elation Skill"});
+                }
+
+                const punchline = battleData.punchlineForced || battleData.punchline;
+                // const banger = null;
+                // const elationValueToUse = punchline;
+
+                //TODO: while wholly unimportant, prob can either bind the mmrgain objects to atk objects so we don't construct an object every elation skill
+                //also the game actually does one single instance of MMR gain rather than 2 if it's the standard elation skill
+                
+
+                if (punchline >= 20) {
+                    if (punchline >= 40) {
+                        poke("SW999GainMMR",battleData,{pointsGained: 40,sourceString:"Trace: True Ending Unlocked >= 40"});
+                    }
+                    else {
+                        poke("SW999GainMMR",battleData,{pointsGained: 20,sourceString:"Trace: True Ending Unlocked >= 20"});
+                    }
+                }
+            },
+            sw999Ultimate(battleData,sourceTurn,target) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.sw999UltimateREF ??= ATKObjects.Ultimate["God Mode: ON!"].variant1;
+
+                // if (!ATKObjects.sw999UltimateGODSHEET) {
+                    //THIS IS ALL HANDLED PREEMPTIVELY WITHIN ENTITY CONSTRUCTION WITH THE SPECIAL ENERGY HANDLING
+                    //this is bc we need the lootbox instances defined BEFORE we could EVER ult since the technique would enforce a chomper
+                    //proc ahead of time and on each wave start. I fucking hate this character.
+                // }
+                let buffSheet = ATKObjects.sw999UltimateGODSHEET;
+
+                // poke("SW999GainMMR",battleData,{pointsGained: -60,sourceString:"SW999 Entered Ult"});
+
+
+                const battleValues = sourceTurn.battleValues;
+                battleValues.godModeActive = true;
+
+                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+
+                updateBuff(battleData,sourceTurn,buffSheet);
+                const rank = sourceTurn.rank;
+                if (rank >= 1) {
+                    let buffSheet = ATKObjects.sw999E1VulnSHEET ??= {
+                        "stats": [VulnAll],
+                        [VulnAll]: 0.20,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e1Vuln,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": null
+                    };
+
+                    // (1 + (0.15 *  MIN(2,  FLOOR((CurScore / 60)))))
+
+                    const enemyPositions = battleData.enemyPositions;
+                    updateBuffBatchTargets(battleData,enemyPositions,buffSheet)
+
+                    if (rank >= 2) {
+                        battleValues.e2Accumulation = sourceTurn.specialEnergyCurrent + battleValues.MMROverflow;
+
+                        const buffsObject = sourceTurn.buffsObject;
+                        for (let buffKey in buffsObject) {
+                            const currentBuff = buffsObject[buffKey];
+
+
+                            if (currentBuff?.expireType) {
+                                currentBuff.duration += 1;
+                            }
+                        }
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "GenericAction", source:"Buff Extension", bodyText: `SW999 E2 Buff Extension`});
+                        }
+                    }
+                }
+
+                //Enh elation and ult resets loot box odds
+                battleValues.skillPointTally = 0;
+                battleValues.chance1Ready = true;
+                battleValues.chance2Ready = true;
+                battleValues.chance3Ready = true;
+
+                battleValues.ebaAttacksLeft = 3;
+                //if we complete a real EBA then reset hit count
+                battleValues.ebaHitsLeft = 100;
+                battleValues.ebaItemsLeft = 3;
+
+                actionAdvance(1,sourceTurn,battleData,"SW999 Ult Advance");
+
+                const mmrTrace = ATKObjects.sw999traceMMRGain ??= {pointsGained: 20,sourceString:"Trace: Secret Level Maxed"};
+                poke("SW999GainMMR",battleData,mmrTrace);
+                sourceTurn.ultyQueued = false;
+            },
+            sw999Technique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+                let skillRef = ATKObjects.sw999TechREF ??= ATKObjects.Technique["This? Absolute Meta!"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                let attackEndings = battleData.battleListeners.WaveStart ??= [];
+                const listenerToInject = logicRef.listenersToInjectLater.techniqueWaveStart;
+                listenerToInject.ownerTurn = sourceTurn;
+
+                attackEndings.unshift(listenerToInject);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!this.cachedElationID) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+                        this.cachedElationID = ATKObjects["Elation Skill"]["Pro-Gamer Move"].variant1.participantID;
+                    }
+
+                    ownerTurn.participantID = this.cachedElationID;//
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    const queueObject = logicRef.elationSkillObject ??= {
+                        name: "SW999 Elation Skill",
+                        priority: priorityList.turn.AhaInstant,
+                        queueTag: "AhaInstantElationSkill",
+
+                        actionCall: logicRef.skillFunctions.elationSkill,
+                        action: "ElationSkill",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "ElationSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+
+
+                    //special energy handling is done in entity construction, just before passive calls
+                    //passive
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //hidden mmr
+                    //battlestart crit check
+                    const statCheck2 = this.statCheck2 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck2
+                    statCheck2(battleData,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace false ending
+                    const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                    statCheck(battleData,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //trace secret level maxed  //part of ulty
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    }
+
+                    //e2    //part of ult
+
+                    //e4
+                    if (rank >= 6) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+
+                    //technique
+                    let useTechnique = logicRef.useTechnique;
+                    let attackUsed = battleData.attackTechniqueUsed;
+                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
+                    if (useTechnique 
+                        && !attackUsed 
+                        // && !dimensionUsed
+                        && battleData.techniquesAllowed) {
+
+                        // battleData.dimensionTechniqueUsed = true;
+                        battleData.attackTechniqueUsed = true;
+                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
+                        listenerToInject.ownerTurn = ownerTurn;
+                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+                    }
+                },
+                "target": "self",
+                "listenerName": "SW999 Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "PunchlineChanged",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // poke("PunchlineChanged",battleData,{sourceTurn,newAmount,amount});
+        
+                            const value = generalInfo.newAmount;
+                            if (value <= 0) {return;}
+        
+                            const exoObject = this.exoObject ??= {pointsGained: value,sourceString:"SW999 +MMR from Punchline Gained"};
+                            exoObject.pointsGained = value;
+        
+                            poke("SW999GainMMR",battleData,exoObject,null);
+                        },
+                        "target": "self",
+                        "listenerName": "SW999 Special Energy gain on PL changes",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatCritRate",//CritRate stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const statCheck2 = this.statCheck2 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck2
+                            statCheck2(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Talent Crit check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "False Ending Speedrun SPD check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.godModeActive) {return;}
+    
+                            let targetTurn = generalInfo.slotRef;
+    
+                            let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sw999E1VulnSHEET;//will have been defined under ult first before ever reaching this point
+        
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E1 Vuln application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.slotRef;
+    
+                            // const logicRef = turnLogic[characterName];
+                            // const ATKObjects = logicRef.ATKObjects;
+    
+                            // let buffSheet = ATKObjects.sw999E1VulnSHEET;//will have been defined under ult first before ever reaching this point
+                            const RESArray = this.RESArray ??= [ResistancePhysical,ResistanceLightning,ResistanceWind,ResistanceFire,ResistanceIce,ResistanceQuantum,ResistanceImaginary]
+
+                            const weakSheet = this.allWeakSheet ??= {
+                                "stats": [WeaknessPhysical,WeaknessLightning,WeaknessWind,WeaknessFire,WeaknessIce,WeaknessQuantum,WeaknessImaginary,
+                                    ResistancePhysical,ResistanceLightning,ResistanceWind,ResistanceFire,ResistanceIce,ResistanceQuantum,ResistanceImaginary
+                                ],
+                                [WeaknessPhysical]: 1,
+                                [WeaknessLightning]: 1,
+                                [WeaknessWind]: 1,
+                                [WeaknessFire]: 1,
+                                [WeaknessIce]: 1,
+                                [WeaknessQuantum]: 1,
+                                [WeaknessImaginary]: 1,
+
+                                [ResistancePhysical]: 0,
+                                [ResistanceLightning]: 0,
+                                [ResistanceWind]: 0,
+                                [ResistanceFire]: 0,
+                                [ResistanceIce]: 0,
+                                [ResistanceQuantum]: 0,
+                                [ResistanceImaginary]: 0,
+                                "source": "E6",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e6Implant,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "isDebuff": true,
+                                "decay": false,
+                                "expireType": null
+                            }
+
+                            const enemyStats = targetTurn.statTable;
+                            for (let resistanceCheck of RESArray) {
+                                const initialRES = enemyStats[resistanceCheck];
+                                const enemyAt0OrLess = initialRES <= 0;
+                                if (enemyAt0OrLess) {
+                                    weakSheet[resistanceCheck] = -0.20;
+                                }
+                                else {
+                                    weakSheet[resistanceCheck] = -initialRES;
+                                }
+                            }
+
+                            updateBuff(battleData,targetTurn,weakSheet);
+                        },
+                        "target": "enemy",
+                        "priority": -Infinity,
+                        "listenerName": "E6 Weakness application",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const charValuesRef = ownerTurn.battleValues;
+                    // ownerTurn.maxEnergy = 0;
+                    ownerTurn.specialEnergy = true;
+                    ownerTurn.specialEnergyMax = 60;
+                    ownerTurn.specialEnergyCurrent = 0;
+                    ownerTurn.specialEnergyOverflowLimit = 240;
+                    charValuesRef.specialEnergyCurrentName = "swMMR";
+                    charValuesRef.specialEnergyMaxName = "swMMRMax";
+
+
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.sw999UltimateREF ??= ATKObjects.Ultimate["God Mode: ON!"].variant1;
+                    // let skillRef2 = ATKObjects.fireflyTalentREF ??= ATKObjects.Talent["Chrysalid Pyronexus"].variant1;
+
+                    if (!ATKObjects.sw999UltimateGODSHEET) {
+                        const skillFunctions = logicRef.skillFunctions;
+
+                        ATKObjects.boxRollIndex = [
+                            skillFunctions.sw999Sword,
+                            skillFunctions.sw999Bomb,
+                            skillFunctions.sw999Chomper
+                        ]
+
+                        let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
+                        skillRef4.slot = null;//While an extension of the basic atk in terms of ref, it is NOT a basic atk instance, we need null to avoid elation procs from talent.
+                        skillRef4.hitSplits = hitSplitters[ownerTurn.properName].ultLoot;
+                        let values = ATKObjects.sw999UltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                        const buffName = logicRef.buffNames.godMode;
+                        // const rank = ownerTurn.rank;
+                        ATKObjects.sw999UltimateGODSHEET = {
+                            "stats": null,
+                            // [SPDFlat]: values[2],
+                            // [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
+                            // [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
+                            // [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
+                            "statsOnHit": null,
+                            "source": "Ultimate",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+
+                        
+                        let skillRef2 = ATKObjects.sw999BasicEnhREF ??= ATKObjects["Basic ATK"]["Bonus Stage: αWolf Instant"].variant1;
+                        skillRef2.hitSplits = hitSplitters[ownerTurn.properName].basicEnh;
+
+                        const tags2 = ["All","Elation","Imaginary","Basic"];
+                        const realElationDMGKeys = keyShortcut(elationKeys,tags2);
+                        const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags2);
+                        // const realDMGKeys = keyShortcut(dmgKeys,tags);
+                        const realPENKeys2 = keyShortcut(resPENKeys,tags2);
+                        const realShredKeys2 = keyShortcut(defShredKeys,tags2);
+                        const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
+                        const actionTags2 = ["Elation","Attack","Basic"];
+                        const compositeCacheTag2 = tags2 + actionTags2 + ownerTurn.properName;
+                        ATKObjects.sw999LootBoxObject = {
+                            multipliers: {
+                                primary: null,
+                                blast: null,
+                                all: values[2],
+                            },
+                            // scalar,
+                            // scalar,
+                            DMGTags: tags2,
+                            allToughness: false,
+                            slot: null,//skillRef2.slot,
+                            // realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                            realElationDMGKeys,realMerryDMGKeys,
+                            realPENKeys: realPENKeys2,
+                            realShredKeys: realShredKeys2,
+                            realVulnKeys: realVulnKeys2,
+                            actionTags: actionTags2,
+                            compositeCacheTag: compositeCacheTag2,
+                            isFUA: false,
+                            isElation: true,
+                            useCertifiedBanger: true,
+                            isDistributed: true,
+                        }
+
+
+                        let skillRef3 = ATKObjects.sw999BasicEnhREFSword ??= ATKObjects["Basic ATK"]["Big Flipping Sword"].variant1;
+                        skillRef3.slot = null;//While an extension of the basic atk in terms of ref, it is NOT a basic atk instance, we need null to avoid elation procs from talent.
+                        skillRef3.hitSplits = hitSplitters[ownerTurn.properName].ultLootSpin;
+                        ATKObjects.sw999LootSwordSpinObject = {
+                            multipliers: {
+                                primary: null,
+                                blast: null,
+                                all: values[2],
+                            },
+                            // scalar,
+                            // scalar,
+                            DMGTags: tags2,
+                            allToughness: false,
+                            slot: null,//skillRef3.slot,
+                            // realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                            realElationDMGKeys,realMerryDMGKeys,
+                            realPENKeys: realPENKeys2,
+                            realShredKeys: realShredKeys2,
+                            realVulnKeys: realVulnKeys2,
+                            actionTags: actionTags2,
+                            compositeCacheTag: compositeCacheTag2,
+                            isFUA: false,
+                            isElation: true,
+                            useCertifiedBanger: true,
+                            isDistributed: true,
+                        }
+                    }
+
+                },
+                "target": "self",
+                "listenerName": "SW999 Special Energy Construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SW999GainMMR",
+                condition(battleData,generalInfo) {
+                    // poke("SW999GainMMR",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    // const characterName = ownerTurn.properName;
+                    // const logicRef = this.logicRef ??= turnLogic[characterName];
+                    
+                    // const buffsObject = ownerTurn.buffsObject;
+
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = ownerTurn.specialEnergyCurrent;
+                    const energyMax = ownerTurn.specialEnergyMax;
+                    const oldOverflow = valuesRef.MMROverflow;
+                    const overflowMax = ownerTurn.specialEnergyOverflowLimit;
+
+                    const proposedFinalValue = Math.max(0, oldValue + pointsGained + oldOverflow);
+                    //we don't need to separately evaluate whether overflow stacks should enter the main energy container or not
+                    //because if we add it to the proposedFinalValue, due to the fact that we already assign overflow every time based on excess
+                    //this will automatically move the overflow into the standard container, hell yeah
+                    const overflowValue = proposedFinalValue > energyMax ? Math.min(overflowMax,proposedFinalValue-energyMax) : 0;
+                    valuesRef.MMROverflow = overflowValue;
+
+                    ownerTurn.specialEnergyCurrent = Math.min(energyMax,proposedFinalValue);
+
+                    const resoRef = ownerTurn.specialEnergyCurrent;
+                    const valueWasDiff = resoRef != oldValue;
+
+                    const finalOverflow = valuesRef.MMROverflow
+                    const overflowWasDiff = oldOverflow != finalOverflow;
+
+                    
+                    const sourceString = generalInfo.sourceString;
+                    if (battleData.isLoggyLogger) {
+                        if (valueWasDiff) {
+                            // GenericActionWithImage
+                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `MMR: ${oldValue} --> ${resoRef} [${sourceString}]`});
+                            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                        }
+                        if (overflowWasDiff) {
+                            // GenericActionWithImage
+                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `MMR (OVERFLOW): ${oldOverflow} --> ${finalOverflow} [${sourceString}]`});
+                            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                        }
+                    }
+
+                    const statCheck2 = this.statCheck2 ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck2
+                    statCheck2(battleData,ownerTurn);
+
+
+                    // queueTag
+                    const rank = ownerTurn.rank;
+                    if (rank >= 2 && valuesRef.godModeActive) {
+                        const valueDiff = (resoRef + finalOverflow) - (oldValue + oldOverflow);
+
+                        if (valueDiff > 0) {
+                            valuesRef.e2Accumulation += valueDiff;
+
+                            if (valuesRef.e2Accumulation >= 120) {
+                                valuesRef.e2Accumulation -= 120;
+                                valuesRef.ebaAttacksLeft += 1;
+
+                                const queueObject = this.queueObject ??= {
+                                    name: "SW999 E2 MMR Accumulated for Extra Turn",
+                                    priority: priorityList.turn.Default,
+                                    queueTag: "SW999E2",
+
+                                    actionCall: sim.turnWrapper,
+                                    action: "Extra Turn",
+                                    points: 0,
+                                    energyCost: null,
+                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                    // specialEnergyPoke: "SW999GainMMR",
+                                    
+                                    isEnhanced: false,
+                                    isTieBreaker: false,
+                                    isExtraTurn: true,
+                                    skipEXDisplay: false,
+                                    allowUlts: false,
+                                    decrementBuffs: false,
+                                    extraTurnHasChoice: true,
+                                    dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+                                    isAttack: false,
+                                    isAbility: false,
+                                    useAnyTriggers: false,
+                                    // eventTypeStartLOG: "ExtraTurnStart",
+                                    // eventTypeStart: "ExtraTurnStart",
+                                    // eventTypeEnd: "ExtraTurnEnd",
+                                    
+                                    properName: ownerTurn.properName,
+                                    sourceTurn: null,
+                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                                    target: "Enemies",
+                                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                                    elationForcedPunchline: null,
+                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                queueExtraTurn(battleData,queueObject);
+                            }
+                        }
+                    }
+
+                    if (valuesRef.inBasicATK) {
+                        const finalSheet = ownerTurn.sw999MMRScalarSHEET;
+                        const finalMMR = resoRef + finalOverflow;
+
+                        const buffCheck = ownerTurn.buffsObject[finalSheet.buffName];
+
+                        const currentMulti = 1 + (0.15 * Math.floor(finalMMR/60))
+                        if (buffCheck) {
+                            if (currentMulti === 1) {
+                                removeBuff(battleData,ownerTurn,finalSheet);
+                                return;
+                            }
+                            else {
+                                const activeMulti = buffCheck.multiplier;
+                                if (activeMulti != currentMulti) {
+                                    removeBuff(battleData,ownerTurn,finalSheet);
+                                }
+                            }
+                        }
+
+                        if (currentMulti != 1) {
+                            finalSheet.multiplier = currentMulti;
+                            updateBuff(battleData,ownerTurn,finalSheet)
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "MMR Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AdditionalTriggerAttackEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+
+                    if (ownerTurn.battleValues.godModeActive) {return;}//procs on the reg basic, not the EBA seemingly
+
+                    const dmgSlot = generalInfo.dmgSlot;
+                    if ((dmgSlot != "Skill" && dmgSlot != "Basic ATK") || !ownerTurn.certifiedBanger) {return;}
+
+                    const sw999TalentCertifiedAdditionalDMG = this.sw999TalentCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.sw999TalentCertifiedAdditionalDMG;
+                    sw999TalentCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
+                },
+                "target": "enemy",
+                "isPersonal": true,
+                "listenerName": "Talent certified elation additional dmg",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "StartTurn",//ATK stat family
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    ownerTurn.battleValues.ebaBuffExtendReady = true;
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Buff extension turn start ready check reset",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "SPChange",//RESERVE SP ADDED
+                condition(battleData,generalInfo) {
+                    // poke("SPChange",battleData,{SPChange: cost, sourceTurn, overflow});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.godModeActive) {return;}
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return;}
+
+                    let spChange = generalInfo.SPChange;
+                    let changeIsNegative = spChange < 0;
+                    if (!changeIsNegative) {return;}
+
+                    
+                    if (!battleValues.chance3Ready) {return;}
+                    //if we've already consumed the 3rd instance, then we abort
+                    //technically you CAN have more than 3, but since the chance is reduced to x0.20 every time, the 3rd instance is already down to 4%
+                    //and anything beyond the 3rd chance is gonna be pretty much impossible
+
+                    battleValues.skillPointTally += -spChange;
+                    const finalTally = battleValues.skillPointTally;
+                    let instancesToQueue = 0;
+
+                    if (battleValues.chance1Ready) {
+                        instancesToQueue += 1;
+                        battleValues.chance1Ready = false;
+                    }
+                    if (battleValues.chance2Ready && finalTally >= 6) {
+                        instancesToQueue += 1;
+                        battleValues.chance2Ready = false;
+                    }
+                    if (battleValues.chance3Ready && finalTally >= 26) {
+                        instancesToQueue += 1;
+                        battleValues.chance3Ready = false;
+                    }
+
+
+                    const queueObject = this.queueObject ??= {
+                        name: "SW999 Loot Box Insert",
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.sw999LootBoxPain,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        eventTypeStart: "GenericAbilityStart",
+                        eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        eventOverrideImage: "BEicons/BattleEvent_1506_Box.png",
+
+                        target: null,
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+
+                    for (let i=0;i<instancesToQueue;i++) {
+                        queueInsertAbility(battleData,queueObject);
+                    }
+                },
+                "target": "enemies",
+                "listenerName": "SW999 God-Mode SP consumption listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.specialEnergyCurrent === ownerTurn.specialEnergyMax;
+                    const notOnFire = !ownerTurn.battleValues.godModeActive;
+                    let otherObscureCondition = energyCheck && notOnFire && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        // poke("SW999GainMMR",battleData,{pointsGained: -clearValue,sourceString:"Exited God-Mode-Player State"});
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.sw999Ultimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.specialEnergyMax,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            specialEnergyPoke: "SW999GainMMR",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: ownerTurn.properName,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            // targetObject: {targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},
+                        
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
+                        // const targetObject = queueObject.queueObject;
+                        // targetObject.sourceTurn = ownerTurn;
+                        // targetObject.targetTurn = ownerTurn;
+
+                        // queueObject.target = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "SW999 - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                // const currentWave = generalInfo.currentWave;
+                // if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                // const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.sw999Technique;
+                // callTech(battleData,null,ownerTurn);
+
+                const queueObject = this.queueObject ??= {
+                    name: "SW999 Technique Loot Box Insert",
+                    priority: priorityList.ability.CharacterAttackFromSelf,
+                    queueTag: "QueuedInsert",
+
+                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.sw999TechInsert,
+                    action: "Insert", 
+                    points: 0,
+                    energyCost: null,
+                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    // specialEnergyPoke: "SW999GainMMR",
+                    
+                    isEnhanced: false,
+                    isTieBreaker: false,
+                    isExtraTurn: false,
+                    isInserted: true,
+                    skipEXDisplay: false,
+                    allowUlts: false,
+                    decrementBuffs: false,
+                    extraTurnHasChoice: false,
+                    dontKeepNextWave: false,//ults always clear out
+                    isAttack: true,
+                    isAbility: true,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "TechniqueStart",
+                    // eventTypeStart: "TechniqueStart",
+                    // eventTypeEnd: "TechniqueEnd",
+
+                    properName: ownerTurn.properName,
+                    sourceTurn: null,
+                    eventOverrideImage: "BEicons/BattleEvent_1506_Box.png",
+
+                    target: null,
+                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    elationForcedPunchline: null,
+                }
+                queueObject.sourceTurn = ownerTurn;
+                queueInsertAbility(battleData,queueObject);
+            },
+            "target": "self",
+            "priority": -55,
+            "listenerName": "SW999 Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "MMROverflow": 0,
+            "godModeActive": false,
+            "lastRoll": 0,
+            "lastRollValue": 0,
+            "rollRNGIndex": false,
+
+            "ebaHitsLeft": 100,
+            "ebaItemsLeft": 3,
+            "ebaAttacksLeft": 0,
+
+            "ebaBuffExtendReady": true,
+
+            "chance1Ready": true,
+            "chance2Ready": true,
+            "chance3Ready": true,
+            "skillPointTally": 0,
+
+            "e2Accumulation": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "spdAt160": "False Ending Speedrun (>=160)",
+            "spdOver160": "False Ending Speedrun (Excess)",
+            "mmrCrit": "Hidden MMR (Crit Rate)",
+            "mmrCritDMG": "Hidden MMR (Crit DMG)",
+            "godMode": "Godmode Player (SW999)",
+            "e1Vuln": "E1: Aether Editing: Eidolon +1",
+            "e6Merry": "E6: Solo Maxxing!",
+            "e6Implant": "Absolute Weakness (E6)",
+            "talentMMRScale": "SW999 MMR Final Multiplier",
+        },
+        "characterValuesBattle": {},
+    },
     "Evanescia": {
         logic(thisTurn,battleData) {
             // let actionUsed = false;
