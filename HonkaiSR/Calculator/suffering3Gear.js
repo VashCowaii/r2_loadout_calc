@@ -9115,6 +9115,7 @@ const turnLogicLightcones = {
     },
 
     //ELATION
+    //5star
     "When She Decided to See": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -9730,6 +9731,7 @@ const turnLogicLightcones = {
             "elationVuln": "Until the Flowers Bloom Again (Vuln)",
         },
     },
+    //4start
     "Mushy Shroomy's Adventures": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -9888,6 +9890,80 @@ const turnLogicLightcones = {
             "elationBonus": "Today's Good Luck (LC)",
         },
     },
+    "Tomorrow, Together": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Tomorrow, Together listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcTomorrowTogetherELATIONSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Tomorrow, Together";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+            
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+            
+                                sourceTurn.lcTomorrowTogetherELATIONSHEET = {
+                                    "stats": [ElationDMGAll],
+                                    [ElationDMGAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.elationBonus,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+            
+                            let buffSheet3 = sourceTurn.lcTomorrowTogetherELATIONSHEET;
+
+                            const allyPositions = battleData.allyPositions
+                            updateBuffBatchTargets(battleData,allyPositions,buffSheet3);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Tomorrow, Together - ult end listener",
+                    }
+                ]
+            },
+        ],
+        "buffNames": {
+            "elationBonus": "Tomorrow, Together (LC)",
+        },
+    },
+    //3star
     "Sneering": {//NO CHANGE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
