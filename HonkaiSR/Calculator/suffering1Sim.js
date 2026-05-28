@@ -924,7 +924,7 @@ const sim = {
                     const triggerName = eachListener.trigger;
 
                     eachListener.ownerTurn = slotRef;
-                    addListenerPREPPriority(battleData,eachListener,triggerName)
+                    addListenerPREPPriority(battleData,eachListener,triggerName,slotRef)
 
                     // const triggerArray = battleListeners[triggerName] ??= [];
                     // eachListener.ownerTurn = slotRef;
