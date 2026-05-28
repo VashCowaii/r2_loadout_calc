@@ -12763,7 +12763,7 @@ const turnLogicRelics = {
                             let currentTurn = namedTurns[charSlot];
 
 
-                            let menuStats = menuStatsREF[ally];
+                            let menuStats = menuStatsREF[charSlot];
                             let SPD = getFinalSPD(menuStats).SPDFinal;
                             // const memoRef = currentTurn.memospriteEventRef;
                             
