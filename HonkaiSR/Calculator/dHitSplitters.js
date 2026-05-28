@@ -2772,17 +2772,30 @@ const hitSplitters = {
   },
   "Silver Wolf LV.999": {
     "basic": [
-        {
-          "primary": {
-            "hitRatio": 1,
-            "energyRatio": 1,
-            "toughness": 10
-          },
-          "isSourceFirstHit": true,
-          "isAttackFirstHit": true,
-          "isSourceLastHit": true,
-          "isAttackLastHit": true
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
         },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "basicEnh": [
+      {
+        "all": {
+          "hitRatio": 1,
+          // "energyRatio": 1,
+          "toughness": 10
+        },
+        // "isSourceFirstHit": true,
+        // "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
     ],
     "skill": [
       {
@@ -2797,18 +2810,55 @@ const hitSplitters = {
         "isAttackLastHit": true
       },
     ],
-    "ult": [
+    "ultLoot": [
       {
-        "primary": {
+        "all": {
           "hitRatio": 1,
-          "energyRatio": 1,
-          "toughness": 30
+          // "energyRatio": 1,
+          "toughness": 10
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true,
-        "isSourceLastHit": true,
-        "isAttackLastHit": true
+        // "isSourceFirstHit": true,
+        // "isAttackFirstHit": true,
+        // "isSourceLastHit": true,
+        // "isAttackLastHit": true
       }
+    ],
+    "ultLootSpin": [
+      {
+        "all": {
+          "hitRatio": 0.2,
+          // "energyRatio": 1,
+          "toughness": 10
+        },
+      },
+      {
+        "all": {
+          "hitRatio": 0.2,
+          // "energyRatio": 1,
+          "toughness": 10
+        },
+      },
+      {
+        "all": {
+          "hitRatio": 0.2,
+          // "energyRatio": 1,
+          "toughness": 10
+        },
+      },
+      {
+        "all": {
+          "hitRatio": 0.2,
+          // "energyRatio": 1,
+          "toughness": 10
+        },
+      },
+      {
+        "all": {
+          "hitRatio": 0.2,
+          // "energyRatio": 1,
+          "toughness": 10
+        },
+      },
     ],
     "elation2": [
       // {
