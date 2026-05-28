@@ -5038,7 +5038,10 @@ const battleActions = {
         }
     },
     addListenerPREPPriority(battleData,listenerObject,trigger,assignOwnerTurn) {
-        let listenerRef = battleData.battleListeners[trigger] ??= [];
+        const isPersonal = listenerObject.isPersonal;
+        const personalRef = isPersonal ? (battleData.battleListenersPersonal[assignOwnerTurn.properName] ??= {}) : null;
+
+        let listenerRef = (isPersonal ? (personalRef[trigger] ??= []) : battleData.battleListeners[trigger] ??= []);
         if (assignOwnerTurn) {listenerObject.ownerTurn = assignOwnerTurn;}
 
         if (!listenerRef.length) {listenerRef.push(listenerObject);}
@@ -38258,7 +38261,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                         "isFinalMulti": true,
-                        "actionTags": ["ElationSkill"]
+                        "actionTags": ["ElationSkill"] 
                     }
                 }
                 let buffSheet = ATKObjects.yaoUltimatePENSHEET;
@@ -38468,6 +38471,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    if (!this.cachedElationID) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+                        this.cachedElationID = ATKObjects["Elation Skill"]["Let Thy Fortune Burst in Flames"].variant1.participantID;
+                    }
+
+                    ownerTurn.participantID = this.cachedElationID;
+
                     const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
 
@@ -38655,25 +38666,6 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                 ],
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!this.cachedElationID) {
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-                        this.cachedElationID = ATKObjects["Elation Skill"]["Let Thy Fortune Burst in Flames"].variant1.participantID;
-                    }
-
-                    ownerTurn.participantID = this.cachedElationID;//116;//TODO: remove this later, attach participant ID to the character entity in parsing, just forgot to do that before
-
-                    // participantID
-                },
-                "target": "self",
-                "listenerName": "elation id assignment",
-                "ownerTurn": {},
             },
             {
                 "trigger": "UpdateStatElation",//Elation stat family
@@ -39611,6 +39603,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    if (!this.cachedElationID) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+                        this.cachedElationID = ATKObjects["Elation Skill"]["Signal Overflow: The Great Encore!"].variant1.participantID;
+                    }
+
+                    ownerTurn.participantID = this.cachedElationID;
+
                     const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
 
@@ -39942,26 +39942,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Thrill Handler",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!this.cachedElationID) {
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-                        this.cachedElationID = ATKObjects["Elation Skill"]["Signal Overflow: The Great Encore!"].variant1.participantID;
-                    }
-
-                    ownerTurn.participantID = this.cachedElationID;
-
-                    // ownerTurn.participantID = 144;//TODO: remove this later, attach participant ID to the character entity in parsing, just forgot to do that before
-
-                },
-                "target": "self",
-                "listenerName": "participant ID battlestart assignment",
                 "ownerTurn": {},
             },
             
@@ -40685,6 +40665,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    if (!this.cachedElationID) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+                        this.cachedElationID = ATKObjects["Elation Skill"][`I Said "Elation," Did I Stutter?`].variant1.participantID;
+                    }
+
+                    ownerTurn.participantID = this.cachedElationID;
+
                     const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
 
@@ -40889,26 +40877,6 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                 ],
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!this.cachedElationID) {
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-                        this.cachedElationID = ATKObjects["Elation Skill"][`I Said "Elation," Did I Stutter?`].variant1.participantID;
-                    }
-
-                    ownerTurn.participantID = this.cachedElationID;
-
-                    // ownerTurn.participantID = 120;//TODO: remove this later, attach participant ID to the character entity in parsing, just forgot to do that before
-
-                },
-                "target": "self",
-                "listenerName": "participant ID battlestart assignment",
-                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -41679,6 +41647,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
+                    if (!this.cachedElationID) {
+                        const logicRef = turnLogic[ownerTurn.properName];
+                        const ATKObjects = logicRef.ATKObjects;
+                        this.cachedElationID = ATKObjects["Elation Skill"][`Scarlet: Elation or Execution`].variant1.participantID;
+                    }
+
+                    ownerTurn.participantID = this.cachedElationID;
+
                     const rank = ownerTurn.rank;
                     const logicRef = turnLogic[ownerTurn.properName];
 
@@ -42170,26 +42146,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Talent CritDMG check",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "PreBattleEntersCombat",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!this.cachedElationID) {
-                        const logicRef = turnLogic[ownerTurn.properName];
-                        const ATKObjects = logicRef.ATKObjects;
-                        this.cachedElationID = ATKObjects["Elation Skill"][`Scarlet: Elation or Execution`].variant1.participantID;
-                    }
-
-                    ownerTurn.participantID = this.cachedElationID;
-
-                    // ownerTurn.participantID = 120;//TODO: remove this later, attach participant ID to the character entity in parsing, just forgot to do that before
-
-                },
-                "target": "self",
-                "listenerName": "participant ID battlestart assignment",
                 "ownerTurn": {},
             },
             {
