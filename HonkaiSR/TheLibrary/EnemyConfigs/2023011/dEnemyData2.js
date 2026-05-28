@@ -61,7 +61,10 @@ let enemyData = {
           "over": 2022020,
           "base": 2022020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     },
     "202301101": {
       "name": -1,
@@ -105,7 +108,11 @@ let enemyData = {
           "over": 202206004,
           "base": 2022060
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 202201011,
+        "W2_Abomi04_00_SummonID2": 202206004
+      }
     },
     "202301102": {
       "name": -1,
@@ -149,7 +156,10 @@ let enemyData = {
           "over": 2022020,
           "base": 2022020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Abomi04_00_SummonID": 2022010
+      }
     }
   }
 }

@@ -354,7 +354,11 @@ let enemyData = {
           "over": 100201201,
           "base": 1002012
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Ice_Lance_ID": 100201101,
+        "Ice_Lance_ID_2": 100201201
+      }
     },
     "100401007": {
       "name": -1,

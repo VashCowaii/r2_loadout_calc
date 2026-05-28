@@ -59,7 +59,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301001": {
       "name": -1,
@@ -108,7 +111,10 @@ let enemyData = {
           "over": 101203001,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101203001
+      }
     },
     "101301002": {
       "name": -1,
@@ -150,7 +156,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301003": {
       "name": -1,
@@ -192,7 +201,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301004": {
       "name": -1,
@@ -241,7 +253,10 @@ let enemyData = {
           "over": 101203001,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101203001
+      }
     },
     "101301005": {
       "name": "Grayback Whale",
@@ -283,7 +298,10 @@ let enemyData = {
           "over": 101202102,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202102
+      }
     },
     "101301006": {
       "name": -1,
@@ -325,7 +343,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301007": {
       "name": -1,
@@ -367,7 +388,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301008": {
       "name": -1,
@@ -409,7 +433,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301009": {
       "name": -1,
@@ -451,7 +478,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301010": {
       "name": -1,
@@ -493,7 +523,10 @@ let enemyData = {
           "over": 101202104,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202104
+      }
     },
     "101301011": {
       "name": -1,
@@ -535,7 +568,10 @@ let enemyData = {
           "over": 101202106,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202106
+      }
     },
     "101301012": {
       "name": -1,
@@ -577,7 +613,10 @@ let enemyData = {
           "over": 101202108,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202108
+      }
     },
     "101301013": {
       "name": -1,
@@ -619,7 +658,10 @@ let enemyData = {
           "over": 101202106,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202106
+      }
     },
     "101301014": {
       "name": -1,
@@ -661,7 +703,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301015": {
       "name": -1,
@@ -703,7 +748,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301016": {
       "name": -1,
@@ -745,7 +793,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301017": {
       "name": -1,
@@ -787,7 +838,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301018": {
       "name": -1,
@@ -829,7 +883,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301019": {
       "name": -1,
@@ -871,7 +928,10 @@ let enemyData = {
           "over": 101202111,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202111
+      }
     },
     "101301020": {
       "name": -1,
@@ -913,7 +973,10 @@ let enemyData = {
           "over": 101202112,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202112
+      }
     },
     "101301021": {
       "name": -1,
@@ -955,7 +1018,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301022": {
       "name": -1,
@@ -997,7 +1063,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301023": {
       "name": -1,
@@ -1039,7 +1108,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301024": {
       "name": -1,
@@ -1081,7 +1153,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301025": {
       "name": -1,
@@ -1123,7 +1198,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301026": {
       "name": -1,
@@ -1165,7 +1243,10 @@ let enemyData = {
           "over": 1012021,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 1012021
+      }
     },
     "101301027": {
       "name": -1,
@@ -1208,7 +1289,10 @@ let enemyData = {
           "over": 101202113,
           "base": 1012021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_RO_015_SummonID": 101202113
+      }
     }
   }
 }

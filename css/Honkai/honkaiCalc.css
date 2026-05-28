@@ -2629,7 +2629,7 @@ details[open] > summary::before {
     border-left: 2px solid #ff5a3f;
 }
 .turnStarterBarUltimate {
-    border: 2px solid #21c1dd;
+    border: 2px solid #21c1dde5;
     outline-offset: -4px;
     outline: 2px solid #5f656b;
     min-height: 25px;
@@ -2804,6 +2804,8 @@ details[open] > summary::before {
     top: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
+    outline-offset: 2px;
+    outline: 1px solid rgba(255, 255, 255, 0.541);
 }
 .weirdSideSemiCircleThingerAlly {
     background-color: #0f636b;
@@ -2811,6 +2813,32 @@ details[open] > summary::before {
 .weirdSideSemiCircleThingerEnemy {
     background-color: #8b3f35;
 }
+
+
+.weirdSideSemiCircleThingerInsert, .weirdSideSemiCircleThingerAllyInsert, .weirdSideSemiCircleThingerEnemyInsert {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    /* border-radius: 50%; */
+    overflow: hidden; 
+    background-color: #28313a;
+    left: 0;
+    top: 50%;
+    /* rotate: 45deg; */
+    transform:  translate(-80%,-50%) rotate(45deg);
+    z-index: 1;
+    outline-offset: 2px;
+    outline: 1px solid rgba(255, 255, 255, 0.541);
+}
+.weirdSideSemiCircleThingerAllyInsert {
+    background-color: #0f636b;
+}
+.weirdSideSemiCircleThingerEnemyInsert {
+    background-color: #8b3f35;
+}
+
+
+
 .turnOrderAVBox {
     position: absolute;
     width: auto;
@@ -3396,12 +3424,12 @@ details[open] > summary::before {
 }
 .actionDetailBodyDetailExpandHeaderBackgroundINNER {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     overflow: hidden;
     z-index: 1;
 }
 .buffNameBreakdownClickerHeaderBox {
-    width: auto;
+    width: 95%;
     /* background-color: #ffffff1A; */
     position: relative;
     display: flex;
@@ -3532,6 +3560,16 @@ details[open] > summary::before {
     z-index: 0;
     scale: 1.5;
     transform: translateY(-7%);
+    padding-left: 2px;
+    padding-right: 2px;
+    /* border: 1px solid red; */
+}
+.buffDOTIcon {
+    height: 20px;
+    width: 20px;
+    z-index: 0;
+    scale: 1.5;
+    transform: translateY(9%);
     padding-left: 2px;
     padding-right: 2px;
     /* border: 1px solid red; */

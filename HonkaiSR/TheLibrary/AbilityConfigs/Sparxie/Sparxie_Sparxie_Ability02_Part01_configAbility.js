@@ -6,6 +6,7 @@ const configAbility = {
     "Sparxie_Sparxie_Ability02_Part02"
   ],
   "skillTrigger": "Skill02",
+  "skillMuted": true,
   "abilityType": "Skill",
   "energy": null,
   "toughnessList": [
@@ -30,7 +31,7 @@ const configAbility = {
     {
       "name": "IF",
       "conditions": {
-        "name": "Compare: Target Count SUM",
+        "name": "Compare: Target List Entities",
         "target": {
           "name": "Target Name",
           "target": "{{Hostile Entities(AOE, with Unselectables)}}"

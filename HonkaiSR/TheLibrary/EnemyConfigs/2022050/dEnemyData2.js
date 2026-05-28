@@ -51,7 +51,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205001": {
       "name": -1,
@@ -87,7 +90,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205002": {
       "name": -1,
@@ -123,7 +129,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205003": {
       "name": -1,
@@ -159,7 +168,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205004": {
       "name": -1,
@@ -195,7 +207,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205005": {
       "name": -1,
@@ -231,7 +246,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205006": {
       "name": "Lyndon \"Lonewolf\" Skott",
@@ -267,7 +285,10 @@ let enemyData = {
           "over": 2022051,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022051
+      }
     },
     "202205008": {
       "name": -1,
@@ -306,7 +327,10 @@ let enemyData = {
           "over": 202205102,
           "base": 2022051
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 202205102
+      }
     }
   }
 }

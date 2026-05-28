@@ -3975,7 +3975,7 @@ const userTriggers = {
                             }
                         }
 
-
+                        let skillMuted = compositeAbilityObject.abilityObject[entryFileName]?.skillMuted;
                         
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
@@ -4018,6 +4018,10 @@ const userTriggers = {
                                     ${phasesStringerOverride ? `<div class="traceToughnessBoxOverviewSkill">
                                         <div class="traceToughnessTitleBox">Phase Allowed</div>
                                         <div class="traceToughnessValueBox">${phasesStringerOverride}</div>
+                                    </div>` : ""}
+                                    ${skillMuted ? `<div class="traceToughnessBoxOverviewSkill">
+                                        <div class="traceToughnessTitleBox">Muted</div>
+                                        <div class="traceToughnessValueBox">${skillMuted}</div>
                                     </div>` : ""}
 
                                     
@@ -4527,6 +4531,37 @@ const userTriggers = {
 
 
 
+        let enemyCustomDataStringer = "";
+        if (newCharRef.itNeverEnds) {
+            for (let customData in newCharRef.itNeverEnds) {
+                const currentCustom = newCharRef.itNeverEnds[customData];
+                if (resistanceAlternator === 2) {resistanceAlternator = 0;}
+                resistanceAlternator++;
+
+                enemyCustomDataStringer += `<div class="imageRowStatisticBox${resistanceAlternator} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticImageBoxEnemyAdjustment">
+                    <div class="customDataRowNameBox">${customData}</div>
+                    </div>
+                    
+                    <div class="imageRowStatisticStatBox">${currentCustom}</div>
+                </div>`
+            }
+        }
+
+        let enemyCustomTagStringer = "";
+        if (newCharRef.enemyTag?.length) {
+            for (let customData of newCharRef.enemyTag) {
+                if (resistanceAlternator === 2) {resistanceAlternator = 0;}
+                resistanceAlternator++;
+
+                enemyCustomTagStringer += `<div class="imageRowStatisticBox${resistanceAlternator} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticImageBoxEnemyAdjustment">
+                    </div>
+                    <div class="imageRowStatisticStatBox">${customData}</div>
+                </div>`
+            }
+        }
+
 
         
 
@@ -4663,6 +4698,24 @@ const userTriggers = {
                 
                 
             </div>
+
+
+
+            ${enemyCustomDataStringer ? `<div class="enemyMainStatsBox">
+                <div class="customDataRowHeader">Custom Data</div>
+                <div class="customMenuSearchNote">These values are for the Event-Reader tab, and can be modified within.</div>
+                ${enemyCustomDataStringer}
+                
+            </div>` : ""}
+
+            ${enemyCustomTagStringer ? `<div class="enemyMainStatsBox">
+                <div class="customDataRowHeader">Tags</div>
+                <div class="customMenuSearchNote">Often used by the Event-Reader for different toggles inside.</div>
+                ${enemyCustomTagStringer}
+                
+            </div>` : ""}
+            
+            
             
         </div>`;
 

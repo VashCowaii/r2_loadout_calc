@@ -50,7 +50,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "W5_Ranger"
-      ]
+      ],
+      "itNeverEnds": {
+        "CurrentRanger": 1
+      }
     },
     "501305001": {
       "name": -1,
@@ -84,7 +87,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "W5_Ranger"
-      ]
+      ],
+      "itNeverEnds": {
+        "CurrentRanger": 1
+      }
     }
   }
 }

@@ -57,7 +57,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "801314501": {
       "name": -1,
@@ -99,7 +102,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "801314502": {
       "name": -1,
@@ -141,7 +147,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2
+      }
     },
     "801314503": {
       "name": -1,
@@ -183,7 +192,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3
+      }
     },
     "801314504": {
       "name": -1,
@@ -225,7 +237,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

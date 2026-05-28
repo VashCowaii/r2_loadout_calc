@@ -1375,7 +1375,7 @@ const compositeAbilityObject = {
                         {
                           "name": "IF",
                           "conditions": {
-                            "name": "Compare: Target Count SUM",
+                            "name": "Compare: Target List Entities",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Hostile Entities(AOE, with Unselectables)}}"
@@ -2900,6 +2900,7 @@ const compositeAbilityObject = {
         "Sparxie_Sparxie_Ability21_Part02"
       ],
       "skillTrigger": "Skill21",
+      "skillMuted": true,
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -3154,6 +3155,7 @@ const compositeAbilityObject = {
         "Sparxie_Sparxie_Ability02_Part02"
       ],
       "skillTrigger": "Skill02",
+      "skillMuted": true,
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -3178,7 +3180,7 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Target Count SUM",
+            "name": "Compare: Target List Entities",
             "target": {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE, with Unselectables)}}"

@@ -8,6 +8,7 @@ const configAbility = {
     "DanHengIL_DanHengIL_Ability02_Part02"
   ],
   "skillTrigger": "Skill02",
+  "skillMuted": true,
   "abilityType": "Skill",
   "energy": null,
   "toughnessList": [

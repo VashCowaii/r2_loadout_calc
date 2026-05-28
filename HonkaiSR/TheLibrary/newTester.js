@@ -541,6 +541,7 @@ const megaParsingFuckery = {
             {leftHand: "Ability", keyValue: "abilityType"},
             {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
             {leftHand: "Energy", keyValue: "energy"},
+            {leftHand: "Muted", keyValue: "skillMuted"},
             
             
             // {leftHand: "Toughness", keyValue: "toughnessList"},
@@ -595,11 +596,14 @@ const megaParsingFuckery = {
                         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
                     </div>`;
                 },
-                // abilityType(keyValue) {
-                //     return `<div class="imageRowStatisticBoxWithIcon">
-                //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
-                //     </div>`;
-                // },
+                skillMuted(keyValue) {
+                    return `<div class="toughnessTableRowBox">
+                        <div class="toughnessTableRowItemBox">
+                            <div class="toughnessTableRowItemHeader">Muted</div>
+                            <div class="toughnessTableRowItemValue">${keyValue}</div>
+                        </div>
+                    </div>`;
+                },
             }
             
             for (let entry of startingKeys) {
@@ -616,6 +620,7 @@ const megaParsingFuckery = {
                             configAbility["energy"] = testCurrentEntry["energy"];
                             configAbility["abilityType"] = testCurrentEntry["abilityType"];
                             configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
+                            configAbility["skillMuted"] = testCurrentEntry["skillMuted"];
                             configAbility.toughnessList = testCurrentEntry.toughnessList;
                             break;
                         }

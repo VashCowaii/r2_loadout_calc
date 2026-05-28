@@ -83,7 +83,11 @@ let enemyData = {
           "over": 200202101,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202001,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202101
+      }
     },
     "200402201": {
       "name": -1,
@@ -150,7 +154,11 @@ let enemyData = {
           "over": 200202101,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202001,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202101
+      }
     },
     "200402202": {
       "name": "Cloud Knight Lieutenant: Yanqing",
@@ -234,6 +242,10 @@ let enemyData = {
           "-",
           "-"
         ]
+      },
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202006,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202106
       }
     }
   }

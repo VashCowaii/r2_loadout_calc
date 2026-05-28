@@ -1551,6 +1551,8 @@ div {
     box-sizing: border-box;
     border: 1px solid #acacaca9;
     border-top-right-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
     background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
 }
@@ -2683,14 +2685,35 @@ details[open] > summary::before {
     font-size: 16px;
 }
 
+.customDataRowHeader {
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* padding-left: 5px; */
+    font-size: 20px;
+    margin: 5px;
+}
+
+.customDataRowNameBox {
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2px;
+    font-size: 14px;
+}
+
 .enemyMainBoxOverview {
     width: 100%;
     min-width: 300px;
     max-width: 300px;
-    /* margin: 5px;
-    padding: 5px; */
+    /* margin-bottom: 5px; */
+    /* margin: 5px; */
+    /* padding: 5px; */
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 

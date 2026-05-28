@@ -6,6 +6,126 @@
     </ul>
 </div> -->
 <div>
+    <h1>May 28th, 2026 - THE TECHNIQUES UPDATE(But really way more than that)</h1>
+    Overall, I reviewed every single character, lightcone, and relic set effect and made adjustments on literally every single one of them. This does not mean there are no issues lol, only that I went about trying to make things more accurate. Plz report bugs in discord.
+    <ul>
+
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Reviewed and updated handling for Techniques on all added characters, which should ensure for completely accurate technique call order even if the technique comes in multiple parts.
+            <ul>
+                <li>If you're used to seeing specific end total team dmg numbers from specific testing that involved technique usage, understand this may change the values slightly since techniques are now called in the correct order.</li>
+            </ul>
+        </li>
+        <li>Added the following new lightcones:
+            <ul>
+                <li>Tomorrow, Together</li>
+            </ul>
+        </li>
+        <li>Added in the following new relic sets:
+            <ul>
+                <li>City of Converging Stars</li>
+            </ul>
+        </li>
+        <li>Updated maximum Team Punchline, and individual Certified Banger, from 999 to 9,999. This actually matters quite a lot for high-investment Evanescia math.</li>
+        <li>Added DOT element icons on buff list inspections when looking over an entity.</li>
+        <li>Added a visual distinction between abilities inserted into the action queue vs abilities triggered within a turn.</li>
+        <li>Added a highlight to actions queued extra turns</li>
+        <li>Many, many, MANY changes across the board to general handling on every character, lightcone, and relic.</li>
+        
+        
+        <h4>Fixes</h4>
+        <li>Fixed an issue where overflow skill point gain wasn't registered properly for events that might read it.
+            <ul>
+                <li>Nothing in the calc actually used this value(not even Sparkle's ult, that's different) so this doesn't impact anything, but it was an error nonetheless.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where if a final multiplier bonus was applied during the hit-portion of an attack, it could sometimes fail to apply to that hit.
+            <ul>
+                <li>Pretty much Evernight E1 is the only thing this could have impacted between the characters we have now.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Hyacine's Technique healing came after the Technique buff application, when it actually comes before.</li>
+        <li>Fixed an issue where Techniques that insert Skill uses were causing them to be instantaneous instead of queued Extra Turns on the following characters:
+            <ul>
+                <li>DHPT</li>
+                <li>Ruan Mei</li>
+                <li>Yao Guang</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Black Swan's technique was doing its effects instantaneously within the bounds of the technique instead of queuing an inserted ability like it should.</li>
+        <li>Fixed an issue where Gallagher's E2 Effect RES bonus was taking place after the skill heal instead of before.</li>
+        <li>Fixed an issue where Sparxie's E4 was giving a Crit DMG bonus instead of Elation for the ultimate.</li>
+        <li>Fixed an issue where Lynx's trace for Crowd Control RES wasn't being applied(but isn't used yet anyways)</li>
+        <li>Fixed a visual typo with Kafka's turn-end state giving a FUA stack, but stating it was from the turn starting despite triggering at the end.</li>
+        <li>Fixed an issue where Pela's E6 additional DMG proc wasn't activating unless it was an ultimate that triggered it.</li>
+        <li>Fixed an issue where Argenti's Courage trace bonus wasn't being counted as on-hit DMGAll, though it didn't matter because nothing in the game converts DMG as a stat to another stat.</li>
+        <li>Fixed Tribbie's FUA-end buff application applying just a hair later it should have been, though this also didn't matter for anything I can think of.</li>
+        <li>Fixed a stupid visual mistake I made ages ago regarding how buffs display on a character's dropdown, causing the header of the buff to have too much upward padding.</li>
+        <li>Fixed an issue where If Time Were a Flower was monitoring for FUA starts instead of ends</li>
+        <li>Fixed an issue where relic set Passerby of the Wandering Cloud 4pc skill point generation could trigger too early in the battlestart process.</li>
+        <li>Fixed an issue where World Remaking Deliverer could fail to remove a wearer's team buff on use of the next basic/skill.</li>
+        <li>Fixed an issue where Longevous Disciple could fail to apply its buff in some cases.</li>
+        <li>Fixed an issue where Aglaea's E2 could clear its shred stacks if FUA/Inserted actions from other entities took place, when they don't count to clear it.</li>
+        <li>Fixed an issue where Wavestrider could fail to give Help stacks on blast targeting abilities.</li>
+        <li>Fixed an issue where the following abilities were not counting for things that read ally targeting instances:
+            <ul>
+                <li>Hyacine Ultimate</li>
+                <li>Aglaea Ultimate</li>
+                <li>Bronya Technique(this was actually one where I had it acting as a targeting, but it shouldn't)</li>
+                <li>Topaz Ultimate</li>
+                <li>Blade Skill</li>
+                <li>Jingliu's enhanced state entry insert</li>
+                <li>Firefly Ultimate</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Duran planar set failed to stack on allied FUA and instead was only listening to owner FUA.</li>
+        <li>Fixed an issue where Celestial Differentiator was evaluating CritDMG SUM for the battlestart bonus, too early. But nobody noticed because lmao who uses this.</li>
+        <li>Fixed an issue where Izumo was evaluating teammate path count too early in the battlestart process, though nothing in the calculator actually cared about the timing on this.</li>
+        <li>Fixed an issue where Vonwaq was evaluating SPD for the advance just barely too early. This could actually matter quite a bit, but only in some very specific cases.</li>
+        <li>Fixed an issue where Broken Keel was evaluating the battlestart Effect RES check just barely too early, which only would have mattered for Celestial Differentiator users but lmao there are none?</li>
+        <li>Fixed an issue where When She Decided to See wasn't applying the wave-start fixed energy gain.</li>
+        <li>Fixed an issue where The Hell Where Ideals Burn could apply the battlestart ATK bonus to entities even if the team had less than a 6 Skill Point max.
+            <ul>
+                <li>Might seem like a silly thing to miss, but Archer was the first character ever coded into the calc, along with his LC when I was still building things out, so I think I just forgot to add it since he always had it equipped.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Baptism of Pure Thought could fail to properly assign the enemy debuff count to the buff stack count, but only for the first time it was ever applied.</li>
+        <li>Fixed an issue where Shadowed by Night wasn't properly listening to turn starts.</li>
+
+        <h4>Optimization</h4>
+        <li>Slight tweaks the following handlers to eek out more performance across billions of loops:
+            <ul>
+                <li>Energy updates</li>
+                <li>Skill Point updates</li>
+            </ul>
+        </li>
+        <li>Updated how enemy entities will reference their Basic ATKs, they were using some super old attack construction.</li>
+        <li>Additional DMG procs had some log-specific handling that should have been isolated after a recent change but was overlooked, which is now isolated and should speed up results on Additional DMG heavy teams.</li>
+        <li>Unified RES/DEF/Vuln/DR dmg multiplier outputs to a single composite whenever they would apply, since wherever they DO apply it's always together.
+            <ul>
+                <li>Visually, they will still display on DMG data separately, this is purely for the backend calcs.</li>
+            </ul>
+        </li>
+        <li>Unified the way that enemies receive DMG from allies, leaving less room for error in the future.</li>
+
+
+        <h3>Library</h3>
+        <li>Added enemy custom data to the main display on each enemy page.</li>
+        <li>Added enemy custom tags to the main display on each enemy page.</li>
+        <li>Added the ability to search by enemy ID, partial or full, when looking at the enemy list.
+            <ul>
+                <li>Searches will only return matches for ID's that START with your input, so if your input is just 8 that's gonna return a LOT of results, but 801502 will return all Phantylia variants.</li>
+            </ul>
+        </li>
+        <li>Added a way to display whether an ability mutes its own triggers, like Sparxie's Engagement farming, preventing the ability from acting like an actual ability.</li>
+        
+
+        <h4>Fixes</h4>
+        <li>Fixed mislabeled event "Compare: Target List SUM" to "Compare: Target List Entities" instead.</li>
+    </ul>
+</div>
+<div>
     <h1>May 20th, 2026</h1>
     <ul>
 

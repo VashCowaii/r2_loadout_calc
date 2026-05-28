@@ -49,7 +49,8 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202001": {
       "name": -1,
@@ -82,7 +83,10 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1
+      }
     },
     "403202002": {
       "name": -1,
@@ -115,7 +119,10 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2
+      }
     },
     "403202003": {
       "name": -1,
@@ -148,7 +155,10 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     },
     "403202004": {
       "name": -1,
@@ -181,7 +191,8 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202005": {
       "name": -1,
@@ -214,7 +225,10 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1
+      }
     },
     "403202006": {
       "name": -1,
@@ -247,7 +261,10 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2
+      }
     },
     "403202007": {
       "name": -1,
@@ -280,7 +297,10 @@ let enemyData = {
         2076,
         2077,
         2078
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     },
     "403202008": {
       "name": -1,
@@ -316,7 +336,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MGrid_4009"
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1
+      }
     },
     "403202009": {
       "name": -1,
@@ -352,7 +375,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MGrid_4009"
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2
+      }
     },
     "403202010": {
       "name": -1,
@@ -388,7 +414,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MGrid_4009"
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     }
   }
 }

@@ -49,7 +49,8 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202201": {
       "name": -1,
@@ -82,7 +83,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1
+      }
     },
     "403202202": {
       "name": -1,
@@ -115,7 +119,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2
+      }
     },
     "403202203": {
       "name": -1,
@@ -148,7 +155,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     },
     "403202204": {
       "name": -1,
@@ -181,7 +191,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 1
+      }
     },
     "403202205": {
       "name": -1,
@@ -214,7 +227,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 2
+      }
     },
     "403202206": {
       "name": -1,
@@ -247,7 +263,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     },
     "403202207": {
       "name": -1,
@@ -280,7 +299,10 @@ let enemyData = {
         2086,
         2087,
         2088
-      ]
+      ],
+      "itNeverEnds": {
+        "SkillIndex": 3
+      }
     }
   }
 }

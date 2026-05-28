@@ -3105,7 +3105,7 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE, with Unselectables)}}"
@@ -5469,7 +5469,7 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE)}}"

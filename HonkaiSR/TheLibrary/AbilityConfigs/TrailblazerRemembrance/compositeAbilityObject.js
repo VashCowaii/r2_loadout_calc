@@ -1912,6 +1912,7 @@ const compositeAbilityObject = {
         "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge"
       ],
       "skillTrigger": "Skill03",
+      "realAttacker": "Servant",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -3414,7 +3415,7 @@ const compositeAbilityObject = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Compare: Target Count SUM",
+                        "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE, with Unselectables)}}"

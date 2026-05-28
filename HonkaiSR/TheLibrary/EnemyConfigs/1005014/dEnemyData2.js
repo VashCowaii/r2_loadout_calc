@@ -87,7 +87,12 @@ let enemyData = {
           "over": 100206301,
           "base": 1002063
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_W1_CocoliaP2_00_SummonMonsterID01": 100206001,
+        "Monster_W1_CocoliaP2_00_SummonMonsterID02": 100206201,
+        "HardLevel": 1
+      }
     },
     "100501401": {
       "name": -1,
@@ -158,7 +163,12 @@ let enemyData = {
           "over": 100206301,
           "base": 1002063
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_W1_CocoliaP2_00_SummonMonsterID01": 100206001,
+        "Monster_W1_CocoliaP2_00_SummonMonsterID02": 100206201,
+        "HardLevel": 1
+      }
     },
     "100501402": {
       "name": -1,
@@ -229,7 +239,12 @@ let enemyData = {
           "over": 100206302,
           "base": 1002063
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_W1_CocoliaP2_00_SummonMonsterID01": 100206002,
+        "Monster_W1_CocoliaP2_00_SummonMonsterID02": 100206202,
+        "HardLevel": 2
+      }
     },
     "100501403": {
       "name": -1,
@@ -300,7 +315,12 @@ let enemyData = {
           "over": 100206303,
           "base": 1002063
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_W1_CocoliaP2_00_SummonMonsterID01": 100206003,
+        "Monster_W1_CocoliaP2_00_SummonMonsterID02": 100206203,
+        "HardLevel": 3
+      }
     },
     "100501404": {
       "name": -1,
@@ -371,7 +391,12 @@ let enemyData = {
           "over": 100206304,
           "base": 1002063
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_W1_CocoliaP2_00_SummonMonsterID01": 100206004,
+        "Monster_W1_CocoliaP2_00_SummonMonsterID02": 100206204,
+        "HardLevel": 4
+      }
     }
   }
 }

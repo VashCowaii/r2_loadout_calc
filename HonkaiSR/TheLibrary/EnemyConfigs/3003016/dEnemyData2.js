@@ -61,7 +61,11 @@ let enemyData = {
         "MonsterType_W3_Dinosaur_00",
         "MonsterType_W3_Theater",
         "Theater_Rogue"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     },
     "300301601": {
       "name": "Banacademic Office's Charmony BananAdvisor",
@@ -107,7 +111,11 @@ let enemyData = {
         "MonsterType_W3_Theater",
         "Theater_Rogue",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     }
   }
 }

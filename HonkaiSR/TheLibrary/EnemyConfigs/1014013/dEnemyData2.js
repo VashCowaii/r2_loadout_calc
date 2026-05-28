@@ -86,7 +86,10 @@ let enemyData = {
           "over": 101203005,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_SummonID0": 1012041
+      }
     },
     "101401301": {
       "name": -1,
@@ -156,7 +159,10 @@ let enemyData = {
           "over": 101203005,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_SummonID0": 1012041
+      }
     },
     "101401302": {
       "name": -1,
@@ -226,7 +232,10 @@ let enemyData = {
           "over": 101203005,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_SummonID0": 1012041
+      }
     },
     "101401303": {
       "name": -1,
@@ -296,7 +305,10 @@ let enemyData = {
           "over": 101203005,
           "base": 1012030
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_SummonID0": 1012041
+      }
     }
   }
 }

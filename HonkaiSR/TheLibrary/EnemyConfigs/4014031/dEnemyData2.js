@@ -82,7 +82,13 @@ let enemyData = {
           "over": 4012073,
           "base": 4012073
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 4012070,
+        "SummonID1": 4012071,
+        "SummonID2": 4012072,
+        "SummonID3": 4012073
+      }
     },
     "401403101": {
       "name": "Pollux, Netherwing Husk, Ferry of Souls",
@@ -185,6 +191,12 @@ let enemyData = {
           "-",
           "-"
         ]
+      },
+      "itNeverEnds": {
+        "SummonID0": 401207001,
+        "SummonID1": 401207101,
+        "SummonID2": 4012072,
+        "SummonID3": 4012073
       }
     }
   }

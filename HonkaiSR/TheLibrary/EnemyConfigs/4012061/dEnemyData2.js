@@ -47,7 +47,10 @@ let enemyData = {
       "abilities": [
         1700,
         1701
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "401206101": {
       "name": -1,
@@ -78,7 +81,10 @@ let enemyData = {
       "abilities": [
         1700,
         1701
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "401206102": {
       "name": -1,
@@ -109,7 +115,10 @@ let enemyData = {
       "abilities": [
         1700,
         1701
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2
+      }
     },
     "401206103": {
       "name": -1,
@@ -140,7 +149,10 @@ let enemyData = {
       "abilities": [
         1700,
         1701
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3
+      }
     },
     "401206104": {
       "name": -1,
@@ -171,7 +183,10 @@ let enemyData = {
       "abilities": [
         1700,
         1701
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

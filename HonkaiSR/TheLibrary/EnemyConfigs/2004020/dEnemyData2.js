@@ -70,7 +70,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     },
     "200402001": {
       "name": -1,
@@ -124,7 +128,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     },
     "200402002": {
       "name": -1,
@@ -178,7 +186,11 @@ let enemyData = {
           "over": 200202102,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202002,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202102
+      }
     },
     "200402003": {
       "name": "Heliobus-Possessed Yanqing",
@@ -232,7 +244,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     },
     "200402004": {
       "name": "Apyra's Illusion",
@@ -286,7 +302,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     },
     "200402005": {
       "name": -1,
@@ -340,7 +360,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     },
     "200402006": {
       "name": -1,
@@ -394,7 +418,11 @@ let enemyData = {
           "over": 200202102,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202002,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202102
+      }
     },
     "200402007": {
       "name": -1,
@@ -448,7 +476,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     },
     "200402008": {
       "name": "Strict Master Yanqing",
@@ -502,7 +534,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202004,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202104
+      }
     },
     "200402009": {
       "name": -1,
@@ -556,7 +592,11 @@ let enemyData = {
           "over": 200202102,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202002,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202102
+      }
     },
     "200402010": {
       "name": -1,
@@ -608,7 +648,11 @@ let enemyData = {
           "over": 200202102,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 200202002,
+        "W2_Yanqing_00_Skill02_SummonID02": 200202102
+      }
     },
     "200402011": {
       "name": -1,
@@ -662,7 +706,11 @@ let enemyData = {
           "over": 2002021,
           "base": 2002021
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "W2_Yanqing_00_Skill02_SummonID01": 2002020,
+        "W2_Yanqing_00_Skill02_SummonID02": 2002021
+      }
     }
   }
 }

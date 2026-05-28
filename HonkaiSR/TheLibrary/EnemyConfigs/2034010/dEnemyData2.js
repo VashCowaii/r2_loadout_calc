@@ -71,7 +71,11 @@ let enemyData = {
           "over": 203202004,
           "base": 2032020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 203201003,
+        "WolfSummon02": 203202004
+      }
     },
     "203401001": {
       "name": -1,
@@ -125,7 +129,11 @@ let enemyData = {
           "over": 203202004,
           "base": 2032020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 203201003,
+        "WolfSummon02": 203202004
+      }
     },
     "203401002": {
       "name": -1,
@@ -179,7 +187,11 @@ let enemyData = {
           "over": 203202004,
           "base": 2032020
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "WolfSummon01": 203201003,
+        "WolfSummon02": 203202004
+      }
     }
   }
 }

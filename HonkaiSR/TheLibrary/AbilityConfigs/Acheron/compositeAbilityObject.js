@@ -4619,6 +4619,7 @@ const compositeAbilityObject = {
         "Acheron_Acheron_Ability34_Part02"
       ],
       "skillTrigger": "Skill34",
+      "isInsertable": false,
       "abilityType": "Ultimate",
       "energy": null,
       "toughnessList": [
@@ -4809,6 +4810,7 @@ const compositeAbilityObject = {
         "Acheron_Acheron_Ability33_Part02"
       ],
       "skillTrigger": "Skill33",
+      "isInsertable": false,
       "abilityType": "Ultimate",
       "energy": null,
       "toughnessList": [
@@ -5204,6 +5206,7 @@ const compositeAbilityObject = {
         "Acheron_Acheron_Ability32_Part02"
       ],
       "skillTrigger": "Skill32",
+      "isInsertable": false,
       "abilityType": "Ultimate",
       "energy": null,
       "toughnessList": [
@@ -5528,6 +5531,7 @@ const compositeAbilityObject = {
         "Acheron_Acheron_Ability31_Part02"
       ],
       "skillTrigger": "Skill31",
+      "isInsertable": false,
       "abilityType": "Ultimate",
       "energy": null,
       "toughnessList": [

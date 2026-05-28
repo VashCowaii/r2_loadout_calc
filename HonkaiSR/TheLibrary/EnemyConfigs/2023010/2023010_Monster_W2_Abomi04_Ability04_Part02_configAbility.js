@@ -21,7 +21,7 @@ const configAbility = {
             "value2": 3
           },
           {
-            "name": "Compare: Target Count SUM",
+            "name": "Compare: Target List Entities",
             "target": {
               "name": "Target Name",
               "target": "{{All Team Members(Exclude Self)}}"
@@ -174,7 +174,7 @@ const configAbility = {
     {
       "name": "IF",
       "conditions": {
-        "name": "Compare: Target Count SUM",
+        "name": "Compare: Target List Entities",
         "target": {
           "name": "Target Name",
           "target": "{{All Team Members(Exclude Self)}}"

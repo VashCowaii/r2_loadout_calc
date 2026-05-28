@@ -53,7 +53,10 @@ let enemyData = {
       "enemyTag": [
         "IF_Boss",
         "IF_W1_Gepard"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "100402601": {
       "name": -1,
@@ -91,7 +94,10 @@ let enemyData = {
       "enemyTag": [
         "IF_Boss",
         "IF_W1_Gepard"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "100402602": {
       "name": -1,
@@ -129,7 +135,10 @@ let enemyData = {
       "enemyTag": [
         "IF_Boss",
         "IF_W1_Gepard"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2
+      }
     },
     "100402603": {
       "name": -1,
@@ -167,7 +176,10 @@ let enemyData = {
       "enemyTag": [
         "IF_Boss",
         "IF_W1_Gepard"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3
+      }
     },
     "100402604": {
       "name": -1,
@@ -205,7 +217,10 @@ let enemyData = {
       "enemyTag": [
         "IF_Boss",
         "IF_W1_Gepard"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     },
     "100402605": {
       "name": -1,
@@ -243,7 +258,10 @@ let enemyData = {
       "enemyTag": [
         "IF_Boss",
         "IF_W1_Gepard"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

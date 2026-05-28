@@ -3322,7 +3322,7 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Player's Aim Target List}}"
@@ -3363,7 +3363,7 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Player's Aim Target List}}"

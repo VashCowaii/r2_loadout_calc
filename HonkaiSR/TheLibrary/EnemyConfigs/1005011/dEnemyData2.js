@@ -76,7 +76,12 @@ let enemyData = {
           "over": 1002014,
           "base": 1002014
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_W1_CocoliaP2_00_SummonMonsterID01": 1002013,
+        "Monster_W1_CocoliaP2_00_SummonMonsterID02": 1002014,
+        "Cocolia_ChangePhase_InsertController": 1
+      }
     }
   }
 }

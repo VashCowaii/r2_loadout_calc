@@ -54,7 +54,11 @@ let enemyData = {
           "over": 4012062,
           "base": 4012062
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 4014015,
+        "SummonID1": 4012062
+      }
     },
     "401402201": {
       "name": "The Giver, Master of Legions, Lance of Fury",
@@ -125,6 +129,10 @@ let enemyData = {
           "-",
           "-"
         ]
+      },
+      "itNeverEnds": {
+        "SummonID0": 401401501,
+        "SummonID1": 401206201
       }
     }
   }

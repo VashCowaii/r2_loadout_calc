@@ -49,7 +49,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Minion01"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "802203101": {
       "name": -1,
@@ -82,7 +85,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Minion01"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 1
+      }
     },
     "802203102": {
       "name": -1,
@@ -115,7 +121,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Minion01"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 2
+      }
     },
     "802203103": {
       "name": -1,
@@ -148,7 +157,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Minion01"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 3
+      }
     },
     "802203104": {
       "name": -1,
@@ -181,7 +193,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Minion01"
-      ]
+      ],
+      "itNeverEnds": {
+        "HardLevel": 4
+      }
     }
   }
 }

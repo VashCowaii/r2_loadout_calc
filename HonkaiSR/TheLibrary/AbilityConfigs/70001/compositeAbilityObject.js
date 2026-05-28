@@ -2155,6 +2155,7 @@ const compositeAbilityObject = {
         "70001_BattleEventAbility_Elation_Ability43_RestartElationTime"
       ],
       "skillTrigger": "Skill43",
+      "skillMuted": true,
       "abilityType": "Elation",
       "toughnessList": null,
       "parse": [
@@ -2175,6 +2176,7 @@ const compositeAbilityObject = {
         "70001_BattleEventAbility_Elation_Ability42_EndElationTime"
       ],
       "skillTrigger": "Skill42",
+      "skillMuted": true,
       "abilityType": "Elation",
       "toughnessList": null,
       "parse": [
@@ -2474,6 +2476,7 @@ const compositeAbilityObject = {
         "70001_BattleEventAbility_Elation_Ability04_02_Camera"
       ],
       "skillTrigger": "Skill04",
+      "skillMuted": true,
       "abilityType": "Elation",
       "energy": null,
       "toughnessList": [
@@ -2511,7 +2514,9 @@ const compositeAbilityObject = {
           "afterInjection": [],
           "abortFlags": [
             "STAT_CTRL"
-          ]
+          ],
+          "priorityTag": "AhaInstant",
+          "priorityTagPending": "AhaInstant_ElationSkill"
         },
         {
           "name": "Define Custom Variable",
@@ -2643,6 +2648,7 @@ const compositeAbilityObject = {
         "70001_BattleEventAbility_Elation_Ability03_Entry"
       ],
       "skillTrigger": "Skill03",
+      "skillMuted": true,
       "abilityType": "Elation",
       "toughnessList": null,
       "parse": [

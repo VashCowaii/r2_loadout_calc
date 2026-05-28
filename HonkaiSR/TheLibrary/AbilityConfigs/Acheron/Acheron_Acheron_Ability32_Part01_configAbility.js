@@ -6,6 +6,7 @@ const configAbility = {
     "Acheron_Acheron_Ability32_Part02"
   ],
   "skillTrigger": "Skill32",
+  "isInsertable": false,
   "abilityType": "Ultimate",
   "energy": null,
   "toughnessList": [

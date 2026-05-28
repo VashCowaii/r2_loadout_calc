@@ -156,7 +156,7 @@ const sim = {
                 logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
                 logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             }
-            poke("WaveStart",battleData,{currentWave: waveID});
+            poke("WaveStart",battleData,{currentWave: waveID},null,null);
             battleData.readyForNewWave = false;
 
             for (let battleEntity of nextTurnAV) {
@@ -177,7 +177,7 @@ const sim = {
             battleData.cycleAV = AVToRevertTo;
 
             sim.createEnemyTargets(battleData,enemiesToMake);
-            poke("WaveStartFinished",battleData,{});
+            poke("WaveStartFinished",battleData,null,null);
             sim.clearUltimateQueue(battleData)
 
             const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
@@ -333,7 +333,7 @@ const sim = {
     //             logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     //             logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     //         }
-    //         poke("WaveStart",battleData,{});
+    //         poke("WaveStart",battleData,null,null);
     //         battleData.readyForNewWave = false;
 
     //         for (let battleEntity of nextTurnAV) {
@@ -354,7 +354,7 @@ const sim = {
     //         battleData.cycleAV = AVToRevertTo;
 
     //         sim.createEnemyTargets(battleData,enemiesToMake);
-    //         poke("WaveStartFinished",battleData,{});
+    //         poke("WaveStartFinished",battleData,null,null);
     //         sim.clearUltimateQueue(battleData)
 
     //         const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
@@ -675,7 +675,7 @@ const sim = {
             enemyPositions.push(slotRef);
 
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:slot, AV: battleData.sumAV, turnRef: JSON.stringify(battleData.enemyBasedTurns[slot])});}
-            poke("EnemyCreated",battleData,{slotRef});
+            poke("EnemyCreated",battleData,{slotRef},slotRef);
             battleData.enemiesRemaining += 1;
         }
         // battleData.enemyPositions = sim.sortEnemyTargets(enemyPositions);
@@ -702,7 +702,9 @@ const sim = {
             "actionCounter": 0,
             totalUltsQueued: 0,
             totalExTurnsQueued: 0,
+            elationSkillsDone: 0,
             "battleListeners": {},
+            "battleListenersPersonal": {},
             "followUpQueue": [],
             "ultimateQueue": [],
             "followUpQueueWAVE": [],
@@ -920,31 +922,14 @@ const sim = {
                 for (let eachListener of charListeners) {
                     //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
                     const triggerName = eachListener.trigger;
-                    const triggerArray = battleListeners[triggerName] ??= [];
-                    eachListener.ownerTurn = slotRef;
-                    triggerArray.push(eachListener);
-                }
 
-                const eidoListenerRef = logicRef.eidolonListeners;
-                for (let eidoKey in eidoListenerRef) {
-                    if (eidoKey <= rank) {
-                        currentSet = eidoListenerRef[eidoKey];
-                        for (let listenerEntry of currentSet) {
-                            const triggerName = listenerEntry.trigger;
-                            const triggerArray = battleListeners[triggerName] ??= [];
-                            listenerEntry.ownerTurn = slotRef;
-                            triggerArray.push(listenerEntry);
-                        }
-                    }
+                    eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // const triggerArray = battleListeners[triggerName] ??= [];
+                    // eachListener.ownerTurn = slotRef;
+                    // triggerArray.push(eachListener);
                 }
-                // "eidolonListeners": {
-                //     1: [],
-                //     2: [],
-                //     3: [],
-                //     4: [],
-                //     5: [],
-                //     6: [],
-                // },
             }
 
 
@@ -986,10 +971,10 @@ const sim = {
                 extra2pc.push(push2pc);
             }
 
-            if (!logicRef.preLogicCompleted) {
-                logicRef.preLogic(slotRef,battleData);
-                logicRef.preLogicCompleted = true;
-            }
+            // if (!logicRef.preLogicCompleted) {
+            logicRef.preLogic(slotRef,battleData);
+                // logicRef.preLogicCompleted = true;
+            // }
         }
 
 
@@ -1005,10 +990,14 @@ const sim = {
                     // eachListener.completedCounter = 0;
                     // eachListener.ownerTurn = slotRef;
 
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                    const triggerName = eachListener.trigger;
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
 
-                    currentListenerArray.push(eachListener);
+                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1028,10 +1017,15 @@ const sim = {
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.rank;
                     }
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
 
-                    currentListenerArray.push(eachListener);
+                    const triggerName = eachListener.trigger
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1050,9 +1044,14 @@ const sim = {
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.setAmount;
                     }
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
-                    currentListenerArray.push(eachListener);
+
+                    const triggerName = eachListener.trigger
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1071,9 +1070,14 @@ const sim = {
                     for (let ownerEntry of ownerArray) {
                         currentSlots[ownerEntry.slot] = ownerEntry.setAmount;
                     }
-                    //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
-                    const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
-                    currentListenerArray.push(eachListener);
+
+                    const triggerName = eachListener.trigger
+                    // eachListener.ownerTurn = slotRef;
+                    addListenerPREPPriority(battleData,eachListener,triggerName)
+
+                    // //say we have an AttackEnd trigger but we haven't found any so far in the characters/gear/lightcones etc, then we make it listed under that key for faster access later.
+                    // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                    // currentListenerArray.push(eachListener);
                 }
             }
         }
@@ -1082,9 +1086,13 @@ const sim = {
         const universalRef = turnLogic.Universal;
         if (universalRef?.listeners && universalRef.listeners.length) {
             for (let eachListener of universalRef.listeners) {
-                const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
+                // const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
 
-                currentListenerArray.push(eachListener);
+                // currentListenerArray.push(eachListener);
+
+                const triggerName = eachListener.trigger
+                // eachListener.ownerTurn = slotRef;
+                addListenerPREPPriority(battleData,eachListener,triggerName)
             }
         }
         if (universalRef?.finalListeners && universalRef.finalListeners.length) {
@@ -1095,7 +1103,7 @@ const sim = {
             }
         }
         
-        // console.log(battleListeners)
+        // console.log(battleListeners.BattlePrep)
         return battleData;
     },
     battleStart(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
@@ -1115,9 +1123,13 @@ const sim = {
         const enemiesToMake = battleSettings.waveArray1;
         const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
 
+        if (isLoggyLogger) {logToBattle(battleData,{logType: "PassiveCalls"});}
+        poke("EntityConstruction",battleData,null,null);
+        poke("PassiveCalls",battleData,null,null);
+
         
-        poke("EntityConstruction",battleData);
-        poke("ElationInitialize",battleData);
+        
+        poke("ElationInitialize",battleData,null,null);
         const updateEnergy = battleActions.updateEnergy;
         for (let targetTurn of battleData.allyPositions) {
 
@@ -1127,25 +1139,27 @@ const sim = {
                 updateEnergy(battleData,amount,targetTurn,true,"Set Battlestart Energy");
             }
         }
-        poke("ElationFinalizePre",battleData);
-        poke("BattlePrep",battleData);//this DOES need to go here before prebattle settings
+        poke("ElationFinalizePre",battleData,null,null);
+        poke("BattlePrep",battleData,null,null);//this DOES need to go here before prebattle settings
         sim.createEnemyTargets(battleData,enemiesToMake);
 
         if (isLoggyLogger) {logToBattle(battleData,{logType: "BattleSettings"});}
-        poke("PreBattleSettings",battleData);//trigger shit like skill point max benefits, if any. Things that need to take place before combat starts.
+        poke("PreBattleSettings",battleData,null,null);//trigger shit like skill point max benefits, if any. Things that need to take place before combat starts.
         if (isLoggyLogger) {logToBattle(battleData,{logType: "EnterCombat"});}
         for (let targetTurn of battleData.allyPositions) {
-            poke("AllyCreated",battleData,{targetTurn});
+            poke("AllyCreated",battleData,{targetTurn},targetTurn);
         }
         // console.log(battleData.nameBasedTurns.char1.statTable)
-        poke("PreBattleEntersCombat",battleData,{});//things that happen once the character creation is done and characters are inserted into the turn order, but battle hasn't technically started yet
+        poke("PreBattleEntersCombat",battleData,null,null);//things that happen once the character creation is done and characters are inserted into the turn order, but battle hasn't technically started yet
         // console.log(battleData.nameBasedTurns.char1.statTable)
 
-        poke("PreBattleStartTechniquesNormal",battleData,{});
+        poke("PreBattleStartTechniquesNormal",battleData,null,null);
         if (isLoggyLogger) {logToBattle(battleData,{logType: "StartBattle"});}
-        poke("StartBattle",battleData,{});
-        poke("StartBattleEnterCombat",battleData,{});
-        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+        poke("StartBattle",battleData,null,null);
+        poke("StartBattleEnterCombat",battleData,null,null);
+
+        logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
+        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1},null);
         if (!battleData.attackTechniqueUsed && battleData.battleStartWeaknessReduction) {
             turnLogic.Universal.skillFunctions.battleStartMatchingWeakness(battleData);
             // poke("StartBattle",battleData,{});
@@ -1208,10 +1222,12 @@ const sim = {
             
             if (isLoggyLogger) {logToBattle(battleData,{logType: "StartTurn", name:turnName, isEnemy: sourceTurn.isEnemy, position:sourceTurn.isEnemy ? enemyPositions.indexOf(sourceTurn) : null,positionCount:sourceTurn.isEnemy ? enemyPositions.length : null, isCharacter:true, AV: battleData.sumAV, turnRef: JSON.stringify(sourceTurn)});}
             // poke("StartTurn", battleData, {sourceTurn});
-            if (sourceTurn.isUniqueEvent) {
-                let isActualTurn = sourceTurn.isSummon || sourceTurn.isMemosprite;
+            
+            const isMemo = sourceTurn.isMemosprite;
+            if (sourceTurn.isUniqueEvent && !isMemo) {
+                let isActualTurn = sourceTurn.isSummon;
                 if (isActualTurn) {//things like firefly countdown or robin/aggy countdowns, don't function as actual turns, so we need to make sure they don't actually trigger turn-based events.
-                    poke("StartTurn", battleData, exoTurnRef);
+                    poke("StartTurn", battleData, exoTurnRef,sourceTurn);
                     summaryTurns[turnName] += 1;
                     sourceTurn.actionAssigned = true;
 
@@ -1222,7 +1238,7 @@ const sim = {
                 sourceTurn.uniqueEventFunction(battleData,sourceTurn);
 
                 if (isActualTurn) {
-                    poke("EndTurn", battleData, exoTurnRef);
+                    poke("EndTurn", battleData, exoTurnRef,sourceTurn);
                     // clearULT(battleData);
                     sourceTurn.actionAssigned = false;
                 }
@@ -1230,17 +1246,19 @@ const sim = {
                 sourceTurn.turnState = false;
                 continue;
             }
-            poke("StartTurn", battleData, exoTurnRef);
+            poke("StartTurn", battleData, exoTurnRef,sourceTurn);
+            
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
             summaryTurns[turnName] += 1;
+            poke("StartTurnEnd", battleData, exoTurnRef,sourceTurn);
 
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
             if (sourceTurn.isEnemy) {
                 if (sourceTurn.DOTCounter) {
                     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-                    poke("TurnStartDotEnd", battleData, exoTurnRef);
+                    poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
                 }
                 if (!sourceTurn.isDead) {
                     let turnShouldEnd = false;
@@ -1248,7 +1266,7 @@ const sim = {
                         // currentToughness: finalStats.Toughness,
                         // maxToughness: finalStats.Toughness,
 
-                        poke("RecoveringFromBreak", battleData, exoTurnRef);
+                        poke("RecoveringFromBreak", battleData, exoTurnRef,sourceTurn);
                         if (sourceTurn.turnShouldEnd) {
                             turnShouldEnd = true;
                             sourceTurn.turnShouldEnd = false;
@@ -1258,7 +1276,7 @@ const sim = {
                             sourceTurn.currentToughness = sourceTurn.maxToughness;//restore enemy toughness on their turn starts
                             sourceTurn.isBroken = false;
                             if (isLoggyLogger) {logToBattle(battleData,{logType: "RecoveredFromBreak", name:turnName, isEnemy: sourceTurn.isEnemy, isCharacter:true, AV: battleData.sumAV, turnRef: null});}
-                            poke("RecoveredFromBreak", battleData, exoTurnRef);
+                            poke("RecoveredFromBreak", battleData, exoTurnRef,sourceTurn);
                         }
                     }
                     if (!turnShouldEnd) {
@@ -1272,11 +1290,13 @@ const sim = {
                 turnWrapper(turnName,sourceTurn,battleData);
             }
 
-            poke("EndTurn", battleData, exoTurnRef);
+            poke("EndTurn", battleData, exoTurnRef,sourceTurn);
+            
 
             const endTurnBuffs = sourceTurn.buffsEndTurn;
             if (canLoseBuffsThisTurn && endTurnBuffs.length) {expireControl(battleData,sourceTurn,endTurnBuffs);}
             
+            poke("EndTurnEnd", battleData, exoTurnRef,sourceTurn);
             sourceTurn.actionAssigned = false;
             sourceTurn.turnState = false;
             sourceTurn.turnShouldEnd = false
@@ -1292,8 +1312,9 @@ const sim = {
         const queueRef = battleData.followUpQueue;
 
         const charLogic = turnLogic[charName];
+        let isContinuousTurn = false;
         while (!turnEnded && !battleData.battleIsOver) {
-            clearFUA(battleData);
+            if (!isContinuousTurn) {clearFUA(battleData);}
 
             let designatedAction = charLogic.logic(sourceTurn,battleData);//gotta be .logic here to use "this" later in logic itself, and I do use it there
             const currentAction = designatedAction.action;
@@ -1307,26 +1328,69 @@ const sim = {
             //I really wish I didn't need to fuckin do this but with Cerydra coming up and her skill action duplication, I need to separate and designate skill functions
             //and presently this is the best way I can think of to do it. Isolate skill functions, and before they are called, poke listeners to say a skill was chosen as the next function
             //so that way cerydra can call the skill function BEFORE the character using it does it themselves. Some horse shit if I've ever seen it, but should be ok in the long-run prayge.
-            poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
-            if (isLog) {logToBattle(battleData,{logType: "ActionChosen", actionType: currentAction, on: designatedAction.target, actionCall: actionCall.name, source: charName});}
+            poke("ActionChosen", battleData, designatedAction, sourceTurn);
+            // poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
 
-            if (cost) {updateSkillPoints(cost,battleData,{sourceTurn,sourceName:currentAction});}//costs are applied as the action is launched
+
+            const poolKey = designatedAction.poolKey;
+            const target = designatedAction.target;
+            if (isLog) {
+
+                logToBattle(battleData,{
+                    logType: "ActionChosen",
+                    actionType: currentAction,
+                    on: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                    actionCall: actionCall.name,
+                    source: charName
+                });
+
+                const displayTypeStart = designatedAction.eventTypeStartLOG;
+                battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
+                if (displayTypeStart) {
+                    // logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
+                    logToBattle(battleData,{
+                        logType: displayTypeStart,
+                        name:designatedAction.properName,
+                        target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                        isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action, isEnhanced: designatedAction.isEnhanced});
+                }
+            }
+
+            if (cost) {updateSkillPoints(battleData,cost,sourceTurn,false,currentAction);}//costs are applied as the action is launched
             //aight so I always thought costs were applied before the action(skill usage) and gains were applied AFTER but nope
             //just confirmed with solo archer in a calyx, if he starts with a basic attack that would put him to 4SP total, even before the attack lands he gets that crit dmg buff from guardian. Fuck me man. At least this simplifies the code.
             sourceTurn.actionAssigned = true;
+
+
+
+            // const typeStart = designatedAction.eventTypeStart;
+            // const typeEnd = designatedAction.eventTypeEnd;
+
+            const isAbility = designatedAction.isAbility;
+            if (isAbility) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
             actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
+            if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
-            // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
-            //     turnEnded = true;
-            //     if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
-            //     if (sourceTurn.turnShouldEnd) {return;}
-            // }//return turn ending for everyone else
-            turnEnded = true;
-            if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
 
-            if (queueRef.length) {clearFUA(battleData);}
-            clearULT(battleData);//readiness poke is inside the function on this one
-            sourceTurn.actionAssigned = false;
+            const preCheckContinue = designatedAction.isContinuousTurn;
+            isContinuousTurn = preCheckContinue;
+
+
+            if (!preCheckContinue) {
+
+                // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
+                //     turnEnded = true;
+                //     if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
+                //     if (sourceTurn.turnShouldEnd) {return;}
+                // }//return turn ending for everyone else
+                turnEnded = true;
+                if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
+
+                if (queueRef.length) {clearFUA(battleData);}
+                clearULT(battleData);//readiness poke is inside the function on this one
+                sourceTurn.actionAssigned = false;
+                isContinuousTurn = false;
+            }
         }
     },
     turnWrapperEnemy(charName,enemyTypeAttack,sourceTurn,battleData) {
@@ -1341,13 +1405,20 @@ const sim = {
             // let cost = designatedAction.points;
 
             //not sure we need to bother designating enemy actions, but we'll leave it here for now just to be safe. Was only added for duping skills for cerydra on the ally side
-            poke("ActionChosen", battleData, {actionType: designatedAction.action, actionCall: designatedAction.actionCall, sourceTurn});
-            if (isLog) {logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});}
+            poke("ActionChosen", battleData, {actionType: designatedAction.action, actionCall: designatedAction.actionCall, sourceTurn},sourceTurn);
+            if (isLog) {
+                logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
+                battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
 
-            //enemy actions don't have a sp cost so... don't need that either
-            // if (cost && cost < 0) {battleActions.updateSkillPoints(cost,battleData,{source: charName,sourceName:designatedAction.action});}//costs are applied as the action is launched
-            designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
-            // if (cost && cost > 0) {battleActions.updateSkillPoints(cost,battleData,{source: charName,sourceName:designatedAction.action});}//gains are applied after the actions are taken, I think. Thonk.
+                // logToBattle(battleData,{logType: "EnemyAttackStart", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
+                logToBattle(battleData,{logType: "EnemyAttackStart", name:designatedAction.properName, target:"N/A", isEnemy: true, isCharacter: false, AV: battleData.sumAV, actionSlot:designatedAction.action});
+            }
+
+            
+
+            poke("AbilityStart",battleData,designatedAction,sourceTurn);
+            designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);
+            poke("AbilityEnd",battleData,designatedAction,sourceTurn);
 
             // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
             //     turnEnded = true;
@@ -1361,14 +1432,37 @@ const sim = {
             //but later I might actually repro enemy logic so their double-turn chained turn state might be a thing and this will be useful there
         }
     },
-    pokeListeners (triggerName,battleData,generalInfo) {
+    pokeListenersOwnership(triggerName,battleData,generalInfo,personalOwner) {
+        if (personalOwner) {
+            // const triggerRef = battleData.battleListenersPersonal[personalOwner.properName] ??= {};
+            // const triggerRef = battleData.battleListenersPersonal[personalOwner.properName];
+
+
+            const listenerRef = battleData.battleListenersPersonal[personalOwner.properName]?.[triggerName];
+            if (listenerRef) {
+                for (let i = listenerRef.length-1; i>=0; i--) {
+                    listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+                }
+            }
+            // const listenerRef = triggerRef[triggerName] ??= [];
+
+            // for (let i = listenerRef.length-1; i>=0; i--) {
+            //     listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+            // }
+        }
+
         const triggerRef = battleData.battleListeners[triggerName] ??= [];
         // console.count()
         for (let i = triggerRef.length-1; i>=0; i--) {
             triggerRef[i].condition(battleData,generalInfo);
         }
-        //initially went the ++ route on i here, but since I have some listeners that will remove themselves from a listener tree after completing certain actions
-        //I needed to swap to a reverse call instead
+    },
+    pokeListeners(triggerName,battleData,generalInfo) {
+        const triggerRef = battleData.battleListeners[triggerName] ??= [];
+        // console.count()
+        for (let i = triggerRef.length-1; i>=0; i--) {
+            triggerRef[i].condition(battleData,generalInfo);
+        }
     },
     pokeListenersArray (triggerNameArray,battleData,generalInfo) {
         const arrayLength = triggerNameArray.length;
@@ -1379,22 +1473,20 @@ const sim = {
                 triggerRef[i].condition(battleData,generalInfo);
             }
         }
-        //initially went the ++ route on i here, but since I have some listeners that will remove themselves from a listener tree after completing certain actions
-        //I needed to swap to a reverse call instead
     },
-    pokeListenersSet(triggerNameArray,battleData,generalInfo) {
-        const arrayLength = triggerNameArray.size;
+    pokeListenersSet(triggerNameArray,battleData,generalInfo,personalOwner) {
+        if (personalOwner) {
+            const triggerRef = battleData.battleListenersPersonal[personalOwner.properName] ??= {};
+            // const listenerRef = triggerRef[triggerName] ??= [];
 
-        // console.log(triggerNameArray)
-
-        // for (let ii=0;ii<arrayLength;ii++) {
-        //     const triggerName = triggerNameArray[ii];
-        //     const triggerRef = battleData.battleListeners[triggerName] ??= [];
-        //     console.log(triggerName,triggerNameArray)
-        //     for (let i = triggerRef.length-1; i>=0; i--) {
-        //         triggerRef[i].condition(battleData,generalInfo);
-        //     }
-        // }
+            for (let triggerName of triggerNameArray) {
+                const listenerRef = triggerRef[triggerName] ??= [];
+                // console.log(triggerName,triggerNameArray)
+                for (let i = listenerRef.length-1; i>=0; i--) {
+                    listenerRef[i].condition(battleData,generalInfo);
+                }
+            }
+        }
 
         for (let triggerName of triggerNameArray) {
             const triggerRef = battleData.battleListeners[triggerName] ??= [];
@@ -1403,9 +1495,6 @@ const sim = {
                 triggerRef[i].condition(battleData,generalInfo);
             }
         }
-
-        //initially went the ++ route on i here, but since I have some listeners that will remove themselves from a listener tree after completing certain actions
-        //I needed to swap to a reverse call instead
     },
     // // if (triggerRef && triggerRef.length) {
     //     for (let triggerEntry of triggerRef) {triggerEntry.condition(battleData,generalInfo);}
@@ -1427,40 +1516,47 @@ const sim = {
                 let currentFUA = queue.shift();
                 let characterName = currentFUA.properName;
                 let sourceTurn = currentFUA.sourceTurn;
-                let actionName = currentFUA.name;
-                let generalInfo = {sourceTurn,actionName};
+                // let actionName = currentFUA.name;
+                // let generalInfo = {sourceTurn,actionName};
                 const targetTurn = currentFUA.target;
 
-                const isFUATrigger = currentFUA.useFUATriggers;
                 const useAnyTrigger = currentFUA.useAnyTriggers;
-                // useFUATriggers: false,
-                // useAnyTriggers: false,
+
+
+                const shouldAbort = currentFUA.abortCheck?.(battleData,currentFUA,sourceTurn);
+                if (shouldAbort) {continue;}
 
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
 
-                if (useAnyTrigger) {
-                    if (isFUATrigger) {
-                        if (isLog) {
-                            const isEnhanced = currentFUA.isEnhanced;
-                            logToBattle(battleData,{logType: "FUAStart", name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, isEnhanced, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
-                        }
-                        poke("FUAStart",battleData,generalInfo);
-                        currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                        poke("FUAEnd",battleData,generalInfo);
-                    }
-                    else {
-                        const typeStart = currentFUA.eventTypeStart;
-                        const typeEnd = currentFUA.eventTypeEnd;
 
-                        if (isLog) {
-                            const displayTypeStart = currentFUA.eventTypeStartLOG;
-                            logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
-                        }
-                        poke(typeStart,battleData,generalInfo);
-                        currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                        poke(typeEnd,battleData,generalInfo);
+                // if (isAbility) {poke("AbilityStart",battleData,currentUltimate,sourceTurn);}
+                // currentUltyFunction(battleData,target,sourceTurn);
+                // if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
+
+                if (useAnyTrigger) {
+                    // const typeStart = currentFUA.eventTypeStart;
+                    // const typeEnd = currentFUA.eventTypeEnd;
+
+                    const poolKey = currentFUA.poolKey;
+                    const target = currentFUA.target;
+                    if (isLog) {
+                        const displayTypeStart = currentFUA.eventTypeStartLOG;
+                        logToBattle(battleData,{
+                            logType: displayTypeStart,
+                            isInsertedAbility: true,
+                            name:characterName,
+                            target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                            AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                        battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                     }
+                    const isAbility = currentFUA.isAbility;
+                    if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
+                    // poke(typeStart,battleData,generalInfo);
+                    
+                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                    if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
+                    // poke(typeEnd,battleData,generalInfo);
                 }
                 else {
                     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
@@ -1525,17 +1621,19 @@ const sim = {
                 let currentUltimate = queue.shift();
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
-                let actionName = currentUltimate.name;
-                let target = currentUltimate.target;
+                // let actionName = currentUltimate.name;
+                // let target = currentUltimate.target;
                 const isAttack = currentUltimate.isAttack;
                 const queueTag = currentUltimate.queueTag;
-                let generalInfo = {sourceTurn,actionName,target,isAttack,queueTag};
+                // let generalInfo = {sourceTurn,target,isAttack,queueTag};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
                 
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
                 const currentUltyFunction = currentUltimate.actionCall;
+                const poolKey = currentUltimate.poolKey;
+                const target = currentUltimate.target;
 
                 if (!isExtraTurn) {
                     // totalUltsQueued: 0,
@@ -1549,7 +1647,14 @@ const sim = {
                     //     continue;
                     // }
 
-                    if (isLog) {logToBattle(battleData,{logType: "UltimateStart", name:characterName, target: typeof target === "object" ? target.name : target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    if (isLog) {
+                        logToBattle(battleData,{
+                            logType: "UltimateStart",
+                            name:characterName,
+                            target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                            AV: currentAV, ultName: currentUltyFunction.name});
+                        battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
+                    }
                     // alliedPoolKeys
 
                     const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn) ?? currentUltimate.energyCost;
@@ -1557,23 +1662,16 @@ const sim = {
                     const checkSpecial = currentUltimate.specialEnergyPoke;
                             // specialEnergyPoke: "SW999GainMMR",
                     if (checkSpecial) {
-                        poke(checkSpecial,battleData,{pointsGained: -energyCost,sourceString:"Ultimate Cost [SPECIAL]"});
+                        poke(checkSpecial,battleData,{pointsGained: -energyCost,sourceString:"Ultimate Cost [SPECIAL]"},sourceTurn);
                     }
                     else {
                         updateEnergy(battleData,-energyCost,sourceTurn,true,"Ultimate Cost");
                     }
-                    
 
-                    // poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
-                    poke("UltimateStart",battleData,generalInfo);
-
-                    
-
+                    poke("AbilityStart",battleData,currentUltimate,sourceTurn);
                     sourceTurn.ultsUsed++;
                     currentUltyFunction(battleData,sourceTurn,target);
-                    //nonViolentWrapper gets called on buff-type ultimates within their own respective functions.
-                    //later I might call it here and clarify attack-type or not in the ultyQueue object entries, just not sure if it's worth doing other than my own convenience (might be less performant on cycles, though it'd be barely)
-                    poke("UltimateEnd",battleData,generalInfo);
+                    poke("AbilityEnd",battleData,currentUltimate,sourceTurn);
                 }
                 else {
                     const allowUlts = currentUltimate.allowUlts;
@@ -1581,12 +1679,9 @@ const sim = {
 
                     if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
                     
-                    // if (extraTurnHasChoice) {
-                    //     poke("StartTurnEnd", battleData, generalInfo);
-                    // }
 
                     battleData.isInExtraTurn = true;
-                    poke("ExtraTurnStart",battleData,generalInfo);
+                    poke("ExtraTurnStart",battleData,currentUltimate,sourceTurn);
                     if (battleData.inExtraTurnUseUlts) {clearULT(battleData);}
                     
                     const extraTurnHasChoice = currentUltimate.extraTurnHasChoice;
@@ -1596,16 +1691,26 @@ const sim = {
                         // turnWrapper(charName,sourceTurn,battleData)
                     }
                     else {
+                        if (isLog) {
+                            logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName,
+                                target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                                isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
+                            battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
+                            // eventTypeStartLOG
+                        }
                         const actionHasForcedPL = currentUltimate.elationForcedPunchline;
+                        const isAbility = currentUltimate.isAbility;
                         if (actionHasForcedPL) {
-                            battleData.punchlineForced = actionHasForcedPL;
+                            battleData.punchlineForced += actionHasForcedPL;
                             battleData.punchlineConsume = false;
                         }
 
+                        if (isAbility) {poke("AbilityStart",battleData,currentUltimate,sourceTurn);}
                         currentUltyFunction(battleData,target,sourceTurn);
+                        if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
 
                         if (actionHasForcedPL) {
-                            battleData.punchlineForced = 0;
+                            battleData.punchlineForced -= actionHasForcedPL;
                             battleData.punchlineConsume = true;
                         }
                     }
@@ -1614,7 +1719,7 @@ const sim = {
                     battleData.inExtraTurnUseUlts = false;
                     battleData.isInExtraTurn = false;
 
-                    poke("ExtraTurnEnd",battleData,generalInfo);
+                    poke("ExtraTurnEnd",battleData,currentUltimate,sourceTurn);
                     
                 }
 
@@ -1645,6 +1750,7 @@ const sim = {
         }
     },
 }
-const poke = sim.pokeListeners;
+// const poke = sim.pokeListeners;
+const poke = sim.pokeListenersOwnership;
 const pokeArray = sim.pokeListenersArray;
 const pokeSet = sim.pokeListenersSet;

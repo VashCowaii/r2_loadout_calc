@@ -56,7 +56,12 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Boss"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 8024011,
+        "SummonID1": 8022010,
+        "SummonID2": 802202002
+      }
     },
     "802401301": {
       "name": -1,
@@ -96,7 +101,12 @@ let enemyData = {
       ],
       "enemyTag": [
         "SW_Boss"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID0": 8024011,
+        "SummonID1": 8022010,
+        "SummonID2": 802202002
+      }
     }
   }
 }

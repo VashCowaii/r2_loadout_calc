@@ -49,7 +49,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201001": {
       "name": "Dreamjolt Troupe's Mr. Domescreen (Projection)",
@@ -85,7 +88,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201002": {
       "name": "Dreamjolt Troupe's Mr. Domescreen (Projection)",
@@ -121,7 +127,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": 1
+      }
     },
     "300201003": {
       "name": "Cocona's Purity",
@@ -154,7 +163,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201004": {
       "name": -1,
@@ -187,7 +199,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201005": {
       "name": -1,
@@ -220,7 +235,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201006": {
       "name": "Ternary Assimilation Unit",
@@ -256,7 +274,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201007": {
       "name": "Ternary Assimilation Unit",
@@ -292,7 +313,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": 1
+      }
     },
     "300201008": {
       "name": -1,
@@ -325,7 +349,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201009": {
       "name": -1,
@@ -358,7 +385,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201010": {
       "name": -1,
@@ -392,7 +422,10 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     },
     "300201011": {
       "name": -1,
@@ -426,7 +459,10 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_TV_00",
         "MGrid_4003"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1
+      }
     }
   }
 }

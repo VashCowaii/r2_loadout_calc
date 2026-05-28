@@ -2548,6 +2548,7 @@ const compositeAbilityObject = {
         "DanHengIL_DanHengIL_Ability21_Part02"
       ],
       "skillTrigger": "Skill21",
+      "skillMuted": true,
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -3006,6 +3007,7 @@ const compositeAbilityObject = {
         "DanHengIL_DanHengIL_Ability02_Part02"
       ],
       "skillTrigger": "Skill02",
+      "skillMuted": true,
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [

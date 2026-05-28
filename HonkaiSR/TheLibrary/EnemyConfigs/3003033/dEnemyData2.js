@@ -55,7 +55,10 @@ let enemyData = {
       ],
       "enemyTag": [
         "W3_Figure_02"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 300203007
+      }
     },
     "300303301": {
       "name": "\"Past Confined and Caged\"",
@@ -95,7 +98,10 @@ let enemyData = {
       "enemyTag": [
         "W3_Figure_02",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "SummonID01": 300203007
+      }
     }
   }
 }

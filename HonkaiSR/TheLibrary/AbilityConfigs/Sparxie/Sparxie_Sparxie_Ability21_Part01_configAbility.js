@@ -6,6 +6,7 @@ const configAbility = {
     "Sparxie_Sparxie_Ability21_Part02"
   ],
   "skillTrigger": "Skill21",
+  "skillMuted": true,
   "abilityType": "Skill",
   "energy": null,
   "toughnessList": [

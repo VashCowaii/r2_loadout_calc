@@ -75,7 +75,13 @@ let enemyData = {
           "over": 100201609,
           "base": 1002016
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Ice_Lance_ID": 100201508,
+        "Ice_Lance_ID_2": 100201608,
+        "Ice_Lance_ID_3": 100201509,
+        "Ice_Lance_ID_4": 100201609
+      }
     },
     "100401501": {
       "name": -1,
@@ -135,7 +141,13 @@ let enemyData = {
           "over": 100201607,
           "base": 1002016
         }
-      ]
+      ],
+      "itNeverEnds": {
+        "Ice_Lance_ID": 100201506,
+        "Ice_Lance_ID_2": 100201606,
+        "Ice_Lance_ID_3": 100201507,
+        "Ice_Lance_ID_4": 100201607
+      }
     }
   }
 }

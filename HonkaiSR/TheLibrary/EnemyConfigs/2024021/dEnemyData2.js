@@ -39,7 +39,10 @@ let enemyData = {
         817,
         818,
         819
-      ]
+      ],
+      "itNeverEnds": {
+        "MonsterCount": 10
+      }
     }
   }
 }

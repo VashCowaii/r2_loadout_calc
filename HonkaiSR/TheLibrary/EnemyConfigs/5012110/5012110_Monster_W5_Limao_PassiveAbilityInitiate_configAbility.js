@@ -1534,7 +1534,7 @@ const configAbility = {
                     "flagName": "STAT_Confine"
                   },
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -1550,7 +1550,7 @@ const configAbility = {
                     "invertCondition": true
                   },
                   {
-                    "name": "Compare: Target Count SUM",
+                    "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"

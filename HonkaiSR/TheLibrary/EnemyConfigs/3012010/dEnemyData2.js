@@ -44,7 +44,11 @@ let enemyData = {
       "abilities": [
         1317,
         1318
-      ]
+      ],
+      "itNeverEnds": {
+        "TV_01_RandomPoolID": 1,
+        "TV_01_EliteChance": -1
+      }
     },
     "301201001": {
       "name": -1,
@@ -72,7 +76,11 @@ let enemyData = {
       "abilities": [
         1317,
         1318
-      ]
+      ],
+      "itNeverEnds": {
+        "TV_01_RandomPoolID": 1,
+        "TV_01_EliteChance": 30
+      }
     }
   }
 }

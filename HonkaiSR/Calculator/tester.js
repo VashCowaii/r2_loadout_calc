@@ -1618,60 +1618,71 @@ const customMenu = {
                 // shieldRemaining,shieldCap
                 // ${currentBuff.isShield ? "<br>[SHIELD] " : ""}
 
-                if (currentBuff.isShield) {
+                let shieldStringer = "";
+                if (currentBuff.isShield) { 
 
                     // console.log(currentBuff)
                     const currentShield = currentBuff.shieldRemaining;
                     const shieldCap = currentBuff.shieldCap;
                     const percentFilled = currentShield/shieldCap;
                     const percentMissing = 1 - percentFilled;
-                    buffStringer += `
-                    <details class="actionDetailBodyDetailExpandBuffs" open>
-                        <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
-                            <div class="buffNameBreakdownClickerHeaderBox">
-                                <img src="/HonkaiSR/misc/Icon_Shield.png" class="buffShieldIcon"/>
-                                <div class="buffNameBreakdownClickerHeaderBoxBUFFROWOUTER">
-                                    <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
-                                        <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
-                                            ${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
-                                        </div>
-                                        ${currentBuff.expireType ? `
-                                            <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
-                                            ${currentBuff.duration}
-                                            <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
-                                            </div>
-                                            ` : ""}
-                                    </div>
-                                    <div class="buffNameBreakdownClickerHeaderBoxSHIELDROW">
-                                        <div class="buffShieldHealthDisplayFilled" style="width: ${percentFilled*100}%"></div>
-                                        <div class="buffShieldHealthDisplayMissing" style="width: ${percentMissing*100}%"></div>
-                                        <div class="buffShieldHealthValueDisplay">${currentShield.toLocaleString()} / ${shieldCap.toLocaleString()}</div>
-                                    </div>
+                    shieldStringer += `<div class="buffNameBreakdownClickerHeaderBox">
+                            <img src="/HonkaiSR/misc/Icon_Shield.png" class="buffShieldIcon"/>
+                            <div class="buffNameBreakdownClickerHeaderBoxBUFFROWOUTER">
+                                <div class="buffNameBreakdownClickerHeaderBoxSHIELDROW">
+                                    <div class="buffShieldHealthDisplayFilled" style="width: ${percentFilled*100}%"></div>
+                                    <div class="buffShieldHealthDisplayMissing" style="width: ${percentMissing*100}%"></div>
+                                    <div class="buffShieldHealthValueDisplay">${currentShield.toLocaleString()} / ${shieldCap.toLocaleString()}</div>
                                 </div>
                             </div>
-                        </summary>
-                    `;
+                        </div>`;
                 }
-                else {
-                    buffStringer += `
-                    <details class="actionDetailBodyDetailExpandBuffs" open>
-                        <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
-                            <div class="buffNameBreakdownClickerHeaderBox">
-                                <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
-                                    <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
-                                        ${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
-                                    </div>
-                                    ${currentBuff.expireType ? `
-                                        <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
-                                        ${currentBuff.duration}
-                                        <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
-                                        </div>
-                                        ` : ""}
+                let dotStringer = "";
+                if (currentBuff.isDOT) { 
+                    // isAllDOTTypes
+
+                    const dots = {
+                        "Wind": "Icon_Wind_Shear.png",
+                        "Lightning": "Icon_Shock.png",
+                        "Physical": "Icon_Bleed.png",
+                        "Fire": "Icon_Burn.png",
+                        "All": "Icon_DoT.png",
+                    }
+
+                    // element
+
+                    // console.log(currentBuff)
+                    const currentShield = currentBuff.shieldRemaining;
+                    const shieldCap = currentBuff.shieldCap;
+                    const percentFilled = currentShield/shieldCap;
+                    const percentMissing = 1 - percentFilled;
+                    dotStringer += `
+                            <img src="/HonkaiSR/misc/${currentBuff.isAllDOTTypes ? dots.All : dots[currentBuff.element]}" class="buffDOTIcon"/>
+                        `;
+                }
+
+
+
+                buffStringer += `
+                <details class="actionDetailBodyDetailExpandBuffs" open>
+                    <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
+                        <div class="buffNameBreakdownClickerHeaderBox">
+                            <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
+                                <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
+                                    ${dotStringer}${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
                                 </div>
+                                ${currentBuff.expireType ? `
+                                    <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
+                                    ${currentBuff.duration}
+                                    <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
+                                    </div>
+                                    ` : ""}
                             </div>
-                        </summary>
-                    `;
-                }
+                        </div>
+                    </summary>
+                    ${shieldStringer}
+                `;
+                // }
 
                 // tagSpecific
                 buffStringer += `<div class="expandedBuffBodyIndented">`;
@@ -3058,6 +3069,9 @@ const customMenu = {
             // logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
             // logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
     
+            if (currentLogType === "PassiveCalls"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Passives<div class="weirdSideSemiCircleThinger"></div></div>`;}
+            
+
             if (currentLogType === "BattlePrep"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Prep<div class="weirdSideSemiCircleThinger"></div></div>`;}
             if (currentLogType === "BattleSettings"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Battle Settings<div class="weirdSideSemiCircleThinger"></div></div>`;}
             if (currentLogType === "EnterCombat"){eventString += `<div class="cycleEndBar clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">Enter Combat<div class="weirdSideSemiCircleThinger"></div></div>`;}
@@ -3137,6 +3151,8 @@ const customMenu = {
                 "GenericAbilityStart": "Insert",
                 "SkillStart": "Skill",
                 "ElationSkillStart": "Elation",
+                "AhaInstantEnd": "End",
+                "EnemyAttackStart": "ATK",
                 "BasicATKStart": "Basic",
                 "TechniqueStart": "Tech.",
                 "MemoSkillStart": "Skill",
@@ -3146,8 +3162,12 @@ const customMenu = {
             if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[actionNameSource];
                 
-                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : "turnStarterBarMiniAction"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
-                    <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
+                eventString += `<div class="${action.isEnemy ? "turnStarterBarMiniActionEnemy" : (action.isExTurnQueue ? "turnStarterBarUltimate" : "turnStarterBarMiniAction")} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
+                    
+                    ${action.isInsertedAbility ? `<div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemyInsert" : "weirdSideSemiCircleThingerAllyInsert"}"></div>` 
+                        : `<div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>`}
+
+
                     ${action.isEnemy ? `<img src="/HonkaiSR/${isEvent ? isEvent : `misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBox">${currentLogType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[currentLogType]}${action.isEnhanced ? " Enh." : ""}</div>
                 </div>`;
@@ -4198,13 +4218,16 @@ const userTriggers = {
         "GenericAbilityStart",
         "SkillStart",
         "ElationSkillStart",
+        "AhaInstantEnd",
         "MemoSkillStart",
         "BasicATKStart",
+        "EnemyAttackStart",
         "TechniqueStart",
         // "TalentStart",
 
         "BattlePrep",
         "BattleSettings",
+        "PassiveCalls",
         "EnterCombat",
         "WaveStart",
         "SummonOnFieldAdjustment",
@@ -4213,6 +4236,7 @@ const userTriggers = {
     barActionHeaders: new Set ([
         "BattlePrep",
         "BattleSettings",
+        "PassiveCalls",
         "EnterCombat",
         "WaveStart",
     ]),
@@ -4226,6 +4250,7 @@ const userTriggers = {
         "BattleStartWeakness": "Battle Start Toughness Red.",
         "BattlePrep": "Battle Prep",
         "BattleSettings": "Battle Settings",
+        "PassiveCalls": "Passive Calls",
         "EnterCombat": "Enter Combat",
         "WaveStart": "Wave Start",
 
@@ -4235,8 +4260,10 @@ const userTriggers = {
         "GenericAbilityStart": "Insert Instance",
         "SkillStart": "Skill Start",
         "ElationSkillStart": "Elation Skill Start",
+        "AhaInstantEnd": "Aha Instant End",
         "MemoSkillStart": "Memosprite Skill Start",
         "BasicATKStart": "Basic ATK Start",
+        "EnemyAttackStart": "Enemy Attack Start",
 
         "StartTurn": "Turn Start",
         "ImmediateExtraTurn": "Extra Turn (Action Queue)",
@@ -4436,6 +4463,14 @@ const userTriggers = {
 
 
             switch (currentType) {
+                case "PassiveCalls": 
+                    returnString = `
+                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">Passive Calls</span></div>
+                    ${controlsString}
+                    <div class="actionDetailBody">This is where bonuses that are unconditions and active from the start of the battle construction, are applied. These do not require specific events to happen first.</div>
+                    `
+                    break;
+
                 case "BattlePrep": 
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">Battle Prep</span></div>
@@ -4594,16 +4629,9 @@ const userTriggers = {
                 case "TechniqueStart":
                 case "MemoSkillStart":
                 case "BasicATKStart": 
+                case "EnemyAttackStart":
+                case "ElationSkillStart":
                 case "SkillStart": 
-                // case "TalentStart":
-                    // battleData.battleLog.push({logType: "BasicATKStart", name:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV});
-                    returnString = `
-                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s ${action.actionSlot} ${action.isEnhanced ? "Enhanced" : ""}</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
-                    ${controlsString}
-                    <div class="actionDetailBody">Target: ${action.target}</div>
-                    `
-                    break;
-                case "ElationSkillStart": 
                 // case "TalentStart":
                     // battleData.battleLog.push({logType: "BasicATKStart", name:characterName, isEnemy: false, isCharacter: true, AV: battleData.sumAV});
                     returnString = `
@@ -4622,7 +4650,7 @@ const userTriggers = {
                     `
                     break;
 
-                    
+                case "AhaInstantEnd":  
                 case "GenericAbilityStart": 
                     // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
                     returnString = `

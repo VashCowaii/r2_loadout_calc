@@ -4,6 +4,7 @@ const configAbility = {
     "70001_BattleEventAbility_Elation_Ability03_Entry"
   ],
   "skillTrigger": "Skill03",
+  "skillMuted": true,
   "abilityType": "Elation",
   "toughnessList": null,
   "parse": [

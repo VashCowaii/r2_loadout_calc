@@ -49,7 +49,8 @@ let enemyData = {
         2110,
         2111,
         2112
-      ]
+      ],
+      "itNeverEnds": {}
     }
   }
 }

@@ -52,7 +52,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     },
     "300204201": {
       "name": -1,
@@ -89,7 +93,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     },
     "300204202": {
       "name": -1,
@@ -126,7 +134,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 2
+      }
     },
     "300204203": {
       "name": -1,
@@ -163,7 +175,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 3
+      }
     },
     "300204204": {
       "name": -1,
@@ -200,7 +216,11 @@ let enemyData = {
       "enemyTag": [
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 4
+      }
     },
     "300204205": {
       "name": -1,
@@ -238,7 +258,11 @@ let enemyData = {
         "MonsterType_W3_Clock_00",
         "MonsterType_W3_Theater",
         "MGrid_4006"
-      ]
+      ],
+      "itNeverEnds": {
+        "FlopSide": -1,
+        "HardLevel": 1
+      }
     }
   }
 }

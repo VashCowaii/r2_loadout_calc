@@ -47,7 +47,12 @@ let enemyData = {
         1686,
         1687,
         1688
-      ]
+      ],
+      "itNeverEnds": {
+        "AISequence_1": 2,
+        "AISequence_2": 1,
+        "AISequence_3": 3
+      }
     },
     "401205001": {
       "name": -1,
@@ -78,7 +83,11 @@ let enemyData = {
         1686,
         1687,
         1688
-      ]
+      ],
+      "itNeverEnds": {
+        "AISequence_1": 3,
+        "AISequence_2": 2
+      }
     }
   }
 }

@@ -49,7 +49,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202301": {
       "name": -1,
@@ -82,7 +83,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202302": {
       "name": -1,
@@ -115,7 +117,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202303": {
       "name": -1,
@@ -148,7 +151,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202304": {
       "name": -1,
@@ -181,7 +185,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202305": {
       "name": -1,
@@ -214,7 +219,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202306": {
       "name": -1,
@@ -247,7 +253,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202307": {
       "name": -1,
@@ -280,7 +287,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202308": {
       "name": -1,
@@ -313,7 +321,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     },
     "403202309": {
       "name": -1,
@@ -346,7 +355,8 @@ let enemyData = {
         2090,
         2091,
         2092
-      ]
+      ],
+      "itNeverEnds": {}
     }
   }
 }

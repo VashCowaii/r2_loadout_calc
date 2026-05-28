@@ -50,7 +50,10 @@ let enemyData = {
         2880,
         2881,
         2882
-      ]
+      ],
+      "itNeverEnds": {
+        "Monster_XP_Elite02_01_AIFlag": 4
+      }
     }
   }
 }
