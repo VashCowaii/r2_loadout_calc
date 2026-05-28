@@ -15280,4 +15280,127 @@ const turnLogicRelics = {
             },
         }
     },
+    "City of Converging Stars": {//DONE
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners;
+
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "City of Converging Stars listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AttackStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                let isFUA = false;
+                                const actionTags = generalInfo.ATKObject.actionTags;
+                                for (let tag of actionTags) {
+                                    if (tag === "FUA") {
+                                        isFUA = true;
+                                        break;
+                                    }
+                                }
+                                if (!isFUA) {return;}
+        
+                                if (!this.lcCityConvergingATKSHEET) {
+                                    let relicNameRef = "City of Converging Stars";
+                                    let pcRef = "2pc";
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                                    const buffRef = this.buffRef ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
+                                    let buffName = buffRef.dmgBuff;
+        
+                                    this.lcCityConvergingATKSHEET = {
+                                        "stats": [ATKP],
+                                        [ATKP]: relicPathing[0],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffName,
+                                        "durationInTurn": 3,
+                                        "duration": 2,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                    }
+                                }
+                                let buffSheet = this.lcCityConvergingATKSHEET;
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "City of Converging Stars FUA listener",
+                        },
+                    ]
+                },
+                {
+                    "trigger": "EnemyDied",
+                    condition(battleData,generalInfo) {
+                        let ownersSlots = this.ownersSlots;
+
+                        if (!this.lcCityConvergingDEATHSHEET) {
+                            let relicNameRef = "City of Converging Stars";
+                            let pcRef = "2pc";
+                            let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                            const buffName = turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff;
+
+                            this.lcCityConvergingDEATHSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: relicPathing[2],
+                                "source": relicNameRef,
+                                "sourceOwner": "",
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                        }
+                        let buffSheet = this.lcCityConvergingDEATHSHEET;
+                        
+                        const namedTurns = battleData.nameBasedTurns;
+                        const allAlliesArray = battleData.allAlliesArray;
+                        for (let charSlot in ownersSlots) {
+                            let currentTurn = namedTurns[charSlot];
+                            buffSheet.sourceOwner = currentTurn.properName;
+                            updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                            break;
+                            //bc this does NOT stack, the first owner we find would be considered to be the buff source
+                            //afterwards we completely kill the listener so it can never proc again
+                        }
+
+                        removeListener(battleData,this,null);
+                    },
+                    "target": "self",
+                    "listenerName": "City of Converging Stars death listener",
+                    "owners": [],
+                },
+            ],
+            "buffNames": {
+                "critBuff": "City of Converging Stars (CritDMG)",
+                "dmgBuff": "City of Converging Stars (ATK)",
+            },
+        }
+    },
 }
