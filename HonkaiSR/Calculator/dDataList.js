@@ -114,7 +114,7 @@ const dataListerObject = {
         "Echoes of the Coffin": "Luocha",
         "Night of Fright": "Huohuo",
         "Scent Alone Stays True": "Lingsha",
-        "Time Waits for No One": "Baliu",
+        "Time Waits for No One": "Bailu",
         
         //REMEMBRANCE
         "Time Woven Into Gold": "Aglaea",
