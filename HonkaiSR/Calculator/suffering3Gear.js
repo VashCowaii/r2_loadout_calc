@@ -1495,7 +1495,7 @@ const turnLogicLightcones = {
                         "listenerName": "Shadowed by Night - break dmg end turn listener",
                     },
                     {
-                        "trigger": "TurnStart",
+                        "trigger": "StartTurn",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
         
@@ -4406,92 +4406,113 @@ const turnLogicLightcones = {
 
     //DESTRUCTION
         //5star
-    "Whereabouts Should Dreams Rest": {
+    "Whereabouts Should Dreams Rest": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "BreakDMGStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-                    let targetTurn = generalInfo.targetTurn;
-                    // {targetTurn,sourceTurn};
-
-                    if (!sourceTurn.whereaboutsDreamsRestSPDDEBUFF) {
-                        let lcNameRef = "Whereabouts Should Dreams Rest";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        const buffNames = turnLogicLightcones[lcNameRef].buffNames;
-                        let buffName = buffNames.buff1;
-
-                        const customName = `${buffName} (${sourceTurn.properName})`;
-                        if (!buffNames[customName]) {buffNames[customName] = customName;}
-
-                        sourceTurn.whereaboutsDreamsRestSPDDEBUFF = {
-                            "stats": [SPDP],
-                            [SPDP]: -rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "isDebuff": true
-                            //we slap the debuff mark on the spd debuff bc the spd debuff will never stack, the vuln however might with multiple users specific to themselves
-                        }
-                        sourceTurn.whereaboutsDreamsRestVULNDEBUFF = {
-                            "stats": [VulnBreak],
-                            [VulnBreak]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": customName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "isSourceSpecific": true,
-                        }
-
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-
-                    const buffSheet = sourceTurn.whereaboutsDreamsRestSPDDEBUFF;
-                    const buffSheet2 = sourceTurn.whereaboutsDreamsRestVULNDEBUFF;
-                    // console.log(buffSheet2)
-
-                    const name1 = buffSheet.buffName;
-                    const name2 = buffSheet2.buffName;
-
-                    const targetBuffs = targetTurn.buffsObject;
-                    const buffCheck = targetBuffs[name1];
-                    const buffCheck2 = targetBuffs[name2];
-
-                    const turnState = targetTurn.turnState;
-                    if (!buffCheck || (buffCheck && buffCheck.duration != (turnState ? 3 : 2))) {
-                        //if the spd debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
-                        updateBuff(battleData,targetTurn,buffSheet);
-                    }
-
-                    if (!buffCheck2 || (buffCheck2 && buffCheck2.duration != (turnState ? 3 : 2))) {
-                        //if the character specific vuln debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
-                        updateBuff(battleData,targetTurn,buffSheet2);
-                    }
-                    
-
                 },
                 "target": "self",
-                "listenerName": "Whereabouts Should Dreams Rest - Break dmg check",
+                "listenerName": "Whereabouts Should Dreams Rest listener setup",
                 "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "BreakDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let targetTurn = generalInfo.targetTurn;
+                            // {targetTurn,sourceTurn};
+        
+                            if (!sourceTurn.whereaboutsDreamsRestSPDDEBUFF) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Whereabouts Should Dreams Rest";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+                                let buffName = buffNames.buff1;
+        
+                                const customName = `${buffName} (${sourceTurn.properName})`;
+                                if (!buffNames[customName]) {buffNames[customName] = customName;}
+        
+                                sourceTurn.whereaboutsDreamsRestSPDDEBUFF = {
+                                    "stats": [SPDP],
+                                    [SPDP]: -rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true
+                                    //we slap the debuff mark on the spd debuff bc the spd debuff will never stack, the vuln however might with multiple users specific to themselves
+                                }
+                                sourceTurn.whereaboutsDreamsRestVULNDEBUFF = {
+                                    "stats": [VulnBreak],
+                                    [VulnBreak]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": customName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isSourceSpecific": true,
+                                }
+        
+                            }
+        
+                            const buffSheet = sourceTurn.whereaboutsDreamsRestSPDDEBUFF;
+                            const buffSheet2 = sourceTurn.whereaboutsDreamsRestVULNDEBUFF;
+                            // console.log(buffSheet2)
+        
+                            const name1 = buffSheet.buffName;
+                            const name2 = buffSheet2.buffName;
+        
+                            const targetBuffs = targetTurn.buffsObject;
+                            const buffCheck = targetBuffs[name1];
+                            const buffCheck2 = targetBuffs[name2];
+        
+                            const turnState = targetTurn.turnState;
+                            if (!buffCheck || (buffCheck && buffCheck.duration != (turnState ? 3 : 2))) {
+                                //if the spd debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
+                                updateBuff(battleData,targetTurn,buffSheet);
+                            }
+        
+                            if (!buffCheck2 || (buffCheck2 && buffCheck2.duration != (turnState ? 3 : 2))) {
+                                //if the character specific vuln debuff doesn't exist, or if it does and isn't refreshed already, then apply it. Otherwise skip the buff update call
+                                updateBuff(battleData,targetTurn,buffSheet2);
+                            }
+                            
+        
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Whereabouts Should Dreams Rest - Break dmg check",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -4501,176 +4522,194 @@ const turnLogicLightcones = {
             "buff1": "Routed",
         }
     },
-    "A Thankless Coronation": {
+    "A Thankless Coronation": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.thanklessCoronationATKSHEET) {
-                        const energyCheck = sourceTurn.maxEnergy >= 300;
-                        let lcNameRef = "A Thankless Coronation";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
-
-                        // greatTableIndex
-                        // greatTableKeys
-
-                        sourceTurn.thanklessCoronationATKSHEET = {
-                            "stats": [ATKP],
-                            [ATKP]: rankParams[5] + (energyCheck ? rankParams[1] : 0),
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.thanklessCoronationATKSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-
-
-                    const energyMax = sourceTurn.maxEnergy;
-                    const energyCheck = energyMax >= 300;
-                    if (energyCheck) {
-                        const energyBump = energyMax * 0.10;
-                        updateEnergy(battleData,energyBump,sourceTurn,true,"A Thankless Coronation");
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "A Thankless Coronation - ult buff trigger",
+                "listenerName": "On the Fall of an Aeon listener setup",
                 "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.thanklessCoronationATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                const energyCheck = sourceTurn.maxEnergy >= 300;
+                                let lcNameRef = "A Thankless Coronation";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                // greatTableIndex
+                                // greatTableKeys
+        
+                                sourceTurn.thanklessCoronationATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[5] + (energyCheck ? rankParams[1] : 0),
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.thanklessCoronationATKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+        
+                            const energyMax = sourceTurn.maxEnergy;
+                            const energyCheck = energyMax >= 300;
+                            if (energyCheck) {
+                                const energyBump = energyMax * 0.10;
+                                updateEnergy(battleData,energyBump,sourceTurn,true,"A Thankless Coronation");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "A Thankless Coronation - ult buff trigger",
+                    },
+                ]
             },
         ],
         "buffNames": {
             "buff1": "King of Knights",
         },
     },
-    "On the Fall of an Aeon": {
+    "On the Fall of an Aeon": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;
-
-                    const tempLogic = battleData.battleLogicTemp;
-                    const aeonRef = tempLogic.onTheFallAeon ??= {};
-                    aeonRef.total = ownerRef.length;
-                    aeonRef.completed = 0;
-                },
-                "target": "self",
-                "listenerName": "On the Fall of an Aeon - temp logic definition",
-                "owners": [],
-            },
-            {
-                "trigger": "BrokeEnemyWeakness",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.onTheFallAeonDMGSHEET) {
-                        let lcNameRef = "On the Fall of an Aeon";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        let values = rankParams[2];
-
-                        sourceTurn.onTheFallAeonDMGSHEET = {
-                            "stats": [ATKP],
-                            [ATKP]: values,
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.breakDMG,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-                    }
-                    const buffSheet = sourceTurn.onTheFallAeonDMGSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "On the Fall of an Aeon - broke enemy",
-                "owners": [],
-            },
-            {
-                "trigger": "AttackStart",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank || sourceTurn.onTheFallAeonCOMPLETED) {return;}
-
-                    if (!sourceTurn.onTheFallAeonATKSHEET) {
-                        let lcNameRef = "On the Fall of an Aeon";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        let values = rankParams[0];
-
-                        sourceTurn.onTheFallAeonATKSHEET = {
-                            "stats": [ATKP],
-                            [ATKP]: values,
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.attackStack,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 4,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
-                    }
-                    const buffSheet = sourceTurn.onTheFallAeonATKSHEET;
-                    const buffName = buffSheet.buffName;
-                    
-                    updateBuff(battleData,sourceTurn,buffSheet);
-
-                    if (sourceTurn.buffsObject[buffName].currentStacks === 4) {
-                        sourceTurn.onTheFallAeonCOMPLETED = true;
-                        const tempLogic = battleData.battleLogicTemp;
-                        const aeonRef = tempLogic.onTheFallAeon;
-                        aeonRef.completed += 1;
-
-                        if (aeonRef.completed === aeonRef.total) {
-                            removeListener(battleData,this,sourceTurn);
-                        }
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "On the Fall of an Aeon - ATK stack",
+                "listenerName": "On the Fall of an Aeon listener setup",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.onTheFallAeonDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "On the Fall of an Aeon";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                let values = rankParams[2];
+        
+                                sourceTurn.onTheFallAeonDMGSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: values,
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.breakDMG,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            const buffSheet = sourceTurn.onTheFallAeonDMGSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "On the Fall of an Aeon - broke enemy",
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.onTheFallAeonATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "On the Fall of an Aeon";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                let values = rankParams[0];
+        
+                                sourceTurn.onTheFallAeonATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: values,
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.attackStack,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 4,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                            }
+                            const buffSheet = sourceTurn.onTheFallAeonATKSHEET;
+                            const buffName = buffSheet.buffName;
+                            
+                            updateBuff(battleData,sourceTurn,buffSheet);
+        
+                            if (sourceTurn.buffsObject[buffName].currentStacks === 4) {
+                                removeListener(battleData,this,sourceTurn);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "On the Fall of an Aeon - ATK stack",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -4678,7 +4717,7 @@ const turnLogicLightcones = {
             "breakDMG": "On the Fall of an Aeon (DMG)",
         },
     },
-    "The Unreachable Side": {
+    "The Unreachable Side": {//NO CHANGE YET
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -4748,7 +4787,7 @@ const turnLogicLightcones = {
             "dmgBuff": "The Unreachable Side [LC]"
         },
     },
-    "I Shall Be My Own Sword": {
+    "I Shall Be My Own Sword": {//NO CHANGE YET
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -4926,14 +4965,20 @@ const turnLogicLightcones = {
             "shredBuff": "Eclipse (Shred) [LC]",
         },
     },
-    "Thus Burns the Dawn": {
+    "Thus Burns the Dawn": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownerRef = this.owners;
+                    //TODO: the expiry here is technically a StartTurn event with priority 200, which is a little diff than expiring at the start of the turn in a standard sense.
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
                     let lcNameRef = "Thus Burns the Dawn";
                     let lcPathing = lightcones[lcNameRef].params;
 
@@ -4951,11 +4996,14 @@ const turnLogicLightcones = {
                         "decay": false,
                         "expireType": null
                     }
+        
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
 
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let rankParams = lcPathing[owner.rank-1];
                         let ownerName = currentTurn.properName;
 
                         let values = rankParams[1];
@@ -4967,49 +5015,49 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
-                "listenerName": "Thus Burns the Dawn - battlestart shred application",
+                "listenerName": "Thus Burns the Dawn listener setup",
                 "owners": [],
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.lcThusBurnsDawnDMGSHEET) {
-                        let lcNameRef = "Thus Burns the Dawn";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
-
-                        sourceTurn.lcThusBurnsDawnDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 1,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "StartTurn",
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.lcThusBurnsDawnDMGSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Thus Burns the Dawn ult start listener",
-                "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcThusBurnsDawnDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Thus Burns the Dawn";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                sourceTurn.lcThusBurnsDawnDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 1,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "StartTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcThusBurnsDawnDMGSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Thus Burns the Dawn ult start listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -5017,73 +5065,98 @@ const turnLogicLightcones = {
             "buff1": "Blazing Sun (LC)",
         },
     },
-    "Brighter Than the Sun": {
+    "Brighter Than the Sun": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.lcBrighterThanSunATKSHEET) {
-                        let lcNameRef = "Brighter Than the Sun";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
-
-                        sourceTurn.lcBrighterThanSunATKSHEET = {
-                            "stats": [ATKP,EnergyRegenRate],
-                            [ATKP]: rankParams[3],
-                            [EnergyRegenRate]: rankParams[4],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 2,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-
-                    const buffSheet = sourceTurn.lcBrighterThanSunATKSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "Brighter Than the Sun basic atk start listener",
+                "listenerName": "Brighter Than the Sun listener setup",
                 "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcBrighterThanSunATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Brighter Than the Sun";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                sourceTurn.lcBrighterThanSunATKSHEET = {
+                                    "stats": [ATKP,EnergyRegenRate],
+                                    [ATKP]: rankParams[3],
+                                    [EnergyRegenRate]: rankParams[4],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcBrighterThanSunATKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Brighter Than the Sun basic atk start listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             "buff1": "Dragon's Call (LC)",
         },
     },
-    "Dance at Sunset": {
+    "Dance at Sunset": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
                     let lcNameRef = "Dance at Sunset";
                     let lcPathing = lightcones[lcNameRef].params;
-
+        
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
 
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
+                        let rankParams = lcPathing[owner.rank-1];
                         let ownerName = currentTurn.properName;
 
                         let buffSheet = currentTurn.lcDanceAtSunsetAGGROSHEET ??= {
@@ -5102,53 +5175,55 @@ const turnLogicLightcones = {
                         }
                         
                         updateBuff(battleData,currentTurn,buffSheet);
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Dance at Sunset - battlestart taunt application",
+                "listenerName": "Earthly Escapade listener setup",
                 "owners": [],
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.lcDanceAtSunsetDMGSHEET) {
-                        let lcNameRef = "Dance at Sunset";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
-
-                        sourceTurn.lcDanceAtSunsetDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 2,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "actionTags": ["FUA"],
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.lcDanceAtSunsetDMGSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "Dance at Sunset ult end listener",
-                "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcDanceAtSunsetDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Dance at Sunset";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                sourceTurn.lcDanceAtSunsetDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "actionTags": ["FUA"],
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcDanceAtSunsetDMGSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dance at Sunset ult end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -5157,7 +5232,7 @@ const turnLogicLightcones = {
         },
     },
         //4star
-    "Under the Blue Sky": {
+    "Under the Blue Sky": {//NO CHANGE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -5208,12 +5283,12 @@ const turnLogicLightcones = {
             "river": "Under the Blue Sky (LC)",
         },
     },
-    "A Trail of Bygone Blood": {
+    "A Trail of Bygone Blood": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "A Trail of Bygone Blood";
@@ -5227,9 +5302,8 @@ const turnLogicLightcones = {
                         let ownerName = currentTurn.properName;
 
                         let buffSheet = currentTurn.lcTrailBygoneBloodBONUSSHEET ??= {
-                            "stats": [DamageSkill,DamageUltimate],
-                            [DamageSkill]: rankParams[1],
-                            [DamageUltimate]: rankParams[1],
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[1],
                             "source": lcNameRef,
                             "sourceOwner": ownerName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
@@ -5239,7 +5313,8 @@ const turnLogicLightcones = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["Skill","Ultimate"]
                         }
                         
                         updateBuff(battleData,currentTurn,buffSheet);
@@ -5254,50 +5329,70 @@ const turnLogicLightcones = {
             "river": "A Trail of Bygone Blood (LC)",
         },
     },
-    "Indelible Promise": {
+    "Indelible Promise": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!sourceTurn.lcIndeliblePromiseCRITSHEET) {
-                        let lcNameRef = "Indelible Promise";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
-
-                        sourceTurn.lcIndeliblePromiseCRITSHEET = {
-                            "stats": [CritRateBase],
-                            [CritRateBase]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-
-                    const buffSheet = sourceTurn.lcIndeliblePromiseCRITSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "Indelible Promise ult end listener",
+                "listenerName": "Earthly Escapade listener setup",
                 "owners": [],
-                "ownersSlots": {},
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcIndeliblePromiseCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Indelible Promise";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                sourceTurn.lcIndeliblePromiseCRITSHEET = {
+                                    "stats": [CritRateBase],
+                                    [CritRateBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcIndeliblePromiseCRITSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Indelible Promise ult end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -5305,12 +5400,12 @@ const turnLogicLightcones = {
         },
     },
         //3star
-    "Collapsing Sky": {
+    "Collapsing Sky": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Collapsing Sky";
@@ -5324,9 +5419,8 @@ const turnLogicLightcones = {
                         let ownerName = currentTurn.properName;
 
                         const buffSheet = currentTurn.lcCollapsingSkyDMGSHEET ??= {
-                            "stats": [DamageBasic,DamageSkill],
-                            [DamageBasic]: rankParams[0],
-                            [DamageSkill]: rankParams[0],
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[0],
                             "source": lcNameRef,
                             "sourceOwner": ownerName,
                             "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
@@ -5336,7 +5430,8 @@ const turnLogicLightcones = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["Basic","Skill"],
                         }
                         
                         updateBuff(battleData,currentTurn,buffSheet);
