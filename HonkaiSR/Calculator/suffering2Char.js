@@ -41028,6 +41028,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 0, 
+                isEnhanced: true,
                 actionCall: this.skillFunctions.sw999BasicEnh,
                 useAnyTriggers: true, 
                 eventTypeStartLOG: "BasicATKStart",
