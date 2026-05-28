@@ -3975,7 +3975,7 @@ const userTriggers = {
                             }
                         }
 
-                        let skillMuted = compositeAbilityObject.abilityObject[entryFileName].skillMuted;
+                        let skillMuted = compositeAbilityObject.abilityObject[entryFileName]?.skillMuted;
                         
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
