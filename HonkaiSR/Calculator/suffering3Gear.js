@@ -1809,7 +1809,7 @@ const turnLogicLightcones = {
 
     //ABUNDANCE
         //5star
-    "Time Waits for No One": {
+    "Time Waits for No One": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             lcAddedDMG(battleData,generalInfo,sourceTurn,targetsGotHit,ownerRank) {
@@ -1881,20 +1881,50 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "HealEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    const totalHealed = generalInfo.totalHealed;
-                    sourceTurn.lcTimeWaitsForNoOneHealing = (sourceTurn.lcTimeWaitsForNoOneHealing ?? 0) + totalHealed;
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
                 },
                 "target": "self",
-                "listenerName": "Time Waits for No One - healing listener",
+                "listenerName": "Time Waits for No One listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "HealEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const totalHealed = generalInfo.totalHealed;
+                            sourceTurn.lcTimeWaitsForNoOneHealing = (sourceTurn.lcTimeWaitsForNoOneHealing ?? 0) + totalHealed;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Time Waits for No One - healing listener",
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            sourceTurn.lcTimeWaitsForNoOneDMGDONE = false;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Time Waits for No One - turn start dmg done reset",
+                    },
+                ]
             },
             {
                 "trigger": "AdditionalTriggerAttackEnd",
@@ -1927,107 +1957,178 @@ const turnLogicLightcones = {
                 "owners": [],
                 "ownersSlots": {}
             },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
-                    const ownersSlots = this.ownersSlots;
-                    const ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    sourceTurn.lcTimeWaitsForNoOneDMGDONE = false;
-                },
-                "target": "self",
-                "listenerName": "Time Waits for No One - turn start dmg done reset",
-                "owners": [],
-                "ownersSlots": {}
-            },
         ],
         "buffNames": {},
     },
-    "Echoes of the Coffin": {
+    "Echoes of the Coffin": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AttackDMGEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const targetsHit = Math.min(3,Object.keys(targetsGotHit).length);
-
-                    if (targetsHit) {
-                        if (!sourceTurn.echoesOfTheCoffinEnergyRegen) {
-                            let lcNameRef = "Echoes of the Coffin";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let rankParams = lcPathing[ownerRank-1];
-
-                            sourceTurn.echoesOfTheCoffinEnergyRegen = rankParams[2];
-                        }
-                        const energyRegen = sourceTurn.echoesOfTheCoffinEnergyRegen * targetsHit;
-                        updateEnergy(battleData,energyRegen,sourceTurn,false,"Echoes of the Coffin - Enemies Hit");
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Echoes of the Coffin - enemy hit regen listener",
+                "listenerName": "Echoes of the Coffin listener setup",
                 "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetsHit = Math.min(3,Object.keys(targetsGotHit).length);
+        
+                            if (targetsHit) {
+                                if (!sourceTurn.echoesOfTheCoffinEnergyRegen) {
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
 
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
+                                    let lcNameRef = "Echoes of the Coffin";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let rankParams = lcPathing[ownerRank-1];
+        
+                                    sourceTurn.echoesOfTheCoffinEnergyRegen = rankParams[2];
+                                }
+                                const energyRegen = sourceTurn.echoesOfTheCoffinEnergyRegen * targetsHit;
+                                updateEnergy(battleData,energyRegen,sourceTurn,false,"Echoes of the Coffin - Enemies Hit");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Echoes of the Coffin - enemy hit regen listener",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.echoesOfTheCoffinSPDSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
 
-
-                    if (!sourceTurn.echoesOfTheCoffinSPDSHEET) {
-                        let lcNameRef = "Echoes of the Coffin";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        sourceTurn.echoesOfTheCoffinSPDSHEET = {
-                            "stats": [SPDBase],
-                            [SPDBase]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.echoesSPD,
-                            "durationInTurn": 2,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-                    }
-                    let buffSheet = sourceTurn.echoesOfTheCoffinSPDSHEET;
-                    const allyPositions = battleData.allyPositions;
-                    updateBuffBatchTargets(battleData,allyPositions,buffSheet)
-                },
-                "target": "team",
-                "listenerName": "Echoes of the Coffin ult end listener",
-                "owners": [],
-                "ownersSlots": {}
+                                let lcNameRef = "Echoes of the Coffin";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.echoesOfTheCoffinSPDSHEET = {
+                                    "stats": [SPDBase],
+                                    [SPDBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.echoesSPD,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            let buffSheet = sourceTurn.echoesOfTheCoffinSPDSHEET;
+                            const allyPositions = battleData.allyPositions;
+                            updateBuffBatchTargets(battleData,allyPositions,buffSheet)
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Echoes of the Coffin ult end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             "echoesSPD": "Echoes of the Coffin SPD",
         },
     },
-    "Night of Fright": {
+    "Night of Fright": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hey, Over Here listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "HealStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            if (targetTurn?.isEnemy) {return;}
+                            //healing needs to be on an ally target, and in turn a target must exist
+                            //strictly speaking this could break if healing started on a target that was removed from the battle, though its turn object should still exist regardless
+                            //just no longer in the turn order. All the same, better to be safe.
+        
+                            if (!sourceTurn.lcNightOfFrightATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+
+                                let lcNameRef = "Night of Fright";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lcNightOfFrightATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 5,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcNightOfFrightATKSHEET;
+                            updateBuff(battleData,targetTurn,buffSheet)
+        
+                            // const totalHealed = generalInfo.totalHealed;
+                            // sourceTurn.lcTimeWaitsForNoOneHealing = (sourceTurn.lcTimeWaitsForNoOneHealing ?? 0) + totalHealed;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Night of Fright - healing start listener",
+                    },
+                ]
+            },
             {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
@@ -2088,55 +2189,7 @@ const turnLogicLightcones = {
                 },
                 "target": "team",
                 "listenerName": "Night of Fright ult start listener",
-                "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "HealStart",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    const targetTurn = generalInfo.targetTurn;
-                    if (!targetTurn || targetTurn.isEnemy) {return;}
-                    //healing needs to be on an ally target, and in turn a target must exist
-                    //strictly speaking this could break if healing started on a target that was removed from the battle, though its turn object should still exist regardless
-                    //just no longer in the turn order. All the same, better to be safe.
-
-                    if (!sourceTurn.lcNightOfFrightATKSHEET) {
-                        let lcNameRef = "Night of Fright";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let ownerRank = ownersSlots[sourceTurn.name];
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        sourceTurn.lcNightOfFrightATKSHEET = {
-                            "stats": [ATKP],
-                            [ATKP]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 5,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
-                    }
-
-                    const buffSheet = sourceTurn.lcNightOfFrightATKSHEET;
-                    updateBuff(battleData,targetTurn,buffSheet)
-
-                    // const totalHealed = generalInfo.totalHealed;
-                    // sourceTurn.lcTimeWaitsForNoOneHealing = (sourceTurn.lcTimeWaitsForNoOneHealing ?? 0) + totalHealed;
-                },
-                "target": "self",
-                "listenerName": "Night of Fright - healing start listener",
-                "owners": [],
-                "ownersSlots": {}
+                "owners": []
             },
         ],
         "buffNames": {
@@ -2144,56 +2197,76 @@ const turnLogicLightcones = {
         },
     },
         //4star
-    "Hey, Over Here": {
+    "Hey, Over Here": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-
-                    if (!sourceTurn.heyOverHereHEALBONUSUSHEET) {
-                        let lcNameRef = "Hey, Over Here";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        sourceTurn.heyOverHereHEALBONUSUSHEET = {
-                            "stats": [HealingOutgoing],
-                            [HealingOutgoing]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    let buffSheet = sourceTurn.heyOverHereHEALBONUSUSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
-                "target": "team",
-                "listenerName": "Hey, Over Here skill start listener",
+                "target": "self",
+                "listenerName": "Hey, Over Here listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.heyOverHereHEALBONUSUSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Hey, Over Here";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.heyOverHereHEALBONUSUSHEET = {
+                                    "stats": [HealingOutgoing],
+                                    [HealingOutgoing]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            let buffSheet = sourceTurn.heyOverHereHEALBONUSUSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Hey, Over Here skill start listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             "healBonus": "Hey, Over Here (LC)",
         },
     },
-    "Perfect Timing": {
+    "Perfect Timing": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             statCheck(battleData,currentTurn,ownersSlots) {
@@ -2251,22 +2324,42 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "UpdateStatEffectRES",//EffectRES stat family
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                    if (!ownerRank) {return;}
-
-                    const statCheck = this.statCheck ??= turnLogicLightcones["Perfect Timing"].skillFunctions.statCheck;
-                    statCheck(battleData,sourceTurn,ownersSlots);
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
                 },
                 "target": "self",
-                "listenerName": "Perfect Timing EffectRES check",
-                "owners": []
+                "listenerName": "Perfect Timing listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "UpdateStatEffectRES",//EffectRES stat family
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let ownersSlots = this.ownersSlots;
+        
+                            const statCheck = this.statCheck ??= turnLogicLightcones["Perfect Timing"].skillFunctions.statCheck;
+                            statCheck(battleData,sourceTurn,ownersSlots);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Perfect Timing EffectRES check",
+                    },
+                ]
             },
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -2283,6 +2376,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Perfect Timing battle start stat check trigger",
                 "owners": []
             },
@@ -2291,12 +2385,12 @@ const turnLogicLightcones = {
             "buff1": "Perfect Timing (LC)",
         },
     },
-    "Post-Op Conversation": {
+    "Post-Op Conversation": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -2347,226 +2441,294 @@ const turnLogicLightcones = {
             "healBonus": "Post-Op Conversation (LC)",
         },
     },
-    "What Is Real?": {
+    "What Is Real?": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    if (!sourceTurn.lcWhatIsRealHealingHEALOBJECT) {
-                        let lcNameRef = "What Is Real?";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        const actionTags = ["Gear","Heal"];
-                        const compositeCacheTag = actionTags + sourceTurn.properName;
-                        
-                        sourceTurn.lcWhatIsRealHealingHEALOBJECT ??= {
-                            multipliers: {
-                                primary: rankParams[1],
-                                blast: null,
-                                all: null,
-                            },
-                            flatAmounts: {
-                                primary: rankParams[2],
-                                blast: null,
-                                all: null,
-                            },
-                            scalar: "HP",
-                            DMGTags: [],
-                            allToughness: false,
-                            slot: "Lightcone",
-                            actionTags,compositeCacheTag
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    const healObject = sourceTurn.lcWhatIsRealHealingHEALOBJECT;
-
-                    healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,null);
                 },
-                "target": "team",
-                "listenerName": "What Is Real? basic atk end listener",
+                "target": "self",
+                "listenerName": "What Is Real? listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcWhatIsRealHealingHEALOBJECT) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "What Is Real?";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                const actionTags = ["Gear","Heal"];
+                                const compositeCacheTag = actionTags + sourceTurn.properName;
+                                
+                                sourceTurn.lcWhatIsRealHealingHEALOBJECT ??= {
+                                    multipliers: {
+                                        primary: rankParams[1],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: rankParams[2],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            const healObject = sourceTurn.lcWhatIsRealHealingHEALOBJECT;
+        
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,null);
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "What Is Real? basic atk end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {},
     },
-    "Dream's Montage": {
+    "Dream's Montage": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AttackDMGEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank || sourceTurn.lcDreamsMontageREGENCOUNTER >= 2) {return;}//abort non-owners
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-
-                    let hitWBEnemy = false;
-                    const enemyTurns = battleData.enemyBasedTurns;
-                    for (let enemySlot in targetsGotHit) {
-                        const currentEnemy = enemyTurns[enemySlot];
-
-                        if (currentEnemy.isBroken) {
-                            hitWBEnemy = true;
-                            break;
-                        }
-                    }
-
-                    if (hitWBEnemy) {
-
-                        if (!sourceTurn.lcDreamsMontageREGENVALUE) {
-                            let lcNameRef = "Dream's Montage";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let ownerRank = ownersSlots[sourceTurn.name];
-                            let rankParams = lcPathing[ownerRank-1];
-
-                            sourceTurn.lcDreamsMontageREGENVALUE = rankParams[1]
-                        }
-
-                        const regenValue = sourceTurn.lcDreamsMontageREGENVALUE;
-
-                        updateEnergy(battleData,regenValue,sourceTurn,false,"Dream's Montage (LC)");
-                        sourceTurn.lcDreamsMontageREGENCOUNTER ??= 0;
-                        sourceTurn.lcDreamsMontageREGENCOUNTER++;
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
-                "target": "team",
-                "listenerName": "Dream's Montage ATK End listener",
+                "target": "self",
+                "listenerName": "Dream's Montage listener setup",
                 "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.lcDreamsMontageREGENCOUNTER >= 2) {return;}//abort non-owners
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+        
+                            let hitWBEnemy = false;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            for (let enemySlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[enemySlot];
+        
+                                if (currentEnemy.isBroken) {
+                                    hitWBEnemy = true;
+                                    break;
+                                }
+                            }
+        
+                            if (hitWBEnemy) {
+        
+                                if (!sourceTurn.lcDreamsMontageREGENVALUE) {
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
 
-                    sourceTurn.lcDreamsMontageREGENCOUNTER = 0;
-                },
-                "target": "team",
-                "listenerName": "Dream's Montage turn start reset listener",
-                "owners": [],
-                "ownersSlots": {}
+                                    let lcNameRef = "Dream's Montage";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let rankParams = lcPathing[ownerRank-1];
+        
+                                    sourceTurn.lcDreamsMontageREGENVALUE = rankParams[1]
+                                }
+        
+                                const regenValue = sourceTurn.lcDreamsMontageREGENVALUE;
+        
+                                updateEnergy(battleData,regenValue,sourceTurn,false,"Dream's Montage (LC)");
+                                sourceTurn.lcDreamsMontageREGENCOUNTER ??= 0;
+                                sourceTurn.lcDreamsMontageREGENCOUNTER++;
+                            }
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Dream's Montage ATK End listener",
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            sourceTurn.lcDreamsMontageREGENCOUNTER = 0;
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Dream's Montage turn start reset listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             // "atkBuff": "Night of Fright (LC)",
         },
     },
-    "Shared Feeling": {
+    "Shared Feeling": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityEnd",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Skill") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    if (!sourceTurn.lcSharedFeelingREGENVALUE) {
-                        let lcNameRef = "Shared Feeling";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let ownerRank = ownersSlots[sourceTurn.name];
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        sourceTurn.lcSharedFeelingREGENVALUE = rankParams[1];
-                    }
-                    const regen = sourceTurn.lcSharedFeelingREGENVALUE;
-
-                    const allyPositions = battleData.allyPositions;
-                    for (let ally of allyPositions) {
-                        if (ally.isUniqueEvent) {continue;}
-
-                        updateEnergy(battleData,regen,ally,false,"Shared Feeling (LC)");
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
-                "target": "team",
-                "listenerName": "Shared Feeling Skill End listener",
+                "target": "self",
+                "listenerName": "Shared Feeling listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcSharedFeelingREGENVALUE) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Shared Feeling";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lcSharedFeelingREGENVALUE = rankParams[1];
+                            }
+                            const regen = sourceTurn.lcSharedFeelingREGENVALUE;
+        
+                            const allyPositions = battleData.fullCharacterArray;
+                            for (let ally of allyPositions) {
+        
+                                updateEnergy(battleData,regen,ally,false,"Shared Feeling (LC)");
+                            }
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Shared Feeling Skill End listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             // "atkBuff": "Night of Fright (LC)",
         },
     },
-    "Quid Pro Quo": {
+    "Quid Pro Quo": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [  
             {
-                "trigger": "StartTurn",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let charSlot = sourceTurn.name;
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[charSlot];
-                    if (!ownerRank) {return;}
-                    
-
-                    let availableToGive = [];
-                    const allyPositions = battleData.allyPositions;
-                    for (let targetTurn of allyPositions) {
-                        if (targetTurn.name === charSlot || targetTurn.maxEnergy === null) {continue;}//exclude self from energy considerations, exclude special energy characters like acheron
-                        else if (targetTurn.currentEnergy < (targetTurn.maxEnergy * 0.50)) {availableToGive.push(targetTurn.name);}
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-
-                    if (!availableToGive.length) {return;}
-
-                    let avPULL = battleData.sumAV;
-                    if (avPULL >= 1000) {avPULL -= 1000;}
-                    let avBingo = (avPULL % 100)/100;
-                    let bingoIncrements = 1/availableToGive.length;
-                    let chosenValue = null;
-                    for (let i=0;i<=availableToGive.length-1;i++) {
-                        let currentInc = i * bingoIncrements;
-                        let nextInc = (i + 1) * bingoIncrements;
-
-                        if (avBingo >= currentInc && avBingo <= nextInc) {chosenValue = i; break;}
-                    }
-                    //so this isn't really random, but I didn't want to avg the energy gains(very very bad idea holy fuck), but I also didn't want to do something
-                    //that was as simple as "evaluate from left to right" as there are obvious problems with that, SO INSTEAD, what I have chosen to do is thus
-                    //take everyone who COULD be given energy, and put them in an array, then get the remainder of action value from the present battle AV overall
-                    //then we take that remainder, divide it by 100 to get a percentage, then apply that % to the array length of available recipients
-                    //so if the % lands at .25 and there are 2 entries, .25 < half which means the buff lands on entry #1 of available chars.
-                    //If anyone can ever provide me a better way then lmk, bc this is the most fair but also the most reliable for calculations since we don't want fully random.
-                    if (!sourceTurn.quidProQuoEnergyAmount) {
-
-                    }
-                    // let lcNameRef = "Quid Pro Quo";
-                    // let lcPathing = lightcones[lcNameRef].params;
-                    // let rankParams = lcPathing[ownerRank-1];
-                    let values = sourceTurn.quidProQuoEnergyAmount ??= lightcones["Quid Pro Quo"].params[ownerRank-1][1];//energy slot
-
-                    let chosenCharacter = availableToGive[chosenValue];
-                    let luckyBastard = battleData.nameBasedTurns[chosenCharacter];
-                    updateEnergy(battleData,values,luckyBastard,false,this.listenerName);
                 },
                 "target": "self",
-                "listenerName": "Quid Pro Quo - Energy buff controller",
-                "owners": []
+                "listenerName": "Quid Pro Quo listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            let availableToGive = [];
+                            const allyPositions = battleData.allyPositions;
+                            for (let targetTurn of allyPositions) {
+                                if (targetTurn.name === sourceTurn.name) {continue;}//exclude self from energy considerations
+                                else if (targetTurn.maxEnergy === 0 || targetTurn.currentEnergy < (targetTurn.maxEnergy * 0.50)) {availableToGive.push(targetTurn.name);}
+                            }
+                            if (!availableToGive.length) {return;}
+        
+                            let avPULL = battleData.sumAV;
+                            if (avPULL >= 1000) {avPULL -= 1000;}
+                            let avBingo = (avPULL % 100)/100;
+                            let bingoIncrements = 1/availableToGive.length;
+                            let chosenValue = null;
+                            for (let i=0;i<=availableToGive.length-1;i++) {
+                                let currentInc = i * bingoIncrements;
+                                let nextInc = (i + 1) * bingoIncrements;
+        
+                                if (avBingo >= currentInc && avBingo <= nextInc) {chosenValue = i; break;}
+                            }
+                            //so this isn't really random, but I didn't want to avg the energy gains(very very bad idea holy fuck), but I also didn't want to do something
+                            //that was as simple as "evaluate from left to right" as there are obvious problems with that, SO INSTEAD, what I have chosen to do is thus
+                            //take everyone who COULD be given energy, and put them in an array, then get the remainder of action value from the present battle AV overall
+                            //then we take that remainder, divide it by 100 to get a percentage, then apply that % to the array length of available recipients
+                            //so if the % lands at .25 and there are 2 entries, .25 < half which means the buff lands on entry #1 of available chars.
+                            //If anyone can ever provide me a better way then lmk, bc this is the most fair but also the most reliable for calculations since we don't want fully random.
+                            
+                            let values = sourceTurn.quidProQuoEnergyAmount ??= lightcones["Quid Pro Quo"].params[this.ownersSlots[sourceTurn.name]-1][1];//energy slot
+        
+                            let chosenCharacter = availableToGive[chosenValue];
+                            let luckyBastard = battleData.nameBasedTurns[chosenCharacter];
+                            updateEnergy(battleData,values,luckyBastard,false,this.listenerName);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Quid Pro Quo - Energy buff controller",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -2574,84 +2736,94 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
-    "Warmth Shortens Cold Nights": {
+    "Warmth Shortens Cold Nights": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
-                    let ownersSlots = this.ownersSlots;
-
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
-                        let ownerRank = ownersSlots[currentTurn.name];
-
-                        if (!currentTurn.lcWarmthShortensNightsHEALOBJECT) {
-                            let lcNameRef = "Warmth Shortens Cold Nights";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let rankParams = lcPathing[ownerRank-1];
-
-                            const actionTags = ["Gear","Heal"];
-                            const compositeCacheTag = actionTags + currentTurn.properName;
-                            
-                            currentTurn.lcWarmthShortensNightsHEALOBJECT ??= {
-                                multipliers: {
-                                    primary: rankParams[1],
-                                    blast: null,
-                                    all: null,
-                                },
-                                flatAmounts: {
-                                    primary: null,
-                                    blast: null,
-                                    all: null,
-                                },
-                                scalar: "HP",
-                                DMGTags: [],
-                                allToughness: false,
-                                slot: "Lightcone",
-                                actionTags,compositeCacheTag
-                            }
-                        }
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
-                "listenerName": "Warmth Shortens Cold Nights - battle start heal object creation",
+                "listenerName": "Multiplication listener setup",
                 "owners": [],
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK" && action != "Skill") {return;}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" && action != "Skill") {return;}
 
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (!currentTurn.lcWarmthShortensNightsHEALOBJECT) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
 
-                    const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
-
-                    const allyTargets = battleData.allAllyTargetsArray;
-                    healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
-                },
-                "target": "team",
-                "listenerName": "Warmth Shortens Cold Nights basic atk/skill end listener",
-                "owners": [],
-                "ownersSlots": {}
+                                let lcNameRef = "Warmth Shortens Cold Nights";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+    
+                                const actionTags = ["Gear","Heal"];
+                                const compositeCacheTag = actionTags + currentTurn.properName;
+                                
+                                currentTurn.lcWarmthShortensNightsHEALOBJECT ??= {
+                                    multipliers: {
+                                        primary: rankParams[1],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            
+        
+                            const healObject = sourceTurn.lcWarmthShortensNightsHEALOBJECT;
+        
+                            const allyTargets = battleData.allAllyTargetsArray;
+                            healAlly(battleData,healObject,null,sourceTurn,"Lightcone",1,allyTargets);
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Warmth Shortens Cold Nights basic atk/skill end listener",
+                        "owners": [],
+                        "ownersSlots": {}
+                    },
+                ]
             },
         ],
         "buffNames": {},
     },
-    "Unto Tomorrow's Morrow": {
+    "Unto Tomorrow's Morrow": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Unto Tomorrow's Morrow";
                     let lcPathing = lightcones[lcNameRef].params;
@@ -2687,6 +2859,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Unto Tomorrow's Morrow - battlestart buff application",
                 "owners": [],
             },
@@ -2771,49 +2944,70 @@ const turnLogicLightcones = {
         }
     },
         //3star
-    "Multiplication": {
+    "Multiplication": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    if (!sourceTurn.lc3starMultiVALUE) {
-                        let lcNameRef = "Multiplication";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let ownerRank = ownersSlots[sourceTurn.name];
-                        let rankParams = lcPathing[ownerRank-1];
-
-                        sourceTurn.lc3starMultiVALUE = rankParams[0];
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    const advValue = sourceTurn.lc3starMultiVALUE;
-                    actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
                 },
-                "target": "team",
-                "listenerName": "Multiplication basic atk start advance listener",
+                "target": "self",
+                "listenerName": "Multiplication listener setup",
                 "owners": [],
-                "ownersSlots": {}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lc3starMultiVALUE) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Multiplication";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lc3starMultiVALUE = rankParams[0];
+                            }
+                            const advValue = sourceTurn.lc3starMultiVALUE;
+                            actionAdvance(advValue,sourceTurn,battleData,"Multiplication (LC)");
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Multiplication basic atk start advance listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
             // "atkBuff": "Night of Fright (LC)",
         },
     },
-    "Fine Fruit": {
+    "Fine Fruit": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "PreBattleEntersCombat",
+                "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    // const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Fine Fruit";
                     let lcPathing = lightcones[lcNameRef].params;
@@ -2829,6 +3023,7 @@ const turnLogicLightcones = {
                     }
                 },
                 "target": "self",
+                "priority": -80,
                 "listenerName": "Fine Fruit - battlestart energy regen",
                 "owners": [],
             },
@@ -2837,68 +3032,84 @@ const turnLogicLightcones = {
             "river": "Arrows (LC)",
         },
     },
-    "Cornucopia": {//so this one actually does ANY healing increased with a modifier, so while I hate it this one works exactly how it should
+    "Cornucopia": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate" && action != "Skill") {return;}
-
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-
-                    if (!sourceTurn.lcCornucopiaBONUSUSHEET) {
-                        let lcNameRef = "Cornucopia";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        
-                        sourceTurn.lcCornucopiaBONUSUSHEET = {
-                            "stats": [HealingOutgoing],
-                            [HealingOutgoing]: rankParams[0],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
-                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
-                "target": "team",
-                "listenerName": "Cornucopia ult/skill start listener",
+                "target": "self",
+                "listenerName": "Along the Passing Shore listener setup",
                 "owners": [],
-                "ownersSlots": {}
-            },
-            {
-                "trigger": "AbilityEnd",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate" && action != "Skill") {return;}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate" && action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
 
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//abort non-owners
-
-                    let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
-                    removeBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "team",
-                "listenerName": "Cornucopia ult/skill end listener",
-                "owners": [],
-                "ownersSlots": {}
+                            if (!sourceTurn.lcCornucopiaBONUSUSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Cornucopia";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.lcCornucopiaBONUSUSHEET = {
+                                    "stats": [HealingOutgoing],
+                                    [HealingOutgoing]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.healBonus,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Cornucopia ult/skill start listener",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate" && action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            let buffSheet = sourceTurn.lcCornucopiaBONUSUSHEET;
+                            removeBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "team",
+                        "isPersonal": true,
+                        "listenerName": "Cornucopia ult/skill end listener",
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -8425,7 +8636,6 @@ const turnLogicLightcones = {
         
                             // let ownerRef = this.owners;
                             let sourceTurn = generalInfo.sourceTurn;
-                            //who we target with the shield specifically, doesn't matter, only that a shield target proc happened to begin with
         
                             if (!sourceTurn.thoughWorldsDMGSHEET) {
                                 let ownersSlots = this.ownersSlots;
@@ -11115,9 +11325,20 @@ const turnLogicRelics = {
                                         updateBuff(battleData,sourceTurn,buffSheet);
                                         return;//can abort early if all we did was stack it
                                     }
+                                    else {
+                                        const stackDiff = DOTCount - currentStacks;
+                                        if (-stackDiff === currentStacks) {
+                                            removeBuff(battleData,sourceTurn,buffCheck);
+                                            return;
+                                        }
+
+                                        buffSheet.currentStacks = stackDiff;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
                                     //otherwise remove the buff bc that means the stacks are mismatched and less than
-                                    removeBuff(battleData,sourceTurn,buffCheck);
+                                    // removeBuff(battleData,sourceTurn,buffCheck);
                                 }
+                                if (!DOTCount) {return;}
         
                                 if (DOTCount) {//then, if the dots > 0, apply the buff as it is now
                                     
