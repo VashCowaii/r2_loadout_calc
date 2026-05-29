@@ -209,6 +209,13 @@ const battleActions = {
         // const buffName = buffSheet.buffName;
         const {buffName,isShield,isDOT,isDebuff,maxStacks} = buffSheet;
 
+        const isBatchDebuff = !ignoreDebuffPokes && isDebuff;
+        const ignoreSinglePokes = ignoreDebuffPokes || isBatchDebuff;
+
+        // sourceTurnArray
+        
+        // if (!ignoreDebuffPokes) {poke("DebuffAppliedBatch",battleData,{sourceTurn,currentReference},sourceTurn);}
+
         const hasStatsAtAll = buffSheet.stats != undefined || buffSheet.statsOnHit != undefined;
         for (let sourceTurn of sourceTurnArray) {
             let buffRef = sourceTurn.buffsObject;
@@ -240,7 +247,7 @@ const battleActions = {
             // const maxStacks = currentReference.maxStacks;
             // const currentStacks = currentReference.currentStacks;
             if (!buffExisted) {//if it doesn't exist at all yet and we're applying, then make it
-                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
                 changeStats = newCheck.changeStats;
                 timesToApply = newCheck.timesToApply;
             }
@@ -249,7 +256,7 @@ const battleActions = {
                     if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                     continue;
                 }
-                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
                 if (existsCheck) {
                     changeStats = existsCheck.changeStats;
                     timesToApply = existsCheck.timesToApply;
@@ -260,6 +267,8 @@ const battleActions = {
                 buffStatChange(battleData,sourceTurn,buffSheet,currentReference,timesToApply,1,ignoreFamilyPokes);
             }
         }
+
+        if (isBatchDebuff) {poke("DebuffApplied",battleData,{sourceTurn: sourceTurnArray, currentReference: buffSheet},null);}
     },
     buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield) {
         // const maxStacks = currentReference.maxStacks;
@@ -1909,8 +1918,10 @@ const battleActions = {
         
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+        
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
+        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
@@ -2280,8 +2291,9 @@ const battleActions = {
         targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+        
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
+        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
@@ -5355,7 +5367,7 @@ const turnLogic = {
                 battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                 poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: "Neutral", summonedBy: "Neutral", summonEvent: battleData.ahaInstantTURNEVENT});
 
-                logicRef.skillFunctions.updateAhaSPD(battleData,null,);
+                logicRef.skillFunctions.updateAhaSPD(battleData,null);
             },
             updateAhaSPD(battleData,currentTurn) {
                 const elationCharacters = battleData.elationEntityArray;
@@ -5443,7 +5455,7 @@ const turnLogic = {
                 // }
                 
                 const elationEntityArray = battleData.elationEntityArray;
-                elationEntityArray.sort((a, b) => a.participantID - b.participantID);
+                // elationEntityArray.sort((a, b) => a.participantID - b.participantID);
 
                 if (!battleData.elationSkillObject) {
                     const elationSkillObject = battleData.elationSkillObject ??= {};
@@ -5646,6 +5658,7 @@ const turnLogic = {
 
                     // if (elationCountBase) {
                     const createAha = this.createAha ??= turnLogic["Aha Instant"].skillFunctions.createAhaInstant;
+                    elationEntityArray.sort((a, b) => a.participantID - b.participantID);
                     battleData.elationEntityArray = elationEntityArray;
                     battleData.elationEntityNames = elationEntityNames;
                     createAha(battleData,generalInfo);
@@ -5676,10 +5689,28 @@ const turnLogic = {
                     
                     const turnExceptions = battleData.elationBangerTurnExceptions ??= this.turnExceptions;
                     poke("EvanesciaE6CBChanger",battleData,null);
+
+                    const listener1 = this.subListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,null);
                 },
                 "target": "self",
                 "listenerName": "BattleStart Punchline generation",
                 "ownerTurn": {},
+                "subListeners": [
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat change
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (battleData.elationEntityNames[sourceTurn.name]) {
+                                const updateAhaSPD = this.updateAhaSPD ??= turnLogic["Aha Instant"].skillFunctions.updateAhaSPD;
+                                updateAhaSPD(battleData,sourceTurn);
+                            }
+                        },
+                        "priority": Infinity,
+                        "target": "self",
+                        "listenerName": "Aha Instant SPD Controller",
+                    },
+                ]
             },
             {
                 "trigger": "WaveStart",
@@ -5707,18 +5738,6 @@ const turnLogic = {
                 "priority": -90,
                 "listenerName": "BattleStart Punchline generation",
                 "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatSPD",//SPD stat change
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (battleData.elationEntityNames[sourceTurn.name]) {
-                        const updateAhaSPD = this.updateAhaSPD ??= turnLogic["Aha Instant"].skillFunctions.updateAhaSPD;
-                        updateAhaSPD(battleData,sourceTurn);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Aha Instant SPD Controller",
             },
             {
                 "trigger": "ExtraTurnEnd",//SPD stat change
@@ -5778,9 +5797,6 @@ const turnLogic = {
                 "target": "self",
                 "listenerName": "Aha Instant end queue",
             },
-
-
-            
         ],
         "finalListeners": [],
         "characterValues": {},
@@ -10891,7 +10907,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "HitEnemyStart",
+                "trigger": "HitEnemyStart",//TODO: revisit later
                 condition(battleData,generalInfo) {
                     const sourceTurn = generalInfo.sourceTurn;
                     const targetsGotHit = generalInfo.targetsGotHit;
@@ -11621,7 +11637,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "HitEnemyStart",
+                        "trigger": "HitEnemyStart",//TODO: this is explicitly part of the ability instances, not part of their start/end or attack pokes
                         condition(battleData,generalInfo) {
                             // let ownerRef = this.owners;
                             let ownerTurn = this.ownerTurn;

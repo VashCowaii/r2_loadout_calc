@@ -3963,9 +3963,7 @@ const turnLogicLightcones = {
     "Why Does the Ocean Sing": {//NO CHANGE YET
         logic(thisTurn,battleData) {},
         "skillFunctions": {
-            debuffChecker(battleData,generalInfo,source,ownerSlot,ownerRank) {
-                let sourceTurn = generalInfo.sourceTurn;
-
+            debuffChecker(battleData,sourceTurn,source,ownerSlot,ownerRank) {
                 const buffsRef = sourceTurn.buffsObject;
                 let debuffsOwned = 0;
                 for (let buffName in buffsRef) {
@@ -4052,7 +4050,16 @@ const turnLogicLightcones = {
                     if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
                     
                     const debuffFunction = this.debuffFunction ??= turnLogicLightcones["Why Does the Ocean Sing"].skillFunctions.debuffChecker;
-                    debuffFunction(battleData,generalInfo,source,ownerSlot,ownerRank);
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.length) {
+                        for (let entity of sourceTurn) {
+                            debuffFunction(battleData,entity,source,ownerSlot,ownerRank);
+                        }
+                    }
+                    else {
+                        debuffFunction(battleData,sourceTurn,source,ownerSlot,ownerRank);
+                    }
                 },
                 "target": "self",
                 "listenerName": "Why Does the Ocean Sing - debuffs owned check (application)",
@@ -12963,6 +12970,297 @@ const turnLogicRelics = {
             "buffNames": {
                 "defaultShred": "Ever-Glorious Magical Girl (Default)",
                 "stackShred": "Ever-Glorious Magical Girl (Stack)",
+            },
+        }
+    },
+    "Pioneer Diver of Dead Waters": {//REDONE
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Pioneer Diver of Dead Waters - 2pc setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+                                let targetTurn = generalInfo.targetTurn;
+        
+                                if (!this.pioneerDMGDebuffedSHEET) {
+                                    let relicNameRef = "Pioneer Diver of Dead Waters";
+                                    let pcRef = "2pc";
+                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc2Debuffed;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                                    this.pioneerDMGDebuffedSHEET = {
+                                        "statsOnHit": [DamageAll],
+                                        [DamageAll]: relicPathing[0],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                }
+                                let buffSheet = this.pioneerDMGDebuffedSHEET;
+
+                                const debuffCount = targetTurn.debuffCounter;
+                                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+        
+                                if (debuffCount) {//if there are debuffs
+                                    if (buffCheck) {return;}//but we already have it then leave
+
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);//otherwise apply
+                                }
+                                else if (buffCheck) {//if we have the buff but no enemy debuffs, remove
+                                    removeBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Pioneer Diver of Dead Waters - 2pc Debuffed listener",
+                        },
+                    ]
+                },
+                
+            ],
+            "buffNames": {
+                "pc2Debuffed": "Pioneer Diver of Dead Waters (Debuffed)",
+            },
+        },
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Pioneer Diver of Dead Waters - 4pc setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+                                let targetTurn = generalInfo.targetTurn;
+        
+                                if (!this.pioneerDMGTripleDebuffSHEET) {
+                                    let relicNameRef = "Pioneer Diver of Dead Waters";
+                                    let pcRef = "4pc";
+                                    const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    this.pioneerDMGDoubleDebuffSHEET = {
+                                        "statsOnHit": [CritDamageBase],
+                                        [CritDamageBase]: relicPathing[1],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffNames.buffx2x1,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                    this.pioneerDMGTripleDebuffSHEET = {
+                                        "statsOnHit": [CritDamageBase],
+                                        [CritDamageBase]: relicPathing[2],
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffNames.buffx3x1,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                    this.pioneerDMGDoubleDebuffSHEET2 = {
+                                        "statsOnHit": [CritDamageBase],
+                                        [CritDamageBase]: relicPathing[1] * 2,
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffNames.buffx2x2,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                    this.pioneerDMGTripleDebuffSHEET2 = {
+                                        "statsOnHit": [CritDamageBase],
+                                        [CritDamageBase]: relicPathing[2] * 2,
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffNames.buffx3x2,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                }
+                                const buffx2x1 = this.pioneerDMGDoubleDebuffSHEET;
+                                const buffx3x1 = this.pioneerDMGTripleDebuffSHEET;
+
+                                const buffx2x2 = this.pioneerDMGDoubleDebuffSHEET2;
+                                const buffx3x2 = this.pioneerDMGTripleDebuffSHEET2;
+
+                                const doubleBuffName = this.doubleBuffName ??= turnLogicRelics["Pioneer Diver of Dead Waters"]["4pc"].buffNames.isDoubled;
+
+
+
+                                const debuffCount = targetTurn.debuffCounter;
+
+                                const buffsObject = sourceTurn.buffsObject;
+
+                                const buffCheckbuffx2x1 = buffsObject[buffx2x1.buffName];
+                                const buffCheckbuffx3x1 = buffsObject[buffx3x1.buffName];
+
+                                const buffCheckbuffx2x2 = buffsObject[buffx2x2.buffName];
+                                const buffCheckbuffx3x2 = buffsObject[buffx3x2.buffName];
+
+                                // const buffCheckbuffCrit = buffsObject[buffCrit.buffName];
+
+                                const doubledCheck = buffsObject[doubleBuffName];
+
+
+                                if (debuffCount >= 2) {
+                                    if (debuffCount >= 3) {
+                                        if (doubledCheck) {
+                                            if (buffCheckbuffx3x2) {return;}//if we already have the x3 debuff, doubled buff, abort
+
+                                            if (buffCheckbuffx3x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x1);}//if we have the nondouble version, remove it
+                                            buffx3x2.sourceOwner = sourceTurn.properName;
+                                            updateBuff(battleData,sourceTurn,buffx3x2);
+                                        }
+                                        else {
+                                            if (buffCheckbuffx3x1) {return;}//if we already have the x3 NON doubled buff, abort
+
+                                            if (buffCheckbuffx3x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x2);}//if we have the double version, remove it
+                                            buffx3x1.sourceOwner = sourceTurn.properName;
+                                            updateBuff(battleData,sourceTurn,buffx3x1);
+                                        }
+                                    }
+                                    else {
+                                        if (doubledCheck) {
+                                            if (buffCheckbuffx2x2) {return;}//if we already have the x2 debuff, doubled buff, abort
+
+                                            if (buffCheckbuffx2x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x1);}//if we have the nondouble version, remove it
+                                            buffx2x2.sourceOwner = sourceTurn.properName;
+                                            updateBuff(battleData,sourceTurn,buffx2x2);
+                                        }
+                                        else {
+                                            if (buffCheckbuffx2x1) {return;}//if we already have the x2 NON doubled buff, abort
+
+                                            if (buffCheckbuffx2x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x2);}//if we have the double version, remove it
+                                            buffx2x1.sourceOwner = sourceTurn.properName;
+                                            updateBuff(battleData,sourceTurn,buffx2x1);
+                                        }
+                                    }
+                                }
+                                else {
+                                    if (buffCheckbuffx3x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x1);}
+                                    if (buffCheckbuffx3x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x2);}
+                                    if (buffCheckbuffx2x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x1);}
+                                    if (buffCheckbuffx2x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x2);}
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Pioneer Diver of Dead Waters - 2pc Debuffed listener",
+                        },
+                    ]
+                },
+                {
+                    "trigger": "DebuffApplied",
+                    condition(battleData,generalInfo) {
+                        // let ownerRef = this.owners;
+                        const source = generalInfo.currentReference.sourceOwner;
+                        const ownerSlot = battleData.nameIndex[source];
+    
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[ownerSlot];
+                        if (!ownerRank) {return;}//if the debuff owner isn't an owner of the relic, abort early
+
+                        if (!this.pioneerDMGTripleDebuffSHEET) {
+                            let relicNameRef = "Pioneer Diver of Dead Waters";
+                            let pcRef = "4pc";
+                            const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                            this.pioneerDMGActiveCritSHEET = {
+                                "statsOnHit": [CritRateBase],
+                                [CritRateBase]: relicPathing[0],
+                                "source": relicNameRef,
+                                "sourceOwner": null,
+                                "buffName": buffNames.isDoubled,
+                                "durationInTurn": 2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+                        const buffSheet = this.pioneerDMGActiveCritSHEET;
+                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                        buffSheet.sourceOwner = ownerTurn.properName;
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Pioneer Diver of Dead Waters - debuffs applied check",
+                    "owners": [],
+                },
+                
+            ],
+            "buffNames": {
+                "buffx2x1": "Pioneer Diver of Dead Waters (x2, x1)",
+                "buffx3x1": "Pioneer Diver of Dead Waters (x3, x1)",
+                "buffx2x2": "Pioneer Diver of Dead Waters (x2, x2)",
+                "buffx3x2": "Pioneer Diver of Dead Waters (x3, x2)",
+                "isDoubled": "Pioneer Diver of Dead Waters",
             },
         }
     },
