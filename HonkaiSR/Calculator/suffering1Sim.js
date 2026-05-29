@@ -1651,6 +1651,7 @@ const sim = {
                         logToBattle(battleData,{
                             logType: "UltimateStart",
                             name:characterName,
+                            eventOverrideImage: currentUltimate.eventOverrideImage,
                             target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                             AV: currentAV, ultName: currentUltyFunction.name});
                         battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
@@ -1693,6 +1694,7 @@ const sim = {
                     else {
                         if (isLog) {
                             logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName,
+                                eventOverrideImage: currentUltimate.eventOverrideImage,
                                 target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                                 isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
                             battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);

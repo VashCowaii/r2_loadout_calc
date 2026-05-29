@@ -41486,6 +41486,10 @@ const turnLogic = {
                 battleValues.godModeActive = false;
                 removeBuff(battleData,sourceTurn,buffSheet);
 
+                const elationSkillObject = logicRef.elationSkillObject;
+                elationSkillObject.isAttack = false;
+                elationSkillObject.isEnhanced = false;
+
                 const rank = sourceTurn.rank;
                 if (rank >= 1) {
                     let buffSheet = ATKObjects.sw999E1VulnSHEET;
@@ -42167,7 +42171,9 @@ const turnLogic = {
                 const battleValues = sourceTurn.battleValues;
                 battleValues.godModeActive = true;
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+                const elationSkillObject = logicRef.elationSkillObject;
+                elationSkillObject.isAttack = true;
+                elationSkillObject.isEnhanced = true;
 
                 updateBuff(battleData,sourceTurn,buffSheet);
                 const rank = sourceTurn.rank;
@@ -42284,7 +42290,7 @@ const turnLogic = {
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
                         dontKeepNextWave: false,
-                        isAttack: true,
+                        isAttack: false,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
@@ -43900,7 +43906,7 @@ const turnLogic = {
                                 isEnhanced: false,
                                 isTieBreaker: false,
                                 isExtraTurn: true,
-                                skipEXDisplay: false,
+                                skipEXDisplay: true,
                                 allowUlts: false,
                                 decrementBuffs: false,
                                 extraTurnHasChoice: false,
@@ -43914,7 +43920,7 @@ const turnLogic = {
     
                                 properName: ownerTurn.properName,
                                 sourceTurn: null,
-                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+                                eventOverrideImage: "misc/evanescia/labubu.png",
     
                                 target: "enemy",
                                 poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
