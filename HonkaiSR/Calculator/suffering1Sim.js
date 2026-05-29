@@ -595,6 +595,12 @@ const sim = {
             "Physical": 0
         }
 
+        const enemyRankID = {
+            "boss": 3,
+            "elite": 2,
+            "minion": 1,
+        }
+
 
 
         for (let i=0;i<enemiesToMake.length;i++) {
@@ -661,6 +667,7 @@ const sim = {
                 isEnemy: true,
                 enemyTypeAttack: attackTypes[currentEntry.enemyTypeAttack],//ref.enemyTypeAttack,
                 enemyType,
+                enemyRank: enemyRankID[enemyType],
                 currentHP: finalStats.HPFinal,
                 maxHP: finalStats.HPFinal,
                 currentToughness: stats[Toughness],
