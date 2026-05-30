@@ -103,7 +103,7 @@ const customEnergyBar = {
                 ${energyOverflowRatio ? `<div class="actionDetailHeaderRowCharacterEnergyBoxInnerRing" style="border:2px solid ${specialEnergyData[turnRef.specialEnergy ? turnRef.properName : turnRef.element].energyColor1}"></div>` : ""}
                 `;
         }
-    }
+    },
 }
 
 
@@ -329,6 +329,21 @@ const customDisplayValuesLog = {
         // {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
+
+
+    "Acheron": [//tracker done
+        {valueName: "Slashed Dream Overflow", refName: "slashOverflow", isBattleValue: true},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "E2 EX-Turn Tally", refName: "e2Accumulation", isBattleValue: true, requiresEidolon: 2},
+        
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+
+        // {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSilver Wolf LV.999`,summaryType: "SUM"},
+        // {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSilver Wolf LV.999`,summaryType: "SUM"},
     ],
     
 
@@ -1447,28 +1462,6 @@ const defaultConditions = {
             "array": []
         }
     },
-    "Evanescia": {
-        "hasEnhancedState": true,
-        "Skill": {
-            "type": "AND",
-            "array": []
-        },
-        "Ultimate": {
-            "type": "AND",
-            "array": []
-        }
-    },
-    "Silver Wolf LV.999": {
-        "hasEnhancedState": true,
-        "Skill": {
-            "type": "AND",
-            "array": []
-        },
-        "Ultimate": {
-            "type": "AND",
-            "array": []
-        }
-    },
     "Jingliu": {
         "hasEnhancedState": false,
         "Skill": {
@@ -1931,6 +1924,17 @@ const defaultConditions = {
             type: "AND",
             array: []
         },
+    },
+    "Acheron": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
     },
 
     //HARMONY
@@ -3314,6 +3318,28 @@ const defaultConditions = {
                 }
             ]
         },
+    },
+    "Evanescia": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Silver Wolf LV.999": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
     },
     "Z_Test": {
         "hasEnhancedState": false,
