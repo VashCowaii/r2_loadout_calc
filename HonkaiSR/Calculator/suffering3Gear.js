@@ -13174,6 +13174,9 @@ const turnLogicRelics = {
                                             if (buffCheckbuffx3x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x1);}//if we have the nondouble version, remove it
                                             buffx3x2.sourceOwner = sourceTurn.properName;
                                             updateBuff(battleData,sourceTurn,buffx3x2);
+
+                                            if (buffCheckbuffx2x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x1);}
+                                            if (buffCheckbuffx2x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x2);}
                                         }
                                         else {
                                             if (buffCheckbuffx3x1) {return;}//if we already have the x3 NON doubled buff, abort
@@ -13181,6 +13184,9 @@ const turnLogicRelics = {
                                             if (buffCheckbuffx3x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x2);}//if we have the double version, remove it
                                             buffx3x1.sourceOwner = sourceTurn.properName;
                                             updateBuff(battleData,sourceTurn,buffx3x1);
+
+                                            if (buffCheckbuffx2x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x1);}
+                                            if (buffCheckbuffx2x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x2);}
                                         }
                                     }
                                     else {
@@ -13190,6 +13196,9 @@ const turnLogicRelics = {
                                             if (buffCheckbuffx2x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x1);}//if we have the nondouble version, remove it
                                             buffx2x2.sourceOwner = sourceTurn.properName;
                                             updateBuff(battleData,sourceTurn,buffx2x2);
+
+                                            if (buffCheckbuffx3x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x1);}
+                                            if (buffCheckbuffx3x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x2);}
                                         }
                                         else {
                                             if (buffCheckbuffx2x1) {return;}//if we already have the x2 NON doubled buff, abort
@@ -13197,6 +13206,9 @@ const turnLogicRelics = {
                                             if (buffCheckbuffx2x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx2x2);}//if we have the double version, remove it
                                             buffx2x1.sourceOwner = sourceTurn.properName;
                                             updateBuff(battleData,sourceTurn,buffx2x1);
+
+                                            if (buffCheckbuffx3x1) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x1);}
+                                            if (buffCheckbuffx3x2) {removeBuff(battleData,sourceTurn,buffCheckbuffx3x2);}
                                         }
                                     }
                                 }
