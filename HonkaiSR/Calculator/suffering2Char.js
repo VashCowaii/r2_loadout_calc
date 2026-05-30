@@ -17919,6 +17919,800 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Dr. Ratio": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            const call1 = this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.ratioSkill, 
+                poolKey: this.abilityTargetPools.Skill,
+                target: "enemy",
+            }
+            call1.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.ratioBasic, 
+                poolKey: this.abilityTargetPools.BasicATK,
+                target: "enemy",
+            }
+            call3.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            ratioBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.ratioBasicREF ??= ATKObjects["Basic ATK"]["Mind is Might"].variant1;
+
+                if (!ATKObjects.ratioBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.ratioBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Imaginary"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ratioBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            ratioFUA(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                const battleValues = sourceTurn.battleValues;
+                if (battleValues.shouldQueueFUA) {
+                    battleValues.shouldQueueFUA = false;
+                    battleValues.wisemanStacks = Math.max(0, battleValues.wisemanStacks - 1);
+                    battleValues.wisemanStackDebt = Math.max(0, battleValues.wisemanStackDebt - 1);
+
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point03.icon,sourceName: sourceTurn.properName, source:"Launched Ult-Based FUA", bodyText: `Wiseman's Folly: ${battleValues.wisemanStacks +1} --> ${battleValues.wisemanStacks}`});
+                    }
+                }
+
+                // const valuesRef = sourceTurn.battleValues;
+                // const oldValue = valuesRef.charge;
+                // valuesRef.charge -= 1;
+                // valuesRef.chargeDebt -= 1;
+                // if (battleData.isLoggyLogger) {
+                //     // if (newCharge > oldValue) {
+                //     //     sourceTurn.archerFUAStackSum ??= 0;
+                //     //     sourceTurn.archerFUAStackSum += newCharge - oldValue;
+                        
+                //     // }
+                //     logToBattle(battleData,{
+                //         logType: "SUMMARY:SUM",
+                //         function: "archerFUAStackSum",
+                //         AV: battleData.sumAV,
+                //         currentValue: valuesRef.charge,
+                //         currentSumValue: sourceTurn.archerFUAStackSum,
+                //         currentAddedValue: valuesRef.charge - oldValue
+                //     });
+                // }
+
+                let skillRef = ATKObjects.ratioFUAREF ??= ATKObjects.Talent["Cogito, Ergo Sum"].variant1;
+
+                if (!ATKObjects.ratioFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = ATKObjects.ratioFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","FUA","Imaginary"];
+                    const actionTags = ["FUA","Attack","RatioFUA"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioFUAATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        compositeCacheTag
+                    }
+                }
+
+
+                if (rank >= 4) {
+                    updateEnergy(battleData,15,sourceTurn,false,"Dr. Ratio E4");
+                }
+                let ATKObject = ATKObjects.ratioFUAATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            ratioSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.ratioSkillREF ??= ATKObjects["Skill"]["Intellectual Midwifery"].variant1;
+
+                if (!ATKObjects.ratioSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.ratioSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Imaginary"];
+                    const actionTags = ["Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    //construct both the buff sheet and the atk object in one go on the first skill usage
+                    // let buffName = logicRef.buffNames.caladbolg;
+                    // let e6 = sourceTurn.rank >= 6;
+                    ATKObjects.ratioSkillDEBUFFSHEET = {
+                        "stats": [EffectRES],
+                        [EffectRES]: -0.10,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.skillDebuff,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                // const battleValues = sourceTurn.battleValues;
+                let ATKObject = ATKObjects.ratioSkillATKOBJECT;
+
+                const battleValues = sourceTurn.battleValues;
+                const currentCycler = battleValues.skillChanceCycler;
+
+                const primaryTarget = battleData.primaryTarget;
+                const preCheckCounter = primaryTarget.debuffCounter;
+
+                const fuaChance = 2 + Math.min(3, preCheckCounter);
+                const fuaPass = fuaChance >= currentCycler;
+                //ratios FUA is based on 20% increments, starting at a base of 40% which is increased by 20% per debuff on the target at THIS point
+                //we treat each 20% increment as 1, between 1 and 5, so a cycler value of 1 will mean that a chance of 20% or higher will pass that FUA
+                //but a cycler value of 5 would mean that an 80% chance would fail, since the chance representation would be 4 which is less than 5
+                //and then every skill we increment the cycler to ensure it changes as you go throughout the battle, which can allow the user to fail
+                //a FUA, but still allow debuff count to avoid failure wherever possible(and likely)
+
+                if (preCheckCounter && !sourceTurn.ratioSummationFinished) {
+                    const ratioSummationSHEET = ATKObjects.ratioSummationSHEET;
+
+                    ratioSummationSHEET.currentStacks = preCheckCounter;
+                    updateBuff(battleData,sourceTurn,ratioSummationSHEET);
+                }
+                
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                const debuffSheet = ATKObjects.ratioSkillDEBUFFSHEET;
+                updateBuff(battleData,primaryTarget,debuffSheet);
+
+                battleValues.skillChanceCycler += 1;
+                if (fuaPass) {poke("RatioQueueFUA",battleData,null,null);}
+            },
+            ratioUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const rank = sourceTurn.rank;
+
+                // let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.ratioUltimateREF ??= ATKObjects.Ultimate["Syllogistic Paradox"].variant1;
+
+                if (!ATKObjects.ratioUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Imaginary"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ratioUltimateATKOBJECT;
+                
+                const primaryTarget = battleData.primaryTarget;
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+
+                if (!primaryTarget.isDead) {
+                    const wisemanSheet = ATKObjects.ratioWisemanSHEET;
+                    const wisemanName = wisemanSheet.buffName;
+
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        const hadWiseman = enemy.buffsObject[wisemanName];
+                        if (hadWiseman) {removeBuff(battleData,enemy,hadWiseman);}
+                        break;//there would only ever be one other entity with the wiseman application, can break if found ever
+                    }
+
+                    updateBuff(battleData,primaryTarget,wisemanSheet);
+                    const battleValues = sourceTurn.battleValues;
+
+                    const oldWiseman = battleValues.wisemanStacks;
+                    battleValues.wisemanStacks = rank >= 6 ? 3 : 2;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point03.icon,sourceName: sourceTurn.properName, source:"Reset Wiseman Stacks", bodyText: `Wiseman's Folly: ${oldWiseman} --> ${battleValues.wisemanStacks}`});
+                    }
+                }
+
+                sourceTurn.ultyQueued = false;
+            },
+            ratioTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.ratioTechREF ??= ATKObjects.Technique["Mold of Idolatry"].variant1;
+
+                if (!ATKObjects.ratioTechSPDSHEET) {
+                    // let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    
+                    ATKObjects.ratioTechSPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: -0.15,
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.techSPD,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn",
+                    }
+                }
+                let buffSheet = ATKObjects.ratioTechSPDSHEET;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
+            },
+            ratioE2DMG(battleData,generalInfo,allyTurn,targetsGotHit) {
+                const logicRef = turnLogic[allyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.ratioE2DMGREF) {
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const actionTags = ["Additional"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + allyTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioE2DMGREF = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            additional: 0.20
+                        },
+                        scalar,
+                        element: "Imaginary",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ratioE2DMGREF;
+
+                const allyAssignedName = allyTurn.properName;
+                const addedWrapper = battleActions.additionalDMGWrapper;
+
+                const enemyBasedTurns = battleData.enemyBasedTurns;
+                for (let enemySlot in targetsGotHit) {
+                    const currentEnemy = enemyBasedTurns[enemySlot];
+
+                    let debuffCount = Math.min(4, currentEnemy.debuffCounter);
+
+                    for (let i=0;i<debuffCount;i++) {
+                        addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,currentEnemy,"E2: The Divine Is in the Details");
+                    }
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    ATKObjects.ratioSummationSHEET = {
+                        "stats": [CritRateBase,CritDamageBase],
+                        [CritRateBase]: 0.025,
+                        [CritDamageBase]: 0.05,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.summation,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 6 + (rank >= 1 ? 4 : 0),
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    ATKObjects.ratioWisemanSHEET = {
+                        "stats": null,
+                        "source": "Ultimate",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.wiseman,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    
+                    //e2
+                    if (rank >= 2) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    //trace deduction
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const buffSheet = this.ratioE6Buff ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.50,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.e6FUA,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["RatioFUA"],
+                        }
+                        //this isn't for ANY FUA dmg, only ratio's talent FUA specifically
+
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
+                },
+                "target": "self",
+                "listenerName": "Dr. Ratio Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AdditionalTriggerAttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Talent") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let enemiesAttackedThisAction = generalInfo.targetsGotHit;
+        
+                            const ratioE2DMG = this.ratioE2DMG ??= turnLogic[characterName].skillFunctions.ratioE2DMG;
+                            ratioE2DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Ratio E2 additional DMG controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const traceDebuffDMG = this.traceDebuffDMG ??= {
+                                "statsOnHit": [DamageAll],
+                                [DamageAll]: 0.10,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.deduction,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+        
+                            let targetTurn = generalInfo.targetTurn;
+                            const debuffCount = Math.min(5, targetTurn.debuffCounter);
+        
+                            const buffCheck = ownerTurn.buffsObject[traceDebuffDMG.buffName];
+        
+                            if (buffCheck) {
+                                if (debuffCount >= 3) {
+                                    const stackCount = buffCheck.currentStacks;
+                                    if (stackCount === debuffCount) {return;}
+                                    else {
+                                        const stackDiff = debuffCount - stackCount;
+                                        traceDebuffDMG.currentStacks = stackDiff;
+                                        updateBuff(battleData,ownerTurn,traceDebuffDMG);
+                                    }
+                                }
+                                else {//if we had the buff but the target is sub3 debuffs, remove
+                                    removeBuff(battleData,ownerTurn,buffCheck);
+                                }
+                            }
+                            else if (debuffCount >= 3) {
+                                traceDebuffDMG.currentStacks = debuffCount;
+                                updateBuff(battleData,ownerTurn,traceDebuffDMG);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ratio Deduction enemy debuff checker",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+        
+                            let ownerTurn = this.ownerTurn;
+                            const ratioSummationSHEET = turnLogic[ownerTurn.properName].ATKObjects.ratioSummationSHEET;
+                            ratioSummationSHEET.currentStacks = 4;
+
+                            updateBuff(battleData,ownerTurn,ratioSummationSHEET);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Ratio E1 +4 summation battlestart",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "RatioQueueFUA",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[characterName].skillFunctions.ratioFUA,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: characterName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "enemy",
+                "listenerName": "Ratio - Follow-up queued - Talent",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName === ownerTurn.properName) {return;}//can't be ratio himself
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetHitCount = generalInfo.targetsGotHit[targetTurn.name];
+
+                    if (targetHitCount != 1) {return;}//only evaluate first hits, as that is when the enemy is considered being attacked, esp for bounce type stuff
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
+                        battleValues.shouldQueueFUA = true;
+                        battleValues.wisemanStackDebt += 1;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Ratio - Wiseman FUA trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}//can't be an enemy
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (battleValues.shouldQueueFUA) {
+                        poke("RatioQueueFUA",battleData,null,null);
+                    }
+                    
+                },
+                "target": "self",
+                "listenerName": "Ratio - Wiseman FUA trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+
+                    const wisemanSheet = this.wisemanSheet ??= turnLogic[ownerTurn.properName].ATKObjects.ratioWisemanSHEET;
+                    const wisemanName = wisemanSheet.buffName;
+
+                    const targetTurn = generalInfo.enemyKilled;
+                    const enemyHadWiseman = targetTurn.buffsObject[wisemanName];
+
+                    if (enemyHadWiseman) {
+                        const battleValues = ownerTurn.battleValues;
+
+                        const oldWiseman = battleValues.wisemanStacks;
+                        battleValues.wisemanStacks = 0;
+                        battleValues.wisemanStackDebt = 0;
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:"Target with Wiseman Died", bodyText: `Wiseman's Folly: ${oldWiseman} --> ${battleValues.wisemanStacks}`});
+                        }
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Ratio - enemy died with wiseman listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.ratioUltimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Dr. Ratio - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.ratioTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Ratio Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "skillChanceCycler": 1,
+            "wisemanStacks": 0,
+            "wisemanStackDebt": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "skillDebuff": "Effect RES Reduction (Ratio)",
+            "summation": "Summation (Ratio)",
+            "deduction": "Deduction (Ratio)",
+            "wiseman": "Wiseman's Folly",
+            "techSPD": "Mold of Idolatry (Ratio)",
+        },
+        "characterValuesBattle": {},
+    },
 
     //Harmony
     "Tingyun": {

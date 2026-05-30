@@ -2108,7 +2108,7 @@ const hitSplitters = {
       }
     ],
   },
-  "Acheron": {
+  "Acheron": {//DONE
     "basic": [
       {
         "primary": {
@@ -2742,6 +2742,72 @@ const hitSplitters = {
         "isSourceLastHit": true,
         "isAttackLastHit": true
       }
+    ],
+    "ult": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 30
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "tech": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+  },
+  "Dr. Ratio": {//
+    "basic": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "skill": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "passive": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
     ],
     "ult": [
       {

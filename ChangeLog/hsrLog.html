@@ -24,6 +24,7 @@
         <li>Added the following new characters:
             <ul>
                 <li>Acheron</li>
+                <li>Dr. Ratio</li>
             </ul>
         </li>
         <li>Added the following new relic sets:
@@ -36,6 +37,11 @@
                 <li>NOTE: this was 100% necessary.</li>
             </ul>
         </li>
+        <li>Added the ability to display unique buff/debuff icons when applying/removing buffs, as well as when inspecting an entity's bufflist.
+            <ul>
+                <li>If you think there are fancy or unique buffs that deserve icons, the example here being Acheron's Crimson Knot is getting one to start this off, then let me know in the discord.</li>
+            </ul>
+        </li>
         
         <h4>Fixes</h4>
         <li>Fixed a visual issue where the following character ability instances weren't displaying the "Enhanced" tag on the action order display, after yesterday's update:
@@ -44,9 +50,12 @@
             </ul>
         </li>
         <li>Fixed an issue where if an character like Ruan Mei was in the team with elation units, the talent SPD bonus would take effect before Aha had been initialized and could break the SPD calc for Aha.</li>
-        
+        <li>Fixed a visual issue where the Aha Instant ending and other various inserted abilities that aren't abilities, weren't displaying with the insert diamond on their action bar, and instead still displayed the semicircle as if a turn-activated ability.</li>
+        <li>Fixed an issue where Baptism of Pure Thought could attempt to apply 0 stacks of its bonus when the owner was attacking an enemy that had no debuffs. This is more on the side of a visual bug if anything since the stat bonus multiplied by a stack count of 0 resulted in a bonus of 0, but was a bug all the same in the lightcone's code.</li>
+
         <h4>Optimization</h4>
         <li>Slight optimization to Elation teams, I didn't realize I was sorting elation ID's every Aha Instant instead of just once at the start of each battle(I have a brain that works sometimes)</li>
+        <li>Unified how techniques are checked and called compared to others in the team, leaving less room for error in the future.</li>
     </ul>
 </div>
 <div>

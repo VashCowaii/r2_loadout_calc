@@ -4087,6 +4087,61 @@ const maslowCharactersHunt = {
             addTeamWant: [],
         },
     },
+    "Dr. Ratio": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 
 const maslowCharactersElation = {
