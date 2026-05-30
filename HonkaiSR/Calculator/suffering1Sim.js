@@ -1541,22 +1541,25 @@ const sim = {
                 // currentUltyFunction(battleData,target,sourceTurn);
                 // if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
 
-                if (useAnyTrigger) {
+
+                const poolKey = currentFUA.poolKey;
+                const target = currentFUA.target;
+
+                if (isLog) {
+                    const displayTypeStart = currentFUA.eventTypeStartLOG;
+                    logToBattle(battleData,{
+                        logType: displayTypeStart,
+                        isInsertedAbility: true,
+                        name:characterName,
+                        target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                        AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                    battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
+                }
+
+                // if (useAnyTrigger) {
                     // const typeStart = currentFUA.eventTypeStart;
                     // const typeEnd = currentFUA.eventTypeEnd;
-
-                    const poolKey = currentFUA.poolKey;
-                    const target = currentFUA.target;
-                    if (isLog) {
-                        const displayTypeStart = currentFUA.eventTypeStartLOG;
-                        logToBattle(battleData,{
-                            logType: displayTypeStart,
-                            isInsertedAbility: true,
-                            name:characterName,
-                            target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
-                            AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
-                        battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
-                    }
+                    
                     const isAbility = currentFUA.isAbility;
                     if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
                     // poke(typeStart,battleData,generalInfo);
@@ -1564,10 +1567,10 @@ const sim = {
                     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
                     if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
                     // poke(typeEnd,battleData,generalInfo);
-                }
-                else {
-                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                }
+                // }
+                // else {
+                //     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                // }
             }
         }
     },
