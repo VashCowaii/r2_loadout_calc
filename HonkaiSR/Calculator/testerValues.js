@@ -376,17 +376,21 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+
+    //HUNT
+    "Topaz & Numby": defaultStandardAbilityDisplayWarnings,
+    "Archer": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast2SP,permaConditionsTextLibrary.archerSub5casts],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+
+    //DESTRUCTION
     "Saber": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Saber's Basic ATK is enhanced.",
-        "Ultimate": "",
-
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Hook": {
-        hasEnhancedState: true,
-        "Skill": "",
         "Ultimate": "",
 
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
@@ -400,6 +404,23 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Hook": {
+        hasEnhancedState: true,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Jingliu": {
+        hasEnhancedState: true,
+        "Skill": "When Enhanced, Skill conditions will be ignored since it is the only action she can take.",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    
+    //HARMONY
     "Sunday": defaultStandardAbilityDisplayWarnings,
     "Bronya": {
         hasEnhancedState: false,
@@ -413,6 +434,22 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed],
         "UltimatePermaConditionsTarget": [],
     },
+    "Tribbie": defaultStandardAbilityDisplayWarnings,
+    "Robin": defaultStandardAbilityDisplayWarnings,
+    "Tingyun": defaultStandardAbilityDisplayWarnings,
+    "Asta": defaultStandardAbilityDisplayWarnings,
+    "Ruan Mei": defaultStandardAbilityDisplayWarnings,
+    "Sparkle": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "SkillTarget": "",
+        "Ultimate": "",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFree,],
+        "SkillPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+
+    //REMEMBRANCE
     "Trailblazer - Remembrance": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Mem is already on field, and RMC's Basic ATK is enhanced.",
@@ -433,11 +470,6 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedCyrene]
     },
-    "Tribbie": defaultStandardAbilityDisplayWarnings,
-    "Robin": defaultStandardAbilityDisplayWarnings,
-    "Silver Wolf": defaultStandardAbilityDisplayWarnings,
-    "Tingyun": defaultStandardAbilityDisplayWarnings,
-    "Dan Heng • Permansor Terrae": defaultStandardAbilityDisplayWarnings,
     "Aglaea": {
         hasEnhancedState: true,
         "Skill": "",
@@ -445,57 +477,6 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
-    "Argenti": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "You as the user need to define conditions for Argenti that will determine if you use at Half-Energy or at full.",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
-    },
-    "Evanescia": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "You as the user need to define conditions for Evanescia that will determine if you use at Half-Energy or at full.",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
-    },
-    "Aventurine": defaultStandardAbilityDisplayWarnings,
-    "Kafka": defaultStandardAbilityDisplayWarnings,
-    "Hysilens": defaultStandardAbilityDisplayWarnings,
-    "Pela": defaultStandardAbilityDisplayWarnings,
-    "Asta": defaultStandardAbilityDisplayWarnings,
-    "Ruan Mei": defaultStandardAbilityDisplayWarnings,
-    "Lynx": defaultStandardAbilityDisplayWarnings,
-    "Topaz & Numby": defaultStandardAbilityDisplayWarnings,
-    "Anaxa": defaultStandardAbilityDisplayWarnings,
-    "Huohuo": defaultStandardAbilityDisplayWarnings,
-    "Archer": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast2SP,permaConditionsTextLibrary.archerSub5casts],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Luocha": defaultStandardAbilityDisplayWarnings,
-    "Yao Guang": defaultStandardAbilityDisplayWarnings,
-    "Sparxie": defaultStandardAbilityDisplayWarnings,
-    "Sparkle": {
-        hasEnhancedState: false,
-        "Skill": "",
-        "SkillTarget": "",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFree,],
-        "SkillPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Jingliu": {
-        hasEnhancedState: true,
-        "Skill": "When Enhanced, Skill conditions will be ignored since it is the only action she can take.",
-        "Ultimate": "",
-        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
-    },
-    "Black Swan": defaultStandardAbilityDisplayWarnings,
     "Evernight": {
         hasEnhancedState: false,
         "Skill": "The skill does not use Skill Points, so no permanent condition applies here other than what you define.",
@@ -503,6 +484,46 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    
+    //NIHILITY
+    "Silver Wolf": defaultStandardAbilityDisplayWarnings,
+    "Kafka": defaultStandardAbilityDisplayWarnings,
+    "Hysilens": defaultStandardAbilityDisplayWarnings,
+    "Pela": defaultStandardAbilityDisplayWarnings,
+    "Black Swan": defaultStandardAbilityDisplayWarnings,
+    
+
+    //PRESERVATION
+    "Dan Heng • Permansor Terrae": defaultStandardAbilityDisplayWarnings,
+    "Aventurine": defaultStandardAbilityDisplayWarnings,
+    
+    //ERUDITION
+    "Argenti": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "You as the user need to define conditions for Argenti that will determine if you use at Half-Energy or at full.",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
+    },
+    "Anaxa": defaultStandardAbilityDisplayWarnings,
+
+    //ELATION
+    "Evanescia": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "You as the user need to define conditions for Evanescia that will determine if you use at Half-Energy or at full.",
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
+    },
+    "Yao Guang": defaultStandardAbilityDisplayWarnings,
+    "Sparxie": defaultStandardAbilityDisplayWarnings,
+    
+    
+    //ABUNDANCE
+    "Lynx": defaultStandardAbilityDisplayWarnings,
+    "Huohuo": defaultStandardAbilityDisplayWarnings,
+    "Luocha": defaultStandardAbilityDisplayWarnings,
+    
 
     "Z_Test": defaultStandardAbilityDisplayWarnings,
 }
