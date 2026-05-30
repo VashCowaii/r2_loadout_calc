@@ -325,7 +325,7 @@ const battleActions = {
                 poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element:null},sourceTurn);
             }
         }//we add a debuff to the target's counter only when a new one is applied, not when stacked though that might bite me later I guess, idk if stacks count or unique debuffs each
-        if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Apply", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: timesToApply});}
+        if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Apply", isShield,oldShield,buffDisplayIcon: currentReference.buffDisplayIcon,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: timesToApply});}
 
         // currentReference.expireType != "StartTurn"//EndTurn
         // const expireType = currentReference.expireType != undefined;
@@ -372,12 +372,12 @@ const battleActions = {
 
             currentReference.currentStacks = Math.max(1, Math.min(maxStacks, stackSumTemp));//pulling the stacks to apply from the sheet bc this can vary based on how many buff procs happen in a single action
             //right now this assumes that all stack values are uniform. If they end up pulling shit like TFD did with first stack x value then subsequent as y value, that's gonna suck
-            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Stack", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
+            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Stack",buffDisplayIcon: currentReference.buffDisplayIcon, isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
         }
         //if the buff exists, we're applying, and the max stacks are the same as current stack, then we REDO the duration based on the specification involved from the buff sheet
         //example usecase: archer's guardian buff when anyone gets skill points, expires at the end of his turn. But if it's his turn that he gets a skill point in, then it's the end of his NEXT turn
         else if (maxStacks <= currentStacks) {//I did <= to be safe, in theory we should never be less than current stacks due to the min operation in the above section
-            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
+            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew",buffDisplayIcon: currentReference.buffDisplayIcon, isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
             //no stat changes necessary, this is just reupping the buff duration, so we'll swap the AV applied, and source
             // return;//if all we did was renew and no added stacks, we can leave early
             return null
@@ -503,7 +503,7 @@ const battleActions = {
         if (!silent && log) {
             const isEnemy = sourceTurn.isEnemy;
             // console.log(buffSheet.source,buffSheet.sourceOwner)
-            logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
+            logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName,buffDisplayIcon: currentReference.buffDisplayIcon, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
         }
 
         const changeStats = currentReference.stats != undefined || currentReference.statsOnHit != undefined;
@@ -5320,7 +5320,6 @@ const turnLogic = {
         "characterValues": {},
         "characterValuesBattle": {},
     },
-    //TODO: right now participant ID is assigned as a prebattlestart event, but the elation entity array is constructed in battleprep which is before, look into an earlier event assignment so we can skip sorting every time
     "Aha Instant": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -5480,7 +5479,7 @@ const turnLogic = {
                 }
             },
             endAhaInstant(battleData,ahaTurn) {
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantEnd", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: false, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantEnd", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: false, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
                 
                 const forcedPunchline = battleData.punchlineForced;
                 const punchlineConsume = battleData.punchlineConsume;
