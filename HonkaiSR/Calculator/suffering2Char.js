@@ -5156,6 +5156,29 @@ const battleActions = {
             }
         }
     },
+    getTechnique(battleData,ownerTurn,logicRef,techCount,isAttack,isDimension) {
+        let useTechnique = logicRef.useTechnique && battleData.techniquesAllowed;
+        if (!useTechnique) {return;}
+
+        let attackUsed = battleData.attackTechniqueUsed;
+        let dimensionUsed = battleData.dimensionTechniqueUsed;
+
+        if (isAttack && attackUsed) {return;}
+        if (isDimension && dimensionUsed) {return;}
+
+        const listenerToInject = logicRef.techniqueListener;
+        listenerToInject.ownerTurn = ownerTurn;
+        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+        if (techCount > 1) {
+            const listenerToInject = logicRef.techniqueListener2;
+            listenerToInject.ownerTurn = ownerTurn;
+            addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+        }
+
+        if (isAttack) {battleData.attackTechniqueUsed = true;}
+        if (isDimension) {battleData.dimensionTechniqueUsed = true;}
+    },
 }
 const pullSuperBreakDMGMulti = battleActions.pullSuperBreakDMGMulti;
 const pullBreakDMGMulti = battleActions.pullBreakDMGMulti;
@@ -5193,6 +5216,7 @@ const killDesignatedEnemies = battleActions.killDesignatedEnemies;
 const addListenerWithPriority = battleActions.addListenerWithPriority;
 const addListenerPREPPriority = battleActions.addListenerPREPPriority;
 const removeListener = battleActions.removeListenerInBattle;
+const getTechnique = battleActions.getTechnique;
 
 
 const turnLogic = {
@@ -6988,20 +7012,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Novel Concoction B.E. check",
@@ -7638,22 +7649,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Huohuo Passive",
@@ -8293,22 +8289,7 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Natasha Passive",
@@ -9012,22 +8993,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Lynx Passive",
@@ -9752,23 +9718,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
                     
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Luocha Passive",
@@ -10684,23 +10634,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Silver Wolf Passive",
@@ -11520,23 +11454,7 @@ const turnLogic = {
                     const listener8 = passiveListeners[7];
                     addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Kafka Passive",
@@ -12606,24 +12524,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Hysilens Passive",
@@ -13619,23 +13520,7 @@ const turnLogic = {
                     const listener10 = passiveListeners[9];
                     addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Black Swan Passive",
@@ -14598,24 +14483,7 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        // const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        // listenerToInject.ownerTurn = ownerTurn;
-                        // addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    // getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Welt Passive",
@@ -15277,24 +15145,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Pela Passive",
@@ -15844,23 +15695,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Topaz Passive",
@@ -16822,28 +16657,7 @@ const turnLogic = {
                     const listener4 = passiveListeners[3];
                     addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
                 "listenerName": "Archer Passive",
@@ -17521,28 +17335,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
                 "listenerName": "Seele Passive",
@@ -18519,23 +18312,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Tingyun Passive",
@@ -19120,23 +18897,7 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Bronya Passive",
@@ -19938,23 +19699,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Sunday Passive",
@@ -20704,24 +20449,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Tribbie Passive",
@@ -21482,23 +21210,7 @@ const turnLogic = {
                     const listener2 = passiveListeners[1];
                     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Robin Passive",
@@ -21961,24 +21673,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Asta Passive",
@@ -22738,23 +22433,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Ruan Mei Passive",
@@ -23696,24 +23375,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Sparkle Passive",
@@ -24529,24 +24191,7 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Saber Passive",
@@ -25470,24 +25115,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Blade Passive",
@@ -26204,23 +25832,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Jingliu Passive",
@@ -27209,28 +26821,7 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
                 "listenerName": "Firefly Passive",
@@ -28064,24 +27655,7 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Hook Passive",
@@ -29023,24 +28597,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "RMC Passive",
@@ -30407,23 +29964,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Aglaea Passive",
@@ -31909,24 +31450,7 @@ const turnLogic = {
                     const listener10 = passiveListeners[6];
                     addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Evernight Passive",
@@ -33292,23 +32816,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Hyacine Passive",
@@ -34769,23 +34277,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "DHPT Passive",
@@ -35723,23 +35215,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Aventurine Passive",
@@ -36478,23 +35954,7 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Argenti Passive",
@@ -37215,21 +36675,7 @@ const turnLogic = {
                     const listener8 = passiveListeners[7];
                     addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
 
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Anaxa Passive",
@@ -38614,22 +38060,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Yao Guang Passive",
@@ -39721,22 +39152,7 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Sparxie Passive",
@@ -40768,22 +40184,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "EMC Passive",
@@ -42358,22 +41759,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "SW999 Passive",
@@ -43880,22 +43266,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Evanescia Passive",
