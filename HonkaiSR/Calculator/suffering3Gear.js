@@ -228,6 +228,8 @@ const turnLogicLightcones = {
                                         "expireType": null,
                                     }
                                 }
+
+                                if (!debuffsCount) {return;}
                                 
                                 const buffSheet = sourceTurn.baptismOfPureThoughCRITSHEET;
                                 buffSheet.currentStacks = debuffsCount;
