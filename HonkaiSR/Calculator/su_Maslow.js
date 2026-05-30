@@ -2000,6 +2000,61 @@ const maslowCategoryLightcones = {
 
 const maslowCharactersNihility = {
     //NIHILITY
+    "Acheron": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["Debuff","Vuln"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["Debuff","Vuln"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["Debuff","Vuln"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
     "Black Swan": {
         defaultMainSubs: ["SPDFlat","ATK%","EffectHitRate","DamageBreak"],
         defaultTrashSub: ["ATKFlat","HP%","EffectRES","HPFlat"],
