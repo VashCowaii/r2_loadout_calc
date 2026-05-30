@@ -6,7 +6,7 @@ global.calcAllowedSet = new Set([
     "Hysilens",//DONE
     "Black Swan",//DONE
     "Welt",//DONE
-    "Acheron",
+    "Acheron",//DONE
     //4star
     "Pela",//DONE
     
@@ -34,6 +34,7 @@ global.calcAllowedSet = new Set([
     "Topaz & Numby",//DONE
     "Archer",//DONE
     "Seele",//DONE
+    "Dr. Ratio",//
     //4star
 
     //HARMONY
