@@ -523,9 +523,6 @@ const conditionsCharacterDisplayWarning = {
     "Lynx": defaultStandardAbilityDisplayWarnings,
     "Huohuo": defaultStandardAbilityDisplayWarnings,
     "Luocha": defaultStandardAbilityDisplayWarnings,
-    
-
-    "Z_Test": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -3366,11 +3363,6 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         }
-    },
-    "Z_Test": {
-        "hasEnhancedState": false,
-        "Skill": null,
-        "Ultimate": null
     },
 
     
