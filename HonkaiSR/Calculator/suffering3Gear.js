@@ -13285,6 +13285,126 @@ const turnLogicRelics = {
             },
         }
     },
+    "As Navigator Isee Sees It": {
+        "2pc": {},
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "As Navigator Isee Sees It - 4pc setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AbilityStart",
+                            condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Skill") {return;}
+
+                                const sourceTurn = generalInfo.sourceTurn;
+                                const buffSheet = sourceTurn.relicIseeSeesItSHEET;
+                                buffSheet.currentStacks = 1;
+
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "As Navigator Isee Sees It - skill start listener",
+                        },
+                        {
+                            "trigger": "AbilityEnd",
+                            condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Ultimate") {return;}
+
+                                const sourceTurn = generalInfo.sourceTurn;
+                                const buffSheet = sourceTurn.relicIseeSeesItSHEET;
+
+                                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                                if (buffCheck) {
+                                    const currentStacks = buffCheck.currentStacks;
+                                    if (currentStacks === 1) {
+                                        removeBuff(battleData,sourceTurn,buffCheck)
+                                        return;
+                                    }
+                                    else {
+                                        buffSheet.currentStacks = -1;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                                else {return;}
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "As Navigator Isee Sees It - ult end listener",
+                        },
+                    ]
+                },
+                {
+                    "trigger": "WaveStart",
+                    condition(battleData,generalInfo) {
+                        const currentWave = generalInfo.currentWave;
+                        if (currentWave != 1) {return;}
+
+                        let ownerRef = this.owners;
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        for (let owner of ownerRef) {
+                            let currentTurn = namedTurns[owner.slot];
+
+                            if (!currentTurn.relicIseeSeesItSHEET) {
+                                let relicNameRef = "As Navigator Isee Sees It";
+                                let pcRef = "4pc";
+                                const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
+                                let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                currentTurn.relicIseeSeesItSHEET = {
+                                    "statsOnHit": [DamageAll],
+                                    [DamageAll]: relicPathing[1],
+                                    "source": relicNameRef,
+                                    "sourceOwner": currentTurn.properName,
+                                    "buffName": buffNames.dmgBuff,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["Skill","Ultimate"],
+                                }
+                            }
+                            const buffSheet = currentTurn.relicIseeSeesItSHEET;
+
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                    },
+                    "target": "self",
+                    "priority": -80,
+                    "listenerName": "As Navigator Isee Sees It battlestart buff application",
+                    "owners": []
+                },
+            ],
+            "buffNames": {
+                "dmgBuff": "As Navigator Isee Sees It",
+            },
+        }
+    },
 
 
     //PLANAR SETS
