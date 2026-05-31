@@ -4007,7 +4007,6 @@ const turnLogicLightcones = {
                 
                 // updateBuff(battleData,sourceTurn,buffSheet);
 
-
                 const buffCheck = buffsRef[buffName];
                 if (buffCheck) {
                     const stackCount = buffCheck.currentStacks;
@@ -4079,7 +4078,15 @@ const turnLogicLightcones = {
                     if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
 
                     const debuffFunction = this.debuffFunction ??= turnLogicLightcones["Why Does the Ocean Sing"].skillFunctions.debuffChecker;
-                    debuffFunction(battleData,generalInfo,source,ownerSlot,ownerRank);
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.length) {
+                        for (let entity of sourceTurn) {
+                            debuffFunction(battleData,entity,source,ownerSlot,ownerRank);
+                        }
+                    }
+                    else {
+                        debuffFunction(battleData,sourceTurn,source,ownerSlot,ownerRank);
+                    }
                 },
                 "target": "self",
                 "listenerName": "Why Does the Ocean Sing - debuffs owned check (removal)",
