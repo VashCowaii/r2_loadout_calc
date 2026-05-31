@@ -41490,7 +41490,7 @@ const turnLogic = {
                         "expireType": null
                     }
 
-                    sourceTurn.sw999MMRScalarSHEET = {
+                    ATKObjects.sw999MMRScalarSHEET = {
                         "stats": null,
                         "multiplier": 1.15,
                         "source": "BasicATK",
@@ -41514,8 +41514,9 @@ const turnLogic = {
                 }
                 const battleValues = sourceTurn.battleValues;
                 battleValues.inBasicATK = true;
+                const finalSheet = ATKObjects.sw999MMRScalarSHEET;
+                sourceTurn.sw999MMRScalarSHEET = finalSheet;
                 poke("SW999GainMMR",battleData,{pointsGained: 0,sourceString:"BasicATK PseudoCheck"});
-                const finalSheet = sourceTurn.sw999MMRScalarSHEET;
                 const buffsObject = sourceTurn.buffsObject;
 
                 const hasCB = sourceTurn.certifiedBanger;
@@ -42936,7 +42937,7 @@ const turnLogic = {
 
                         const buffCheck = ownerTurn.buffsObject[finalSheet.buffName];
 
-                        const currentMulti = 1 + (0.15 * Math.floor(finalMMR/60))
+                        const currentMulti = 1 + (0.15 * Math.min(2,Math.floor(finalMMR/60)))
                         if (buffCheck) {
                             if (currentMulti === 1) {
                                 removeBuff(battleData,ownerTurn,finalSheet);
@@ -43211,6 +43212,7 @@ const turnLogic = {
             "lastRollValue": 0,
             "rollRNGIndex": false,
 
+            "inBasicATK": false,
             "ebaHitsLeft": 100,
             "ebaItemsLeft": 3,
             "ebaAttacksLeft": 0,
