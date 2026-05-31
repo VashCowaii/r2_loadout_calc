@@ -93,6 +93,7 @@ const dataListerObject = {
         "Those Many Springs": "Jiaoqiu",
         "Why Does the Ocean Sing": "Hysilens",
         "Never Forget Her Flame": "The Dahlia",
+        "Reforged in Hellfire": "Mortenax Blade",
 
         //PRESERVATION
         "Inherently Unjust Destiny": "Aventurine",
