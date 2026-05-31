@@ -2783,6 +2783,7 @@ const customMenu = {
                                 </div>
 
                                 ${turnLogic[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${maslow[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">No Maslow(Bug)</div>`}
 
                             </div>
                         </div>
@@ -2917,6 +2918,7 @@ const customMenu = {
                                 <div class="customMenuResultBodyTitle">${lcName}</div>
                                 <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
                                 ${turnLogicLightcones[lcName] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${maslow[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">No Maslow(Bug)</div>`}
                                 ${tagString != "" ? `<div class="itemSourceTagRow">${tagString}</div>` : ""}
                             </div>
                         </div>
@@ -2991,6 +2993,7 @@ const customMenu = {
                                 <div class="customMenuResultBodyTitle">${result.name}</div>
                                 <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
                                 ${turnLogicRelics[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${maslow[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">No Maslow(Bug)</div>`}
                             </div>
                         </div>
                     `;
