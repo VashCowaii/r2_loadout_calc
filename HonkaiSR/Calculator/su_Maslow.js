@@ -593,6 +593,38 @@ const maslowCategoryRelics = {
             addTeamWant: [],
         }
     },
+    "As Navigator Isee Sees It": {
+        2: {
+            gives: ["ATK"],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["Skill","Ultimate"],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        }
+    },
+    "Divine-Querying Master Smith": {
+        2: {
+            gives: ["HP"],
+            givesTeam: [],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["CritDMG"],
+            givesTeam: ["All"],
+            wants: [],
+            wantsTeam: [],
+            addTeamWant: [],
+        }
+    },
 }
 
 const maslowCategoryPlanars = {
