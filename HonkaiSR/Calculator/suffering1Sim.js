@@ -1657,10 +1657,14 @@ const sim = {
                     //     continue;
                     // }
 
+                    const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn,currentUltimate) ?? currentUltimate.energyCost;
+                    //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
+
                     if (isLog) {
                         logToBattle(battleData,{
                             logType: "UltimateStart",
                             name:characterName,
+                            isEnhanced: currentUltimate.isEnhanced,
                             eventOverrideImage: currentUltimate.eventOverrideImage,
                             target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                             AV: currentAV, ultName: currentUltyFunction.name});
@@ -1668,8 +1672,6 @@ const sim = {
                     }
                     // alliedPoolKeys
 
-                    const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn) ?? currentUltimate.energyCost;
-                    //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
                     const checkSpecial = currentUltimate.specialEnergyPoke;
                             // specialEnergyPoke: "SW999GainMMR",
                     if (checkSpecial) {

@@ -6543,6 +6543,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "BasicATKStart",
@@ -15393,6 +15394,8 @@ const turnLogic = {
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.isEnhanced = thisTurn.battleValues.isBonanzaActive;
                 return this.returnSkillCall;
             }
 
@@ -25449,6 +25452,7 @@ const turnLogic = {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
+                isEnhanced: true,
                 points: 0, 
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
@@ -26300,6 +26304,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 0, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -27021,6 +27026,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 0, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -27035,6 +27041,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: -1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -27063,6 +27070,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "BasicATKStart",
@@ -27960,6 +27968,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: -1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -36645,12 +36654,13 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            argentiUltimateCostCheck(battleData,sourceTurn) {
+            argentiUltimateCostCheck(battleData,sourceTurn,currentAction) {
                 const current = sourceTurn.currentEnergy;
                 const max = sourceTurn.maxEnergy;
 
                 const isEnhanced = current === max;
                 sourceTurn.thisUltEnhanced = true;
+                currentAction.isEnhanced = isEnhanced;
                 return isEnhanced ? max : max * 0.5;
             },
             argentiTechnique(battleData,target,sourceTurn) {

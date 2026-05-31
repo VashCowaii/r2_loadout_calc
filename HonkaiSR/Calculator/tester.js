@@ -3104,7 +3104,7 @@ const customMenu = {
                 eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
                     <img src="/HonkaiSR/${characterRef.preview}" class="turnOrderDisplayPreviewUltimate"/>
-                    <div class="miniActionNameBox">Ult</div>
+                    <div class="miniActionNameBox">Ult${action.isEnhanced ? " Enh." : ""}</div>
                 </div>`;
             }
             if (currentLogType === "ImmediateExtraTurn") {
