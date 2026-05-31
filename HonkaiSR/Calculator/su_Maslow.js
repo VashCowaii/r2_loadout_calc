@@ -17,7 +17,7 @@ const allNeedsKeys = [
     "WeaknessImplant",
 
     "Shred","PEN","Vuln","Debuff","Buff",
-    "TargetAllies","Aggro",
+    "Aggro",
 
     "Advance",
     "Shield","Healing","EnergyRegen","Cleanse",
@@ -68,7 +68,6 @@ const maslowFrontFacingTags = {
     "Vuln": "Vulnerability",
     "Debuff": "Debuff Source",
     "Buff": "Buff Source",
-    "TargetAllies": "Targets Allies",
 
     "Advance": "Action Advance",
     "Shield": "Shield Bonus",
@@ -158,7 +157,6 @@ const maslowCategoryRelics = {
             gives: [],
             givesTeam: ["CritDMG"],
             wants: [],
-            // wants: ["TargetAllies"],
             wantsTeam: [],
             addTeamWant: [],
         }
@@ -175,7 +173,7 @@ const maslowCategoryRelics = {
             gives: ["ATK"],
             givesTeam: [],
             wants: [],
-            wantsTeam: ["TargetAllies"],
+            wantsTeam: [],
             addTeamWant: [],
         }
     },
@@ -3452,7 +3450,7 @@ const maslowCharactersHarmony = {
         },
         6: {
             gives: [],
-            givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen","SPD","TargetAllies"],
+            givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen","SPD"],
             wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             addTeamWant: [],
