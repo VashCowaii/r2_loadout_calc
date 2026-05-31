@@ -776,6 +776,13 @@ const maslowCategoryPlanars = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "City of Converging Stars": {
+        gives: ["ATK"],
+        givesTeam: ["CritDMG"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     
 }
 

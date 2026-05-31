@@ -74,6 +74,11 @@
         <li>Fixed a visual issue where the Aha Instant ending and other various inserted abilities that aren't abilities, weren't displaying with the insert diamond on their action bar, and instead still displayed the semicircle as if a turn-activated ability.</li>
         <li>Fixed an issue where Baptism of Pure Thought could attempt to apply 0 stacks of its bonus when the owner was attacking an enemy that had no debuffs. This is more on the side of a visual bug if anything since the stat bonus multiplied by a stack count of 0 resulted in a bonus of 0, but was a bug all the same in the lightcone's code.</li>
         <li>Fixed an error where Sunday's technique when trying to enforce the one-time-per-battle instance of the ally-targeted bonus, could fail to remove itself from consideration and brick the battle sim.</li>
+        <li>Fixed missing Maslow definitions for the following relic sets:
+            <ul>
+                <li>City of Converging Stars</li>
+            </ul>
+        </li>
 
         <h4>Optimization</h4>
         <li>Slight optimization to Elation teams, I didn't realize I was sorting elation ID's every Aha Instant instead of just once at the start of each battle(I have a brain that works sometimes)</li>
