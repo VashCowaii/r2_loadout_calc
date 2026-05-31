@@ -43284,8 +43284,9 @@ const turnLogic = {
             this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
+            "FUA": "Enemies (On-Field)",
             "Skill": "Enemies (On-Field)",
-            // "Ultimate": "Allies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -44294,7 +44295,7 @@ const turnLogic = {
                                 // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                                 target: this.target,
-                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
 
                                 elationForcedPunchline: null,
                             }
