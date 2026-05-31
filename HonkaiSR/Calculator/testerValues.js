@@ -346,6 +346,7 @@ const customDisplayValuesLog = {
 
 const permaConditionsTextLibrary = {
     "energyMaxed": "Energy: Current === Energy: Max",
+    "energyMaxedSpecial": "Special Energy: Current === Special Energy: Max",
     "energyHalf": "Energy Current >= (Energy Max * 0.5)",
     "energyMaxedCyrene": "First battle's ultimate: Energy: Current === Energy: Max<br>Any further ultimates: Energy Current >= 12",
     "atLeast1SP": "Skill Points: Current >= 1",
@@ -522,7 +523,14 @@ const conditionsCharacterDisplayWarning = {
     },
     "Yao Guang": defaultStandardAbilityDisplayWarnings,
     "Sparxie": defaultStandardAbilityDisplayWarnings,
-    "Silver Wolf LV.999": defaultStandardAbilityDisplayWarnings,
+    "Silver Wolf LV.999": {
+        hasEnhancedState: true,
+        "Skill": "Skill is disabled in the Enhanced State.",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedSpecial]
+    },
     "Trailblazer - Elation": defaultStandardAbilityDisplayWarnings,
     
     
