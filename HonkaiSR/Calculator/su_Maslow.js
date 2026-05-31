@@ -17,7 +17,7 @@ const allNeedsKeys = [
     "WeaknessImplant",
 
     "Shred","PEN","Vuln","Debuff","Buff",
-    "TargetAllies","Aggro",
+    "Aggro",
 
     "Advance",
     "Shield","Healing","EnergyRegen","Cleanse",
@@ -68,7 +68,6 @@ const maslowFrontFacingTags = {
     "Vuln": "Vulnerability",
     "Debuff": "Debuff Source",
     "Buff": "Buff Source",
-    "TargetAllies": "Targets Allies",
 
     "Advance": "Action Advance",
     "Shield": "Shield Bonus",
@@ -158,7 +157,6 @@ const maslowCategoryRelics = {
             gives: [],
             givesTeam: ["CritDMG"],
             wants: [],
-            // wants: ["TargetAllies"],
             wantsTeam: [],
             addTeamWant: [],
         }
@@ -175,7 +173,7 @@ const maslowCategoryRelics = {
             gives: ["ATK"],
             givesTeam: [],
             wants: [],
-            wantsTeam: ["TargetAllies"],
+            wantsTeam: [],
             addTeamWant: [],
         }
     },
@@ -776,6 +774,13 @@ const maslowCategoryPlanars = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "City of Converging Stars": {
+        gives: ["ATK"],
+        givesTeam: ["CritDMG"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     
 }
 
@@ -844,6 +849,13 @@ const maslowLightconesHunt = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "The Finale of a Lie": {
+        gives: ["CritRate","ATK"],
+        givesTeam: ["Vuln"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     
     //4star
     "Final Victor": {
@@ -897,6 +909,13 @@ const maslowLightconesHunt = {
     },
     "Swordplay": {
         gives: ["All"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "See You at the End": {
+        gives: ["CritDMG","Skill","FUA"],
         givesTeam: [],
         wants: [],
         wantsTeam: [],
@@ -1592,6 +1611,13 @@ const maslowLightconesRemembrance = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "The Story's Next Page": {
+        gives: ["HP","Healing"],
+        givesTeam: ["All"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
 
     //3star
     "Reminiscence": {
@@ -1604,6 +1630,13 @@ const maslowLightconesRemembrance = {
     "Reminiscence": {
         gives: ["EnergyRegen","SkillPoints"],
         givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Shadowburn": {
+        gives: ["EnergyRegen"],
+        givesTeam: ["SkillPoints"],
         wants: [],
         wantsTeam: [],
         addTeamWant: [],
@@ -1700,6 +1733,13 @@ const maslowLightconesAbundance = {
     "What Is Real?": {
         gives: ["Break","HealingSource"],
         givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Shared Feeling": {
+        gives: ["Healing"],
+        givesTeam: ["EnergyRegen"],
         wants: [],
         wantsTeam: [],
         addTeamWant: [],
@@ -2000,6 +2040,61 @@ const maslowCategoryLightcones = {
 
 const maslowCharactersNihility = {
     //NIHILITY
+    "Acheron": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: ["Debuff"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: ["Debuff","Vuln"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: ["Debuff","Vuln"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: ["Debuff","Vuln"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
     "Black Swan": {
         defaultMainSubs: ["SPDFlat","ATK%","EffectHitRate","DamageBreak"],
         defaultTrashSub: ["ATKFlat","HP%","EffectRES","HPFlat"],
@@ -3355,7 +3450,7 @@ const maslowCharactersHarmony = {
         },
         6: {
             gives: [],
-            givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen","SPD","TargetAllies"],
+            givesTeam: ["AdditionalDMG","ATK","All","EnergyRegen","SPD"],
             wants: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             wantsTeam: ["ATK",...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
             addTeamWant: [],
@@ -4029,6 +4124,61 @@ const maslowCharactersHunt = {
             givesTeam: ["True","Debuff"],
             wants: ["ATK","Quantum","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
             wantsTeam: ["ATK","Quantum","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
+    "Dr. Ratio": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource","Debuff"],
+            wants: ["ATK","Imaginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imarginary","Skill","Ultimate","Debuff",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
             addTeamWant: [],
         },
     },

@@ -1669,6 +1669,7 @@ const customMenu = {
                         <div class="buffNameBreakdownClickerHeaderBox">
                             <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
                                 <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
+                                    ${currentBuff.buffDisplayIcon ? `<img src="/HonkaiSR/${currentBuff.buffDisplayIcon}" class="buffDOTIcon"/>` : ""}
                                     ${dotStringer}${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
                                 </div>
                                 ${currentBuff.expireType ? `
@@ -2782,6 +2783,7 @@ const customMenu = {
                                 </div>
 
                                 ${turnLogic[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${maslow[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">No Maslow(Bug)</div>`}
 
                             </div>
                         </div>
@@ -2843,6 +2845,7 @@ const customMenu = {
                 || (lowercaseInput === "battlepass" && compare.battlePassLCList.has(lcEntry))
                 || (lowercaseInput === "starlight" && compare.starlightLCList.has(lcEntry))
                 || (lowercaseInput === "stellar" && compare.stellarLCList.has(lcEntry))
+                || !maslow[lcEntry]
                 ;
 
 
@@ -2916,6 +2919,7 @@ const customMenu = {
                                 <div class="customMenuResultBodyTitle">${lcName}</div>
                                 <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
                                 ${turnLogicLightcones[lcName] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${maslow[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">No Maslow(Bug)</div>`}
                                 ${tagString != "" ? `<div class="itemSourceTagRow">${tagString}</div>` : ""}
                             </div>
                         </div>
@@ -2952,7 +2956,9 @@ const customMenu = {
                 let joinedDesc = currentSet.desc[0] + (currentSet.desc.length > 1 ? currentSet.desc[1] : "");//wanna search 2pc and 4pc at once, if applicable 
 
                 //skip any relic name or desc that does NOT contain our search, and forced lowercase just to avoid headaches
-                let fuzzy = setEntry.toLowerCase().includes(currentInput) || joinedDesc.toLowerCase().includes(currentInput);
+                let fuzzy = setEntry.toLowerCase().includes(currentInput) 
+                    || joinedDesc.toLowerCase().includes(currentInput)
+                    || !maslow[currentSet.name];
                 if (!fuzzy && currentInput != "") {continue;}
 
                 //skip reg relics on a planar search, and skip planars on a relic search, bc planars never have more than one description length should be 1(hopefully, unless I screwed up parsing)
@@ -2990,6 +2996,7 @@ const customMenu = {
                                 <div class="customMenuResultBodyTitle">${result.name}</div>
                                 <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
                                 ${turnLogicRelics[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                                ${maslow[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">No Maslow(Bug)</div>`}
                             </div>
                         </div>
                     `;
@@ -3103,7 +3110,7 @@ const customMenu = {
                 eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
                     <img src="/HonkaiSR/${characterRef.preview}" class="turnOrderDisplayPreviewUltimate"/>
-                    <div class="miniActionNameBox">Ult</div>
+                    <div class="miniActionNameBox">Ult${action.isEnhanced ? " Enh." : ""}</div>
                 </div>`;
             }
             if (currentLogType === "ImmediateExtraTurn") {
@@ -3166,7 +3173,6 @@ const customMenu = {
                     
                     ${action.isInsertedAbility ? `<div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemyInsert" : "weirdSideSemiCircleThingerAllyInsert"}"></div>` 
                         : `<div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>`}
-
 
                     ${action.isEnemy ? `<img src="/HonkaiSR/${isEvent ? isEvent : `misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}`}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? isEvent : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventAction" : "turnOrderDisplayPreviewUltimate"}"/>`}
                     <div class="miniActionNameBox">${currentLogType === "SummonOnFieldAdjustment" ? (action.summonWas === "Apply" ? "Summon" : "Died") : ""}${action.isEnemy ? "Attack" : basicMiniAction[currentLogType]}${action.isEnhanced ? " Enh." : ""}</div>
@@ -4413,6 +4419,12 @@ const userTriggers = {
                     energyColor1: "#856EFF",
                     energyColor2: "#EC97FF"
                 },
+
+                "Acheron": {
+                    energyName: "Slashed Dream",
+                    energyColor1: "#CC7CFF",
+                    energyColor2: "#8E55FB"
+                },
                 
             }
             const specialEnergyDisplayFunctions = {
@@ -4423,6 +4435,36 @@ const userTriggers = {
                             ${customEnergyBar[action.name] ? customEnergyBar[action.name].fillFunction(turnRef,specialEnergyData) : customEnergyBar.STANDARDCIRCLEBAR(turnRef,specialEnergyData)}
                             <img src="/HonkaiSR/${characters[action.name].traces.Point03.icon}" class="actionDetailHeaderRowCharacterEnergyImage"/>
     
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
+                            </div>
+                        </div>`
+                },
+                "Acheron"(turnRef,action) {
+
+                    let slashStringer = "";
+                    const current = turnRef.specialEnergyCurrent;
+
+                    const filled = "SpecialSpPoint04_Acheron";
+                    const empty = "SpecialSpPoint02_Acheron";
+
+                    for (let i=1;i<=9;i++) {
+                        const isFilled = current >= i;
+                        slashStringer += `<img src="/HonkaiSR/misc/acheron/${isFilled ? filled : empty}.png" class="${isFilled ? "acheronSlashIconSmol" : "acheronSlashIcon"}" style="transform: translate(-50%,-50%) rotate(${(i-1)*40}deg) translate(${isFilled ? 15 : 17}%,-${isFilled ? 70 : 82}%)"/>`
+                    }
+                    const max = turnRef.specialEnergyMax;
+
+                    if (current === max) {
+                        slashStringer = `<img src="/HonkaiSR/misc/acheron/UI_UltraSp_AcheronRed.png" class="actionDetailHeaderRowCharacterCUSTOMEnergyImage"/>
+                            <img src="/HonkaiSR/misc/acheron/TempSpecialSpBlackHole01_Acheron.png" class="acheronCenterVortex"/>`
+                    }
+                    else {slashStringer = `<img src="/HonkaiSR/misc/acheron/TempSpecialSpBlackHole01_Acheron.png" class="acheronCenterVortex"/>` + slashStringer;}
+
+                    return `
+                        <div class="actionDetailHeaderRowCharacterCUSTOMEnergyBox">
+                            ${slashStringer}
+                            
                             <div class="actionDetailHeaderRowCharacterEnergyValueBox">
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
@@ -4846,6 +4888,7 @@ const userTriggers = {
                             <img src="/HonkaiSR/${characters[action.sourceOwner] ? characters[action.sourceOwner].icon : (graphs.summonCustomImages[action.sourceOwner] ?? (isEnemySourceOwnerBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default))}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
                             ${sourceNumber ? `<div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${sourceNumber}</div>` : ""}
                         </div>` : ""}
+                        ${action.buffDisplayIcon ? `<img src="/HonkaiSR/${action.buffDisplayIcon}" class="characterDisplayLogStatIcon"/>` : ""}
                         <img src="/HonkaiSR/misc/UpArrowBuffGain.png" class="characterDisplayLogStatIcon"/>
                         <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                             ${action.name.toLowerCase().includes("enemy") ? `

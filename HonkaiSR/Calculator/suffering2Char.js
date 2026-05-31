@@ -209,6 +209,13 @@ const battleActions = {
         // const buffName = buffSheet.buffName;
         const {buffName,isShield,isDOT,isDebuff,maxStacks} = buffSheet;
 
+        const isBatchDebuff = !ignoreDebuffPokes && isDebuff;
+        const ignoreSinglePokes = ignoreDebuffPokes || isBatchDebuff;
+
+        // sourceTurnArray
+        
+        // if (!ignoreDebuffPokes) {poke("DebuffAppliedBatch",battleData,{sourceTurn,currentReference},sourceTurn);}
+
         const hasStatsAtAll = buffSheet.stats != undefined || buffSheet.statsOnHit != undefined;
         for (let sourceTurn of sourceTurnArray) {
             let buffRef = sourceTurn.buffsObject;
@@ -240,7 +247,7 @@ const battleActions = {
             // const maxStacks = currentReference.maxStacks;
             // const currentStacks = currentReference.currentStacks;
             if (!buffExisted) {//if it doesn't exist at all yet and we're applying, then make it
-                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
                 changeStats = newCheck.changeStats;
                 timesToApply = newCheck.timesToApply;
             }
@@ -249,7 +256,7 @@ const battleActions = {
                     if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                     continue;
                 }
-                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
                 if (existsCheck) {
                     changeStats = existsCheck.changeStats;
                     timesToApply = existsCheck.timesToApply;
@@ -260,6 +267,8 @@ const battleActions = {
                 buffStatChange(battleData,sourceTurn,buffSheet,currentReference,timesToApply,1,ignoreFamilyPokes);
             }
         }
+
+        if (isBatchDebuff) {poke("DebuffApplied",battleData,{sourceTurn: sourceTurnArray, currentReference: buffSheet},null);}
     },
     buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield) {
         // const maxStacks = currentReference.maxStacks;
@@ -316,7 +325,7 @@ const battleActions = {
                 poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element:null},sourceTurn);
             }
         }//we add a debuff to the target's counter only when a new one is applied, not when stacked though that might bite me later I guess, idk if stacks count or unique debuffs each
-        if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Apply", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: timesToApply});}
+        if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Apply", isShield,oldShield,buffDisplayIcon: currentReference.buffDisplayIcon,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: timesToApply});}
 
         // currentReference.expireType != "StartTurn"//EndTurn
         // const expireType = currentReference.expireType != undefined;
@@ -363,12 +372,12 @@ const battleActions = {
 
             currentReference.currentStacks = Math.max(1, Math.min(maxStacks, stackSumTemp));//pulling the stacks to apply from the sheet bc this can vary based on how many buff procs happen in a single action
             //right now this assumes that all stack values are uniform. If they end up pulling shit like TFD did with first stack x value then subsequent as y value, that's gonna suck
-            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Stack", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
+            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Stack",buffDisplayIcon: currentReference.buffDisplayIcon, isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
         }
         //if the buff exists, we're applying, and the max stacks are the same as current stack, then we REDO the duration based on the specification involved from the buff sheet
         //example usecase: archer's guardian buff when anyone gets skill points, expires at the end of his turn. But if it's his turn that he gets a skill point in, then it's the end of his NEXT turn
         else if (maxStacks <= currentStacks) {//I did <= to be safe, in theory we should never be less than current stacks due to the min operation in the above section
-            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
+            if (!silent && log) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew",buffDisplayIcon: currentReference.buffDisplayIcon, isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
             //no stat changes necessary, this is just reupping the buff duration, so we'll swap the AV applied, and source
             // return;//if all we did was renew and no added stacks, we can leave early
             return null
@@ -494,7 +503,7 @@ const battleActions = {
         if (!silent && log) {
             const isEnemy = sourceTurn.isEnemy;
             // console.log(buffSheet.source,buffSheet.sourceOwner)
-            logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
+            logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName,buffDisplayIcon: currentReference.buffDisplayIcon, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
         }
 
         const changeStats = currentReference.stats != undefined || currentReference.statsOnHit != undefined;
@@ -1909,8 +1918,10 @@ const battleActions = {
         
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+        
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
+        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
@@ -2280,8 +2291,9 @@ const battleActions = {
         targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+        
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
+        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
@@ -5144,6 +5156,29 @@ const battleActions = {
             }
         }
     },
+    getTechnique(battleData,ownerTurn,logicRef,techCount,isAttack,isDimension) {
+        let useTechnique = logicRef.useTechnique && battleData.techniquesAllowed;
+        if (!useTechnique) {return;}
+
+        let attackUsed = battleData.attackTechniqueUsed;
+        let dimensionUsed = battleData.dimensionTechniqueUsed;
+
+        if (isAttack && attackUsed) {return;}
+        if (isDimension && dimensionUsed) {return;}
+
+        const listenerToInject = logicRef.techniqueListener;
+        listenerToInject.ownerTurn = ownerTurn;
+        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+
+        if (techCount > 1) {
+            const listenerToInject = logicRef.techniqueListener2;
+            listenerToInject.ownerTurn = ownerTurn;
+            addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+        }
+
+        if (isAttack) {battleData.attackTechniqueUsed = true;}
+        if (isDimension) {battleData.dimensionTechniqueUsed = true;}
+    },
 }
 const pullSuperBreakDMGMulti = battleActions.pullSuperBreakDMGMulti;
 const pullBreakDMGMulti = battleActions.pullBreakDMGMulti;
@@ -5181,6 +5216,7 @@ const killDesignatedEnemies = battleActions.killDesignatedEnemies;
 const addListenerWithPriority = battleActions.addListenerWithPriority;
 const addListenerPREPPriority = battleActions.addListenerPREPPriority;
 const removeListener = battleActions.removeListenerInBattle;
+const getTechnique = battleActions.getTechnique;
 
 
 const turnLogic = {
@@ -5308,7 +5344,6 @@ const turnLogic = {
         "characterValues": {},
         "characterValuesBattle": {},
     },
-    //TODO: right now participant ID is assigned as a prebattlestart event, but the elation entity array is constructed in battleprep which is before, look into an earlier event assignment so we can skip sorting every time
     "Aha Instant": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -5355,7 +5390,7 @@ const turnLogic = {
                 battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                 poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: "Neutral", summonedBy: "Neutral", summonEvent: battleData.ahaInstantTURNEVENT});
 
-                logicRef.skillFunctions.updateAhaSPD(battleData,null,);
+                logicRef.skillFunctions.updateAhaSPD(battleData,null);
             },
             updateAhaSPD(battleData,currentTurn) {
                 const elationCharacters = battleData.elationEntityArray;
@@ -5443,7 +5478,7 @@ const turnLogic = {
                 // }
                 
                 const elationEntityArray = battleData.elationEntityArray;
-                elationEntityArray.sort((a, b) => a.participantID - b.participantID);
+                // elationEntityArray.sort((a, b) => a.participantID - b.participantID);
 
                 if (!battleData.elationSkillObject) {
                     const elationSkillObject = battleData.elationSkillObject ??= {};
@@ -5468,7 +5503,7 @@ const turnLogic = {
                 }
             },
             endAhaInstant(battleData,ahaTurn) {
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantEnd", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: false, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "AhaInstantEnd", name:"Aha Instant", target:"self", isEnemy: false, isCharacter: false, AV: battleData.sumAV, actionSlot:"Aha Instant"});}
                 
                 const forcedPunchline = battleData.punchlineForced;
                 const punchlineConsume = battleData.punchlineConsume;
@@ -5646,6 +5681,7 @@ const turnLogic = {
 
                     // if (elationCountBase) {
                     const createAha = this.createAha ??= turnLogic["Aha Instant"].skillFunctions.createAhaInstant;
+                    elationEntityArray.sort((a, b) => a.participantID - b.participantID);
                     battleData.elationEntityArray = elationEntityArray;
                     battleData.elationEntityNames = elationEntityNames;
                     createAha(battleData,generalInfo);
@@ -5676,10 +5712,28 @@ const turnLogic = {
                     
                     const turnExceptions = battleData.elationBangerTurnExceptions ??= this.turnExceptions;
                     poke("EvanesciaE6CBChanger",battleData,null);
+
+                    const listener1 = this.subListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,null);
                 },
                 "target": "self",
                 "listenerName": "BattleStart Punchline generation",
                 "ownerTurn": {},
+                "subListeners": [
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat change
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (battleData.elationEntityNames[sourceTurn.name]) {
+                                const updateAhaSPD = this.updateAhaSPD ??= turnLogic["Aha Instant"].skillFunctions.updateAhaSPD;
+                                updateAhaSPD(battleData,sourceTurn);
+                            }
+                        },
+                        "priority": Infinity,
+                        "target": "self",
+                        "listenerName": "Aha Instant SPD Controller",
+                    },
+                ]
             },
             {
                 "trigger": "WaveStart",
@@ -5707,18 +5761,6 @@ const turnLogic = {
                 "priority": -90,
                 "listenerName": "BattleStart Punchline generation",
                 "ownerTurn": {},
-            },
-            {
-                "trigger": "UpdateStatSPD",//SPD stat change
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (battleData.elationEntityNames[sourceTurn.name]) {
-                        const updateAhaSPD = this.updateAhaSPD ??= turnLogic["Aha Instant"].skillFunctions.updateAhaSPD;
-                        updateAhaSPD(battleData,sourceTurn);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Aha Instant SPD Controller",
             },
             {
                 "trigger": "ExtraTurnEnd",//SPD stat change
@@ -5778,9 +5820,6 @@ const turnLogic = {
                 "target": "self",
                 "listenerName": "Aha Instant end queue",
             },
-
-
-            
         ],
         "finalListeners": [],
         "characterValues": {},
@@ -6504,6 +6543,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "BasicATKStart",
@@ -6973,20 +7013,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Novel Concoction B.E. check",
@@ -7623,22 +7650,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Huohuo Passive",
@@ -8278,22 +8290,7 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Natasha Passive",
@@ -8997,22 +8994,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Lynx Passive",
@@ -9737,23 +9719,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
                     
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Luocha Passive",
@@ -10669,23 +10635,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Silver Wolf Passive",
@@ -10891,7 +10841,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "HitEnemyStart",
+                "trigger": "HitEnemyStart",//TODO: revisit later
                 condition(battleData,generalInfo) {
                     const sourceTurn = generalInfo.sourceTurn;
                     const targetsGotHit = generalInfo.targetsGotHit;
@@ -11505,23 +11455,7 @@ const turnLogic = {
                     const listener8 = passiveListeners[7];
                     addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Kafka Passive",
@@ -11621,7 +11555,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "HitEnemyStart",
+                        "trigger": "HitEnemyStart",//TODO: this is explicitly part of the ability instances, not part of their start/end or attack pokes
                         condition(battleData,generalInfo) {
                             // let ownerRef = this.owners;
                             let ownerTurn = this.ownerTurn;
@@ -12591,24 +12525,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-                        // const gallagherTechnique = this.gallagherTechnique ??= logicRef.skillFunctions.gallagherTechnique;
-                        // gallagherTechnique(battleData,"enemy",ownerTurn);
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Hysilens Passive",
@@ -13604,23 +13521,7 @@ const turnLogic = {
                     const listener10 = passiveListeners[9];
                     addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Black Swan Passive",
@@ -14583,24 +14484,7 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        // const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        // listenerToInject.ownerTurn = ownerTurn;
-                        // addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    // getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Welt Passive",
@@ -15262,24 +15146,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Pela Passive",
@@ -15527,6 +15394,8 @@ const turnLogic = {
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.isEnhanced = thisTurn.battleValues.isBonanzaActive;
                 return this.returnSkillCall;
             }
 
@@ -15829,23 +15698,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Topaz Passive",
@@ -16807,28 +16660,7 @@ const turnLogic = {
                     const listener4 = passiveListeners[3];
                     addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
                 "listenerName": "Archer Passive",
@@ -17506,28 +17338,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
                 "listenerName": "Seele Passive",
@@ -18111,6 +17922,800 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Dr. Ratio": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            const call1 = this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.ratioSkill, 
+                poolKey: this.abilityTargetPools.Skill,
+                target: "enemy",
+            }
+            call1.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.ratioBasic, 
+                poolKey: this.abilityTargetPools.BasicATK,
+                target: "enemy",
+            }
+            call3.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            ratioBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.ratioBasicREF ??= ATKObjects["Basic ATK"]["Mind is Might"].variant1;
+
+                if (!ATKObjects.ratioBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.ratioBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Basic","Imaginary"];
+                    const actionTags = ["Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ratioBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            ratioFUA(battleData,targetTurn,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                const battleValues = sourceTurn.battleValues;
+                if (battleValues.shouldQueueFUA) {
+                    battleValues.shouldQueueFUA = false;
+                    battleValues.wisemanStacks = Math.max(0, battleValues.wisemanStacks - 1);
+                    battleValues.wisemanStackDebt = Math.max(0, battleValues.wisemanStackDebt - 1);
+
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point03.icon,sourceName: sourceTurn.properName, source:"Launched Ult-Based FUA", bodyText: `Wiseman's Folly: ${battleValues.wisemanStacks +1} --> ${battleValues.wisemanStacks}`});
+                    }
+                }
+
+                // const valuesRef = sourceTurn.battleValues;
+                // const oldValue = valuesRef.charge;
+                // valuesRef.charge -= 1;
+                // valuesRef.chargeDebt -= 1;
+                // if (battleData.isLoggyLogger) {
+                //     // if (newCharge > oldValue) {
+                //     //     sourceTurn.archerFUAStackSum ??= 0;
+                //     //     sourceTurn.archerFUAStackSum += newCharge - oldValue;
+                        
+                //     // }
+                //     logToBattle(battleData,{
+                //         logType: "SUMMARY:SUM",
+                //         function: "archerFUAStackSum",
+                //         AV: battleData.sumAV,
+                //         currentValue: valuesRef.charge,
+                //         currentSumValue: sourceTurn.archerFUAStackSum,
+                //         currentAddedValue: valuesRef.charge - oldValue
+                //     });
+                // }
+
+                let skillRef = ATKObjects.ratioFUAREF ??= ATKObjects.Talent["Cogito, Ergo Sum"].variant1;
+
+                if (!ATKObjects.ratioFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = ATKObjects.ratioFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","FUA","Imaginary"];
+                    const actionTags = ["FUA","Attack","RatioFUA"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioFUAATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        compositeCacheTag
+                    }
+                }
+
+
+                if (rank >= 4) {
+                    updateEnergy(battleData,15,sourceTurn,false,"Dr. Ratio E4");
+                }
+                let ATKObject = ATKObjects.ratioFUAATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            ratioSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.ratioSkillREF ??= ATKObjects["Skill"]["Intellectual Midwifery"].variant1;
+
+                if (!ATKObjects.ratioSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let characterName = sourceTurn.properName;
+                    let values = ATKObjects.ratioSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Skill","Imaginary"];
+                    const actionTags = ["Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    //construct both the buff sheet and the atk object in one go on the first skill usage
+                    // let buffName = logicRef.buffNames.caladbolg;
+                    // let e6 = sourceTurn.rank >= 6;
+                    ATKObjects.ratioSkillDEBUFFSHEET = {
+                        "stats": [EffectRES],
+                        [EffectRES]: -0.10,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.skillDebuff,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn"
+                    }
+                }
+                // const battleValues = sourceTurn.battleValues;
+                let ATKObject = ATKObjects.ratioSkillATKOBJECT;
+
+                const battleValues = sourceTurn.battleValues;
+                const currentCycler = battleValues.skillChanceCycler;
+
+                const primaryTarget = battleData.primaryTarget;
+                const preCheckCounter = primaryTarget.debuffCounter;
+
+                const fuaChance = 2 + Math.min(3, preCheckCounter);
+                const fuaPass = fuaChance >= currentCycler;
+                //ratios FUA is based on 20% increments, starting at a base of 40% which is increased by 20% per debuff on the target at THIS point
+                //we treat each 20% increment as 1, between 1 and 5, so a cycler value of 1 will mean that a chance of 20% or higher will pass that FUA
+                //but a cycler value of 5 would mean that an 80% chance would fail, since the chance representation would be 4 which is less than 5
+                //and then every skill we increment the cycler to ensure it changes as you go throughout the battle, which can allow the user to fail
+                //a FUA, but still allow debuff count to avoid failure wherever possible(and likely)
+
+                if (preCheckCounter && !sourceTurn.ratioSummationFinished) {
+                    const ratioSummationSHEET = ATKObjects.ratioSummationSHEET;
+
+                    ratioSummationSHEET.currentStacks = preCheckCounter;
+                    updateBuff(battleData,sourceTurn,ratioSummationSHEET);
+                }
+                
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                const debuffSheet = ATKObjects.ratioSkillDEBUFFSHEET;
+                updateBuff(battleData,primaryTarget,debuffSheet);
+
+                battleValues.skillChanceCycler += 1;
+                if (fuaPass) {poke("RatioQueueFUA",battleData,null,null);}
+            },
+            ratioUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const rank = sourceTurn.rank;
+
+                // let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.ratioUltimateREF ??= ATKObjects.Ultimate["Syllogistic Paradox"].variant1;
+
+                if (!ATKObjects.ratioUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ultimate","Imaginary"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ratioUltimateATKOBJECT;
+                
+                const primaryTarget = battleData.primaryTarget;
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+
+                if (!primaryTarget.isDead) {
+                    const wisemanSheet = ATKObjects.ratioWisemanSHEET;
+                    const wisemanName = wisemanSheet.buffName;
+
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        const hadWiseman = enemy.buffsObject[wisemanName];
+                        if (hadWiseman) {removeBuff(battleData,enemy,hadWiseman);}
+                        break;//there would only ever be one other entity with the wiseman application, can break if found ever
+                    }
+
+                    updateBuff(battleData,primaryTarget,wisemanSheet);
+                    const battleValues = sourceTurn.battleValues;
+
+                    const oldWiseman = battleValues.wisemanStacks;
+                    battleValues.wisemanStacks = rank >= 6 ? 3 : 2;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point03.icon,sourceName: sourceTurn.properName, source:"Reset Wiseman Stacks", bodyText: `Wiseman's Folly: ${oldWiseman} --> ${battleValues.wisemanStacks}`});
+                    }
+                }
+
+                sourceTurn.ultyQueued = false;
+            },
+            ratioTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.ratioTechREF ??= ATKObjects.Technique["Mold of Idolatry"].variant1;
+
+                if (!ATKObjects.ratioTechSPDSHEET) {
+                    // let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    
+                    ATKObjects.ratioTechSPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: -0.15,
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.techSPD,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn",
+                    }
+                }
+                let buffSheet = ATKObjects.ratioTechSPDSHEET;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
+            },
+            ratioE2DMG(battleData,generalInfo,allyTurn,targetsGotHit) {
+                const logicRef = turnLogic[allyTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.ratioE2DMGREF) {
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const actionTags = ["Additional"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + allyTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.ratioE2DMGREF = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            additional: 0.20
+                        },
+                        scalar,
+                        element: "Imaginary",//override for additional dmg, not used otherwise
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.ratioE2DMGREF;
+
+                const allyAssignedName = allyTurn.properName;
+                const addedWrapper = battleActions.additionalDMGWrapper;
+
+                const enemyBasedTurns = battleData.enemyBasedTurns;
+                for (let enemySlot in targetsGotHit) {
+                    const currentEnemy = enemyBasedTurns[enemySlot];
+
+                    let debuffCount = Math.min(4, currentEnemy.debuffCounter);
+
+                    for (let i=0;i<debuffCount;i++) {
+                        addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,currentEnemy,"E2: The Divine Is in the Details");
+                    }
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    ATKObjects.ratioSummationSHEET = {
+                        "stats": [CritRateBase,CritDamageBase],
+                        [CritRateBase]: 0.025,
+                        [CritDamageBase]: 0.05,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.summation,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 6 + (rank >= 1 ? 4 : 0),
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    ATKObjects.ratioWisemanSHEET = {
+                        "stats": null,
+                        "source": "Ultimate",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.wiseman,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    
+                    //e2
+                    if (rank >= 2) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    //trace deduction
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const buffSheet = this.ratioE6Buff ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.50,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.e6FUA,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["RatioFUA"],
+                        }
+                        //this isn't for ANY FUA dmg, only ratio's talent FUA specifically
+
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
+                },
+                "target": "self",
+                "listenerName": "Dr. Ratio Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AdditionalTriggerAttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let characterName = ownerTurn.properName;
+
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Talent") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let enemiesAttackedThisAction = generalInfo.targetsGotHit;
+        
+                            const ratioE2DMG = this.ratioE2DMG ??= turnLogic[characterName].skillFunctions.ratioE2DMG;
+                            ratioE2DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Ratio E2 additional DMG controller",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const traceDebuffDMG = this.traceDebuffDMG ??= {
+                                "statsOnHit": [DamageAll],
+                                [DamageAll]: 0.10,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.deduction,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+        
+                            let targetTurn = generalInfo.targetTurn;
+                            const debuffCount = Math.min(5, targetTurn.debuffCounter);
+        
+                            const buffCheck = ownerTurn.buffsObject[traceDebuffDMG.buffName];
+        
+                            if (buffCheck) {
+                                if (debuffCount >= 3) {
+                                    const stackCount = buffCheck.currentStacks;
+                                    if (stackCount === debuffCount) {return;}
+                                    else {
+                                        const stackDiff = debuffCount - stackCount;
+                                        traceDebuffDMG.currentStacks = stackDiff;
+                                        updateBuff(battleData,ownerTurn,traceDebuffDMG);
+                                    }
+                                }
+                                else {//if we had the buff but the target is sub3 debuffs, remove
+                                    removeBuff(battleData,ownerTurn,buffCheck);
+                                }
+                            }
+                            else if (debuffCount >= 3) {
+                                traceDebuffDMG.currentStacks = debuffCount;
+                                updateBuff(battleData,ownerTurn,traceDebuffDMG);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ratio Deduction enemy debuff checker",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+        
+                            let ownerTurn = this.ownerTurn;
+                            const ratioSummationSHEET = turnLogic[ownerTurn.properName].ATKObjects.ratioSummationSHEET;
+                            ratioSummationSHEET.currentStacks = 4;
+
+                            updateBuff(battleData,ownerTurn,ratioSummationSHEET);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Ratio E1 +4 summation battlestart",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "RatioQueueFUA",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let characterName = ownerTurn.properName;
+                    
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[characterName].skillFunctions.ratioFUA,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: characterName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "enemy",
+                "listenerName": "Ratio - Follow-up queued - Talent",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.properName === ownerTurn.properName) {return;}//can't be ratio himself
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetHitCount = generalInfo.targetsGotHit[targetTurn.name];
+
+                    if (targetHitCount != 1) {return;}//only evaluate first hits, as that is when the enemy is considered being attacked, esp for bounce type stuff
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
+                        battleValues.shouldQueueFUA = true;
+                        battleValues.wisemanStackDebt += 1;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Ratio - Wiseman FUA trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}//can't be an enemy
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (battleValues.shouldQueueFUA) {
+                        poke("RatioQueueFUA",battleData,null,null);
+                    }
+                    
+                },
+                "target": "self",
+                "listenerName": "Ratio - Wiseman FUA trigger",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+
+                    const wisemanSheet = this.wisemanSheet ??= turnLogic[ownerTurn.properName].ATKObjects.ratioWisemanSHEET;
+                    const wisemanName = wisemanSheet.buffName;
+
+                    const targetTurn = generalInfo.enemyKilled;
+                    const enemyHadWiseman = targetTurn.buffsObject[wisemanName];
+
+                    if (enemyHadWiseman) {
+                        const battleValues = ownerTurn.battleValues;
+
+                        const oldWiseman = battleValues.wisemanStacks;
+                        battleValues.wisemanStacks = 0;
+                        battleValues.wisemanStackDebt = 0;
+                        if (battleData.isLoggyLogger) {
+                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:"Target with Wiseman Died", bodyText: `Wiseman's Folly: ${oldWiseman} --> ${battleValues.wisemanStacks}`});
+                        }
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Ratio - enemy died with wiseman listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.ratioUltimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Dr. Ratio - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.ratioTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Ratio Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "skillChanceCycler": 1,
+            "wisemanStacks": 0,
+            "wisemanStackDebt": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "skillDebuff": "Effect RES Reduction (Ratio)",
+            "summation": "Summation (Ratio)",
+            "deduction": "Deduction (Ratio)",
+            "wiseman": "Wiseman's Folly",
+            "techSPD": "Mold of Idolatry (Ratio)",
+        },
+        "characterValuesBattle": {},
+    },
 
     //Harmony
     "Tingyun": {
@@ -18504,23 +19109,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Tingyun Passive",
@@ -19105,23 +19694,7 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Bronya Passive",
@@ -19852,12 +20425,14 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                let attackEndings = battleData.battleListeners.AbilityStart ??= [];
+                // let attackEndings = battleData.battleListeners.AbilityStart ??= [];
                 
                 const listenerToInejct = ATKObjects.techListener ??= logicRef.listenersToInjectLater.techniqueAllyTarget;
-                listenerToInejct.ownerTurn = sourceTurn;
+                // listenerToInejct.ownerTurn = sourceTurn;
 
-                attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                // attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+
+                addListenerWithPriority(battleData,listenerToInejct,listenerToInejct.trigger,sourceTurn);
             },
             statCheck(battleData,currentTurn,sourceTurn) {
                 // sourceTurn.sundayTalentCRITe6SHEET
@@ -19923,23 +20498,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Sunday Passive",
@@ -20689,24 +21248,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Tribbie Passive",
@@ -21467,23 +22009,7 @@ const turnLogic = {
                     const listener2 = passiveListeners[1];
                     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Robin Passive",
@@ -21946,24 +22472,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Asta Passive",
@@ -22723,23 +23232,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Ruan Mei Passive",
@@ -23681,24 +24174,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Sparkle Passive",
@@ -24514,24 +24990,7 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Saber Passive",
@@ -24993,6 +25452,7 @@ const turnLogic = {
                 action: "BasicATK", 
                 isAttack: true,
                 isAbility: true,
+                isEnhanced: true,
                 points: 0, 
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
@@ -25455,24 +25915,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Blade Passive",
@@ -25861,6 +26304,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 0, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -26189,23 +26633,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Jingliu Passive",
@@ -26598,6 +27026,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 0, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -26612,6 +27041,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: -1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -26640,6 +27070,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: 1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "BasicATKStart",
@@ -27194,28 +27625,7 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-
-                        const listenerToInject2 = this.gallagherTechnique2 ??= logicRef.techniqueListener2;
-                        listenerToInject2.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject2,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
                 "listenerName": "Firefly Passive",
@@ -27558,6 +27968,7 @@ const turnLogic = {
                 isAttack: true,
                 isAbility: true,
                 points: -1, 
+                isEnhanced: true,
                 properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
@@ -28049,24 +28460,7 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Hook Passive",
@@ -29008,24 +29402,7 @@ const turnLogic = {
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "RMC Passive",
@@ -30392,23 +30769,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Aglaea Passive",
@@ -31894,24 +32255,7 @@ const turnLogic = {
                     const listener10 = passiveListeners[6];
                     addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Evernight Passive",
@@ -33277,23 +33621,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Hyacine Passive",
@@ -34754,23 +35082,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "DHPT Passive",
@@ -35708,23 +36020,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Aventurine Passive",
@@ -36358,12 +36654,13 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            argentiUltimateCostCheck(battleData,sourceTurn) {
+            argentiUltimateCostCheck(battleData,sourceTurn,currentAction) {
                 const current = sourceTurn.currentEnergy;
                 const max = sourceTurn.maxEnergy;
 
                 const isEnhanced = current === max;
                 sourceTurn.thisUltEnhanced = true;
+                currentAction.isEnhanced = isEnhanced;
                 return isEnhanced ? max : max * 0.5;
             },
             argentiTechnique(battleData,target,sourceTurn) {
@@ -36463,23 +36760,7 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Argenti Passive",
@@ -37200,21 +37481,7 @@ const turnLogic = {
                     const listener8 = passiveListeners[7];
                     addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
 
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Anaxa Passive",
@@ -38599,22 +38866,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Yao Guang Passive",
@@ -39706,22 +39958,7 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "Sparxie Passive",
@@ -40753,22 +40990,7 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    // let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        // && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        // battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
                 "listenerName": "EMC Passive",
@@ -41486,6 +41708,10 @@ const turnLogic = {
                 battleValues.godModeActive = false;
                 removeBuff(battleData,sourceTurn,buffSheet);
 
+                const elationSkillObject = logicRef.elationSkillObject;
+                elationSkillObject.isAttack = false;
+                elationSkillObject.isEnhanced = false;
+
                 const rank = sourceTurn.rank;
                 if (rank >= 1) {
                     let buffSheet = ATKObjects.sw999E1VulnSHEET;
@@ -42167,7 +42393,9 @@ const turnLogic = {
                 const battleValues = sourceTurn.battleValues;
                 battleValues.godModeActive = true;
 
-                poke("TargetAlly",battleData,{targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false});
+                const elationSkillObject = logicRef.elationSkillObject;
+                elationSkillObject.isAttack = true;
+                elationSkillObject.isEnhanced = true;
 
                 updateBuff(battleData,sourceTurn,buffSheet);
                 const rank = sourceTurn.rank;
@@ -42284,7 +42512,7 @@ const turnLogic = {
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
                         dontKeepNextWave: false,
-                        isAttack: true,
+                        isAttack: false,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
@@ -42337,22 +42565,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "SW999 Passive",
@@ -43859,22 +44072,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
-
-                    //technique
-                    let useTechnique = logicRef.useTechnique;
-                    let attackUsed = battleData.attackTechniqueUsed;
-                    // let dimensionUsed = battleData.dimensionTechniqueUsed;
-                    if (useTechnique 
-                        && !attackUsed 
-                        // && !dimensionUsed
-                        && battleData.techniquesAllowed) {
-
-                        // battleData.dimensionTechniqueUsed = true;
-                        battleData.attackTechniqueUsed = true;
-                        const listenerToInject = this.gallagherTechnique ??= logicRef.techniqueListener;
-                        listenerToInject.ownerTurn = ownerTurn;
-                        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
-                    }
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
                 "listenerName": "Evanescia Passive",
@@ -43900,7 +44098,7 @@ const turnLogic = {
                                 isEnhanced: false,
                                 isTieBreaker: false,
                                 isExtraTurn: true,
-                                skipEXDisplay: false,
+                                skipEXDisplay: true,
                                 allowUlts: false,
                                 decrementBuffs: false,
                                 extraTurnHasChoice: false,
@@ -43914,7 +44112,7 @@ const turnLogic = {
     
                                 properName: ownerTurn.properName,
                                 sourceTurn: null,
-                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+                                eventOverrideImage: "misc/evanescia/labubu.png",
     
                                 target: "enemy",
                                 poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
@@ -44342,924 +44540,4 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Z_Test": {
-        logic(thisTurn,battleData) {
-            return {action: "EndTurn"};
-        },
-        preLogic(thisTurn,battleData) {},
-        "skillFunctions": {
-            elationSkill(battleData,target,sourceTurn) {},
-        },
-        "listeners": [
-        ],
-        "ATKObjects": {},
-        "listenersBattle": [],
-        "buffsBattle": {},
-        "buffsBattleTemp": {},
-        "characterValues": {},
-        "useTechnique": true,
-        "techniqueType": "Support",
-        "buffNames": {},
-        "characterValuesBattle": {},
-    },
 }
-
-
-
-const elationTestChar = {
-    "internalID": 1502,
-    "name": "Z_Test",
-    "path": "Elation",
-    "element": "Physical",
-    "rarity": 5,
-    "energyMax": 180,
-    "baseStats": {
-      "ATKBase": 465.696,
-      "DEFBase": 654.885,
-      "HPBase": 1241.8560000000002,
-      "SPDBase": 101,
-      "CritRateBase": 0.05,
-      "CritDamageBase": 0.5,
-      "CharacterAggroBase": 100
-    },
-    "eidolons": [
-      {
-        "id": "150201",
-        "name": "Chuckle Chimes Where Jade Falls",
-        "rank": 1,
-        "desc": "In Aha's extra turn triggered by Ultimate, the fixed amount of Punchline taken into account increases to 40. When dealing Elation DMG, all ally targets ignore 20% of the target's DEF.",
-        "icon": "icon/skill/1502_rank1.png",
-        "paramsEido": [
-          0.2,
-          40
-        ],
-        "extraEffects": {
-          "Aha": {
-            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
-          },
-          "Extra Turn": {
-            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
-          },
-          "Punchline": {
-            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
-          },
-          "Elation DMG": {
-            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
-          }
-        },
-        "eidoAbility": "YaoGuang_YaoGuang_Eidolon1"
-      },
-      {
-        "id": "150202",
-        "name": "Blind Arrows Guided by Feathers",
-        "rank": 2,
-        "desc": "While the Zone is active, increases all ally targets' SPD by 12%, and additionally increases Elation by 16%.",
-        "icon": "icon/skill/1502_rank2.png",
-        "paramsEido": [
-          0.16,
-          0.12
-        ],
-        "eidoAbility": "YaoGuang_YaoGuang_Eidolon2"
-      },
-      {
-        "id": "150203",
-        "name": "Auspices Mirrored In Decalight",
-        "rank": 3,
-        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1502_skill.png"
-      },
-      {
-        "id": "150204",
-        "name": "Threads of Fate Colored by Plumes",
-        "rank": 4,
-        "desc": "In Aha's extra turn triggered by Yao Guang's Ultimate, the DMG dealt by all ally characters' Elation Skill becomes 150% of the original DMG.",
-        "icon": "icon/skill/1502_rank4.png",
-        "paramsEido": [
-          1.5
-        ],
-        "extraEffects": {
-          "Aha": {
-            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
-          },
-          "Extra Turn": {
-            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
-          }
-        },
-        "eidoAbility": "YaoGuang_YaoGuang_Eidolon4"
-      },
-      {
-        "id": "150205",
-        "name": "Bejeweled in Radiant Grace",
-        "rank": 5,
-        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1502_ultimate.png"
-      },
-      {
-        "id": "150206",
-        "name": "Ferried Along the Astral Arc",
-        "rank": 6,
-        "desc": "All ally targets' Elation DMG merrymakes by 25%. Increases the DMG multiplier of Yao Guang's Elation Skill by 100% of its original multiplier.",
-        "icon": "icon/skill/1502_rank6.png",
-        "paramsEido": [
-          0.25,
-          1
-        ],
-        "extraEffects": {
-          "Elation DMG": {
-            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
-          },
-          "Merrymake": {
-            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
-          }
-        },
-        "eidoAbility": "YaoGuang_YaoGuang_Eidolon6"
-      }
-    ],
-    "eidlonLevelBonuses": {
-      "3": {
-        "Basic ATK": 1,
-        "Skill": 2,
-        "Elation Skill": 1
-      },
-      "5": {
-        "Ultimate": 2,
-        "Talent": 2,
-        "Elation Skill": 1
-      }
-    },
-    "skills": {
-      "Basic ATK": {
-        "Whistlebolt Sings Joy": {
-          "variant1": {
-            "skillID": 150201,
-            "trigger": "Skill01",
-            "name": "Whistlebolt Sings Joy",
-            "type": "Blast",
-            "slot": "Basic ATK",
-            "desc": "Deals Physical DMG equal to #1[i]% of Yao Guang's ATK to one designated enemy and Physical DMG equal to #2[i]% of Yao Guang's ATK to targets adjacent to it. The Energy regenerated from Basic ATK increases to 30.",
-            "energyCost": null,
-            "energyRegen": 30,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 10,
-            "skillPointCost": 0,
-            "skillPointGain": 1,
-            "params": {
-              "1": [
-                0.45,
-                0.15
-              ],
-              "2": [
-                0.54,
-                0.18
-              ],
-              "3": [
-                0.63,
-                0.21
-              ],
-              "4": [
-                0.72,
-                0.24
-              ],
-              "5": [
-                0.81,
-                0.27
-              ],
-              "6": [
-                0.9,
-                0.3
-              ],
-              "7": [
-                0.99,
-                0.33
-              ],
-              "8": [
-                1.08,
-                0.36
-              ],
-              "9": [
-                1.17,
-                0.39
-              ],
-              "10": [
-                1.26,
-                0.42
-              ]
-            },
-            "element": "Physical",
-            "attackType": "Normal",
-            "skillEffect": "Blast",
-            "maxLevel": 10,
-            "configAbilityList": null,
-            "toughnessList": [
-              30,
-              0,
-              15
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Skill": {
-        "Decalight Unveils All": {
-          "variant1": {
-            "skillID": 150202,
-            "trigger": "Skill02",
-            "name": "Decalight Unveils All",
-            "type": "Support",
-            "slot": "Skill",
-            "desc": "Deploys a Zone for #1[i] turn(s). This duration decreases by 1 at the start of this unit's every turn. While the Zone is active, increases all allies' Elation by an amount equal to #2[f1]% of Yao Guang's Elation. After Yao Guang uses Basic ATK or Skill, gains #3[i] Punchline.",
-            "energyCost": null,
-            "energyRegen": 30,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 1,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                3,
-                0.1,
-                3
-              ],
-              "2": [
-                3,
-                0.11,
-                3
-              ],
-              "3": [
-                3,
-                0.12,
-                3
-              ],
-              "4": [
-                3,
-                0.13,
-                3
-              ],
-              "5": [
-                3,
-                0.14,
-                3
-              ],
-              "6": [
-                3,
-                0.15,
-                3
-              ],
-              "7": [
-                3,
-                0.1625,
-                3
-              ],
-              "8": [
-                3,
-                0.175,
-                3
-              ],
-              "9": [
-                3,
-                0.1875,
-                3
-              ],
-              "10": [
-                3,
-                0.2,
-                3
-              ],
-              "11": [
-                3,
-                0.21,
-                3
-              ],
-              "12": [
-                3,
-                0.22,
-                3
-              ],
-              "13": [
-                3,
-                0.23,
-                3
-              ],
-              "14": [
-                3,
-                0.24,
-                3
-              ],
-              "15": [
-                3,
-                0.25,
-                3
-              ]
-            },
-            "attackType": "BPSkill",
-            "skillEffect": "Support",
-            "maxLevel": 15,
-            "configAbilityList": null,
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Punchline": {
-                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
-              }
-            }
-          }
-        }
-      },
-      "Ultimate": {
-        "Hexagram of Feathered Fortune": {
-          "variant1": {
-            "skillID": 150203,
-            "trigger": "Skill03",
-            "name": "Hexagram of Feathered Fortune",
-            "type": "Support",
-            "slot": "Ultimate",
-            "desc": "Gains #1[i] Punchline. Aha immediately gains 1 extra turn where a fixed amount of #4[i] Punchline is taken into account. This turn, does not consume Punchline, and increases all allies' All-Type RES PEN by #2[f1]% for #3[i] turn(s).",
-            "energyCost": 180,
-            "energyRegen": 5,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                5,
-                0.1,
-                3,
-                20,
-                1
-              ],
-              "2": [
-                5,
-                0.11,
-                3,
-                20,
-                1
-              ],
-              "3": [
-                5,
-                0.12,
-                3,
-                20,
-                1
-              ],
-              "4": [
-                5,
-                0.13,
-                3,
-                20,
-                1
-              ],
-              "5": [
-                5,
-                0.14,
-                3,
-                20,
-                1
-              ],
-              "6": [
-                5,
-                0.15,
-                3,
-                20,
-                1
-              ],
-              "7": [
-                5,
-                0.1625,
-                3,
-                20,
-                1
-              ],
-              "8": [
-                5,
-                0.175,
-                3,
-                20,
-                1
-              ],
-              "9": [
-                5,
-                0.1875,
-                3,
-                20,
-                1
-              ],
-              "10": [
-                5,
-                0.2,
-                3,
-                20,
-                1
-              ],
-              "11": [
-                5,
-                0.21,
-                3,
-                20,
-                1
-              ],
-              "12": [
-                5,
-                0.22,
-                3,
-                20,
-                1
-              ],
-              "13": [
-                5,
-                0.23,
-                3,
-                20,
-                1
-              ],
-              "14": [
-                5,
-                0.24,
-                3,
-                20,
-                1
-              ],
-              "15": [
-                5,
-                0.25,
-                3,
-                20,
-                1
-              ]
-            },
-            "attackType": "Ultra",
-            "skillEffect": "Support",
-            "maxLevel": 15,
-            "configAbilityList": null,
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Punchline": {
-                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
-              },
-              "Aha": {
-                "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
-              },
-              "Extra Turn": {
-                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
-              },
-              "RES PEN": {
-                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
-              }
-            }
-          }
-        }
-      },
-      "Talent": {
-        "Behold Wherever Light Unfolds": {
-          "variant1": {
-            "skillID": 150204,
-            "trigger": "SkillP01",
-            "name": "Behold Wherever Light Unfolds",
-            "type": "Support",
-            "slot": "Talent",
-            "desc": "While Yao Guang holds \"Certified Banger\":\\nAfter an ally target uses an attack, triggers the \"Great Boon\" effect, dealing 1 additional instance of #1[f1]% Elation DMG of the corresponding Type to 1 random hit target. If this attack consumes Skill Points, then additionally triggers \"Great Boon\" 1 time.\\nWhen triggering the \"Great Boon\" effect, if the attacker's Elation is lower than that of Yao Guang, then this instance of Elation DMG will take Yao Guang's Elation into calculation.\\nTriggering the \"Great Boon\" effect is not considered as using 1 instance of attack.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                0.1
-              ],
-              "2": [
-                0.11
-              ],
-              "3": [
-                0.12
-              ],
-              "4": [
-                0.13
-              ],
-              "5": [
-                0.14
-              ],
-              "6": [
-                0.15
-              ],
-              "7": [
-                0.1625
-              ],
-              "8": [
-                0.175
-              ],
-              "9": [
-                0.1875
-              ],
-              "10": [
-                0.2
-              ],
-              "11": [
-                0.21
-              ],
-              "12": [
-                0.22
-              ],
-              "13": [
-                0.23
-              ],
-              "14": [
-                0.24
-              ],
-              "15": [
-                0.25
-              ]
-            },
-            "skillEffect": "Support",
-            "maxLevel": 15,
-            "configAbilityList": null,
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Certified Banger": {
-                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
-              },
-              "Elation DMG": {
-                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
-              }
-            }
-          }
-        }
-      },
-      "Technique": {
-        "Untethered Glimmer Sails Far": {
-          "variant1": {
-            "skillID": 150207,
-            "trigger": "SkillMaze",
-            "name": "Untethered Glimmer Sails Far",
-            "type": "Support",
-            "slot": "Technique",
-            "desc": "After using Technique, automatically triggers Skill 1 time at the start of the next battle without consuming any Skill Points. When Yao Guang is in the team, breaking destructible objects immediately grants Fortune Pouch, up to #1[i] within every Earth Week.",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                8
-              ]
-            },
-            "attackType": "Maze",
-            "skillEffect": "Support",
-            "maxLevel": 1,
-            "configAbilityList": null,
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Elation Skill": {
-        "Let Thy Fortune Burst in Flames": {
-          "variant1": {
-            "skillID": 150220,
-            "trigger": "Skill04",
-            "name": "Let Thy Fortune Burst in Flames",
-            "type": "AoE",
-            "slot": "Elation Skill",
-            "desc": "Inflicts \"Woe's Whisper\" on all enemies, lasting for #4[i] turn(s). Enemy targets under the \"Woe's Whisper\" state take #3[f1]% increased DMG. Deals #2[i]% Physical Elation DMG to all enemies. Then, deals #5[i] instance(s) of #6[i]% Physical Elation DMG to one random enemy.",
-            "energyCost": null,
-            "energyRegen": 5,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": 20,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": [
-                1,
-                0.5,
-                0.16,
-                3,
-                5,
-                0.1
-              ],
-              "2": [
-                1,
-                0.55,
-                0.16,
-                3,
-                5,
-                0.11
-              ],
-              "3": [
-                1,
-                0.6,
-                0.16,
-                3,
-                5,
-                0.12
-              ],
-              "4": [
-                1,
-                0.65,
-                0.16,
-                3,
-                5,
-                0.13
-              ],
-              "5": [
-                1,
-                0.7,
-                0.16,
-                3,
-                5,
-                0.14
-              ],
-              "6": [
-                1,
-                0.75,
-                0.16,
-                3,
-                5,
-                0.15
-              ],
-              "7": [
-                1,
-                0.8125,
-                0.16,
-                3,
-                5,
-                0.1625
-              ],
-              "8": [
-                1,
-                0.875,
-                0.16,
-                3,
-                5,
-                0.175
-              ],
-              "9": [
-                1,
-                0.9375,
-                0.16,
-                3,
-                5,
-                0.1875
-              ],
-              "10": [
-                1,
-                1,
-                0.16,
-                3,
-                5,
-                0.2
-              ],
-              "11": [
-                1,
-                1.05,
-                0.16,
-                3,
-                5,
-                0.21
-              ],
-              "12": [
-                1,
-                1.1,
-                0.16,
-                3,
-                5,
-                0.22
-              ],
-              "13": [
-                1,
-                1.15,
-                0.16,
-                3,
-                5,
-                0.23
-              ],
-              "14": [
-                1,
-                1.2,
-                0.16,
-                3,
-                5,
-                0.24
-              ],
-              "15": [
-                1,
-                1.25,
-                0.16,
-                3,
-                5,
-                0.25
-              ]
-            },
-            "element": "Physical",
-            "attackType": "ElationDamage",
-            "skillEffect": "AoEAttack",
-            "maxLevel": 15,
-            "configAbilityList": null,
-            "toughnessList": [
-              15,
-              60,
-              0
-            ],
-            "hitSplits": [],
-            "extraEffects": {
-              "Elation DMG": {
-                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
-              }
-            }
-          }
-        }
-      }
-    },
-    "traces": {
-      "Point01": {
-        "icon": "icon/skill/1502_basic_atk.png",
-        "skillRef": {
-          "skillName": "Whistlebolt Sings Joy",
-          "skillSlot": "Basic ATK"
-        }
-      },
-      "Point02": {
-        "icon": "icon/skill/1502_skill.png",
-        "skillRef": {
-          "skillName": "Decalight Unveils All",
-          "skillSlot": "Skill"
-        }
-      },
-      "Point03": {
-        "icon": "icon/skill/1502_ultimate.png",
-        "skillRef": {
-          "skillName": "Hexagram of Feathered Fortune",
-          "skillSlot": "Ultimate"
-        }
-      },
-      "Point04": {
-        "icon": "icon/skill/1502_talent.png",
-        "skillRef": {
-          "skillName": "Behold Wherever Light Unfolds",
-          "skillSlot": "Talent"
-        }
-      },
-      "Point05": {
-        "icon": "icon/skill/1502_technique.png",
-        "skillRef": {
-          "skillName": "Untethered Glimmer Sails Far",
-          "skillSlot": "Technique"
-        }
-      },
-      "Point06": {
-        "name": "Amaze-In Grace",
-        "icon": "icon/skill/1502_skilltree1.png",
-        "desc": "When Yao Guang's SPD is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] SPD exceeded, increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
-        "params": [
-          120,
-          0.3,
-          1,
-          0.01,
-          200
-        ],
-        "traceAbility": "YaoGuang_YaoGuang_Trace01"
-      },
-      "Point07": {
-        "name": "Poised and Sated",
-        "icon": "icon/skill/1502_skilltree2.png",
-        "desc": "Increases this unit's CRIT DMG by #4[i]%. After using Elation Skill, recovers #1[i] Skill Point(s) for the team.",
-        "params": [
-          1,
-          0.25,
-          0.4,
-          0.6
-        ],
-        "traceAbility": "YaoGuang_YaoGuang_Trace02"
-      },
-      "Point08": {
-        "name": "Felicity Ensemble",
-        "icon": "icon/skill/1502_skilltree3.png",
-        "desc": "When Yao Guang gains \"Certified Banger,\" its duration increases by #2[i] turn(s).",
-        "params": [
-          20,
-          1
-        ],
-        "traceAbility": "YaoGuang_YaoGuang_Trace03",
-        "extraEffects": {
-          "Certified Banger": {
-            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
-          }
-        }
-      },
-      "Point09": {
-        "name": "CRIT Rate Boost",
-        "icon": "icon/property/IconCriticalChance.png",
-        "stats": {
-          "CritRateBase": 0.026999999
-        }
-      },
-      "Point10": {
-        "name": "SPD Boost",
-        "icon": "icon/property/IconSpeed.png",
-        "stats": {
-          "SPDFlat": 2
-        }
-      },
-      "Point11": {
-        "name": "CRIT Rate Boost",
-        "icon": "icon/property/IconCriticalChance.png",
-        "stats": {
-          "CritRateBase": 0.026999999
-        }
-      },
-      "Point12": {
-        "name": "Elation Boost",
-        "icon": "icon/property/IconJoy.png",
-        "stats": {
-          "ElationDMGAll": 0.04
-        }
-      },
-      "Point13": {
-        "name": "CRIT Rate Boost",
-        "icon": "icon/property/IconCriticalChance.png",
-        "stats": {
-          "CritRateBase": 0.04
-        }
-      },
-      "Point14": {
-        "name": "SPD Boost",
-        "icon": "icon/property/IconSpeed.png",
-        "stats": {
-          "SPDFlat": 3
-        }
-      },
-      "Point15": {
-        "name": "CRIT Rate Boost",
-        "icon": "icon/property/IconCriticalChance.png",
-        "stats": {
-          "CritRateBase": 0.04
-        }
-      },
-      "Point16": {
-        "name": "Elation Boost",
-        "icon": "icon/property/IconJoy.png",
-        "stats": {
-          "ElationDMGAll": 0.06
-        }
-      },
-      "Point17": {
-        "name": "SPD Boost",
-        "icon": "icon/property/IconSpeed.png",
-        "stats": {
-          "SPDFlat": 4
-        }
-      },
-      "Point18": {
-        "name": "CRIT Rate Boost",
-        "icon": "icon/property/IconCriticalChance.png",
-        "stats": {
-          "CritRateBase": 0.053
-        }
-      },
-      "Point22": {
-        "name": "Elation Skill",
-        "icon": "icon/skill/1502_elation.png",
-        "skillRef": {
-          "skillName": "Let Thy Fortune Burst in Flames",
-          "skillSlot": "Elation Skill"
-        }
-      }
-    },
-    "hasSummon": false,
-    "icon": "icon/character/1502.png",
-    "preview": "image/character_preview/1502.png",
-    "portrait": "image/character_portrait/1502.png",
-    "bannerOffsets": [
-      43,
-      28,
-      0.66,
-      43,
-      28,
-      0.66,
-      43,
-      28,
-      0.66
-    ],
-    "isBuffed": false
-}
-characters["Z_Test"] = elationTestChar;

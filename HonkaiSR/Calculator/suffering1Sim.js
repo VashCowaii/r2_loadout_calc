@@ -595,6 +595,12 @@ const sim = {
             "Physical": 0
         }
 
+        const enemyRankID = {
+            "boss": 3,
+            "elite": 2,
+            "minion": 1,
+        }
+
 
 
         for (let i=0;i<enemiesToMake.length;i++) {
@@ -661,6 +667,7 @@ const sim = {
                 isEnemy: true,
                 enemyTypeAttack: attackTypes[currentEntry.enemyTypeAttack],//ref.enemyTypeAttack,
                 enemyType,
+                enemyRank: enemyRankID[enemyType],
                 currentHP: finalStats.HPFinal,
                 maxHP: finalStats.HPFinal,
                 currentToughness: stats[Toughness],
@@ -1534,22 +1541,25 @@ const sim = {
                 // currentUltyFunction(battleData,target,sourceTurn);
                 // if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
 
-                if (useAnyTrigger) {
+
+                const poolKey = currentFUA.poolKey;
+                const target = currentFUA.target;
+
+                if (isLog) {
+                    const displayTypeStart = currentFUA.eventTypeStartLOG;
+                    logToBattle(battleData,{
+                        logType: displayTypeStart,
+                        isInsertedAbility: true,
+                        name:characterName,
+                        target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                        AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                    battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
+                }
+
+                // if (useAnyTrigger) {
                     // const typeStart = currentFUA.eventTypeStart;
                     // const typeEnd = currentFUA.eventTypeEnd;
-
-                    const poolKey = currentFUA.poolKey;
-                    const target = currentFUA.target;
-                    if (isLog) {
-                        const displayTypeStart = currentFUA.eventTypeStartLOG;
-                        logToBattle(battleData,{
-                            logType: displayTypeStart,
-                            isInsertedAbility: true,
-                            name:characterName,
-                            target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
-                            AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
-                        battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
-                    }
+                    
                     const isAbility = currentFUA.isAbility;
                     if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
                     // poke(typeStart,battleData,generalInfo);
@@ -1557,10 +1567,10 @@ const sim = {
                     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
                     if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
                     // poke(typeEnd,battleData,generalInfo);
-                }
-                else {
-                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                }
+                // }
+                // else {
+                //     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                // }
             }
         }
     },
@@ -1647,18 +1657,21 @@ const sim = {
                     //     continue;
                     // }
 
+                    const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn,currentUltimate) ?? currentUltimate.energyCost;
+                    //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
+
                     if (isLog) {
                         logToBattle(battleData,{
                             logType: "UltimateStart",
                             name:characterName,
+                            isEnhanced: currentUltimate.isEnhanced,
+                            eventOverrideImage: currentUltimate.eventOverrideImage,
                             target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                             AV: currentAV, ultName: currentUltyFunction.name});
                         battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
                     }
                     // alliedPoolKeys
 
-                    const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn) ?? currentUltimate.energyCost;
-                    //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
                     const checkSpecial = currentUltimate.specialEnergyPoke;
                             // specialEnergyPoke: "SW999GainMMR",
                     if (checkSpecial) {
@@ -1693,6 +1706,7 @@ const sim = {
                     else {
                         if (isLog) {
                             logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName,
+                                eventOverrideImage: currentUltimate.eventOverrideImage,
                                 target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                                 isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
                             battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);

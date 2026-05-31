@@ -6,6 +6,95 @@
     </ul>
 </div> -->
 <div>
+    <h1>May 31th, 2026</h1>
+    <ul>
+
+        <!-- <h3>Library</h3>
+        <li>Added eventreaders for the following new characters:
+            <ul>
+                <li>Firefly (Novaflare)</li>
+            </ul>
+        </li> -->
+
+        <!-- <h4>Fixes</h4>
+        <li>asdf</li> -->
+
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the following new characters:
+            <ul>
+                <!-- <li>Acheron</li> -->
+                <li>Dr. Ratio</li>
+            </ul>
+        </li>
+        <li>Added the following new relic sets:
+            <ul>
+                <li>Pioneer Diver of Dead Waters</li>
+            </ul>
+        </li>
+        <li>Added a visual override to Evanescia's E1 FUA elation skill, to display the labubu instead.
+            <ul>
+                <li>NOTE: this was 100% necessary.</li>
+            </ul>
+        </li>
+        <li>Added the ability to display unique buff/debuff icons when applying/removing buffs, as well as when inspecting an entity's bufflist.
+            <ul>
+                <li>If you think there are fancy or unique buffs that deserve icons, the example here being Acheron's Crimson Knot is getting one to start this off, then let me know in the discord.</li>
+            </ul>
+        </li>
+        <li>Removed the Z_Test elation character. It existed in the early days of elation when we only had people like Yao Guang to make sure elation mechanics were working properly. We very much know they're working properly now, and have enough teammates to test with without this.</li>
+        <li>Added missing displays for Permanent Rotation Conditions on the following characters:
+            <ul>
+                <li>SW999</li>
+                <li>Welt</li>
+                <li>Natasha</li>
+                <li>Gallagher</li>
+                <li>EMC</li>
+                <li>Firefly</li>
+                <li>Seele</li>
+                <li>Hyacine</li>
+            </ul>
+        </li>
+        <li>Added handling to display whether an ultimate in the action order was enhanced or not, for the sake of things like Argenti's enhanced ultimate.</li>
+        <li>Added a display to relic/lightcone selection menus to mark entries that don't have a "Maslow" defined in the optimizer. If you ever see an entry marked by this, it's a bug and needs to be reported.</li>
+
+        <h4>Fixes</h4>
+        <li>Fixed a visual issue where the following character ability instances weren't displaying the "Enhanced" tag on the action order display, after the other day's update:
+            <ul>
+                <li>SW999 Enh Elation Skill</li>
+                <li>Argenti Enh Ult</li>
+                <li>Topaz Enh Skill</li>
+                <li>Blade Enh Basic</li>
+                <li>Firefly Enh Basic/Skill</li>
+                <li>Hook Enh Skill</li>
+                <li>Gallagher Enh Basic</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where if an character like Ruan Mei was in the team with elation units, the talent SPD bonus would take effect before Aha had been initialized and could break the SPD calc for Aha.</li>
+        <li>Fixed a visual issue where the Aha Instant ending and other various inserted abilities that aren't abilities, weren't displaying with the insert diamond on their action bar, and instead still displayed the semicircle as if a turn-activated ability.</li>
+        <li>Fixed an issue where Baptism of Pure Thought could attempt to apply 0 stacks of its bonus when the owner was attacking an enemy that had no debuffs. This is more on the side of a visual bug if anything since the stat bonus multiplied by a stack count of 0 resulted in a bonus of 0, but was a bug all the same in the lightcone's code.</li>
+        <li>Fixed an error where Sunday's technique when trying to enforce the one-time-per-battle instance of the ally-targeted bonus, could fail to remove itself from consideration and brick the battle sim.</li>
+        <li>Fixed missing Maslow definitions for the following relic sets:
+            <ul>
+                <li>City of Converging Stars</li>
+            </ul>
+        </li>
+        <li>Fixed missing Maslow definitions for the following lightcones:
+            <ul>
+                <li>The Finale of a Lie</li>
+                <li>See You at the End</li>
+                <li>Shared Feeling</li>
+                <li>The Story's Next Page</li>
+                <li>Shadowburn</li>
+            </ul>
+        </li>
+
+        <h4>Optimization</h4>
+        <li>Slight optimization to Elation teams, I didn't realize I was sorting elation ID's every Aha Instant instead of just once at the start of each battle(I have a brain that works sometimes)</li>
+        <li>Unified how techniques are checked and called compared to others in the team, leaving less room for error in the future.</li>
+    </ul>
+</div>
+<div>
     <h1>May 28th, 2026 - THE TECHNIQUES UPDATE(But really way more than that)</h1>
     Overall, I reviewed every single character, lightcone, and relic set effect and made adjustments on literally every single one of them. This does not mean there are no issues lol, only that I went about trying to make things more accurate. Plz report bugs in discord.
     <ul>
@@ -138,16 +227,6 @@
     <h1>May 20th, 2026</h1>
     <ul>
 
-        <!-- <h3>Library</h3>
-        <li>Added eventreaders for the following new characters:
-            <ul>
-                <li>Firefly (Novaflare)</li>
-            </ul>
-        </li> -->
-
-        <!-- <h4>Fixes</h4>
-        <li>asdf</li> -->
-
         <h3>Calculator</h3>
         <h4>Additions</h4>
         <li>Added handling for Non-Battle-Event actions to have custom display images, like SW999's Loot Box inserts which would normally display as SW999's icon, can now display as the Loot Box icon.
@@ -197,16 +276,6 @@
 <div>
     <h1>May 19th, 2026</h1>
     <ul>
-
-        <!-- <h3>Library</h3>
-        <li>Added eventreaders for the following new characters:
-            <ul>
-                <li>Firefly (Novaflare)</li>
-            </ul>
-        </li> -->
-
-        <!-- <h4>Fixes</h4>
-        <li>asdf</li> -->
 
         <h3>Calculator</h3>
         <h4>Additions</h4>

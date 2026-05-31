@@ -1,63 +1,84 @@
 global.calcAllowedSet = new Set([
     //NIHILITY
-    "Silver Wolf",
-    "Kafka",
-    "Hysilens",
-    "Pela",
-    "Black Swan",
-    "Welt",
+    //5star
+    "Silver Wolf",//DONE
+    "Kafka",//DONE
+    "Hysilens",//DONE
+    "Black Swan",//DONE
+    "Welt",//DONE
+    "Acheron",//DONE
+    //4star
+    "Pela",//DONE
+    
 
     //ERUDITION
-    "Argenti",
-    "Anaxa",
-    "Serval",//not yet
-    "Herta",//not yet
+    //5star
+    "Argenti",//DONE
+    "Anaxa",//DONE
+    //4star
+    "Serval",               //not yet
+    "Herta",                //not yet
 
     //DESTRUCTION
-    "Saber",
-    "Blade",
-    "Jingliu",
-    "Firefly",//not yet
-    "Hook",
-    "Phainon",//not yet
+    //5star
+    "Saber",//DONE
+    "Blade",//DONE
+    "Jingliu",//DONE
+    "Firefly",//DONE
+    "Phainon",              //not yet
+    //4star
+    "Hook",//DONE
 
     //HUNT
-    "Topaz & Numby",
-    "Archer",
-    "Seele",
+    //5star
+    "Topaz & Numby",//DONE
+    "Archer",//DONE
+    "Seele",//DONE
+    "Dr. Ratio",//
+    //4star
 
     //HARMONY
-    "Bronya",
-    "Tingyun",
-    "Robin",
-    "Sunday",
-    "Tribbie",
-    "Asta",
-    "Ruan Mei",
-    "Sparkle",
+    //5star
+    "Bronya",//DONE
+    "Robin",//DONE
+    "Sunday",//DONE
+    "Tribbie",//DONE
+    "Ruan Mei",//DONE
+    "Sparkle",//DONE
+    //4star
+    "Tingyun",//DONE
+    "Asta",//DONE
 
     //ABUNDANCE
-    "Huohuo",
-    "Gallagher",
-    "Natasha",
-    "Lynx",
-    "Luocha",
+    //5star
+    "Huohuo",//DONE
+    "Luocha",//DONE
+    //4star
+    "Gallagher",//DONE
+    "Natasha",//DONE
+    "Lynx",//DONE
 
     //PRESERVATION
-    "Dan Heng • Permansor Terrae",
-    "Aventurine",
+    //5star
+    "Dan Heng • Permansor Terrae",//DONE
+    "Aventurine",//DONE
+    //4star
 
 
     //REMEMBRANCE
-    "Trailblazer - Remembrance",
-    "Aglaea",
-    "Evernight",
-    "Hyacine",
+    //5star
+    "Trailblazer - Remembrance",//DONE
+    "Aglaea",//DONE
+    "Evernight",//DONE
+    "Hyacine",//DONE
+    //4star
 
     //ELATION
-    "Yao Guang",
-    "Sparxie",
-    "Trailblazer - Elation",
-    "Silver Wolf LV.999",
-    "Evanescia",
+    //5star
+    "Yao Guang",//DONE
+    "Sparxie",//DONE
+    "Trailblazer - Elation",//DONE
+    "Silver Wolf LV.999",//DONE
+    "Evanescia",//DONE
+    //4star
 ]);
