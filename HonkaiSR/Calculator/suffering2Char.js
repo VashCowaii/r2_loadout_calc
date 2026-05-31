@@ -720,6 +720,7 @@ const battleActions = {
     actionAdvance(percent,targetTurn,battleData,source,delayLogEntry) {
         if (targetTurn.length) {
             battleData.actionCounter += 1;
+            let targetsAtZero = [];
             for (let targetInstance of targetTurn) {
                 if (targetInstance.turnState && !targetInstance.actionAssigned) {return}
 
@@ -729,11 +730,19 @@ const battleActions = {
                 let oldAV = targetInstance.AV;
                 targetInstance.AV = Math.max(0,oldAV - targetInstance.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
                 //see speedAdvance() for spd changes
+                if (targetInstance.AV === 0) {targetsAtZero.push(targetInstance);}
                 
                 if (battleData.isLoggyLogger) {
                     // const isEvent = action.eventOverrideImage;isUniqueEvent
                     // console.log(targetInstance.eventOverrideImage)
                     logToBattle(battleData,{logType: delayLogEntry ? "ActionAdvancedBreakDelay" : "ActionAdvanced", name:targetInstance.properName, oldAV: oldAV, newAV:targetInstance.AV,source,isEnemy,eventOverrideImage:targetInstance.isUniqueEvent ? targetInstance.eventImage : null });
+                }
+            }
+            if (targetsAtZero.length > 1) {
+                targetsAtZero.sort((a, b) => a.SPD - b.SPD);
+                for (let zeroTarget of targetsAtZero) {
+                    battleData.actionCounter += 1;
+                    zeroTarget.actionCounter = battleData.actionCounter;
                 }
             }
         }
