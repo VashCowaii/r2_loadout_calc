@@ -13405,6 +13405,136 @@ const turnLogicRelics = {
             },
         }
     },
+    "Divine-Querying Master Smith": {
+        "2pc": {},
+        "4pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+
+
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners[0];
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
+                        }
+                    },
+                    "target": "self",
+                    "listenerName": "Divine-Querying Master Smith - 4pc setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let targetTurn = generalInfo.targetTurn;
+
+                                const defShredCheck = targetTurn.statTable[DEFP] ?? 0;
+                                const isReducing = defShredCheck < 0;
+
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                if (!this.relicMasterSmithCRITSHEET) {
+                                    let relicNameRef = "Divine-Querying Master Smith";
+                                    let pcRef = "4pc";
+                                    const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    this.relicMasterSmithCRITSHEET = {
+                                        "statsOnHit": [CritDamageBase],
+                                        [CritDamageBase]: 0.28,
+                                        "source": relicNameRef,
+                                        "sourceOwner": null,
+                                        "buffName": buffNames.critBuff,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null
+                                    }
+                                }
+                                const buffSheet = this.relicMasterSmithCRITSHEET;
+                                const buffName = buffSheet.buffName;
+
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+
+                                if (buffCheck) {
+                                    if (isReducing) {return;}
+                                    removeBuff(battleData,sourceTurn,buffCheck)
+                                }
+                                else if (isReducing) {
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet)
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Divine-Querying Master Smith - 2pc shredded listener",
+                        },
+                    ]
+                },
+                {
+                    "trigger": "DebuffApplied",
+                    condition(battleData,generalInfo) {
+                        // let ownerRef = this.owners;
+                        const sourceSheet = generalInfo.currentReference;
+                        const source = sourceSheet.sourceOwner;
+                        const ownerSlot = battleData.nameIndex[source];
+    
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[ownerSlot];
+                        if (!ownerRank) {return;}//if the debuff owner isn't an owner of the relic, abort early
+
+                        const defShredCheck = sourceSheet[DEFP] ?? 0;
+                        const isReducing = defShredCheck < 0;
+                        if (!isReducing) {return;}
+
+                        if (!this.relicMasterSmithSheet) {
+                            let relicNameRef = "Divine-Querying Master Smith";
+                            let pcRef = "4pc";
+                            const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                            this.relicMasterSmithSheet = {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.15,
+                                "source": relicNameRef,
+                                "sourceOwner": null,
+                                "buffName": buffNames.comburent,
+                                "durationInTurn": 3,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn"
+                            }
+                        }
+                        const buffSheet = this.relicMasterSmithSheet;
+                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                        buffSheet.sourceOwner = ownerTurn.properName;
+
+                        const allyPositions = battleData.allyPositions;
+                        updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                    },
+                    "target": "self",
+                    "listenerName": "Divine-Querying Master Smith - debuffs applied check",
+                    "owners": [],
+                },
+                
+            ],
+            "buffNames": {
+                "comburent": "Comburent (Relic)",
+                "critBuff": "Divine-Querying Master Smith",
+            },
+        }
+    },
 
 
     //PLANAR SETS
