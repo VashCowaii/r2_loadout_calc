@@ -851,6 +851,13 @@ const maslowLightconesHunt = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "The Finale of a Lie": {
+        gives: ["CritRate","ATK"],
+        givesTeam: ["Vuln"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     
     //4star
     "Final Victor": {
@@ -904,6 +911,13 @@ const maslowLightconesHunt = {
     },
     "Swordplay": {
         gives: ["All"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "See You at the End": {
+        gives: ["CritDMG","Skill","FUA"],
         givesTeam: [],
         wants: [],
         wantsTeam: [],
@@ -1599,6 +1613,13 @@ const maslowLightconesRemembrance = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "The Story's Next Page": {
+        gives: ["HP","Healing"],
+        givesTeam: ["All"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
 
     //3star
     "Reminiscence": {
@@ -1611,6 +1632,13 @@ const maslowLightconesRemembrance = {
     "Reminiscence": {
         gives: ["EnergyRegen","SkillPoints"],
         givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Shadowburn": {
+        gives: ["EnergyRegen"],
+        givesTeam: ["SkillPoints"],
         wants: [],
         wantsTeam: [],
         addTeamWant: [],
@@ -1707,6 +1735,13 @@ const maslowLightconesAbundance = {
     "What Is Real?": {
         gives: ["Break","HealingSource"],
         givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Shared Feeling": {
+        gives: ["Healing"],
+        givesTeam: ["EnergyRegen"],
         wants: [],
         wantsTeam: [],
         addTeamWant: [],

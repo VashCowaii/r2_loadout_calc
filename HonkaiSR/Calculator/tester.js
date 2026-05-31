@@ -2845,6 +2845,7 @@ const customMenu = {
                 || (lowercaseInput === "battlepass" && compare.battlePassLCList.has(lcEntry))
                 || (lowercaseInput === "starlight" && compare.starlightLCList.has(lcEntry))
                 || (lowercaseInput === "stellar" && compare.stellarLCList.has(lcEntry))
+                || !maslow[lcEntry]
                 ;
 
 
@@ -2955,7 +2956,9 @@ const customMenu = {
                 let joinedDesc = currentSet.desc[0] + (currentSet.desc.length > 1 ? currentSet.desc[1] : "");//wanna search 2pc and 4pc at once, if applicable 
 
                 //skip any relic name or desc that does NOT contain our search, and forced lowercase just to avoid headaches
-                let fuzzy = setEntry.toLowerCase().includes(currentInput) || joinedDesc.toLowerCase().includes(currentInput);
+                let fuzzy = setEntry.toLowerCase().includes(currentInput) 
+                    || joinedDesc.toLowerCase().includes(currentInput)
+                    || !maslow[currentSet.name];
                 if (!fuzzy && currentInput != "") {continue;}
 
                 //skip reg relics on a planar search, and skip planars on a relic search, bc planars never have more than one description length should be 1(hopefully, unless I screwed up parsing)
