@@ -1445,6 +1445,41 @@ const defaultConditions = {
         
         // return result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
     },
+    getHostileTarget(battleData,sourceTurn,poolKey,fallbackTarget,refKey,subTargetKey) {
+        // const conditionPath = battleData[sourceTurn.name]?.[refKey];
+        // // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
+        // if (!conditionPath) {return conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);}//if someone doesn't have an ulty condition, then default to fallback targeting
+
+        // const startType = conditionPath.type;
+        // // console.log(startType)
+        // //I don't really wanna bother with passing another parameter through all of these functions, so instead we're just making a quick global variable
+        // //in the form of globalPoolKey that will allow target or filter functions within the conditions here, to call the correct grouping function.
+        // globalPoolKey = poolKey;
+        // // console.log(poolKey)
+        // initialGlobalTargetPool = conditionLibrary[poolKey](battleData,sourceTurn,conditionPath)
+        // const result = conditionLibrary[startType](battleData,sourceTurn,conditionPath);
+        // globalPoolKey = null;
+        // initialGlobalTargetPool = null;
+
+        // // console.log(result,"AAAAAAAAAAAAAAAAAAA")
+
+        // let finalTargetResult = result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
+
+        let finalTargetResult = battleData.primaryTarget;
+
+        if (subTargetKey) {
+            // const subTargets = conditionLibrary[subTargetKey](battleData,sourceTurn,finalTargetResult);
+            const subTargets = battleData.blastTargets;
+
+            return [finalTargetResult,subTargets];
+        }
+        else {
+            return finalTargetResult;
+        }
+    },
+    getHostileTargetAOE(battleData,sourceTurn,poolKey) {
+        return battleData.enemyPositions;
+    },
 
     //DESTRUCTION
     "Saber": {
@@ -3389,3 +3424,5 @@ const checkUlty = defaultConditions.getUltimateCondition;
 const checkSkill = defaultConditions.getSkillCondition;
 
 const checkAbilityTarget = defaultConditions.getAbilityTargetCondition;
+const getHostileTarget = defaultConditions.getHostileTarget;
+const getHostileTargetAOE = defaultConditions.getHostileTargetAOE;
