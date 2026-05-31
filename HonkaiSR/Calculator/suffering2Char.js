@@ -718,20 +718,51 @@ const battleActions = {
         return familySet;
     },
     actionAdvance(percent,targetTurn,battleData,source,delayLogEntry) {
-        if (targetTurn.turnState && !targetTurn.actionAssigned) {return}
+        if (targetTurn.length) {
+            battleData.actionCounter += 1;
+            let targetsAtZero = [];
+            for (let targetInstance of targetTurn) {
+                if (targetInstance.turnState && !targetInstance.actionAssigned) {return}
 
-        battleData.actionCounter += 1;
-        targetTurn.actionCounter = battleData.actionCounter;
-        let isEnemy = targetTurn.isEnemy;
-        let oldAV = targetTurn.AV;
-        targetTurn.AV = Math.max(0,oldAV - targetTurn.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
-        //see speedAdvance() for spd changes
-        
-        if (battleData.isLoggyLogger) {
-            // const isEvent = action.eventOverrideImage;isUniqueEvent
-            // console.log(targetTurn.eventOverrideImage)
-            logToBattle(battleData,{logType: delayLogEntry ? "ActionAdvancedBreakDelay" : "ActionAdvanced", name:targetTurn.properName, oldAV: oldAV, newAV:targetTurn.AV,source,isEnemy,eventOverrideImage:targetTurn.isUniqueEvent ? targetTurn.eventImage : null });
+                
+                targetInstance.actionCounter = battleData.actionCounter;
+                let isEnemy = targetInstance.isEnemy;
+                let oldAV = targetInstance.AV;
+                targetInstance.AV = Math.max(0,oldAV - targetInstance.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
+                //see speedAdvance() for spd changes
+                if (targetInstance.AV === 0) {targetsAtZero.push(targetInstance);}
+                
+                if (battleData.isLoggyLogger) {
+                    // const isEvent = action.eventOverrideImage;isUniqueEvent
+                    // console.log(targetInstance.eventOverrideImage)
+                    logToBattle(battleData,{logType: delayLogEntry ? "ActionAdvancedBreakDelay" : "ActionAdvanced", name:targetInstance.properName, oldAV: oldAV, newAV:targetInstance.AV,source,isEnemy,eventOverrideImage:targetInstance.isUniqueEvent ? targetInstance.eventImage : null });
+                }
+            }
+            if (targetsAtZero.length > 1) {
+                targetsAtZero.sort((a, b) => a.SPD - b.SPD);
+                for (let zeroTarget of targetsAtZero) {
+                    battleData.actionCounter += 1;
+                    zeroTarget.actionCounter = battleData.actionCounter;
+                }
+            }
         }
+        else {
+            if (targetTurn.turnState && !targetTurn.actionAssigned) {return}
+
+            battleData.actionCounter += 1;
+            targetTurn.actionCounter = battleData.actionCounter;
+            let isEnemy = targetTurn.isEnemy;
+            let oldAV = targetTurn.AV;
+            targetTurn.AV = Math.max(0,oldAV - targetTurn.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
+            //see speedAdvance() for spd changes
+            
+            if (battleData.isLoggyLogger) {
+                // const isEvent = action.eventOverrideImage;isUniqueEvent
+                // console.log(targetTurn.eventOverrideImage)
+                logToBattle(battleData,{logType: delayLogEntry ? "ActionAdvancedBreakDelay" : "ActionAdvanced", name:targetTurn.properName, oldAV: oldAV, newAV:targetTurn.AV,source,isEnemy,eventOverrideImage:targetTurn.isUniqueEvent ? targetTurn.eventImage : null });
+            }
+        }
+        
     },
     speedAdvance(sourceTurn,battleData,source) {
         let isEnemy = sourceTurn.isEnemy;
@@ -29341,9 +29372,7 @@ const turnLogic = {
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const enemyPositions = battleData.enemyPositions;
-                for (let enemy of enemyPositions) {
-                    actionAdvance(-values[1],enemy,battleData,"RMC Technique Delay");
-                }
+                actionAdvance(-values[1],enemyPositions,battleData,"RMC Technique Delay");
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
@@ -43284,8 +43313,9 @@ const turnLogic = {
             this.returnBasicCall.sourceTurn = thisTurn;
         },
         "abilityTargetPools": {
+            "FUA": "Enemies (On-Field)",
             "Skill": "Enemies (On-Field)",
-            // "Ultimate": "Allies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -44294,7 +44324,7 @@ const turnLogic = {
                                 // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
                                 target: this.target,
-                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
 
                                 elationForcedPunchline: null,
                             }

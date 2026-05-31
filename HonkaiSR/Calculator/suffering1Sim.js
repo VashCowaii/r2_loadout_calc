@@ -140,7 +140,7 @@ const sim = {
 
             if (obj.AV < min.AV) {return obj;}//look for lowest action value first
             if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-            if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+            // if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
             return min;
         });
 
@@ -215,7 +215,7 @@ const sim = {
 
             if (!objIsEventOrEnemy && obj.AV < min.AV) {return obj;}//look for lowest action value first
             if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-            if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+            // if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
             return min;
         });
 
@@ -249,7 +249,7 @@ const sim = {
 
             if (!isEnemyOrSummon && obj.AV < min.AV) {return obj;}//look for lowest action value first
             if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-            if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+            // if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
             return min;
         });
 

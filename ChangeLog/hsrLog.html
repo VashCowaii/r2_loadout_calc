@@ -94,6 +94,11 @@
         <h4>Optimization</h4>
         <li>Slight optimization to Elation teams, I didn't realize I was sorting elation ID's every Aha Instant instead of just once at the start of each battle(I have a brain that works sometimes)</li>
         <li>Unified how techniques are checked and called compared to others in the team, leaving less room for error in the future.</li>
+        <li>Trimmed down the process by which the next turn is decided, by moving AV+Queue-Tied SPD sorting into the advancement handler overall
+            <ul>
+                <li>This will basically made all optimizer cycles just a tiny bit faster, since basically the only thing this mattered for was DDD since that's the only batch-advance that could create queue AND AV ties that needed SPD sorting.</li>
+            </ul>
+        </li>
     </ul>
 </div>
 <div>

@@ -6194,10 +6194,10 @@ const turnLogicLightcones = {
                                 sourceTurn.danceDanceDanceREF = rankParams[0];//advancement value
                             }
                             let values = sourceTurn.danceDanceDanceREF;
+
+                            const allyPositions = battleData.allyPositions;
+                            actionAdvance(values,allyPositions,battleData,lcNameRef);
                             
-                            for (let targetTurn of battleData.allyPositions) {
-                                actionAdvance(values,targetTurn,battleData,lcNameRef);
-                            }
                             //quick note for myself in the future, just checked to be certain and tingyun doing double technique
                             //to get full energy entering the battle, and insta casting ult, DOES cast it at 0 AV, ergo
                             //it CAN advance everyone preemptively. Kinda cool, never knew that.
