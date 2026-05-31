@@ -20422,12 +20422,14 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                let attackEndings = battleData.battleListeners.AbilityStart ??= [];
+                // let attackEndings = battleData.battleListeners.AbilityStart ??= [];
                 
                 const listenerToInejct = ATKObjects.techListener ??= logicRef.listenersToInjectLater.techniqueAllyTarget;
-                listenerToInejct.ownerTurn = sourceTurn;
+                // listenerToInejct.ownerTurn = sourceTurn;
 
-                attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+                // attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
+
+                addListenerWithPriority(battleData,listenerToInejct,listenerToInejct.trigger,sourceTurn);
             },
             statCheck(battleData,currentTurn,sourceTurn) {
                 // sourceTurn.sundayTalentCRITe6SHEET
