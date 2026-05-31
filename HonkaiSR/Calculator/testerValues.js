@@ -386,6 +386,8 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast2SP,permaConditionsTextLibrary.archerSub5casts],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Seele": defaultStandardAbilityDisplayWarnings,
+    "Dr. Ratio": defaultStandardAbilityDisplayWarnings,
 
     //DESTRUCTION
     "Saber": {
@@ -419,6 +421,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Firefly": defaultStandardAbilityDisplayWarnings,
     
     //HARMONY
     "Sunday": defaultStandardAbilityDisplayWarnings,
@@ -484,6 +487,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Hyacine": defaultStandardAbilityDisplayWarnings,
     
     //NIHILITY
     "Silver Wolf": defaultStandardAbilityDisplayWarnings,
@@ -491,6 +495,7 @@ const conditionsCharacterDisplayWarning = {
     "Hysilens": defaultStandardAbilityDisplayWarnings,
     "Pela": defaultStandardAbilityDisplayWarnings,
     "Black Swan": defaultStandardAbilityDisplayWarnings,
+    "Welt": defaultStandardAbilityDisplayWarnings,
     
 
     //PRESERVATION
@@ -517,12 +522,16 @@ const conditionsCharacterDisplayWarning = {
     },
     "Yao Guang": defaultStandardAbilityDisplayWarnings,
     "Sparxie": defaultStandardAbilityDisplayWarnings,
+    "Silver Wolf LV.999": defaultStandardAbilityDisplayWarnings,
+    "Trailblazer - Elation": defaultStandardAbilityDisplayWarnings,
     
     
     //ABUNDANCE
     "Lynx": defaultStandardAbilityDisplayWarnings,
     "Huohuo": defaultStandardAbilityDisplayWarnings,
     "Luocha": defaultStandardAbilityDisplayWarnings,
+    "Natasha": defaultStandardAbilityDisplayWarnings,
+    "Gallagher": defaultStandardAbilityDisplayWarnings,
 }
 
 
