@@ -56,44 +56,13 @@ const configAbility = {
           "name": "Animation Task",
           "passed": [
             {
-              "name": "Find New Target",
-              "from": {
+              "name": "Add Events/Bonuses",
+              "to": {
                 "name": "Target Name",
-                "target": "{{Enemy Team All}}"
+                "target": "{{Ability Target(ST)}}"
               },
-              "maxTargets": 1,
-              "conditions": {
-                "name": "Enemy ID",
-                "ID": 4064012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": "Arbiter of the Lost Abyss",
-                "isBaseCompare": true
-              },
-              "ifTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
-                  "casterAssign": "TargetSelf"
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Ability Target(ST)}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>[<span class=\"descriptionNumberColor\">First Offense</span>]",
-                  "casterAssign": "TargetSelf"
-                }
-              ]
+              "modifier": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>[<span class=\"descriptionNumberColor\">First Offense</span>]",
+              "casterAssign": "TargetSelf"
             },
             {
               "name": "IF",
@@ -120,103 +89,40 @@ const configAbility = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Name",
-                "target": "{{Enemy Team All}}"
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
               },
-              "maxTargets": 1,
+              "includeDyingTargets": true,
               "conditions": {
-                "name": "Enemy ID",
-                "ID": 4064012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                },
-                "characterName": "Arbiter of the Lost Abyss",
-                "isBaseCompare": true
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>[<span class=\"descriptionNumberColor\">First Offense</span>]",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Is Entity Type",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "type": "Character"
+                  }
+                ]
               },
               "ifTargetFound": [
                 {
-                  "name": "Find New Target",
-                  "from": {
+                  "name": "Add Events/Bonuses",
+                  "to": {
                     "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                    "target": "{{Parameter Target List}}"
                   },
-                  "includeDyingTargets": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Character"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>",
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
-                }
-              ],
-              "noTargetFound": [
-                {
-                  "name": "Find New Target",
-                  "from": {
-                    "name": "Target Name",
-                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
-                  },
-                  "includeDyingTargets": true,
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"-2034245301\">Enemy_W4_Serpent_01_Charge02_Target</a>[<span class=\"descriptionNumberColor\">First Offense</span>]",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Is Entity Type",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "type": "Character"
-                      }
-                    ]
-                  },
-                  "ifTargetFound": [
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target List}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"839686414\">Enemy_W4_Serpent_01_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">Accomplice</span>]",
-                      "casterAssign": "TargetSelf"
-                    }
-                  ]
+                  "modifier": "<a class=\"gModGreen\" id=\"839686414\">Enemy_W4_Serpent_01_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">Accomplice</span>]",
+                  "casterAssign": "TargetSelf"
                 }
               ]
             }
