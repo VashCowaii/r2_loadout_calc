@@ -1,6 +1,1069 @@
 const stageTypers = "anom";
 let mocSchedule = [
   {
+    "id": 7,
+    "image": "activityBG/ChallengePeakPanelBanner_4007.png",
+    "realName": "The Humming Laughter",
+    "buffData": null,
+    "floorData": {
+      "1": {
+        "floorName": "Knight (I)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30507011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "God-Devourer Offspring",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 356,
+                    "enemies": [
+                      {
+                        "name": "SD Civilian Mechatron",
+                        "id": 5012090,
+                        "image": 5012090,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 864165.567375,
+                        "speedBase": 105.6,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.36,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "God-Devourer Offspring",
+                        "id": 5023020,
+                        "image": 5023020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3072588.684,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Assistant Graffiti: Slacker",
+                        "id": 5012040,
+                        "image": 5012040,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 480091.981875,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Ice",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Thunder",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.8,
+                          "Thunder": -0.2,
+                          "Wind": -0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0,
+                      2
+                    ],
+                    "totalMax": 20,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30507011",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 3072588.684,
+                "aoeSUM": 5761103.782499999
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Depowered",
+            "desc": "When entering combat, reduces ally target's Energy by #1[i]% and decreases their Energy Regeneration Rate by #2[i]% outside of their turn for #3[i] turn(s).",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0013",
+            "BEKey": 1912336050,
+            "params": [
+              0.5,
+              0.5,
+              2
+            ]
+          },
+          {
+            "name": "Flow Break",
+            "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0019",
+            "params": [
+              0.02,
+              0.04,
+              10,
+              5
+            ]
+          }
+        ]
+      },
+      "2": {
+        "floorName": "Knight (II)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30507012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Alloy Mechatron: King Pom-Pom",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 367,
+                    "enemies": [
+                      {
+                        "name": "Autonomous Wand",
+                        "id": 5012010,
+                        "image": 5012010,
+                        "rank": "MinionLv2",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 628484.049,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Canvas Peacock",
+                        "id": 5013030,
+                        "image": 5013030,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 4022297.9136,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [],
+                        "resistances": {},
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3770904.294,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      0
+                    ],
+                    "totalMax": 4,
+                    "fieldMax": 4,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 367,
+                    "enemies": [
+                      {
+                        "name": "Alloy Mechatron: King Pom-Pom",
+                        "id": 5014020,
+                        "image": 5014020,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 9427260.735,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30507012",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 22876819.3836,
+                "aoeSUM": 27904691.7756
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Stability+",
+            "desc": "Decreases the DMG dealt by all ally targets by #1[i]%, and decreases their DMG taken by #2[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0017",
+            "BEKey": 1912336050,
+            "params": [
+              0.2,
+              0.1
+            ]
+          }
+        ]
+      },
+      "3": {
+        "floorName": "Knight (III)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30507013
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "The Giver, Master of Legions, Lance of Fury",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 370,
+                    "enemies": [
+                      {
+                        "name": "Daybreak Squadron: Blazeweaver",
+                        "id": 5013050,
+                        "image": 5013050,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 4504135.6845,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.8,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Furiae Praetor",
+                        "id": 4013010,
+                        "image": 4013010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 5404962.8214,
+                        "speedBase": 174.24,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Ice",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 370,
+                    "enemies": [
+                      {
+                        "name": "The Giver, Master of Legions, Lance of Fury",
+                        "id": 4014020,
+                        "image": 4014020,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 18016542.738,
+                        "speedBase": 79.2,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Imaginary",
+                        "hpBars": 2,
+                        "toughnessBase": null,
+                        "weaknessList": [],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30507013",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 41438048.297400005,
+                "aoeSUM": 45942183.98190001
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "params": [
+              500
+            ]
+          }
+        ]
+      },
+      "4": {
+        "floorName": "King in Check",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30507021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Starcrusher Swarm King: Skaracabaz (Synthetic)",
+                "enemyLevel": 100,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 368,
+                    "enemies": [
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 4597777.49796,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Cyclonic Swarm Mother",
+                        "id": 4053020,
+                        "image": 4053020,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 4597777.49796,
+                        "speedBase": 217.8,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Magical Girl Troupe",
+                        "id": 5012100,
+                        "image": 5012100,
+                        "rank": "MinionLv2",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 919555.499592,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.2,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 3,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 368,
+                    "enemies": [
+                      {
+                        "name": "Starcrusher Swarm King: Skaracabaz (Synthetic)",
+                        "id": 802501003,
+                        "image": 8025010,
+                        "rank": "BigBoss",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": [
+                          14559631.195688,
+                          20383483.6739632
+                        ],
+                        "speedBase": 173.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 280,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_Entangle": 1
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30507021",
+                  "_CreateBattleEvent": "30503"
+                },
+                "highSTSUM": 39540892.3676112,
+                "aoeSUM": 45058225.3651632
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "params": [
+              500
+            ]
+          },
+          {
+            "name": "Flow Break",
+            "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0019",
+            "params": [
+              0.02,
+              0.04,
+              10,
+              5
+            ]
+          }
+        ]
+      },
+      "5": {
+        "floorName": "King in Check: Plight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30507022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Starcrusher Swarm King: Skaracabaz (Synthetic)",
+                "enemyLevel": 120,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
+                    "BEKey": -1097634517,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
+                    "BEKey": 1912336050,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 369,
+                    "enemies": [
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 16768364.6466,
+                        "speedBase": 180,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Cyclonic Swarm Mother",
+                        "id": 4053020,
+                        "image": 4053020,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 16768364.6466,
+                        "speedBase": 247.5,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Magical Girl Troupe",
+                        "id": 5012100,
+                        "image": 5012100,
+                        "rank": "MinionLv2",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 3353672.92932,
+                        "speedBase": 150,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 1,
+                        "toughnessBase": 30,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 3,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 369,
+                    "enemies": [
+                      {
+                        "name": "Starcrusher Swarm King: Skaracabaz (Synthetic)",
+                        "id": 802501003,
+                        "image": 8025010,
+                        "rank": "BigBoss",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": [
+                          53099830.3240278,
+                          74339762.4536389
+                        ],
+                        "speedBase": 195,
+                        "critDMG": 0.2,
+                        "effectRES": 0.5,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "toughnessBase": 280,
+                        "weaknessList": [
+                          "Physical",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_Entangle": 1
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30507022",
+                  "_CreateBattleEvent": "30504"
+                },
+                "highSTSUM": 144207957.4242667,
+                "aoeSUM": 164329995.00018668
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore+",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0018",
+            "params": [
+              1000
+            ]
+          },
+          {
+            "name": "Flow Break+",
+            "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0019",
+            "params": [
+              0.03,
+              0.06,
+              10,
+              5
+            ]
+          }
+        ]
+      }
+    },
+    "kingBuffList": [
+      {
+        "modifierName": "ADV_StageAbility_3033060",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0019",
+        "name": "Chesty Chortle",
+        "desc": "Increases all allies' Elation by #1[i]%. At the start of Aha Instant, allies additionally gain #2[i] Punchline point(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5,
+          10
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033061",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0020",
+        "name": "Electrical Firestorm",
+        "desc": "Adds Fire Weakness and Lightning Weakness to \"Starcrusher Swarm King: Skaracabaz (Synthetic)\" and its summons, and decreases the Fire RES and Lightning RES of the above targets by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.6
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033062",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0021",
+        "name": "Shatter the Adamant",
+        "desc": "Increases DMG dealt by all ally targets by #1[i]%. After each time an ally target defeats an enemy target, additionally increases the DMG dealt by this unit by #2[i]%. This effect is stackable.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          0.03
+        ]
+      }
+    ],
+    "patchName": "4.3"
+  },
+  {
     "id": 6,
     "image": "activityBG/ChallengePeakPanelBanner_4006.png",
     "realName": "Happiness Syntax",
@@ -409,13 +1472,15 @@ let mocSchedule = [
         },
         "tagList": [
           {
-            "name": "Stability",
-            "desc": "Decreases the DMG dealt by all ally targets by #1[i]%, and decreases their DMG taken by #2[i]%.",
-            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0017",
+            "name": "Equilibrium",
+            "desc": "At the start of battle, #1[i] ally character(s) with the highest SPD have their SPD reduced by #2[i]%, and #3[i] ally character(s) with the lowest SPD have their SPD increased by #4[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0016",
             "BEKey": 1912336050,
             "params": [
-              0.1,
-              0.1
+              1,
+              0.2,
+              1,
+              0.15
             ]
           }
         ]
