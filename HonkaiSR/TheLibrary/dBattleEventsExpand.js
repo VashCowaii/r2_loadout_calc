@@ -3885,6 +3885,24 @@ let battleEvents = {
     "team": "Neutral Team",
     "isBattleEvent": true
   },
+  "30146": {
+    "internalID": 30146,
+    "name": 30146,
+    "energyMax": null,
+    "params": [
+      0.5,
+      1,
+      15,
+      0.12,
+      0.02,
+      0.012
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "isBattleEvent": true
+  },
   "30500": {
     "internalID": 30500,
     "name": 30500,
@@ -12698,6 +12716,142 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "60045": {
+    "internalID": 60045,
+    "name": 60045,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Ultimate": {
+        "Mortenax Blade": {
+          "variant1": {
+            "skillID": 6004501,
+            "trigger": "Skill03",
+            "name": "Mortenax Blade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[f1]% of Mortenax Blade's Max HP to all enemies.",
+            "energyCost": 60,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                6,
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "null": {
+          "variant1": {
+            "skillID": 6004502,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6004501,
+        "trigger": "Skill03",
+        "name": "Mortenax Blade",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals Fire DMG equal to #1[f1]% of Mortenax Blade's Max HP to all enemies.",
+        "energyCost": 60,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            6,
+            0.5
+          ]
+        },
+        "element": "Fire",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6004502,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_1507Special.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "61001": {
     "internalID": 61001,
     "name": 61001,
@@ -19540,6 +19694,18 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
+    "isBattleEvent": true
+  },
+  "96217": {
+    "internalID": 96217,
+    "name": 96217,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_1507.png",
+    "team": "Player Team",
+    "type": "Assist",
     "isBattleEvent": true
   },
   "98001": {
