@@ -140,6 +140,21 @@ let mocSchedule = [
                         "resistancesDebuff": {}
                       },
                       0,
+                      2,
+                      0,
+                      1,
+                      2,
+                      0,
+                      2,
+                      0,
+                      1,
+                      2,
+                      0,
+                      2,
+                      0,
+                      1,
+                      2,
+                      0,
                       2
                     ],
                     "totalMax": 20,
@@ -156,7 +171,7 @@ let mocSchedule = [
                   "_CreateBattleEvent": "30502"
                 },
                 "highSTSUM": 3072588.684,
-                "aoeSUM": 5761103.782499999
+                "aoeSUM": 23044415.13
               }
             ]
           },
