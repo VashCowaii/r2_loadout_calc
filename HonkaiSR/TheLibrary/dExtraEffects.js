@@ -1220,10 +1220,6 @@ let modifiersExtraEffects = [
     "desc": "Neither allies nor enemies can actively select Out-of-Bounds units."
   },
   {
-    "name": "Crowd Control debuff",
-    "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet."
-  },
-  {
     "name": "HP Count",
     "desc": "Targets with \"HP Count\" won't lose HP when attacked, but their \"HP Count\" will decrease instead. When the \"HP Count\" reaches zero, they will be knocked down."
   },
@@ -1376,6 +1372,22 @@ let modifiersExtraEffects = [
     "desc": "Special Attack that ally targets can trigger while in Silver Wolf LV.999's Zone when Silver Wolf LV.999 has \"Certified Banger.\" Can also be actively triggered in \"Bonus Stage: αWolf Instant.\" Triggering via this method is not considered as launching 1 attack.\\nWhen used, deals massive Imaginary Elation DMG split evenly among all enemies and randomly triggers one of the following 3 effects:\\n\"Big Flipping Sword\": Deals True DMG to the target with the highest HP based on the total DMG dealt this time.\\n\"Kaboom Eggsplosion\": Restores Skill Points (Trigger rate increases when Skill Points are low. Trigger rate decreases when Skill Points are high).\\n\"Funky Munch Bean\": Gains Punchline (Trigger rate increases when \"Hidden MMR\" is low. Trigger rate decreases when \"Hidden MMR\" is high)."
   },
   {
+    "name": "Grudge Ablaze",
+    "desc": "At the start of every turn, take Fire DMG. Targets inflicted with \"Grudge Ablaze\" can select \"Endure Flames\" or \"Extinguish Flames\" when taking action."
+  },
+  {
+    "name": "Beyond-Human Realm",
+    "desc": "Each stack increases Max HP and DMG dealt. When extinguished, deals Fire DMG to the summoner and recovers ally Skill Points."
+  },
+  {
+    "name": "Endure Flames",
+    "desc": "Recovers 1 Skill Point, skips this turn, gains \"Fortitude,\" and DMG taken decreases for 1 turn."
+  },
+  {
+    "name": "Extinguish Flames",
+    "desc": "Consumes 1 Skill Point, and has a chance to immediately dispel \"Grudge Ablaze,\" and takes Fire DMG if not dispelled. After selecting \"Extinguish Flames,\" this turn does not end regardless of the result."
+  },
+  {
     "name": "Work Is Bliss!",
     "desc": "After using Basic ATK, triggers the \"Shiny\" effect, additionally deals True DMG to the attack target and gains Punchline(s). After using Skill, triggers the \"Pristine\" effect, restoring Skill Point(s). This effect can trigger a max of 1 time while the \"Work Is Bliss!\" effect is active."
   },
@@ -1404,8 +1416,24 @@ let modifiersExtraEffects = [
     "desc": "DMG dealt increases. This effect is stackable."
   },
   {
+    "name": "Barrier Recoil",
+    "desc": "Reduces this unit's Toughness. This Toughness reduction effect will not reduce Toughness below 1."
+  },
+  {
+    "name": "Monoform Merger",
+    "desc": "When receiving fatal damage, enters the \"Feigned Death\" state. When all \"ichor memosprites\" possessing \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the \"Arbiter of the Lost Abyss.\""
+  },
+  {
+    "name": "Feigned Death",
+    "desc": "Cannot be selected, cannot take action."
+  },
+  {
     "name": "Paramount Bliss",
     "desc": "Action delayed and loses Skill Point(s) if attacked by Joy Ascendant's ability \"Euphoric Spiral\" while possessing this effect. This effect is removed after using Basic ATK once, and has a high chance to gain additional Skill Point(s)."
+  },
+  {
+    "name": "Crowd Control debuff",
+    "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze."
   },
   {
     "name": "On-Field Strength Boost",
