@@ -1471,7 +1471,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null,
+                    "characterName": "Arbiter of the Lost Abyss",
                     "isBaseCompare": true
                   },
                   "ifTargetFound": [
@@ -1481,7 +1481,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
                       "casterAssign": "TargetSelf"
                     }
                   ],
@@ -1532,7 +1532,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null,
+                    "characterName": "Arbiter of the Lost Abyss",
                     "isBaseCompare": true
                   },
                   "ifTargetFound": [
@@ -1552,7 +1552,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+                            "modifier": "<a class=\"gModGreen\" id=\"1733522141\">Enemy_W4_Serpent_01_IF_Charge02_Target</a>",
                             "invertCondition": true
                           },
                           {
@@ -1572,7 +1572,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target List}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1649628252\">Enemy_W4_Serpent_01_IF_Charge02_Target_Sub</a>",
                           "casterAssign": "TargetSelf"
                         }
                       ]

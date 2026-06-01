@@ -44,11 +44,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1416805079\">Monster_W2_Knight01_Formation</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
               "valuePerStack": {
                 "Modifier_DefenceAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8086) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8086",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8120) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8120",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8086"
+                    "UnusedUnderThisBase_8120"
                   ]
                 }
               }

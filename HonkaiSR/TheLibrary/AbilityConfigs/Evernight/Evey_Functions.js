@@ -90,27 +90,27 @@ const configAbility = {
                   ]
                 },
                 "AbilityP01_P1_AddCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_4663) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_4663",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4697) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4697",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_4663"
+                    "UnusedUnderThisBase_4697"
                   ]
                 },
                 "_Evernight_Extra_Energy": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_4649) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_4649",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4683) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4683",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_4649"
+                    "UnusedUnderThisBase_4683"
                   ]
                 },
                 "AbilityRank_Eidolon6_P1_Ratio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6796) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6796",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6830) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_6830",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_6796"
+                    "UnusedUnderThisBase_6830"
                   ]
                 }
               },
@@ -140,11 +140,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13174) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13174",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13243) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13243",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13174"
+                            "UnusedUnderThisBase_13243"
                           ]
                         }
                       }
@@ -171,11 +171,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13182) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13182",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13251) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13251",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13182"
+                            "UnusedUnderThisBase_13251"
                           ]
                         }
                       }
@@ -191,11 +191,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4663) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4663",
+                      "operator": "Variables[0] (UnusedUnderThisBase_4697) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4697",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_4663"
+                        "UnusedUnderThisBase_4697"
                       ]
                     }
                   }

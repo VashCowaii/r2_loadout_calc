@@ -49,20 +49,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (UnusedUnderThisBase_9608) || RETURN",
-            "displayLines": "UnusedUnderThisBase_9608",
+            "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
+            "displayLines": "UnusedUnderThisBase_9642",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_9608"
+              "UnusedUnderThisBase_9642"
             ]
           },
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9608) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9608",
+              "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
+              "displayLines": "UnusedUnderThisBase_9642",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9608"
+                "UnusedUnderThisBase_9642"
               ]
             }
           },
@@ -79,11 +79,11 @@ const configAbility = {
             "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9608) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9608",
+              "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
+              "displayLines": "UnusedUnderThisBase_9642",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9608"
+                "UnusedUnderThisBase_9642"
               ]
             },
             "valueType": "Layer"

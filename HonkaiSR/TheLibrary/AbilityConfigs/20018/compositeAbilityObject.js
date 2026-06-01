@@ -3203,11 +3203,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8882) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8882",
+                    "operator": "Variables[0] (UnusedUnderThisBase_8916) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_8916",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8882"
+                      "UnusedUnderThisBase_8916"
                     ]
                   }
                 },
@@ -3242,12 +3242,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DamageReduce",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8877) || Variables[1] (UnusedUnderThisBase_8902) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_8877 + UnusedUnderThisBase_8902)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8911) || Variables[1] (UnusedUnderThisBase_8936) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_8911 + UnusedUnderThisBase_8936)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8877",
-                          "UnusedUnderThisBase_8902"
+                          "UnusedUnderThisBase_8911",
+                          "UnusedUnderThisBase_8936"
                         ]
                       }
                     },
@@ -3273,11 +3273,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DamageReduce",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8902) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8902",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8936) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8936",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8902"
+                          "UnusedUnderThisBase_8936"
                         ]
                       }
                     },
@@ -4001,11 +4001,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8964",
+                            "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_8998",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8964"
+                              "UnusedUnderThisBase_8998"
                             ]
                           },
                           "enemyList": [
@@ -4028,11 +4028,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8964",
+                            "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_8998",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8964"
+                              "UnusedUnderThisBase_8998"
                             ]
                           },
                           "enemyList": [
@@ -4067,11 +4067,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8964",
+                            "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_8998",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8964"
+                              "UnusedUnderThisBase_8998"
                             ]
                           },
                           "enemyList": [
@@ -4094,11 +4094,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8964",
+                            "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_8998",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8964"
+                              "UnusedUnderThisBase_8998"
                             ]
                           },
                           "enemyList": [
@@ -4143,11 +4143,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8986",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9020",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8986"
+                              "UnusedUnderThisBase_9020"
                             ]
                           },
                           "enemyList": [
@@ -4170,11 +4170,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8986",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9020",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8986"
+                              "UnusedUnderThisBase_9020"
                             ]
                           },
                           "enemyList": [
@@ -4209,11 +4209,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8986",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9020",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8986"
+                              "UnusedUnderThisBase_9020"
                             ]
                           },
                           "enemyList": [
@@ -4236,11 +4236,11 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8986",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9020",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8986"
+                              "UnusedUnderThisBase_9020"
                             ]
                           },
                           "enemyList": [
@@ -4338,11 +4338,11 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_8964",
+                                "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_8998",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_8964"
+                                  "UnusedUnderThisBase_8998"
                                 ]
                               },
                               "enemyList": [
@@ -4365,11 +4365,11 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_8964) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_8964",
+                                "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_8998",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_8964"
+                                  "UnusedUnderThisBase_8998"
                                 ]
                               },
                               "enemyList": [
@@ -4404,11 +4404,11 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_8986",
+                                "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_9020",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_8986"
+                                  "UnusedUnderThisBase_9020"
                                 ]
                               },
                               "enemyList": [
@@ -4431,11 +4431,11 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_8986) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_8986",
+                                "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_9020",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_8986"
+                                  "UnusedUnderThisBase_9020"
                                 ]
                               },
                               "enemyList": [

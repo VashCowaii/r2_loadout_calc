@@ -32,7 +32,7 @@ const configAbility = {
           "eventTrigger": "Action Completed [Anyone]",
           "execute": [
             {
-              "name": "IF",
+              "name": "FAILURE IF",
               "conditions": {
                 "name": "AND",
                 "conditionList": [

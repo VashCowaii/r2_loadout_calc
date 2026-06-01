@@ -65,20 +65,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10668) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10668",
+            "operator": "Variables[0] (UnusedUnderThisBase_10702) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10702",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10668"
+              "UnusedUnderThisBase_10702"
             ]
           },
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10676) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10676",
+              "operator": "Variables[0] (UnusedUnderThisBase_10710) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10710",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10676"
+                "UnusedUnderThisBase_10710"
               ]
             }
           }

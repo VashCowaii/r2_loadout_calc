@@ -1248,19 +1248,19 @@ const compositeAbilityObject = {
               ]
             },
             "MDF_Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4835) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4835",
+              "operator": "Variables[0] (UnusedUnderThisBase_4869) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4869",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_4835"
+                "UnusedUnderThisBase_4869"
               ]
             },
             "MDF_LifeTime": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6017) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6017",
+              "operator": "Variables[0] (UnusedUnderThisBase_6051) || RETURN",
+              "displayLines": "UnusedUnderThisBase_6051",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_6017"
+                "UnusedUnderThisBase_6051"
               ]
             },
             "SpAdded2": {

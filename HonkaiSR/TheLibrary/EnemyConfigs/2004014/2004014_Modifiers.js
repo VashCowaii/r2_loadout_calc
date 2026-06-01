@@ -1244,11 +1244,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
               "valuePerStack": {
                 "Modifier_AttackAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12723) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12723",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12792) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12792",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12723"
+                    "UnusedUnderThisBase_12792"
                   ]
                 }
               }

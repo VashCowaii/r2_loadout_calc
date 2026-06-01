@@ -36,11 +36,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13103) || RETURN",
-                "displayLines": "UnusedUnderThisBase_13103",
+                "operator": "Variables[0] (UnusedUnderThisBase_13172) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13172",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_13103"
+                  "UnusedUnderThisBase_13172"
                 ]
               }
             }
@@ -146,11 +146,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5922) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5922",
+                "operator": "Variables[0] (UnusedUnderThisBase_5956) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5956",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5922"
+                  "UnusedUnderThisBase_5956"
                 ]
               }
             },
@@ -158,11 +158,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "Skill02_P1_DmgUpForShow",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5922) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5922",
+                "operator": "Variables[0] (UnusedUnderThisBase_5956) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5956",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5922"
+                  "UnusedUnderThisBase_5956"
                 ]
               }
             }
@@ -366,11 +366,11 @@ const configAbility = {
               "eventID": 11309,
               "variables": {
                 "BattleEvent_Geji_BaseSpeed": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5918) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5918",
+                  "operator": "Variables[0] (UnusedUnderThisBase_5952) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_5952",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5918"
+                    "UnusedUnderThisBase_5952"
                   ]
                 }
               }
@@ -453,11 +453,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6884) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6884",
+                "operator": "Variables[0] (UnusedUnderThisBase_6918) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6918",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6884"
+                  "UnusedUnderThisBase_6918"
                 ]
               }
             }
@@ -549,11 +549,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5910) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5910",
+                "operator": "Variables[0] (UnusedUnderThisBase_5944) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5944",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5910"
+                  "UnusedUnderThisBase_5944"
                 ]
               }
             }
@@ -582,11 +582,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6882) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6882",
+                "operator": "Variables[0] (UnusedUnderThisBase_6916) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6916",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6882"
+                  "UnusedUnderThisBase_6916"
                 ]
               }
             }
@@ -647,11 +647,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "Ability03_DmgRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6249) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6249",
+              "operator": "Variables[0] (UnusedUnderThisBase_6283) || RETURN",
+              "displayLines": "UnusedUnderThisBase_6283",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_6249"
+                "UnusedUnderThisBase_6283"
               ]
             }
           }
@@ -670,11 +670,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "Trace_PointB2_P1_Ratio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6802) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6802",
+              "operator": "Variables[0] (UnusedUnderThisBase_6836) || RETURN",
+              "displayLines": "UnusedUnderThisBase_6836",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_6802"
+                "UnusedUnderThisBase_6836"
               ]
             }
           }
@@ -732,11 +732,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "AbilityRank_Eidolon6_P2_ExtraRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_5919) || RETURN",
-              "displayLines": "UnusedUnderThisBase_5919",
+              "operator": "Variables[0] (UnusedUnderThisBase_5953) || RETURN",
+              "displayLines": "UnusedUnderThisBase_5953",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_5919"
+                "UnusedUnderThisBase_5953"
               ]
             }
           }
@@ -816,12 +816,12 @@ const configAbility = {
                         {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                          "value": "UnusedUnderThisBase_6857"
+                          "value": "UnusedUnderThisBase_6891"
                         },
                         {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageFIXED</span>&nbsp;",
-                          "value": "(UnusedUnderThisBase_5916 + UnusedUnderThisBase_5919)"
+                          "value": "(UnusedUnderThisBase_5950 + UnusedUnderThisBase_5953)"
                         }
                       ]
                     }
@@ -833,12 +833,12 @@ const configAbility = {
                         {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                          "value": "UnusedUnderThisBase_6857"
+                          "value": "UnusedUnderThisBase_6891"
                         },
                         {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageFIXED</span>&nbsp;",
-                          "value": "UnusedUnderThisBase_5916"
+                          "value": "UnusedUnderThisBase_5950"
                         }
                       ]
                     }
@@ -932,11 +932,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_Rank06_BigDmgCount",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13274) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13274",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13343",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13274"
+                      "UnusedUnderThisBase_13343"
                     ]
                   }
                 }
@@ -977,11 +977,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "Skill03_BaseAttack_Total_Ratio",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5924) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5924",
+                "operator": "Variables[0] (UnusedUnderThisBase_5958) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5958",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5924"
+                  "UnusedUnderThisBase_5958"
                 ]
               }
             },
@@ -1011,11 +1011,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Skill03_BaseAttack_Total",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5912) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5912",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5946) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5946",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5912"
+                      "UnusedUnderThisBase_5946"
                     ]
                   }
                 }
@@ -1025,12 +1025,12 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Skill03_BaseAttack_Total",
                   "value": {
-                    "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5912) || ADD || RETURN",
-                    "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5912)",
+                    "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5946) || ADD || RETURN",
+                    "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5946)",
                     "constants": [],
                     "variables": [
                       "Skill03_BaseAttack_Total",
-                      "UnusedUnderThisBase_5912"
+                      "UnusedUnderThisBase_5946"
                     ]
                   }
                 }
@@ -1131,12 +1131,12 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5909) || Variables[1] (UnusedUnderThisBase_13100) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_5909 + UnusedUnderThisBase_13100)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5943) || Variables[1] (UnusedUnderThisBase_13169) || ADD || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_5943 + UnusedUnderThisBase_13169)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5909",
-                      "UnusedUnderThisBase_13100"
+                      "UnusedUnderThisBase_5943",
+                      "UnusedUnderThisBase_13169"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -1150,11 +1150,11 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5909) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5909",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5943) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5943",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5909"
+                      "UnusedUnderThisBase_5943"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -1370,11 +1370,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Skill03_BaseAttack_Total_Ratio",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_5924) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_5924",
+                        "operator": "Variables[0] (UnusedUnderThisBase_5958) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_5958",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_5924"
+                          "UnusedUnderThisBase_5958"
                         ]
                       }
                     },
@@ -1404,11 +1404,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "Skill03_BaseAttack_Total",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_5912) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_5912",
+                            "operator": "Variables[0] (UnusedUnderThisBase_5946) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_5946",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_5912"
+                              "UnusedUnderThisBase_5946"
                             ]
                           }
                         }
@@ -1418,12 +1418,12 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "Skill03_BaseAttack_Total",
                           "value": {
-                            "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5912) || ADD || RETURN",
-                            "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5912)",
+                            "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5946) || ADD || RETURN",
+                            "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5946)",
                             "constants": [],
                             "variables": [
                               "Skill03_BaseAttack_Total",
-                              "UnusedUnderThisBase_5912"
+                              "UnusedUnderThisBase_5946"
                             ]
                           }
                         }
@@ -1482,11 +1482,11 @@ const configAbility = {
                           ]
                         },
                         "Ability03_DmgRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6249) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6249",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6283) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6283",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6249"
+                            "UnusedUnderThisBase_6283"
                           ]
                         }
                       }
@@ -1550,11 +1550,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Skill03_BaseAttack_Total_Ratio",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_5924) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_5924",
+                        "operator": "Variables[0] (UnusedUnderThisBase_5958) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_5958",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_5924"
+                          "UnusedUnderThisBase_5958"
                         ]
                       }
                     },
@@ -1584,11 +1584,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "Skill03_BaseAttack_Total",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_5912) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_5912",
+                            "operator": "Variables[0] (UnusedUnderThisBase_5946) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_5946",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_5912"
+                              "UnusedUnderThisBase_5946"
                             ]
                           }
                         }
@@ -1598,12 +1598,12 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "Skill03_BaseAttack_Total",
                           "value": {
-                            "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5912) || ADD || RETURN",
-                            "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5912)",
+                            "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5946) || ADD || RETURN",
+                            "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5946)",
                             "constants": [],
                             "variables": [
                               "Skill03_BaseAttack_Total",
-                              "UnusedUnderThisBase_5912"
+                              "UnusedUnderThisBase_5946"
                             ]
                           }
                         }
@@ -1662,11 +1662,11 @@ const configAbility = {
                           ]
                         },
                         "Ability03_DmgRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6249) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6249",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6283) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6283",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6249"
+                            "UnusedUnderThisBase_6283"
                           ]
                         }
                       }
@@ -1917,7 +1917,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "(0 - UnusedUnderThisBase_5925)"
+                  "multiAdd": "(0 - UnusedUnderThisBase_5959)"
                 }
               ]
             },

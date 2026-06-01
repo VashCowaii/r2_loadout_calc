@@ -47,19 +47,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7814) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7814",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7848) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7848",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7814"
+                            "UnusedUnderThisBase_7848"
                           ]
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7833) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7833",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7867) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7867",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7833"
+                            "UnusedUnderThisBase_7867"
                           ]
                         }
                       }
@@ -486,19 +486,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7818) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7818",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7852) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7852",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7818"
+                            "UnusedUnderThisBase_7852"
                           ]
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7817) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7817",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7851) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7851",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7817"
+                            "UnusedUnderThisBase_7851"
                           ]
                         }
                       }
@@ -514,19 +514,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7814) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7814",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7848) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7848",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7814"
+                            "UnusedUnderThisBase_7848"
                           ]
                         },
                         "MDF_AttackUpPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7833) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7833",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7867) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7867",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7833"
+                            "UnusedUnderThisBase_7867"
                           ]
                         }
                       }

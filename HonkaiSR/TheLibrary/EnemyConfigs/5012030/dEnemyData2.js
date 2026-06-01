@@ -41,8 +41,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2515,
-        2516
+        2529,
+        2530
       ]
     },
     "501203002": {
@@ -69,11 +69,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2515,
-        2516
+        2529,
+        2530
       ],
       "overrideParams": {
-        "2516": [
+        "2530": [
           [
             0.3,
             0.3
@@ -112,11 +112,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2515,
-        2516
+        2529,
+        2530
       ],
       "overrideParams": {
-        "2516": [
+        "2530": [
           [
             0.3,
             0.3,
@@ -156,11 +156,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2515,
-        2516
+        2529,
+        2530
       ],
       "overrideParams": {
-        "2516": [
+        "2530": [
           [
             0.3,
             0.3,

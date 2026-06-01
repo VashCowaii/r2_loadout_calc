@@ -392,6 +392,21 @@ let enemyData = {
           "base": 1002063
         }
       ],
+      "overrideParams": {
+        "259": [
+          [
+            -1,
+            2.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
       "itNeverEnds": {
         "Monster_W1_CocoliaP2_00_SummonMonsterID01": 100206004,
         "Monster_W1_CocoliaP2_00_SummonMonsterID02": 100206204,

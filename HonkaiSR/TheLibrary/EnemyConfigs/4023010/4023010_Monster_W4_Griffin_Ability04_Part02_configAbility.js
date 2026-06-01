@@ -522,11 +522,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11244) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11244",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11278) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11278",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11244"
+                    "UnusedUnderThisBase_11278"
                   ]
                 },
                 "Toughness": null,

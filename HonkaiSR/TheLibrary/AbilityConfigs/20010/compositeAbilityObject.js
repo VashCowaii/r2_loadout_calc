@@ -1466,11 +1466,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13250) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13250",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13319) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13319",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13250"
+                    "UnusedUnderThisBase_13319"
                   ]
                 },
                 "notAHit": true,
@@ -1488,28 +1488,28 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10253) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10253",
+                "operator": "Variables[0] (UnusedUnderThisBase_10287) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10287",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10253"
+                  "UnusedUnderThisBase_10287"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10249) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10249",
+                "operator": "Variables[0] (UnusedUnderThisBase_10283) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10283",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10249"
+                  "UnusedUnderThisBase_10283"
                 ]
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10251) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10251",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10285) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10285",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10251"
+                    "UnusedUnderThisBase_10285"
                   ]
                 }
               }

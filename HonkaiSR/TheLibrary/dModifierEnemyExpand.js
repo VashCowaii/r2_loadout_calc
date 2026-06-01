@@ -5619,72 +5619,6 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_Mode_Onslaught",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true,
-    "params": [
-      "MDF_SpeedAddedRatio",
-      "MDF_AllDamageTypeAddedRatio",
-      "_CurrentLayer"
-    ]
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_Mode_Resting",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true,
-    "params": [
-      "MDF_AllDamageTypeAddedRatio",
-      "_RestingCount"
-    ]
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_ShareDamage",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true,
-    "params": [
-      "MDF_SplitPercentage"
-    ]
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_RestingBreak",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true,
-    "params": [
-      "MDF_AllDamageTypeTakenRatio"
-    ]
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_OverwatchingTarget",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true,
-    "params": [
-      "MDF_DamageRatio"
-    ]
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_Summon_Deathrattle",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true
-  },
-  {
     "name": "<a class=\"gModGreen\" id=\"404660666\">Enemy_W5_Vtuber_ChargeEnd_AllDamageReduce</a>",
     "realName": "Privacy Protection",
     "aim": "Buff",
@@ -5694,30 +5628,6 @@ let modifiersEnemy = [
     "params": [
       "MDF_AllDamageReduce"
     ]
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_Charge02",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_Charge02_Target",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true
-  },
-  {
-    "name": "Enemy_W4_Serpent_01_IF_Charge02_Target_Sub",
-    "realName": "undefined",
-    "aim": "Other",
-    "desc": "undefined",
-    "type": "undefined",
-    "perma": true
   },
   {
     "name": "<a class=\"gModGreen\" id=\"-989097149\">MModifier_Monster_W4_Claymore_02_Ability03_AllDamageTypeTaken</a>",
@@ -6226,6 +6136,40 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Enemy_W5_Eater_Ability02_Ate",
+    "realName": "Devour",
+    "aim": "Other",
+    "desc": "Maximum Restorable HP decreases by #2[i]%, and #1[i] ATK is stolen by \"%CasterName.\"",
+    "type": "Devour",
+    "perma": true,
+    "params": [
+      "MDF_LoseAttack",
+      "MDF_DirtyHPRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Eater_Ability02_Eater",
+    "realName": "Satiated",
+    "aim": "Other",
+    "desc": "Steals #1[i] ATK. Each time after it is attacked by an target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by target units a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
+    "type": "Satiated",
+    "perma": true,
+    "params": [
+      "MDF_Attack"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Eater_Ability03_Attack",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i].",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "MDF_Attack"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"768104180\">Enemy_W5_Vtuber_IF_AbilityEX04_TGT</a>",
     "realName": "Basking in Popularity",
     "aim": "Buff",
@@ -6245,11 +6189,107 @@ let modifiersEnemy = [
     "perma": true
   },
   {
+    "name": "Enemy_W4_Serpent_01_IF_OriginalDefence",
+    "realName": "Enhance Defense",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%. Dispelled after being Weakness Broken.",
+    "type": "DEF Boost",
+    "perma": true,
+    "params": [
+      "MDF_Original_DefenceAddedRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_BonusDefenceDown",
+    "realName": "DEF Reduction",
+    "aim": "Debuff",
+    "desc": "Each stack decreases DEF by #1[i]%.",
+    "type": "DEF Reduction",
+    "perma": true,
+    "params": [
+      "MDF_Bonus_DefenceDownRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_AbilityEX04_TGT",
+    "realName": "Economies of Scale",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]% and reduces DMG received by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeAddedRatio_PerLayer",
+      "MDF_AllDamageReduce_PerLayer"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"344113408\">Monster_W5_Ripper_Protect_Weakness</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "While \"Paramount Bliss Inverted: Illwish Lotus\" is in the Charging state, this unit's Toughness cannot be reduced.",
     "type": "Weakness Protected",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Painter_Inferno",
+    "realName": "Grudge Ablaze",
+    "aim": "Debuff",
+    "desc": "At the start of every turn, take Fire DMG. Targets inflicted with \"Grudge Ablaze\" can select \"Endure Flames\" or \"Extinguish Flames\" when taking action.\\n\"Endure Flames\": Skips this turn. Gains \"Fortitude,\" and DMG taken decreases for 1 turn.\\n\"Extinguish Flames\": Has a chance to immediately dispel \"Grudge Ablaze,\" and takes Fire DMG if not dispelled. After selecting \"Extinguish Flames,\" this turn does not end regardless of the result.",
+    "type": "Grudge Ablaze",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Painter_Inferno_Guard",
+    "realName": "Fortitude",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "Fortitude",
+    "perma": false,
+    "params": [
+      "MDF_AllDamageTypeResistance"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Painter_SummonerEnhance",
+    "realName": "Beyond-Human Realm",
+    "aim": "Buff",
+    "desc": "Each stack increases Max HP and DMG dealt. When extinguished, deals Fire DMG to \"%CasterName\" and recovers Skill Point(s) for targets.",
+    "type": "Summons Boost",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_Summon_SpecialLimboController",
+    "realName": "Monoform Merger",
+    "aim": "Other",
+    "desc": "When receiving fatal damage, enters the \"Feigned Death\" state. When all \"ichor memosprites\" possessing \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the \"Arbiter of the Lost Abyss.\"",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_Summon_SpecialLimbo",
+    "realName": "Feigned Death",
+    "aim": "Other",
+    "desc": "Cannot be selected, cannot take action.",
+    "type": "Feigned Death",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_TiredDisplay",
+    "realName": "Bloodline Frailty",
+    "aim": "Other",
+    "desc": "After every action, the \"ichor memosprite\" with \"Monoform Merger\" reduces \"Bloodline Frailty\" by 1 point. When the \"ichor memosprite\" merges back into the \"Arbiter of the Lost Abyss,\" reduces the Toughness of the \"Arbiter of the Lost Abyss\" based on the remaining amount of \"Bloodline Frailty.\" Currently remaining \"Bloodline Frailty\": #1[i] point(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ModifierLayers"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Serpent_01_IF_DebuffListener",
+    "realName": "Degraded Vessel",
+    "aim": "Other",
+    "desc": "If an ally inflicts a debuff on an enemy unit with \"Degraded Vessel\" when using an attack, slightly reduces that enemy unit's Toughness and causes them to take True DMG.",
+    "type": null,
     "perma": true
   }
 ]

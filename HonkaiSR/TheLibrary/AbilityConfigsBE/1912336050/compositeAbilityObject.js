@@ -1282,10 +1282,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>[<span class=\"descriptionNumberColor\">Hallowed Abjuration</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>[<span class=\"descriptionNumberColor\">Hacker Intrusion</span>]",
           "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0018_ADF_1</span>.",
           "type": "Other",
-          "statusName": "Hallowed Abjuration",
+          "statusName": "Hacker Intrusion",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1339,7 +1339,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>[<span class=\"descriptionNumberColor\">Hallowed Abjuration</span>]",
+                      "modifier": "<a class=\"gModGreen\" id=\"-1296376719\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0018_02</a>[<span class=\"descriptionNumberColor\">Hacker Intrusion</span>]",
                       "valuePerStack": {
                         "ChallengePeakBattle_Plugins_0018_ADF_1": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",

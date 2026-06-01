@@ -958,11 +958,11 @@ const compositeAbilityObject = {
                           ]
                         },
                         "Ability02_P2_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4796) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4796",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4762"
+                            "UnusedUnderThisBase_4796"
                           ]
                         },
                         "AddSP": {
@@ -2211,11 +2211,11 @@ const compositeAbilityObject = {
                       },
                       "valuePerStack": {
                         "Ability02_P2_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4796) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4796",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4762"
+                            "UnusedUnderThisBase_4796"
                           ]
                         }
                       }
@@ -2237,11 +2237,11 @@ const compositeAbilityObject = {
                           ]
                         },
                         "Ability02_P2_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4796) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4796",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4762"
+                            "UnusedUnderThisBase_4796"
                           ]
                         },
                         "AddSP": {
@@ -3011,11 +3011,11 @@ const compositeAbilityObject = {
           },
           "valuePerStack": {
             "Ability02_P2_DamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4762",
+              "operator": "Variables[0] (UnusedUnderThisBase_4796) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4796",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_4762"
+                "UnusedUnderThisBase_4796"
               ]
             }
           }
@@ -3037,11 +3037,11 @@ const compositeAbilityObject = {
               ]
             },
             "Ability02_P2_DamageResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4762) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4762",
+              "operator": "Variables[0] (UnusedUnderThisBase_4796) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4796",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_4762"
+                "UnusedUnderThisBase_4796"
               ]
             },
             "AddSP": {

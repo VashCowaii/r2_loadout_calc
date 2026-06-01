@@ -1143,11 +1143,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5164) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5164",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5198) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5198",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5164"
+                      "UnusedUnderThisBase_5198"
                     ]
                   },
                   "addStacksPerTrigger": 7
@@ -1171,11 +1171,11 @@ const compositeAbilityObject = {
                     "variables": []
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5164) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5164",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5198) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5198",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5164"
+                      "UnusedUnderThisBase_5198"
                     ]
                   },
                   "assignState": "True",

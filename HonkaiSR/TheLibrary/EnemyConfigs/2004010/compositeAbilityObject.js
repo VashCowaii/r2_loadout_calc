@@ -1580,11 +1580,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8765",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8799) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8799",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8765"
+                    "UnusedUnderThisBase_8799"
                   ]
                 }
               }
@@ -1964,11 +1964,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8765) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8765",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8799) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8799",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8765"
+                    "UnusedUnderThisBase_8799"
                   ]
                 }
               }

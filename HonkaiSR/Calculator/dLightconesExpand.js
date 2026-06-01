@@ -9152,7 +9152,7 @@ let lightcones = {
         "ATK%": 0.32
       }
     },
-    "skillName": "So good!",
+    "skillName": "So Good!",
     "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses Skill, increases ATK by #2[i]%, stacking up to #3[i] times.",
     "params": [
       [

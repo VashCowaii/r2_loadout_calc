@@ -44,8 +44,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2519,
-        2520
+        2533,
+        2534
       ],
       "enemyTag": [
         "IceResistance"
@@ -77,8 +77,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2519,
-        2520
+        2533,
+        2534
       ],
       "enemyTag": [
         "IceResistance"

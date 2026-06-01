@@ -45,8 +45,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ]
     },
     "501401101": {
@@ -76,11 +76,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ],
       "overrideParams": {
-        "2616": [
+        "2630": [
           [
             2.5
           ],
@@ -121,8 +121,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ]
     },
     "501401103": {
@@ -152,11 +152,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ],
       "overrideParams": {
-        "2617": [
+        "2631": [
           [
             3
           ],
@@ -197,11 +197,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ],
       "overrideParams": {
-        "2617": [
+        "2631": [
           [
             3
           ],
@@ -242,11 +242,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ],
       "overrideParams": {
-        "2617": [
+        "2631": [
           [
             3
           ],
@@ -287,11 +287,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ],
       "overrideParams": {
-        "2617": [
+        "2631": [
           [
             3
           ],
@@ -332,8 +332,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ]
     },
     "501401108": {
@@ -363,8 +363,8 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2616,
-        2617
+        2630,
+        2631
       ]
     }
   }

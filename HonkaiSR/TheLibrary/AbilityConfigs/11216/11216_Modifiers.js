@@ -369,11 +369,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6308) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6308",
+                "operator": "Variables[0] (UnusedUnderThisBase_6342) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6342",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6308"
+                  "UnusedUnderThisBase_6342"
                 ]
               }
             },
@@ -392,11 +392,11 @@ const configAbility = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6303) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6303",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6337) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6337",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6303"
+                      "UnusedUnderThisBase_6337"
                     ]
                   }
                 }

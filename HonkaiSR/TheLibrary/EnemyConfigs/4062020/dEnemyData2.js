@@ -74,6 +74,178 @@ let enemyData = {
         2461,
         2462
       ]
+    },
+    "406202002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        10,
+        1,
+        null,
+        1,
+        210
+      ],
+      "weak": [
+        "Ice",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2460,
+        2461,
+        2462
+      ],
+      "overrideParams": {
+        "2460": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "406202003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        10,
+        1,
+        null,
+        1,
+        210
+      ],
+      "weak": [
+        "Ice",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2460,
+        2461,
+        2462
+      ],
+      "overrideParams": {
+        "2460": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "406202004": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        16.666668,
+        1,
+        null,
+        1,
+        210
+      ],
+      "weak": [
+        "Ice",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2460,
+        2461,
+        2462
+      ],
+      "overrideParams": {
+        "2460": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "406202005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        16.666668,
+        1,
+        null,
+        1,
+        210
+      ],
+      "weak": [
+        "Ice",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2460,
+        2461,
+        2462
+      ],
+      "overrideParams": {
+        "2460": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

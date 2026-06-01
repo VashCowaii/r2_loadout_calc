@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3106,
-        3107,
-        3108,
-        3109,
-        3110,
-        3111
+        3137,
+        3138,
+        3139,
+        3140,
+        3141,
+        3142
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -87,12 +87,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3106,
-        3107,
-        3108,
-        3109,
-        3110,
-        3111
+        3137,
+        3138,
+        3139,
+        3140,
+        3141,
+        3142
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -129,12 +129,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3106,
-        3107,
-        3108,
-        3109,
-        3110,
-        3111
+        3137,
+        3138,
+        3139,
+        3140,
+        3141,
+        3142
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -171,12 +171,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3106,
-        3107,
-        3108,
-        3109,
-        3110,
-        3111
+        3137,
+        3138,
+        3139,
+        3140,
+        3141,
+        3142
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -213,12 +213,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3106,
-        3107,
-        3108,
-        3109,
-        3110,
-        3111
+        3137,
+        3138,
+        3139,
+        3140,
+        3141,
+        3142
       ],
       "enemyTag": [
         "SW_Minion01",

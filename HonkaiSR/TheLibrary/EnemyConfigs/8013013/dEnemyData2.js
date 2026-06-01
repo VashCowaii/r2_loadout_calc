@@ -43,11 +43,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3001,
-        3002,
-        3003,
-        3004,
-        3005
+        3032,
+        3033,
+        3034,
+        3035,
+        3036
       ],
       "enemyTag": [
         "BattleScore_Horse"

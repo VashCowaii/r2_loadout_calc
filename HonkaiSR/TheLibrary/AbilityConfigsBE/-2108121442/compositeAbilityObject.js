@@ -42,11 +42,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1120307389\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Ravings</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__1120307389\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Ravings</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After attacking enemy targets, every enemy target who has their Weakness Broken additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2018_ADF_3</span> Grit Value.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Ravings"
+          "statusName": "Grit Mechanics: Ravings"
         },
         {
           "name": "Modifier Construction",
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1120307389\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Ravings</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"1120307389\">Modifier_FantasticStory_BaseAbility_2010_Plus8AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Ravings</span>]",
               "haloStatus": true
             }
           ],

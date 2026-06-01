@@ -65,11 +65,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5243) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5243",
+                  "operator": "Variables[0] (UnusedUnderThisBase_5277) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_5277",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5243"
+                    "UnusedUnderThisBase_5277"
                   ]
                 },
                 "Toughness": {
@@ -130,11 +130,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5243) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5243",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5277) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5277",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5243"
+                        "UnusedUnderThisBase_5277"
                       ]
                     },
                     "Toughness": {
@@ -182,11 +182,11 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5243) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5243",
+                          "operator": "Variables[0] (UnusedUnderThisBase_5277) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_5277",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_5243"
+                            "UnusedUnderThisBase_5277"
                           ]
                         },
                         "Toughness": {
@@ -224,11 +224,11 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_5243) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_5243",
+                              "operator": "Variables[0] (UnusedUnderThisBase_5277) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_5277",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_5243"
+                                "UnusedUnderThisBase_5277"
                               ]
                             },
                             "Toughness": {
@@ -262,11 +262,11 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (UnusedUnderThisBase_5246) || RETURN",
-            "displayLines": "UnusedUnderThisBase_5246",
+            "operator": "Variables[0] (UnusedUnderThisBase_5280) || RETURN",
+            "displayLines": "UnusedUnderThisBase_5280",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_5246"
+              "UnusedUnderThisBase_5280"
             ]
           },
           "Event": [
@@ -322,11 +322,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5258) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5258",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5292) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5292",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5258"
+                        "UnusedUnderThisBase_5292"
                       ]
                     },
                     "Toughness": {
@@ -387,11 +387,11 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5258) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5258",
+                          "operator": "Variables[0] (UnusedUnderThisBase_5292) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_5292",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_5258"
+                            "UnusedUnderThisBase_5292"
                           ]
                         },
                         "Toughness": {
@@ -439,11 +439,11 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_5258) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_5258",
+                              "operator": "Variables[0] (UnusedUnderThisBase_5292) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_5292",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_5258"
+                                "UnusedUnderThisBase_5292"
                               ]
                             },
                             "Toughness": {
@@ -481,11 +481,11 @@ const configAbility = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_5258) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_5258",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_5292) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_5292",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_5258"
+                                    "UnusedUnderThisBase_5292"
                                   ]
                                 },
                                 "Toughness": {

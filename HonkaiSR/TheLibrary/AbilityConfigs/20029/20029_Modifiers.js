@@ -949,11 +949,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "PassiveSkill03_MaxCharge",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9971) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9971",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10005) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10005",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9971"
+                      "UnusedUnderThisBase_10005"
                     ]
                   }
                 }
@@ -968,11 +968,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "PassiveSkill03_MaxCharge",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9979) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9979",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10013) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10013",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9979"
+                      "UnusedUnderThisBase_10013"
                     ]
                   }
                 }
@@ -1149,11 +1149,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "ChargeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9992) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9992",
+                "operator": "Variables[0] (UnusedUnderThisBase_10026) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10026",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9992"
+                  "UnusedUnderThisBase_10026"
                 ]
               }
             },
@@ -1165,11 +1165,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"792733911\">Enemy_W3_Sam_01_EnhanceChargeCount</a>[<span class=\"descriptionNumberColor\">Mortal Instinct</span>]",
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9992) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9992",
+                "operator": "Variables[0] (UnusedUnderThisBase_10026) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10026",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9992"
+                  "UnusedUnderThisBase_10026"
                 ]
               }
             },
@@ -1252,11 +1252,11 @@ const configAbility = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9971) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_9971",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10005) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10005",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_9971"
+                          "UnusedUnderThisBase_10005"
                         ]
                       }
                     }
@@ -1271,11 +1271,11 @@ const configAbility = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9979) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_9979",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10013) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10013",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_9979"
+                          "UnusedUnderThisBase_10013"
                         ]
                       }
                     }
@@ -1301,11 +1301,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9973) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9973",
+                          "operator": "Variables[0] (UnusedUnderThisBase_10007) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_10007",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9973"
+                            "UnusedUnderThisBase_10007"
                           ]
                         }
                       }

@@ -334,7 +334,7 @@ const configAbility = {
                     "target": "{{Player Team All}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "(0 - UnusedUnderThisBase_8539)"
+                  "multiAdd": "(0 - UnusedUnderThisBase_8573)"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1125,13 +1125,13 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8500) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_8500 * 3)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_8534) || Constants[0] (3) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_8534 * 3)",
                     "constants": [
                       3
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_8500"
+                      "UnusedUnderThisBase_8534"
                     ]
                   },
                   "attacker": {
@@ -1220,13 +1220,13 @@ const configAbility = {
                     "target": "{{Level Entity}}"
                   },
                   "baseToughnessDMG": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8500) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_8500 * 3)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_8534) || Constants[0] (3) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_8534 * 3)",
                     "constants": [
                       3
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_8500"
+                      "UnusedUnderThisBase_8534"
                     ]
                   },
                   "toughnessForcedReductionPreview": 1,

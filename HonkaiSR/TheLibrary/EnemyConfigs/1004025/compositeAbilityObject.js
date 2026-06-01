@@ -1472,15 +1472,15 @@ const compositeAbilityObject = {
                         "variables": []
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7854) || MUL || RETURN",
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7854)",
+                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7888) || MUL || RETURN",
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7888)",
                         "constants": [
                           5
                         ],
                         "variables": [
                           "MDF_ShieldPercentage",
                           "MDF_Count",
-                          "UnusedUnderThisBase_7854"
+                          "UnusedUnderThisBase_7888"
                         ]
                       },
                       "formula": "HP Scaling (Shield)"
@@ -3663,11 +3663,11 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12886) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12886",
+              "operator": "Variables[0] (UnusedUnderThisBase_12955) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12955",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12886"
+                "UnusedUnderThisBase_12955"
               ]
             },
             "Toughness": null,
@@ -3737,11 +3737,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_7889) || RETURN",
-            "displayLines": "UnusedUnderThisBase_7889",
+            "operator": "Variables[0] (UnusedUnderThisBase_7923) || RETURN",
+            "displayLines": "UnusedUnderThisBase_7923",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_7889"
+              "UnusedUnderThisBase_7923"
             ]
           }
         },

@@ -42,7 +42,7 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2531
+        2545
       ]
     },
     "501208101": {
@@ -69,7 +69,7 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2531
+        2545
       ]
     },
     "501208102": {
@@ -96,7 +96,7 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2531
+        2545
       ]
     },
     "501208103": {
@@ -123,7 +123,7 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2531
+        2545
       ]
     },
     "501208104": {
@@ -150,7 +150,7 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2531
+        2545
       ]
     }
   }

@@ -216,11 +216,11 @@ const configAbility = {
                               "variableName": "Thunder_CountLight",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10856) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10856",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10890) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10890",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10856"
+                                  "UnusedUnderThisBase_10890"
                                 ]
                               },
                               "max": {
@@ -241,13 +241,13 @@ const configAbility = {
                               "variableName": "Thunder_CountDark",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10856) || SUB || RETURN",
-                                "displayLines": "(0 - UnusedUnderThisBase_10856)",
+                                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10890) || SUB || RETURN",
+                                "displayLines": "(0 - UnusedUnderThisBase_10890)",
                                 "constants": [
                                   0
                                 ],
                                 "variables": [
-                                  "UnusedUnderThisBase_10856"
+                                  "UnusedUnderThisBase_10890"
                                 ]
                               },
                               "max": {
@@ -660,11 +660,11 @@ const configAbility = {
                           "variableName": "Thunder_CountLight",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10856) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10856",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10890) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10890",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10856"
+                              "UnusedUnderThisBase_10890"
                             ]
                           },
                           "max": {
@@ -685,13 +685,13 @@ const configAbility = {
                           "variableName": "Thunder_CountDark",
                           "context": "TargetEntity",
                           "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10856) || SUB || RETURN",
-                            "displayLines": "(0 - UnusedUnderThisBase_10856)",
+                            "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10890) || SUB || RETURN",
+                            "displayLines": "(0 - UnusedUnderThisBase_10890)",
                             "constants": [
                               0
                             ],
                             "variables": [
-                              "UnusedUnderThisBase_10856"
+                              "UnusedUnderThisBase_10890"
                             ]
                           },
                           "max": {

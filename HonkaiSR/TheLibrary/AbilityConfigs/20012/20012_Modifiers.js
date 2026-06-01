@@ -1590,43 +1590,43 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1842038910\">Enemy_W3_DollElite_Commnon_BreakController</a>",
                   "valuePerStack": {
                     "MDF_BreakDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9769) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9769",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9803) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9803",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9769"
+                        "UnusedUnderThisBase_9803"
                       ]
                     },
                     "MDF_ChosenOneSpeedUp": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9770) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9770",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9804) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9804",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9770"
+                        "UnusedUnderThisBase_9804"
                       ]
                     },
                     "MDF_ExploreDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9763) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9763",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9797) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9797",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9763"
+                        "UnusedUnderThisBase_9797"
                       ]
                     },
                     "MDF_ExploreDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9771) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9771",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9805) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9805",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9771"
+                        "UnusedUnderThisBase_9805"
                       ]
                     },
                     "MDF_ExploreDamageUpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9764) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9764",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9798) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9798",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9764"
+                        "UnusedUnderThisBase_9798"
                       ]
                     }
                   }
@@ -1735,43 +1735,43 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1842038910\">Enemy_W3_DollElite_Commnon_BreakController</a>",
                   "valuePerStack": {
                     "MDF_BreakDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9769) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9769",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9803) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9803",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9769"
+                        "UnusedUnderThisBase_9803"
                       ]
                     },
                     "MDF_ChosenOneSpeedUp": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9770) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9770",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9804) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9804",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9770"
+                        "UnusedUnderThisBase_9804"
                       ]
                     },
                     "MDF_ExploreDamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9763) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9763",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9797) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9797",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9763"
+                        "UnusedUnderThisBase_9797"
                       ]
                     },
                     "MDF_ExploreDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9771) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9771",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9805) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9805",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9771"
+                        "UnusedUnderThisBase_9805"
                       ]
                     },
                     "MDF_ExploreDamageUpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9764) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9764",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9798) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9798",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9764"
+                        "UnusedUnderThisBase_9798"
                       ]
                     }
                   }
@@ -1864,43 +1864,43 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "P1_BreakDelayRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9769) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9769",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9803) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9803",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9769"
+                    "UnusedUnderThisBase_9803"
                   ]
                 },
                 "P2_ChosenOneSpeedUp": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9770) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9770",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9804) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9804",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9770"
+                    "UnusedUnderThisBase_9804"
                   ]
                 },
                 "P3_ExploreDamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9763) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9763",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9797) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9797",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9763"
+                    "UnusedUnderThisBase_9797"
                   ]
                 },
                 "P4_ExploreDelayRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9771) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9771",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9805) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9805",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9771"
+                    "UnusedUnderThisBase_9805"
                   ]
                 },
                 "P5_ExploreDamageUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9764) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9764",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9798) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9798",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9764"
+                    "UnusedUnderThisBase_9798"
                   ]
                 }
               },

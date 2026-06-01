@@ -244,20 +244,20 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_4043) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_4043",
+                    "operator": "Variables[0] (UnusedUnderThisBase_4077) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_4077",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_4043"
+                      "UnusedUnderThisBase_4077"
                     ]
                   },
                   "valuePerStack": {
                     "_IgnoreDefenceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4020) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4020",
+                      "operator": "Variables[0] (UnusedUnderThisBase_4054) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4054",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_4020"
+                        "UnusedUnderThisBase_4054"
                       ]
                     }
                   },
@@ -310,20 +310,20 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_4043) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_4043",
+                    "operator": "Variables[0] (UnusedUnderThisBase_4077) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_4077",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_4043"
+                      "UnusedUnderThisBase_4077"
                     ]
                   },
                   "valuePerStack": {
                     "_IgnoreDefenceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4020) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4020",
+                      "operator": "Variables[0] (UnusedUnderThisBase_4054) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_4054",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_4020"
+                        "UnusedUnderThisBase_4054"
                       ]
                     }
                   },
@@ -1229,7 +1229,7 @@ const configAbility = {
                     {
                       "on": "Defender",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": "UnusedUnderThisBase_6462"
+                      "value": "UnusedUnderThisBase_6496"
                     }
                   ]
                 }
@@ -1306,11 +1306,11 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_4019) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_4019",
+                        "operator": "Variables[0] (UnusedUnderThisBase_4053) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_4053",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_4019"
+                          "UnusedUnderThisBase_4053"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -1387,11 +1387,11 @@ const configAbility = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_4019) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_4019",
+                            "operator": "Variables[0] (UnusedUnderThisBase_4053) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_4053",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_4019"
+                              "UnusedUnderThisBase_4053"
                             ]
                           },
                           "isFixed": "* ERR"
@@ -1481,12 +1481,12 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "SpeedAddTotal",
               "value": {
-                "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12220) || MUL || RETURN",
-                "displayLines": "(_Layer * UnusedUnderThisBase_12220)",
+                "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12254) || MUL || RETURN",
+                "displayLines": "(_Layer * UnusedUnderThisBase_12254)",
                 "constants": [],
                 "variables": [
                   "_Layer",
-                  "UnusedUnderThisBase_12220"
+                  "UnusedUnderThisBase_12254"
                 ]
               }
             },
@@ -1601,14 +1601,14 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "_AttackConvert",
               "value": {
-                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_13020) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_13021) || MUL || ADD || RETURN",
-                "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_13020) + (_ServantCurrentSpeed * UnusedUnderThisBase_13021))",
+                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_13089) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_13090) || MUL || ADD || RETURN",
+                "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_13089) + (_ServantCurrentSpeed * UnusedUnderThisBase_13090))",
                 "constants": [],
                 "variables": [
                   "_CurrentSpeed",
-                  "UnusedUnderThisBase_13020",
+                  "UnusedUnderThisBase_13089",
                   "_ServantCurrentSpeed",
-                  "UnusedUnderThisBase_13021"
+                  "UnusedUnderThisBase_13090"
                 ]
               }
             },

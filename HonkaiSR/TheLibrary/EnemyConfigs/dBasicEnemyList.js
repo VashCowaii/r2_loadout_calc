@@ -11361,6 +11361,30 @@ let basicEnemyList = {
           "Fire"
         ]
       },
+      "406201007": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "406201008": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "406201009": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "406201010": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Ichor Memosprite: Pheasant"
@@ -11374,6 +11398,30 @@ let basicEnemyList = {
         ]
       },
       "406202001": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406202002": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406202003": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406202004": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "406202005": {
         "weak": [
           "Ice",
           "Imaginary"
@@ -11400,6 +11448,34 @@ let basicEnemyList = {
         ]
       },
       "406301002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "406301003": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "406301004": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "406301005": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "406301006": {
         "weak": [
           "Physical",
           "Fire",
@@ -11459,6 +11535,51 @@ let basicEnemyList = {
       "phases": 3,
       "hasReader": true,
       "baseName": "Ichor Memosprite: Judge of Oblivion (Complete)"
+    },
+    "4064012": {
+      "4064012": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "406401201": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "406401202": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "406401203": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "406401204": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false,
+      "baseName": "Arbiter of the Lost Abyss"
     },
     "4064013": {
       "4064013": {
@@ -12183,6 +12304,32 @@ let basicEnemyList = {
     },
     "groupName": "Alloy Mechatron: King Pom-Pom"
   },
+  "5014030": {
+    "5014030": {
+      "5014030": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false
+    },
+    "5014031": {
+      "5014031": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false,
+      "baseName": "Murata Graphia, Founding Artist"
+    },
+    "groupName": "Murata Graphia, Founding Artist"
+  },
   "5023010": {
     "5023010": {
       "5023010": {
@@ -12202,6 +12349,26 @@ let basicEnemyList = {
       "hasReader": true
     },
     "groupName": "Joy Ascendant"
+  },
+  "5023020": {
+    "5023020": {
+      "5023020": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502302001": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "God-Devourer Offspring"
   },
   "5024010": {
     "5024010": {
@@ -15588,6 +15755,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "802202006": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "8022021": {
@@ -15646,6 +15820,12 @@ let basicEnemyList = {
         ]
       },
       "802203002": {
+        "weak": [
+          "Physical",
+          "Ice"
+        ]
+      },
+      "802203003": {
         "weak": [
           "Physical",
           "Ice"
@@ -15828,6 +16008,13 @@ let basicEnemyList = {
           "Physical",
           "Ice",
           "Wind",
+          "Imaginary"
+        ]
+      },
+      "802501003": {
+        "weak": [
+          "Physical",
+          "Ice",
           "Imaginary"
         ]
       },
