@@ -1,6 +1,124 @@
 const stageTypers = "shadow"
 let mocSchedule = [
   {
+    "id": 1129,
+    "realName": "Stagnant Shadow: Shape of Devour",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1129,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Stagnant Shadow: Shape of Devour",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1012295
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "God-Devourer Offspring",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "FarmElement",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Assistant Graffiti: Rusher",
+                      "id": 5012051,
+                      "image": 5012051,
+                      "rank": "MinionLv2",
+                      "attackBase": 396.804168,
+                      "defBase": 859.99998,
+                      "hpBase": 25415.67798,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.5,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "God-Devourer Offspring",
+                      "id": 5023020,
+                      "image": 5023020,
+                      "rank": "Elite",
+                      "attackBase": 396.804168,
+                      "defBase": 859.99998,
+                      "hpBase": 162660.339072,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "toughnessBase": 180,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 6,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1"
+                },
+                "highSTSUM": 162660.339072,
+                "aoeSUM": 213491.69503200002
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110443.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1128,
     "realName": "Stagnant Shadow: Shape of Soundburst",
     "worldLevel": 5,
