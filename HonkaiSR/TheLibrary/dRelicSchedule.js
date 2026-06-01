@@ -1,6 +1,199 @@
 const stageTypers = "relic"
 let mocSchedule = [
   {
+    "id": 1216,
+    "realName": "Path of Insight",
+    "worldLevel": 6,
+    "testWorldLevel": 6,
+    "testMapID": 1216,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "Increases ally characters' Elation by #1[i]%. At the start of the turn, gains #2[i] Punchline(s).",
+      "battleDesc": null,
+      "buffType": "",
+      "params": [
+        0.4,
+        5
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104316"
+        }
+      ]
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Path of Insight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1043166
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Daybreak Squadron: Azurewing",
+                "enemyLevel": 82,
+                "modifiersToAdd": [
+                  "FarmRelicAbility_104316"
+                ],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "\"Alloy Pommy\"",
+                      "id": 5012120,
+                      "image": 5012120,
+                      "rank": "MinionLv2",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 59207.314842,
+                      "speedBase": 192,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 60,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 88810.972263,
+                      "speedBase": 96,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1,
+                    0
+                  ],
+                  [
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 88810.972263,
+                      "speedBase": 96,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Daybreak Squadron: Azurewing",
+                      "id": 5013040,
+                      "image": 5013040,
+                      "rank": "Elite",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 296036.57421,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.8
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 3,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1"
+                },
+                "highSTSUM": 384847.54647299997,
+                "aoeSUM": 769695.0929459999
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "71057.png",
+      "71056.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1215,
     "realName": "Path of Possession",
     "worldLevel": 6,
