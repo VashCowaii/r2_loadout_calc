@@ -703,6 +703,15 @@ const configAbility = {
                           "target": "{{Modifier Holder}}"
                         },
                         "characterName": "Sparxie"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 1507,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Mortenax Blade"
                       }
                     ]
                   },
@@ -730,22 +739,60 @@ const configAbility = {
                         {
                           "name": "IF",
                           "conditions": {
-                            "name": "Skill Name",
-                            "skillName": "Skill11"
+                            "name": "Character ID",
+                            "ID": 1501,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Sparxie"
                           },
                           "passed": [
                             {
-                              "name": "Define Custom Variable",
-                              "variableName": "_CurrnetSkillIndex",
-                              "value": 9
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Skill Name",
+                                "skillName": "Skill11"
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "_CurrnetSkillIndex",
+                                  "value": 9
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Define Custom Variable with Varying Data",
+                                  "target": null,
+                                  "variableName": "_CurrnetSkillIndex",
+                                  "value": "CurrentActionSkillIndex"
+                                }
+                              ]
                             }
                           ],
                           "failed": [
                             {
-                              "name": "Define Custom Variable with Varying Data",
-                              "target": null,
-                              "variableName": "_CurrnetSkillIndex",
-                              "value": "CurrentActionSkillIndex"
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Skill Name",
+                                "skillName": "Skill21"
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "_CurrnetSkillIndex",
+                                  "value": 3
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Define Custom Variable with Varying Data",
+                                  "target": null,
+                                  "variableName": "_CurrnetSkillIndex",
+                                  "value": "CurrentActionSkillIndex"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -1332,209 +1379,329 @@ const configAbility = {
                   ],
                   "failed": [
                     {
-                      "name": "SWITCH",
-                      "switchValue": {
-                        "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
-                        "displayLines": "_OnWaveMonster_SkillType",
-                        "constants": [],
-                        "variables": [
-                          "_OnWaveMonster_SkillType"
-                        ]
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Character ID",
+                        "ID": 1507,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Mortenax Blade"
                       },
-                      "caseEvents": [
+                      "passed": [
                         {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 1,
-                          "execute": [
-                            {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
-                              "valuePerStack": {
-                                "_ChangeValue": {
-                                  "operator": "Variables[0] (_ChangeValue) || RETURN",
-                                  "displayLines": "_ChangeValue",
-                                  "constants": [],
-                                  "variables": [
-                                    "_ChangeValue"
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "name": "Inject Extra-Turn",
-                              "actionTag": "ActionTag_Windfury",
-                              "forceAction": true,
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "afterInjection": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Enemies Still Alive",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Modifier Holder}}"
-                                        },
-                                        "invertCondition": true
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": 1
-                                        }
-                                      ],
-                                      "failed": [
-                                        {
-                                          "name": "Remove Events/Bonuses",
-                                          "to": {
-                                            "name": "Target Name",
-                                            "target": "{{Modifier Holder}}"
-                                          },
-                                          "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
-                                        },
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "variableName": "Windfury_Flag",
-                                          "value": 0
-                                        },
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Compare: Variable",
-                                            "value1": "MDF_WindfuryCount",
-                                            "compareType": "<",
-                                            "value2": 1
-                                          },
-                                          "passed": [
-                                            "Modifier Deletes Itself"
-                                          ]
-                                        },
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": -1
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "priorityTag": "Windfury"
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
+                          "valuePerStack": {
+                            "_ChangeValue": {
+                              "operator": "Variables[0] (_ChangeValue) || RETURN",
+                              "displayLines": "_ChangeValue",
+                              "constants": [],
+                              "variables": [
+                                "_ChangeValue"
+                              ]
                             }
-                          ]
+                          }
                         },
                         {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 2,
-                          "execute": [
+                          "name": "Inject Extra-Turn",
+                          "actionTag": "ActionTag_Windfury",
+                          "skillIndex": {
+                            "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                            "displayLines": "_OnWaveMonster_SkillType",
+                            "constants": [],
+                            "variables": [
+                              "_OnWaveMonster_SkillType"
+                            ]
+                          },
+                          "forceAction": true,
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "afterInjection": [
                             {
-                              "name": "Add Events/Bonuses",
-                              "to": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Living/Death State",
+                                "state": "Mask_AliveOrLimbo"
                               },
-                              "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
-                              "valuePerStack": {
-                                "_ChangeValue": {
-                                  "operator": "Variables[0] (_ChangeValue) || RETURN",
-                                  "displayLines": "_ChangeValue",
-                                  "constants": [],
-                                  "variables": [
-                                    "_ChangeValue"
-                                  ]
-                                }
-                              }
-                            },
-                            {
-                              "name": "Inject Extra-Turn",
-                              "actionTag": "ActionTag_Windfury",
-                              "skillType": "ControlSkill02",
-                              "forceAction": true,
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Modifier Holder}}"
-                              },
-                              "afterInjection": [
+                              "passed": [
                                 {
                                   "name": "IF",
                                   "conditions": {
-                                    "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
+                                    "name": "Enemies Still Alive",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
+                                    "invertCondition": true
                                   },
                                   "passed": [
                                     {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "_OnWaveMonster_SkillType",
+                                      "value": {
+                                        "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                                        "displayLines": "_OnWaveMonster_SkillType",
+                                        "constants": [],
+                                        "variables": [
+                                          "_OnWaveMonster_SkillType"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Remove Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "Windfury_Flag",
+                                      "value": 0
+                                    },
+                                    {
                                       "name": "IF",
                                       "conditions": {
-                                        "name": "Enemies Still Alive",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{Modifier Holder}}"
-                                        },
-                                        "invertCondition": true
+                                        "name": "Compare: Variable",
+                                        "value1": "MDF_WindfuryCount",
+                                        "compareType": "<",
+                                        "value2": 1
                                       },
                                       "passed": [
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": 2
-                                        }
-                                      ],
-                                      "failed": [
-                                        {
-                                          "name": "Remove Events/Bonuses",
-                                          "to": {
-                                            "name": "Target Name",
-                                            "target": "{{Modifier Holder}}"
-                                          },
-                                          "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
-                                        },
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "variableName": "Windfury_Flag",
-                                          "value": 0
-                                        },
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Compare: Variable",
-                                            "value1": "MDF_WindfuryCount",
-                                            "compareType": "<",
-                                            "value2": 1
-                                          },
-                                          "passed": [
-                                            "Modifier Deletes Itself"
-                                          ]
-                                        },
-                                        {
-                                          "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": -1
-                                        }
+                                        "Modifier Deletes Itself"
                                       ]
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "_OnWaveMonster_SkillType",
+                                      "value": -1
                                     }
                                   ]
                                 }
-                              ],
-                              "priorityTag": "Windfury"
+                              ]
                             }
-                          ]
+                          ],
+                          "priorityTag": "Windfury"
                         }
                       ],
-                      "defaultEvents": []
+                      "failed": [
+                        {
+                          "name": "SWITCH",
+                          "switchValue": {
+                            "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                            "displayLines": "_OnWaveMonster_SkillType",
+                            "constants": [],
+                            "variables": [
+                              "_OnWaveMonster_SkillType"
+                            ]
+                          },
+                          "caseEvents": [
+                            {
+                              "name": "SWITCH CONDITON",
+                              "caseValueIs": 1,
+                              "execute": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
+                                  "valuePerStack": {
+                                    "_ChangeValue": {
+                                      "operator": "Variables[0] (_ChangeValue) || RETURN",
+                                      "displayLines": "_ChangeValue",
+                                      "constants": [],
+                                      "variables": [
+                                        "_ChangeValue"
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "name": "Inject Extra-Turn",
+                                  "actionTag": "ActionTag_Windfury",
+                                  "forceAction": true,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "afterInjection": [
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Living/Death State",
+                                        "state": "Mask_AliveOrLimbo"
+                                      },
+                                      "passed": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Enemies Still Alive",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Modifier Holder}}"
+                                            },
+                                            "invertCondition": true
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "_OnWaveMonster_SkillType",
+                                              "value": 1
+                                            }
+                                          ],
+                                          "failed": [
+                                            {
+                                              "name": "Remove Events/Bonuses",
+                                              "to": {
+                                                "name": "Target Name",
+                                                "target": "{{Modifier Holder}}"
+                                              },
+                                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "Windfury_Flag",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Compare: Variable",
+                                                "value1": "MDF_WindfuryCount",
+                                                "compareType": "<",
+                                                "value2": 1
+                                              },
+                                              "passed": [
+                                                "Modifier Deletes Itself"
+                                              ]
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "_OnWaveMonster_SkillType",
+                                              "value": -1
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "priorityTag": "Windfury"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "SWITCH CONDITON",
+                              "caseValueIs": 2,
+                              "execute": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
+                                  "valuePerStack": {
+                                    "_ChangeValue": {
+                                      "operator": "Variables[0] (_ChangeValue) || RETURN",
+                                      "displayLines": "_ChangeValue",
+                                      "constants": [],
+                                      "variables": [
+                                        "_ChangeValue"
+                                      ]
+                                    }
+                                  }
+                                },
+                                {
+                                  "name": "Inject Extra-Turn",
+                                  "actionTag": "ActionTag_Windfury",
+                                  "skillType": "ControlSkill02",
+                                  "forceAction": true,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "afterInjection": [
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Living/Death State",
+                                        "state": "Mask_AliveOrLimbo"
+                                      },
+                                      "passed": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Enemies Still Alive",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Modifier Holder}}"
+                                            },
+                                            "invertCondition": true
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "_OnWaveMonster_SkillType",
+                                              "value": 2
+                                            }
+                                          ],
+                                          "failed": [
+                                            {
+                                              "name": "Remove Events/Bonuses",
+                                              "to": {
+                                                "name": "Target Name",
+                                                "target": "{{Modifier Holder}}"
+                                              },
+                                              "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "Windfury_Flag",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Compare: Variable",
+                                                "value1": "MDF_WindfuryCount",
+                                                "compareType": "<",
+                                                "value2": 1
+                                              },
+                                              "passed": [
+                                                "Modifier Deletes Itself"
+                                              ]
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "_OnWaveMonster_SkillType",
+                                              "value": -1
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "priorityTag": "Windfury"
+                                }
+                              ]
+                            }
+                          ],
+                          "defaultEvents": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -6670,73 +6837,66 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
             {
-              "name": "SWITCH",
-              "source": {
-                "name": "Damage Type Source",
-                "sourceType": "ReadTargetType",
+              "name": "IF",
+              "conditions": {
+                "name": "Target Exists",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target DEALING DMG}}"
                 }
               },
-              "caseEvents": [
+              "passed": [
                 {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Physical"
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Fire",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Character ID",
-                        "ID": 1310,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Ability Target DEALING DMG}}"
-                        },
-                        "characterName": "Firefly"
-                      }
+                  "name": "SWITCH",
+                  "source": {
+                    "name": "Damage Type Source",
+                    "sourceType": "ReadTargetType",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target DEALING DMG}}"
                     }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Ice",
-                  "execute": [
+                  },
+                  "caseEvents": [
                     {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Physical"
+                    },
+                    {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Fire",
+                      "execute": [
+                        {
+                          "name": "IF",
+                          "conditions": {
                             "name": "Character ID",
                             "ID": 1310,
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Current Action Owner}}"
-                            },
-                            "characterName": "Firefly"
-                          },
-                          {
-                            "name": "Character ID",
-                            "ID": 1303,
-                            "target": {
-                              "name": "Target Name",
                               "target": "{{Ability Target DEALING DMG}}"
                             },
-                            "characterName": "Ruan Mei"
+                            "characterName": "Firefly"
                           }
-                        ]
-                      },
-                      "failed": [
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Ice",
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
                             "name": "AND",
                             "conditionList": [
+                              {
+                                "name": "Character ID",
+                                "ID": 1310,
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Action Owner}}"
+                                },
+                                "characterName": "Firefly"
+                              },
                               {
                                 "name": "Character ID",
                                 "ID": 1303,
@@ -6745,13 +6905,93 @@ const configAbility = {
                                   "target": "{{Ability Target DEALING DMG}}"
                                 },
                                 "characterName": "Ruan Mei"
-                              },
+                              }
+                            ]
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Character ID",
+                                    "ID": 1303,
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Ability Target DEALING DMG}}"
+                                    },
+                                    "characterName": "Ruan Mei"
+                                  },
+                                  {
+                                    "name": "Character ID",
+                                    "ID": 1220,
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Current Action Owner}}"
+                                    },
+                                    "characterName": "Feixiao"
+                                  },
+                                  {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Current Action Owner}}"
+                                    },
+                                    "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Character ID",
+                                    "ID": 1303,
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Ability Target DEALING DMG}}"
+                                    },
+                                    "characterName": "Ruan Mei"
+                                  },
+                                  {
+                                    "name": "Character ID",
+                                    "ID": 1317,
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Current Action Owner}}"
+                                    },
+                                    "characterName": "Rappa"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Thunder"
+                    },
+                    {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Wind",
+                      "execute": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
                               {
                                 "name": "Character ID",
                                 "ID": 1220,
                                 "target": {
                                   "name": "Target Name",
-                                  "target": "{{Current Action Owner}}"
+                                  "target": "{{Ability Target DEALING DMG}}"
                                 },
                                 "characterName": "Feixiao"
                               },
@@ -6759,102 +6999,41 @@ const configAbility = {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
-                                  "target": "{{Current Action Owner}}"
+                                  "target": "{{Ability Target DEALING DMG}}"
                                 },
                                 "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
                               }
                             ]
                           }
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Quantum"
+                    },
+                    {
+                      "name": "SWITCH CONDITON",
+                      "caseValueIs": "Imaginary",
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Character ID",
-                                "ID": 1303,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Ability Target DEALING DMG}}"
-                                },
-                                "characterName": "Ruan Mei"
-                              },
-                              {
-                                "name": "Character ID",
-                                "ID": 1317,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Current Action Owner}}"
-                                },
-                                "characterName": "Rappa"
-                              }
-                            ]
+                            "name": "Character ID",
+                            "ID": 1317,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Ability Target DEALING DMG}}"
+                            },
+                            "characterName": "Rappa"
                           }
                         }
                       ]
                     }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Thunder"
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Wind",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 1220,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Ability Target DEALING DMG}}"
-                            },
-                            "characterName": "Feixiao"
-                          },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Ability Target DEALING DMG}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1525021884\">Feixiao_Ultramode</a>"
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Quantum"
-                },
-                {
-                  "name": "SWITCH CONDITON",
-                  "caseValueIs": "Imaginary",
-                  "execute": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Character ID",
-                        "ID": 1317,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Ability Target DEALING DMG}}"
-                        },
-                        "characterName": "Rappa"
-                      }
-                    }
-                  ]
+                  ],
+                  "defaultEvents": []
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }
