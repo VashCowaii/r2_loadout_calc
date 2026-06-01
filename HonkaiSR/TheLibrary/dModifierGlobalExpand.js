@@ -24158,7 +24158,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1976624211\">Modifier_FantasticStory_BaseAbility_2260_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Buff",
     "desc": "Whenever a debuff is applied to an enemy target, allies additionally accumulate #1[i] point(s) of Grit Value. This effect can be triggered up to #2[i] time(s) per enemy target.",
@@ -24170,7 +24170,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1886108113\">Modifier_FantasticStory_BaseAbility_2260_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Debuff",
     "desc": "Effect RES decreases by #1[i]%. When afflicted with #3[i] or more debuffs, DMG taken increases by #2[i]%.",
@@ -24183,7 +24183,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_EnterFever_sub",
+    "name": "<a class=\"gModGreen\" id=\"221092080\">Modifier_FantasticStory_BaseAbility_2260_EnterFever_sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "DMG received increases by #1[i]%. Every time this unit is inflicted with a debuff, inflicts 1 stack of \"Dejection\" on this unit.",
@@ -24194,7 +24194,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_ResDown",
+    "name": "<a class=\"gModGreen\" id=\"989147193\">Modifier_FantasticStory_BaseAbility_2260_ResDown</a>",
     "realName": "Dejection",
     "aim": "Debuff",
     "desc": "Each stack decreases All-Type RES by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -24206,7 +24206,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_Plus1AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"1872663559\">Modifier_FantasticStory_BaseAbility_2260_Plus1AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Toccata",
     "aim": "Buff",
     "desc": "After using an Ultimate or Follow-Up ATK to attack, additionally accumulates #1[i] Grit Value for allies with every enemy target hit.",
@@ -24217,7 +24217,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_plus1_sub",
+    "name": "<a class=\"gModGreen\" id=\"1540437577\">Modifier_FantasticStory_BaseAbility_2260_plus1_sub</a>",
     "realName": "Toccata",
     "aim": "Buff",
     "desc": "Ultimate DMG and Follow-Up ATK DMG dealt increases by #1[i]%.",
@@ -24230,7 +24230,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_Plus2AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1024424636\">Modifier_FantasticStory_BaseAbility_2260_Plus2AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Fugato",
     "aim": "Buff",
     "desc": "After every instance of DoT dealt, additionally accumulates #2[i] Grit Value for allies.",
@@ -24242,7 +24242,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_plus2_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1490655604\">Modifier_FantasticStory_BaseAbility_2260_plus2_sub</a>",
     "realName": "Fugato",
     "aim": "Buff",
     "desc": "After using an attack, additionally causes 1 random DoT debuff currently applied to the attacked target to immediately produce DMG equal to #1[i]% of its original DMG.",
@@ -24255,7 +24255,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_Plus3AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-241712163\">Modifier_FantasticStory_BaseAbility_2260_Plus3AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Variation",
     "aim": "Buff",
     "desc": "Each time after an attack is used, allies will additionally accumulate #1[i] Grit Value.",
@@ -24266,7 +24266,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_plus3_sub",
+    "name": "<a class=\"gModGreen\" id=\"-232885525\">Modifier_FantasticStory_BaseAbility_2260_plus3_sub</a>",
     "realName": "Variation",
     "aim": "Buff",
     "desc": "After using Basic ATK, Skill, or Ultimate to attack an enemy target, there is a #1[i]% base chance to reduce the attacked enemy target's DEF by #2[i]% for #3[i] turn(s). This effect can stack up to #4[i] time(s).",
@@ -24280,7 +24280,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_plus3_defDown",
+    "name": "<a class=\"gModGreen\" id=\"1437509790\">Modifier_FantasticStory_BaseAbility_2260_plus3_defDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "Each stack decreases DEF by #1[i]%. This effect can stack up to #2[i] time(s).",
@@ -24372,7 +24372,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_EMY_090",
+    "name": "<a class=\"gModGreen\" id=\"914020533\">MStrongChallengeEX_Talent_StageAbility_EMY_090</a>",
     "realName": "Comic Relief",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -24383,7 +24383,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MStrongChallengeEX_Talent_StageAbility_PLY_091_Self",
+    "name": "<a class=\"gModGreen\" id=\"-1149561969\">MStrongChallengeEX_Talent_StageAbility_PLY_091_Self</a>",
     "realName": "Exploit Opening",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -24394,7 +24394,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0018_02",
+    "name": "<a class=\"gModGreen\" id=\"-241207238\">Modifier_ChallengePeakBattle_BaseAbility_0018_02</a>",
     "realName": "Hemovore",
     "aim": "Other",
     "desc": "Loses #1[i] HP at the start of turn.",
@@ -24405,7 +24405,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0018_02",
+    "name": "<a class=\"gModGreen\" id=\"1227725619\">Modifier_ChallengePeakBattle_EnhancedAbility_0018_02</a>",
     "realName": "Hemovore+",
     "aim": "Other",
     "desc": "Loses #1[i] HP at the start of turn.",
@@ -24416,7 +24416,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0019_02",
+    "name": "<a class=\"gModGreen\" id=\"-2113549484\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0019_02</a>",
     "realName": "Chesty Chortle",
     "aim": "Other",
     "desc": "Elation increases by #1[i]%.",
@@ -24427,7 +24427,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0020_02",
+    "name": "<a class=\"gModGreen\" id=\"96867120\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0020_02</a>",
     "realName": "Electrical Firestorm",
     "aim": "Other",
     "desc": "Has additional Fire and Lightning Weaknesses applied, and Fire and Lightning RES decreases by #1[i]%.",
@@ -24438,7 +24438,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0021_02",
+    "name": "<a class=\"gModGreen\" id=\"-1871244851\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0021_02</a>",
     "realName": "Shatter the Adamant",
     "aim": "Other",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -24471,7 +24471,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0019_03",
+    "name": "<a class=\"gModGreen\" id=\"197121164\">Modifier_ChallengePeakBattle_BaseAbility_0019_03</a>",
     "realName": "Flow Break",
     "aim": "Other",
     "desc": "Each stack reduces DMG taken by #1[i]% and CRIT DMG taken by #2[i]%, stacking up to #3[i] time(s). This effect decreases by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
@@ -24485,7 +24485,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0019_03",
+    "name": "<a class=\"gModGreen\" id=\"-1352915135\">Modifier_ChallengePeakBattle_EnhancedAbility_0019_03</a>",
     "realName": "Flow Break+",
     "aim": "Other",
     "desc": "Each stack reduces DMG taken by #1[i]% and CRIT DMG taken by #2[i]%, stacking up to #3[i] time(s). This effect decreases by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
@@ -24533,7 +24533,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_Plus4AddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"276558114\">Modifier_FantasticStory_BaseAbility_2260_Plus4AddOn_ForShow</a>",
     "realName": "Grit Mechanics: Mirthful Cadence",
     "aim": "Buff",
     "desc": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -24544,7 +24544,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_plus4_sub",
+    "name": "<a class=\"gModGreen\" id=\"961960822\">Modifier_FantasticStory_BaseAbility_2260_plus4_sub</a>",
     "realName": "Mirthful Cadence",
     "aim": "Buff",
     "desc": "After using an Elation Skill to attack an enemy target, inflicts the \"Indulgence\" effect on the attacked enemy target, increasing the DMG taken by this target by #1[i]% for #2[i] turn(s).",
@@ -24556,7 +24556,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2260_plus4_dmgUp",
+    "name": "<a class=\"gModGreen\" id=\"367329133\">Modifier_FantasticStory_BaseAbility_2260_plus4_dmgUp</a>",
     "realName": "Indulgence",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
