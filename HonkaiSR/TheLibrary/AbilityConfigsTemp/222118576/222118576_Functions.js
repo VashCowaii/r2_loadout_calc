@@ -7,7 +7,7 @@ const configAbility = {
     0,
     0
   ],
-  "length": 29,
+  "length": 30,
   "parse": [
     {
       "name": "CharacterFunctions",
@@ -601,6 +601,21 @@ const configAbility = {
     {
       "name": "CharacterFunctions",
       "functionName": "<a class=\"gTempYellow\" id=\"fun__-323885573\">Monster5014030StartCamera</a>",
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Wave Count",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "CharacterFunctions",
+      "functionName": "<a class=\"gTempYellow\" id=\"fun__1336692915\">Monster5034010StartCamera</a>",
       "parse": [
         {
           "name": "IF",
