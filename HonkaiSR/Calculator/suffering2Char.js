@@ -40500,9 +40500,8 @@ const turnLogic = {
                     const characterName = currentTurn.properName;
                     const buffNames = turnLogic[characterName].buffNames;
                     ATKObjects.emcATKConversionSHEET = {
-                        "stats": [ElationDMGAll,ElationDMGAllNULL],
+                        "stats": [ElationDMGAll],
                         [ElationDMGAll]: 0.10,
-                        [ElationDMGAllNULL]: -0.10,
                         "source": "Trace",
                         "sourceOwner": characterName,
                         "buffName": buffNames.atkConversion,
