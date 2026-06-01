@@ -336,6 +336,10 @@ let allowedCharacterList = [
     "trimName": "SilverWolfL"
   },
   {
+    "fullName": "Mortenax Blade",
+    "trimName": "MortenaxBlade"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },
