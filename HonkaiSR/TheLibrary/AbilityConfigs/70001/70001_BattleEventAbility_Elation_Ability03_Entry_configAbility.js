@@ -20,6 +20,29 @@ const configAbility = {
         "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
       },
       "maxTargets": 1,
+      "conditions": {
+        "name": "AND",
+        "conditionList": [
+          {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "flagName": "STAT_CTRL",
+            "invertCondition": true
+          },
+          {
+            "name": "Has Flag",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "flagName": "DisableAction",
+            "invertCondition": true
+          }
+        ]
+      },
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
