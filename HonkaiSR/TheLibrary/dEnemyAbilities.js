@@ -28709,7 +28709,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      254
+      253
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28728,7 +28728,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      254
+      253
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28900,7 +28900,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      255
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30022,7 +30022,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      254
+      253
     ],
     "delay": 1,
     "alert": true,
@@ -30070,7 +30070,7 @@ let enemyAbilityData = [
       6
     ],
     "extraEffects": [
-      254
+      253
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30257,7 +30257,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      254
+      253
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35597,7 +35597,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      255
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35808,7 +35808,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      255
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35940,7 +35940,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      255
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36283,7 +36283,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      255
+      254
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42814,7 +42814,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      256
+      255
     ],
     "delay": 1,
     "element": "Ice",
@@ -43210,7 +43210,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      256
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43444,7 +43444,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      256
+      255
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43832,47 +43832,6 @@ let enemyAbilityData = [
     ],
     "extraEffects": [
       238,
-      239
-    ],
-    "delay": 1,
-    "atkType": "Basic ATK"
-  },
-  {
-    "id": 406202101,
-    "name": "Hemotort Gnaw",
-    "type": "Ability",
-    "trigger": "Skill01",
-    "desc": "Deals Imaginary DMG to one designated target and inflicts the \"Hemotort Corruption\" state on the target.",
-    "tag": "Single Target",
-    "phases": [
-      1
-    ],
-    "params": [
-      2.5,
-      0.1
-    ],
-    "extraEffects": [
-      239
-    ],
-    "delay": 1,
-    "element": "Imaginary",
-    "atkType": "Basic ATK",
-    "energyPerHit": 10
-  },
-  {
-    "id": 406202103,
-    "name": "Hemotort Entrustment",
-    "type": "Talent",
-    "trigger": "SkillP02",
-    "desc": "Upon taking a killing blow, grants adjacent friendly units the \"Hemotort Corruption\" state.",
-    "tag": "Talent",
-    "phases": [
-      1
-    ],
-    "params": [
-      0.05
-    ],
-    "extraEffects": [
       239
     ],
     "delay": 1,
@@ -44468,6 +44427,304 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 406401201,
+    "name": "Hemotort Teethgrind",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Imaginary DMG to one designated target. If the target has a Shield, triggers \"Barrier Recoil.\"",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      4,
+      180,
+      0
+    ],
+    "extraEffects": [
+      292
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406401202,
+    "name": "Execution in Place",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Summons \"Ichor Memosprite: Pheasant.\" When each summon is defeated, triggers \"Barrier Recoil.\"",
+    "tag": "Summon",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0,
+      0,
+      120,
+      0.5
+    ],
+    "extraEffects": [
+      292
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401203,
+    "name": "Hemotort Glower",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Locks on to one designated character, increases this unit's SPD, and uses \"Hemotort Teethgrind\" and \"Hemotort Saw\" on the target within several turns. Take 1 extra action after using this ability.",
+    "tag": "Lock On",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.5,
+      0,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401204,
+    "name": "Hemotort Saw",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to one designated target and converts a portion of the hit target's reduced HP into \"Corrosion.\" If the target has Shield, triggers \"Barrier Recoil.\"",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      6,
+      180
+    ],
+    "extraEffects": [
+      209,
+      292
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 406401205,
+    "name": "Hemotort Clamps",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Imaginary DMG to all targets and converts a portion of the targets' reduced HP to \"Corrosion.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5,
+      0.5,
+      0.2,
+      0.5
+    ],
+    "extraEffects": [
+      209
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 406401206,
+    "name": "Name the Culprit",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Enters the Charging state. In the next action, uses \"Hemotort Decapitation.\" Selects 1 target to receive the highest DMG of \"Hemotort Decapitation\" and \"Hemotort Corruption.\"",
+    "tag": "Charging",
+    "phases": [
+      2
+    ],
+    "params": [
+      1
+    ],
+    "extraEffects": [
+      239
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401207,
+    "name": "Hemotort Decapitation",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "Deals Imaginary DMG to target characters not selected with \"Name the Culprit.\" Deals massive Imaginary DMG to target characters selected with \"Name the Culprit,\" and applies \"Hemotort Corruption\" based on the amount of DMG taken (not offset by Shield) to the selected characters.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      12,
+      4,
+      0.5
+    ],
+    "extraEffects": [
+      239
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 406401208,
+    "name": "Thick-Skinned",
+    "type": "Ability",
+    "trigger": "SkillP01",
+    "desc": "At the start of battle and upon entering a new phase, this unit enters the \"Enhance Defense\" state, greatly increasing this unit's DEF. After being Weakness Broken, dispels the \"Enhanced Defense\" state.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401209,
+    "name": "Barrier Recoil",
+    "type": "Ability",
+    "trigger": "SkillP02",
+    "desc": "When triggering \"Barrier Recoil,\" this unit receives 1 stack of DEF reduction.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.25
+    ],
+    "extraEffects": [
+      292
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401210,
+    "name": "Degraded Vessel",
+    "type": "Ability",
+    "trigger": "SkillP04",
+    "desc": "This unit and its summons gain \"Degraded Vessel.\" If a target inflicts a debuff when using an attack on an friendly unit with \"Degraded Vessel,\" slightly reduces the Toughness of that friendly unit and deals True DMG to it.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      45,
+      0.005
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401211,
+    "name": "Singularity Split",
+    "type": "Ability",
+    "trigger": "SkillP03",
+    "desc": "When Combat begins and when changing phases, this unit splits into \"Ichor Memosprite: Pheasant,\" \"Ichor Memosprite: Canine,\" and \"Ichor Memosprite: Winged Serpent,\" and these \"ichor memosprites\" gain \"Monoform Merger,\" while this unit gains \"Bloodline Frailty.\"\\nAfter an \"ichor memosprite\" with \"Monoform Merger\" takes action, this unit's \"Bloodline Frailty\" reduces by 1.\\nWhen all \"ichor memosprites\" with \"Monoform Merger\" enter the \"Feigned Death\" state, they undergo merger again to become the \"Arbiter of the Lost Abyss,\" reducing the Toughness of the \"Arbiter of the Lost Abyss\" based on the remaining amount of \"Bloodline Frailty.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0,
+      0.25,
+      0.75,
+      0.5,
+      1,
+      48,
+      1440
+    ],
+    "extraEffects": [
+      293,
+      294
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401213,
+    "type": "Ability",
+    "trigger": "SkillEX01",
+    "tag": "Talent",
+    "params": [
+      0.5,
+      1,
+      1.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401214,
+    "type": "Ability",
+    "trigger": "SkillEX02",
+    "tag": "Talent",
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401215,
+    "type": "Ability",
+    "trigger": "SkillEX03",
+    "tag": "Talent",
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401216,
+    "type": "Ability",
+    "trigger": "SkillEX04",
+    "tag": "Talent",
+    "params": [
+      0.04,
+      0.04
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406401217,
+    "type": "Ability",
+    "trigger": "SkillEX05",
+    "tag": "Talent",
+    "params": [
+      40,
+      20,
+      4,
+      0.1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 406401301,
     "name": "Hemotort Teethgrind",
     "type": "Ability",
@@ -44841,7 +45098,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44878,7 +45135,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44917,7 +45174,7 @@ let enemyAbilityData = [
       20
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44956,7 +45213,7 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45139,7 +45396,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      267
+      266
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45155,7 +45412,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      267
+      266
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45171,7 +45428,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      268
+      267
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45187,7 +45444,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      268
+      267
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45222,7 +45479,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "element": "Physical",
@@ -45245,7 +45502,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45322,7 +45579,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45367,7 +45624,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45424,7 +45681,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "element": "Quantum",
@@ -45483,7 +45740,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45528,8 +45785,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      265,
-      259
+      264,
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45600,7 +45857,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45645,8 +45902,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      265,
-      259
+      264,
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45717,7 +45974,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45764,8 +46021,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      265,
-      259
+      264,
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45814,7 +46071,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -45834,7 +46091,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -45854,7 +46111,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "alert": true,
@@ -45882,9 +46139,9 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
+      260,
       261,
-      262,
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45900,7 +46157,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45916,10 +46173,10 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
+      260,
       261,
       262,
-      263,
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45955,7 +46212,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -45975,7 +46232,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -45995,7 +46252,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "alert": true,
@@ -46023,9 +46280,9 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
+      260,
       261,
-      262,
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46041,7 +46298,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      263
+      262
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46057,10 +46314,10 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
+      260,
       261,
       262,
-      263,
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46694,7 +46951,7 @@ let enemyAbilityData = [
     "name": "Get On the Mic!",
     "type": "Ability",
     "trigger": "Skill03",
-    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field enemies. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target sub-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
     "tag": "Impair",
     "phases": [
       1,
@@ -46709,7 +46966,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46755,9 +47012,9 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -46777,9 +47034,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -46808,8 +47065,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      269
+      265,
+      268
     ],
     "delay": 1,
     "alert": true,
@@ -46834,7 +47091,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46854,7 +47111,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46940,7 +47197,7 @@ let enemyAbilityData = [
     "name": "Get On the Mic!",
     "type": "Ability",
     "trigger": "Skill03",
-    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field enemies. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target sub-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
     "tag": "Impair",
     "phases": [
       1,
@@ -46956,7 +47213,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47003,9 +47260,9 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -47026,9 +47283,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -47058,8 +47315,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      269
+      265,
+      268
     ],
     "delay": 1,
     "alert": true,
@@ -47085,7 +47342,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47106,7 +47363,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47154,7 +47411,7 @@ let enemyAbilityData = [
     "name": "Get On the Mic!",
     "type": "Ability",
     "trigger": "Skill03",
-    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target sub-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
     "tag": "Impair",
     "phases": [
       1,
@@ -47169,7 +47426,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47215,9 +47472,9 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -47237,9 +47494,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -47268,8 +47525,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      269
+      265,
+      268
     ],
     "delay": 1,
     "alert": true,
@@ -47300,7 +47557,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47320,7 +47577,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47409,8 +47666,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      266,
-      283
+      265,
+      286
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47460,7 +47717,7 @@ let enemyAbilityData = [
     "name": "Get On the Mic!",
     "type": "Ability",
     "trigger": "Skill03",
-    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target prime-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
+    "desc": "Initiates Live Showdown and selects one target character to fight in sub-field while other characters remain in the prime-field providing support. During Live Showdown, Elation Skills can only target sub-field friendly units. A Live Showdown countdown appears in the Action Order.\\nThe Live Showdown will be dispelled when any of these conditions are met: countdown ends, the sub-field target character is downed, all sub-field friendly units are defeated, or when there are no sub-field target characters left available to battle.",
     "tag": "Impair",
     "phases": [
       1,
@@ -47476,7 +47733,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47523,9 +47780,9 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -47546,9 +47803,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      266,
-      259,
+      265,
       258,
+      257,
       0
     ],
     "delay": 1,
@@ -47578,8 +47835,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      266,
-      269
+      265,
+      268
     ],
     "delay": 1,
     "alert": true,
@@ -47605,7 +47862,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47626,7 +47883,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47647,7 +47904,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      266
+      265
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47688,7 +47945,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "element": "Quantum",
@@ -47737,8 +47994,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      282,
-      259
+      285,
+      258
     ],
     "delay": 1,
     "element": "Quantum",
@@ -47774,7 +48031,7 @@ let enemyAbilityData = [
       8
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "alert": true,
@@ -47802,7 +48059,7 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "element": "Quantum",
@@ -47846,7 +48103,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "element": "Quantum",
@@ -47896,8 +48153,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      282,
-      259
+      285,
+      258
     ],
     "delay": 1,
     "element": "Quantum",
@@ -47935,7 +48192,7 @@ let enemyAbilityData = [
       8
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "alert": true,
@@ -47964,10 +48221,306 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501403001,
+    "name": "Cinder Crimson Blockprint",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501403002,
+    "name": "Infernal Gory Blockprint",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Fire DMG to one designated target character, with a high chance to inflict \"Grudge Ablaze.\"",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      4,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403003,
+    "name": "Infernal Gory Blockprint: Finest Ink",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Fire DMG to 2 designated target characters, with a high chance to inflict \"Grudge Ablaze.\"",
+    "tag": "Impair",
+    "phases": [
+      2
+    ],
+    "params": [
+      4,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403005,
+    "name": "Phantasmal Fiend-Sketch",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Summons \"God-Devourer Offspring\" and applies \"Beyond-Human Realm\" to all summons, then causes summons with 2 or more stacks of \"Beyond-Human Realm\" to immediately take action.",
+    "tag": "Summon",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0,
+      0.5,
+      0.01,
+      0.05,
+      1,
+      0.1
+    ],
+    "extraEffects": [
+      282
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501403006,
+    "name": "Grand Vista: Devourer Murata",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals Fire DMG to all targets with a high chance to inflict \"Grudge Ablaze\" to the attacked characters.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      4,
+      2,
+      1,
+      2,
+      0
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403007,
+    "name": "Everburning Grudge",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "Some of this unit's abilities inflict \"Grudge Ablaze\" on attacked target characters.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.7,
+      0.3,
+      0.33,
+      2,
+      0.3
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501403101,
+    "name": "Cinder Crimson Blockprint",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501403102,
+    "name": "Infernal Gory Blockprint",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Fire DMG to one designated target character, with a high chance to inflict \"Grudge Ablaze.\"",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      4,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403103,
+    "name": "Infernal Gory Blockprint: Finest Ink",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Fire DMG to 2 designated target characters, with a high chance to inflict \"Grudge Ablaze.\"",
+    "tag": "Impair",
+    "phases": [
+      2
+    ],
+    "params": [
+      4,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403105,
+    "name": "Phantasmal Fiend-Sketch",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Summons \"God-Devourer Offspring\" and applies \"Beyond-Human Realm\" to all summons, then causes summons with 2 or more stacks of \"Beyond-Human Realm\" to immediately take action.",
+    "tag": "Summon",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0,
+      0.5,
+      0.01,
+      0.05,
+      1,
+      0.1
+    ],
+    "extraEffects": [
+      282
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501403106,
+    "name": "Grand Vista: Devourer Murata",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals Fire DMG to all targets with a high chance to inflict \"Grudge Ablaze\" to the attacked characters.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      4,
+      2,
+      1,
+      2,
+      0.35
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403107,
+    "name": "Everburning Grudge",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "Some of this unit's abilities inflict \"Grudge Ablaze\" on attacked target characters.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.7,
+      0.3,
+      0.33,
+      2,
+      0.3
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
     "atkType": "Basic ATK"
   },
   {
@@ -47981,7 +48534,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      288
+      291
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48000,7 +48553,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48040,7 +48593,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "element": "Wind",
@@ -48077,7 +48630,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "alert": true,
@@ -48107,7 +48660,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "alert": true,
@@ -48149,7 +48702,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "element": "Wind",
@@ -48186,7 +48739,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "alert": true,
@@ -48216,7 +48769,7 @@ let enemyAbilityData = [
       0.571
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "alert": true,
@@ -48258,7 +48811,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "element": "Wind",
@@ -48295,7 +48848,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "alert": true,
@@ -48325,7 +48878,7 @@ let enemyAbilityData = [
       0.571
     ],
     "extraEffects": [
-      259
+      258
     ],
     "delay": 1,
     "alert": true,
@@ -48367,7 +48920,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "element": "Wind",
@@ -48404,7 +48957,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      289
+      295
     ],
     "delay": 1,
     "alert": true,
@@ -48436,6 +48989,95 @@ let enemyAbilityData = [
     "delay": 1,
     "alert": true,
     "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502302001,
+    "name": "Rite of Gorging",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target, with a high chance to reduce the attacked target's DEF.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2,
+      0.8,
+      0.2,
+      1
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 502302002,
+    "name": "Feast of the Living Offering",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Causes one designated target character to enter the \"Devour\" state, reducing their Maximum Restorable HP and stealing a certain percentage of the character's ATK.",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      1,
+      1000,
+      6,
+      0.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502302003,
+    "name": "Rite of Expiation",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "When the \"Devour\" state applied by this unit is dispelled, increases the ATK of the target unit whose \"Devour\" state was dispelled.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502302004,
+    "name": "Banquet of Beasts",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals minor Fire DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.4
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502302005,
+    "name": "Sacred Regurgitation",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Each time after this unit is attacked by a target unit, increases the Maximum Restorable HP of the target character inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After receiving a certain number of attacks from target units, or when its Weakness is Broken, dispels the \"Devour\" state applied by this unit.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
     "atkType": "Basic ATK"
   },
   {
@@ -48473,8 +49115,8 @@ let enemyAbilityData = [
       0.005
     ],
     "extraEffects": [
-      285,
-      286
+      288,
+      289
     ],
     "delay": 1,
     "element": "Thunder",
@@ -48505,9 +49147,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      285,
-      286,
-      287
+      288,
+      289,
+      290
     ],
     "delay": 1,
     "alert": true,
@@ -48547,8 +49189,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      286,
-      288
+      289,
+      291
     ],
     "delay": 1,
     "alert": true,
@@ -48576,7 +49218,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      288
+      291
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48632,8 +49274,8 @@ let enemyAbilityData = [
       0.03
     ],
     "extraEffects": [
-      285,
-      286
+      288,
+      289
     ],
     "delay": 1,
     "element": "Thunder",
@@ -48664,9 +49306,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      285,
-      286,
-      287
+      288,
+      289,
+      290
     ],
     "delay": 1,
     "alert": true,
@@ -48706,8 +49348,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      286,
-      288
+      289,
+      291
     ],
     "delay": 1,
     "alert": true,
@@ -48735,7 +49377,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      288
+      291
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48797,8 +49439,8 @@ let enemyAbilityData = [
       0.005
     ],
     "extraEffects": [
-      285,
-      286
+      288,
+      289
     ],
     "delay": 1,
     "element": "Thunder",
@@ -48830,9 +49472,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      285,
-      286,
-      287
+      288,
+      289,
+      290
     ],
     "delay": 1,
     "alert": true,
@@ -48874,8 +49516,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      286,
-      288
+      289,
+      291
     ],
     "delay": 1,
     "alert": true,
@@ -48904,7 +49546,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      288
+      291
     ],
     "delay": 1,
     "atkType": "Basic ATK"
