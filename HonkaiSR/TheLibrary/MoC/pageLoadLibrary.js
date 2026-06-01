@@ -385,7 +385,7 @@ const endgameModeDisplay = {
                 let starwardStringer = "";
                 let selectorStarwardStringer = "";
 
-                if (!(stageTypers === "apoc" && currentFloor === 5)) {
+                if (!(stageTypers === "apoc" && directEntry.floorName === "STARWARD")) {
 
                     if (directEntry.buffList2 && directEntry.buffList2.length) {
 
@@ -441,7 +441,7 @@ const endgameModeDisplay = {
                     selector1KingStringer += `</div>`;
                 }
                 
-                if ((stageTypers === "apoc" && currentFloor === 5)) {
+                if ((stageTypers === "apoc" && directEntry.floorName === "STARWARD")) {
                     if (directEntry.buffListStarward && directEntry.buffListStarward.length) {
                         selectorStarwardStringer += `<div class="superimpositionHolderboxActivityButtons">`;
                         let selectorCounter1 = 0;
