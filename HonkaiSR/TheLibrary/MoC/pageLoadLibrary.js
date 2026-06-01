@@ -369,53 +369,60 @@ const endgameModeDisplay = {
             }
 
 
-            if (directEntry.buffList2?.length || directEntry.buffList1?.length || directEntry.kingBuffList?.length) {
+            if (directEntry.buffList2?.length || directEntry.buffList1?.length || directEntry.kingBuffList?.length || directEntry.buffListStarward?.length) {
                 readSelection("PFDescriptionBox").style.display = "block";
 
                 // desc
                 let list2Stringer = "";
                 let selector2Stringer = "";
-                if (directEntry.buffList2 && directEntry.buffList2.length) {
-
-                    selector2Stringer += `<div class="superimpositionHolderboxActivityButtons">`;
-
-
-                    let selectorCounter2 = 0;
-                    for (let buffEntry of directEntry.buffList2) {
-                        const setLength = directEntry.buffList2.length;
-
-                        selectorCounter2++;
-                        selector2Stringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter2 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
-                        id="activityBuffDisplay2Button${selectorCounter2}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter2},2,${setLength})">${buffEntry.name}</div>`;
-
-                        list2Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay2Box${selectorCounter2}`,setLength === selectorCounter2 && !firstBoxGenDCompleted && setLength>1);
-                    }
-                    selector2Stringer += `</div>`;
-                }
 
                 let list1Stringer = "";
                 let selector1Stringer = "";
-                
-                if (directEntry.buffList1 && directEntry.buffList1.length) {
-                    selector1Stringer += `<div class="superimpositionHolderboxActivityButtons">`;
-                    let selectorCounter1 = 0;
-                    for (let buffEntry of directEntry.buffList1) {
-
-                        const setLength = directEntry.buffList1.length;
-                        selectorCounter1++;
-                        selector1Stringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter1 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
-                        id="activityBuffDisplay1Button${selectorCounter1}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter1},1,${setLength})">${buffEntry.name}</div>`
-
-
-                        // realModifierNamne
-                        list1Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay1Box${selectorCounter1}`,setLength === selectorCounter1 && !firstBoxGenDCompleted && setLength>1);
-                    }
-                    selector1Stringer += `</div>`;
-                }
-
 
                 let king1Stringer = "";
                 let selector1KingStringer = "";
+
+                let starwardStringer = "";
+                let selectorStarwardStringer = "";
+
+                if (!(stageTypers === "apoc" && currentFloor === 5)) {
+
+                    if (directEntry.buffList2 && directEntry.buffList2.length) {
+
+                        selector2Stringer += `<div class="superimpositionHolderboxActivityButtons">`;
+
+
+                        let selectorCounter2 = 0;
+                        for (let buffEntry of directEntry.buffList2) {
+                            const setLength = directEntry.buffList2.length;
+
+                            selectorCounter2++;
+                            selector2Stringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter2 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
+                            id="activityBuffDisplay2Button${selectorCounter2}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter2},2,${setLength})">${buffEntry.name}</div>`;
+
+                            list2Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay2Box${selectorCounter2}`,setLength === selectorCounter2 && !firstBoxGenDCompleted && setLength>1);
+                        }
+                        selector2Stringer += `</div>`;
+                    }
+
+                    if (directEntry.buffList1 && directEntry.buffList1.length) {
+                        selector1Stringer += `<div class="superimpositionHolderboxActivityButtons">`;
+                        let selectorCounter1 = 0;
+                        for (let buffEntry of directEntry.buffList1) {
+
+                            const setLength = directEntry.buffList1.length;
+                            selectorCounter1++;
+                            selector1Stringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter1 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
+                            id="activityBuffDisplay1Button${selectorCounter1}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter1},1,${setLength})">${buffEntry.name}</div>`
+
+
+                            // realModifierNamne
+                            list1Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay1Box${selectorCounter1}`,setLength === selectorCounter1 && !firstBoxGenDCompleted && setLength>1);
+                        }
+                        selector1Stringer += `</div>`;
+                    }
+
+                }
                 
                 if (directEntry.kingBuffList && directEntry.kingBuffList.length && (currentFloor === 4 || currentFloor === 5)) {
                     selector1KingStringer += `<div class="superimpositionHolderboxActivityButtons">`;
@@ -433,13 +440,32 @@ const endgameModeDisplay = {
                     }
                     selector1KingStringer += `</div>`;
                 }
+                
+                if ((stageTypers === "apoc" && currentFloor === 5)) {
+                    if (directEntry.buffListStarward && directEntry.buffListStarward.length) {
+                        selectorStarwardStringer += `<div class="superimpositionHolderboxActivityButtons">`;
+                        let selectorCounter1 = 0;
+                        for (let buffEntry of directEntry.buffListStarward) {
+
+                            const setLength = directEntry.buffListStarward.length;
+                            selectorCounter1++;
+                            selectorStarwardStringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter1 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
+                            id="activityBuffDisplay4Button${selectorCounter1}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter1},4,${setLength})">${buffEntry.name}</div>`
+
+                            // endgameModeDisplay.getBuffDisplayBox(buffEntry)
+                            // id="activityBuffDisplay3Box${selectorCounter1}"
+                            starwardStringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay4Box${selectorCounter1}`,setLength === selectorCounter1 && !firstBoxGenDCompleted && setLength>1);
+                        }
+                        selectorStarwardStringer += `</div>`;
+                    }
+                }
 
 
                 // if (list1Stringer) {
                 //     list1Stringer = `<div class="statFiltersRowHeaderSides">Player Buff Options</div>` + list1Stringer;
                 // }
 
-                readSelection("PFDescriptionBox").innerHTML = selector1Stringer + list1Stringer + selector2Stringer + list2Stringer + selector1KingStringer + king1Stringer;
+                readSelection("PFDescriptionBox").innerHTML = selector1Stringer + list1Stringer + selector2Stringer + list2Stringer + selector1KingStringer + king1Stringer + selectorStarwardStringer + starwardStringer;
             }
             else if (readSelection("PFDescriptionBox") && adjustment == undefined) {readSelection("PFDescriptionBox").style.display = "none";}
 
