@@ -207,73 +207,95 @@ const configAbility = {
           "eventTrigger": "Ability Use [Owner]: Start",
           "execute": [
             {
-              "name": "Find New Target",
-              "from": {
-                "name": "Target Name",
-                "target": "{{Player Team All}}"
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Basic ATK"
+                  },
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  },
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  }
+                ]
               },
-              "ifTargetFound": [
+              "passed": [
                 {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "name": "Find New Target",
+                  "from": {
                     "name": "Target Name",
-                    "target": "{{Parameter Target}}"
+                    "target": "{{Player Team All}}"
                   },
-                  "variableName": "_CurrentHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_MaxHP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
-                },
-                {
-                  "name": "Consume",
-                  "consumeFrom": "CurrentHP",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Parameter Target}}"
-                  },
-                  "consumePercent": {
-                    "operator": "Variables[0] (0.01) || RETURN",
-                    "displayLines": "0.01",
-                    "constants": [],
-                    "variables": [
-                      0.01
-                    ]
-                  },
-                  "consumeFloor": 1,
-                  "dynamicAssignment": "_RealRatio"
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_LoseHP",
-                  "value": {
-                    "operator": "Variables[0] (_MaxHP) || Variables[1] (_RealRatio) || MUL || RETURN",
-                    "displayLines": "(_MaxHP * _RealRatio)",
-                    "constants": [],
-                    "variables": [
-                      "_MaxHP",
-                      "_RealRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "_LoseHPTotal",
-                  "value": {
-                    "operator": "Variables[0] (_LoseHP) || Variables[1] (_LoseHPTotal) || ADD || RETURN",
-                    "displayLines": "(_LoseHP + _LoseHPTotal)",
-                    "constants": [],
-                    "variables": [
-                      "_LoseHP",
-                      "_LoseHPTotal"
-                    ]
-                  }
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "_CurrentHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "_MaxHP",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Consume",
+                      "consumeFrom": "CurrentHP",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "consumePercent": {
+                        "operator": "Variables[0] (0.01) || RETURN",
+                        "displayLines": "0.01",
+                        "constants": [],
+                        "variables": [
+                          0.01
+                        ]
+                      },
+                      "consumeFloor": 1,
+                      "dynamicAssignment": "_RealRatio"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_LoseHP",
+                      "value": {
+                        "operator": "Variables[0] (_MaxHP) || Variables[1] (_RealRatio) || MUL || RETURN",
+                        "displayLines": "(_MaxHP * _RealRatio)",
+                        "constants": [],
+                        "variables": [
+                          "_MaxHP",
+                          "_RealRatio"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_LoseHPTotal",
+                      "value": {
+                        "operator": "Variables[0] (_LoseHP) || Variables[1] (_LoseHPTotal) || ADD || RETURN",
+                        "displayLines": "(_LoseHP + _LoseHPTotal)",
+                        "constants": [],
+                        "variables": [
+                          "_LoseHP",
+                          "_LoseHPTotal"
+                        ]
+                      }
+                    }
+                  ]
                 }
               ]
             }
