@@ -872,11 +872,11 @@ const configAbility = {
               "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5563) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5563",
+                  "operator": "Variables[0] (UnusedUnderThisBase_5597) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_5597",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5563"
+                    "UnusedUnderThisBase_5597"
                   ]
                 }
               }
@@ -1196,19 +1196,19 @@ const configAbility = {
                 ]
               },
               "activeCount": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5594) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5594",
+                "operator": "Variables[0] (UnusedUnderThisBase_5628) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5628",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5594"
+                  "UnusedUnderThisBase_5628"
                 ]
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5594) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5594",
+                "operator": "Variables[0] (UnusedUnderThisBase_5628) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5628",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5594"
+                  "UnusedUnderThisBase_5628"
                 ]
               },
               "assignState": "True",
@@ -1222,11 +1222,11 @@ const configAbility = {
                 "value1": "CurSpecialSP",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5594) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5594",
+                  "operator": "Variables[0] (UnusedUnderThisBase_5628) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_5628",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5594"
+                    "UnusedUnderThisBase_5628"
                   ]
                 }
               },
@@ -1343,11 +1343,11 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5595) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5595",
+                "operator": "Variables[0] (UnusedUnderThisBase_5629) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5629",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5595"
+                  "UnusedUnderThisBase_5629"
                 ]
               }
             },
@@ -1383,13 +1383,13 @@ const configAbility = {
             {
               "name": "Set Phainon Action Count",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5565) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_5565 - 1)",
+                "operator": "Variables[0] (UnusedUnderThisBase_5599) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(UnusedUnderThisBase_5599 - 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_5565"
+                  "UnusedUnderThisBase_5599"
                 ]
               }
             },
@@ -1596,11 +1596,11 @@ const configAbility = {
                 "value1": "Skill22_Energy",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5590) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5590",
+                  "operator": "Variables[0] (UnusedUnderThisBase_5624) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_5624",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5590"
+                    "UnusedUnderThisBase_5624"
                   ]
                 }
               },
@@ -1763,11 +1763,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_5607) || RETURN",
-              "displayLines": "UnusedUnderThisBase_5607",
+              "operator": "Variables[0] (UnusedUnderThisBase_5641) || RETURN",
+              "displayLines": "UnusedUnderThisBase_5641",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_5607"
+                "UnusedUnderThisBase_5641"
               ]
             }
           }
@@ -1842,11 +1842,11 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5567) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5567",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5601) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5601",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5567"
+                        "UnusedUnderThisBase_5601"
                       ]
                     }
                   }
@@ -1868,20 +1868,20 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6268) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6268",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6302) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6302",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6268"
+                      "UnusedUnderThisBase_6302"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6198) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6198",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6232) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6232",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6198"
+                        "UnusedUnderThisBase_6232"
                       ]
                     }
                   },
@@ -2094,11 +2094,11 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5598) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5598",
+                "operator": "Variables[0] (UnusedUnderThisBase_5632) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5632",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5598"
+                  "UnusedUnderThisBase_5632"
                 ]
               },
               "formula": "Heal from Target MaxHP"

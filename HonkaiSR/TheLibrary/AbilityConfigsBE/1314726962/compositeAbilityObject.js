@@ -329,11 +329,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Improvisation</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Improvisation</span>]",
           "stackType": "ReplaceByCaster",
           "description": "Every time a DoT is received, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2214_ADF_2</span> Grit Value for allies.",
           "type": "Debuff",
-          "statusName": "Grit Mechanics_Improvisation"
+          "statusName": "Grit Mechanics: Improvisation"
         },
         {
           "name": "Modifier Construction",
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Improvisation</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Improvisation</span>]",
               "haloStatus": true
             }
           ],
@@ -486,11 +486,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Tirade</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Tirade</span>]",
           "stackType": "ReplaceByCaster",
           "description": "When a Weakness is Broken, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2213_ADF_3</span> Grit Value for allies.",
           "type": "Debuff",
-          "statusName": "Grit Mechanics_Tirade"
+          "statusName": "Grit Mechanics: Tirade"
         },
         {
           "name": "Modifier Construction",
@@ -503,7 +503,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All(with Unselectable)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Tirade</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1718519168\">Modifier_FantasticStory_BaseAbility_2210_Plus3AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Tirade</span>]",
               "haloStatus": true
             },
             {
@@ -786,14 +786,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-22819003\">Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Delirium</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-22819003\">Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Delirium</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "KeepOnDeathrattle"
           ],
           "description": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2212_ADF_3</span> Grit Value for allies.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Delirium",
+          "statusName": "Grit Mechanics: Delirium",
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
@@ -937,7 +937,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-22819003\">Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Delirium</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-22819003\">Modifier_FantasticStory_BaseAbility_2210_Plus2AddOn_Sub</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Delirium</span>]",
               "haloStatus": true
             },
             {
@@ -953,11 +953,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Euphoria</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Euphoria</span>]",
           "stackType": "ReplaceByCaster",
           "description": "When consuming Skill Points, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2211_ADF_3</span> Grit Value for allies.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Euphoria"
+          "statusName": "Grit Mechanics: Euphoria"
         },
         {
           "name": "Modifier Construction",
@@ -970,7 +970,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Euphoria</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-1087815718\">Modifier_FantasticStory_BaseAbility_2210_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Euphoria</span>]",
               "haloStatus": true
             }
           ],

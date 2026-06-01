@@ -53,13 +53,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12320) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_12320 - 1)",
+                "operator": "Variables[0] (UnusedUnderThisBase_12354) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(UnusedUnderThisBase_12354 - 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_12320"
+                  "UnusedUnderThisBase_12354"
                 ]
               }
             }
@@ -876,11 +876,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"688363638\">Monster_W4_Theoroi_Destruction</a>[<span class=\"descriptionNumberColor\">Retribution of \"Law\"</span>]",
                   "valuePerStack": {
                     "MDF_LoseHPRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12323) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12323",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12357) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12357",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12323"
+                        "UnusedUnderThisBase_12357"
                       ]
                     }
                   }
@@ -1509,22 +1509,22 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12329) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12329",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12363) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12363",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12329"
+                      "UnusedUnderThisBase_12363"
                     ]
                   }
                 },
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12322) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12322",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12356) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12356",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12322"
+                      "UnusedUnderThisBase_12356"
                     ]
                   },
                   "forceReduction": true,
@@ -1566,11 +1566,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_CurrentCountRemain",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12342) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_12342 - MDF_CurrentCount)",
+                "operator": "Variables[0] (UnusedUnderThisBase_12376) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
+                "displayLines": "(UnusedUnderThisBase_12376 - MDF_CurrentCount)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12342",
+                  "UnusedUnderThisBase_12376",
                   "MDF_CurrentCount"
                 ]
               }
@@ -1591,11 +1591,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12342",
+                "operator": "Variables[0] (UnusedUnderThisBase_12376) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12376",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12342"
+                  "UnusedUnderThisBase_12376"
                 ]
               },
               "assignState": "True",
@@ -1750,11 +1750,11 @@ const configAbility = {
                     "value1": "MDF_CurrentCount",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12342",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12376) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12376",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12342"
+                        "UnusedUnderThisBase_12376"
                       ]
                     }
                   },
@@ -1763,11 +1763,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_CurrentCount",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12342",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12376) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12376",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12342"
+                          "UnusedUnderThisBase_12376"
                         ]
                       }
                     }
@@ -1777,11 +1777,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_CurrentCountRemain",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12342) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_12342 - MDF_CurrentCount)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12376) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_12376 - MDF_CurrentCount)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12342",
+                      "UnusedUnderThisBase_12376",
                       "MDF_CurrentCount"
                     ]
                   }
@@ -1802,11 +1802,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12342",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12376) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12376",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12342"
+                      "UnusedUnderThisBase_12376"
                     ]
                   },
                   "assignState": "True",
@@ -1833,11 +1833,11 @@ const configAbility = {
                         "value1": "MDF_CurrentCount",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12342) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12342",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12376) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12376",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12342"
+                            "UnusedUnderThisBase_12376"
                           ]
                         }
                       },

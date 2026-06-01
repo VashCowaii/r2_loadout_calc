@@ -284,11 +284,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_2485) || RETURN",
-                "displayLines": "UnusedUnderThisBase_2485",
+                "operator": "Variables[0] (UnusedUnderThisBase_2518) || RETURN",
+                "displayLines": "UnusedUnderThisBase_2518",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_2485"
+                  "UnusedUnderThisBase_2518"
                 ]
               }
             }
@@ -350,11 +350,11 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6037) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6037",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6071) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_6071",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_6037"
+                    "UnusedUnderThisBase_6071"
                   ]
                 }
               },
@@ -368,11 +368,11 @@ const configAbility = {
                   },
                   "variables": {
                     "DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6068) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6068",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6102) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6102",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6068"
+                        "UnusedUnderThisBase_6102"
                       ]
                     }
                   }
@@ -390,11 +390,11 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6066) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6066",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6100) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6100",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6066"
+                        "UnusedUnderThisBase_6100"
                       ]
                     }
                   },
@@ -408,11 +408,11 @@ const configAbility = {
                       },
                       "variables": {
                         "DamagePercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6067) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6067",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6101) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6101",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6067"
+                            "UnusedUnderThisBase_6101"
                           ]
                         }
                       }
@@ -535,11 +535,11 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6066) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6066",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6100) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_6100",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_6066"
+                    "UnusedUnderThisBase_6100"
                   ]
                 }
               }
@@ -673,14 +673,14 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_PassiveResRatio",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6063) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6063)) + _RedModeResRatio)",
+                    "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6097) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
+                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6097)) + _RedModeResRatio)",
                     "constants": [
                       1
                     ],
                     "variables": [
                       "_HPRatioCurrent",
-                      "UnusedUnderThisBase_6063",
+                      "UnusedUnderThisBase_6097",
                       "_RedModeResRatio"
                     ]
                   }
@@ -694,11 +694,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6043) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_6043 * _PassiveResRatio)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6077) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_6077 * _PassiveResRatio)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6043",
+                        "UnusedUnderThisBase_6077",
                         "_PassiveResRatio"
                       ]
                     }
@@ -797,7 +797,7 @@ const configAbility = {
                     {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                      "value": "(UnusedUnderThisBase_6033 + Rank06_StanceBreakAddedRatio)"
+                      "value": "(UnusedUnderThisBase_6067 + Rank06_StanceBreakAddedRatio)"
                     }
                   ]
                 }
@@ -886,14 +886,14 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "_PassiveResRatio",
               "value": {
-                "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6063) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6063)) + _RedModeResRatio)",
+                "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6097) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
+                "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6097)) + _RedModeResRatio)",
                 "constants": [
                   1
                 ],
                 "variables": [
                   "_HPRatioCurrent",
-                  "UnusedUnderThisBase_6063",
+                  "UnusedUnderThisBase_6097",
                   "_RedModeResRatio"
                 ]
               }
@@ -907,11 +907,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6043) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                  "displayLines": "(UnusedUnderThisBase_6043 * _PassiveResRatio)",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6077) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
+                  "displayLines": "(UnusedUnderThisBase_6077 * _PassiveResRatio)",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_6043",
+                    "UnusedUnderThisBase_6077",
                     "_PassiveResRatio"
                   ]
                 }
@@ -937,12 +937,12 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_FinalDamageUP",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6033) || Variables[1] (UnusedUnderThisBase_6031) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_6033 + UnusedUnderThisBase_6031)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6067) || Variables[1] (UnusedUnderThisBase_6065) || ADD || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_6067 + UnusedUnderThisBase_6065)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6033",
-                      "UnusedUnderThisBase_6031"
+                      "UnusedUnderThisBase_6067",
+                      "UnusedUnderThisBase_6065"
                     ]
                   }
                 }
@@ -952,11 +952,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_FinalDamageUP",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6033) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6033",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6067) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6067",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6033"
+                      "UnusedUnderThisBase_6067"
                     ]
                   }
                 }
@@ -989,12 +989,12 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_StatusResistance",
                   "value": {
-                    "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (UnusedUnderThisBase_6047) || ADD || RETURN",
-                    "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_6047)",
+                    "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (UnusedUnderThisBase_6081) || ADD || RETURN",
+                    "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_6081)",
                     "constants": [],
                     "variables": [
                       "MDF_StatusResistance",
-                      "UnusedUnderThisBase_6047"
+                      "UnusedUnderThisBase_6081"
                     ]
                   }
                 },
@@ -1050,11 +1050,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_2515) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_2515",
+                      "operator": "Variables[0] (UnusedUnderThisBase_2548) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_2548",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_2515"
+                        "UnusedUnderThisBase_2548"
                       ]
                     }
                   }
@@ -1099,14 +1099,14 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Rank02_CD",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2514) || ADD || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2514) + 1)",
+                    "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2547) || ADD || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2547) + 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
                       "Rank02_CD",
-                      "UnusedUnderThisBase_2514"
+                      "UnusedUnderThisBase_2547"
                     ]
                   }
                 },
@@ -1123,14 +1123,14 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Rank02_CD",
                       "value": {
-                        "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2514) || SUB || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2514) - 1)",
+                        "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2547) || SUB || Constants[0] (1) || SUB || RETURN",
+                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2547) - 1)",
                         "constants": [
                           1
                         ],
                         "variables": [
                           "Rank02_CD",
-                          "UnusedUnderThisBase_2514"
+                          "UnusedUnderThisBase_2547"
                         ]
                       }
                     },
@@ -1181,14 +1181,14 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Rank02_CD",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2514) || ADD || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2514) + 1)",
+                    "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2547) || ADD || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2547) + 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
                       "Rank02_CD",
-                      "UnusedUnderThisBase_2514"
+                      "UnusedUnderThisBase_2547"
                     ]
                   }
                 },
@@ -1205,14 +1205,14 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Rank02_CD",
                       "value": {
-                        "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2514) || SUB || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2514) - 1)",
+                        "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2547) || SUB || Constants[0] (1) || SUB || RETURN",
+                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2547) - 1)",
                         "constants": [
                           1
                         ],
                         "variables": [
                           "Rank02_CD",
-                          "UnusedUnderThisBase_2514"
+                          "UnusedUnderThisBase_2547"
                         ]
                       }
                     },
@@ -1263,14 +1263,14 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Rank02_CD",
                   "value": {
-                    "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2514) || ADD || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2514) + 1)",
+                    "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2547) || ADD || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2547) + 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
                       "Rank02_CD",
-                      "UnusedUnderThisBase_2514"
+                      "UnusedUnderThisBase_2547"
                     ]
                   }
                 },
@@ -1287,14 +1287,14 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Rank02_CD",
                       "value": {
-                        "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2514) || SUB || Constants[0] (1) || SUB || RETURN",
-                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2514) - 1)",
+                        "operator": "Variables[0] (Rank02_CD) || Variables[1] (UnusedUnderThisBase_2547) || SUB || Constants[0] (1) || SUB || RETURN",
+                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2547) - 1)",
                         "constants": [
                           1
                         ],
                         "variables": [
                           "Rank02_CD",
-                          "UnusedUnderThisBase_2514"
+                          "UnusedUnderThisBase_2547"
                         ]
                       }
                     },
@@ -1386,11 +1386,11 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6066) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6066",
+                "operator": "Variables[0] (UnusedUnderThisBase_6100) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6100",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6066"
+                  "UnusedUnderThisBase_6100"
                 ]
               },
               "whenEnteringRange": [

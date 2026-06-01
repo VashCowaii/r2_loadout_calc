@@ -743,11 +743,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10811) || Variables[1] (BaseAttack) || MUL || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_10811 * BaseAttack)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10845) || Variables[1] (BaseAttack) || MUL || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_10845 * BaseAttack)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10811",
+                        "UnusedUnderThisBase_10845",
                         "BaseAttack"
                       ]
                     }
@@ -1388,11 +1388,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10874) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10874",
+              "operator": "Variables[0] (UnusedUnderThisBase_10908) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10908",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10874"
+                "UnusedUnderThisBase_10908"
               ]
             }
           }
@@ -1652,7 +1652,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_10835"
+                      "multiAdd": "UnusedUnderThisBase_10869"
                     }
                   ]
                 },
@@ -1673,7 +1673,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "advanceType": "Set",
-              "multiAdd": "UnusedUnderThisBase_10875"
+              "multiAdd": "UnusedUnderThisBase_10909"
             },
             {
               "name": "Declare Custom Variable",

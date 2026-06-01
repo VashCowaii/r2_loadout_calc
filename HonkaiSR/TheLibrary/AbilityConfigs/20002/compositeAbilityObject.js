@@ -1207,46 +1207,46 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8792) || Constants[0] (1) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_8792 + 1)",
+                "operator": "Variables[0] (UnusedUnderThisBase_8826) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(UnusedUnderThisBase_8826 + 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_8792"
+                  "UnusedUnderThisBase_8826"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8786) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8786",
+                "operator": "Variables[0] (UnusedUnderThisBase_8820) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8820",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_8786"
+                  "UnusedUnderThisBase_8820"
                 ]
               },
               "valuePerStack": {
                 "MDF_MindControlDamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11882) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11882",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11916) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11916",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11882"
+                    "UnusedUnderThisBase_11916"
                   ]
                 },
                 "MDF_MaxDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8801) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8801",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8835) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8835",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8801"
+                    "UnusedUnderThisBase_8835"
                   ]
                 },
                 "MDF_MinDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8790) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8790",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8824) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8824",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8790"
+                    "UnusedUnderThisBase_8824"
                   ]
                 }
               },

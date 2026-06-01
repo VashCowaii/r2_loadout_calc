@@ -563,11 +563,11 @@ const configAbility = {
               ]
             },
             "MDF_EnergyRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13058) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13058",
+              "operator": "Variables[0] (UnusedUnderThisBase_13127) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13127",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_13058"
+                "UnusedUnderThisBase_13127"
               ]
             },
             "MDF_TargetCount": {

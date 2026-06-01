@@ -37,11 +37,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Commotion</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Commotion</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After using Basic ATK or Skill to attack, every enemy target hit additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2070_ADF_2</span> Grit Value for allies.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Commotion"
+          "statusName": "Grit Mechanics: Commotion"
         },
         {
           "name": "Modifier Construction",
@@ -54,7 +54,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Commotion</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"-610383487\">Modifier_FantasticStory_BaseAbility_2060_Plus10AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Commotion</span>]",
               "haloStatus": true
             }
           ],
@@ -200,11 +200,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Streets Abuzz</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Streets Abuzz</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After using a Follow-Up ATK to attack, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2069_ADF_3</span> Grit Value for allies with every enemy target hit.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Streets Abuzz"
+          "statusName": "Grit Mechanics: Streets Abuzz"
         },
         {
           "name": "Modifier Construction",
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Streets Abuzz</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"170129893\">Modifier_FantasticStory_BaseAbility_2060_Plus9AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Streets Abuzz</span>]",
               "haloStatus": true
             }
           ],
@@ -1230,11 +1230,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Universality</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After using Skill to attack enemy targets, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2062_ADF_2</span> Grit Value.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Universality"
+          "statusName": "Grit Mechanics: Universality"
         },
         {
           "name": "Modifier Construction",
@@ -1247,7 +1247,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Universality</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"155042142\">Modifier_FantasticStory_BaseAbility_2060_Plus2AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Universality</span>]",
               "haloStatus": true
             }
           ],
@@ -1388,11 +1388,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+          "for": "<a class=\"gModGreen\" id=\"mod__278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Radiance</span>]",
           "stackType": "ReplaceByCaster",
           "description": "After launching a Follow-Up ATK, every enemy target attacked additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2061_ADF_2</span> Grit Value.",
           "type": "Buff",
-          "statusName": "Grit Mechanics_Radiance"
+          "statusName": "Grit Mechanics: Radiance"
         },
         {
           "name": "Modifier Construction",
@@ -1405,7 +1405,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics_Radiance</span>]",
+              "modifier": "<a class=\"gModGreen\" id=\"278893341\">Modifier_FantasticStory_BaseAbility_2060_Plus1AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Radiance</span>]",
               "haloStatus": true
             }
           ],

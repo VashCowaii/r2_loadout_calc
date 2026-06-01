@@ -12,19 +12,19 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] (UnusedUnderThisBase_3059) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3059",
+              "operator": "Variables[0] (UnusedUnderThisBase_3093) || RETURN",
+              "displayLines": "UnusedUnderThisBase_3093",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_3059"
+                "UnusedUnderThisBase_3093"
               ]
             },
             {
-              "operator": "Variables[0] (UnusedUnderThisBase_3054) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3054",
+              "operator": "Variables[0] (UnusedUnderThisBase_3088) || RETURN",
+              "displayLines": "UnusedUnderThisBase_3088",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_3054"
+                "UnusedUnderThisBase_3088"
               ]
             }
           ],
@@ -60,11 +60,11 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_3055) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_3055",
+                    "operator": "Variables[0] (UnusedUnderThisBase_3089) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_3089",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_3055"
+                      "UnusedUnderThisBase_3089"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -88,11 +88,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_3057) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_3057",
+                      "operator": "Variables[0] (UnusedUnderThisBase_3091) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_3091",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_3057"
+                        "UnusedUnderThisBase_3091"
                       ]
                     },
                     "dmgFormula": "Elation Scaling",
