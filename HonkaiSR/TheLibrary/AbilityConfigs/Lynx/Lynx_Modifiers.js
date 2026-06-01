@@ -101,6 +101,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1804592669\">Lynx_Tree01_OnBeforeBeingAttacked</a>",
+      "modifierFlags": [
+        "RemoveWhenCasterDead"
+      ],
       "execute": [
         {
           "eventTrigger": "Being Attacked End [Owner]",
