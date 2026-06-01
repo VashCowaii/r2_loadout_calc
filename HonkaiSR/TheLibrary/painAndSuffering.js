@@ -1867,6 +1867,7 @@ const megaParsingFuckeryPain = {
             "variableName",
             "eventType",
             "value",
+            "max",
             "filterCaster",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Modifier Event");
@@ -1888,6 +1889,8 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.filterCaster,"Filter Source",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.variableName,"Variable Name")}
+            ${getStandardNameDisplay(initialCounter,parseRef.max,"Max")}
+            
             ${parseRef.value != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Value:</div>&nbsp;
                 
@@ -8633,6 +8636,7 @@ const megaParsingFuckeryPain = {
             // "compareType",
             // "value2"
             "conditions",
+            "detectRevive",
 
             "aliveOnly",
             "haloStatus",
@@ -8664,6 +8668,8 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
 
             ${getStandardNameDisplay(initialCounter,parseRef.haloStatus,"Is Zone/Team Buff")}
+            ${getStandardNameDisplay(initialCounter,parseRef.detectRevive,"Detect Revive")}
+            
             ${getStandardNameDisplay(initialCounter,parseRef.refModifier,"Reference Modifier")}
             ${getStandardNameDisplay(initialCounter,parseRef.aliveOnly,"Apply to Living Only")}
             ${getStandardNameDisplay(initialCounter,parseRef.includeBattleEvent,"Include Battle Events")}
@@ -11349,6 +11355,7 @@ const megaParsingFuckeryPain = {
             "execute",
             "target",
             "punchlineFixed",
+            "abortFlags",
 
             // "counter",
             // "execute",
@@ -11377,6 +11384,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.punchlineFixed,"Fixed Punchline")}
                 ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
                 ${getStandardNameDisplay(initialCounter,parseRef.caster,"Caster",true)}
+                ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
+                
 
             </div>
 
