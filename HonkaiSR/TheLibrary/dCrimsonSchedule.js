@@ -1,6 +1,630 @@
 const stageTypers = "crimson"
 let mocSchedule = [
   {
+    "id": 1035,
+    "realName": "Bud of Destruction",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1035,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Destruction",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1025415,
+              1025425,
+              1025435
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 55551.410442,
+                      "speedBase": 88,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 55551.410442,
+                "aoeSUM": 141964.715574
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 55551.410442,
+                      "speedBase": 88,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 27775.705221,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    {
+                      "name": "Autonomous Wand",
+                      "id": 5012010,
+                      "image": 5012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 30861.89469,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    }
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 55551.410442,
+                "aoeSUM": 169740.42079499998
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 55551.410442,
+                      "speedBase": 88,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    {
+                      "name": "Security Doggo",
+                      "id": 5012020,
+                      "image": 5012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 27775.705221,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    }
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 55551.410442,
+                "aoeSUM": 138878.526105
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110283.png",
+      "110282.png",
+      "110281.png",
+      "2.png"
+    ]
+  },
+  {
+    "id": 1034,
+    "realName": "Bud of Erudition",
+    "worldLevel": 5,
+    "testWorldLevel": 5,
+    "testMapID": 1034,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bud of Erudition",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1025315,
+              1025325,
+              1025335
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "\"Alloy Pommy\"",
+                      "id": 5012120,
+                      "image": 5012120,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 176,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 60,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Magical Girl Troupe",
+                      "id": 5012100,
+                      "image": 5012100,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 37034.273628,
+                "aoeSUM": 111102.82088400002
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 55551.410442,
+                      "speedBase": 88,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "Magical Girl Troupe",
+                      "id": 5012100,
+                      "image": 5012100,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    1
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 55551.410442,
+                "aoeSUM": 129619.95769800001
+              },
+              {
+                "stageName": "undefined",
+                "enemyLevel": 66,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Magical Girl Troupe",
+                      "id": 5012100,
+                      "image": 5012100,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    {
+                      "name": "SD Civilian Mechatron",
+                      "id": 5012090,
+                      "image": 5012090,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 55551.410442,
+                      "speedBase": 88,
+                      "critDMG": 0.2,
+                      "effectRES": 0.164,
+                      "ehr": 0.128,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    },
+                    0,
+                    {
+                      "name": "\"Alloy Pommy\"",
+                      "id": 5012120,
+                      "image": 5012120,
+                      "rank": "MinionLv2",
+                      "attackBase": 317.4433344,
+                      "defBase": 859.99998,
+                      "hpBase": 37034.273628,
+                      "speedBase": 176,
+                      "critDMG": 0.2,
+                      "effectRES": 0.264,
+                      "ehr": 0.128,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 60,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {}
+                    }
+                  ]
+                ],
+                "scalarElite": 2,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "0"
+                },
+                "highSTSUM": 55551.410442,
+                "aoeSUM": 166654.231326
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "110293.png",
+      "110292.png",
+      "110291.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1033,
     "realName": "Bud of The Hunt",
     "worldLevel": 5,
