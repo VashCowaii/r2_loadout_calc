@@ -7461,6 +7461,53 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "G_MortenaxBlade_Debuff_ToEnemy",
+    "realName": "Balefire Bind",
+    "aim": "Debuff",
+    "desc": "DEF decreases by #1[f1]%, and DMG taken increases by #2[f1]%.",
+    "type": "Balefire Bind",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_Super",
+    "realName": "Infinite Fury",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]% and CRIT DMG increases by #2[f1]%.",
+    "type": "Infinite Fury",
+    "perma": true,
+    "params": [
+      "#Skill03_P2_AddedCriticalChance",
+      "#Skill03_P3_AddedCriticalDamageRatio"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_PointB2",
+    "realName": "Soul, Tempered ad Mortem",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]% and Incoming Healing increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue2",
+      "MDF_PropertyValue3"
+    ]
+  },
+  {
+    "name": "MortenaxBlade_TechniqueUsage_DamageReduce",
+    "realName": "Corpus Impervius",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "#SkillMaze_P1_DamageReduce"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-432037034\">Advanced_Welt_BPAbility_SpeedDown</a>",
     "realName": "Slow",
     "aim": "Debuff",
@@ -7486,7 +7533,7 @@ let modifiersCharacter = [
     "name": "Advanced_Welt_Passive_DefenceDown",
     "realName": "DEF Reduction",
     "aim": "Debuff",
-    "desc": "undefined",
+    "desc": "DEF decreases by #1[f1]%.",
     "type": "DEF Reduction",
     "perma": true,
     "params": [
@@ -7606,10 +7653,96 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "G_MortenaxBlade_Eidolon1_EnermyDebuff",
+    "realName": "Ere My Death, I Stood Unmade",
+    "aim": "Debuff",
+    "desc": "All-Type RES decreases by #1[i]%.",
+    "type": "All-Type RES Reduction",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT",
+    "realName": "Heart, Refined ad Infinitum",
+    "aim": "Buff",
+    "desc": "The DMG dealt increases by #1[i]% and Ultimate DMG dealt additionally increases by #2[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_Eidolon2_ToOtherMember",
+    "realName": "Ash Was My Heart, Yet the Flame Stayed",
+    "aim": "Buff",
+    "desc": "Follow-Up ATK DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"611817179\">Evanescia_Eidolon6_ElationDamageExtra</a>",
     "realName": "Maiden: A Step into Dreams",
     "aim": "Buff",
     "desc": "Elation DMG merrymakes by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember",
+    "realName": "Heart, Refined ad Infinitum",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf",
+    "realName": "Heart, Refined ad Infinitum",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "MortenaxBlade_PointB1_ExceedSpStatus",
+    "realName": "Bone, Hardened ad Nauseam",
+    "aim": "Other",
+    "desc": "#1[i] overflow Energy accumulated.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MortenaxBlade_00_EntityStockSPForShow"
+    ]
+  },
+  {
+    "name": "G_MortenaxBlade_Eidolon6_CD",
+    "realName": "If Immortality Could Die, I Swore THEM Slain",
+    "aim": "Other",
+    "desc": "\"If Immortality Could Die, I Swore THEM Slain\" effect auto-trigger is on cooldown.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "G_MortenaxBlade_Eidolon2_ToMember",
+    "realName": "Ash Was My Heart, Yet the Flame Stayed",
+    "aim": "Buff",
+    "desc": "When using Ultimate to deal DMG, it is considered as having launched Follow-Up ATK. And the Follow-Up ATK DMG dealt increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
