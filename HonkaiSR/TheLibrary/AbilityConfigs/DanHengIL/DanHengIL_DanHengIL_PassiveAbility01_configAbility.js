@@ -261,6 +261,60 @@ const configAbility = {
           ]
         },
         {
+          "eventTrigger": "Skill Point Changes",
+          "execute": [
+            {
+              "name": "Define Custom Variable with SkillPoint Changes",
+              "variableName": "_BPChange",
+              "type": "RawDelta"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_BPChange",
+                    "compareType": "<",
+                    "value2": 0
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Adjust Variable Value",
+                  "adjustmentType": "Add to Value (Default)",
+                  "variableName": "BPExChange",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "value": {
+                    "operator": "Variables[0] (_BPChange) || RETURN",
+                    "displayLines": "_BPChange",
+                    "constants": [],
+                    "variables": [
+                      "_BPChange"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "eventTrigger": "Ability Use [Anyone]: Start",
           "execute": [
             {
@@ -372,7 +426,61 @@ const configAbility = {
                   "target": "{{Modifier Holder}}"
                 },
                 "invertCondition": true
-              }
+              },
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "BPNeed",
+                  "value": {
+                    "operator": "Variables[0] (EXSkill01) || RETURN",
+                    "displayLines": "EXSkill01",
+                    "constants": [],
+                    "variables": [
+                      "EXSkill01"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CurrentSkillPoints",
+                    "compareType": ">",
+                    "value2": {
+                      "operator": "Variables[0] (BPNeed) || RETURN",
+                      "displayLines": "BPNeed",
+                      "constants": [],
+                      "variables": [
+                        "BPNeed"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1468527103\">DanHengIL_BPDisable</a>"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -479,6 +587,128 @@ const configAbility = {
                       "AddLayer"
                     ]
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Variable Value Changes",
+          "variableName": "BPExChange",
+          "from": "ContextCaster",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Modify Skill-Point Extras",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "function": "Set",
+                  "value": {
+                    "operator": "Variables[0] (BPExChange) || RETURN",
+                    "displayLines": "BPExChange",
+                    "constants": [],
+                    "variables": [
+                      "BPExChange"
+                    ]
+                  },
+                  "silentChange": true
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (BPExChange) || RETURN",
+                    "displayLines": "BPExChange",
+                    "constants": [],
+                    "variables": [
+                      "BPExChange"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "assignState": "False",
+                  "bar#": 6,
+                  "cooldown": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "BPExChange",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Modifier Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifierName": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+                      "value": {
+                        "operator": "Variables[0] (BPExChange) || RETURN",
+                        "displayLines": "BPExChange",
+                        "constants": [],
+                        "variables": [
+                          "BPExChange"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
+                      "counter": {
+                        "operator": "Variables[0] (BPExChange) || RETURN",
+                        "displayLines": "BPExChange",
+                        "constants": [],
+                        "variables": [
+                          "BPExChange"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_BPExChange": {
+                          "operator": "Variables[0] (BPExChange) || RETURN",
+                          "displayLines": "BPExChange",
+                          "constants": [],
+                          "variables": [
+                            "BPExChange"
+                          ]
+                        },
+                        "MDF_MaxLayer": {
+                          "operator": "Variables[0] (3) || RETURN",
+                          "displayLines": "3",
+                          "constants": [],
+                          "variables": [
+                            3
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"115521753\">DanHengIL_BPCostChange</a>[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
+                    }
+                  ]
                 }
               ]
             }
