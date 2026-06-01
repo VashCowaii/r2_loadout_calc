@@ -4383,6 +4383,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031359",
         "realModifierNamne": "FantasticStory_PlusAbility_2261",
+        "BEKey": 1687681259,
         "name": "Toccata",
         "desc": "Increases Ultimate and Follow-Up ATK DMG dealt by ally targets by #1[i]%. During \"Surging Grit,\" each time an enemy target is inflicted with the \"Dejection\" effect, it changes to stacking #2[i] stack(s) of this effect instead. The max stacking limit of the \"Dejection\" effect increases to #3[i] stacks.",
         "battleDesc": null,
@@ -4397,6 +4398,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031362",
         "realModifierNamne": "FantasticStory_PlusAbility_2264",
+        "BEKey": 1687681259,
         "name": "Mirthful Cadence",
         "desc": "After an ally character uses an Elation Skill to attack an enemy target, inflicts the \"Indulgence\" effect on the attacked enemy target, increasing the DMG taken by this target by #1[i]% for #2[i] turn(s). This effect applied by each character exists independently. Upon entering \"Surging Grit\", allies gain #3[i] Punchline(s).",
         "battleDesc": null,
@@ -4411,6 +4413,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031361",
         "realModifierNamne": "FantasticStory_PlusAbility_2263",
+        "BEKey": 1687681259,
         "name": "Variation",
         "desc": "After an ally target uses a Basic ATK, Skill, or Ultimate to attack an enemy target, there is a #1[i]% base chance to reduce the attacked enemy target's DEF by #2[i]%, lasting for #3[i] turn(s). This effect can stack up to #4[i] times.",
         "battleDesc": null,
@@ -4428,6 +4431,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031227",
         "realModifierNamne": "FantasticStory_BaseAbility_2260_BaseAddOn",
+        "BEKey": 1687681259,
         "name": "Debuff Application",
         "desc": "When an ally target inflicts a debuff on an enemy target, allies additionally accumulate #1[i] Grit Value. This effect can be triggered up to #2[i] time(s) per enemy target.",
         "battleDesc": null,
@@ -4440,6 +4444,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031228",
         "realModifierNamne": "FantasticStory_BaseAbility_2260_BeforeFever",
+        "BEKey": 1687681259,
         "name": "Concordant Truce",
         "desc": "Decreases enemy targets' Effect RES by #1[i]%. Increases DMG taken by enemy targets afflicted with #3[i] or more debuffs by #2[i]%.",
         "battleDesc": null,
@@ -4453,6 +4458,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031229",
         "realModifierNamne": "FantasticStory_BaseAbility_2260_EnterFever",
+        "BEKey": 1687681259,
         "name": "Surging Grit",
         "desc": "Upon entering \"Surging Grit,\" deals a set amount of DMG to enemy targets 1 time for every debuff they are inflicted with. During \"Surging Grit,\" DMG received by enemy targets increases by #2[i]%. After each time an enemy target is inflicted with a debuff, inflicts 1 stack of \"Dejection\" on them, decreasing their All-Type RES by #3[i]% for #4[i] turn(s). This effect can stack up to #5[i] time(s).",
         "battleDesc": null,

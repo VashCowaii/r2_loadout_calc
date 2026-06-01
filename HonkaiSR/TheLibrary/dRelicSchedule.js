@@ -19,7 +19,8 @@ let mocSchedule = [
       ],
       "abilitiesArray": [
         {
-          "realModifierNamne": "FarmRelicAbility_104316"
+          "realModifierNamne": "FarmRelicAbility_104316",
+          "BEKey": 20085023
         }
       ]
     },
