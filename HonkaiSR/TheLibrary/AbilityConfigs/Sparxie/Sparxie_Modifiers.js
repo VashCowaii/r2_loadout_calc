@@ -498,7 +498,16 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"9288377\">Sparxie_Eidolon2_InsertActionSave</a>"
                     }
-                  ]
+                  ],
+                  "condition": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
+                    "invertCondition": true
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1245,7 +1254,16 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"9288377\">Sparxie_Eidolon2_InsertActionSave</a>"
                         }
-                      ]
+                      ],
+                      "condition": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
+                        "invertCondition": true
+                      }
                     }
                   ],
                   "failed": [

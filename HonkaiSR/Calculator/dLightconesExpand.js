@@ -10336,5 +10336,84 @@ let lightcones = {
       13,
       1.07
     ]
+  },
+  "Reforged in Hellfire": {
+    "lightconeID": 23059,
+    "name": "Reforged in Hellfire",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1375.92
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.3
+      },
+      "2": {
+        "HP%": 0.375
+      },
+      "3": {
+        "HP%": 0.45
+      },
+      "4": {
+        "HP%": 0.525
+      },
+      "5": {
+        "HP%": 0.6
+      }
+    },
+    "skillName": "Tempering",
+    "desc": "Increases the wearer's Max HP by #1[i]%. At the start of the wearer's turn, regenerates a fixed amount of #2[i] Energy. This effect can trigger 1 time each wave. After the wearer uses Skill to attack, inflicts the target with the \"Purgatory\" state, lasting for #3[i] turn(s). While in the \"Purgatory\" state, the target receives #4[i]% increased CRIT DMG and #5[i]% additionally increased CRIT DMG from the wearer.",
+    "params": [
+      [
+        0.3,
+        20,
+        2,
+        0.3,
+        0.3
+      ],
+      [
+        0.375,
+        20,
+        2,
+        0.375,
+        0.375
+      ],
+      [
+        0.45,
+        20,
+        2,
+        0.45,
+        0.45
+      ],
+      [
+        0.525,
+        20,
+        2,
+        0.525,
+        0.525
+      ],
+      [
+        0.6,
+        20,
+        2,
+        0.6,
+        0.6
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23059.png",
+    "preview": "image/light_cone_preview/23059.png",
+    "portrait": "image/light_cone_portrait/23059.png",
+    "imageOffset": [
+      4,
+      -123,
+      1.12
+    ]
   }
 }

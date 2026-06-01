@@ -526,7 +526,16 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"9288377\">Sparxie_Eidolon2_InsertActionSave</a>"
                         }
-                      ]
+                      ],
+                      "condition": {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
+                        "invertCondition": true
+                      }
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1273,7 +1282,16 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"9288377\">Sparxie_Eidolon2_InsertActionSave</a>"
                             }
-                          ]
+                          ],
+                          "condition": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
+                            "invertCondition": true
+                          }
                         }
                       ],
                       "failed": [
@@ -3168,7 +3186,7 @@ const compositeAbilityObject = {
           "name": "Update Character Panel Visibility",
           "targetCustom": {
             "name": "Target Name",
-            "target": "{{Player Team All}} - {{Caster}} - {{SilverWolf999}}"
+            "target": "{{All Team Members with Unselectables}} - {{Caster}} - {{SilverWolf999}}"
           },
           "show": "HideCustom",
           "forceDisplayUltButton": true

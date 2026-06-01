@@ -1617,6 +1617,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"942921741\">Ashveil_Ability02_Debuff_DefenceDown</a>[<span class=\"descriptionNumberColor\">Flog: Smite Evil</span>]",
               "haloStatus": true,
+              "detectRevive": true,
               "valuePerStack": {
                 "MDF_DefenceDown": {
                   "operator": "Variables[0] (MDF_DefenceDownTemp) || RETURN",
@@ -1636,6 +1637,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"544701936\">Ashveil_Eidolon6_AllDamageTypeResistenceDown</a>[<span class=\"descriptionNumberColor\">Finale: And Then There Were None</span>]",
               "haloStatus": true,
+              "detectRevive": true,
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 6,

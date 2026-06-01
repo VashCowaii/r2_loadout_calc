@@ -306,6 +306,17 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{All Team Members with Unselectables}} - {{Player's Aim Primary-Target}}"
                       }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
+                        "type": "Memosprite"
+                      }
                     }
                   ],
                   "failed": [
@@ -437,7 +448,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                 "displayLines": "MDF_PropertyValue",

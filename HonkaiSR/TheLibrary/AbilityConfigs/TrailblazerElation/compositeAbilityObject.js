@@ -94,7 +94,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -112,6 +112,9 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557103509\">Player_40_Eidolon1_InsertActionSave</a>",
           "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
           "addStacksPerTrigger": 1,
           "execute": [
             {
@@ -226,6 +229,10 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
                             }
+                          ],
+                          "abortFlags": [
+                            "STAT_CTRL",
+                            "DisableAction"
                           ]
                         }
                       ],
@@ -259,6 +266,12 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1221062210\">Player_40_Eidolon1_InsertActionSaveMark</a>",
           "stackType": "ReplaceByCaster",
           "execute": [
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
             {
               "eventTrigger": "Ability Use [Owner]: End",
               "execute": [
@@ -1258,6 +1271,17 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{All Team Members with Unselectables}} - {{Player's Aim Primary-Target}}"
                           }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Primary-Target}}"
+                            },
+                            "type": "Memosprite"
+                          }
                         }
                       ],
                       "failed": [
@@ -1389,7 +1413,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGConverted</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -2164,6 +2188,10 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
                         }
+                      ],
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
                       ]
                     }
                   ],

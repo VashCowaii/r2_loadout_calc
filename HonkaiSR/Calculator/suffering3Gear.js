@@ -7472,9 +7472,10 @@ const turnLogicLightcones = {
             {
                 "trigger": "AbilityStart",
                 condition(battleData,generalInfo) {
-                    // const action = generalInfo.action;
-                    // if (action != "BasicATK") {return;}
+                    const action = generalInfo.action;
+                    if (action != "BasicATK" && action != "Skill" && action != "Ultimate") {return;}
                     //ACTION IS NOT ACTUALLY FACTORED, the LC is only looking for use, not usetype, I was jebaited
+                    //UPDATE: they change it, it now looks for the abilities stated in the lc
 
                     // let ownerRef = this.owners;
                     let sourceTurn = generalInfo.sourceTurn;

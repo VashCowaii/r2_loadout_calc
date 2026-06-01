@@ -36,6 +36,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -108,6 +109,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -410,6 +412,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -482,6 +485,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -784,6 +788,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -856,6 +861,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -1161,6 +1167,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -1233,6 +1240,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -1604,6 +1612,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_090",
+        "BEKey": -243519640,
         "name": "Comic Relief",
         "desc": "After an ally target uses an attack that deals Elation DMG, inflicts Vulnerability on the target receiving Elation DMG, increasing the DMG they take by #1[i]% for #2[i] turn(s). This effect can trigger up to 1 time per enemy target per attack.",
         "battleDesc": null,
@@ -1616,6 +1625,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_091",
+        "BEKey": -243519640,
         "name": "Exploit Opening",
         "desc": "After any ally target inflicts a debuff to an enemy target, increases their CRIT DMG by #1[i]% for #2[i] turn(s).",
         "battleDesc": null,
@@ -1759,6 +1769,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -1831,6 +1842,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -2133,6 +2145,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -2205,6 +2218,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -2507,6 +2521,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -2579,6 +2594,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -2884,6 +2900,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -2956,6 +2973,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -3338,6 +3356,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_017",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy target with \"Steadfast Safeguard\" is inflicted with Weakness Break, dispels control states from all allies, action advances, and grants Aha an extra turn (this turn will count as #3[i] fixed Punchline points).\\nIncreases Ultimate DMG dealt to all enemies by #1[i]% and Elation DMG by #2[i]%.",
                   "battleDesc": null,
@@ -3488,6 +3507,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_090",
+        "BEKey": -243519640,
         "name": "Comic Relief",
         "desc": "After an ally target uses an attack that deals Elation DMG, inflicts Vulnerability on the target receiving Elation DMG, increasing the DMG they take by #1[i]% for #2[i] turn(s). This effect can trigger up to 1 time per enemy target per attack.",
         "battleDesc": null,
@@ -3500,6 +3520,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_091",
+        "BEKey": -243519640,
         "name": "Exploit Opening",
         "desc": "After any ally target inflicts a debuff to an enemy target, increases their CRIT DMG by #1[i]% for #2[i] turn(s).",
         "battleDesc": null,

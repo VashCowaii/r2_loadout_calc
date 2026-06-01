@@ -140,6 +140,21 @@ let mocSchedule = [
                         "resistancesDebuff": {}
                       },
                       0,
+                      2,
+                      0,
+                      1,
+                      2,
+                      0,
+                      2,
+                      0,
+                      1,
+                      2,
+                      0,
+                      2,
+                      0,
+                      1,
+                      2,
+                      0,
                       2
                     ],
                     "totalMax": 20,
@@ -156,7 +171,7 @@ let mocSchedule = [
                   "_CreateBattleEvent": "30502"
                 },
                 "highSTSUM": 3072588.684,
-                "aoeSUM": 5761103.782499999
+                "aoeSUM": 23044415.13
               }
             ]
           },
@@ -181,6 +196,7 @@ let mocSchedule = [
             "name": "Flow Break",
             "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
             "realModifierNamne": "ChallengePeakBattle_BaseAbility_0019",
+            "BEKey": 1912336050,
             "params": [
               0.02,
               0.04,
@@ -563,6 +579,7 @@ let mocSchedule = [
             "name": "Hemovore",
             "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
             "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "BEKey": 1912336050,
             "params": [
               500
             ]
@@ -774,6 +791,7 @@ let mocSchedule = [
             "name": "Hemovore",
             "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
             "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "BEKey": 1912336050,
             "params": [
               500
             ]
@@ -782,6 +800,7 @@ let mocSchedule = [
             "name": "Flow Break",
             "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
             "realModifierNamne": "ChallengePeakBattle_BaseAbility_0019",
+            "BEKey": 1912336050,
             "params": [
               0.02,
               0.04,
@@ -1006,6 +1025,7 @@ let mocSchedule = [
             "name": "Hemovore+",
             "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
             "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0018",
+            "BEKey": 1912336050,
             "params": [
               1000
             ]
@@ -1014,6 +1034,7 @@ let mocSchedule = [
             "name": "Flow Break+",
             "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
             "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0019",
+            "BEKey": 1912336050,
             "params": [
               0.03,
               0.06,
@@ -1028,6 +1049,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033060",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0019",
+        "BEKey": 1912336050,
         "name": "Chesty Chortle",
         "desc": "Increases all allies' Elation by #1[i]%. At the start of Aha Instant, allies additionally gain #2[i] Punchline point(s).",
         "battleDesc": null,
@@ -1040,6 +1062,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033061",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0020",
+        "BEKey": 1912336050,
         "name": "Electrical Firestorm",
         "desc": "Adds Fire Weakness and Lightning Weakness to \"Starcrusher Swarm King: Skaracabaz (Synthetic)\" and its summons, and decreases the Fire RES and Lightning RES of the above targets by #1[i]%.",
         "battleDesc": null,
@@ -1051,6 +1074,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033062",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0021",
+        "BEKey": 1912336050,
         "name": "Shatter the Adamant",
         "desc": "Increases DMG dealt by all ally targets by #1[i]%. After each time an ally target defeats an enemy target, additionally increases the DMG dealt by this unit by #2[i]%. This effect is stackable.",
         "battleDesc": null,

@@ -287,6 +287,10 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-557103509\">Player_40_Eidolon1_InsertActionSave</a>"
                     }
+                  ],
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
                   ]
                 }
               ],
