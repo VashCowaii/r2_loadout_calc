@@ -4872,7 +4872,7 @@ let characters = {
       "Point06": {
         "name": "Nightshade",
         "icon": "icon/skill/1102_skilltree1.png",
-        "desc": "When defeating an enemy target, increases the wearer's DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s) and lasts for #3[i] turn(s).",
+        "desc": "When defeating an enemy target, increases this unit's DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s) and lasts for #3[i] turn(s).",
         "params": [
           0.5,
           3,
@@ -19518,7 +19518,7 @@ let characters = {
         "id": "130902",
         "name": "Afternoon Tea For Two",
         "rank": 2,
-        "desc": "While the Concerto state is active, all allies' SPD increases by 16%. The Talent's Energy Regeneration effect additionally increases by 1.",
+        "desc": "While the \"Concerto\" state is active, all allies' SPD increases by 16%. The Talent's Energy Regeneration effect additionally increases by 1.",
         "icon": "icon/skill/1309_rank2.png",
         "paramsEido": [
           0.16,
