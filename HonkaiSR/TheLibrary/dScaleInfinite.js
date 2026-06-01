@@ -160,10 +160,73 @@ let scaleInfinite = {
     "speedScalar": 1,
     "toughnessScalar": 1
   },
+  "368": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 6.8,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "369": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 6.2,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "370": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 8.6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
   "398": {
     "attackScalar": 1,
     "defScalar": 1,
     "hpScalar": 1,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "3031": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 8.895337,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "3032": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 25.41525,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "3033": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 36.004936,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "3034": {
+    "attackScalar": 1.2,
+    "defScalar": 1,
+    "hpScalar": 59.30225,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "3035": {
+    "attackScalar": 1.4,
+    "defScalar": 1,
+    "hpScalar": 101.660995,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "3036": {
+    "attackScalar": 1.6,
+    "defScalar": 1,
+    "hpScalar": 635.3812,
     "speedScalar": 1,
     "toughnessScalar": 1
   },

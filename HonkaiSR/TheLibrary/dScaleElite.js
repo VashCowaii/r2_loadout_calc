@@ -1756,6 +1756,13 @@ let scaleElite = {
     "speedScalar": 1,
     "toughnessScalar": 1
   },
+  "295": {
+    "attackScalar": 1.1,
+    "defScalar": 1,
+    "hpScalar": 6.8,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
   "301": {
     "attackScalar": 1,
     "defScalar": 1,
@@ -5349,6 +5356,55 @@ let scaleElite = {
   },
   "4206": {
     "attackScalar": 0.9,
+    "defScalar": 1,
+    "hpScalar": 1,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4300": {
+    "attackScalar": 0.6,
+    "defScalar": 1,
+    "hpScalar": 0.55,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4301": {
+    "attackScalar": 0.64,
+    "defScalar": 1,
+    "hpScalar": 0.6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4302": {
+    "attackScalar": 0.7,
+    "defScalar": 1,
+    "hpScalar": 0.65,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4303": {
+    "attackScalar": 0.76,
+    "defScalar": 1,
+    "hpScalar": 0.7,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4304": {
+    "attackScalar": 0.8,
+    "defScalar": 1,
+    "hpScalar": 0.75,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4305": {
+    "attackScalar": 0.84,
+    "defScalar": 1,
+    "hpScalar": 0.85,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4306": {
+    "attackScalar": 1,
     "defScalar": 1,
     "hpScalar": 1,
     "speedScalar": 1,
