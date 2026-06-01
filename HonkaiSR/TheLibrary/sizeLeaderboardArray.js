@@ -281,7 +281,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 5014015,
     "lineCount": 7732,
-    "sizeCount": 287687
+    "sizeCount": 287695
   },
   {
     "entryType": "enemy",
@@ -1203,19 +1203,19 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3024030,
     "lineCount": 4249,
-    "sizeCount": 156995
+    "sizeCount": 157007
   },
   {
     "entryType": "enemy",
     "enemyID": 3024031,
     "lineCount": 4249,
-    "sizeCount": 156995
+    "sizeCount": 157007
   },
   {
     "entryType": "enemy",
     "enemyID": 3024032,
     "lineCount": 4249,
-    "sizeCount": 156947
+    "sizeCount": 156950
   },
   {
     "entryType": "enemy",
@@ -3078,8 +3078,8 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 5012090,
-    "lineCount": 1063,
-    "sizeCount": 36039
+    "lineCount": 1064,
+    "sizeCount": 36073
   },
   {
     "entryType": "enemy",
