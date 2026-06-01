@@ -54,14 +54,6 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1654136523\">Advanced_Sam_Ability21_AddWeaknessPreShow</a>"
     },
     {
-      "name": "Add Events/Bonuses",
-      "to": {
-        "name": "Target Name",
-        "target": "{{Caster}}"
-      },
-      "modifier": "<a class=\"gModGreen\" id=\"-409959701\">Advanced_Sam_Ability21_StanceDamagePreShow_Fire</a>"
-    },
-    {
       "name": "IF",
       "conditions": {
         "name": "Trace Activated",
@@ -467,61 +459,6 @@ const configAbility = {
         },
         "addedDisplayWeakness": {
           "DamageType": "Fire"
-        }
-      }
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-409959701\">Advanced_Sam_Ability21_StanceDamagePreShow_Fire</a>",
-      "stackType": "ReplaceByCaster",
-      "previewValue": {
-        "name": "Modifier: UI Preview",
-        "show": "Hide",
-        "skillType": "Skill",
-        "conditions": {
-          "name": "AND",
-          "conditionList": [
-            {
-              "name": "Has Modifier",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-508204277\">Advanced_Sam_PassiveAbility_RedMode</a>[<span class=\"descriptionNumberColor\">Fyrefly Type-IV: Complete Combustion</span>]"
-            },
-            {
-              "name": "Is Weak to Attacker",
-              "weakTo": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              }
-            },
-            {
-              "name": "Is Part Of",
-              "of": {
-                "name": "Target Name",
-                "target": "{{Player's Aim Sub-Targets}}"
-              },
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "mustBeAlive2": true
-            }
-          ]
-        },
-        "toughnessReductionPreview": {
-          "operator": "Variables[0] (0.5) || Variables[1] (Rank06_StanceBreakAddedRatio) || ADD || RETURN",
-          "displayLines": "(0.5 + Rank06_StanceBreakAddedRatio)",
-          "constants": [],
-          "variables": [
-            0.5,
-            "Rank06_StanceBreakAddedRatio"
-          ]
         }
       }
     },

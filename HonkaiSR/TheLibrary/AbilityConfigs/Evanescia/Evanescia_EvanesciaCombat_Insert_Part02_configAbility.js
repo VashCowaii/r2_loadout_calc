@@ -279,6 +279,10 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1494467653\">_M_Evanescia_Eidolon1_ElationRetry</a>"
                 }
+              ],
+              "abortFlags": [
+                "STAT_CTRL",
+                "DisableAction"
               ]
             }
           ],

@@ -160,7 +160,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-259865340\">Evanescia_InsertElationAbilityShow</a>"
                 },
                 {
-                  "name": "Inject Elation Skill Extra-Turn (Default priority)"
+                  "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ]
                 },
                 "Modifier Deletes Itself"
               ]
@@ -173,6 +177,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-259865340\">Evanescia_InsertElationAbilityShow</a>",
       "stackType": "ReplaceByCaster",
+      "addStacksPerTrigger": 1,
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -241,7 +246,28 @@ const configAbility = {
                 ]
               },
               "passed": [
-                "Modifier Deletes Itself"
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-259865340\">Evanescia_InsertElationAbilityShow</a>",
+                  "addStacksPerTrigger": -1
+                },
+                "Unknown EventType2 (Not always an error)[1 false][2 true][3_NAME Evanescia]",
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "compareType": "<=",
+                    "value2": 0,
+                    "valueType": "Layer"
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
               ]
             }
           ]

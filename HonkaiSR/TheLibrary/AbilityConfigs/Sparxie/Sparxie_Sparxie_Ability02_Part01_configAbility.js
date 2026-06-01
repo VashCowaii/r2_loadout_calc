@@ -19,7 +19,7 @@ const configAbility = {
       "name": "Update Character Panel Visibility",
       "targetCustom": {
         "name": "Target Name",
-        "target": "{{Player Team All}} - {{Caster}} - {{SilverWolf999}}"
+        "target": "{{All Team Members with Unselectables}} - {{Caster}} - {{SilverWolf999}}"
       },
       "show": "HideCustom",
       "forceDisplayUltButton": true
