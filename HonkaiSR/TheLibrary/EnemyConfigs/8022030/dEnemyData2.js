@@ -42,8 +42,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3112,
-        3113
+        3143,
+        3144
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -73,8 +73,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3112,
-        3113
+        3143,
+        3144
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -104,12 +104,59 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3112,
-        3113
+        3143,
+        3144
       ],
       "enemyTag": [
         "SW_Minion01"
       ]
+    },
+    "802203003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.244444,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.4,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        3143,
+        3144
+      ],
+      "enemyTag": [
+        "SW_Minion01"
+      ],
+      "overrideParams": {
+        "3144": [
+          [
+            0.15,
+            -1,
+            0.05
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

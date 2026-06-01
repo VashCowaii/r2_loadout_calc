@@ -2434,11 +2434,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_8658) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_8658",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_8692) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_8692",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_8658"
+                                    "UnusedUnderThisBase_8692"
                                   ]
                                 }
                               }
@@ -4190,11 +4190,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8658) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8658",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8692) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8692",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8658"
+                    "UnusedUnderThisBase_8692"
                   ]
                 }
               }
