@@ -7934,11 +7934,11 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_11354) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                            "displayLines": "(-UnusedUnderThisBase_11354 * _TargetMaxSP)",
+                            "operator": "Variables[0] (UnusedUnderThisBase_11388) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
+                            "displayLines": "(-UnusedUnderThisBase_11388 * _TargetMaxSP)",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_11354",
+                              "UnusedUnderThisBase_11388",
                               "_TargetMaxSP"
                             ]
                           },

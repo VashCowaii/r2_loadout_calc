@@ -42,8 +42,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2667,
-        2668
+        2693,
+        2694
       ]
     }
   }

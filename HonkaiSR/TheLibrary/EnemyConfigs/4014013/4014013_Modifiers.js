@@ -23,11 +23,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11293) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11293",
+                "operator": "Variables[0] (UnusedUnderThisBase_11327) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11327",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11293"
+                  "UnusedUnderThisBase_11327"
                 ]
               }
             }
@@ -6248,46 +6248,46 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11746",
+                  "UnusedUnderThisBase_11780",
                   "MDF_BraveLayer"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamageResistance": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11763) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11763",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11797) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11797",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11763"
+                    "UnusedUnderThisBase_11797"
                   ]
                 },
                 "MDF_CrackedEffect": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11761) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11761",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11795) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11795",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11761"
+                    "UnusedUnderThisBase_11795"
                   ]
                 },
                 "MDF_CrackedDamage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11762) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11762",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11796) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11796",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11762"
+                    "UnusedUnderThisBase_11796"
                   ]
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11746",
+                  "UnusedUnderThisBase_11780",
                   "MDF_BraveLayer"
                 ]
               }
@@ -7444,11 +7444,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11742",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11776",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11742"
+                      "UnusedUnderThisBase_11776"
                     ]
                   }
                 }
@@ -7474,36 +7474,36 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11742",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11776",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11742"
+                      "UnusedUnderThisBase_11776"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11748) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11748",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11782) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11782",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11748"
+                        "UnusedUnderThisBase_11782"
                       ]
                     },
                     "MDF_EnergyAddRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11764",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11798) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11798",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11764"
+                        "UnusedUnderThisBase_11798"
                       ]
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11742",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11776",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11742"
+                        "UnusedUnderThisBase_11776"
                       ]
                     }
                   }
@@ -7705,11 +7705,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11742",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11776",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11742"
+                      "UnusedUnderThisBase_11776"
                     ]
                   }
                 },
@@ -7721,11 +7721,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11742",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11776",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11742"
+                      "UnusedUnderThisBase_11776"
                     ]
                   }
                 }
@@ -7781,11 +7781,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11742",
+                "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11776",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11742"
+                  "UnusedUnderThisBase_11776"
                 ]
               }
             },
@@ -7797,11 +7797,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11742",
+                "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11776",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11742"
+                  "UnusedUnderThisBase_11776"
                 ]
               }
             }
@@ -8460,11 +8460,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       },
@@ -8689,36 +8689,36 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11742",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11776",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11742"
+                      "UnusedUnderThisBase_11776"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11748) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11748",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11782) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11782",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11748"
+                        "UnusedUnderThisBase_11782"
                       ]
                     },
                     "MDF_EnergyAddRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11764",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11798) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11798",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11764"
+                        "UnusedUnderThisBase_11798"
                       ]
                     },
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11742",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11776",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11742"
+                        "UnusedUnderThisBase_11776"
                       ]
                     }
                   }
@@ -8841,21 +8841,21 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                       "duration": 1,
                       "baseChance": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11765) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11765",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11799) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_11799",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11765"
+                          "UnusedUnderThisBase_11799"
                         ]
                       },
                       "immediateEffect": true,
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11766) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11766",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11800) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11800",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11766"
+                            "UnusedUnderThisBase_11800"
                           ]
                         }
                       }
@@ -9170,27 +9170,27 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1389759519\">Monster_W4_Nikadory_Charge_UnselectableFlag</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11748) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11748",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11782) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11782",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11748"
+                    "UnusedUnderThisBase_11782"
                   ]
                 },
                 "MDF_EnergyAddRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11764",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11798) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11798",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11764"
+                    "UnusedUnderThisBase_11798"
                   ]
                 },
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11742) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11742",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11776) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11776",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11742"
+                    "UnusedUnderThisBase_11776"
                   ]
                 }
               },
@@ -9705,46 +9705,46 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11763) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11763",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11797) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11797",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11763"
+                            "UnusedUnderThisBase_11797"
                           ]
                         },
                         "MDF_CrackedEffect": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11761) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11761",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11795) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11795",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11761"
+                            "UnusedUnderThisBase_11795"
                           ]
                         },
                         "MDF_CrackedDamage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11796) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11796",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11762"
+                            "UnusedUnderThisBase_11796"
                           ]
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       }
@@ -9834,46 +9834,46 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                            "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                            "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                            "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_11746",
+                              "UnusedUnderThisBase_11780",
                               "MDF_BraveLayer"
                             ]
                           },
                           "valuePerStack": {
                             "MDF_DamageResistance": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_11763) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_11763",
+                              "operator": "Variables[0] (UnusedUnderThisBase_11797) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_11797",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_11763"
+                                "UnusedUnderThisBase_11797"
                               ]
                             },
                             "MDF_CrackedEffect": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_11761) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_11761",
+                              "operator": "Variables[0] (UnusedUnderThisBase_11795) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_11795",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_11761"
+                                "UnusedUnderThisBase_11795"
                               ]
                             },
                             "MDF_CrackedDamage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_11762) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_11762",
+                              "operator": "Variables[0] (UnusedUnderThisBase_11796) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_11796",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_11762"
+                                "UnusedUnderThisBase_11796"
                               ]
                             }
                           },
                           "addStacksPerTrigger": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                            "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                            "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                            "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_11746",
+                              "UnusedUnderThisBase_11780",
                               "MDF_BraveLayer"
                             ]
                           }
@@ -9997,46 +9997,46 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11763) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11763",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11797) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11797",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11763"
+                            "UnusedUnderThisBase_11797"
                           ]
                         },
                         "MDF_CrackedEffect": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11761) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11761",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11795) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11795",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11761"
+                            "UnusedUnderThisBase_11795"
                           ]
                         },
                         "MDF_CrackedDamage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11796) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11796",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11762"
+                            "UnusedUnderThisBase_11796"
                           ]
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       }
@@ -10146,46 +10146,46 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11763) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11763",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11797) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11797",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11763"
+                            "UnusedUnderThisBase_11797"
                           ]
                         },
                         "MDF_CrackedEffect": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11761) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11761",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11795) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11795",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11761"
+                            "UnusedUnderThisBase_11795"
                           ]
                         },
                         "MDF_CrackedDamage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11796) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11796",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11762"
+                            "UnusedUnderThisBase_11796"
                           ]
                         }
                       },
                       "addStacksPerTrigger": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11746) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11746 + MDF_BraveLayer)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11780) || Variables[1] (MDF_BraveLayer) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_11780 + MDF_BraveLayer)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11746",
+                          "UnusedUnderThisBase_11780",
                           "MDF_BraveLayer"
                         ]
                       }

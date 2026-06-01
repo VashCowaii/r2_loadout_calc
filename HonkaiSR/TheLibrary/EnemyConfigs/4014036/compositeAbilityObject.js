@@ -915,7 +915,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "-UnusedUnderThisBase_12013"
+                  "multiAdd": "-UnusedUnderThisBase_12047"
                 },
                 {
                   "name": "Exit Broken-State",
@@ -2285,19 +2285,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11925) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11925",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11959) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11959",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11925"
+                            "UnusedUnderThisBase_11959"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11953",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11987) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11987",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11953"
+                            "UnusedUnderThisBase_11987"
                           ]
                         }
                       }
@@ -2320,19 +2320,19 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"477176839\">Monster_W4_Pollux_GridFight_Strengthen_Shield</a>",
                           "valuePerStack": {
                             "MDF_ShieldPercentage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12002) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12002",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12036) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12036",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12002"
+                                "UnusedUnderThisBase_12036"
                               ]
                             },
                             "MDF_ShieldAttack_HealRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12004) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12004",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12038) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12038",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12004"
+                                "UnusedUnderThisBase_12038"
                               ]
                             }
                           }
@@ -2348,19 +2348,19 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                           "valuePerStack": {
                             "MDF_ShieldPercentage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12002) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12002",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12036) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12036",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12002"
+                                "UnusedUnderThisBase_12036"
                               ]
                             },
                             "MDF_ShieldAttack_HealRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12004) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12004",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12038) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12038",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12004"
+                                "UnusedUnderThisBase_12038"
                               ]
                             }
                           }

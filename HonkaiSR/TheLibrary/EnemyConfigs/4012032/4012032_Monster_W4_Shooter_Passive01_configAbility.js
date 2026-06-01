@@ -13,51 +13,51 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
       "valuePerStack": {
         "MDF_MaxLayer": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12259) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12259",
+          "operator": "Variables[0] (UnusedUnderThisBase_12293) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12293",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12259"
+            "UnusedUnderThisBase_12293"
           ]
         },
         "MDF_CrackedEffect": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12254) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12254",
+          "operator": "Variables[0] (UnusedUnderThisBase_12288) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12288",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12254"
+            "UnusedUnderThisBase_12288"
           ]
         },
         "MDF_CrackedDamage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12262) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12262",
+          "operator": "Variables[0] (UnusedUnderThisBase_12296) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12296",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12262"
+            "UnusedUnderThisBase_12296"
           ]
         },
         "MDF_DamageResistance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12260) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12260",
+          "operator": "Variables[0] (UnusedUnderThisBase_12294) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12294",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12260"
+            "UnusedUnderThisBase_12294"
           ]
         },
         "MDF_CrackedDamageAfter": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12261) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12261",
+          "operator": "Variables[0] (UnusedUnderThisBase_12295) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12295",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12261"
+            "UnusedUnderThisBase_12295"
           ]
         },
         "MDF_ModifySP": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12256) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12256",
+          "operator": "Variables[0] (UnusedUnderThisBase_12290) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12290",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12256"
+            "UnusedUnderThisBase_12290"
           ]
         }
       }

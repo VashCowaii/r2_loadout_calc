@@ -1165,11 +1165,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11139) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11139",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11173) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11173",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11139"
+                        "UnusedUnderThisBase_11173"
                       ]
                     }
                   },
@@ -1215,13 +1215,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11146) || SUB || RETURN",
-                "displayLines": "(0 - UnusedUnderThisBase_11146)",
+                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11180) || SUB || RETURN",
+                "displayLines": "(0 - UnusedUnderThisBase_11180)",
                 "constants": [
                   0
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_11146"
+                  "UnusedUnderThisBase_11180"
                 ]
               }
             },
@@ -1233,11 +1233,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11145) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11145",
+                "operator": "Variables[0] (UnusedUnderThisBase_11179) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11179",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11145"
+                  "UnusedUnderThisBase_11179"
                 ]
               }
             }
@@ -1295,11 +1295,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11149) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11149",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11183) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11183",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11149"
+                      "UnusedUnderThisBase_11183"
                     ]
                   },
                   "consumeFloor": 1,
@@ -2857,11 +2857,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1049811080\">Enemy_W4_FireProwler_IF_TimePowerListener</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11118) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11118",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11152) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11152",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11118"
+                    "UnusedUnderThisBase_11152"
                   ]
                 }
               }

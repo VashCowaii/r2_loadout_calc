@@ -41,8 +41,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ]
     },
     "501203101": {
@@ -69,11 +69,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -83,7 +83,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             -1,
             -1,
@@ -123,11 +123,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -137,7 +137,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -177,11 +177,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -191,7 +191,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -231,11 +231,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2518": [
+        "2532": [
           [
             0.3,
             0.3,
@@ -275,11 +275,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2518": [
+        "2532": [
           [
             0.3,
             0.3,
@@ -319,8 +319,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ]
     },
     "501203107": {
@@ -347,11 +347,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -361,7 +361,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -401,11 +401,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -415,7 +415,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -455,11 +455,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -469,7 +469,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -509,11 +509,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -523,7 +523,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -563,11 +563,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -577,7 +577,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -617,11 +617,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -631,7 +631,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -671,11 +671,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -685,7 +685,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -725,11 +725,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ],
       "overrideParams": {
-        "2517": [
+        "2531": [
           [],
           null,
           null,
@@ -739,7 +739,7 @@ let enemyData = {
           10,
           "-"
         ],
-        "2518": [
+        "2532": [
           [
             0.5,
             0.5,
@@ -779,8 +779,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ]
     },
     "501203116": {
@@ -807,8 +807,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2517,
-        2518
+        2531,
+        2532
       ]
     }
   }

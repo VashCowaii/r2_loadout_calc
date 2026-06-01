@@ -380,6 +380,21 @@ let enemyData = {
           "base": 1002016
         }
       ],
+      "overrideParams": {
+        "82": [
+          [
+            -1,
+            1.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
       "itNeverEnds": {
         "HardLevel": 4,
         "Monster_SummonID1": 100403101,

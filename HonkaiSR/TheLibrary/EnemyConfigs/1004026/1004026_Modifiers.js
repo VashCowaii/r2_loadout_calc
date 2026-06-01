@@ -747,15 +747,15 @@ const configAbility = {
                     "variables": []
                   },
                   "valuePercent": {
-                    "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7854) || MUL || RETURN",
-                    "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7854)",
+                    "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7888) || MUL || RETURN",
+                    "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7888)",
                     "constants": [
                       5
                     ],
                     "variables": [
                       "MDF_ShieldPercentage",
                       "MDF_Count",
-                      "UnusedUnderThisBase_7854"
+                      "UnusedUnderThisBase_7888"
                     ]
                   },
                   "formula": "HP Scaling (Shield)"

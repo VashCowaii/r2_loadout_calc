@@ -748,7 +748,8 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Ability Target List}}"
       },
       "realTargetData": {
-        "primaryTarget": "Select Hostile Target"
+        "primaryTarget": "Select Hostile Target",
+        "targetIsVariable": true
       },
       "references": []
     },

@@ -1708,11 +1708,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12232) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12232",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12266) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12266",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12232"
+                    "UnusedUnderThisBase_12266"
                   ]
                 }
               }

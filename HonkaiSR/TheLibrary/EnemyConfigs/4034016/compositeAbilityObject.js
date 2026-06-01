@@ -4708,27 +4708,27 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
               "valuePerStack": {
                 "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12612) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12612",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12681) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12681",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12612"
+                    "UnusedUnderThisBase_12681"
                   ]
                 },
                 "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12617) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12617",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12686) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12686",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12617"
+                    "UnusedUnderThisBase_12686"
                   ]
                 },
                 "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12651) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12651",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12720) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12720",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12651"
+                    "UnusedUnderThisBase_12720"
                   ]
                 }
               }
@@ -4742,35 +4742,35 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
               "valuePerStack": {
                 "MDF_FrenzyStartDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12654) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12654",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12723) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12723",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12654"
+                    "UnusedUnderThisBase_12723"
                   ]
                 },
                 "MDF_FrenzyIntervalDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12655) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12655",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12724) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12724",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12655"
+                    "UnusedUnderThisBase_12724"
                   ]
                 },
                 "MDF_MaxFrenzyLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12656) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12656",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12725) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12725",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12656"
+                    "UnusedUnderThisBase_12725"
                   ]
                 },
                 "MDF_TokenDMGAddRatioPerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12657) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12657",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12726) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12726",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12657"
+                    "UnusedUnderThisBase_12726"
                   ]
                 }
               }

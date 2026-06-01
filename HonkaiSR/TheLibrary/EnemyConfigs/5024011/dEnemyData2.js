@@ -39,20 +39,20 @@ let enemyData = {
       "res": {
         "Fire": 0.4,
         "Ice": 0.4,
-        "Wind": 0.4,
+        "Wind": 0.2,
         "Quantum": 0.4
       },
       "resMod": {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2696,
-        2697,
-        2698,
-        2699,
-        2700,
-        2701,
-        2702
+        2727,
+        2728,
+        2729,
+        2730,
+        2731,
+        2732,
+        2733
       ],
       "enemyTag": [
         "Main"
@@ -85,20 +85,20 @@ let enemyData = {
       "res": {
         "Fire": 0.4,
         "Ice": 0.4,
-        "Wind": 0.4,
+        "Wind": 0.2,
         "Quantum": 0.4
       },
       "resMod": {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2696,
-        2697,
-        2698,
-        2699,
-        2700,
-        2701,
-        2702
+        2727,
+        2728,
+        2729,
+        2730,
+        2731,
+        2732,
+        2733
       ],
       "enemyTag": [
         "Main"
@@ -111,7 +111,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "2702": [
+        "2733": [
           [
             -1,
             -1,

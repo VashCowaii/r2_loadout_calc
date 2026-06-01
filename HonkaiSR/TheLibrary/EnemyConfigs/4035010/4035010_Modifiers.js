@@ -2980,11 +2980,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_Skill08_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11396) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11396",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11430) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11430",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11396"
+                      "UnusedUnderThisBase_11430"
                     ]
                   }
                 }

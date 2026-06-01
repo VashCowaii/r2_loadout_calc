@@ -42,11 +42,11 @@ let enemyData = {
         "Quantum": 0.8
       },
       "abilities": [
-        2576,
-        2577,
-        2578,
-        2579,
-        2580
+        2590,
+        2591,
+        2592,
+        2593,
+        2594
       ],
       "enemyTag": [
         "W5_Ranger"
@@ -77,11 +77,11 @@ let enemyData = {
         "Quantum": 0.8
       },
       "abilities": [
-        2576,
-        2577,
-        2578,
-        2579,
-        2580
+        2590,
+        2591,
+        2592,
+        2593,
+        2594
       ],
       "enemyTag": [
         "W5_Ranger"
@@ -112,11 +112,11 @@ let enemyData = {
         "Quantum": 0.6
       },
       "abilities": [
-        2576,
-        2577,
-        2578,
-        2579,
-        2580
+        2590,
+        2591,
+        2592,
+        2593,
+        2594
       ],
       "enemyTag": [
         "W5_Ranger"

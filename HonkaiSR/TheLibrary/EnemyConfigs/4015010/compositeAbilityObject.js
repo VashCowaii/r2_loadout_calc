@@ -76,11 +76,11 @@ const compositeAbilityObject = {
                         "value1": "TotalDamageRatio",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10873) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10873",
+                          "operator": "Variables[0] (UnusedUnderThisBase_10907) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_10907",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_10873"
+                            "UnusedUnderThisBase_10907"
                           ]
                         }
                       }
@@ -6747,11 +6747,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
                   "valuePerStack": {
                     "MDF_Speed": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10809) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10809",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10843) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10843",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10809"
+                        "UnusedUnderThisBase_10843"
                       ]
                     }
                   }
@@ -6764,11 +6764,11 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "multiBase": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10871) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10871",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10905) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10905",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10871"
+                      "UnusedUnderThisBase_10905"
                     ]
                   }
                 },
@@ -6789,11 +6789,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
                   "valuePerStack": {
                     "MDF_TotalDamageRatioAdd": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10832) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10832",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10866) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10866",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10832"
+                        "UnusedUnderThisBase_10866"
                       ]
                     },
                     "MDF_TotalDamageRatioCut": 0
@@ -6811,27 +6811,27 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
               "valuePerStack": {
                 "MDF_TotalDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10818) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10818",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10852) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10852",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10818"
+                    "UnusedUnderThisBase_10852"
                   ]
                 },
                 "MDF_TotalDamageRatioMin": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10818) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10818",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10852) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10852",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10818"
+                    "UnusedUnderThisBase_10852"
                   ]
                 },
                 "MDF_TotalDamageRatioMax": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10873) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10873",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10907) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10907",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10873"
+                    "UnusedUnderThisBase_10907"
                   ]
                 },
                 "MDF_BaseAttack": {
@@ -6853,11 +6853,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
               "valuePerStack": {
                 "MDF_TotalDamageRatioAdd": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10832) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10832",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10866) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10866",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10832"
+                    "UnusedUnderThisBase_10866"
                   ]
                 },
                 "MDF_TotalDamageRatioCut": 0
@@ -6930,11 +6930,11 @@ const compositeAbilityObject = {
                   "valuePerStack": {
                     "MDF_TotalDamageRatioAdd": 0,
                     "MDF_TotalDamageRatioCut": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10834) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10834",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10868) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10868",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10834"
+                        "UnusedUnderThisBase_10868"
                       ]
                     }
                   },
@@ -7001,11 +7001,11 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10823) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10823",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10857) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10857",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10823"
+                          "UnusedUnderThisBase_10857"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -7067,11 +7067,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
               "valuePerStack": {
                 "MDF_DirtyHPBase": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10816) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10816",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10850) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10850",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10816"
+                    "UnusedUnderThisBase_10850"
                   ]
                 },
                 "MDF_BaseAttack": {
@@ -7083,11 +7083,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "MDF_DeathSPAdd": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10827) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10827",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10861) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10861",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10827"
+                    "UnusedUnderThisBase_10861"
                   ]
                 }
               }
@@ -7117,11 +7117,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
               "valuePerStack": {
                 "StanceDamage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10830) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10830",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10864) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10864",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10830"
+                    "UnusedUnderThisBase_10864"
                   ]
                 }
               }

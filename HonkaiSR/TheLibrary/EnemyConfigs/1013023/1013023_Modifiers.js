@@ -1058,7 +1058,7 @@ const configAbility = {
                                             "target": "{{Modifier Holder}}"
                                           },
                                           "advanceType": "Set",
-                                          "multiAdd": "UnusedUnderThisBase_8026"
+                                          "multiAdd": "UnusedUnderThisBase_8060"
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -1068,11 +1068,11 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8024) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8024",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_8058) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_8058",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_8024"
+                                              "UnusedUnderThisBase_8058"
                                             ]
                                           }
                                         }
@@ -1085,7 +1085,7 @@ const configAbility = {
                                             "target": "{{Modifier Holder}}"
                                           },
                                           "advanceType": "Set",
-                                          "multiAdd": "UnusedUnderThisBase_8038"
+                                          "multiAdd": "UnusedUnderThisBase_8072"
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -1095,11 +1095,11 @@ const configAbility = {
                                           },
                                           "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                           "duration": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8037) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8037",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_8071) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_8071",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_8037"
+                                              "UnusedUnderThisBase_8071"
                                             ]
                                           }
                                         }
@@ -1604,7 +1604,7 @@ const configAbility = {
                                                         "target": "{{Modifier Holder}}"
                                                       },
                                                       "advanceType": "Set",
-                                                      "multiAdd": "UnusedUnderThisBase_8026"
+                                                      "multiAdd": "UnusedUnderThisBase_8060"
                                                     },
                                                     {
                                                       "name": "Add Events/Bonuses",
@@ -1614,11 +1614,11 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_8024) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_8024",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_8058) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_8058",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_8024"
+                                                          "UnusedUnderThisBase_8058"
                                                         ]
                                                       }
                                                     }
@@ -1631,7 +1631,7 @@ const configAbility = {
                                                         "target": "{{Modifier Holder}}"
                                                       },
                                                       "advanceType": "Set",
-                                                      "multiAdd": "UnusedUnderThisBase_8038"
+                                                      "multiAdd": "UnusedUnderThisBase_8072"
                                                     },
                                                     {
                                                       "name": "Add Events/Bonuses",
@@ -1641,11 +1641,11 @@ const configAbility = {
                                                       },
                                                       "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                       "duration": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_8037) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_8037",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_8071) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_8071",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_8037"
+                                                          "UnusedUnderThisBase_8071"
                                                         ]
                                                       }
                                                     }

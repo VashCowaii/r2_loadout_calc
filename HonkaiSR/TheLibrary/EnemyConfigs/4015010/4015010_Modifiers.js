@@ -29,11 +29,11 @@ const configAbility = {
                     "value1": "TotalDamageRatio",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10873) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10873",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10907) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10907",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10873"
+                        "UnusedUnderThisBase_10907"
                       ]
                     }
                   }

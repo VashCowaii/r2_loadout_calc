@@ -135,11 +135,11 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10112) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10112",
+            "operator": "Variables[0] (UnusedUnderThisBase_10146) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10146",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10112"
+              "UnusedUnderThisBase_10146"
             ]
           }
         }
@@ -226,7 +226,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "UnusedUnderThisBase_10112"
+                  "multiAdd": "UnusedUnderThisBase_10146"
                 }
               ],
               "failed": [
