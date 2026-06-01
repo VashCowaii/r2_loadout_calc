@@ -511,23 +511,13 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Declare Custom Variable",
+                  "name": "Define Custom Variable with Stat",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
-                  "variableName": "GridFight_MDF_MaxHP"
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "ContextModifier",
-                  "statValue": "&nbsp;<span class=\"descriptionNumberColor\">HPMaxMultiplier</span>&nbsp;",
-                  "variableName": "GridFight_MDF_MaxHPMulRatio"
+                  "variableName": "MDF_MaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -536,24 +526,42 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "scope": "ContextModifier",
-                  "variableName": "GridFight_DeadLock_HP_CurrentRatio",
+                  "variableName": "MDF_DeadLock_HP",
                   "value": {
-                    "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                    "displayLines": "MDF_DeadLock_HPRatio",
+                    "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
+                    "displayLines": "(MDF_MaxHP * MDF_DeadLock_HPRatio)",
                     "constants": [],
                     "variables": [
+                      "MDF_MaxHP",
                       "MDF_DeadLock_HPRatio"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "ContextModifier",
+                  "variableName": "DeadLock_HP_CurrentValue",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                    "displayLines": "MDF_DeadLock_HP",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DeadLock_HP"
                     ]
                   }
                 },
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                    "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                    "displayLines": "DeadLock_HP_CurrentValue",
                     "constants": [],
                     "variables": [
-                      "GridFight_DeadLock_HP_CurrentRatio"
+                      "DeadLock_HP_CurrentValue"
                     ]
                   },
                   "entityClass": "Enemy",
@@ -562,11 +570,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                    "displayLines": "MDF_DeadLock_HPRatio",
+                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                    "displayLines": "MDF_DeadLock_HP",
                     "constants": [],
                     "variables": [
-                      "MDF_DeadLock_HPRatio"
+                      "MDF_DeadLock_HP"
                     ]
                   },
                   "assignState": "True",
@@ -663,11 +671,11 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                    "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                    "displayLines": "DeadLock_HP_CurrentValue",
                     "constants": [],
                     "variables": [
-                      "GridFight_DeadLock_HP_CurrentRatio"
+                      "DeadLock_HP_CurrentValue"
                     ]
                   },
                   "entityClass": "Enemy",
@@ -676,11 +684,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                    "displayLines": "MDF_DeadLock_HPRatio",
+                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                    "displayLines": "MDF_DeadLock_HP",
                     "constants": [],
                     "variables": [
-                      "MDF_DeadLock_HPRatio"
+                      "MDF_DeadLock_HP"
                     ]
                   },
                   "assignState": "False",
@@ -749,11 +757,11 @@ const configAbility = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                    "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                    "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                    "displayLines": "DeadLock_HP_CurrentValue",
                     "constants": [],
                     "variables": [
-                      "GridFight_DeadLock_HP_CurrentRatio"
+                      "DeadLock_HP_CurrentValue"
                     ]
                   },
                   "entityClass": "Enemy",
@@ -762,11 +770,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                    "displayLines": "MDF_DeadLock_HPRatio",
+                    "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                    "displayLines": "MDF_DeadLock_HP",
                     "constants": [],
                     "variables": [
-                      "MDF_DeadLock_HPRatio"
+                      "MDF_DeadLock_HP"
                     ]
                   },
                   "assignState": "True",
@@ -993,17 +1001,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "GridFight_MDF_Result_HPReduce",
-                      "value": "Result_HPReduce"
-                    },
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "GridFight_MDF_Result_HPReduceMulRatio",
-                      "value": "Result_HPReduceMulRatio"
+                      "variableName": "_Damage"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1012,17 +1010,14 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "scope": "ContextModifier",
-                      "variableName": "GridFight_DeadLock_HP_CurrentRatio",
+                      "variableName": "DeadLock_HP_CurrentValue",
                       "value": {
-                        "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || Variables[1] (GridFight_MDF_Result_HPReduce) || Variables[2] (GridFight_MDF_MaxHP) || DIV || Variables[3] (GridFight_MDF_Result_HPReduceMulRatio) || MUL || Variables[4] (GridFight_MDF_MaxHPMulRatio) || DIV || SUB || RETURN",
-                        "displayLines": "(GridFight_DeadLock_HP_CurrentRatio - (((GridFight_MDF_Result_HPReduce / GridFight_MDF_MaxHP) * GridFight_MDF_Result_HPReduceMulRatio) / GridFight_MDF_MaxHPMulRatio))",
+                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
+                        "displayLines": "(DeadLock_HP_CurrentValue - _Damage)",
                         "constants": [],
                         "variables": [
-                          "GridFight_DeadLock_HP_CurrentRatio",
-                          "GridFight_MDF_Result_HPReduce",
-                          "GridFight_MDF_MaxHP",
-                          "GridFight_MDF_Result_HPReduceMulRatio",
-                          "GridFight_MDF_MaxHPMulRatio"
+                          "DeadLock_HP_CurrentValue",
+                          "_Damage"
                         ]
                       }
                     },
@@ -1034,7 +1029,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value1": "GridFight_DeadLock_HP_CurrentRatio",
+                        "value1": "DeadLock_HP_CurrentValue",
                         "compareType": "<=",
                         "value2": 0,
                         "contextScope": "ContextModifier"
@@ -1047,7 +1042,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "scope": "ContextModifier",
-                          "variableName": "GridFight_DeadLock_HP_CurrentRatio",
+                          "variableName": "DeadLock_HP_CurrentValue",
                           "value": 0
                         }
                       ]
@@ -1055,11 +1050,11 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                        "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                        "displayLines": "DeadLock_HP_CurrentValue",
                         "constants": [],
                         "variables": [
-                          "GridFight_DeadLock_HP_CurrentRatio"
+                          "DeadLock_HP_CurrentValue"
                         ]
                       },
                       "entityClass": "Enemy",
@@ -1068,11 +1063,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                        "displayLines": "MDF_DeadLock_HPRatio",
+                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                        "displayLines": "MDF_DeadLock_HP",
                         "constants": [],
                         "variables": [
-                          "MDF_DeadLock_HPRatio"
+                          "MDF_DeadLock_HP"
                         ]
                       },
                       "assignState": "True"
@@ -1099,7 +1094,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value1": "GridFight_DeadLock_HP_CurrentRatio",
+                            "value1": "DeadLock_HP_CurrentValue",
                             "compareType": "<=",
                             "value2": 0,
                             "contextScope": "ContextModifier"
@@ -1124,7 +1119,7 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "scope": "ContextModifier",
-                          "variableName": "GridFight_DeadLock_HP_CurrentRatio",
+                          "variableName": "DeadLock_HP_CurrentValue",
                           "value": 0
                         },
                         {
@@ -1437,11 +1432,11 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                        "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                        "displayLines": "DeadLock_HP_CurrentValue",
                         "constants": [],
                         "variables": [
-                          "GridFight_DeadLock_HP_CurrentRatio"
+                          "DeadLock_HP_CurrentValue"
                         ]
                       },
                       "entityClass": "Enemy",
@@ -1450,11 +1445,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                        "displayLines": "MDF_DeadLock_HPRatio",
+                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                        "displayLines": "MDF_DeadLock_HP",
                         "constants": [],
                         "variables": [
-                          "MDF_DeadLock_HPRatio"
+                          "MDF_DeadLock_HP"
                         ]
                       },
                       "assignState": "True",
@@ -1621,11 +1616,11 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                        "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                        "displayLines": "DeadLock_HP_CurrentValue",
                         "constants": [],
                         "variables": [
-                          "GridFight_DeadLock_HP_CurrentRatio"
+                          "DeadLock_HP_CurrentValue"
                         ]
                       },
                       "entityClass": "Enemy",
@@ -1634,11 +1629,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                        "displayLines": "MDF_DeadLock_HPRatio",
+                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                        "displayLines": "MDF_DeadLock_HP",
                         "constants": [],
                         "variables": [
-                          "MDF_DeadLock_HPRatio"
+                          "MDF_DeadLock_HP"
                         ]
                       },
                       "assignState": "True",
@@ -1688,11 +1683,11 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                        "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                        "displayLines": "DeadLock_HP_CurrentValue",
                         "constants": [],
                         "variables": [
-                          "GridFight_DeadLock_HP_CurrentRatio"
+                          "DeadLock_HP_CurrentValue"
                         ]
                       },
                       "entityClass": "Enemy",
@@ -1701,11 +1696,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                        "displayLines": "MDF_DeadLock_HPRatio",
+                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                        "displayLines": "MDF_DeadLock_HP",
                         "constants": [],
                         "variables": [
-                          "MDF_DeadLock_HPRatio"
+                          "MDF_DeadLock_HP"
                         ]
                       },
                       "assignState": "True",
@@ -1769,11 +1764,11 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "operator": "Variables[0] (GridFight_DeadLock_HP_CurrentRatio) || RETURN",
-                        "displayLines": "GridFight_DeadLock_HP_CurrentRatio",
+                        "operator": "Variables[0] (DeadLock_HP_CurrentValue) || RETURN",
+                        "displayLines": "DeadLock_HP_CurrentValue",
                         "constants": [],
                         "variables": [
-                          "GridFight_DeadLock_HP_CurrentRatio"
+                          "DeadLock_HP_CurrentValue"
                         ]
                       },
                       "entityClass": "Enemy",
@@ -1782,11 +1777,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (MDF_DeadLock_HPRatio) || RETURN",
-                        "displayLines": "MDF_DeadLock_HPRatio",
+                        "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
+                        "displayLines": "MDF_DeadLock_HP",
                         "constants": [],
                         "variables": [
-                          "MDF_DeadLock_HPRatio"
+                          "MDF_DeadLock_HP"
                         ]
                       },
                       "assignState": "True",

@@ -566,6 +566,14 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit",
         {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        },
+        {
           "name": "Remove from Team Target Grouping",
           "target": {
             "name": "Target Name",
@@ -872,6 +880,14 @@ const compositeAbilityObject = {
           "popUpText": "Illwish Fission"
         },
         "Deleted bullshit",
+        {
+          "name": "WAIT FOR",
+          "condition": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "type": "Team Characters"
+          }
+        },
         {
           "name": "Remove from Team Target Grouping",
           "target": {

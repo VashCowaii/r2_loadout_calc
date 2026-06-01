@@ -575,11 +575,11 @@ const configAbility = {
                   "conditions": {
                     "name": "Enemy ID",
                     "ID": {
-                      "operator": "Variables[0] (SummonMonsterID02) || RETURN",
-                      "displayLines": "SummonMonsterID02",
+                      "operator": "Variables[0] (SummonList_ADF_2) || RETURN",
+                      "displayLines": "SummonList_ADF_2",
                       "constants": [],
                       "variables": [
-                        "SummonMonsterID02"
+                        "SummonList_ADF_2"
                       ]
                     },
                     "target": {

@@ -452,6 +452,14 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
+                "modifier": "<a class=\"gModGreen\" id=\"-804634083\">Death_Control_Modifier</a>"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "<a class=\"gModGreen\" id=\"488990783\">W3_DeathPart_Sgin_Modifier</a>",
                 "invertCondition": true
               },

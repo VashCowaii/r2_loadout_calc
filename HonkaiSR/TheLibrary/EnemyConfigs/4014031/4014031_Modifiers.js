@@ -1361,11 +1361,9 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_CurrentShieldValue",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || Variables[2] (MDF_SummonerMaxHP_DownScale) || DIV || Constants[0] (1000) || DIV || Variables[3] (MDF_AttackDamageDataMulRatio) || MUL || SUB || RETURN",
-                    "displayLines": "(MDF_CurrentShieldValue - (((MDF_AttackDamageData / MDF_SummonerMaxHP_DownScale) / 1000) * MDF_AttackDamageDataMulRatio))",
-                    "constants": [
-                      1000
-                    ],
+                    "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || Variables[2] (MDF_SummonerMaxHP_DownScale) || DIV || Variables[3] (MDF_AttackDamageDataMulRatio) || MUL || SUB || RETURN",
+                    "displayLines": "(MDF_CurrentShieldValue - ((MDF_AttackDamageData / MDF_SummonerMaxHP_DownScale) * MDF_AttackDamageDataMulRatio))",
+                    "constants": [],
                     "variables": [
                       "MDF_CurrentShieldValue",
                       "MDF_AttackDamageData",
@@ -1574,8 +1572,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_SummonerMaxHP_DownScale",
-              "value": 1000
+              "variableName": "MDF_SummonerMaxHP_DownScale"
             },
             {
               "name": "Define Custom Variable",
@@ -2441,7 +2438,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"477176839\">Monster_W4_Pollux_GridFight_Strengthen_Shield</a>",
+                      "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
                           "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",

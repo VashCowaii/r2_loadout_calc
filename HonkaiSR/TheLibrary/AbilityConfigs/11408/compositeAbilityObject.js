@@ -1040,6 +1040,14 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                     },
                     {
+                      "name": "Update Character Panel Visibility",
+                      "targetCustom": {
+                        "name": "Target Name",
+                        "target": "{{Phainon's Forced-Action Teammates}}"
+                      },
+                      "show": "ShowCustom"
+                    },
+                    {
                       "name": "Remove Flags from Modifier",
                       "target": {
                         "name": "Target Name",
@@ -1112,6 +1120,14 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1110462690\">Phainon_Ultimate_TeamStealth</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]"
                     },
                     {
+                      "name": "Update Character Panel Visibility",
+                      "targetCustom": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}} - {{Caster}} - {{Phainon's Forced-Action Teammates}}"
+                      },
+                      "show": "HideCustom"
+                    },
+                    {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
@@ -1165,6 +1181,9 @@ const compositeAbilityObject = {
                   "name": "Change Character UI",
                   "characterName": "Phainon",
                   "icon": "1408.png"
+                },
+                {
+                  "name": "Update Character Panel Visibility"
                 },
                 {
                   "name": "IF",
@@ -1323,6 +1342,14 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "icon": "1408_02.png"
+                },
+                {
+                  "name": "Update Character Panel Visibility",
+                  "targetCustom": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}} - {{Caster}} - {{Phainon's Forced-Action Teammates}}"
+                  },
+                  "show": "HideCustom"
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
