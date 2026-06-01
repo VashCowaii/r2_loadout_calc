@@ -141,11 +141,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1730193233\">Enemy_SW_Boss_01_SummonMinion</a>",
       "valuePerStack": {
         "MDF_SummonID": {
-          "operator": "Variables[0] (SummonMonsterID01) || RETURN",
-          "displayLines": "SummonMonsterID01",
+          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+          "displayLines": "SummonList_ADF_1",
           "constants": [],
           "variables": [
-            "SummonMonsterID01"
+            "SummonList_ADF_1"
           ]
         },
         "MDF_SummonDelay": {

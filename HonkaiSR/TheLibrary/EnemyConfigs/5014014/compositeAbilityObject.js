@@ -3445,6 +3445,38 @@ const compositeAbilityObject = {
                       }
                     }
                   ]
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Every Battle Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Every Battle Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Every Battle Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1600631937\">Enemy_W5_Vtuber_SpecialOutField</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Every Battle Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-249689500\">Enemy_W5_Vtuber_SpecialInField</a>"
                 }
               ]
             },
@@ -4826,8 +4858,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_MaxHP_DownScale",
-                      "value": 1000
+                      "variableName": "MDF_MaxHP_DownScale"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -5565,8 +5596,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "statValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "variableName": "MDF_HPRatio",
-                          "value": 1000
+                          "variableName": "MDF_HPRatio"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -5717,8 +5747,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "statValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "variableName": "MDF_HPRatio",
-                          "value": 1000
+                          "variableName": "MDF_HPRatio"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",

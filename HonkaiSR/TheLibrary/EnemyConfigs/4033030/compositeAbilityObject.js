@@ -279,19 +279,29 @@ const compositeAbilityObject = {
                   }
                 },
                 {
+                  "name": "Define Custom Variable with Stat",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "_MaxHP",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
                   "name": "Stack Target Stat Value",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] ({[Skill02[0]]}) || Constants[0] (1) || SUB || RETURN",
-                    "displayLines": "({[Skill02[0]]} - 1)",
+                    "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[0]]}) || Constants[0] (1) || SUB || MUL || RETURN",
+                    "displayLines": "(_MaxHP * ({[Skill02[0]]} - 1))",
                     "constants": [
                       1
                     ],
                     "variables": [
+                      "_MaxHP",
                       "{[Skill02[0]]}"
                     ]
                   }

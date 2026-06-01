@@ -1501,8 +1501,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_MaxHP_DownScale",
-                  "value": 1000
+                  "variableName": "MDF_MaxHP_DownScale"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1511,8 +1510,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "statValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                  "variableName": "MDF_CurrentHP_DownScale",
-                  "value": 1000
+                  "variableName": "MDF_CurrentHP_DownScale"
                 },
                 {
                   "name": "Define Custom Variable",

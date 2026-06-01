@@ -3742,21 +3742,34 @@ const compositeAbilityObject = {
             {
               "name": "IF",
               "conditions": {
-                "name": "AND",
+                "name": "OR",
                 "conditionList": [
                   {
-                    "name": "Check Boolean Value",
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "value": "RLBoss"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 3
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "RLBoss"
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "HP_Bars_Remaining",
-                    "compareType": "=",
-                    "value2": 3
+                    "modifier": "<a class=\"gModGreen\" id=\"1025520110\">Enemy_W4_Serpent_01_IF_Passive</a>"
                   }
                 ]
               },

@@ -633,13 +633,29 @@ const compositeAbilityObject = {
               "eventTrigger": "Locked HP Floor Reached [Owner]",
               "execute": [
                 {
-                  "name": "Inject Ability Use",
-                  "abilityName": "Monster_W5_Ripper_SpecialWin_Insert2",
-                  "priorityTag": "EnemyPhaseChange",
-                  "ownerState": "Mask_AliveOrLimbo",
-                  "targetState": "Mask_AliveOrLimbo",
-                  "canHitNonTargets": true,
-                  "allowAbilityTriggers": false
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Main2EndCheck",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "Main2EndCheck",
+                      "value": 1
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W5_Ripper_SpecialWin_Insert2",
+                      "priorityTag": "EnemyPhaseChange",
+                      "ownerState": "Mask_AliveOrLimbo",
+                      "targetState": "Mask_AliveOrLimbo",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
                 }
               ]
             },
@@ -1198,6 +1214,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "STAT_CTRL",
             147,
+            "SkipInsertAction",
             "AvatarBreak"
           ],
           "description": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
@@ -1344,7 +1361,8 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ]
+              ],
+              "priorityLevel": 100
             }
           ]
         },
@@ -3607,6 +3625,9 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]"
             },
             {
               "eventTrigger": "Ability Use [Anyone]: Start",
