@@ -7461,7 +7461,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_Debuff_ToEnemy",
+    "name": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>",
     "realName": "Balefire Bind",
     "aim": "Debuff",
     "desc": "DEF decreases by #1[f1]%, and DMG taken increases by #2[f1]%.",
@@ -7473,7 +7473,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_Super",
+    "name": "<a class=\"gModGreen\" id=\"-476778637\">G_MortenaxBlade_Super</a>",
     "realName": "Infinite Fury",
     "aim": "Buff",
     "desc": "CRIT Rate increases by #1[i]% and CRIT DMG increases by #2[f1]%.",
@@ -7485,7 +7485,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_PointB2",
+    "name": "<a class=\"gModGreen\" id=\"1823034258\">G_MortenaxBlade_PointB2</a>",
     "realName": "Soul, Tempered ad Mortem",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]% and Incoming Healing increases by #2[i]%.",
@@ -7497,7 +7497,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "MortenaxBlade_TechniqueUsage_DamageReduce",
+    "name": "<a class=\"gModGreen\" id=\"-1694352168\">MortenaxBlade_TechniqueUsage_DamageReduce</a>",
     "realName": "Corpus Impervius",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -7653,7 +7653,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_Eidolon1_EnermyDebuff",
+    "name": "<a class=\"gModGreen\" id=\"1949237298\">G_MortenaxBlade_Eidolon1_EnermyDebuff</a>",
     "realName": "Ere My Death, I Stood Unmade",
     "aim": "Debuff",
     "desc": "All-Type RES decreases by #1[i]%.",
@@ -7664,7 +7664,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT",
+    "name": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>",
     "realName": "Heart, Refined ad Infinitum",
     "aim": "Buff",
     "desc": "The DMG dealt increases by #1[i]% and Ultimate DMG dealt additionally increases by #2[i]%.",
@@ -7676,7 +7676,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_Eidolon2_ToOtherMember",
+    "name": "<a class=\"gModGreen\" id=\"1517379816\">G_MortenaxBlade_Eidolon2_ToOtherMember</a>",
     "realName": "Ash Was My Heart, Yet the Flame Stayed",
     "aim": "Buff",
     "desc": "Follow-Up ATK DMG dealt increases by #1[i]%.",
@@ -7698,7 +7698,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember",
+    "name": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>",
     "realName": "Heart, Refined ad Infinitum",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7709,7 +7709,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf",
+    "name": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>",
     "realName": "Heart, Refined ad Infinitum",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -7720,7 +7720,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "MortenaxBlade_PointB1_ExceedSpStatus",
+    "name": "<a class=\"gModGreen\" id=\"-1776434077\">MortenaxBlade_PointB1_ExceedSpStatus</a>",
     "realName": "Bone, Hardened ad Nauseam",
     "aim": "Other",
     "desc": "#1[i] overflow Energy accumulated.",
@@ -7731,7 +7731,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "G_MortenaxBlade_Eidolon6_CD",
+    "name": "<a class=\"gModGreen\" id=\"-1060588770\">G_MortenaxBlade_Eidolon6_CD</a>",
     "realName": "If Immortality Could Die, I Swore THEM Slain",
     "aim": "Other",
     "desc": "\"If Immortality Could Die, I Swore THEM Slain\" effect auto-trigger is on cooldown.",
@@ -7739,7 +7739,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "G_MortenaxBlade_Eidolon2_ToMember",
+    "name": "<a class=\"gModGreen\" id=\"-1514536546\">G_MortenaxBlade_Eidolon2_ToMember</a>",
     "realName": "Ash Was My Heart, Yet the Flame Stayed",
     "aim": "Buff",
     "desc": "When using Ultimate to deal DMG, it is considered as having launched Follow-Up ATK. And the Follow-Up ATK DMG dealt increases by #1[i]%.",

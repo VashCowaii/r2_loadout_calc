@@ -907,6 +907,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Mortenax Blade",
+    "trimCharacterName": "MortenaxBlade",
+    "entryIcon": "icon/character/1507.png",
+    "lineCount": 4863,
+    "sizeCount": 175378
+  },
+  {
+    "entryType": "char",
     "entryName": "Firefly",
     "trimCharacterName": "Firefly",
     "entryIcon": "icon/character/1310.png",
@@ -2499,12 +2507,6 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
-    "enemyID": 5023020,
-    "lineCount": 1668,
-    "sizeCount": 61533
-  },
-  {
-    "entryType": "enemy",
     "enemyID": 2033020,
     "lineCount": 1772,
     "sizeCount": 61484
@@ -2514,6 +2516,12 @@ let sizeLeaderboardArray = [
     "enemyID": 2033021,
     "lineCount": 1772,
     "sizeCount": 61484
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5023020,
+    "lineCount": 1666,
+    "sizeCount": 61466
   },
   {
     "entryType": "enemy",
@@ -5958,14 +5966,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1506.png",
     "lineCount": 7,
     "sizeCount": 149
-  },
-  {
-    "entryType": "char",
-    "entryName": "Mortenax Blade",
-    "trimCharacterName": "MortenaxBlade",
-    "entryIcon": "icon/character/1507.png",
-    "lineCount": 7,
-    "sizeCount": 147
   },
   {
     "entryType": "enemy",
