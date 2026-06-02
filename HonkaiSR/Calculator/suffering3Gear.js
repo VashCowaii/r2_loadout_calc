@@ -13424,6 +13424,8 @@ const turnLogicRelics = {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
 
+                            currentTurn.relicMasterSmithReadyToApply = true;
+
                             addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                         }
                     },
@@ -13477,7 +13479,18 @@ const turnLogicRelics = {
                             },
                             "target": "self",
                             "isPersonal": true,
-                            "listenerName": "Divine-Querying Master Smith - 2pc shredded listener",
+                            "listenerName": "Divine-Querying Master Smith - 4pc shredded listener",
+                        },
+                        {
+                            "trigger": "AttackEnd",
+                            condition(battleData,generalInfo) {
+
+                                let sourceTurn = generalInfo.sourceTurn;
+                                sourceTurn.relicMasterSmithReadyToApply = true;
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Divine-Querying Master Smith - attack end litener",
                         },
                     ]
                 },
@@ -13496,6 +13509,13 @@ const turnLogicRelics = {
                         const defShredCheck = sourceSheet[DEFP] ?? 0;
                         const isReducing = defShredCheck < 0;
                         if (!isReducing) {return;}
+
+                        const sourceTurn = generalInfo.sourceTurn;
+                        if (!sourceTurn.isEnemy) {return;}//the debuff needs to be applied to an enemy entity
+
+                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                        if (!ownerTurn.relicMasterSmithReadyToApply) {return;}
+                        ownerTurn.relicMasterSmithReadyToApply = false;
 
                         if (!this.relicMasterSmithSheet) {
                             let relicNameRef = "Divine-Querying Master Smith";
@@ -13518,7 +13538,6 @@ const turnLogicRelics = {
                             }
                         }
                         const buffSheet = this.relicMasterSmithSheet;
-                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
                         buffSheet.sourceOwner = ownerTurn.properName;
 
                         const allyPositions = battleData.allyPositions;
