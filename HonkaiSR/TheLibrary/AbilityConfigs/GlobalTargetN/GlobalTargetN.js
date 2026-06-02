@@ -258,7 +258,7 @@ const configAbility = {
           "Sequence": [
             {
               "name": "Target Name",
-              "target": "{{Player Team All}}"
+              "target": "{{Player Team All(with Unselectable)V2}}"
             },
             {
               "name": "Target Filter",
@@ -1306,6 +1306,33 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "BattleEvent96217",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 96217,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "BattleEvent60032_CHAR1415",
       "isTargetOperator": false,
       "execute": [
@@ -2160,6 +2187,67 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"1728959136\">Monster_W5_Ripper_Passive</a>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Painter: Self",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 501403,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null,
+                    "isCompareUniqueID": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Painter: Skill03 Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-1429849811\">Enemy_W5_Painter_Ability03_Mark</a>"
               }
             }
           ]

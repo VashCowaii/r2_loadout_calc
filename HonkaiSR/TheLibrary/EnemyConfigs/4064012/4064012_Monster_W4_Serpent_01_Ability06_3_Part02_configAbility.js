@@ -1,0 +1,13 @@
+const configAbility = {
+  "fileName": "4064012_Monster_W4_Serpent_01_Ability06_3_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    "Trigger: Ability End"
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Caster}}"
+  },
+  "references": []
+}

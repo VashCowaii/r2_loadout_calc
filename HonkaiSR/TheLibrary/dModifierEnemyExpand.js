@@ -6136,7 +6136,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Eater_Ability02_Ate",
+    "name": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>",
     "realName": "Devour",
     "aim": "Other",
     "desc": "Maximum Restorable HP decreases by #2[i]%, and #1[i] ATK is stolen by \"%CasterName.\"",
@@ -6148,7 +6148,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Eater_Ability02_Eater",
+    "name": "<a class=\"gModGreen\" id=\"-1972425744\">Enemy_W5_Eater_Ability02_Eater</a>",
     "realName": "Satiated",
     "aim": "Other",
     "desc": "Steals #1[i] ATK. Each time after it is attacked by an target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by target units a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
@@ -6159,7 +6159,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Eater_Ability03_Attack",
+    "name": "<a class=\"gModGreen\" id=\"555908682\">Enemy_W5_Eater_Ability03_Attack</a>",
     "realName": "ATK Boost",
     "aim": "Buff",
     "desc": "ATK increases by #1[i].",
@@ -6189,7 +6189,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_OriginalDefence",
+    "name": "<a class=\"gModGreen\" id=\"1282840806\">Enemy_W4_Serpent_01_IF_OriginalDefence</a>",
     "realName": "Enhance Defense",
     "aim": "Buff",
     "desc": "DEF increases by #1[i]%. Dispelled after being Weakness Broken.",
@@ -6200,7 +6200,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_BonusDefenceDown",
+    "name": "<a class=\"gModGreen\" id=\"322023732\">Enemy_W4_Serpent_01_IF_BonusDefenceDown</a>",
     "realName": "DEF Reduction",
     "aim": "Debuff",
     "desc": "Each stack decreases DEF by #1[i]%.",
@@ -6211,7 +6211,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_AbilityEX04_TGT",
+    "name": "<a class=\"gModGreen\" id=\"393866359\">Enemy_W4_Serpent_01_IF_AbilityEX04_TGT</a>",
     "realName": "Economies of Scale",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]% and reduces DMG received by #2[i]%.",
@@ -6231,7 +6231,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Painter_Inferno",
+    "name": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>",
     "realName": "Grudge Ablaze",
     "aim": "Debuff",
     "desc": "At the start of every turn, take Fire DMG. Targets inflicted with \"Grudge Ablaze\" can select \"Endure Flames\" or \"Extinguish Flames\" when taking action.\\n\"Endure Flames\": Skips this turn. Gains \"Fortitude,\" and DMG taken decreases for 1 turn.\\n\"Extinguish Flames\": Has a chance to immediately dispel \"Grudge Ablaze,\" and takes Fire DMG if not dispelled. After selecting \"Extinguish Flames,\" this turn does not end regardless of the result.",
@@ -6239,7 +6239,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Painter_Inferno_Guard",
+    "name": "<a class=\"gModGreen\" id=\"-846552566\">Enemy_W5_Painter_Inferno_Guard</a>",
     "realName": "Fortitude",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]%.",
@@ -6250,7 +6250,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Painter_SummonerEnhance",
+    "name": "<a class=\"gModGreen\" id=\"600664801\">Enemy_W5_Painter_SummonerEnhance</a>",
     "realName": "Beyond-Human Realm",
     "aim": "Buff",
     "desc": "Each stack increases Max HP and DMG dealt. When extinguished, deals Fire DMG to \"%CasterName\" and recovers Skill Point(s) for targets.",
@@ -6258,7 +6258,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_Summon_SpecialLimboController",
+    "name": "<a class=\"gModGreen\" id=\"-874509273\">Enemy_W4_Serpent_01_IF_Summon_SpecialLimboController</a>",
     "realName": "Monoform Merger",
     "aim": "Other",
     "desc": "When receiving fatal damage, enters the \"Feigned Death\" state. When all \"ichor memosprites\" possessing \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the \"Arbiter of the Lost Abyss.\"",
@@ -6266,7 +6266,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_Summon_SpecialLimbo",
+    "name": "<a class=\"gModGreen\" id=\"-2017874645\">Enemy_W4_Serpent_01_IF_Summon_SpecialLimbo</a>",
     "realName": "Feigned Death",
     "aim": "Other",
     "desc": "Cannot be selected, cannot take action.",
@@ -6274,7 +6274,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_TiredDisplay",
+    "name": "<a class=\"gModGreen\" id=\"-92334699\">Enemy_W4_Serpent_01_IF_TiredDisplay</a>",
     "realName": "Bloodline Frailty",
     "aim": "Other",
     "desc": "After every action, the \"ichor memosprite\" with \"Monoform Merger\" reduces \"Bloodline Frailty\" by 1 point. When the \"ichor memosprite\" merges back into the \"Arbiter of the Lost Abyss,\" reduces the Toughness of the \"Arbiter of the Lost Abyss\" based on the remaining amount of \"Bloodline Frailty.\" Currently remaining \"Bloodline Frailty\": #1[i] point(s).",
@@ -6285,7 +6285,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W4_Serpent_01_IF_DebuffListener",
+    "name": "<a class=\"gModGreen\" id=\"-720916793\">Enemy_W4_Serpent_01_IF_DebuffListener</a>",
     "realName": "Degraded Vessel",
     "aim": "Other",
     "desc": "If an ally inflicts a debuff on an enemy unit with \"Degraded Vessel\" when using an attack, slightly reduces that enemy unit's Toughness and causes them to take True DMG.",

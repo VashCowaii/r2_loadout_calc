@@ -24360,7 +24360,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23059_Debuff",
+    "name": "<a class=\"gModGreen\" id=\"-1204006037\">LC_23059_Debuff</a>",
     "realName": "Purgatory",
     "aim": "Debuff",
     "desc": "Increases CRIT DMG taken by #1[i]%. The CRIT DMG taken from the wearer's attack additionally increases by #2[i]%.",
@@ -24449,7 +24449,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_131_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-151396438\">Relic_131_Sub</a>",
     "realName": "As Navigator Isee Sees It",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by Skill and Ultimate by #1[i]%.",
@@ -24460,7 +24460,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_132_Sub",
+    "name": "<a class=\"gModGreen\" id=\"876387843\">Relic_132_Sub</a>",
     "realName": "Comburent",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",

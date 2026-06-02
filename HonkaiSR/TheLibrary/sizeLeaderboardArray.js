@@ -503,6 +503,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4064012,
+    "lineCount": 6721,
+    "sizeCount": 244219
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8015021,
     "lineCount": 7035,
     "sizeCount": 241758
@@ -898,6 +904,14 @@ let sizeLeaderboardArray = [
     "enemyID": 8032030,
     "lineCount": 4002,
     "sizeCount": 175583
+  },
+  {
+    "entryType": "char",
+    "entryName": "Mortenax Blade",
+    "trimCharacterName": "MortenaxBlade",
+    "entryIcon": "icon/character/1507.png",
+    "lineCount": 4863,
+    "sizeCount": 175378
   },
   {
     "entryType": "char",
@@ -1554,6 +1568,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1015.png",
     "lineCount": 3803,
     "sizeCount": 126659
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5014030,
+    "lineCount": 3573,
+    "sizeCount": 125070
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5014031,
+    "lineCount": 3573,
+    "sizeCount": 125070
   },
   {
     "entryType": "enemy",
@@ -2490,6 +2516,12 @@ let sizeLeaderboardArray = [
     "enemyID": 2033021,
     "lineCount": 1772,
     "sizeCount": 61484
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5023020,
+    "lineCount": 1666,
+    "sizeCount": 61466
   },
   {
     "entryType": "enemy",
@@ -4105,6 +4137,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
+    "entryName": "As Navigator Isee Sees It",
+    "trimCharacterName": "AsNavigatorIseeSeesIt",
+    "entryIcon": "icon/relic/131.png",
+    "lineCount": 283,
+    "sizeCount": 10239
+  },
+  {
+    "entryType": "relic",
     "entryName": "Poet of Mourning Collapse",
     "trimCharacterName": "PoetofMourningCollapse",
     "entryIcon": "icon/relic/124.png",
@@ -4481,6 +4521,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Reforged in Hellfire",
+    "trimCharacterName": "ReforgedinHellfire",
+    "entryIcon": "icon/light_cone/23059.png",
+    "lineCount": 254,
+    "sizeCount": 8126
+  },
+  {
+    "entryType": "lc",
     "entryName": "Lies Dance on the Breeze",
     "trimCharacterName": "LiesDanceontheBreeze",
     "entryIcon": "icon/light_cone/23043.png",
@@ -4780,6 +4828,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20003.png",
     "lineCount": 211,
     "sizeCount": 6404
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Divine-Querying Master Smith",
+    "trimCharacterName": "DivineQueryingMasterSmith",
+    "entryIcon": "icon/relic/132.png",
+    "lineCount": 187,
+    "sizeCount": 6359
   },
   {
     "entryType": "lc",
@@ -5910,14 +5966,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1506.png",
     "lineCount": 7,
     "sizeCount": 149
-  },
-  {
-    "entryType": "char",
-    "entryName": "Mortenax Blade",
-    "trimCharacterName": "MortenaxBlade",
-    "entryIcon": "icon/character/1507.png",
-    "lineCount": 7,
-    "sizeCount": 147
   },
   {
     "entryType": "enemy",
