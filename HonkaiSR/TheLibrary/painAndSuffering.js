@@ -6315,7 +6315,7 @@ const megaParsingFuckeryPain = {
             "invertCondition",
             "lockHolder",
             
-            // "healPercent",
+            "strength",
             // "formula",
             // "value1",
             // "compareType",
@@ -6331,6 +6331,7 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.lockHolder,"Lock Holder")}
+            ${getStandardNameDisplay(initialCounter,parseRef.strength,"Strength")}
         </div>
         `;
     },
