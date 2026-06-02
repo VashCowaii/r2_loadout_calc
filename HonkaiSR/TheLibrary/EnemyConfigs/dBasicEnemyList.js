@@ -11578,7 +11578,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Arbiter of the Lost Abyss"
     },
     "4064013": {
@@ -12314,7 +12314,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false
+      "hasReader": true
     },
     "5014031": {
       "5014031": {
@@ -12325,7 +12325,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Murata Graphia, Founding Artist"
     },
     "groupName": "Murata Graphia, Founding Artist"
@@ -12366,7 +12366,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "God-Devourer Offspring"
   },
