@@ -4412,6 +4412,144 @@ const turnLogicLightcones = {
             "buff3": "Cornered (LC)",
         },
     },
+    "Reforged in Hellfire": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Reforged in Hellfire listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            // console.log(generalInfo.dmgSlot)
+                            let skillType = generalInfo.dmgSlot;
+                            if (skillType != "Skill") {return;}//will only apply when these attack types happen
+        
+                            if (!sourceTurn.lcReforgedInHellfireCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let charSlot = sourceTurn.name;
+                                let ownerRank = ownersSlots[charSlot];
+
+                                let lcNameRef = "Reforged in Hellfire";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.lcReforgedInHellfireCRITSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.purgatory,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    "actionTags": ["All"],
+                                }
+                                sourceTurn.lcReforgedInHellfireCRITOwnerSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[4],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.purgatory2,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": false,
+                                    "isSourceSpecific": true,
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcReforgedInHellfireCRITSHEET;
+                            let buffSheet2 = sourceTurn.lcReforgedInHellfireCRITOwnerSHEET;
+
+                            //TODO: when targets as an array are passed through on attack abilities, come back here
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyBasedTurns = battleData.enemyBasedTurns;
+                            let fullTargetHitArray = [];
+                            for (let enemySlot in targetsGotHit) {
+                                const enemyTurn = enemyBasedTurns[enemySlot];
+                                fullTargetHitArray.push(enemyTurn);
+                            }
+
+                            updateBuffBatchTargets(battleData,fullTargetHitArray,buffSheet);
+                            updateBuffBatchTargets(battleData,fullTargetHitArray,buffSheet2);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Reforged in Hellfire purgatory controller",
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            if (!sourceTurn.lcReforgedInHellfireRegenReady) {return;}
+                            sourceTurn.lcReforgedInHellfireRegenReady = false;
+
+                            let energyRegen = 20;//this is not modified by superimposition
+                            updateEnergy(battleData,energyRegen,sourceTurn,true,"Reforged in Hellfire");
+        
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Reforged in Hellfire turn start listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        currentOwner.lcReforgedInHellfireRegenReady = true;
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Reforged in Hellfire - battlestart cooldown reset",
+            },
+        ],
+        "buffNames": {
+            "purgatory": "Purgatory (LC)",
+            "purgatory2": "Purgatory[OWNER] (LC)",
+            "buff2": "Unarmored (LC)",
+            "buff3": "Cornered (LC)",
+        },
+    },
         //4star
     "Resolution Shines As Pearls of Sweat": {//REDONE
         logic(thisTurn,battleData) {},
