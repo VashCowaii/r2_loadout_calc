@@ -34389,6 +34389,993 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Mortenax Blade": {
+    "internalID": 1507,
+    "name": "Mortenax Blade",
+    "path": "Nihility",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 485.1,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 107,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150701",
+        "name": "Ere My Death, I Stood Unmade",
+        "rank": 1,
+        "desc": "While the Zone is active, decreases all enemies' All-Type RES by 20%. After using the extra Skill from Talent, the \"Infinite Fury\" countdown has its action delayed by 15%.",
+        "icon": "icon/skill/1507_rank1.png",
+        "paramsEido": [
+          0.2,
+          0.15
+        ],
+        "extraEffects": {
+          "Action Delayed": {
+            "desc": "Increases the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "150702",
+        "name": "Ash Was My Heart, Yet the Flame Stayed",
+        "rank": 2,
+        "desc": "When an ally character uses Ultimate to deal DMG, it is considered as having launched Follow-Up ATK. And the Follow-Up ATK DMG dealt by ally targets increases by 75%. The upper limit of Mortenax Blade's Charge decreases to 7.",
+        "icon": "icon/skill/1507_rank2.png",
+        "paramsEido": [
+          0.75,
+          7
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        },
+        "eidoAbility": "MortenaxBlade_MortenaxBlade_Eidolon2"
+      },
+      {
+        "id": "150703",
+        "name": "Across the Shore, Wrath Laid Bare",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1507_ultimate.png"
+      },
+      {
+        "id": "150704",
+        "name": "Odium I've Smitten, Thence Came the Blade",
+        "rank": 4,
+        "desc": "\"Heart, Refined ad Infinitum\" additionally increases ally targets' DMG dealt by 50%.",
+        "icon": "icon/skill/1507_rank4.png",
+        "paramsEido": [
+          0.5
+        ]
+      },
+      {
+        "id": "150705",
+        "name": "I Severed My Woes, Knowing Death Begets Life",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1507_skill.png"
+      },
+      {
+        "id": "150706",
+        "name": "If Immortality Could Die, I Swore THEM Slain",
+        "rank": 6,
+        "desc": "As the Zone persists, when Mortenax Blade takes DMG or consumes HP, he gains 1 Charge. This effect can trigger again after any target's turn ends. The DMG multiplier of \"Tenax Per Ignem\" increases to 150% of its original value.",
+        "icon": "icon/skill/1507_rank6.png",
+        "paramsEido": [
+          1.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "A Broken Blade Still Slays": {
+          "variant1": {
+            "skillID": 150701,
+            "trigger": "Skill01",
+            "name": "A Broken Blade Still Slays",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Mortenax Blade's Max HP to one designated enemy, and causes the target to enter the Taunt state for 1 turn.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_Skill01_Camera",
+              "Avatar_MortenaxBlade_00_Skill01_Phase01",
+              "Avatar_MortenaxBlade_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "A Tempered Blade Severs Souls": {
+          "variant1": {
+            "skillID": 150708,
+            "trigger": "Skill11",
+            "name": "A Tempered Blade Severs Souls",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Mortenax Blade's Max HP to one designated enemy, and causes the target to enter the Taunt state for 1 turn.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_Skill11_Camera",
+              "Avatar_MortenaxBlade_00_Skill11_Phase01",
+              "Avatar_MortenaxBlade_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "A Rain of Blades Seals Fate": {
+          "variant1": {
+            "skillID": 150702,
+            "trigger": "Skill02",
+            "name": "A Rain of Blades Seals Fate",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #4[i]% of Mortenax Blade's Max HP and deals Fire DMG equal to #1[f1]% of Mortenax Blade's Max HP to all enemies, and additionally deals #2[i] instance(s) of DMG, with each instance dealing Fire DMG equal to #3[f1]% of Mortenax Blade's Max HP to one random enemy.\\nIf the current HP is insufficient, Mortenax Blade's current HP will be reduced to 1 when he uses Skill.\\nWhile not in the \"Infinite Fury\" state or when the current HP is 1 or lower, Mortenax Blade cannot use his Skill.\\nUsing Skill does not consume Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                4,
+                0.12,
+                0.1
+              ],
+              "2": [
+                0.396,
+                4,
+                0.132,
+                0.1
+              ],
+              "3": [
+                0.432,
+                4,
+                0.144,
+                0.1
+              ],
+              "4": [
+                0.468,
+                4,
+                0.156,
+                0.1
+              ],
+              "5": [
+                0.504,
+                4,
+                0.168,
+                0.1
+              ],
+              "6": [
+                0.54,
+                4,
+                0.18,
+                0.1
+              ],
+              "7": [
+                0.585,
+                4,
+                0.195,
+                0.1
+              ],
+              "8": [
+                0.63,
+                4,
+                0.21,
+                0.1
+              ],
+              "9": [
+                0.675,
+                4,
+                0.225,
+                0.1
+              ],
+              "10": [
+                0.72,
+                4,
+                0.24,
+                0.1
+              ],
+              "11": [
+                0.756,
+                4,
+                0.252,
+                0.1
+              ],
+              "12": [
+                0.792,
+                4,
+                0.264,
+                0.1
+              ],
+              "13": [
+                0.828,
+                4,
+                0.276,
+                0.1
+              ],
+              "14": [
+                0.864,
+                4,
+                0.288,
+                0.1
+              ],
+              "15": [
+                0.9,
+                4,
+                0.3,
+                0.1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_Skill02_Camera",
+              "Avatar_MortenaxBlade_00_Skill02_Phase01",
+              "Avatar_MortenaxBlade_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              15,
+              30,
+              0
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 150709,
+            "trigger": "Skill21",
+            "name": "A Rain of Blades Seals Fate",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1
+              ],
+              "2": [
+                0.1
+              ],
+              "3": [
+                0.1
+              ],
+              "4": [
+                0.1
+              ],
+              "5": [
+                0.1
+              ],
+              "6": [
+                0.1
+              ],
+              "7": [
+                0.1
+              ],
+              "8": [
+                0.1
+              ],
+              "9": [
+                0.1
+              ],
+              "10": [
+                0.1
+              ],
+              "11": [
+                0.1
+              ],
+              "12": [
+                0.1
+              ],
+              "13": [
+                0.1
+              ],
+              "14": [
+                0.1
+              ],
+              "15": [
+                0.1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_Skill21_Phase01",
+              "Avatar_MortenaxBlade_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              15,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Fornax Ex Corpore": {
+          "variant1": {
+            "skillID": 150703,
+            "trigger": "Skill03",
+            "name": "Fornax Ex Corpore",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Inflicts \"Balefire Bind\" on all enemies. Enemy targets in the \"Balefire Bind\" state have their DEF reduced by #7[f1]% and the DMG they receive increases by #4[f1]%, lasting for #8[i] turn(s). Then, consumes HP equal to #1[i]% of Mortenax Blade's Max HP to deploy a Zone. While the Zone is active, Mortenax Blade enters the \"Infinite Fury\" state.\\nDuring the \"Infinite Fury\" state, increases CRIT Rate by #2[i]%, increases CRIT DMG by #3[f1]%, enhances Basic ATK, unlocks Skill, and gains a new Ultimate \"Tenax Per Ignem.\" When receiving a killing blow, this unit will not be knocked down, but will dispel the Zone, exit the \"Infinite Fury\" state, and restore HP equal to #6[i]% of this unit's Max HP.\\nWhen gaining the \"Infinite Fury\" state, a corresponding countdown appears on the Action Order. The countdown has a fixed SPD of #5[i]. At the start of the countdown's turn, dispels the Zone and exits the \"Infinite Fury\" state.\\nIf the current HP is insufficient, Mortenax Blade's current HP will be reduced to 1 when he uses this ability.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.2,
+                0.3,
+                0.3,
+                70,
+                0.5,
+                0.2,
+                2
+              ],
+              "2": [
+                0.2,
+                0.2,
+                0.33,
+                0.32,
+                70,
+                0.5,
+                0.21,
+                2
+              ],
+              "3": [
+                0.2,
+                0.2,
+                0.36,
+                0.34,
+                70,
+                0.5,
+                0.22,
+                2
+              ],
+              "4": [
+                0.2,
+                0.2,
+                0.39,
+                0.36,
+                70,
+                0.5,
+                0.23,
+                2
+              ],
+              "5": [
+                0.2,
+                0.2,
+                0.42,
+                0.38,
+                70,
+                0.5,
+                0.24,
+                2
+              ],
+              "6": [
+                0.2,
+                0.2,
+                0.45,
+                0.4,
+                70,
+                0.5,
+                0.25,
+                2
+              ],
+              "7": [
+                0.2,
+                0.2,
+                0.4875,
+                0.425,
+                70,
+                0.5,
+                0.2625,
+                2
+              ],
+              "8": [
+                0.2,
+                0.2,
+                0.525,
+                0.45,
+                70,
+                0.5,
+                0.275,
+                2
+              ],
+              "9": [
+                0.2,
+                0.2,
+                0.5625,
+                0.475,
+                70,
+                0.5,
+                0.2875,
+                2
+              ],
+              "10": [
+                0.2,
+                0.2,
+                0.6,
+                0.5,
+                70,
+                0.5,
+                0.3,
+                2
+              ],
+              "11": [
+                0.2,
+                0.2,
+                0.63,
+                0.52,
+                70,
+                0.5,
+                0.31,
+                2
+              ],
+              "12": [
+                0.2,
+                0.2,
+                0.66,
+                0.54,
+                70,
+                0.5,
+                0.32,
+                2
+              ],
+              "13": [
+                0.2,
+                0.2,
+                0.69,
+                0.56,
+                70,
+                0.5,
+                0.33,
+                2
+              ],
+              "14": [
+                0.2,
+                0.2,
+                0.72,
+                0.58,
+                70,
+                0.5,
+                0.34,
+                2
+              ],
+              "15": [
+                0.2,
+                0.2,
+                0.75,
+                0.6,
+                70,
+                0.5,
+                0.35,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_Skill03_Camera",
+              "Avatar_MortenaxBlade_00_Skill03_EnterReady",
+              "Avatar_MortenaxBlade_00_Skill03_Phase01",
+              "Avatar_MortenaxBlade_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        },
+        "Tenax Per Ignem": {
+          "variant1": {
+            "skillID": 150714,
+            "trigger": "Skill31",
+            "name": "Tenax Per Ignem",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[f1]% of Mortenax Blade's Max HP to all enemies.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.1
+              ],
+              "2": [
+                2.24
+              ],
+              "3": [
+                2.38
+              ],
+              "4": [
+                2.52
+              ],
+              "5": [
+                2.66
+              ],
+              "6": [
+                2.8
+              ],
+              "7": [
+                2.975
+              ],
+              "8": [
+                3.15
+              ],
+              "9": [
+                3.325
+              ],
+              "10": [
+                3.5
+              ],
+              "11": [
+                3.64
+              ],
+              "12": [
+                3.78
+              ],
+              "13": [
+                3.92
+              ],
+              "14": [
+                4.06
+              ],
+              "15": [
+                4.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_Skill31_Camera",
+              "Avatar_MortenaxBlade_00_Skill31_EnterReady",
+              "Avatar_MortenaxBlade_00_Skill31_Phase01",
+              "Avatar_MortenaxBlade_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "All Karma Comes Due": {
+          "variant1": {
+            "skillID": 150704,
+            "trigger": "SkillP01",
+            "name": "All Karma Comes Due",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "While the Zone is active, after each attack an ally target uses on an enemy, inflicts the \"Balefire Bind\" state on the corresponding enemy target and grants 1 Charge to Mortenax Blade. When Charge reaches #1[i] points and the current HP is more than 1, consumes #1[i] Charge, regenerates #2[f1] Energy, and enables Mortenax Blade to use Skill 1 extra time. This extra Skill use is considered as Follow-Up ATK.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                9,
+                15
+              ],
+              "2": [
+                9,
+                16
+              ],
+              "3": [
+                9,
+                17
+              ],
+              "4": [
+                9,
+                18
+              ],
+              "5": [
+                9,
+                19
+              ],
+              "6": [
+                9,
+                20
+              ],
+              "7": [
+                9,
+                21.25
+              ],
+              "8": [
+                9,
+                22.5
+              ],
+              "9": [
+                9,
+                23.75
+              ],
+              "10": [
+                9,
+                25
+              ],
+              "11": [
+                9,
+                26
+              ],
+              "12": [
+                9,
+                27
+              ],
+              "13": [
+                9,
+                28
+              ],
+              "14": [
+                9,
+                29
+              ],
+              "15": [
+                9,
+                30
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_PassiveSkill",
+              "Avatar_MortenaxBlade_00_PassiveSkill_Exit",
+              "Avatar_MortenaxBlade_00_PassiveSkill_NormalExit"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Blade's Reach Spares None": {
+          "variant1": {
+            "skillID": 150707,
+            "trigger": "SkillMaze",
+            "name": "Blade's Reach Spares None",
+            "slot": "Technique",
+            "desc": "Immediately attacks all enemies within a certain range. After entering combat, inflicts the Taunt state on all enemies for 1 turn and decreases DMG taken by this unit by #1[i]% for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.9,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_MortenaxBlade_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1507_basic_atk.png",
+        "skillRef": {
+          "skillName": "A Broken Blade Still Slays",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1507_skill.png",
+        "skillRef": {
+          "skillName": "A Rain of Blades Seals Fate",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1507_ultimate.png",
+        "skillRef": {
+          "skillName": "Fornax Ex Corpore",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1507_talent.png",
+        "skillRef": {
+          "skillName": "All Karma Comes Due",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1507_technique.png",
+        "skillRef": {
+          "skillName": "Blade's Reach Spares None",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Bone, Hardened ad Nauseam",
+        "icon": "icon/skill/1507_skilltree1.png",
+        "desc": "Mortenax Blade can accumulate up to #2[i] overflow Energy. After using Ultimate, clears it and regenerates a corresponding amount of Energy. When the battle starts or when the Zone is dispelled, if Energy is below #1[i]%, it is immediately regenerated to #1[i]%. When Energy is regenerated to its maximum, dispels all debuffs from this unit.",
+        "params": [
+          0.75,
+          80
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Soul, Tempered ad Mortem",
+        "icon": "icon/skill/1507_skilltree2.png",
+        "desc": "While the Zone is active, increases the chance of being attacked by enemies, decreases DMG taken by this unit by #2[i]%, and increases Incoming Healing by #3[i]%. After being attacked, inflicts the \"Balefire Bind\" state on the corresponding target, and enables Mortenax Blade to gain 1 Charge.",
+        "params": [
+          10,
+          0.5,
+          0.5
+        ]
+      },
+      "Point08": {
+        "name": "Heart, Refined ad Infinitum",
+        "icon": "icon/skill/1507_skilltree3.png",
+        "desc": "While the Zone is active, ally targets deal #1[i]% increased DMG. If there are other Nihility characters aside from Mortenax Blade in the team, Ultimate DMG dealt by ally targets increases by #2[i]%. Otherwise, DMG dealt by Mortenax Blade additionally increases by #3[i]%.",
+        "params": [
+          0.5,
+          0.75,
+          0.75
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1507.png",
+    "preview": "image/character_preview/1507.png",
+    "portrait": "image/character_portrait/1507.png",
+    "bannerOffsets": [
+      0,
+      34.6,
+      0.6,
+      0,
+      34.6,
+      0.6,
+      0,
+      34.6,
+      0.6
+    ],
+    "isBuffed": false
+  },
   "Trailblazer - Remembrance": {
     "internalID": 8007,
     "name": "Trailblazer - Remembrance",
