@@ -263,11 +263,11 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "operator": "Variables[0] (MDF_ShowCount ) || RETURN",
-                        "displayLines": "MDF_ShowCount ",
+                        "operator": "Variables[0] (MDF_ShowCount) || RETURN",
+                        "displayLines": "MDF_ShowCount",
                         "constants": [],
                         "variables": [
-                          "MDF_ShowCount "
+                          "MDF_ShowCount"
                         ]
                       },
                       "formula": "Heal from Target MaxHP"
@@ -478,11 +478,11 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                           "variableName": "MDF_DirtyHPRatio",
                           "value": {
-                            "operator": "Variables[0] (MDF_ShowCount ) || RETURN",
-                            "displayLines": "MDF_ShowCount ",
+                            "operator": "Variables[0] (MDF_ShowCount) || RETURN",
+                            "displayLines": "MDF_ShowCount",
                             "constants": [],
                             "variables": [
-                              "MDF_ShowCount "
+                              "MDF_ShowCount"
                             ]
                           }
                         },
@@ -512,11 +512,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>",
                           "valuePerStack": {
                             "MDF_DirtyHPRatio": {
-                              "operator": "Variables[0] (MDF_ShowCount ) || RETURN",
-                              "displayLines": "MDF_ShowCount ",
+                              "operator": "Variables[0] (MDF_ShowCount) || RETURN",
+                              "displayLines": "MDF_ShowCount",
                               "constants": [],
                               "variables": [
-                                "MDF_ShowCount "
+                                "MDF_ShowCount"
                               ]
                             }
                           }
@@ -719,7 +719,6 @@ const compositeAbilityObject = {
             "MDF_DirtyHPRatio"
           ],
           "latentQueue": [
-            "MDF_ShowCount",
             "AIFlag"
           ],
           "execute": [
@@ -757,7 +756,6 @@ const compositeAbilityObject = {
             "MDF_LoseAttack"
           ],
           "latentQueue": [
-            "MDF_ShowCount",
             "AIFlag"
           ],
           "execute": [
