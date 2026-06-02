@@ -13675,7 +13675,7 @@ const turnLogicRelics = {
                         const isReducing = defShredCheck < 0;
                         if (!isReducing) {return;}
 
-                        const sourceTurn = generalInfo.sourceTurn;
+                        const sourceTurn = generalInfo.sourceTurn?.[0];
                         if (!sourceTurn.isEnemy) {return;}//the debuff needs to be applied to an enemy entity
 
                         const ownerTurn = battleData.nameBasedTurns[ownerSlot];
