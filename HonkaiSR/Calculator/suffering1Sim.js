@@ -1531,7 +1531,10 @@ const sim = {
 
 
                 const shouldAbort = currentFUA.abortCheck?.(battleData,currentFUA,sourceTurn);
-                if (shouldAbort) {continue;}
+                if (shouldAbort) {
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Inserted Ability Queue", bodyText: `Abort Check passed, canceled queued insert ${currentFUA.action} from ${characterName}`});}
+                    continue;
+                }
 
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
@@ -1644,6 +1647,12 @@ const sim = {
                 const currentUltyFunction = currentUltimate.actionCall;
                 const poolKey = currentUltimate.poolKey;
                 const target = currentUltimate.target;
+
+                const shouldAbort = currentUltimate.abortCheck?.(battleData,currentUltimate,sourceTurn);
+                if (shouldAbort) {
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Extra-Turn Queue", bodyText: `Abort Check passed, canceled queued Ex-Turn ${currentUltimate.action} from ${characterName}`});}
+                    continue;
+                }
 
                 if (!isExtraTurn) {
                     // totalUltsQueued: 0,
