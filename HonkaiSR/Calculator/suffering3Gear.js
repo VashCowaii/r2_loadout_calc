@@ -13305,6 +13305,7 @@ const turnLogicRelics = {
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -13355,6 +13356,32 @@ const turnLogicRelics = {
                             "isPersonal": true,
                             "listenerName": "As Navigator Isee Sees It - ult end listener",
                         },
+                        {
+                            "trigger": "StartTurn",
+                            condition(battleData,generalInfo) {
+
+                                const sourceTurn = generalInfo.sourceTurn;
+                                const buffSheet = sourceTurn.relicIseeSeesItSHEET;
+
+                                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                                if (buffCheck) {
+                                    const currentStacks = buffCheck.currentStacks;
+                                    if (currentStacks === 1) {
+                                        removeBuff(battleData,sourceTurn,buffCheck)
+                                        return;
+                                    }
+                                    else {
+                                        buffSheet.currentStacks = -1;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                                else {return;}
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "As Navigator Isee Sees It - turn start listener",
+                        },
                     ]
                 },
                 {
@@ -13396,7 +13423,7 @@ const turnLogicRelics = {
                         }
                     },
                     "target": "self",
-                    "priority": -80,
+                    "priority": 0,
                     "listenerName": "As Navigator Isee Sees It battlestart buff application",
                     "owners": []
                 },
