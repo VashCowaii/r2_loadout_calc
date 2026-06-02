@@ -503,6 +503,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 4064012,
+    "lineCount": 6721,
+    "sizeCount": 244219
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8015021,
     "lineCount": 7035,
     "sizeCount": 241758
@@ -1557,6 +1563,18 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 5014030,
+    "lineCount": 3573,
+    "sizeCount": 125070
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5014031,
+    "lineCount": 3573,
+    "sizeCount": 125070
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 1004011,
     "lineCount": 3569,
     "sizeCount": 124879
@@ -2478,6 +2496,12 @@ let sizeLeaderboardArray = [
     "enemyID": 2013021,
     "lineCount": 1698,
     "sizeCount": 61549
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5023020,
+    "lineCount": 1668,
+    "sizeCount": 61533
   },
   {
     "entryType": "enemy",
@@ -4105,6 +4129,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "relic",
+    "entryName": "As Navigator Isee Sees It",
+    "trimCharacterName": "AsNavigatorIseeSeesIt",
+    "entryIcon": "icon/relic/131.png",
+    "lineCount": 283,
+    "sizeCount": 10239
+  },
+  {
+    "entryType": "relic",
     "entryName": "Poet of Mourning Collapse",
     "trimCharacterName": "PoetofMourningCollapse",
     "entryIcon": "icon/relic/124.png",
@@ -4481,6 +4513,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Reforged in Hellfire",
+    "trimCharacterName": "ReforgedinHellfire",
+    "entryIcon": "icon/light_cone/23059.png",
+    "lineCount": 254,
+    "sizeCount": 8126
+  },
+  {
+    "entryType": "lc",
     "entryName": "Lies Dance on the Breeze",
     "trimCharacterName": "LiesDanceontheBreeze",
     "entryIcon": "icon/light_cone/23043.png",
@@ -4780,6 +4820,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20003.png",
     "lineCount": 211,
     "sizeCount": 6404
+  },
+  {
+    "entryType": "relic",
+    "entryName": "Divine-Querying Master Smith",
+    "trimCharacterName": "DivineQueryingMasterSmith",
+    "entryIcon": "icon/relic/132.png",
+    "lineCount": 187,
+    "sizeCount": 6359
   },
   {
     "entryType": "lc",
