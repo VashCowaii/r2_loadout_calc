@@ -3353,7 +3353,7 @@ const battleActions = {
             if (!breakTagging[element]) {
                 const keyShortcut = basicShorthand.makeKeysArray;
                 let newTags = ["All",element,"DOT","Break"];
-                let actionTags = ["Break","DOT"];
+                let actionTags = ["All","Break","DOT"];
 
                 breakTagging[element] = {
                     realTag: newTags + actionTags + sourceTurn.properName,
@@ -5610,7 +5610,7 @@ const turnLogic = {
                     // let values = ATKObjects.yaoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Quantum","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -6592,7 +6592,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6634,7 +6634,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.gallagherSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.gallagherSkillHealHEALOBJECT = {
@@ -6696,7 +6696,7 @@ const turnLogic = {
                 if (!ATKObjects.gallagherTalentHealHEALOBJECT) {
                     let values = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Talent"];
+                    const actionTags = ["All","Heal","Talent"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.gallagherTalentHealHEALOBJECT = {
@@ -6734,7 +6734,7 @@ const turnLogic = {
                     let values = ATKObjects.gallagherBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6798,7 +6798,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Fire"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6932,7 +6932,7 @@ const turnLogic = {
                     let values = ATKObjects.gallagherTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -7284,7 +7284,7 @@ const turnLogic = {
                     let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -7327,7 +7327,7 @@ const turnLogic = {
                 //YES on wavestrider, even subtargets count, NO on sacerdos, only single targets count unless sunday bc reasons
                 if (!ATKObjects.huohuoSkillHealHealHEALOBJECT) {
                     let values = ATKObjects.huohuoSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.huohuoSkillHealHealHEALOBJECT = {
@@ -7442,7 +7442,7 @@ const turnLogic = {
                 let values = ATKObjects.huohuoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.provisionHealHEALOBJECT) {
-                    const actionTags = ["Heal","Talent"];
+                    const actionTags = ["All","Heal","Talent"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.provisionHealHEALOBJECT = {
@@ -7980,7 +7980,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8023,7 +8023,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.natashaSkillHealHEALOBJECT = {
@@ -8081,7 +8081,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.natashaUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Ultimate"];
+                    const actionTags = ["All","Heal","Ultimate"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.natashaUltimateHealHEALOBJECT = {
@@ -8159,7 +8159,7 @@ const turnLogic = {
                     let values = ATKObjects.natashaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Physical"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8224,7 +8224,7 @@ const turnLogic = {
 
                 if (!ATKObjects.natashaE1HEALOBJECT) {
 
-                    const actionTags = ["Heal"];
+                    const actionTags = ["All","Heal"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.natashaE1HEALOBJECT = {
@@ -8479,7 +8479,7 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
                             let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
 
-                            const actionTags = ["Heal"];
+                            const actionTags = ["All","Heal"];
                             const compositeCacheTag = actionTags + ownerTurn.properName;
 
                             ATKObjects.natashaSkillHealHOTOBJECT = {
@@ -8513,7 +8513,7 @@ const turnLogic = {
                         
                         if (!ATKObjects.natashaUltHealHOTOBJECT) {
 
-                            const actionTags = ["Heal"];
+                            const actionTags = ["All","Heal"];
                             const compositeCacheTag = actionTags + ownerTurn.properName;
 
                             ATKObjects.natashaUltHealHOTOBJECT = {
@@ -8698,7 +8698,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8740,7 +8740,7 @@ const turnLogic = {
                 
                 if (!ATKObjects.lynxSkillHealHEALOBJECT) {
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.lynxSkillHealHEALOBJECT = {
@@ -8886,7 +8886,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.lynxUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Ultimate"];
+                    const actionTags = ["All","Heal","Ultimate"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
                     ATKObjects.lynxUltimateHealHEALOBJECT = {
                         multipliers: {
@@ -9102,7 +9102,7 @@ const turnLogic = {
                         
                         if (!ATKObjects.lynxHOTHealHOTOBJECT) {
 
-                            const actionTags = ["Heal"];
+                            const actionTags = ["All","Heal"];
                             const compositeCacheTag = actionTags + ownerTurn.properName;
 
                             ATKObjects.lynxHOTHealHOTOBJECT = {
