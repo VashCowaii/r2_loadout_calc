@@ -18610,7 +18610,7 @@ const turnLogic = {
 
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18658,7 +18658,7 @@ const turnLogic = {
                     let values = ATKObjects.seeleTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19388,7 +19388,7 @@ const turnLogic = {
                     let values = ATKObjects.ratioBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19459,7 +19459,7 @@ const turnLogic = {
                     let values = ATKObjects.ratioFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Imaginary"];
-                    const actionTags = ["FUA","Attack","RatioFUA"];
+                    const actionTags = ["All","FUA","Attack","RatioFUA"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19506,7 +19506,7 @@ const turnLogic = {
                     let values = ATKObjects.ratioSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Skill","Imaginary"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19596,7 +19596,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19691,7 +19691,7 @@ const turnLogic = {
                 if (!ATKObjects.ratioE2DMGREF) {
                     const scalar = "ATK";
                     const tags = ["All","Imaginary"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20186,7 +20186,7 @@ const turnLogic = {
                     let values = ATKObjects.tingyunBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Lightning"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20314,7 +20314,7 @@ const turnLogic = {
                     let values = ATKObjects.benedictionDMGADDEDREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20362,7 +20362,7 @@ const turnLogic = {
                     let values = ATKObjects.talentDMGADDEDREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20815,7 +20815,7 @@ const turnLogic = {
                     let values = ATKObjects.bronyaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20868,7 +20868,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.bronyaFUABasic = {
@@ -21420,7 +21420,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22162,7 +22162,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22300,7 +22300,7 @@ const turnLogic = {
                     let values = ATKObjects.tribbieFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","FUA","Quantum"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22396,7 +22396,7 @@ const turnLogic = {
 
                     const scalar = "HP";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22537,7 +22537,7 @@ const turnLogic = {
                     let values = ATKObjects.tribbieUltimateREFVALUES;
                     const scalar = "HP";
                     const tags = ["All","Quantum"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -23001,7 +23001,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -23287,7 +23287,7 @@ const turnLogic = {
                 if (!ATKObjects.ultAddedDMG) {
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -23620,7 +23620,7 @@ const turnLogic = {
                     let values = ATKObjects.astaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -23664,7 +23664,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.astaTraceDOTSHEET = {
@@ -23722,7 +23722,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.astaSkillATKOBJECT = {
                         multipliers: {
@@ -23821,7 +23821,7 @@ const turnLogic = {
                     let values = ATKObjects.astaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -24271,7 +24271,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -24540,7 +24540,7 @@ const turnLogic = {
 
                 const genInfoNew = logicRef.ruanTalentBreakInstanceObject ??= {
                     ATKObject: {
-                        actionTags: ["Break"],
+                        actionTags: ["All","Break"],
                         compositeCacheTag: "Break" + "RuanReBreak"
                     }
                 }
@@ -24738,7 +24738,7 @@ const turnLogic = {
                             const isBroken =  generalInfo.isBroken;
         
                             const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
-                                ATKObject: {actionTags: ["Break"]}
+                                ATKObject: {actionTags: ["All","Break"]}
                             }
         
                             battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
@@ -25104,7 +25104,7 @@ const turnLogic = {
                     let values = ATKObjects.sparkleBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25955,7 +25955,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.saberBasicRegATKOBJECT = {
                         multipliers: {
@@ -25997,7 +25997,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.saberSkillATKOBJECT = {
                         multipliers: {
@@ -26076,7 +26076,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.saberUltimateATKOBJECT = {
@@ -26171,7 +26171,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.saberBasicEnhancedATKOBJECT = {
                         multipliers: {
@@ -26898,7 +26898,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -26938,7 +26938,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27057,7 +27057,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","FUA","Wind"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27082,7 +27082,7 @@ const turnLogic = {
                         isFUA: true,
                     }
 
-                    const actionTags2 = ["Heal","Talent","FUA"];
+                    const actionTags2 = ["All","Heal","Talent","FUA"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
                     ATKObjects.bladeFUAHEALOBJECT = {
                         multipliers: {
@@ -27133,7 +27133,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Ultimate","Wind"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27166,7 +27166,7 @@ const turnLogic = {
                         },
                     }
 
-                    const actionTags2 = ["Heal","Ultimate"];
+                    const actionTags2 = ["All","Heal","Ultimate"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
                     ATKObjects.bladeUltimateHEALOBJECT = {
                         multipliers: {
@@ -27237,7 +27237,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "HP";
                     const tags = ["All","Technique","Wind"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27748,7 +27748,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Ice"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27787,7 +27787,7 @@ const turnLogic = {
                     let values = ATKObjects.jingliuSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Skill","Ice"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27831,7 +27831,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Ultimate","Ice"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27951,7 +27951,7 @@ const turnLogic = {
                     let values = ATKObjects.jingliuSkillEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Skill","Ice"];
-                    const actionTags = ["Skill","Attack","JingliuEnhanced"];
+                    const actionTags = ["All","Skill","Attack","JingliuEnhanced"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -28519,7 +28519,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     
@@ -28560,7 +28560,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fireflySkillRegATKOBJECT = {
@@ -28702,7 +28702,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fireflyBasicEnhancedATKOBJECT = {
@@ -28722,7 +28722,7 @@ const turnLogic = {
                         compositeCacheTag
                     }
 
-                    const actionTags2 = ["Heal","Basic"];
+                    const actionTags2 = ["All","Heal","Basic"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
 
                     ATKObjects.fireflyBasicEnhancedHEALOBJECT = {
@@ -28766,7 +28766,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     const characterName = sourceTurn.properName;
@@ -28791,7 +28791,7 @@ const turnLogic = {
                         // ATKObject.customMulti(playerStats,playerStatsONHIT,hitType,ATKObject)
                     }
 
-                    const actionTags2 = ["Heal","Skill"];
+                    const actionTags2 = ["All","Heal","Skill"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
 
                     ATKObjects.fireflySkillEnhancedHEALOBJECT = {
@@ -28878,7 +28878,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fireflyTechATKObject = {
                         multipliers: {
@@ -29419,7 +29419,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hookBasicRegATKOBJECT = {
                         multipliers: {
@@ -29461,7 +29461,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hookSkillATKOBJECT = {
                         multipliers: {
@@ -29503,7 +29503,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack","HookEnhSkill"];
+                    const actionTags = ["All","Skill","Attack","HookEnhSkill"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hookSkillATKOBJECT2 = {
                         multipliers: {
@@ -29547,7 +29547,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const rank = sourceTurn.rank;
                     const isE2 = rank >= 2;
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
@@ -29604,7 +29604,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.hookUltimateATKOBJECT = {
@@ -29647,7 +29647,7 @@ const turnLogic = {
 
                     const scalar = "ATK";
                     const tags = ["All","Fire"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29672,7 +29672,7 @@ const turnLogic = {
                         compositeCacheTag
                     }
 
-                    const actionTags2 = ["Heal","Talent"];
+                    const actionTags2 = ["All","Heal","Talent"];
                     const compositeCacheTag2 = actionTags2 + allyTurn.properName;
                     ATKObjects.hookTalentHealHEALOBJECT ??= {
                         multipliers: {
@@ -29722,7 +29722,7 @@ const turnLogic = {
                     let values = ATKObjects.hookTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29773,7 +29773,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.hookTechDOTSHEET = {
@@ -30165,7 +30165,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.rmcBasicATKOBJECT = {
                         multipliers: {
@@ -30205,10 +30205,10 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack","Joint"];
+                    const actionTags = ["All","Basic","Attack","Joint"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
-                    const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
+                    const actionTags2 = ["All","Basic","Attack","Joint","Summon","Memosprite"];
                     const compositeCacheTag2 = tags + actionTags2 + sourceTurn.properName;
 
                     ATKObjects.rmcBasicEnhancedATKOBJECT = {
@@ -30276,7 +30276,7 @@ const turnLogic = {
                 if (summonUp) {
                     if (!ATKObjects.rmcSkillMemHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                        const actionTags = ["Heal","Skill"];
+                        const actionTags = ["All","Heal","Skill"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.rmcSkillMemHEALOBJECT = {
@@ -30436,7 +30436,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
@@ -30720,7 +30720,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "ATK";
                     const tags = ["All","Technique","Ice"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -31400,7 +31400,7 @@ const turnLogic = {
                     // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     const overrideATKData = {
@@ -31448,7 +31448,7 @@ const turnLogic = {
                 if (summonUp) {
                     if (!ATKObjects.aggySkillGarmentHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                        const actionTags = ["Heal","Skill"];
+                        const actionTags = ["All","Heal","Skill"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.aggySkillGarmentHEALOBJECT = {
@@ -31494,8 +31494,8 @@ const turnLogic = {
                 const scalar = "ATK";
                 const tags = ["All","Basic","Lightning"];
                 
-                const actionTags = ["Basic","Attack","Joint"];
-                const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
+                const actionTags = ["All","Basic","Attack","Joint"];
+                const actionTags2 = ["All","Basic","Attack","Joint","Summon","Memosprite"];
 
                 const allParams = skillRef.params;
 
@@ -31605,7 +31605,7 @@ const turnLogic = {
                     let values = ATKObjects.garmentTurnAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,aggyTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
 
                     const overrideATKData = {
                         multipliers: {
@@ -31640,7 +31640,7 @@ const turnLogic = {
                     if (!ATKObjects.aggyUltimateGarmentHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                        const actionTags = ["Heal","Ultimate"];
+                        const actionTags = ["All","Heal","Ultimate"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.aggyUltimateGarmentHEALOBJECT = {
@@ -32019,7 +32019,7 @@ const turnLogic = {
                     let values = ATKObjects.aggyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Lightning"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -32061,7 +32061,7 @@ const turnLogic = {
                     let values = ATKObjects.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -32887,7 +32887,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.evernightBasicATKOBJECT = {
                         multipliers: {
@@ -32928,7 +32928,7 @@ const turnLogic = {
                     if (!ATKObjects.evernightSkillEveyHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                        const actionTags = ["Heal","Skill"];
+                        const actionTags = ["All","Heal","Skill"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.evernightSkillEveyHEALOBJECT = {
@@ -33153,7 +33153,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + evernightTurn.properName;
                     ATKObjects.eveyTurnAttackATKOBJECT = {
                         multipliers: {
@@ -33207,7 +33207,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + evernightTurn.properName;
                     ATKObjects.eveyTurnAttackEnhancedATKOBJECT = {
                         multipliers: {
@@ -33404,7 +33404,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","Ultimate","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","Ultimate","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.evernightUltimateATKOBJECT = {
                         multipliers: {
@@ -34310,7 +34310,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hyacineBasicATKOBJECT = {
                         multipliers: {
@@ -34352,7 +34352,7 @@ const turnLogic = {
                 if (!ATKObjects.hyacineSkillHEALOBJECT) {
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.hyacineSkillHEALOBJECT = {
@@ -34425,7 +34425,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + hyacineTurn.properName;
                     ATKObjects.icaTurnAttackATKOBJECT = {
                         multipliers: {
@@ -34706,7 +34706,7 @@ const turnLogic = {
                     if (!ATKObjects.hyacineIcaPassiveHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                        const actionTags = ["Heal","MemoTalent","Memosprite"];
+                        const actionTags = ["All","Heal","MemoTalent","Memosprite"];
                         const compositeCacheTag = actionTags + icaTurn.properName;
 
                         ATKObjects.hyacineIcaPassiveHEALOBJECT = {
@@ -34776,7 +34776,7 @@ const turnLogic = {
                     const buffNames = logicRef.buffNames;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Ultimate"];
+                    const actionTags = ["All","Heal","Ultimate"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.hyacineUltHEALOBJECT = {
@@ -34919,7 +34919,7 @@ const turnLogic = {
                         "removeOnDeath": true,
                     }
 
-                    const actionTags = ["Heal","Technique"];
+                    const actionTags = ["All","Heal","Technique"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.hyacineTechHealObject = {
@@ -35219,7 +35219,7 @@ const turnLogic = {
                             if (!this.hyacineE1HEALOBJECT) {
                                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
     
-                                const actionTags = ["Heal"];
+                                const actionTags = ["All","Heal"];
                                 const compositeCacheTag = actionTags + ownerTurn.properName;
     
                                 this.hyacineE1HEALOBJECT = {
@@ -35675,7 +35675,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -35827,7 +35827,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.dhptShield;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.dhptSkillShieldSHIELDSHEET = {
@@ -35880,7 +35880,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.dhptShield;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.dhptTalentSHIELDSHEET = {
@@ -36081,7 +36081,7 @@ const turnLogic = {
                     // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Souldragon","FUA","Attack","Summon"];
+                    const actionTags = ["All","Souldragon","FUA","Attack","Summon"];
                     // const compositeCacheTag = tags + actionTags + eventTurn.properName;
 
 
@@ -36134,7 +36134,7 @@ const turnLogic = {
                     // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Physical"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -36188,7 +36188,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.dhptShield;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.dhptUltimateSHIELDSHEET = {
@@ -36236,7 +36236,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional","Summon"];
+                    const actionTags = ["All","Additional","Summon"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -36356,7 +36356,7 @@ const turnLogic = {
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -36912,7 +36912,7 @@ const turnLogic = {
                     let values = ATKObjects.aventurineBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "DEF";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -37043,7 +37043,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.wager;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.aventurineSkillShieldSHIELDSHEET = {
@@ -37096,7 +37096,7 @@ const turnLogic = {
                     let values = ATKObjects.aventurineFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "DEF";
                     const tags = ["All","FUA","Imaginary"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -37165,7 +37165,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.wager;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.aventurineTraceShieldSHIELDSHEET = {
@@ -37244,7 +37244,7 @@ const turnLogic = {
                     let values = ATKObjects.archerUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "DEF";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -37283,7 +37283,7 @@ const turnLogic = {
                         "decay": false,
                         "isDebuff": true,
                         "expireType": "EndTurn",
-                        "actionTags": ["Attack"]
+                        "actionTags": ["All"]
                     }
                 }
                 const ATKObject = ATKObjects.aventurineUltimateATKOBJECT;
@@ -37876,7 +37876,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.argentiBasicATKOBJECT = {
                         multipliers: {
@@ -37918,7 +37918,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.argentiSkillATKOBJECT = {
                         multipliers: {
@@ -37966,7 +37966,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.argentiUltimateATKOBJECT = {
@@ -38083,7 +38083,7 @@ const turnLogic = {
                     
                     const scalar = "ATK";
                     const tags = ["All","Technique","Physical"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -38474,7 +38474,7 @@ const turnLogic = {
                     let values = ATKObjects.anaxaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -38525,7 +38525,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.anaxaSkillATKOBJECT = {
                         multipliers: {
@@ -38619,7 +38619,7 @@ const turnLogic = {
                     let values = ATKObjects.anaxaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Wind"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -39543,7 +39543,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -39588,7 +39588,7 @@ const turnLogic = {
                     let values = ATKObjects.yaoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All",sourceTurn.element,"Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -40073,7 +40073,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     const rank = sourceTurn.rank;
@@ -40610,7 +40610,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -40725,7 +40725,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.sparxUltimateATKOBJECT = {
@@ -40800,7 +40800,7 @@ const turnLogic = {
                     let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Fire","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -40967,7 +40967,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -41018,7 +41018,7 @@ const turnLogic = {
                     let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Fire","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -41159,7 +41159,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     // const e6MultiBonus = rank >= 6 ? 2 : 1;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
@@ -41222,7 +41222,7 @@ const turnLogic = {
                     
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -41776,7 +41776,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -41819,7 +41819,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -41948,7 +41948,7 @@ const turnLogic = {
                     let values = ATKObjects.emcTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Lightning","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -42184,7 +42184,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     // const rank = sourceTurn.rank;
@@ -42688,7 +42688,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.sw999BasicATKOBJECT = {
@@ -42729,7 +42729,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.sw999BasicEnhATKOBJECTEarlyEnd = {//empty attack for the sake of ending triggers
@@ -42815,7 +42815,7 @@ const turnLogic = {
                     const realPENKeys2 = keyShortcut(resPENKeys,tags2);
                     const realShredKeys2 = keyShortcut(defShredKeys,tags2);
                     const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
-                    const actionTags2 = ["Elation","Attack","Basic"];
+                    const actionTags2 = ["All","Elation","Attack","Basic"];
                     const compositeCacheTag2 = tags2 + actionTags2 + sourceTurn.properName;
                     ATKObjects.sw999BasicEnhATKOBJECT01 = {//burst elation
                         multipliers: {
@@ -43425,7 +43425,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -43622,7 +43622,7 @@ const turnLogic = {
                     let values = ATKObjects.sw999TalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Imaginary","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -43699,7 +43699,7 @@ const turnLogic = {
                         const realPENKeys = keyShortcut(resPENKeys,tags);
                         const realShredKeys = keyShortcut(defShredKeys,tags);
                         const realVulnKeys = keyShortcut(vulnKeys,tags);
-                        const actionTags = ["Elation","ElationSkill","Attack"];
+                        const actionTags = ["All","Elation","ElationSkill","Attack"];
                         const compositeCacheTag = tags + actionTags + sourceTurn.properName;
     
                         // const rank = sourceTurn.rank;
@@ -44168,7 +44168,7 @@ const turnLogic = {
                         const realPENKeys2 = keyShortcut(resPENKeys,tags2);
                         const realShredKeys2 = keyShortcut(defShredKeys,tags2);
                         const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
-                        const actionTags2 = ["Elation","Attack","Basic"];
+                        const actionTags2 = ["All","Elation","Attack","Basic"];
                         const compositeCacheTag2 = tags2 + actionTags2 + ownerTurn.properName;
                         ATKObjects.sw999LootBoxObject = {
                             multipliers: {
@@ -44710,7 +44710,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -44801,7 +44801,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -44858,7 +44858,7 @@ const turnLogic = {
                     let values = ATKObjects.evaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Physical","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -45028,7 +45028,7 @@ const turnLogic = {
                     let values = ATKObjects.evaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Physical"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -45104,7 +45104,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.evaUltimateATKOBJECT = {
@@ -45195,7 +45195,7 @@ const turnLogic = {
                     let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Physical"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -45250,7 +45250,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     
