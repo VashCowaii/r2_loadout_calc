@@ -645,8 +645,6 @@ const sim = {
                 properName: name,
                 enemyRealName,
                 statTable: stats,
-                statTableONHIT: new Array(greatTableSize).fill(0),
-                statTableONTurn: new Array(greatTableSize).fill(0),
                 statTableFinals: finalStats,
                 tagSpecific: {},
                 tagSpecificArray: [],
@@ -866,8 +864,6 @@ const sim = {
                 currentDotsArray: [],
                 properName: properName,
                 statTable: statRefTemp.tableReference,
-                statTableONHIT: new Array(greatTableSize).fill(0),
-                statTableONTurn: new Array(greatTableSize).fill(0),
                 // statTableFinals: statRefTemp.returnObject,
                 buffsObject: {},
                 teamDebuffs: {},
@@ -913,7 +909,6 @@ const sim = {
 
 
             slotNumber++;
-            slotRef.statTableONHIT[LVL] = 0;
             nextTurn.push(slotRef);
             allyPositions.unshift(slotRef);
             fullCharacterArray.push(slotRef);
@@ -1531,7 +1526,10 @@ const sim = {
 
 
                 const shouldAbort = currentFUA.abortCheck?.(battleData,currentFUA,sourceTurn);
-                if (shouldAbort) {continue;}
+                if (shouldAbort) {
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Inserted Ability Queue", bodyText: `Abort Check passed, canceled queued insert ${currentFUA.action} from ${characterName}`});}
+                    continue;
+                }
 
                 // totalUltsQueued: 0,
                 // totalExTurnsQueued: 0,
@@ -1644,6 +1642,12 @@ const sim = {
                 const currentUltyFunction = currentUltimate.actionCall;
                 const poolKey = currentUltimate.poolKey;
                 const target = currentUltimate.target;
+
+                const shouldAbort = currentUltimate.abortCheck?.(battleData,currentUltimate,sourceTurn);
+                if (shouldAbort) {
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Extra-Turn Queue", bodyText: `Abort Check passed, canceled queued Ex-Turn ${currentUltimate.action} from ${characterName}`});}
+                    continue;
+                }
 
                 if (!isExtraTurn) {
                     // totalUltsQueued: 0,

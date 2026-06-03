@@ -201,7 +201,7 @@ const battleActions = {
             }
         }//if it DOES exist but we're still applying it, if it can stack and has room to stack, then STACK it.
 
-        if (changeStats && (currentReference.stats != undefined || currentReference.statsOnHit != undefined)) {
+        if (changeStats && currentReference.stats != undefined) {
             buffStatChange(battleData,sourceTurn,buffSheet,currentReference,timesToApply,1,ignoreFamilyPokes);
         }
     },
@@ -216,7 +216,7 @@ const battleActions = {
         
         // if (!ignoreDebuffPokes) {poke("DebuffAppliedBatch",battleData,{sourceTurn,currentReference},sourceTurn);}
 
-        const hasStatsAtAll = buffSheet.stats != undefined || buffSheet.statsOnHit != undefined;
+        const hasStatsAtAll = buffSheet.stats != undefined;
         for (let sourceTurn of sourceTurnArray) {
             let buffRef = sourceTurn.buffsObject;
             
@@ -390,7 +390,7 @@ const battleActions = {
         //but also if it's a source-specific event, then switch to the source table for the character that applied the buff/debuff
 
         // basicShorthand.mappedCacheTags 
-        const {buffName,stats,actionTags,statsOnHit,onTurnStats,isSourceSpecific,sourceOwner} = currentReference;
+        const {buffName,stats,actionTags,isSourceSpecific,sourceOwner} = currentReference;
         // const buffName = currentReference.buffName;
 
         // const statDirection = applyOrRemove === "Apply" ? 1 : -1;
@@ -433,22 +433,6 @@ const battleActions = {
                     // for (let familyName of familyRef) {
                     //     poke(familyName,battleData,genInfo,sourceTurn);//onhit properties do NOT trigger conditionals since they exist outside the stat sheet
                     // }
-                }
-            }
-            // const onHitStats = currentReference.statsOnHit;
-            if (statsOnHit) {
-                let currentStatTable = sourceTurn.statTableONHIT;
-                for (let elements of statsOnHit) {
-                    currentStatTable[elements] += (currentReference[elements] * composite);
-                    // console.log(currentReference[elements],currentStatTable[elements],statsOnHit)
-                }
-            }
-
-            // const onTurnStats = currentReference.onTurnStats;
-            if (onTurnStats) {
-                let currentStatTable = sourceTurn.statTableONTurn;
-                for (let elements of onTurnStats) {
-                    currentStatTable[elements] += (currentReference[elements] * composite);
                 }
             }
         }
@@ -506,7 +490,7 @@ const battleActions = {
             logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName,buffDisplayIcon: currentReference.buffDisplayIcon, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
         }
 
-        const changeStats = currentReference.stats != undefined || currentReference.statsOnHit != undefined;
+        const changeStats = currentReference.stats != undefined;
         if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
 
 
@@ -583,7 +567,7 @@ const battleActions = {
     },
     buffRemovalEndBatchTargets(battleData,sourceTurnArray,currentReference,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes) {
         const buffName = currentReference.buffName;
-        const changeStats = currentReference.stats != undefined || currentReference.statsOnHit != undefined;
+        const changeStats = currentReference.stats != undefined;
 
         currentReference.expireFunction?.(battleData,currentReference.expireParam);
         const isDebuff = currentReference.isDebuff;
@@ -707,7 +691,7 @@ const battleActions = {
     getBuffCacheFamilies(buffSheet) {
         const familyRef = basicShorthand.mappedCacheTags;
         // console.log(familyRef)
-        const statsRef = [...(buffSheet.stats ?? []),...(buffSheet.statsOnHit ?? [])];
+        const statsRef = [...(buffSheet.stats ?? [])];
         let familySet = null;
         let familyNameArary = [];
         for (let statName of statsRef) {
@@ -988,7 +972,7 @@ const battleActions = {
 
         return baseLevel;
     },
-    pullDMGBonus(sourceCache,targetCache,compositeCacheTag,table,tableONHIT,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
+    pullDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatDamage[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatDamage[compositeCacheTag] ??= {};
@@ -1000,13 +984,9 @@ const battleActions = {
             targetDeposit.valueIsCurrentAsTarget = true;
             // console.log(tags)
 
-            // for (let tag of tags) {
-            //     bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
-            // }
-
             if (actionTags) {
                 for (let tag of tags) {
-                    bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag]; 
+                    bonus += table[tag] + targetStatsSourceBased[tag]; 
 
                     for (let action of actionTags) {
                         bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
@@ -1015,7 +995,7 @@ const battleActions = {
             }
             else {
                 for (let tag of tags) {
-                    bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
+                    bonus += table[tag] + targetStatsSourceBased[tag];
                 }
             }
 
@@ -1027,7 +1007,7 @@ const battleActions = {
         // greatTableIndex
         // return bonus;
     },
-    pullElationDMGBonus(sourceCache,targetCache,compositeCacheTag,table,tableONHIT,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
+    pullElationDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatElation[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatElation[compositeCacheTag] ??= {};
@@ -1039,13 +1019,9 @@ const battleActions = {
             targetDeposit.valueIsCurrentAsTarget = true;
             // console.log(tags)
 
-            // for (let tag of tags) {
-            //     bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
-            // }
-
             if (actionTags) {
                 for (let tag of tags) {
-                    bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag]; 
+                    bonus += table[tag] + targetStatsSourceBased[tag]; 
 
                     for (let action of actionTags) {
                         bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
@@ -1054,7 +1030,7 @@ const battleActions = {
             }
             else {
                 for (let tag of tags) {
-                    bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
+                    bonus += table[tag] + targetStatsSourceBased[tag];
                 }
             }
 
@@ -1066,7 +1042,7 @@ const battleActions = {
         // greatTableIndex
         // return bonus;
     },
-    pullMerryMakeDMGBonus(sourceCache,targetCache,compositeCacheTag,table,tableONHIT,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
+    pullMerryMakeDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatMerryMake[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatMerryMake[compositeCacheTag] ??= {};
@@ -1078,13 +1054,9 @@ const battleActions = {
             targetDeposit.valueIsCurrentAsTarget = true;
             // console.log(tags)
 
-            // for (let tag of tags) {
-            //     bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
-            // }
-
             if (actionTags) {
                 for (let tag of tags) {
-                    bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag]; 
+                    bonus += table[tag] + targetStatsSourceBased[tag]; 
 
                     for (let action of actionTags) {
                         bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
@@ -1093,7 +1065,7 @@ const battleActions = {
             }
             else {
                 for (let tag of tags) {
-                    bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
+                    bonus += table[tag] + targetStatsSourceBased[tag];
                 }
             }
 
@@ -1105,8 +1077,20 @@ const battleActions = {
         // greatTableIndex
         // return bonus;
     },
+    invalidateTargetDMGCache(battleData,sourceTurn) {
+        const sourceCache = sourceTurn.cacheTagValues;
+
+        for (let overKey in sourceCache) {
+            const currentDeposit = sourceCache[overKey];
+
+            for (let cacheTag in currentDeposit) {
+                const finalDeposit = currentDeposit[cacheTag];
+                finalDeposit.valueIsCurrentAsAttacker = false;
+            }
+        }
+    },
     
-    pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,table,enemyTable,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
+    pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,table,enemyTable,targetStatsSourceBased,targetStatsTeamBased,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
         // realPENKeys,realShredKeys,realVulnKeys
         // console.log(tagsPEN,tagsShred,tagsVuln)
         const {UpdateStatPEN:UpdateStatPENTarget,UpdateStatRES:UpdateStatRESTarget,
@@ -1158,9 +1142,9 @@ const battleActions = {
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + attackerStatsONHIT[tagPEN] + targetStatsSourceBased[tagPEN];}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + attackerStatsONHIT[tagShred] + targetStatsSourceBased[tagShred];}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + attackerStatsONHIT[tagVuln] + targetStatsSourceBased[tagVuln];}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN];}
+                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred];}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln];}
                     
 
                     for (let action of actionTags) {
@@ -1185,14 +1169,13 @@ const battleActions = {
             }
             else {
                 for (let i=0;i<totalTagLength;i++) {
-                    // bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag];
                     const tagPEN = tagsPEN[i];
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + attackerStatsONHIT[tagPEN] + targetStatsSourceBased[tagPEN];}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + attackerStatsONHIT[tagShred] + targetStatsSourceBased[tagShred];}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + attackerStatsONHIT[tagVuln] + targetStatsSourceBased[tagVuln];}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN];}
+                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred];}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln];}
                 }
             }
 
@@ -1212,7 +1195,7 @@ const battleActions = {
                 sourceDepositVuln.cacheValue = sumVULN;
             }
             if (hasChangedDR) {
-                sumDR += enemyTable[standardDRIndex] + attackerStatsONHIT[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
+                sumDR += enemyTable[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
 
                 sourceDepositDR.valueIsCurrentAsAttacker = true;
                 targetDepositDR.valueIsCurrentAsTarget = true;
@@ -1269,7 +1252,7 @@ const battleActions = {
             totalMulti: sumDEF * sumVULN * sumDR * sumRES
         }
     },
-    pullCompositeStatsWCrit(element,sourceCache,targetCache,compositeCacheTag,table,enemyTable,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
+    pullCompositeStatsWCrit(element,sourceCache,targetCache,compositeCacheTag,table,enemyTable,targetStatsSourceBased,targetStatsTeamBased,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
         // realPENKeys,realShredKeys,realVulnKeys
         // console.log(tagsPEN,tagsShred,tagsVuln)
         const {UpdateStatPEN:UpdateStatPENTarget,UpdateStatRES:UpdateStatRESTarget,
@@ -1339,9 +1322,9 @@ const battleActions = {
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + attackerStatsONHIT[tagPEN] + targetStatsSourceBased[tagPEN];}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + attackerStatsONHIT[tagShred] + targetStatsSourceBased[tagShred];}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + attackerStatsONHIT[tagVuln] + targetStatsSourceBased[tagVuln];}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN];}
+                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred];}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln];}
 
                     for (let action of actionTags) {
                         const actionTableSource = actionTables[action];
@@ -1375,14 +1358,13 @@ const battleActions = {
             }
             else {
                 for (let i=0;i<totalTagLength;i++) {
-                    // bonus += table[tag] + attackerStatsONHIT[tag] + targetStatsSourceBased[tag];
                     const tagPEN = tagsPEN[i];
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + attackerStatsONHIT[tagPEN] + targetStatsSourceBased[tagPEN]}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + attackerStatsONHIT[tagShred] + targetStatsSourceBased[tagShred]}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + attackerStatsONHIT[tagVuln] + targetStatsSourceBased[tagVuln]}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN]}
+                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred]}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln]}
                 }
             }
 
@@ -1402,14 +1384,14 @@ const battleActions = {
                 sourceDepositVuln.cacheValue = sumVULN;
             }
             if (hasChangedCritRate) {
-                totalCritRate += table[CritRateBase] + attackerStatsONHIT[CritRateBase] + targetStatsSourceBased[CritRateBase] + targetStatsTeamBased[CritRateBase];
+                totalCritRate += table[CritRateBase] + targetStatsSourceBased[CritRateBase];// + targetStatsTeamBased[CritRateBase];
 
                 sourceDepositCritRate.valueIsCurrentAsAttacker = true;
                 targetDepositCritRate.valueIsCurrentAsTarget = true;
                 sourceDepositCritRate.cacheValue = totalCritRate;
             }
             if (hasChangedCritDMG) {
-                totalCritDMG += table[CritDamageBase] + attackerStatsONHIT[CritDamageBase] + targetStatsSourceBased[CritDamageBase] + targetStatsTeamBased[CritDamageBase];
+                totalCritDMG += table[CritDamageBase] + targetStatsSourceBased[CritDamageBase];// + targetStatsTeamBased[CritDamageBase];
 
                 sourceDepositCritDMG.valueIsCurrentAsAttacker = true;
                 targetDepositCritDMG.valueIsCurrentAsTarget = true;
@@ -1417,7 +1399,7 @@ const battleActions = {
             }
 
             if (hasChangedDR) {
-                sumDR += enemyTable[standardDRIndex] + attackerStatsONHIT[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
+                sumDR += enemyTable[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
 
                 sourceDepositDR.valueIsCurrentAsAttacker = true;
                 targetDepositDR.valueIsCurrentAsTarget = true;
@@ -1472,12 +1454,12 @@ const battleActions = {
         }
     },
     
-    pullScalarSum(table,tableONHIT,targetStatsSourceBased,scalarTag) {
+    pullScalarSum(table,targetStatsSourceBased,scalarTag) {
         const base = scalarBaseKey[scalarTag];
         const perc = scalarPercKey[scalarTag];
         const flat = scalarFlatKey[scalarTag];
         
-        return (table[base] + tableONHIT[base] + targetStatsSourceBased[base]) * (1 + table[perc] + tableONHIT[perc] + targetStatsSourceBased[perc]) + table[flat] + tableONHIT[flat] + targetStatsSourceBased[flat];
+        return (table[base] + targetStatsSourceBased[base]) * (1 + table[perc] + targetStatsSourceBased[perc]) + table[flat] + targetStatsSourceBased[flat];
         // let bonus = table[`${scalarTag}Base`] * (1 + table[`${scalarTag}%`]) + table[`${scalarTag}Flat`];
         // let bonus = table[scalarComponents.b] * (1 + table[scalarComponents.p]) + table[scalarComponents.f];
         // let bonus = table[scalarBaseKey[scalarTag]] * (1 + table[scalarPercKey[scalarTag]]) + table[scalarFlatKey[scalarTag]];
@@ -1500,46 +1482,12 @@ const battleActions = {
                 }
             }
         }
-        // console.log("Multi check preAll: ", resultingMulti,characterActions)
-        const allRef = characterActions.All;
-        if (allRef) {
-            for (let buffName in allRef) {
-                const currentMultiBuff = allRef[buffName];
-                if (!currentMultiBuff) {continue;}
-                // console.log("Actual multi from All: ",allRef[buffName].multiplier,characterActions)
-                resultingMulti *= allRef[buffName].multiplier ?? 1
-            }
-        }
-
-        // if (actionTags) {
-        //     for (let i=0;i<actionTags.length;i++) {
-        //         let currentTag = actionTags[i];
-        //         let activeTable = characterActions[currentTag] ??= {};//make the stat sheet if it doesn't exist yet
-
-        //         for (let buffName in activeTable) {
-        //             const currentMultiBuff = activeTable[buffName];
-        //             if (!currentMultiBuff) {continue;}
-        //             resultingMulti += (activeTable[buffName].multiplier ?? 1) - 1;
-        //         }
-        //     }
-        // }
-        // // console.log("Multi check preAll: ", resultingMulti,characterActions)
-        // const allRef = characterActions.All;
-        // if (allRef) {
-        //     for (let buffName in allRef) {
-        //         const currentMultiBuff = allRef[buffName];
-        //         if (!currentMultiBuff) {continue;}
-        //         // console.log("Actual multi from All: ",allRef[buffName].multiplier,characterActions)
-        //         resultingMulti += (allRef[buffName].multiplier ?? 1) - 1;
-        //     }
-        // }
         return resultingMulti;
     },
     getToughnessSum(battleData,reduction,attackerTurn,enemyTurn) {//TODO: right now WBE only exists in static bonus form, with no action tags, but later we need to cachetag this
         let attackerStats = attackerTurn.statTable;
-        let onHIT = attackerTurn.statTableONHIT;
         let enemyStats = enemyTurn.statTable;
-        return reduction * (1 + attackerStats[DamageBreakEfficiency] + onHIT[DamageBreakEfficiency]);
+        return reduction * (1 + attackerStats[DamageBreakEfficiency]);
         //supposedly: (reduction + flatBonuses) * (1 + breakEff + toughnessVuln)
         // * (1 + toughnessReductionIncrease) * abilityMultiplier
         //where multi is 1 if not specified, but I have no clue where it would even be specified so we'll circle back to this later
@@ -1595,7 +1543,7 @@ const battleActions = {
         "Wind": true,
         "Physical": true,
     },
-    pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsOnHit,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
+    pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
@@ -1608,8 +1556,8 @@ const battleActions = {
             let bonusBreak = 1;
             let bonusBreakMulti = 1;
 
-            bonusBreak += table[DamageBreak] + statsOnHit[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + statsOnHit[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            bonusBreak += table[DamageBreak] + targetStatsSourceBased[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
 
             if (actionTags) {
                 for (let action of actionTags) {
@@ -1625,11 +1573,10 @@ const battleActions = {
 
             sourceDeposit.cacheValue = finalValue;
         }
-        // (1 + targetStats[DamageBreak] + targetStatsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak]) * (1 + targetStats[DamageBreakBonus] + targetStatsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus])
 
         return sourceDeposit.cacheValue;
     },
-    pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,statsOnHit,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
+    pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
@@ -1643,9 +1590,9 @@ const battleActions = {
             let bonusBreakMulti = 1;
             let superMulti = 1;
 
-            bonusBreak += table[DamageBreak] + statsOnHit[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + statsOnHit[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
-            superMulti += table[DamageBreakSuper] + statsOnHit[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
+            bonusBreak += table[DamageBreak] + targetStatsSourceBased[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            superMulti += table[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
 
             if (actionTags) {
                 for (let action of actionTags) {
@@ -1663,10 +1610,6 @@ const battleActions = {
             sourceDeposit.cacheValue = finalValue;
         }
         
-        // (1 + targetStats[DamageBreak] + targetStatsONHIT[DamageBreak] + targetStatsSourceBased[DamageBreak]) 
-        // * (1 + targetStats[DamageBreakBonus] + targetStatsONHIT[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus])
-        // * (1 + targetStats[DamageBreakSuper] + targetStatsONHIT[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper]);
-        
         return sourceDeposit.cacheValue;
     },
     getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo,breakMulti) {
@@ -1682,11 +1625,10 @@ const battleActions = {
         const isEnemy = false;
 
         // const attackerStats = sourceTurn.statTable;
-        // const attackerStatsONHIT = sourceTurn.statTableONHIT;
         
         // const actionTables = sourceTurn.tagSpecific;
         // const sourceCache = sourceTurn.cacheTagValues;
-        const {statTable,statTableONHIT,tagSpecific,cacheTagValues} = sourceTurn;
+        const {statTable,tagSpecific,cacheTagValues} = sourceTurn;
 
         const targetStats = targetTurn.statTable;
         const actionTablesTarget = targetTurn.tagSpecific;
@@ -1730,15 +1672,14 @@ const battleActions = {
         //might seem dumb to have this stat stuff redone in the break dmg calcs, but bc the act of breaking something might trigger new bonuses or onhit effects, we HAVE to have new calcs and pokes in here
 
         //resistanced and PEN
-        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         const totalMulti = pulledComposite.totalMulti;
 
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         // let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         //SO TURNS OUT THE HIT THAT BREAKS AN ENEMY STILL COUNTS AS NOT BROKEN EVEN ON THE BREAK DMG HOW FUCKIN DUMB IS THAT JESUS DUDE
 
-        let sumDMG = pullBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
+        let sumDMG = pullBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
 
         let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
@@ -1803,10 +1744,9 @@ const battleActions = {
         const isEnemy = false;
 
         // const attackerStats = sourceTurn.statTable;
-        // const attackerStatsONHIT = sourceTurn.statTableONHIT;
         // const actionTables = sourceTurn.tagSpecific;
         // const sourceCache = sourceTurn.cacheTagValues;
-        const {statTable,statTableONHIT,tagSpecific,cacheTagValues} = sourceTurn;
+        const {statTable,tagSpecific,cacheTagValues} = sourceTurn;
 
         const targetStats = targetTurn.statTable;
         const actionTablesTarget = targetTurn.tagSpecific;
@@ -1852,12 +1792,11 @@ const battleActions = {
         const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
 
         //might seem dumb to have this stat stuff redone in the break dmg calcs, but bc the act of breaking something might trigger new bonuses or onhit effects, we HAVE to have new calcs and pokes in here
-        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         const totalMulti = pulledComposite.totalMulti;
 
         //broken multi doesn't apply on super break dmg bc it can ONLY happen when the taret is already broken, so...
-        let sumDMG = pullSuperBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,statTableONHIT,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
+        let sumDMG = pullSuperBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
 
         //TODO: later in the future if some unnamed character happens to have an ability that lets us superbreak when not broken, we do need to factor
         //for the isBroken dr multi.
@@ -1922,10 +1861,9 @@ const battleActions = {
             instanceTag
         } = ATKObject;
         const realCacheTag = compositeCacheTag + targetTurn.properName;
-        const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
+        const {statTable,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
-        //     statTableONTurn,
         //     properName: targetName,
         //     cacheTagValues: targetCache,
         //     name: targetSlot,
@@ -1954,21 +1892,21 @@ const battleActions = {
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
 
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
-        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
+        const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
         if (energyGain && !ignoreEnergy) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
         
 
         let currentSplit = atkEntryRef.hitRatio / (isDistributed ? distributedTargetCount : 1);//the hit split of the current attack
-        let currentMulti = (customMulti ? customMulti(sourceTurn,targetTurn,dmgNeedsElationComposite,statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
-        
+        let currentMulti = (customMulti ? customMulti(sourceTurn,targetTurn,dmgNeedsElationComposite,statTable,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
+            
 
         let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
         if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
         let scalarToUse = atkEntry.scalarOverride ?? scalar;
 
-        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,statTableONHIT,targetStatsSourceBased,scalarToUse);//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,targetStatsSourceBased,scalarToUse);//the stat that this attacks scales off of, so ATK or HP etc
 
         
         // console.log(multiOf)
@@ -2007,10 +1945,9 @@ const battleActions = {
         let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
-        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         const totalMulti = pulledComposite.totalMulti;
         const totalCritDMG = pulledComposite.totalCritDMG;
         const totalCritRate = pulledComposite.totalCritRate;
@@ -2299,10 +2236,9 @@ const battleActions = {
             instanceTag
         } = ATKObject;
         const realCacheTag = compositeCacheTag + targetTurn.properName;
-        const {statTable,statTableONHIT,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
+        const {statTable,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
         // const {statTable:enemyStats,
         //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
-        //     statTableONTurn,
         //     properName: targetName,
         //     cacheTagValues: targetCache,
         //     name: targetSlot,
@@ -2332,11 +2268,7 @@ const battleActions = {
 
         let currentSplit = atkEntryRef.hitRatio / (isDistributed ? distributedTargetCount : 1);//the hit split of the current attack
 
-
-
-        // console.log(customMulti,isBounce,ATKObject.bounceData.multi,ATKObject)
-        let currentMulti = (customMulti ? customMulti(statTable,statTableONHIT,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
-        
+        let currentMulti = (customMulti ? customMulti(sourceTurn,targetTurn,null,statTable,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
 
         let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
         if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
@@ -2388,11 +2320,10 @@ const battleActions = {
         let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
-        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
-        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
 
-        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         const totalMulti = pulledComposite.totalMulti;
         const totalCritDMG = pulledComposite.totalCritDMG;
         const totalCritRate = pulledComposite.totalCritRate;
@@ -2673,11 +2604,8 @@ const battleActions = {
 
 
         let playerStats = sourceTurn.statTable;
-        let playerStatsONHIT = sourceTurn.statTableONHIT;
         let enemyStats = targetTurn.statTable;
         let isEnemy = false;
-
-        // const scalarSourceStatsONHIT = scalarSourceOverride ? scalarSourceOverride.statTableONHIT : playerStatsONHIT;
 
 
 
@@ -2817,10 +2745,9 @@ const battleActions = {
     },
     additionalDMGHitWrapper(battleData,charName,sourceTurn,targetTurn,ATKObject,element,enemiesAttackedThisAction,sourceString) {
         // let playerStats = sourceTurn.statTable;
-        // let playerStatsONHIT = sourceTurn.statTableONHIT;
         // const actionTables = sourceTurn.tagSpecific;
         // const sourceCache = sourceTurn.cacheTagValues;
-        const {statTable,statTableONHIT,tagSpecific,cacheTagValues} = sourceTurn;
+        const {statTable,tagSpecific,cacheTagValues} = sourceTurn;
 
         // const actionTags = ATKObject.actionTags;
         // let currentMulti = ATKObject.multipliers.additional;//the %multi from the description of the current attack
@@ -2848,12 +2775,11 @@ const battleActions = {
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn},sourceTurn);
         let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
         
-        let multiOf = scalar ? pullScalar(statTable,statTableONHIT,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalar ? pullScalar(statTable,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
-        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
-        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         const totalMulti = pulledComposite.totalMulti;
         const totalCritDMG = pulledComposite.totalCritDMG;
         const totalCritRate = pulledComposite.totalCritRate;
@@ -2952,10 +2878,9 @@ const battleActions = {
 
     elationDMGHitWrapper(battleData,charName,sourceTurn,targetTurn,ATKObject,element,enemiesAttackedThisAction,sourceString) {
         // let playerStats = sourceTurn.statTable;
-        // let playerStatsONHIT = sourceTurn.statTableONHIT;
         // const actionTables = sourceTurn.tagSpecific;
         // const sourceCache = sourceTurn.cacheTagValues;
-        const {statTable,statTableONHIT,tagSpecific,cacheTagValues} = sourceTurn;
+        const {statTable,tagSpecific,cacheTagValues} = sourceTurn;
 
         // const actionTags = ATKObject.actionTags;
         // let currentMulti = ATKObject.multipliers.additional;//the %multi from the description of the current attack
@@ -2985,9 +2910,9 @@ const battleActions = {
         let multiOf = battleActions.elationLevelRef;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
         // console.log(ElationPercentOverride,ATKObject)
-        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+        let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
         
-        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,statTableONHIT,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+        let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
 
         // console.log(sumDMG,compositeCacheTag)
@@ -2999,8 +2924,7 @@ const battleActions = {
         const elationValueToUse = Math.floor(banger || punchline);
         const punchlineMulti = 1 + ((elationValueToUse*5)/(elationValueToUse+240));
         
-        // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,totalCritDMG,totalCritRate,sumDR} = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
-        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,statTableONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+        const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
         const totalMulti = pulledComposite.totalMulti;
         const totalCritDMG = pulledComposite.totalCritDMG;
         const totalCritRate = pulledComposite.totalCritRate;
@@ -3214,7 +3138,6 @@ const battleActions = {
 
         const characterName = sourceTurn.properName;
         let playerStats = sourceTurn.statTable;
-        let playerStatsONHIT = sourceTurn.statTableONHIT;
         let enemyStats = targetTurn.statTable;
         let targetStatsTeamBased = emptyTableNeverAdd;
         const actionTables = sourceTurn.tagSpecific;
@@ -3261,7 +3184,7 @@ const battleActions = {
 
         if (!isBreakDOT) {
             // console.log(element)
-            multiOf = pullScalar(playerStats,playerStatsONHIT,targetStatsSourceBased,scalar);//the stat that this attacks scales off of, so ATK or HP etc
+            multiOf = pullScalar(playerStats,targetStatsSourceBased,scalar);//the stat that this attacks scales off of, so ATK or HP etc
 
             const compositeCacheTag = currentBuff.compositeCacheTag + targetTurn.properName;
             // sourceTurn.hysilensTalentDOTSHEETPhysical = {
@@ -3312,11 +3235,10 @@ const battleActions = {
             }
             preDMG = prePreDMG * detonateMulti;//sum amount of the scalar, before DMG bonuses come into play
             tags = currentBuff.tags;//all dmg related tags associated with this attack, so skilldmg, firedmg, etc.
-            let sumDMG = 1 + pullDMG(sourceCache,targetCache,compositeCacheTag,playerStats,playerStatsONHIT,targetStatsSourceBased,realDMGKeys);//sum of all relevant dmg bonuses
+            let sumDMG = 1 + pullDMG(sourceCache,targetCache,compositeCacheTag,playerStats,targetStatsSourceBased,realDMGKeys,actionTables,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
 
             //resistanced and PEN
-            // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            pulledComposite = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
+            pulledComposite = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
             const totalMulti = pulledComposite.totalMulti;
 
             finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;
@@ -3341,7 +3263,7 @@ const battleActions = {
             if (!breakTagging[element]) {
                 const keyShortcut = basicShorthand.makeKeysArray;
                 let newTags = ["All",element,"DOT","Break"];
-                let actionTags = ["Break","DOT"];
+                let actionTags = ["All","Break","DOT"];
 
                 breakTagging[element] = {
                     realTag: newTags + actionTags + sourceTurn.properName,
@@ -3404,15 +3326,13 @@ const battleActions = {
             }
             
 
-            // const breakDMGBonus = battleActions.pullBreakDMGMulti(playerStats,playerStatsONHIT,targetStatsSourceBased);
-            const breakDMGBonus = pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget)
+            const breakDMGBonus = pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget)
             preDMG = prePreDMG * breakDMGBonus * detonateMulti;
             // if (element === "Lightning") {console.log(prePreDMG,multiOf,multi,breakDMGBonus)}
             let sumDMG = 1;//break dot cannot in any capacity, benefit from a dmg bonus that isn't break dmg dealt bonuses
 
             //resistanced and PEN
-            // const {sumPEN,sumRES,sumSHRED,sumDEF,enemyDEF,enemyDEFRed,sumVULN,sumDR} = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
-            pulledComposite = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,playerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
+            pulledComposite = pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,playerStats,enemyStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,actionTables,actionTags,actionTablesTarget);
             const totalMulti = pulledComposite.totalMulti;
 
 
@@ -3476,7 +3396,6 @@ const battleActions = {
     },
     trueDMGHitWrapper(battleData,sourceTurn,targetTurn,percentInstance,trueBase,trueCrit,trueAVG,sourceString) {
         // let playerStats = sourceTurn.statTable;
-        // let playerStatsONHIT = sourceTurn.statTableONHIT;
         // let enemyStats = targetTurn.statTable;
         // let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? greatTableKnowerOfAll;
         // let targetStatsTeamBased = greatTableKnowerOfAll;
@@ -4492,7 +4411,7 @@ const battleActions = {
         const scalarSourceOverride = generalInfo.scalarSourceOverride;
         
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : sourceStats;
-        let scalarSUM = scalar ? pullScalar(scalarSourceStats,pseudoTable,pseudoTable,scalar) : targetTurn.maxHP;//if no scalar is specified, assume that %heals are on the target's hp
+        let scalarSUM = scalar ? pullScalar(scalarSourceStats,pseudoTable,scalar) : targetTurn.maxHP;//if no scalar is specified, assume that %heals are on the target's hp
 
         let percentHealed = percent * composite * scalarSUM;
         let flatHealed = flat * composite;
@@ -4526,6 +4445,7 @@ const battleActions = {
         }
         
         poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal},sourceTurn);
+        poke("AllyHPChange",battleData,null,targetTurn);
         const totals = generalInfo.totals;
         totals.totalHeal += totalHealed;
         totals.actualHeal += actualHeal;
@@ -4712,7 +4632,6 @@ const battleActions = {
 
         const targetStats = targetTurn.statTable;
         const sourceStats = sourceTurn.statTable;
-        const sourceStatsONHIT = sourceTurn.statTableONHIT;
 
         const turnMerge = {targetTurn,sourceTurn}
         poke("ShieldStart",battleData,turnMerge,sourceTurn);
@@ -4734,7 +4653,7 @@ const battleActions = {
 
         const scalar = sourceRef.scalar;
 
-        let scalarSUM = scalar ? pullScalar(sourceStats,sourceStatsONHIT,emptyTableNeverAdd,scalar) : targetTurn[maxHP];//if no scalar is specified, assume that %shields are on the target's hp
+        let scalarSUM = scalar ? pullScalar(sourceStats,emptyTableNeverAdd,scalar) : targetTurn[maxHP];//if no scalar is specified, assume that %shields are on the target's hp
 
         let percentShield = addPercent * composite * scalarSUM;
         let flatShield = addFlat * composite;
@@ -4828,6 +4747,7 @@ const battleActions = {
                 if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:ally.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
                 poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn:ally,amountEaten,sourceTurn,skillSlot},ally);
                 poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn},ally);
+                poke("AllyHPChange",battleData,null,ally);
             }
             if (logger) {logToBattle(battleData,{logType: "ConsumeHPEnd", name:sourceTurn.properName,totalEaten,targetTurn:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
         }
@@ -4840,6 +4760,7 @@ const battleActions = {
             if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
             poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn,amountEaten,sourceTurn,skillSlot},targetTurn);
             poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: amountEaten,lossSource: sourceTurn},targetTurn);
+            poke("AllyHPChange",battleData,null,targetTurn);
         }
 
         const returnObject = {isAllAllies,targetTurn,totalEaten,sourceTurn,skillSlot};
@@ -5391,7 +5312,6 @@ const turnLogic = {
                     properName: "Aha Instant",
 
                     statTable: new Array(greatTableSize).fill(0),
-                    statTableONHIT: new Array(greatTableSize).fill(0),
                     // buffsObject: {},
                     // teamDebuffs: {},
                     // buffsStartTurn: [],
@@ -5595,7 +5515,7 @@ const turnLogic = {
                     // let values = ATKObjects.yaoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Quantum","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -5880,14 +5800,14 @@ const turnLogic = {
             "element": "N/A",
             "energyMax": 110,
             "skills": {
-                "Basic ATK": {
+                "Enemy ATK": {
                     "Generic AOE ATK": {
                         "variant1": {
                             "skillID": 1100601,
                             "trigger": "Skill01",
                             "name": "System Warning",
                             "type": "AoE",
-                            "slot": "Basic ATK",
+                            "slot": "Enemy ATK",
                             "desc": "",
                             "energyCost": null,
                             "energyRegen": 0,
@@ -6138,13 +6058,13 @@ const turnLogic = {
                 const logicRef = turnLogic[enemyTypeAttack];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Basic ATK"]["Generic AOE ATK"].variant1;
+                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Enemy ATK"]["Generic AOE ATK"].variant1;
 
                 if (!ATKObjects.genericBossBasic) {
                     let values = skillRef.params[6];
                     const scalar = "ATK";
-                    const tags = ["All"];
-                    const actionTags = ["Attack"];
+                    const tags = ["EnemyAll"];
+                    const actionTags = ["EnemyAttack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6170,26 +6090,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.genericBossBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-            },
-            genericBossBasicOLD(battleData,target,sourceTurn) {
-                let skillPathing = turnLogic[sourceTurn.enemyTypeAttack].enemyData.skills;
-                let skillRef = skillPathing["Basic ATK"]["Generic AOE ATK"].variant1;
-
-                let values = skillRef.params[6];
-                let ATKObject = {
-                    multipliers: {
-                        primary: null,
-                        blast: null,
-                        all: values[0],
-                    },
-                    scalar: "ATK",
-                    DMGTags: ["All"],
-                    isEnemy: true,
-                    allToughness: false,
-                    slot: skillRef.slot
-                }
-                
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
@@ -6221,14 +6121,14 @@ const turnLogic = {
             "element": "N/A",
             "energyMax": 110,
             "skills": {
-                "Basic ATK": {
+                "Enemy ATK": {
                     "Generic ST ATK": {
                         "variant1": {
                             "skillID": 1100601,
                             "trigger": "Skill01",
                             "name": "System Warning",
                             "type": "AoE",
-                            "slot": "Basic ATK",
+                            "slot": "Enemy ATK",
                             "desc": "",
                             "energyCost": null,
                             "energyRegen": 0,
@@ -6479,13 +6379,13 @@ const turnLogic = {
                 const logicRef = turnLogic[enemyTypeAttack];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Basic ATK"]["Generic ST ATK"].variant1;
+                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Enemy ATK"]["Generic ST ATK"].variant1;
 
                 if (!ATKObjects.genericBossBasic) {
                     let values = skillRef.params[6];
                     const scalar = "ATK";
-                    const tags = ["All"];
-                    const actionTags = ["Attack"];
+                    const tags = ["EnemyAll"];
+                    const actionTags = ["EnemyAttack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6511,26 +6411,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.genericBossBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-            },
-            genericBossBasicOLD(battleData,target,sourceTurn) {
-                let skillPathing = turnLogic[sourceTurn.enemyTypeAttack].enemyData.skills;
-                let skillRef = skillPathing["Basic ATK"]["Generic AOE ATK"].variant1;
-
-                let values = skillRef.params[6];
-                let ATKObject = {
-                    multipliers: {
-                        primary: null,
-                        blast: null,
-                        all: values[0],
-                    },
-                    scalar: "ATK",
-                    DMGTags: ["All"],
-                    isEnemy: true,
-                    allToughness: false,
-                    slot: skillRef.slot
-                }
-                
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
@@ -6617,7 +6497,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6659,7 +6539,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.gallagherSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.gallagherSkillHealHEALOBJECT = {
@@ -6721,7 +6601,7 @@ const turnLogic = {
                 if (!ATKObjects.gallagherTalentHealHEALOBJECT) {
                     let values = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Talent"];
+                    const actionTags = ["All","Heal","Talent"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.gallagherTalentHealHEALOBJECT = {
@@ -6759,7 +6639,7 @@ const turnLogic = {
                     let values = ATKObjects.gallagherBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6823,7 +6703,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Fire"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6957,7 +6837,7 @@ const turnLogic = {
                     let values = ATKObjects.gallagherTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -7309,7 +7189,7 @@ const turnLogic = {
                     let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -7352,7 +7232,7 @@ const turnLogic = {
                 //YES on wavestrider, even subtargets count, NO on sacerdos, only single targets count unless sunday bc reasons
                 if (!ATKObjects.huohuoSkillHealHealHEALOBJECT) {
                     let values = ATKObjects.huohuoSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.huohuoSkillHealHealHEALOBJECT = {
@@ -7467,7 +7347,7 @@ const turnLogic = {
                 let values = ATKObjects.huohuoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.provisionHealHEALOBJECT) {
-                    const actionTags = ["Heal","Talent"];
+                    const actionTags = ["All","Heal","Talent"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.provisionHealHEALOBJECT = {
@@ -8005,7 +7885,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8048,7 +7928,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.natashaSkillHealHEALOBJECT = {
@@ -8106,7 +7986,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.natashaUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Ultimate"];
+                    const actionTags = ["All","Heal","Ultimate"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.natashaUltimateHealHEALOBJECT = {
@@ -8184,7 +8064,7 @@ const turnLogic = {
                     let values = ATKObjects.natashaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Physical"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8249,7 +8129,7 @@ const turnLogic = {
 
                 if (!ATKObjects.natashaE1HEALOBJECT) {
 
-                    const actionTags = ["Heal"];
+                    const actionTags = ["All","Heal"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.natashaE1HEALOBJECT = {
@@ -8504,7 +8384,7 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
                             let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
 
-                            const actionTags = ["Heal"];
+                            const actionTags = ["All","Heal"];
                             const compositeCacheTag = actionTags + ownerTurn.properName;
 
                             ATKObjects.natashaSkillHealHOTOBJECT = {
@@ -8538,7 +8418,7 @@ const turnLogic = {
                         
                         if (!ATKObjects.natashaUltHealHOTOBJECT) {
 
-                            const actionTags = ["Heal"];
+                            const actionTags = ["All","Heal"];
                             const compositeCacheTag = actionTags + ownerTurn.properName;
 
                             ATKObjects.natashaUltHealHOTOBJECT = {
@@ -8723,7 +8603,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8765,7 +8645,7 @@ const turnLogic = {
                 
                 if (!ATKObjects.lynxSkillHealHEALOBJECT) {
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.lynxSkillHealHEALOBJECT = {
@@ -8911,7 +8791,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.lynxUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Ultimate"];
+                    const actionTags = ["All","Heal","Ultimate"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
                     ATKObjects.lynxUltimateHealHEALOBJECT = {
                         multipliers: {
@@ -9127,7 +9007,7 @@ const turnLogic = {
                         
                         if (!ATKObjects.lynxHOTHealHOTOBJECT) {
 
-                            const actionTags = ["Heal"];
+                            const actionTags = ["All","Heal"];
                             const compositeCacheTag = actionTags + ownerTurn.properName;
 
                             ATKObjects.lynxHOTHealHOTOBJECT = {
@@ -9310,7 +9190,7 @@ const turnLogic = {
                     let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -9354,7 +9234,7 @@ const turnLogic = {
                     let values = ATKObjects.luochaSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.luochaSkillHealHealHEALOBJECT = {
@@ -9395,7 +9275,7 @@ const turnLogic = {
                     }
 
 
-                    const actionTags2 = ["Shield"];
+                    const actionTags2 = ["All","Shield"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
                     ATKObjects.luochaE2SHIELDSHEET = {
                         "stats": null,
@@ -9521,7 +9401,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -9884,7 +9764,7 @@ const turnLogic = {
                         let values = ATKObjects.luochaAddZoneREFVALUES;
                         let characterName = ownerTurn.properName;
 
-                        const actionTags = ["Heal","Talent"];
+                        const actionTags = ["All","Heal","Talent"];
                         const compositeCacheTag = actionTags + ownerTurn.properName;
 
                         ATKObjects.luochaSelfHealHEALOBJECT = {
@@ -10209,7 +10089,7 @@ const turnLogic = {
                     let values = ATKObjects.swBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10251,7 +10131,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
                     const tags = ["All","Skill","Quantum"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10360,7 +10240,7 @@ const turnLogic = {
                     let values = ATKObjects.silverwolfUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10540,7 +10420,7 @@ const turnLogic = {
                     let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10576,7 +10456,7 @@ const turnLogic = {
                 if (!ATKObjects.swE4DMGREF) {
                     const scalar = "ATK";
                     const tags = ["All","Quantum"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11059,7 +10939,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaBasicATKOBJECT = {
@@ -11138,7 +11018,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaSkillATKOBJECT = {
@@ -11217,7 +11097,7 @@ const turnLogic = {
                     let values = ATKObjects.kafkaFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Lightning"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11275,7 +11155,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.kafkaUltimateATKOBJECT = {
@@ -11343,7 +11223,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaUltimateDOTSHEET = {
@@ -11408,7 +11288,7 @@ const turnLogic = {
                     const values = ATKObjects.kafkaTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Lightning"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11887,7 +11767,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.fishladyBasicATKOBJECT = {
                         multipliers: {
@@ -11927,7 +11807,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.fishladySkillATKOBJECT = {
@@ -12152,7 +12032,7 @@ const turnLogic = {
                     // const realShredKeys = keyShortcut(defShredKeys,tags);
                     // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
 
                     const compositeCacheTagL = tagsLightning + actionTags + sourceTurn.properName;
                     const compositeCacheTagF = tagsFire + actionTags + sourceTurn.properName;
@@ -12467,7 +12347,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fishladyUltimateATKOBJECT = {
@@ -13042,7 +12922,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.blackswanBasicATKOBJECT = {
                         multipliers: {
@@ -13168,7 +13048,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT","BSArcana"];
+                    const actionTags = ["All","DOT","BSArcana"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.blackswanArcanaDOTSHEET = {
@@ -13267,7 +13147,7 @@ const turnLogic = {
                     ATKObjects.talentBlastRef = {
                         buffName: "Arcana Blast (Stacks >= 3)",
                         tags,
-                        actionTags: ["DOT"],
+                        actionTags: ["All","DOT"],
                         realDMGKeys: keyShortcut(dmgKeys,tags),
                         realPENKeys: keyShortcut(resPENKeys,tags),
                         realShredKeys: keyShortcut(defShredKeys,tags),
@@ -13318,7 +13198,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.blackswanSkillATKOBJECT = {
                         multipliers: {
@@ -13364,7 +13244,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.blackswanUltimateATKOBJECT = {
@@ -13473,7 +13353,6 @@ const turnLogic = {
                     ATKObjects.blackswanSkillDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[3],
-                        "statsOnHit": null,
                         "source": "Skill",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.skillShred,
@@ -14095,7 +13974,7 @@ const turnLogic = {
                     let values = ATKObjects.weltBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -14353,7 +14232,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.weltSkillATKOBJECT = {
                         multipliers: {
@@ -14402,7 +14281,7 @@ const turnLogic = {
                     let values = ATKObjects.weltUltimateVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -14782,6 +14661,1405 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Mortenax Blade": {
+        logic(thisTurn,battleData) {
+            const isEnhanced = thisTurn.battleValues.bladeFuryActive;
+            const minimumHP = thisTurn.currentHP > 1;
+
+            if (isEnhanced && minimumHP && checkSkill(battleData,thisTurn)) {//disable the skill if not enhanced, or if hp is <= 1
+                return this.returnSkillCall;
+            }
+
+            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            const call1 = this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: 0, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.bladeSkill, 
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            call1.sourceTurn = thisTurn;
+            // call1.target = [thisTurn];
+
+            const call2 = this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.bladeBasicEnhanced, 
+                target: "enemy",
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.bladeBasic, 
+                target: "enemy",
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+            call3.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Self",
+            "UltimateEnh": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            bladeBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeBasicREF ??= ATKObjects["Basic ATK"]["A Broken Blade Still Slays"].variant1;
+
+                if (!ATKObjects.bladeBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Fire"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.bladeBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bladeBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeBasicEnhancedREF ??= ATKObjects["Basic ATK"]["A Tempered Blade Severs Souls"].variant1;
+                let values = ATKObjects.bladeBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.bladeBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Fire"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bonusScalar: null,
+                    }
+                }
+                let ATKObject = ATKObjects.bladeBasicEnhancedATKOBJECT;
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bladeTraceRegen(battleData,sourceTurn) {
+                const seventyFivePercent = sourceTurn.maxEnergy * 0.75;
+                const currentEnergy = sourceTurn.currentEnergy;
+                const energyToRegen = currentEnergy < seventyFivePercent ? seventyFivePercent-currentEnergy : 0;
+
+                if (energyToRegen) {updateEnergy(battleData,energyToRegen,sourceTurn,true,"Bone, Hardened ad Nauseam");}
+            },
+            bladeUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.bladeUltimateREF ??= ATKObjects.Ultimate["Fornax Ex Corpore"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.bladeUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ultimate","Fire"];
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[2],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bonusScalar: {
+                            primary: values[4] + (rank >= 1 ? 1.5 : 0),
+                            blast: values[5],
+                            all: null,
+                            refName: "bladeHPTally",
+                            isDynamicValue: true,
+                            refValue: 0,
+                            bonusValue: null,//see hit wrapper if I ever forget how this was used
+                        },
+                    }
+
+                    const actionTags2 = ["All","Heal","Ultimate"];
+                    const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
+                    ATKObjects.bladeUltimateHEALOBJECT = {
+                        multipliers: {
+                            primary: 0,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2
+                    }
+
+
+
+                    ATKObjects.bladeMBalefireDEBUFFSHEET = {
+                        "stats": [DEFP,VulnAll],
+                        [DEFP]: -values[6],
+                        [VulnAll]: values[3],
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.balefire,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDebuff": true,
+                    }
+                    ATKObjects.bladeMBalefireE1DEBUFFSHEET = {
+                        "stats": [ResistanceAll],
+                        [ResistanceAll]: -0.20,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.balefireE1,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                    }
+                    ATKObjects.bladeMFuryCritSHEET = {
+                        "stats": [CritRateBase,CritDamageBase,AggroP],
+                        [CritRateBase]: values[1],
+                        [CritDamageBase]: values[2],
+                        [AggroP]: 10,
+                        [DamageReductionStandard]: 0.50,
+                        [HealingIncoming]: 0.50,
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.infiniteFury,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.bladeMFuryTraceSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.50 + (rank >= 4 ? 0.50 : 0),
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.zoneDMG,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.bladeMFuryTraceSHEET2 = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.75,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.zoneDMGUlt,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
+                    }
+
+                    ATKObjects.bladeMFuryTraceSHEET3 = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.75,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.zoneDMGSelf,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    // zoneDMGSelf
+                }
+                // let ATKObject = ATKObjects.bladeUltimateATKOBJECT;
+
+                const balefireSheet = ATKObjects.bladeMBalefireDEBUFFSHEET;
+                sourceTurn.bladeMBalefireDEBUFFSHEET = balefireSheet;
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,balefireSheet);
+
+                battleActions.consumeHP(battleData,false,0.20,sourceTurn,sourceTurn,skillRef.slot);
+
+                //infinite fury
+                const battleValues = sourceTurn.battleValues;
+                battleValues.bladeFuryActive = true;
+                const furySheet = ATKObjects.bladeMFuryCritSHEET;
+                updateBuff(battleData,sourceTurn,furySheet);
+
+                if (rank >= 1) {
+                    const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
+                    const enemyPositions = battleData.enemyPositions;
+                    updateBuffBatchTargets(battleData,enemyPositions,e1Sheet)
+                }
+
+                const allAlliesArray = battleData.allAlliesArray;
+                const generalDMGSheet = ATKObjects.bladeMFuryTraceSHEET;
+                updateBuffBatchTargets(battleData,allAlliesArray,generalDMGSheet);
+                const hasNilityCharacters = sourceTurn.battleValues.hasNilityCharacters;
+                if (hasNilityCharacters) {
+                    const nihilitySheet = ATKObjects.bladeMFuryTraceSHEET2;
+                    updateBuffBatchTargets(battleData,allAlliesArray,nihilitySheet);
+                }
+                else {
+                    const selfSheet = ATKObjects.bladeMFuryTraceSHEET3;
+                    updateBuff(battleData,sourceTurn,selfSheet);
+                }
+
+
+                const ActionEntry = sourceTurn.mortenaxBladeUltTURNEVENT ??= {
+                    // name:characterEntry,
+                    AV:10000/70,
+                    AVBase:10000/70,
+                    SPD:70,
+                    actionCounter: 0,
+                    turnState: 0,
+                    properName: "Mortenax Blade Fury Timer",
+                    // buffsObject: {},
+                    // buffsStartTurn: [],
+                    // buffsEndTurn: [],
+                    // additionalDMGObject: {},
+                    cantBeTargeted: true,
+                    isUniqueEvent: true,
+                    eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                    uniqueEventFunction: logicRef.skillFunctions.infiniteFuryQueuedExpired,
+                    eventImage: "BEicons/BattleEvent_1507.png",
+                };
+                const nextAV = battleData.nextTurnAV;
+                nextAV.push(ActionEntry);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Mortenax Blade Ultimate", bodyText: `Mortenax Blade countdown added to the turn order.`});}
+
+                //energy
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                //then check for queue
+
+
+                sourceTurn.ultyQueued = false;
+            },
+            infiniteFuryQueuedExpired(battleData,eventTurn) {
+                poke("mortenaxBladeQueueExit",battleData,null);
+                //the exit is just an insert, not an instantaneous event
+            },
+            infiniteFuryExpired(battleData,target,sourceTurn) {
+                const eventTurn = sourceTurn.mortenaxBladeUltTURNEVENT;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                sourceTurn.battleValues.bladeFuryActive = false;
+
+                const furySheet = ATKObjects.bladeMFuryCritSHEET;
+                removeBuff(battleData,sourceTurn,furySheet);
+                const rank = sourceTurn.rank;
+
+                if (rank >= 1) {
+                    const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
+                    const enemyPositions = battleData.enemyPositions;
+                    removeBuffFromBatch(battleData,enemyPositions,e1Sheet);
+                }
+
+                logicRef.skillFunctions.bladeTraceRegen(battleData,sourceTurn);//trace ad nauseum
+
+                const allAlliesArray = battleData.allAlliesArray;
+                const generalDMGSheet = ATKObjects.bladeMFuryTraceSHEET;
+                removeBuffFromBatch(battleData,allAlliesArray,generalDMGSheet);
+                const hasNilityCharacters = sourceTurn.battleValues.hasNilityCharacters;
+                if (hasNilityCharacters) {
+                    const nihilitySheet = ATKObjects.bladeMFuryTraceSHEET2;
+                    removeBuffFromBatch(battleData,allAlliesArray,nihilitySheet);
+                }
+                else {
+                    const selfSheet = ATKObjects.bladeMFuryTraceSHEET3;
+                    removeBuff(battleData,sourceTurn,selfSheet);
+                }
+
+
+
+                // const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
+                // const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
+
+                // const allyTargets = battleData.allAllyTargetsArray;
+                // removeBuffFromBatch(battleData,allyTargets,buffSheet);
+                // removeBuffFromBatch(battleData,allyTargets,buffSheetFUA);
+
+                const eventName = eventTurn.properName;
+                const nextAV = battleData.nextTurnAV;
+                for (let i=0;i<nextAV.length;i++) {
+                    let currentTurn = nextAV[i];
+                    if (currentTurn.properName === eventName) {
+                        nextAV.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+
+            },
+            bladeSkill(battleData,target,sourceTurn) {
+                // const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.bladeSkillREF ??= ATKObjects.Skill["A Rain of Blades Seals Fate"].variant1;
+                const values = ATKObjects.bladeSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // const logicRef = turnLogic[ownerTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.bladeSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    
+                    const scalar = "HP";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeSkillATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: {
+                            multi: values[2],
+                            bounceCount: 4,
+                            energy: null,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 0,
+                                    "toughness": 5
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+                }
+                let ATKObject = ATKObjects.bladeSkillATKOBJECT;
+                battleActions.consumeHP(battleData,false,values[3],sourceTurn,sourceTurn,skillRef.slot);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bladeSkillFUA(battleData,target,sourceTurn) {
+                // const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.bladeSkillREF ??= ATKObjects.Skill["A Rain of Blades Seals Fate"].variant1;
+                const values = ATKObjects.bladeSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // const logicRef = turnLogic[ownerTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.bladeSkillFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    
+                    const scalar = "HP";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Skill","Attack","FUA"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeSkillFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: {
+                            multi: values[2],
+                            bounceCount: 4,
+                            energy: null,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 0,
+                                    "toughness": 5
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+                }
+                let ATKObject = ATKObjects.bladeSkillFUAATKOBJECT;
+                battleActions.consumeHP(battleData,false,values[3],sourceTurn,sourceTurn,skillRef.slot);
+
+                poke("mortenaxBladeGainCharge",battleData,{pointsGained: sourceTurn.rank >= 2 ? -7 : -9,sourceString:"Mortenax Blade FUA Launched"});
+                updateEnergy(battleData,25,sourceTurn,false,"Mortenax Blade FUA Launched");
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                sourceTurn.battleValues.fuaIsQueued = false;
+            },
+            bladeUltimateEnh(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeUltimateEnhREF ??= ATKObjects["Ultimate"]["Tenax Per Ignem"].variant1;
+
+                if (!ATKObjects.bladeUltimateEnhATKOBJECT) {
+                    const rank = sourceTurn.rank;
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult2;
+                    let values = ATKObjects.bladeUltimateEnhREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ultimate","Fire"];
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeUltimateEnhATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0] * (rank >= 6 ? 1.5 : 1),
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.bladeUltimateEnhATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                sourceTurn.ultyQueued = false;
+            },
+            bladeCheckHPFUA(battleData,queueObject,sourceTurn) {
+                const isHPInvalid = sourceTurn.currentHP <= 1;
+                if (isHPInvalid) {
+                    sourceTurn.battleValues.fuaIsQueued = false;
+                }
+
+                return isHPInvalid;
+            },
+            
+            bladeTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // // let charSlot = sourceTurn.name;
+                // // let skillPathing = characters[characterName].skills;
+                // let skillRef = ATKObjects.bladeTechRef ??= ATKObjects.Technique["Karma Wind"].variant1;
+                // let values = ATKObjects.bladeTechRefVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // if (!ATKObjects.bladeTechATKObject) {
+                //     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                //     const scalar = "HP";
+                //     const tags = ["All","Technique","Wind"];
+                //     const actionTags = ["Technique","Attack"];
+                //     const keyShortcut = basicShorthand.makeKeysArray;
+                //     const realDMGKeys = keyShortcut(dmgKeys,tags);
+                //     const realPENKeys = keyShortcut(resPENKeys,tags);
+                //     const realShredKeys = keyShortcut(defShredKeys,tags);
+                //     const realVulnKeys = keyShortcut(vulnKeys,tags);
+                //     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                //     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                //     ATKObjects.bladeTechATKObject = {
+                //         multipliers: {
+                //             primary: null,
+                //             blast: null,
+                //             all: values[0],
+                //         },
+                //         energy: skillRef.energyRegen,
+                //         scalar,
+                //         DMGTags: tags,
+                //         allToughness: false,
+                //         slot: skillRef.slot,
+                //         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                //         actionTags,
+                //         compositeCacheTag
+                //     }
+                // }
+                // const ATKObject = ATKObjects.bladeTechATKObject;
+
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                // battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace Bone, Hardened ad Nauseam
+                    //battlestart regen
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    //overflow handling
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    //ult end overflow clear
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //blade attacked in zone
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+
+                    const fullCharacterArray = battleData.fullCharacterArray;
+                    let nihilityCount = -1;
+                    for (let allyCharacter of fullCharacterArray) {
+                        if (allyCharacter.path === "Nihility") {nihilityCount += 1;}
+                    }
+                    if (nihilityCount > 0) {
+                        ownerTurn.battleValues.hasNilityCharacters = true;
+                    }
+
+                    //blade hp change listener
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    }
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                        const listener9 = passiveListeners[8];
+                        addListenerWithPriority(battleData,listener9,listener9.trigger,ownerTurn);
+
+                        const buffSheet = this.bladeE2Sheet ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.75,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2FUA,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["FUA"],
+                        }
+                        const allAlliesArray = battleData.allAlliesArray;
+
+                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener10 = passiveListeners[9];
+                        addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
+                        const listener11 = passiveListeners[10];
+                        addListenerWithPriority(battleData,listener11,listener11.trigger,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                },
+                "target": "self",
+                "listenerName": "Blade Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            const bladeTraceRegen = this.bladeTraceRegen ??= turnLogic[ownerTurn.properName].skillFunctions.bladeTraceRegen;
+                            bladeTraceRegen(battleData,ownerTurn)
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Bone, Hardened ad Nauseam: energy regen on battleStart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnergyChanged",
+                        condition(battleData,generalInfo) {
+                            // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                            const ownerTurn = this.ownerTurn;
+                            
+                            //TODO: cleanse upon reaching full, which would be when this is either gonna recognize overfill or if we can see we're at full from something like cyrene I guess, something for later
+                            const overflow = generalInfo.overFill;
+                            if (overflow) {
+                                // const characterName = ownerTurn.properName;
+                                // const logicRef = turnLogic[characterName];
+                                const valuesRef = ownerTurn.battleValues;
+                                // const rank = ownerTurn.rank;
+                                // overflowEnergy
+                                const oldAmount = valuesRef.overflowEnergy;
+                                const cap = 80;
+                                valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
+                                const amountGained = valuesRef.overflowEnergy - oldAmount;
+                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
+        
+        
+                                if (battleData.isLoggyLogger) {
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Bone, Hardened ad Nauseam [Overflow Handler]"});
+                                
+                                    if (valuesRef.overflowEnergy > oldAmount) {
+                                        ownerTurn.mortenaxBladeOverflowSummer ??= 0;
+                                        ownerTurn.mortenaxBladeOverflowSummer += amountGained;
+                                        // console.log(ownerTurn.saberSumResonance)
+                                    }
+                                    logToBattle(battleData,{
+                                        logType: "SUMMARY:SUM",
+                                        function: "mortenaxBladeOverflowSummer",
+                                        AV: battleData.sumAV,
+                                        currentValue: valuesRef.overflowEnergy,
+                                        currentSumValue: ownerTurn.mortenaxBladeOverflowSummer,
+                                        currentAddedValue: amountGained
+                                    });
+                                }
+                            }
+        
+                            // const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
+                            // poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Bone, Hardened ad Nauseam Overflow",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            const ownerTurn = this.ownerTurn;
+                            
+                            const valuesRef = ownerTurn.battleValues;
+                            const oldAmount = valuesRef.overflowEnergy;
+                            if (oldAmount) {
+                                valuesRef.overflowEnergy = 0;
+                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate use: Blessing of the Lake", bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> 0`});}
+                                if (battleData.isLoggyLogger) {
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: -oldAmount, oldEnergy:oldAmount, newEnergy:0, maximum:80, source:"Blessing of the Lake"});
+                                
+                                    if (valuesRef.overflowEnergy > oldAmount) {
+                                        ownerTurn.mortenaxBladeOverflowSummer ??= 0;
+                                        ownerTurn.mortenaxBladeOverflowSummer += amountGained;
+                                        // console.log(ownerTurn.saberSumResonance)
+                                    }
+                                    logToBattle(battleData,{
+                                        logType: "SUMMARY:SUM",
+                                        function: "mortenaxBladeOverflowSummer",
+                                        AV: battleData.sumAV,
+                                        currentValue: valuesRef.overflowEnergy,
+                                        currentSumValue: ownerTurn.mortenaxBladeOverflowSummer,
+                                        currentAddedValue: -oldAmount
+                                    });
+                                }
+                                updateEnergy(battleData,oldAmount,ownerTurn,true,"Bone, Hardened ad Nauseam [Ult Ended, cleared Overflow]");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Bone, Hardened ad Nauseam Overflow Clear",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            if (sourceTurn.isEnemy) {
+                                const bladeWasHit = targetsGotHit[ownerTurn.name];
+
+                                if (!bladeWasHit) {return;}
+
+                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"Mortenax Blade was Attacked in Zone"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+
+                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                                updateBuff(battleData,sourceTurn,balefireSheet);
+                            }
+                            else {
+                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+
+                                let targetsHitArray = [];
+                                const enemyBasedTurns = battleData.enemyBasedTurns;
+                                for (let enemySlot in targetsGotHit) {
+                                    const enemyTurn = enemyBasedTurns[enemySlot];
+                                    targetsHitArray.push(enemyTurn);
+                                }
+                                updateBuffBatchTargets(battleData,targetsHitArray,balefireSheet);
+
+                                const preObject = this.preObject2 ??= {pointsGained: 1,sourceString:"Allied Entity attacked target in Zone"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Soul, Tempered ad Mortem/Talent - Attack DMG end listetner, both ally/enemy",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo) {
+                            // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                            poke("mortenaxBladeQueueFUA",battleData,null)
+                            //we don't actually need anything, we're just sharing the queueFUA poke with the charge handler, this event is my way of allowing both to have the same handling
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Mortenax Blade hp change listener",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const queueTag = generalInfo.queueTag;
+                            if (queueTag != "BladeME1ExtraSkill") {return;}
+                            
+                            let ownerTurn = this.ownerTurn;
+                            actionAdvance(-0.15,ownerTurn.mortenaxBladeUltTURNEVENT,battleData,"E1: Countdown Delayed");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E1 countdown delay handler",
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.slotRef;
+        
+                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+                            const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
+                            updateBuff(battleData,targetTurn,e1Sheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E1: Enemy created while zone active debuff application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Ultimate") {return;}
+
+                            const ATKObject = generalInfo.ATKObject;
+
+                            let alreadyHasFUA = false;
+                            for (let tag of ATKObject.actionTags) {
+                                if (tag === "FUA") {
+                                    alreadyHasFUA = true;
+                                    break;
+                                }
+                            }
+
+                            if (alreadyHasFUA) {return;}
+
+                            ATKObject.actionTags.push("FUA");
+                            ATKObject.bladeME2InjectedFUA = true;
+
+                            battleActions.invalidateTargetDMGCache(battleData,sourceTurn);
+                        },
+                        "target": "enemy",
+                        "priority": -Infinity,
+                        "listenerName": "E2: FUA attack type extension",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Ultimate") {return;}
+
+                            const ATKObject = generalInfo.ATKObject;
+                            if (!ATKObject.bladeME2InjectedFUA) {return;}
+
+                            for (let i=0;i<ATKObject.actionTags.length;i++) {
+                                const currentTag = ATKObject.actionTags[i];
+
+                                if (currentTag === "FUA") {
+                                    ATKObject.actionTags.splice(i,1)
+                                    break;
+                                }
+                            }
+                            battleActions.invalidateTargetDMGCache(battleData,sourceTurn);
+                        },
+                        "target": "enemy",
+                        "priority": Infinity,
+                        "listenerName": "E2: FUA attack type extension removal",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            ownerTurn.battleValues.isReadyforE6Gain = true;
+                            //global bc it's literally any entity
+                        },
+                        "target": "enemy",
+                        "listenerName": "E6: reset e6 charge gain cooldown",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.bladeFuryActive && battleValues.isReadyforE6Gain) {
+                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"E6: Mortenax Blade lost HP"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+                                battleValues.isReadyforE6Gain = false;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E6: blade lost hp charge gain check",
+                    },
+                ],
+            },
+            {
+                "trigger": "mortenaxBladeGainCharge",
+                condition(battleData,generalInfo) {
+                    // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.charge;
+                    const maxValue = ownerTurn.rank >= 2 ? 7 : 9;
+                    valuesRef.charge = Math.min(maxValue,oldValue + pointsGained);
+                    const newValue = valuesRef.charge;
+
+                    // if (newValue === maxValue) {
+                    //     const buffSheet = this.traceBuffSheet ??= {
+                    //         "stats": [DEFShredAll],
+                    //         [DEFShredAll]: 0.20,
+                    //         "source": "Trace",
+                    //         "sourceOwner": ownerTurn.properName,
+                    //         "buffName": turnLogic[ownerTurn.properName].buffNames.traceShred,
+                    //         "durationInTurn": null,
+                    //         "duration": 1,
+                    //         "AVApplied": 0,
+                    //         "maxStacks": 1,
+                    //         "currentStacks": 1,
+                    //         "decay": false,
+                    //         "expireType": null,
+                    //         "actionTags": ["Attack"]
+                    //     }
+                    //     valuesRef.traceShredActive = true;
+                    //     updateBuff(battleData,ownerTurn,buffSheet);
+                    // }
+                    
+                    // let enteredState = false;
+                    // if (!valuesRef.enhancedActive && newValue >= 2) {
+                    //     enteredState = true;
+                    // }
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Mortenax Blade): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.mortenaxBladeChargeSum ??= 0;
+                            ownerTurn.mortenaxBladeChargeSum += valuesRef.charge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "mortenaxBladeChargeSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.mortenaxBladeChargeSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
+                    }
+
+                    poke("mortenaxBladeQueueFUA",battleData,null)
+                    // if (enteredState && !valuesRef.enhancedQueued) {
+                    //     valuesRef.enhancedQueued = true;
+
+                    //     const queueObject = this.queueObject ??= {
+                    //         name: this.listenerName + ": Reached 2+ Syzygy",
+                    //         priority: priorityList.ability.CharacterBuffSelf,
+                    //         queueTag: "QueuedInsert",
+
+                    //         actionCall: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
+                    //         action: "Insert", 
+                    //         points: 0,
+                    //         energyCost: null,
+                    //         // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    //         // specialEnergyPoke: "SW999GainMMR",
+                            
+                    //         isEnhanced: false,
+                    //         isTieBreaker: false,
+                    //         isExtraTurn: false,
+                    //         isInserted: true,
+                    //         skipEXDisplay: false,
+                    //         allowUlts: false,
+                    //         decrementBuffs: false,
+                    //         extraTurnHasChoice: false,
+                    //         dontKeepNextWave: false,//ults always clear out
+                    //         isAttack: false,
+                    //         isAbility: true,
+                    //         useAnyTriggers: true,
+                    //         eventTypeStartLOG: "GenericAbilityStart",
+                    //         eventTypeStart: "GenericAbilityStart",
+                    //         eventTypeEnd: "GenericAbilityEnd",
+
+                    //         properName: ownerTurn.properName,
+                    //         sourceTurn: null,
+                    //         // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                    //         target: this.target,
+                    //         poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    //         elationForcedPunchline: null,
+                    //     }
+
+                    //     queueObject.sourceTurn = ownerTurn;
+                    //     queueObject.target = [ownerTurn];
+                    //     queueInsertAbility(battleData,queueObject);
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Mortenax Blade Charge Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "mortenaxBladeQueueExit",
+                condition(battleData,generalInfo) {
+                    // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterBuffOthers,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: false,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+
+                    queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = [ownerTurn];
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Mortenax Blade Queue Exit Infinity Fury",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "mortenaxBladeQueueFUA",
+                condition(battleData,generalInfo) {
+                    // poke("mortenaxBladeQueueFUA",battleData,null);
+                    let ownerTurn = this.ownerTurn;
+
+                    const battleValues = ownerTurn.battleValues;
+                    const currentCharge = battleValues.charge;
+
+                    if (battleValues.fuaIsQueued) {return;}
+                    if (currentCharge < (ownerTurn.rank >= 2 ? 7 : 9)) {return;}
+                    if (ownerTurn.currentHP <= 1) {return;}
+                    //if the FUA is already queued, if we don't have enough charge, or if we have invalid HP, then abort the queue before we even queue it.
+
+                    battleValues.fuaIsQueued = true;
+
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.turn.Default,
+                        queueTag: "BladeME1ExtraSkill",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeSkillFUA,
+                        action: "Skill", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: true,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        isInserted: false,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "SkillStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        abortCheck: turnLogic[ownerTurn.properName].skillFunctions.bladeCheckHPFUA,
+
+                        target: this.target,
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+
+                        elationForcedPunchline: null,
+                    }
+
+                    queueObject.sourceTurn = ownerTurn;
+                    // queueObject.target = [ownerTurn];
+                    queueExtraTurn(battleData,queueObject);
+                    // queueInsertAbility(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Mortenax Blade Queue FUA Skill",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const isEnhanced = ownerTurn.battleValues.bladeFuryActive;
+
+                        if (isEnhanced) {
+                            const queueObject = this.queueObjectEnh ??= {
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedUltimate",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimateEnh,
+                                action: "Ultimate", 
+                                points: 0,
+                                energyCost: ownerTurn.maxEnergy,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+    
+                                isEnhanced: true,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: true,//ults always clear out
+                                isAttack: true,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "UltimateStart",
+                                // eventTypeStart: "UltimateStart",
+                                // eventTypeEnd: "UltimateEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: this.target,
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.UltimateEnh,
+    
+                                elationForcedPunchline: null,
+                            }
+                            // queueObject.target = [ownerTurn];
+                            queueObject.sourceTurn = ownerTurn;
+                            queueUltimate(battleData,queueObject);
+                        }
+                        else {
+                            const queueObject = this.queueObject ??= {
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedUltimate",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
+                                action: "Ultimate", 
+                                points: 0,
+                                energyCost: ownerTurn.maxEnergy,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+    
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: true,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "UltimateStart",
+                                // eventTypeStart: "UltimateStart",
+                                // eventTypeEnd: "UltimateEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: this.target,
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+    
+                                elationForcedPunchline: null,
+                            }
+                            queueObject.target = [ownerTurn];
+                            queueObject.sourceTurn = ownerTurn;
+                            queueUltimate(battleData,queueObject);
+                        }
+                    }
+                },
+                "target": "Self",
+                "listenerName": "Mortenax Blade - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.bladeTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Mortenax Blade Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "overflowEnergy": 0,
+            "hasNilityCharacters": false,
+            "charge": 0,
+            "bladeFuryActive": false,
+            "fuaIsQueued": false,
+            "isReadyforE6Gain": true,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "balefire": "Balefire Bind (Blade)",
+            "infiniteFury": "Infinite Fury (Ultimate)",
+            "zoneDMG": "Heart, Refined ad Infinitum",
+            "zoneDMGUlt": "Heart, Refined ad Infinitum (>1 Nihility)",
+            "zoneDMGSelf": "Heart, Refined ad Infinitum (Alone)",
+            "balefireE1": "E1: Ere My Death, I Stood Unmade",
+            "e2FUA": "E2: Ash Was My Heart, Yet the Flame Stayed",
+        },
+        "characterValuesBattle": {},
+    },
     "Pela": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -14838,7 +16116,7 @@ const turnLogic = {
                     let values = ATKObjects.swBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -14881,7 +16159,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
                     const tags = ["All","Skill","Ice"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -14982,7 +16260,7 @@ const turnLogic = {
                     let values = ATKObjects.silverwolfUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Ice"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -15046,7 +16324,7 @@ const turnLogic = {
                     let values = ATKObjects.pelaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Ice"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -15103,7 +16381,7 @@ const turnLogic = {
                 if (!ATKObjects.pelaE6DMGREF) {
                     const scalar = "ATK";
                     const tags = ["All","Ice"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -15482,7 +16760,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","FUA","Attack"];
+                    const actionTags = ["All","Basic","FUA","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -15532,7 +16810,7 @@ const turnLogic = {
                     
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Skill","Numby","FUA","Attack","Summon"];
+                    const actionTags = ["All","Skill","Numby","FUA","Attack","Summon"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.topazSkillATKOBJECT = {
                         multipliers: {
@@ -15603,7 +16881,7 @@ const turnLogic = {
                     
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Numby","FUA","Attack","Summon"];
+                    const actionTags = ["All","Numby","FUA","Attack","Summon"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.topazNumbyAutoATKOBJECT = {
                         multipliers: {
@@ -16301,7 +17579,7 @@ const turnLogic = {
                     let values = ATKObjects.archerBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -16360,7 +17638,7 @@ const turnLogic = {
                     let values = ATKObjects.archerFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Quantum"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -16404,7 +17682,7 @@ const turnLogic = {
                     let values = ATKObjects.archerSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Skill","Quantum"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -16483,7 +17761,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -16577,7 +17855,7 @@ const turnLogic = {
                     let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -17113,7 +18391,7 @@ const turnLogic = {
                     let values = ATKObjects.seeleBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -17156,7 +18434,7 @@ const turnLogic = {
                     let values = ATKObjects.seeleSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Skill","Quantum"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -17236,7 +18514,7 @@ const turnLogic = {
 
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -17284,7 +18562,7 @@ const turnLogic = {
                     let values = ATKObjects.seeleTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -17433,8 +18711,7 @@ const turnLogic = {
                                 const logicRef = turnLogic[ownerTurn.properName];
     
                                 this.E1SUB80SHEET = {
-                                    "stats": null,
-                                    "statsOnHit": [DEFShredAll,CritRateBase],
+                                    "stats": [DEFShredAll,CritRateBase],
                                     [DEFShredAll]: 0.20,
                                     [CritRateBase]: 0.15,
                                     "source": "E1",
@@ -17447,6 +18724,7 @@ const turnLogic = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": null,
+                                    "actionTags": ["All"],
                                     // "removeOnDeath": true,
                                 }
                             }
@@ -18014,7 +19292,7 @@ const turnLogic = {
                     let values = ATKObjects.ratioBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18085,7 +19363,7 @@ const turnLogic = {
                     let values = ATKObjects.ratioFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Imaginary"];
-                    const actionTags = ["FUA","Attack","RatioFUA"];
+                    const actionTags = ["All","FUA","Attack","RatioFUA"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18132,7 +19410,7 @@ const turnLogic = {
                     let values = ATKObjects.ratioSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Skill","Imaginary"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18222,7 +19500,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18317,7 +19595,7 @@ const turnLogic = {
                 if (!ATKObjects.ratioE2DMGREF) {
                     const scalar = "ATK";
                     const tags = ["All","Imaginary"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18471,7 +19749,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
         
                             const traceDebuffDMG = this.traceDebuffDMG ??= {
-                                "statsOnHit": [DamageAll],
+                                "stats": [DamageAll],
                                 [DamageAll]: 0.10,
                                 "source": "E1",
                                 "sourceOwner": ownerTurn.properName,
@@ -18482,7 +19760,8 @@ const turnLogic = {
                                 "maxStacks": 5,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             }
         
                             let targetTurn = generalInfo.targetTurn;
@@ -18812,7 +20091,7 @@ const turnLogic = {
                     let values = ATKObjects.tingyunBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Lightning"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18940,7 +20219,7 @@ const turnLogic = {
                     let values = ATKObjects.benedictionDMGADDEDREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -18988,7 +20267,7 @@ const turnLogic = {
                     let values = ATKObjects.talentDMGADDEDREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19441,7 +20720,7 @@ const turnLogic = {
                     let values = ATKObjects.bronyaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -19494,7 +20773,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.bronyaFUABasic = {
@@ -20046,7 +21325,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20788,7 +22067,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -20926,7 +22205,7 @@ const turnLogic = {
                     let values = ATKObjects.tribbieFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","FUA","Quantum"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -21022,7 +22301,7 @@ const turnLogic = {
 
                     const scalar = "HP";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -21163,7 +22442,7 @@ const turnLogic = {
                     let values = ATKObjects.tribbieUltimateREFVALUES;
                     const scalar = "HP";
                     const tags = ["All","Quantum"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -21627,7 +22906,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -21913,7 +23192,7 @@ const turnLogic = {
                 if (!ATKObjects.ultAddedDMG) {
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22246,7 +23525,7 @@ const turnLogic = {
                     let values = ATKObjects.astaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Fire"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22290,7 +23569,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.astaTraceDOTSHEET = {
@@ -22348,7 +23627,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.astaSkillATKOBJECT = {
                         multipliers: {
@@ -22447,7 +23726,7 @@ const turnLogic = {
                     let values = ATKObjects.astaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -22897,7 +24176,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Ice"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -23166,7 +24445,7 @@ const turnLogic = {
 
                 const genInfoNew = logicRef.ruanTalentBreakInstanceObject ??= {
                     ATKObject: {
-                        actionTags: ["Break"],
+                        actionTags: ["All","Break"],
                         compositeCacheTag: "Break" + "RuanReBreak"
                     }
                 }
@@ -23203,7 +24482,6 @@ const turnLogic = {
                     const buffSheet = this.ruanTalentSPDSheet ??= {
                         "stats": [SPDP],
                         [SPDP]: values[0],
-                        "statsOnHit": null,
                         "source": "Talent",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.talentSPD,
@@ -23225,7 +24503,6 @@ const turnLogic = {
                     const buffSheet2 = this.ruanTraceBESHEET ??= {
                         "stats": [DamageBreak],
                         [DamageBreak]: 0.20,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.traceBE,
@@ -23279,7 +24556,7 @@ const turnLogic = {
                             if (!this.ruanmeiE2ATKSHEET) {
                                 const buffNames = turnLogic[ownerTurn.properName].buffNames;
                                 this.ruanmeiE2ATKSHEET = {
-                                    "statsOnHit": [ATKP],
+                                    "stats": [ATKP],
                                     [ATKP]: 0.40,
                                     "source": "E2",
                                     "sourceOwner": ownerTurn.properName,
@@ -23290,7 +24567,8 @@ const turnLogic = {
                                     "maxStacks": 1,
                                     "currentStacks": 1,
                                     "decay": false,
-                                    "expireType": null
+                                    "expireType": null,
+                                    "actionTags": ["All"],
                                 }
                             }
                             const buffSheet = this.ruanmeiE2ATKSHEET;
@@ -23364,7 +24642,7 @@ const turnLogic = {
                             const isBroken =  generalInfo.isBroken;
         
                             const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
-                                ATKObject: {actionTags: ["Break"]}
+                                ATKObject: {actionTags: ["All","Break"]}
                             }
         
                             battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
@@ -23730,7 +25008,7 @@ const turnLogic = {
                     let values = ATKObjects.sparkleBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -23759,7 +25037,7 @@ const turnLogic = {
                 updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
-            applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {//duration change/expire added   //RES PEN added for trace
+            applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 
@@ -23817,7 +25095,7 @@ const turnLogic = {
                 
                 updateBuff(battleData,targetTurn,buffSheet);
             },
-            sparkleAdvance(battleData,target,sourceTurn) {//no changes
+            sparkleAdvance(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -23889,7 +25167,6 @@ const turnLogic = {
 
                 const buffNAMES = logicRef.buffNames;
                 let buffName = buffNAMES.cipher;
-                let buffName2 = buffNAMES.redHerring;
                 let buffName3 = buffNAMES.dreamdiver;
 
                 if (!ATKObjects.sparkleUltimateCIPHERSHEET) {
@@ -23907,229 +25184,44 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": "EndTurn",
-                        "expireFunction": logicRef.skillFunctions.cipherExpired,
-                        "expireParam": null,
+                        // "expireFunction": logicRef.skillFunctions.cipherExpired,
+                        // "expireParam": null,
                         "removeOnDeath": true,
                     }
                 }
                 let buffSheet = ATKObjects.sparkleUltimateCIPHERSHEET;
+                const allyPositions = battleData.allyPositions;
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet)
                 
-                let dreamDiverFound = false;
-                const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
-                for (let targetTurn of battleData.allyPositions) {
-                    const currentBuffs = targetTurn.buffsObject;
-                    let alreadyHasHerring = currentBuffs[buffName2];
-                    let alreadyHasDiver = currentBuffs[buffName3];
-                    if (alreadyHasDiver) {dreamDiverFound = true;}//for e6
-                    
-                    buffSheet.expireParam = currentBuffs[buffName] ? null : {targetTurn:targetTurn.name,sourceTurn:sourceTurn.name};//no need to construct the expire param if they already have it
-                    //ALSO, needs to be a slot that passes on the param, bc this is cyclic in the log otherwise
-                    updateBuff(battleData,targetTurn,buffSheet);
-
-                    if (alreadyHasHerring) {
-                        recreate(battleData,targetTurn,sourceTurn);
-                        //then remake the herring buff object
-                        //also set a trigger that will remake it again when the cipher buff expires if it ever does
+                if (e6) {
+                    let dreamDiverFound = false;
+                    for (let targetTurn of allyPositions) {
+                        const currentBuffs = targetTurn.buffsObject;
+                        let alreadyHasDiver = currentBuffs[buffName3];
+                        if (alreadyHasDiver) {
+                            dreamDiverFound = true;
+                            break;
+                        }//for e6
                     }
-                }
 
-                if (e6 && dreamDiverFound) {
-                    let diver = logicRef.skillFunctions.applyDreamdiver;
-                    for (let targetTurn of battleData.allyPositions) {
-                        diver(battleData,targetTurn,sourceTurn,e6);
-                        //the phrasing here technically implies we should look for people with cipher but like
-                        //bro we just ulted, everyone has cipher, who are we shitting rn. Just give it to em.
+                    if (dreamDiverFound) {
+                        let diver = logicRef.skillFunctions.applyDreamdiver;
+                        for (let targetTurn of battleData.allyPositions) {
+                            diver(battleData,targetTurn,sourceTurn,e6);
+                            //the phrasing here technically implies we should look for people with cipher but like
+                            //bro we just ulted, everyone has cipher, who are we shitting rn. Just give it to em.
+                        }
                     }
-                    //my fear is that this is like cipher's dmg increase that is tied to red herring
-                    //bc if it is, jesus FUCKING christ that will be annoying. Not that I can't account
-                    //for it bc I absolutely can, I just don't want to lmfao. No way to know though without e6 on-hand
-                    //so we'll see later if some e6-haver complains.
                 }
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            cipherExpired(battleData,param) {
-                const namedTurns = battleData.nameBasedTurns;
-                let targetTurn = namedTurns[param.targetTurn];
-                let sourceTurn = namedTurns[param.sourceTurn];
-                let characterName = sourceTurn.properName;
-
-                let logicRef = turnLogic[characterName];
-                let buffName2 = logicRef.buffNames.redHerring;
-                let alreadyHasHerring = targetTurn.buffsObject[buffName2];
-
-                if (alreadyHasHerring) {//if herring is on this character, redo the herring buff to remove the bonus dmg added from cipher
-                    logicRef.skillFunctions.sparkleRecreateHerringBuff(battleData,targetTurn,sourceTurn);
-                }
-            },
-            sparkleRecreateHerringBuff(battleData,currentSlot,ownerTurn) {
-                //ideally this should remain silent in logging when remade since red herring existed already, we just don't have a really correct way to have two separate buffs where one scales the values of the other
-                //so this is my super hacky fix for that, for now. Not sure how best to do this but I can look at it again later.
-                let silent = true;
-                let isRedone = true;
-                
-
-                turnLogic.Sparkle.skillFunctions.sparkleCreateHerringBuff(battleData,ownerTurn,null,silent,isRedone,currentSlot);
-            },
-            sparkleCreateHerringBuff(battleData,sourceTurn,totalChange,silent,isRedone,currentSlot) {
-                const logicRef = turnLogic[sourceTurn.properName];
-                const ATKObjects = logicRef.ATKObjects;
-
-                let characterName = sourceTurn.properName;
-                
-                // let skillPathing = characters[characterName].skills;
-                let skillRef = ATKObjects.sparkleCreateHerringBuffREF ??= ATKObjects.Talent["Red Herring"].variant1;
-                let values = ATKObjects.sparkleCreateHerringBuffREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                const buffNames = turnLogic[characterName].buffNames;
-                let buffName = buffNames.redHerring;
-                let cipherName = buffNames.cipher;
-                const buffsObject = sourceTurn.buffsObject;
-                if (!ATKObjects.sparkleCreateHerringBuffDMGSHEET) {
-                    let e2 = sourceTurn.rank >= 2;
-                    ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF = {
-                        "stats": null,
-                        "source": "Talent",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffNames.talentFakeDebuff,
-                        "durationInTurn": null,
-                        "duration": 0,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "removeOnDeath": true,
-                        "isDebuff": true,
-                    }
-                    ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown = {
-                        "stats": null,
-                        "source": "Talent",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffNames.redHerringCountdown,
-                        "durationInTurn": 3,
-                        "duration": 2,
-                        "AVApplied": 0,
-                        "maxStacks": 3,
-                        "currentStacks": totalChange,
-                        "decay": false,
-                        "expireType": "EndTurn",
-                        "removeOnDeath": true,
-                        expireFunction: logicRef.skillFunctions.talentZoneExpired,
-                        expireParam: {
-                            buffName,
-                            slot:sourceTurn.name,
-                            fakeName: ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF},
-                    }
-                    
-                    let skillRef2 = ATKObjects.sparkleUltimateREF ??= ATKObjects.Ultimate["The Hero with a Thousand Faces"].variant1;
-                    let values2 = ATKObjects.sparkleUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
-                    
-                    ATKObjects.sparkleCreateHerringBuffDMGSHEET = {
-                        "stats": [DEFShredAll],
-                        "statsOnHit": [VulnAll],
-                        [VulnAll]: 0,
-                        [DEFShredAll]: e2 ? 0.10 : 0,//the e2 def shred is independent of cipher existing or not, purely related to e2 alone so we can give a static add here
-                        "source": "Talent",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffName,
-                        "durationInTurn": null,
-                        "duration": 0,
-                        "AVApplied": 0,
-                        "maxStacks": 3,
-                        "currentStacks": totalChange,
-                        "decay": false,
-                        "expireType": null,
-                        // "removeOnDeath": true,
-                    }
-                }
-
-                let values2 = ATKObjects.sparkleUltimateREFVALUES
-
-                const buffSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEET;
-                // const redoName = turnToRedo ? turnToRedo.properName : null;
-
-                const noCipherValue = values[1];
-                const fullCipherValue = values[1] + values2[2];
-
-                const countdown = ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown;
-
-                const allyTargets = battleData.allAllyTargetsArray;
-                
-                const buffCheck = buffsObject[countdown.buffName];
-
-                if (buffCheck) {
-                    const stackCheck = buffCheck.currentStacks === buffCheck.maxStacks;
-                    
-                    if (isRedone) {
-                        buffSheet.currentStacks = buffCheck.currentStacks;
-
-                        if (currentSlot) {
-                            removeBuff(battleData,currentSlot,buffSheet,true,null,false,true);
-                            const hasCipherBuff = currentSlot.buffsObject[cipherName];
-                            buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                            
-                            updateBuff(battleData,currentSlot,buffSheet);
-                        }
-                        else {
-                            for (let ally of allyTargets) {
-                                removeBuff(battleData,ally,buffSheet,true,null,false,true);
-                                const hasCipherBuff = ally.buffsObject[cipherName];
-                                buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                                
-                                updateBuff(battleData,ally,buffSheet);
-                            }
-                        }
-
-                        return;
-                    }
-                    else if (!stackCheck) {
-                        buffSheet.currentStacks = totalChange;
-                        for (let ally of allyTargets) {
-                            const hasCipherBuff = ally.buffsObject[cipherName];
-                            buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                            updateBuff(battleData,ally,buffSheet);
-                        }
-                        //the reason we don't care about updating the vulnAll value here is bc it already exists on the target
-                        //w/e buff that exists if reapplied will keep the values it started with, so if we just add more stacks
-                        //it doesn't redo the value it has, so no removal needs to happen here p much ever
-                        //since we already handled updating the vuln value in the isRedone check
-                        updateBuff(battleData,sourceTurn,countdown);
-                    }
-                    else {
-                        //since if we're already at max stacks, the only thing that changes is the duration getting refreshed,
-                        //we're gonna skip the buff handler here entirely, and just handle duration with direct assignment
-                        buffCheck.duration = sourceTurn.turnState ? 3 : 2;
-                    }
-                }
-                else {
-                    buffSheet.currentStacks = totalChange;
-                    for (let ally of allyTargets) {
-                        const hasCipherBuff = ally.buffsObject[cipherName];
-                        buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                        updateBuff(battleData,ally,buffSheet);
-                    }
-                    
-                    updateBuff(battleData,sourceTurn,countdown);
-
-                    sourceTurn.battleValues.talentZoneActive = true;
-
-                    const fakeSheet = ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
-                    const enemyPositions = battleData.enemyPositions;
-                    updateBuffBatchTargets(battleData,enemyPositions,fakeSheet,false,null,true)
-                }
-            },
             talentZoneExpired(battleData,expireParam) {
                 const sparkleTurn = battleData.nameBasedTurns[expireParam.slot];
-                const buffSheet = sparkleTurn.buffsObject[expireParam.buffName]
+                // const buffSheet = sparkleTurn.buffsObject[expireParam.buffName]
 
                 sparkleTurn.battleValues.talentZoneActive = false;
-                const allyTargets = battleData.allAllyTargetsArray;
-
-                removeBuffFromBatch(battleData,allyTargets,buffSheet);
-
-                
                 const fakeObject = expireParam.fakeName;
 
                 const enemyPositions = battleData.enemyPositions;
@@ -24199,10 +25291,12 @@ const turnLogic = {
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     const listener4 = passiveListeners[3];
                     addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
                     if (rank >= 1) {
-                        const listener5 = passiveListeners[4];
-                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
@@ -24287,8 +25381,66 @@ const turnLogic = {
         
         
                                 let totalChange = Math.min(3, fullChange);//since the bonus caps out at 3 stacks we limit it to a maximum of 3 total spent that can stack here
-                                const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
-                                sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
+
+                                const logicRef = turnLogic[characterName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                battleValues.talentZoneActive = true;
+
+                                if (!ATKObjects.sparkleFigmentDEBUFFSHEET) {
+                                    const buffNames = logicRef.buffNames;
+                                    ATKObjects.sparkleFigmentDEBUFFSHEET = {
+                                        "stats": [DEFP],
+                                        [DEFP]: ownerTurn.rank >= 2 ? -0.10 : 0,
+                                        "source": "Talent",
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffNames.figmentDebuff,
+                                        "durationInTurn": null,
+                                        "duration": 0,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "isDebuff": true,
+                                    }
+
+                                    ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown = {
+                                        "stats": null,
+                                        "source": "Talent",
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffNames.redHerringCountdown,
+                                        "durationInTurn": 3,
+                                        "duration": 2,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "removeOnDeath": true,
+                                        expireFunction: logicRef.skillFunctions.talentZoneExpired,
+                                        expireParam: {
+                                            slot:sourceTurn.name,
+                                            fakeName: ATKObjects.sparkleFigmentDEBUFFSHEET},
+                                    }
+                                }
+                                const countdownSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown;
+                                countdownSheet.currentStacks = totalChange;
+                                updateBuff(battleData,ownerTurn,countdownSheet);
+
+                                const debuffSheet = ATKObjects.sparkleFigmentDEBUFFSHEET;
+                                // const debuffName = debuffSheet.buffName;
+
+                                const enemyPositions = battleData.enemyPositions;
+                                if (!enemyPositions.length) {return;}
+                                debuffSheet.currentStacks = totalChange;
+                                // const debuffCheck = enemyPositions[0].buffsObject[debuffName];
+                                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet,false,null
+                                    // ,debuffCheck
+                                )
+
+                                // const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
+                                // sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
         
                                 const dreamDiverBuffName = this.dreamName ??= turnLogic[ownerTurn.properName].buffNames.dreamdiver;
                                 if (sourceTurn.buffsObject[dreamDiverBuffName]) {
@@ -24306,12 +25458,95 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             if (!ownerTurn.battleValues.talentZoneActive) {return;}
         
-        
-                            let targetTurn = generalInfo.slotRef;
-        
-                            let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
-        
-                            updateBuff(battleData,targetTurn,buffSheet);
+                            const countdownName = this.countdownName ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown.buffName;
+                            const currentStacks = ownerTurn.buffsObject[countdownName].currentStacks;
+
+                            if (currentStacks) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                const debuffSheet = ATKObjects.sparkleFigmentDEBUFFSHEET;
+                                debuffSheet.currentStacks = currentStacks;
+
+                                let targetTurn = generalInfo.slotRef;
+                                updateBuff(battleData,targetTurn,buffSheet);
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Talent vuln(fake) application for new enemies added to field",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (ownerTurn.battleValues.talentZoneActive) {
+                                const cipherName = this.cipherName ??= turnLogic[ownerTurn.properName].buffNames.cipher;
+                                const sourceBuffs = sourceTurn.buffsObject;
+                                const sourceHasCipher = sourceBuffs[cipherName];
+
+                                const countdownName = this.countdownName ??= turnLogic[ownerTurn.properName].buffNames.redHerringCountdown;
+                                const vulnStacks = ownerTurn.buffsObject[countdownName].currentStacks;
+
+                                if (!ownerTurn.sparkleFigmentVulnValues) {
+                                    const logicRef = turnLogic[ownerTurn.properName];
+                                    const ATKObjects = logicRef.ATKObjects;
+
+                                    let skillRef = ATKObjects.sparkleCreateHerringBuffREF ??= ATKObjects.Talent["Red Herring"].variant1;
+                                    let values = ATKObjects.sparkleCreateHerringBuffREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                                    let skillRef2 = ATKObjects.sparkleUltimateREF ??= ATKObjects.Ultimate["The Hero with a Thousand Faces"].variant1;
+                                    let values2 = ATKObjects.sparkleUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,ownerTurn);
+
+                                    const talentVulnValue = values[1];
+                                    const ultVulnValue = values2[2];
+
+                                    ownerTurn.sparkleFigmentVulnValues = [talentVulnValue,ultVulnValue];
+
+                                    ownerTurn.sparkleOnHitVULNSHEET = {
+                                        "stats": [VulnAll],
+                                        [VulnAll]: 0,
+                                        "source": "Talent",
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": logicRef.buffNames.figmentVuln,
+                                        "durationInTurn": null,
+                                        "duration": 0,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                const vulnValues = ownerTurn.sparkleFigmentVulnValues;
+
+                                const buffSheet = ownerTurn.sparkleOnHitVULNSHEET;
+
+                                const buffCheck = sourceBuffs[buffSheet.buffName];
+                                const currentVulnValue = (vulnValues[0] + (sourceHasCipher ? vulnValues[1] : 0)) * vulnStacks;
+
+                                if (buffCheck) {
+                                    const activeVulnValue = buffCheck[VulnAll];
+                                    if (activeVulnValue === currentVulnValue) {return;}
+                                    removeBuff(battleData,sourceTurn,buffCheck,true,null,false,true);
+                                    buffSheet[VulnAll] = currentVulnValue;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else {
+                                    buffSheet[VulnAll] = currentVulnValue;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            }
+                            else {
+                                //if we ever reach a point where the figment is NOT active but somehow the on-hit vuln IS, then remove it from the ally
+                                const fakeVulnName = this.fakeVulnName ??= turnLogic[ownerTurn.properName].buffNames.figmentVuln;
+                                const buffCheck = sourceTurn.buffsObject[fakeVulnName];
+
+                                if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                            }
                         },
                         "target": "enemy",
                         "listenerName": "Talent vuln(fake) application for new enemies added to field",
@@ -24485,6 +25720,7 @@ const turnLogic = {
         "characterValues": {
             "reservePoints": 0,
             "nextSkillFree": false,
+            "talentZoneActive": false,
         },
         "useTechnique": true,
         "techniqueType": "Buff",
@@ -24492,10 +25728,10 @@ const turnLogic = {
             "nocturne": "Nocturne: Bonus ATK%",
             "redHerringCountdown": "Figment (Sparkle)",
             "e1SPD": "E1: Suspension of Disbelief",
-            "talentFakeDebuff": "Red Herring (Debuff)",
+            "figmentDebuff": "Red Herring (Debuff)",
+            "figmentVuln": "Red Herring (On-Hit Vuln)",
 
             "cipher": "Cipher",
-            "redHerring": "Red Herring",
             "dreamdiver": "Dreamdiver"
         },
         "characterValuesBattle": {},
@@ -24581,7 +25817,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.saberBasicRegATKOBJECT = {
                         multipliers: {
@@ -24623,7 +25859,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.saberSkillATKOBJECT = {
                         multipliers: {
@@ -24702,7 +25938,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.saberUltimateATKOBJECT = {
@@ -24797,7 +26033,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.saberBasicEnhancedATKOBJECT = {
                         multipliers: {
@@ -24931,7 +26167,6 @@ const turnLogic = {
 
                     const buffSheet2 = this.saberManaBurstSHEET ??= {
                         "stats": null,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.mana,
@@ -24984,7 +26219,6 @@ const turnLogic = {
                         const buffSheet = this.saberE4Sheet ??= {
                             "stats": [ResistanceWindPEN],
                             [ResistanceWindPEN]: 0.08,
-                            "statsOnHit": null,
                             "source": "E4",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e4Pen,
@@ -25099,8 +26333,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
                             const ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.name != ownerTurn.name) {return;}
                             
         
                             const overflow = generalInfo.overFill;
@@ -25118,7 +26350,7 @@ const turnLogic = {
         
         
                                 if (battleData.isLoggyLogger) {
-                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
                                 
                                     if (valuesRef.overflowEnergy > oldAmount) {
                                         ownerTurn.saberOverflowSummer ??= 0;
@@ -25140,6 +26372,7 @@ const turnLogic = {
                             poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Blessing of the Lake Overflow",
                         "ownerTurn": {},
                     },
@@ -25195,7 +26428,6 @@ const turnLogic = {
                                 this.saberSagaSixteenDaysPENSHEET = {
                                     "stats": [ResistanceWindPEN],
                                     [ResistanceWindPEN]: 0.04,
-                                    "statsOnHit": null,
                                     "source": "E4",
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": buffName,
@@ -25525,7 +26757,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25565,7 +26797,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
                     const scalar = "HP";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25684,7 +26916,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","FUA","Wind"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25709,7 +26941,7 @@ const turnLogic = {
                         isFUA: true,
                     }
 
-                    const actionTags2 = ["Heal","Talent","FUA"];
+                    const actionTags2 = ["All","Heal","Talent","FUA"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
                     ATKObjects.bladeFUAHEALOBJECT = {
                         multipliers: {
@@ -25760,7 +26992,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Ultimate","Wind"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25793,7 +27025,7 @@ const turnLogic = {
                         },
                     }
 
-                    const actionTags2 = ["Heal","Ultimate"];
+                    const actionTags2 = ["All","Heal","Ultimate"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
                     ATKObjects.bladeUltimateHEALOBJECT = {
                         multipliers: {
@@ -25864,7 +27096,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "HP";
                     const tags = ["All","Technique","Wind"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25960,7 +27192,6 @@ const turnLogic = {
                             const buffSheet = this.buffSheet ??= {
                                 "stats": [HealingIncoming],
                                 [HealingIncoming]: 0.20,
-                                "statsOnHit": null,
                                 "source": "Trace",
                                 "sourceOwner": ownerTurn.properName,
                                 "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealing,
@@ -26375,7 +27606,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Basic","Ice"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -26414,7 +27645,7 @@ const turnLogic = {
                     let values = ATKObjects.jingliuSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Skill","Ice"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -26458,7 +27689,7 @@ const turnLogic = {
                     let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Ultimate","Ice"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -26578,7 +27809,7 @@ const turnLogic = {
                     let values = ATKObjects.jingliuSkillEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
                     const tags = ["All","Skill","Ice"];
-                    const actionTags = ["Skill","Attack","JingliuEnhanced"];
+                    const actionTags = ["All","Skill","Attack","JingliuEnhanced"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27146,7 +28377,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     
@@ -27187,7 +28418,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fireflySkillRegATKOBJECT = {
@@ -27237,8 +28468,6 @@ const turnLogic = {
                         [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
                         [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
                         [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
-                        "statsOnHit": [VulnBreak],
-                        [VulnBreak]: values[0],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -27250,8 +28479,22 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
+                    ATKObjects.fireflyUltimateCOMBUSTIONSHEET2 = {
+                        "stats": [VulnBreak],
+                        [VulnBreak]: values[0],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.combustion2,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Break"]
+                    }
                     // "VulnBreak": rankParams[1] //WHY IS THIS A FUCKING VULN GOD DAMNIT
-                    //might wanna look into a statsOnHit{} that I bundle into the buff sheet for times like this, bc that is some jank shit
 
                     //E1 gives skill def shred but only to the enhanced skill
                     //so... is there a reason to bundle it anywhere else but the cumbustion buff?
@@ -27260,8 +28503,10 @@ const turnLogic = {
                     //this is probably the easiest fuckin set of eidolons I've ever done, holy shit lmao, e2 is the only remotely tricky one
                 }
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
+                let buffSheet2 = ATKObjects.fireflyUltimateCOMBUSTIONSHEET2;
 
                 updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet2);
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.combustionActive = true;
@@ -27301,7 +28546,9 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
                 logicRef.characterValuesBattle.combustionActive = false;
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
+                let buffSheet2 = ATKObjects.fireflyUltimateCOMBUSTIONSHEET2;
                 removeBuff(battleData,fireflyTurn,buffSheet);
+                removeBuff(battleData,fireflyTurn,buffSheet2);
 
                 const eventName = eventTurn.properName;
                 const nextAV = battleData.nextTurnAV;
@@ -27329,7 +28576,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fireflyBasicEnhancedATKOBJECT = {
@@ -27349,7 +28596,7 @@ const turnLogic = {
                         compositeCacheTag
                     }
 
-                    const actionTags2 = ["Heal","Basic"];
+                    const actionTags2 = ["All","Heal","Basic"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
 
                     ATKObjects.fireflyBasicEnhancedHEALOBJECT = {
@@ -27393,7 +28640,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     const characterName = sourceTurn.properName;
@@ -27415,10 +28662,9 @@ const turnLogic = {
                         compositeCacheTag,
                         valuesRef: values,
                         customMulti: logicRef.skillFunctions.pullMultiCUSTOMFIREFLY
-                        // ATKObject.customMulti(playerStats,playerStatsONHIT,hitType,ATKObject)
                     }
 
-                    const actionTags2 = ["Heal","Skill"];
+                    const actionTags2 = ["All","Heal","Skill"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
 
                     ATKObjects.fireflySkillEnhancedHEALOBJECT = {
@@ -27479,7 +28725,7 @@ const turnLogic = {
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
-            pullMultiCUSTOMFIREFLY(sourceTurn,targetTurn,dmgNeedsElationComposite,table,tableONHIT,hitType,ATKObject) {
+            pullMultiCUSTOMFIREFLY(sourceTurn,targetTurn,dmgNeedsElationComposite,table,hitType,ATKObject) {
                 // console.log("multi reached")
                 const totalBreak = Math.min(3.6,table[DamageBreak]);
                 //unbelievably, while I thought I'd need to redo this, it really only looks at base stat table break effect, SUM, no action tags can factor here.
@@ -27505,7 +28751,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fireflyTechATKObject = {
                         multipliers: {
@@ -27960,6 +29206,7 @@ const turnLogic = {
         "buffNames": {
             "coreOverload": "Module γ: Core Overload",
             "combustion": "Complete Combustion",
+            "combustion2": "Complete Combustion (Break Vuln)",
             "implant": "Fyrefly Type-IV: Deathstar Overload",
             "techImplant": "Δ Order: Meteoric Incineration"
         },
@@ -28046,7 +29293,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hookBasicRegATKOBJECT = {
                         multipliers: {
@@ -28088,7 +29335,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hookSkillATKOBJECT = {
                         multipliers: {
@@ -28130,7 +29377,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack","HookEnhSkill"];
+                    const actionTags = ["All","Skill","Attack","HookEnhSkill"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hookSkillATKOBJECT2 = {
                         multipliers: {
@@ -28174,7 +29421,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const rank = sourceTurn.rank;
                     const isE2 = rank >= 2;
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
@@ -28231,7 +29478,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.hookUltimateATKOBJECT = {
@@ -28274,7 +29521,7 @@ const turnLogic = {
 
                     const scalar = "ATK";
                     const tags = ["All","Fire"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -28299,7 +29546,7 @@ const turnLogic = {
                         compositeCacheTag
                     }
 
-                    const actionTags2 = ["Heal","Talent"];
+                    const actionTags2 = ["All","Heal","Talent"];
                     const compositeCacheTag2 = actionTags2 + allyTurn.properName;
                     ATKObjects.hookTalentHealHEALOBJECT ??= {
                         multipliers: {
@@ -28349,7 +29596,7 @@ const turnLogic = {
                     let values = ATKObjects.hookTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -28400,7 +29647,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.hookTechDOTSHEET = {
@@ -28792,7 +30039,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.rmcBasicATKOBJECT = {
                         multipliers: {
@@ -28832,10 +30079,10 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack","Joint"];
+                    const actionTags = ["All","Basic","Attack","Joint"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
-                    const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
+                    const actionTags2 = ["All","Basic","Attack","Joint","Summon","Memosprite"];
                     const compositeCacheTag2 = tags + actionTags2 + sourceTurn.properName;
 
                     ATKObjects.rmcBasicEnhancedATKOBJECT = {
@@ -28903,7 +30150,7 @@ const turnLogic = {
                 if (summonUp) {
                     if (!ATKObjects.rmcSkillMemHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                        const actionTags = ["Heal","Skill"];
+                        const actionTags = ["All","Heal","Skill"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.rmcSkillMemHEALOBJECT = {
@@ -29063,7 +30310,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
@@ -29277,7 +30524,10 @@ const turnLogic = {
 
                 if (!ATKObjects.rmcUltimateATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
-                    let values = ATKObjects.rmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    let values = ATKObjects.rmcUltimateREFVALUES ??= [
+                        2.25,
+                        0.4
+                      ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     const scalar = "ATK";
                     // const tags = ["All","Basic","Lightning"];
@@ -29290,7 +30540,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","Ultimate"];
+                    const actionTags = ["All","Attack","Ultimate"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.rmcUltimateATKOBJECT = {
                         multipliers: {
@@ -29344,7 +30594,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "ATK";
                     const tags = ["All","Technique","Ice"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29597,7 +30847,6 @@ const turnLogic = {
                         name: "rmcMemosprite",
                         
                         statTable: rmcMenuStats,
-                        statTableONHIT: new Array(greatTableSize).fill(0),
                         buffsObject: {},
                         teamDebuffs: {},
                         buffsStartTurn: [],
@@ -30024,7 +31273,7 @@ const turnLogic = {
                     // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     const overrideATKData = {
@@ -30072,7 +31321,7 @@ const turnLogic = {
                 if (summonUp) {
                     if (!ATKObjects.aggySkillGarmentHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                        const actionTags = ["Heal","Skill"];
+                        const actionTags = ["All","Heal","Skill"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.aggySkillGarmentHEALOBJECT = {
@@ -30118,8 +31367,8 @@ const turnLogic = {
                 const scalar = "ATK";
                 const tags = ["All","Basic","Lightning"];
                 
-                const actionTags = ["Basic","Attack","Joint"];
-                const actionTags2 = ["Basic","Attack","Joint","Summon","Memosprite"];
+                const actionTags = ["All","Basic","Attack","Joint"];
+                const actionTags2 = ["All","Basic","Attack","Joint","Summon","Memosprite"];
 
                 const allParams = skillRef.params;
 
@@ -30229,7 +31478,7 @@ const turnLogic = {
                     let values = ATKObjects.garmentTurnAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,aggyTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
 
                     const overrideATKData = {
                         multipliers: {
@@ -30264,7 +31513,7 @@ const turnLogic = {
                     if (!ATKObjects.aggyUltimateGarmentHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                        const actionTags = ["Heal","Ultimate"];
+                        const actionTags = ["All","Heal","Ultimate"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.aggyUltimateGarmentHEALOBJECT = {
@@ -30299,7 +31548,6 @@ const turnLogic = {
                     ATKObjects.aggyUltimateSTANCESHEET = {
                         "stats": [SPDP],
                         [SPDP]: values[0],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -30335,7 +31583,6 @@ const turnLogic = {
                         ATKObjects.aggyUltimateE6PENSHEET = {
                             "stats": [ResistanceLightningPEN],
                             [ResistanceLightningPEN]: 0.20,
-                            "statsOnHit": null,
                             "source": "E6",
                             "sourceOwner": sourceTurn.properName,
                             "buffName": buffName,
@@ -30643,7 +31890,7 @@ const turnLogic = {
                     let values = ATKObjects.aggyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Lightning"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -30685,7 +31932,7 @@ const turnLogic = {
                     let values = ATKObjects.aggyTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -31057,7 +32304,6 @@ const turnLogic = {
                         name: "aggyMemosprite",
                         
                         statTable: aggyMenuStats,
-                        statTableONHIT: new Array(greatTableSize).fill(0),
                         buffsObject: {},
                         teamDebuffs: {},
                         buffsStartTurn: [],
@@ -31511,7 +32757,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.evernightBasicATKOBJECT = {
                         multipliers: {
@@ -31552,7 +32798,7 @@ const turnLogic = {
                     if (!ATKObjects.evernightSkillEveyHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                        const actionTags = ["Heal","Skill"];
+                        const actionTags = ["All","Heal","Skill"];
                         const compositeCacheTag = actionTags + sourceTurn.properName;
 
                         ATKObjects.evernightSkillEveyHEALOBJECT = {
@@ -31718,7 +32964,6 @@ const turnLogic = {
                     ATKObjects.eveyWasSummonedDMGSHEET = {
                         "stats": [DamageAll],
                         [DamageAll]: values[0],
-                        "statsOnHit": null,
                         "source": eveyTurn.properName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffNames.eveySummonDMG,
@@ -31777,7 +33022,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + evernightTurn.properName;
                     ATKObjects.eveyTurnAttackATKOBJECT = {
                         multipliers: {
@@ -31831,7 +33076,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + evernightTurn.properName;
                     ATKObjects.eveyTurnAttackEnhancedATKOBJECT = {
                         multipliers: {
@@ -31933,7 +33178,6 @@ const turnLogic = {
                     ATKObjects.eveyDiedSPDSheet = {
                         "stats": [SPDP],
                         [SPDP]: 0.10,
-                        "statsOnHit": null,
                         "source": "Evey Death",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.eveyDiedSPD,
@@ -31970,7 +33214,6 @@ const turnLogic = {
                     ATKObjects.traceHPConsumeCritDMGSHEET = {
                         "stats": [CritDamageBase],
                         [CritDamageBase]: 0.15,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": evernightTurn.properName,
                         "buffName": logicRef.buffNames.traceCritConsume,
@@ -32028,7 +33271,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","Ultimate","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","Ultimate","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.evernightUltimateATKOBJECT = {
                         multipliers: {
@@ -32053,7 +33296,6 @@ const turnLogic = {
                     ATKObjects.evernightUltimateVulnSHEET = {
                         "stats": [VulnAll],
                         [VulnAll]: values[3],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultVuln,
@@ -32069,7 +33311,6 @@ const turnLogic = {
                     ATKObjects.evernightUltimateDMGSHEET = {
                         "stats": [DamageAll],
                         [DamageAll]: values[2],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultDMG,
@@ -32189,7 +33430,6 @@ const turnLogic = {
                     const buffSheet = this.evernightTraceDARKCRITSHEET ??= {
                         "stats": [CritRateBase],
                         [CritRateBase]: 0.35,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.traceCrit,
@@ -32255,7 +33495,6 @@ const turnLogic = {
                         const buffSheet = this.evernightE4BreakSHEET ??= {
                             "stats": [DamageBreakEfficiency],
                             [DamageBreakEfficiency]: 0.25,
-                            "statsOnHit": null,
                             "source": "E4",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e4AllyBreakEff,
@@ -32364,7 +33603,6 @@ const turnLogic = {
                                 ATKObjects.talentHPLostCRITDMGSHEET = {
                                     "stats": [CritDamageBase],
                                     [CritDamageBase]: values[1],
-                                    "statsOnHit": null,
                                     "source": "Talent",
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": logicRef.buffNames.talentHPLossCrit,
@@ -32578,7 +33816,6 @@ const turnLogic = {
                         name: "evernightMemosprite",
                         
                         statTable: evernightMenuStats,
-                        statTableONHIT: new Array(greatTableSize).fill(0),
                         buffsObject: {},
                         teamDebuffs: {},
                         buffsStartTurn: [],
@@ -32934,7 +34171,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.hyacineBasicATKOBJECT = {
                         multipliers: {
@@ -32976,7 +34213,7 @@ const turnLogic = {
                 if (!ATKObjects.hyacineSkillHEALOBJECT) {
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.hyacineSkillHEALOBJECT = {
@@ -33049,7 +34286,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + hyacineTurn.properName;
                     ATKObjects.icaTurnAttackATKOBJECT = {
                         multipliers: {
@@ -33330,7 +34567,7 @@ const turnLogic = {
                     if (!ATKObjects.hyacineIcaPassiveHEALOBJECT) {
                         // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                        const actionTags = ["Heal","MemoTalent","Memosprite"];
+                        const actionTags = ["All","Heal","MemoTalent","Memosprite"];
                         const compositeCacheTag = actionTags + icaTurn.properName;
 
                         ATKObjects.hyacineIcaPassiveHEALOBJECT = {
@@ -33400,7 +34637,7 @@ const turnLogic = {
                     const buffNames = logicRef.buffNames;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const actionTags = ["Heal","Ultimate"];
+                    const actionTags = ["All","Heal","Ultimate"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.hyacineUltHEALOBJECT = {
@@ -33440,7 +34677,6 @@ const turnLogic = {
                         "stats": [HPP,HPFlat],
                         [HPP]: values[2] + (rank>=1 ? 0.50 : 0),
                         [HPFlat]: values[3],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultHP,
@@ -33455,7 +34691,6 @@ const turnLogic = {
                     }
                     ATKObjects.hyacineUltCountdown = {
                         "stats": null,
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultCountdown,
@@ -33543,7 +34778,7 @@ const turnLogic = {
                         "removeOnDeath": true,
                     }
 
-                    const actionTags = ["Heal","Technique"];
+                    const actionTags = ["All","Heal","Technique"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.hyacineTechHealObject = {
@@ -33684,7 +34919,6 @@ const turnLogic = {
                                 this.hyacineE2SPDheet = {
                                     "stats": [SPDP],
                                     [SPDP]: 0.30,
-                                    "statsOnHit": null,
                                     "source": "Talent",
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": logicRef.buffNames.e2SPD,
@@ -33843,7 +35077,7 @@ const turnLogic = {
                             if (!this.hyacineE1HEALOBJECT) {
                                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
     
-                                const actionTags = ["Heal"];
+                                const actionTags = ["All","Heal"];
                                 const compositeCacheTag = actionTags + ownerTurn.properName;
     
                                 this.hyacineE1HEALOBJECT = {
@@ -33935,7 +35169,6 @@ const turnLogic = {
                         name: "hyacineMemosprite",
                         
                         statTable: hyacineMenuStats,
-                        statTableONHIT: new Array(greatTableSize).fill(0),
                         buffsObject: {},
                         teamDebuffs: {},
                         buffsStartTurn: [],
@@ -34299,7 +35532,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Physical"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     // const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -34451,7 +35684,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.dhptShield;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.dhptSkillShieldSHIELDSHEET = {
@@ -34504,7 +35737,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.dhptShield;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.dhptTalentSHIELDSHEET = {
@@ -34705,7 +35938,7 @@ const turnLogic = {
                     // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Souldragon","FUA","Attack","Summon"];
+                    const actionTags = ["All","Souldragon","FUA","Attack","Summon"];
                     // const compositeCacheTag = tags + actionTags + eventTurn.properName;
 
 
@@ -34758,7 +35991,7 @@ const turnLogic = {
                     // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits.length = 1;}
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Physical"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -34812,7 +36045,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.dhptShield;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.dhptUltimateSHIELDSHEET = {
@@ -34860,7 +36093,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional","Summon"];
+                    const actionTags = ["All","Additional","Summon"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -34980,7 +36213,7 @@ const turnLogic = {
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Physical"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -35536,7 +36769,7 @@ const turnLogic = {
                     let values = ATKObjects.aventurineBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "DEF";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -35667,7 +36900,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.wager;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.aventurineSkillShieldSHIELDSHEET = {
@@ -35720,7 +36953,7 @@ const turnLogic = {
                     let values = ATKObjects.aventurineFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "DEF";
                     const tags = ["All","FUA","Imaginary"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -35789,7 +37022,7 @@ const turnLogic = {
 
                     let buffName = turnLogic[characterName].buffNames.wager;
 
-                    const actionTags = ["Shield"];
+                    const actionTags = ["All","Shield"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.aventurineTraceShieldSHIELDSHEET = {
@@ -35868,7 +37101,7 @@ const turnLogic = {
                     let values = ATKObjects.archerUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "DEF";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -35907,7 +37140,7 @@ const turnLogic = {
                         "decay": false,
                         "isDebuff": true,
                         "expireType": "EndTurn",
-                        "actionTags": ["Attack"]
+                        "actionTags": ["All"]
                     }
                 }
                 const ATKObject = ATKObjects.aventurineUltimateATKOBJECT;
@@ -36500,7 +37733,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.argentiBasicATKOBJECT = {
                         multipliers: {
@@ -36542,7 +37775,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.argentiSkillATKOBJECT = {
                         multipliers: {
@@ -36590,7 +37823,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.argentiUltimateATKOBJECT = {
@@ -36707,7 +37940,7 @@ const turnLogic = {
                     
                     const scalar = "ATK";
                     const tags = ["All","Technique","Physical"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -36840,7 +38073,7 @@ const turnLogic = {
                             const hpThreshold = 0.5;
                             
                             let buffSheet = this.buffSheet ??= {
-                                "statsOnHit": [DamageAll], 
+                                "stats": [DamageAll], 
                                 [DamageAll]: 0.15,
                                 "source": "Trace",
                                 "sourceOwner": ownerTurn.properName,
@@ -36851,7 +38084,8 @@ const turnLogic = {
                                 "maxStacks": 1,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             };
         
                             if (hpRatio <= hpThreshold) {
@@ -37098,7 +38332,7 @@ const turnLogic = {
                     let values = ATKObjects.anaxaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Wind"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -37149,7 +38383,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.anaxaSkillATKOBJECT = {
                         multipliers: {
@@ -37243,7 +38477,7 @@ const turnLogic = {
                     let values = ATKObjects.anaxaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Wind"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -37891,7 +39125,7 @@ const turnLogic = {
                             }
         
                             const buffSheet = this.anaxaTraceShredSHEET ??= {
-                                "statsOnHit": [DEFShredAll],
+                                "stats": [DEFShredAll],
                                 [DEFShredAll]: 0.04,
                                 "source": "Trace",
                                 "sourceOwner": ownerTurn.properName,
@@ -37902,7 +39136,8 @@ const turnLogic = {
                                 "maxStacks": 7,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             };
                             const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
         
@@ -38167,7 +39402,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -38212,7 +39447,7 @@ const turnLogic = {
                     let values = ATKObjects.yaoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All",sourceTurn.element,"Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -38697,7 +39932,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     const rank = sourceTurn.rank;
@@ -39234,7 +40469,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -39349,7 +40584,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.sparxUltimateATKOBJECT = {
@@ -39403,7 +40638,7 @@ const turnLogic = {
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 sourceTurn.ultyQueued = false;
             },
-            pullMultiCUSTOMSPARXULT(sourceTurn,targetTurn,dmgNeedsElationComposite,table,tableONHIT,hitType,ATKObject) {
+            pullMultiCUSTOMSPARXULT(sourceTurn,targetTurn,dmgNeedsElationComposite,table,hitType,ATKObject) {
                 const values = ATKObject.valuesRef;
 
                 // console.log(values[2],dmgNeedsElationComposite,values[1])
@@ -39424,7 +40659,7 @@ const turnLogic = {
                     let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Fire","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -39591,7 +40826,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -39642,7 +40877,7 @@ const turnLogic = {
                     let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Fire","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -39783,7 +41018,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     // const e6MultiBonus = rank >= 6 ? 2 : 1;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
@@ -39846,7 +41081,7 @@ const turnLogic = {
                     
                     const scalar = "ATK";
                     const tags = ["All","Technique","Fire"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -40400,7 +41635,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -40443,7 +41678,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -40572,7 +41807,7 @@ const turnLogic = {
                     let values = ATKObjects.emcTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Lightning","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -40808,7 +42043,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     // const rank = sourceTurn.rank;
@@ -41312,7 +42547,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.sw999BasicATKOBJECT = {
@@ -41353,7 +42588,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.sw999BasicEnhATKOBJECTEarlyEnd = {//empty attack for the sake of ending triggers
@@ -41439,7 +42674,7 @@ const turnLogic = {
                     const realPENKeys2 = keyShortcut(resPENKeys,tags2);
                     const realShredKeys2 = keyShortcut(defShredKeys,tags2);
                     const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
-                    const actionTags2 = ["Elation","Attack","Basic"];
+                    const actionTags2 = ["All","Elation","Attack","Basic"];
                     const compositeCacheTag2 = tags2 + actionTags2 + sourceTurn.properName;
                     ATKObjects.sw999BasicEnhATKOBJECT01 = {//burst elation
                         multipliers: {
@@ -42049,7 +43284,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -42246,7 +43481,7 @@ const turnLogic = {
                     let values = ATKObjects.sw999TalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Imaginary","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -42323,7 +43558,7 @@ const turnLogic = {
                         const realPENKeys = keyShortcut(resPENKeys,tags);
                         const realShredKeys = keyShortcut(defShredKeys,tags);
                         const realVulnKeys = keyShortcut(vulnKeys,tags);
-                        const actionTags = ["Elation","ElationSkill","Attack"];
+                        const actionTags = ["All","Elation","ElationSkill","Attack"];
                         const compositeCacheTag = tags + actionTags + sourceTurn.properName;
     
                         // const rank = sourceTurn.rank;
@@ -42768,7 +44003,6 @@ const turnLogic = {
                             // [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
                             // [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
                             // [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
-                            "statsOnHit": null,
                             "source": "Ultimate",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": buffName,
@@ -42792,7 +44026,7 @@ const turnLogic = {
                         const realPENKeys2 = keyShortcut(resPENKeys,tags2);
                         const realShredKeys2 = keyShortcut(defShredKeys,tags2);
                         const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
-                        const actionTags2 = ["Elation","Attack","Basic"];
+                        const actionTags2 = ["All","Elation","Attack","Basic"];
                         const compositeCacheTag2 = tags2 + actionTags2 + ownerTurn.properName;
                         ATKObjects.sw999LootBoxObject = {
                             multipliers: {
@@ -43334,7 +44568,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -43425,7 +44659,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
@@ -43482,7 +44716,7 @@ const turnLogic = {
                     let values = ATKObjects.evaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
                     const tags = ["All","Physical","Elation"];
-                    const actionTags = ["Elation"];
+                    const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -43652,7 +44886,7 @@ const turnLogic = {
                     let values = ATKObjects.evaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Physical"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -43728,7 +44962,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.evaUltimateATKOBJECT = {
@@ -43819,7 +45053,7 @@ const turnLogic = {
                     let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Physical"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -43874,7 +45108,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Elation","ElationSkill","Attack"];
+                    const actionTags = ["All","Elation","ElationSkill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     

@@ -7,6 +7,7 @@ global.calcAllowedSet = new Set([
     "Black Swan",//DONE
     "Welt",//DONE
     "Acheron",//DONE
+    "Mortenax Blade",//
     //4star
     "Pela",//DONE
     

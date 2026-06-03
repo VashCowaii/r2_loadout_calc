@@ -339,6 +339,12 @@ const customDisplayValuesLog = {
     "Dr. Ratio": [//tracker done
         {valueName: "Wiseman's Folly FUA Stacks", refName: "wisemanStacks", isBattleValue: true},
     ],
+
+    "Mortenax Blade": [//tracker done
+        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true},
+        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM"},
+    ],
     
 
     
@@ -1979,6 +1985,17 @@ const defaultConditions = {
     },
     "Acheron": {
         "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Mortenax Blade": {
+        "hasEnhancedState": true,
         "Skill": {
             "type": "AND",
             "array": []

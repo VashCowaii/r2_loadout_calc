@@ -214,7 +214,7 @@ const turnLogicLightcones = {
                                     const rankParams = lcPathing[ownerRank-1];
         
                                     sourceTurn.baptismOfPureThoughCRITSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: rankParams[1],
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
@@ -226,6 +226,7 @@ const turnLogicLightcones = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
 
@@ -372,8 +373,8 @@ const turnLogicLightcones = {
                                     const rankParams = lcPathing[ownerRank-1];
         
                                     sourceTurn.ventureForthToHuntSHREDSHEET = {//TODO: long time ago I had set up decay functions for shit like this, go back and get it hooked up
-                                        "statsOnHit": [DEFShredUltimate],
-                                        [DEFShredUltimate]: rankParams[1],
+                                        "stats": [DEFShredAll],
+                                        [DEFShredAll]: rankParams[1],
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
                                         "buffName": buffName,
@@ -384,6 +385,7 @@ const turnLogicLightcones = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["Ultimate"],
                                     }
                                 }
                                 
@@ -872,7 +874,7 @@ const turnLogicLightcones = {
                                     "decay": false,
                                     "expireType": null,
                                     "isDebuff": true,
-                                    "actionTags": ["Attack"]
+                                    "actionTags": ["All"]
                                 }
                             }
                             let buffSheet = sourceTurn.worrisomBlissfulTameSTACKSHEET;
@@ -941,7 +943,7 @@ const turnLogicLightcones = {
                                 
                                 let buffName = turnLogicLightcones[lcNameRef].buffNames.critBonus;
                                 sourceTurn.cruisingStellarCRITSHEET = {
-                                    "statsOnHit": [CritRateBase],
+                                    "stats": [CritRateBase],
                                     [CritRateBase]: rankParams[0],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
@@ -952,7 +954,8 @@ const turnLogicLightcones = {
                                     "maxStacks": 5,
                                     "currentStacks": 1,
                                     "decay": false,
-                                    "expireType": null
+                                    "expireType": null,
+                                    "actionTags": ["All"],
                                 }
                             }
         
@@ -1829,7 +1832,7 @@ const turnLogicLightcones = {
 
                     const element = sourceTurn.element;
                     const tags = ["All",element];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = [];
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -2163,7 +2166,7 @@ const turnLogicLightcones = {
                             let ownerRank = ownersSlots[currentOwner.name];
                             let rankParams = lcPathing[ownerRank-1];
 
-                            const actionTags = ["Gear","Heal"];
+                            const actionTags = ["All","Gear","Heal"];
                             const compositeCacheTag = actionTags + currentOwner.properName;
                             
                             currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
@@ -2483,7 +2486,7 @@ const turnLogicLightcones = {
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
         
-                                const actionTags = ["Gear","Heal"];
+                                const actionTags = ["All","Gear","Heal"];
                                 const compositeCacheTag = actionTags + sourceTurn.properName;
                                 
                                 sourceTurn.lcWhatIsRealHealingHEALOBJECT ??= {
@@ -2777,7 +2780,7 @@ const turnLogicLightcones = {
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
     
-                                const actionTags = ["Gear","Heal"];
+                                const actionTags = ["All","Gear","Heal"];
                                 const compositeCacheTag = actionTags + currentTurn.properName;
                                 
                                 currentTurn.lcWarmthShortensNightsHEALOBJECT ??= {
@@ -3173,7 +3176,7 @@ const turnLogicLightcones = {
                                     let values = rankParams[4];
         
                                     sourceTurn.incessantRainCRITSHEET = {
-                                        "statsOnHit": [CritRateBase],
+                                        "stats": [CritRateBase],
                                         [CritRateBase]: values,
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
@@ -3185,6 +3188,7 @@ const turnLogicLightcones = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 
@@ -3516,8 +3520,8 @@ const turnLogicLightcones = {
                                 let rankParams = lcPathing[ownerRank-1];
         
                                 sourceTurn.lcLiesAlongBreezeSHREDSHEET1 = {
-                                    "stats": [DEFShredAll],
-                                    [DEFShredAll]: rankParams[2],
+                                    "stats": [DEFP],
+                                    [DEFP]: -rankParams[2],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName,
@@ -3531,8 +3535,8 @@ const turnLogicLightcones = {
                                     "isDebuff": true,
                                 }
                                 sourceTurn.lcLiesAlongBreezeSHREDSHEET2 = {
-                                    "stats": [DEFShredAll],
-                                    [DEFShredAll]: rankParams[5],
+                                    "stats": [DEFP],
+                                    [DEFP]: -rankParams[5],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName2,
@@ -3912,7 +3916,7 @@ const turnLogicLightcones = {
                                 const realShredKeys = keyShortcut(defShredKeys,tags);
                                 const realVulnKeys = keyShortcut(vulnKeys,tags);
                                 //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                                const actionTags = ["DOT"];
+                                const actionTags = ["All","DOT"];
         
                                 let buffName = turnLogicLightcones[lcNameRef].buffNames.erode;
                                 sourceTurn.patienceIsAllErodeDOTSHEET = {
@@ -4408,6 +4412,144 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {
+            "buff2": "Unarmored (LC)",
+            "buff3": "Cornered (LC)",
+        },
+    },
+    "Reforged in Hellfire": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Reforged in Hellfire listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            // console.log(generalInfo.dmgSlot)
+                            let skillType = generalInfo.dmgSlot;
+                            if (skillType != "Skill") {return;}//will only apply when these attack types happen
+        
+                            if (!sourceTurn.lcReforgedInHellfireCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let charSlot = sourceTurn.name;
+                                let ownerRank = ownersSlots[charSlot];
+
+                                let lcNameRef = "Reforged in Hellfire";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.lcReforgedInHellfireCRITSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.purgatory,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    "actionTags": ["All"],
+                                }
+                                sourceTurn.lcReforgedInHellfireCRITOwnerSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[4],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.purgatory2,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": false,
+                                    "isSourceSpecific": true,
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcReforgedInHellfireCRITSHEET;
+                            let buffSheet2 = sourceTurn.lcReforgedInHellfireCRITOwnerSHEET;
+
+                            //TODO: when targets as an array are passed through on attack abilities, come back here
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyBasedTurns = battleData.enemyBasedTurns;
+                            let fullTargetHitArray = [];
+                            for (let enemySlot in targetsGotHit) {
+                                const enemyTurn = enemyBasedTurns[enemySlot];
+                                fullTargetHitArray.push(enemyTurn);
+                            }
+
+                            updateBuffBatchTargets(battleData,fullTargetHitArray,buffSheet);
+                            updateBuffBatchTargets(battleData,fullTargetHitArray,buffSheet2);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Reforged in Hellfire purgatory controller",
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            if (!sourceTurn.lcReforgedInHellfireRegenReady) {return;}
+                            sourceTurn.lcReforgedInHellfireRegenReady = false;
+
+                            let energyRegen = 20;//this is not modified by superimposition
+                            updateEnergy(battleData,energyRegen,sourceTurn,true,"Reforged in Hellfire");
+        
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Reforged in Hellfire turn start listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        currentOwner.lcReforgedInHellfireRegenReady = true;
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Reforged in Hellfire - battlestart cooldown reset",
+            },
+        ],
+        "buffNames": {
+            "purgatory": "Purgatory (LC)",
+            "purgatory2": "Purgatory[OWNER] (LC)",
             "buff2": "Unarmored (LC)",
             "buff3": "Cornered (LC)",
         },
@@ -5258,7 +5400,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                             currentOwner.shallBeMyOwnSwordSHREDSHEET = {
                                 "stats": [DEFShredAll],
@@ -5273,7 +5415,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                         }
     
@@ -5333,7 +5475,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                             currentOwner.shallBeMyOwnSwordSHREDSHEET = {
                                 "stats": [DEFShredAll],
@@ -5348,7 +5490,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                         }
     
@@ -7422,7 +7564,7 @@ const turnLogicLightcones = {
                     sourceTurn.rankParamsLCTimeWaitsForNoOne = lcPathing[ownerRank-1];
 
                     const tags = ["All",element];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8692,7 +8834,7 @@ const turnLogicLightcones = {
                                     "expireType": "EndTurn",
                                 }
         
-                                const actionTags = ["Gear","Heal"];
+                                const actionTags = ["All","Gear","Heal"];
                                 const compositeCacheTag = actionTags + sourceTurn.properName;
         
                                 sourceTurn.thoughWorldsHealObject = {
@@ -8953,7 +9095,7 @@ const turnLogicLightcones = {
                                 
                                 let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
                                 sourceTurn.greatCosmicDMGSHEET = {
-                                    "statsOnHit": [DamageAll],
+                                    "stats": [DamageAll],
                                     [DamageAll]: rankParams[1],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
@@ -8964,7 +9106,8 @@ const turnLogicLightcones = {
                                     "maxStacks": 7,
                                     "currentStacks": 1,
                                     "decay": false,
-                                    "expireType": null
+                                    "expireType": null,
+                                    "actionTags": ["All"],
                                 }
                             }
         
@@ -9070,7 +9213,7 @@ const turnLogicLightcones = {
                                 let buffName = lcBuffNames.dmgBonus;
                                 let buffName2 = lcBuffNames.defShred;
                                 sourceTurn.lifeShouldBeCastFlamesDMGSHEET = {
-                                    "statsOnHit": [DamageAll],
+                                    "stats": [DamageAll],
                                     [DamageAll]: rankParams[2],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
@@ -9082,6 +9225,7 @@ const turnLogicLightcones = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": null,
+                                    "actionTags": ["All"],
                                 }
         
                                 sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
@@ -12636,7 +12780,7 @@ const turnLogicRelics = {
                                     // let pcRef = "4pc";
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
         
-                                    const actionTags = ["Gear","Heal"];
+                                    const actionTags = ["All","Gear","Heal"];
                                     const compositeCacheTag = actionTags + sourceTurn.properName;
         
                                     sourceTurn.relicGuardWutheringHealObject ??= {
@@ -13019,7 +13163,7 @@ const turnLogicRelics = {
                                     let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc2Debuffed;
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
                                     this.pioneerDMGDebuffedSHEET = {
-                                        "statsOnHit": [DamageAll],
+                                        "stats": [DamageAll],
                                         [DamageAll]: relicPathing[0],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13030,7 +13174,8 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 let buffSheet = this.pioneerDMGDebuffedSHEET;
@@ -13095,7 +13240,7 @@ const turnLogicRelics = {
                                     const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                     this.pioneerDMGDoubleDebuffSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[1],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13106,10 +13251,11 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                     this.pioneerDMGTripleDebuffSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[2],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13120,10 +13266,11 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                     this.pioneerDMGDoubleDebuffSHEET2 = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[1] * 2,
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13134,10 +13281,11 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                     this.pioneerDMGTripleDebuffSHEET2 = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[2] * 2,
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13148,7 +13296,8 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 const buffx2x1 = this.pioneerDMGDoubleDebuffSHEET;
@@ -13252,7 +13401,7 @@ const turnLogicRelics = {
                             const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
                             let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                             this.pioneerDMGActiveCritSHEET = {
-                                "statsOnHit": [CritRateBase],
+                                "stats": [CritRateBase],
                                 [CritRateBase]: relicPathing[0],
                                 "source": relicNameRef,
                                 "sourceOwner": null,
@@ -13263,7 +13412,8 @@ const turnLogicRelics = {
                                 "maxStacks": 1,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": "EndTurn"
+                                "expireType": "EndTurn",
+                                "actionTags": ["All"],
                             }
                         }
                         const buffSheet = this.pioneerDMGActiveCritSHEET;
@@ -13305,6 +13455,7 @@ const turnLogicRelics = {
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -13355,6 +13506,32 @@ const turnLogicRelics = {
                             "isPersonal": true,
                             "listenerName": "As Navigator Isee Sees It - ult end listener",
                         },
+                        {
+                            "trigger": "StartTurn",
+                            condition(battleData,generalInfo) {
+
+                                const sourceTurn = generalInfo.sourceTurn;
+                                const buffSheet = sourceTurn.relicIseeSeesItSHEET;
+
+                                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                                if (buffCheck) {
+                                    const currentStacks = buffCheck.currentStacks;
+                                    if (currentStacks === 1) {
+                                        removeBuff(battleData,sourceTurn,buffCheck)
+                                        return;
+                                    }
+                                    else {
+                                        buffSheet.currentStacks = -1;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                                else {return;}
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "As Navigator Isee Sees It - turn start listener",
+                        },
                     ]
                 },
                 {
@@ -13375,7 +13552,7 @@ const turnLogicRelics = {
                                 const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
                                 let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                 currentTurn.relicIseeSeesItSHEET = {
-                                    "statsOnHit": [DamageAll],
+                                    "stats": [DamageAll],
                                     [DamageAll]: relicPathing[1],
                                     "source": relicNameRef,
                                     "sourceOwner": currentTurn.properName,
@@ -13396,7 +13573,7 @@ const turnLogicRelics = {
                         }
                     },
                     "target": "self",
-                    "priority": -80,
+                    "priority": 0,
                     "listenerName": "As Navigator Isee Sees It battlestart buff application",
                     "owners": []
                 },
@@ -13424,6 +13601,8 @@ const turnLogicRelics = {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
 
+                            currentTurn.relicMasterSmithReadyToApply = true;
+
                             addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                         }
                     },
@@ -13447,7 +13626,7 @@ const turnLogicRelics = {
                                     const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                     this.relicMasterSmithCRITSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: 0.28,
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13458,7 +13637,8 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 const buffSheet = this.relicMasterSmithCRITSHEET;
@@ -13477,7 +13657,18 @@ const turnLogicRelics = {
                             },
                             "target": "self",
                             "isPersonal": true,
-                            "listenerName": "Divine-Querying Master Smith - 2pc shredded listener",
+                            "listenerName": "Divine-Querying Master Smith - 4pc shredded listener",
+                        },
+                        {
+                            "trigger": "AttackEnd",
+                            condition(battleData,generalInfo) {
+
+                                let sourceTurn = generalInfo.sourceTurn;
+                                sourceTurn.relicMasterSmithReadyToApply = true;
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Divine-Querying Master Smith - attack end litener",
                         },
                     ]
                 },
@@ -13496,6 +13687,13 @@ const turnLogicRelics = {
                         const defShredCheck = sourceSheet[DEFP] ?? 0;
                         const isReducing = defShredCheck < 0;
                         if (!isReducing) {return;}
+
+                        const sourceTurn = generalInfo.sourceTurn?.[0] ?? generalInfo.sourceTurn;
+                        if (!sourceTurn.isEnemy) {return;}//the debuff needs to be applied to an enemy entity
+
+                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                        if (!ownerTurn.relicMasterSmithReadyToApply) {return;}
+                        ownerTurn.relicMasterSmithReadyToApply = false;
 
                         if (!this.relicMasterSmithSheet) {
                             let relicNameRef = "Divine-Querying Master Smith";
@@ -13518,7 +13716,6 @@ const turnLogicRelics = {
                             }
                         }
                         const buffSheet = this.relicMasterSmithSheet;
-                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
                         buffSheet.sourceOwner = ownerTurn.properName;
 
                         const allyPositions = battleData.allyPositions;
