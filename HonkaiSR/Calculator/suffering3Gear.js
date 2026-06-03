@@ -872,7 +872,7 @@ const turnLogicLightcones = {
                                     "decay": false,
                                     "expireType": null,
                                     "isDebuff": true,
-                                    "actionTags": ["Attack"]
+                                    "actionTags": ["All"]
                                 }
                             }
                             let buffSheet = sourceTurn.worrisomBlissfulTameSTACKSHEET;
@@ -1829,7 +1829,7 @@ const turnLogicLightcones = {
 
                     const element = sourceTurn.element;
                     const tags = ["All",element];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = [];
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -2163,7 +2163,7 @@ const turnLogicLightcones = {
                             let ownerRank = ownersSlots[currentOwner.name];
                             let rankParams = lcPathing[ownerRank-1];
 
-                            const actionTags = ["Gear","Heal"];
+                            const actionTags = ["All","Gear","Heal"];
                             const compositeCacheTag = actionTags + currentOwner.properName;
                             
                             currentOwner.lcNightOfFrightHealingHEALOBJECT ??= {
@@ -2483,7 +2483,7 @@ const turnLogicLightcones = {
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
         
-                                const actionTags = ["Gear","Heal"];
+                                const actionTags = ["All","Gear","Heal"];
                                 const compositeCacheTag = actionTags + sourceTurn.properName;
                                 
                                 sourceTurn.lcWhatIsRealHealingHEALOBJECT ??= {
@@ -2777,7 +2777,7 @@ const turnLogicLightcones = {
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
     
-                                const actionTags = ["Gear","Heal"];
+                                const actionTags = ["All","Gear","Heal"];
                                 const compositeCacheTag = actionTags + currentTurn.properName;
                                 
                                 currentTurn.lcWarmthShortensNightsHEALOBJECT ??= {
@@ -3912,7 +3912,7 @@ const turnLogicLightcones = {
                                 const realShredKeys = keyShortcut(defShredKeys,tags);
                                 const realVulnKeys = keyShortcut(vulnKeys,tags);
                                 //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                                const actionTags = ["DOT"];
+                                const actionTags = ["All","DOT"];
         
                                 let buffName = turnLogicLightcones[lcNameRef].buffNames.erode;
                                 sourceTurn.patienceIsAllErodeDOTSHEET = {
@@ -5396,7 +5396,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                             currentOwner.shallBeMyOwnSwordSHREDSHEET = {
                                 "stats": [DEFShredAll],
@@ -5411,7 +5411,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                         }
     
@@ -5471,7 +5471,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                             currentOwner.shallBeMyOwnSwordSHREDSHEET = {
                                 "stats": [DEFShredAll],
@@ -5486,7 +5486,7 @@ const turnLogicLightcones = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Attack"],
+                                "actionTags": ["All"],
                             }
                         }
     
@@ -7560,7 +7560,7 @@ const turnLogicLightcones = {
                     sourceTurn.rankParamsLCTimeWaitsForNoOne = lcPathing[ownerRank-1];
 
                     const tags = ["All",element];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -8830,7 +8830,7 @@ const turnLogicLightcones = {
                                     "expireType": "EndTurn",
                                 }
         
-                                const actionTags = ["Gear","Heal"];
+                                const actionTags = ["All","Gear","Heal"];
                                 const compositeCacheTag = actionTags + sourceTurn.properName;
         
                                 sourceTurn.thoughWorldsHealObject = {
@@ -12774,7 +12774,7 @@ const turnLogicRelics = {
                                     // let pcRef = "4pc";
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
         
-                                    const actionTags = ["Gear","Heal"];
+                                    const actionTags = ["All","Gear","Heal"];
                                     const compositeCacheTag = actionTags + sourceTurn.properName;
         
                                     sourceTurn.relicGuardWutheringHealObject ??= {
@@ -13540,7 +13540,7 @@ const turnLogicRelics = {
                                 const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
                                 let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                 currentTurn.relicIseeSeesItSHEET = {
-                                    "statsOnHit": [DamageAll],
+                                    "stats": [DamageAll],
                                     [DamageAll]: relicPathing[1],
                                     "source": relicNameRef,
                                     "sourceOwner": currentTurn.properName,
