@@ -6158,8 +6158,8 @@ const turnLogic = {
                 if (!ATKObjects.genericBossBasic) {
                     let values = skillRef.params[6];
                     const scalar = "ATK";
-                    const tags = ["All"];
-                    const actionTags = ["Attack"];
+                    const tags = ["EnemyAll"];
+                    const actionTags = ["EnemyAttack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6185,26 +6185,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.genericBossBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-            },
-            genericBossBasicOLD(battleData,target,sourceTurn) {
-                let skillPathing = turnLogic[sourceTurn.enemyTypeAttack].enemyData.skills;
-                let skillRef = skillPathing["Basic ATK"]["Generic AOE ATK"].variant1;
-
-                let values = skillRef.params[6];
-                let ATKObject = {
-                    multipliers: {
-                        primary: null,
-                        blast: null,
-                        all: values[0],
-                    },
-                    scalar: "ATK",
-                    DMGTags: ["All"],
-                    isEnemy: true,
-                    allToughness: false,
-                    slot: skillRef.slot
-                }
-                
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
@@ -6499,8 +6479,8 @@ const turnLogic = {
                 if (!ATKObjects.genericBossBasic) {
                     let values = skillRef.params[6];
                     const scalar = "ATK";
-                    const tags = ["All"];
-                    const actionTags = ["Attack"];
+                    const tags = ["EnemyAll"];
+                    const actionTags = ["EnemyAttack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -6526,26 +6506,6 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.genericBossBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-            },
-            genericBossBasicOLD(battleData,target,sourceTurn) {
-                let skillPathing = turnLogic[sourceTurn.enemyTypeAttack].enemyData.skills;
-                let skillRef = skillPathing["Basic ATK"]["Generic AOE ATK"].variant1;
-
-                let values = skillRef.params[6];
-                let ATKObject = {
-                    multipliers: {
-                        primary: null,
-                        blast: null,
-                        all: values[0],
-                    },
-                    scalar: "ATK",
-                    DMGTags: ["All"],
-                    isEnemy: true,
-                    allToughness: false,
-                    slot: skillRef.slot
-                }
-                
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
