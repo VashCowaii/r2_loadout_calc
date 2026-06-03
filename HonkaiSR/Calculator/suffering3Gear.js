@@ -214,7 +214,7 @@ const turnLogicLightcones = {
                                     const rankParams = lcPathing[ownerRank-1];
         
                                     sourceTurn.baptismOfPureThoughCRITSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: rankParams[1],
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
@@ -226,6 +226,7 @@ const turnLogicLightcones = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
 
@@ -372,8 +373,8 @@ const turnLogicLightcones = {
                                     const rankParams = lcPathing[ownerRank-1];
         
                                     sourceTurn.ventureForthToHuntSHREDSHEET = {//TODO: long time ago I had set up decay functions for shit like this, go back and get it hooked up
-                                        "statsOnHit": [DEFShredUltimate],
-                                        [DEFShredUltimate]: rankParams[1],
+                                        "stats": [DEFShredAll],
+                                        [DEFShredAll]: rankParams[1],
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
                                         "buffName": buffName,
@@ -384,6 +385,7 @@ const turnLogicLightcones = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["Ultimate"],
                                     }
                                 }
                                 
@@ -941,7 +943,7 @@ const turnLogicLightcones = {
                                 
                                 let buffName = turnLogicLightcones[lcNameRef].buffNames.critBonus;
                                 sourceTurn.cruisingStellarCRITSHEET = {
-                                    "statsOnHit": [CritRateBase],
+                                    "stats": [CritRateBase],
                                     [CritRateBase]: rankParams[0],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
@@ -952,7 +954,8 @@ const turnLogicLightcones = {
                                     "maxStacks": 5,
                                     "currentStacks": 1,
                                     "decay": false,
-                                    "expireType": null
+                                    "expireType": null,
+                                    "actionTags": ["All"],
                                 }
                             }
         
@@ -3173,7 +3176,7 @@ const turnLogicLightcones = {
                                     let values = rankParams[4];
         
                                     sourceTurn.incessantRainCRITSHEET = {
-                                        "statsOnHit": [CritRateBase],
+                                        "stats": [CritRateBase],
                                         [CritRateBase]: values,
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
@@ -3185,6 +3188,7 @@ const turnLogicLightcones = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 
@@ -9091,7 +9095,7 @@ const turnLogicLightcones = {
                                 
                                 let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
                                 sourceTurn.greatCosmicDMGSHEET = {
-                                    "statsOnHit": [DamageAll],
+                                    "stats": [DamageAll],
                                     [DamageAll]: rankParams[1],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
@@ -9102,7 +9106,8 @@ const turnLogicLightcones = {
                                     "maxStacks": 7,
                                     "currentStacks": 1,
                                     "decay": false,
-                                    "expireType": null
+                                    "expireType": null,
+                                    "actionTags": ["All"],
                                 }
                             }
         
@@ -9208,7 +9213,7 @@ const turnLogicLightcones = {
                                 let buffName = lcBuffNames.dmgBonus;
                                 let buffName2 = lcBuffNames.defShred;
                                 sourceTurn.lifeShouldBeCastFlamesDMGSHEET = {
-                                    "statsOnHit": [DamageAll],
+                                    "stats": [DamageAll],
                                     [DamageAll]: rankParams[2],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
@@ -9220,6 +9225,7 @@ const turnLogicLightcones = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": null,
+                                    "actionTags": ["All"],
                                 }
         
                                 sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
@@ -13157,7 +13163,7 @@ const turnLogicRelics = {
                                     let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.pc2Debuffed;
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
                                     this.pioneerDMGDebuffedSHEET = {
-                                        "statsOnHit": [DamageAll],
+                                        "stats": [DamageAll],
                                         [DamageAll]: relicPathing[0],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13168,7 +13174,8 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 let buffSheet = this.pioneerDMGDebuffedSHEET;
@@ -13233,7 +13240,7 @@ const turnLogicRelics = {
                                     const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                     this.pioneerDMGDoubleDebuffSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[1],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13244,10 +13251,11 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                     this.pioneerDMGTripleDebuffSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[2],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13258,10 +13266,11 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                     this.pioneerDMGDoubleDebuffSHEET2 = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[1] * 2,
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13272,10 +13281,11 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                     this.pioneerDMGTripleDebuffSHEET2 = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: relicPathing[2] * 2,
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13286,7 +13296,8 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 const buffx2x1 = this.pioneerDMGDoubleDebuffSHEET;
@@ -13390,7 +13401,7 @@ const turnLogicRelics = {
                             const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
                             let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                             this.pioneerDMGActiveCritSHEET = {
-                                "statsOnHit": [CritRateBase],
+                                "stats": [CritRateBase],
                                 [CritRateBase]: relicPathing[0],
                                 "source": relicNameRef,
                                 "sourceOwner": null,
@@ -13401,7 +13412,8 @@ const turnLogicRelics = {
                                 "maxStacks": 1,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": "EndTurn"
+                                "expireType": "EndTurn",
+                                "actionTags": ["All"],
                             }
                         }
                         const buffSheet = this.pioneerDMGActiveCritSHEET;
@@ -13614,7 +13626,7 @@ const turnLogicRelics = {
                                     const buffNames = turnLogicRelics[relicNameRef][pcRef].buffNames;
                                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                     this.relicMasterSmithCRITSHEET = {
-                                        "statsOnHit": [CritDamageBase],
+                                        "stats": [CritDamageBase],
                                         [CritDamageBase]: 0.28,
                                         "source": relicNameRef,
                                         "sourceOwner": null,
@@ -13625,7 +13637,8 @@ const turnLogicRelics = {
                                         "maxStacks": 1,
                                         "currentStacks": 1,
                                         "decay": false,
-                                        "expireType": null
+                                        "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
                                 const buffSheet = this.relicMasterSmithCRITSHEET;
