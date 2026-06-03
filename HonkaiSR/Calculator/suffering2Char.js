@@ -15380,7 +15380,11 @@ const turnLogic = {
                     //e2
                     if (rank >= 2) {
                         const listener8 = passiveListeners[7];
-                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        for (let character of fullCharacterArray) {
+                            addListenerWithPriority(battleData,listener8,listener8.trigger,character);
+                        }
+                        
                         const listener9 = passiveListeners[8];
                         addListenerWithPriority(battleData,listener9,listener9.trigger,ownerTurn);
 
@@ -15603,7 +15607,7 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.isEnemy) {return;}
+                            if (sourceTurn.isEnemy || sourceTurn.isUniqueEvent) {return;}
 
                             const slot = generalInfo.dmgSlot;
                             if (slot != "Ultimate") {return;}
@@ -15626,6 +15630,7 @@ const turnLogic = {
                             battleActions.invalidateTargetDMGCache(battleData,sourceTurn);
                         },
                         "target": "enemy",
+                        "isPersonal": true,
                         "priority": -Infinity,
                         "listenerName": "E2: FUA attack type extension",
                         "ownerTurn": {},
