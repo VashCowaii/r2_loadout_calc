@@ -645,8 +645,6 @@ const sim = {
                 properName: name,
                 enemyRealName,
                 statTable: stats,
-                statTableONHIT: new Array(greatTableSize).fill(0),
-                statTableONTurn: new Array(greatTableSize).fill(0),
                 statTableFinals: finalStats,
                 tagSpecific: {},
                 tagSpecificArray: [],
@@ -866,8 +864,6 @@ const sim = {
                 currentDotsArray: [],
                 properName: properName,
                 statTable: statRefTemp.tableReference,
-                statTableONHIT: new Array(greatTableSize).fill(0),
-                statTableONTurn: new Array(greatTableSize).fill(0),
                 // statTableFinals: statRefTemp.returnObject,
                 buffsObject: {},
                 teamDebuffs: {},
@@ -913,7 +909,6 @@ const sim = {
 
 
             slotNumber++;
-            slotRef.statTableONHIT[LVL] = 0;
             nextTurn.push(slotRef);
             allyPositions.unshift(slotRef);
             fullCharacterArray.push(slotRef);
