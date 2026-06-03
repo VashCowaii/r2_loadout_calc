@@ -2289,6 +2289,86 @@ const hitSplitters = {
       }
     ],
   },
+  "Mortenax Blade": {//DONE
+    "basic": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "skill": [
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+      },
+    ],
+    "eba": [
+      {
+        "primary": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "primary": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "ult2": [
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+  },
 
   //HUNT
   "Topaz & Numby": {//DONE

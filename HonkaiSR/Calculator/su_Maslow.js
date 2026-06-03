@@ -2451,6 +2451,59 @@ const maslowCharactersNihility = {
             addTeamWant: [],
         },
     },
+    "Mortenax Blade": {
+        defaultMainSubs: ["SPDFlat","CritRateBase","HP%","CritDamageBase"],
+        defaultTrashSub: ["HPFlat","DamageBreak","EffectRES","DEF%"],
+        0: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate","PEN"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate","PEN","FUA"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate","PEN","FUA"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate","PEN","FUA"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate","PEN","FUA"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource","Consume"],
+            givesTeam: ["Shred","Vuln","All","Ultimate","PEN","FUA"],
+            wants: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["HP","Skill","Ultimate","Fire",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersAbundance = {
     "Huohuo": {

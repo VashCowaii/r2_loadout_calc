@@ -1105,6 +1105,18 @@ const battleActions = {
         // greatTableIndex
         // return bonus;
     },
+    invalidateTargetDMGCache(battleData,sourceTurn) {
+        const sourceCache = sourceTurn.cacheTagValues;
+
+        for (let overKey in sourceCache) {
+            const currentDeposit = sourceCache[overKey];
+
+            for (let cacheTag in currentDeposit) {
+                const finalDeposit = currentDeposit[cacheTag];
+                finalDeposit.valueIsCurrentAsAttacker = false;
+            }
+        }
+    },
     
     pullCompositeStats(element,sourceCache,targetCache,compositeCacheTag,table,enemyTable,attackerStatsONHIT,targetStatsSourceBased,targetStatsTeamBased,tagsPEN,tagsShred,tagsVuln,actionTables,actionTags,actionTablesTarget) {
         // realPENKeys,realShredKeys,realVulnKeys
@@ -4526,6 +4538,7 @@ const battleActions = {
         }
         
         poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal},sourceTurn);
+        poke("AllyHPChange",battleData,null,targetTurn);
         const totals = generalInfo.totals;
         totals.totalHeal += totalHealed;
         totals.actualHeal += actualHeal;
@@ -4828,6 +4841,7 @@ const battleActions = {
                 if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:ally.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
                 poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn:ally,amountEaten,sourceTurn,skillSlot},ally);
                 poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn},ally);
+                poke("AllyHPChange",battleData,null,ally);
             }
             if (logger) {logToBattle(battleData,{logType: "ConsumeHPEnd", name:sourceTurn.properName,totalEaten,targetTurn:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
         }
@@ -4840,6 +4854,7 @@ const battleActions = {
             if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
             poke("ConsumedAllyHP",battleData,{isAllAllies,targetTurn,amountEaten,sourceTurn,skillSlot},targetTurn);
             poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: amountEaten,lossSource: sourceTurn},targetTurn);
+            poke("AllyHPChange",battleData,null,targetTurn);
         }
 
         const returnObject = {isAllAllies,targetTurn,totalEaten,sourceTurn,skillSlot};
@@ -14779,6 +14794,1405 @@ const turnLogic = {
             "weight": "Weightless (Welt)",
             "weightDMG": "Retribution (Trace)",
             "e6": "E6: HIT ONLY Crit Buff",
+        },
+        "characterValuesBattle": {},
+    },
+    "Mortenax Blade": {
+        logic(thisTurn,battleData) {
+            const isEnhanced = thisTurn.battleValues.bladeFuryActive;
+            const minimumHP = thisTurn.currentHP > 1;
+
+            if (isEnhanced && minimumHP && checkSkill(battleData,thisTurn)) {//disable the skill if not enhanced, or if hp is <= 1
+                return this.returnSkillCall;
+            }
+
+            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            return actionChosen;
+        },
+        preLogic(thisTurn,battleData) {
+            const call1 = this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: 0, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.bladeSkill, 
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            call1.sourceTurn = thisTurn;
+            // call1.target = [thisTurn];
+
+            const call2 = this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.bladeBasicEnhanced, 
+                target: "enemy",
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+            call2.sourceTurn = thisTurn;
+            const call3 = this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.bladeBasic, 
+                target: "enemy",
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+            call3.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Self",
+            "UltimateEnh": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            bladeBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeBasicREF ??= ATKObjects["Basic ATK"]["A Broken Blade Still Slays"].variant1;
+
+                if (!ATKObjects.bladeBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.bladeBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Fire"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.bladeBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bladeBasicEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeBasicEnhancedREF ??= ATKObjects["Basic ATK"]["A Tempered Blade Severs Souls"].variant1;
+                let values = ATKObjects.bladeBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.bladeBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    const scalar = "HP";
+                    const tags = ["All","Basic","Fire"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bonusScalar: null,
+                    }
+                }
+                let ATKObject = ATKObjects.bladeBasicEnhancedATKOBJECT;
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bladeTraceRegen(battleData,sourceTurn) {
+                const seventyFivePercent = sourceTurn.maxEnergy * 0.75;
+                const currentEnergy = sourceTurn.currentEnergy;
+                const energyToRegen = currentEnergy < seventyFivePercent ? seventyFivePercent-currentEnergy : 0;
+
+                if (energyToRegen) {updateEnergy(battleData,energyToRegen,sourceTurn,true,"Bone, Hardened ad Nauseam");}
+            },
+            bladeUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.bladeUltimateREF ??= ATKObjects.Ultimate["Fornax Ex Corpore"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.bladeUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ultimate","Fire"];
+                    const actionTags = ["Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[2],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bonusScalar: {
+                            primary: values[4] + (rank >= 1 ? 1.5 : 0),
+                            blast: values[5],
+                            all: null,
+                            refName: "bladeHPTally",
+                            isDynamicValue: true,
+                            refValue: 0,
+                            bonusValue: null,//see hit wrapper if I ever forget how this was used
+                        },
+                    }
+
+                    const actionTags2 = ["Heal","Ultimate"];
+                    const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
+                    ATKObjects.bladeUltimateHEALOBJECT = {
+                        multipliers: {
+                            primary: 0,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2
+                    }
+
+
+
+                    ATKObjects.bladeMBalefireDEBUFFSHEET = {
+                        "stats": [DEFP,VulnAll],
+                        [DEFP]: -values[6],
+                        [VulnAll]: values[3],
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.balefire,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isDebuff": true,
+                    }
+                    ATKObjects.bladeMBalefireE1DEBUFFSHEET = {
+                        "stats": [ResistanceAll],
+                        [ResistanceAll]: -0.20,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.balefireE1,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                    }
+                    ATKObjects.bladeMFuryCritSHEET = {
+                        "stats": [CritRateBase,CritDamageBase,AggroP],
+                        [CritRateBase]: values[1],
+                        [CritDamageBase]: values[2],
+                        [AggroP]: 10,
+                        [DamageReductionStandard]: 0.50,
+                        [HealingIncoming]: 0.50,
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.infiniteFury,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.bladeMFuryTraceSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.50 + (rank >= 4 ? 0.50 : 0),
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.zoneDMG,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.bladeMFuryTraceSHEET2 = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.75,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.zoneDMGUlt,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
+                    }
+
+                    ATKObjects.bladeMFuryTraceSHEET3 = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.75,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.zoneDMGSelf,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    // zoneDMGSelf
+                }
+                // let ATKObject = ATKObjects.bladeUltimateATKOBJECT;
+
+                const balefireSheet = ATKObjects.bladeMBalefireDEBUFFSHEET;
+                sourceTurn.bladeMBalefireDEBUFFSHEET = balefireSheet;
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,balefireSheet);
+
+                battleActions.consumeHP(battleData,false,0.20,sourceTurn,sourceTurn,skillRef.slot);
+
+                //infinite fury
+                const battleValues = sourceTurn.battleValues;
+                battleValues.bladeFuryActive = true;
+                const furySheet = ATKObjects.bladeMFuryCritSHEET;
+                updateBuff(battleData,sourceTurn,furySheet);
+
+                if (rank >= 1) {
+                    const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
+                    const enemyPositions = battleData.enemyPositions;
+                    updateBuffBatchTargets(battleData,enemyPositions,e1Sheet)
+                }
+
+                const allAlliesArray = battleData.allAlliesArray;
+                const generalDMGSheet = ATKObjects.bladeMFuryTraceSHEET;
+                updateBuffBatchTargets(battleData,allAlliesArray,generalDMGSheet);
+                const hasNilityCharacters = sourceTurn.battleValues.hasNilityCharacters;
+                if (hasNilityCharacters) {
+                    const nihilitySheet = ATKObjects.bladeMFuryTraceSHEET2;
+                    updateBuffBatchTargets(battleData,allAlliesArray,nihilitySheet);
+                }
+                else {
+                    const selfSheet = ATKObjects.bladeMFuryTraceSHEET3;
+                    updateBuff(battleData,sourceTurn,selfSheet);
+                }
+
+
+                const ActionEntry = sourceTurn.mortenaxBladeUltTURNEVENT ??= {
+                    // name:characterEntry,
+                    AV:10000/70,
+                    AVBase:10000/70,
+                    SPD:70,
+                    actionCounter: 0,
+                    turnState: 0,
+                    properName: "Mortenax Blade Fury Timer",
+                    // buffsObject: {},
+                    // buffsStartTurn: [],
+                    // buffsEndTurn: [],
+                    // additionalDMGObject: {},
+                    cantBeTargeted: true,
+                    isUniqueEvent: true,
+                    eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                    uniqueEventFunction: logicRef.skillFunctions.infiniteFuryQueuedExpired,
+                    eventImage: "BEicons/BattleEvent_1507.png",
+                };
+                const nextAV = battleData.nextTurnAV;
+                nextAV.push(ActionEntry);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Mortenax Blade Ultimate", bodyText: `Mortenax Blade countdown added to the turn order.`});}
+
+                //energy
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                //then check for queue
+
+
+                sourceTurn.ultyQueued = false;
+            },
+            infiniteFuryQueuedExpired(battleData,eventTurn) {
+                poke("mortenaxBladeQueueExit",battleData,null);
+                //the exit is just an insert, not an instantaneous event
+            },
+            infiniteFuryExpired(battleData,target,sourceTurn) {
+                const eventTurn = sourceTurn.mortenaxBladeUltTURNEVENT;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                
+                sourceTurn.battleValues.bladeFuryActive = false;
+
+                const furySheet = ATKObjects.bladeMFuryCritSHEET;
+                removeBuff(battleData,sourceTurn,furySheet);
+                const rank = sourceTurn.rank;
+
+                if (rank >= 1) {
+                    const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
+                    const enemyPositions = battleData.enemyPositions;
+                    removeBuffFromBatch(battleData,enemyPositions,e1Sheet);
+                }
+
+                logicRef.skillFunctions.bladeTraceRegen(battleData,sourceTurn);//trace ad nauseum
+
+                const allAlliesArray = battleData.allAlliesArray;
+                const generalDMGSheet = ATKObjects.bladeMFuryTraceSHEET;
+                removeBuffFromBatch(battleData,allAlliesArray,generalDMGSheet);
+                const hasNilityCharacters = sourceTurn.battleValues.hasNilityCharacters;
+                if (hasNilityCharacters) {
+                    const nihilitySheet = ATKObjects.bladeMFuryTraceSHEET2;
+                    removeBuffFromBatch(battleData,allAlliesArray,nihilitySheet);
+                }
+                else {
+                    const selfSheet = ATKObjects.bladeMFuryTraceSHEET3;
+                    removeBuff(battleData,sourceTurn,selfSheet);
+                }
+
+
+
+                // const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
+                // const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
+
+                // const allyTargets = battleData.allAllyTargetsArray;
+                // removeBuffFromBatch(battleData,allyTargets,buffSheet);
+                // removeBuffFromBatch(battleData,allyTargets,buffSheetFUA);
+
+                const eventName = eventTurn.properName;
+                const nextAV = battleData.nextTurnAV;
+                for (let i=0;i<nextAV.length;i++) {
+                    let currentTurn = nextAV[i];
+                    if (currentTurn.properName === eventName) {
+                        nextAV.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+
+            },
+            bladeSkill(battleData,target,sourceTurn) {
+                // const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.bladeSkillREF ??= ATKObjects.Skill["A Rain of Blades Seals Fate"].variant1;
+                const values = ATKObjects.bladeSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // const logicRef = turnLogic[ownerTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.bladeSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    
+                    const scalar = "HP";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeSkillATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: {
+                            multi: values[2],
+                            bounceCount: 4,
+                            energy: null,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 0,
+                                    "toughness": 5
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+                }
+                let ATKObject = ATKObjects.bladeSkillATKOBJECT;
+                battleActions.consumeHP(battleData,false,values[3],sourceTurn,sourceTurn,skillRef.slot);
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bladeSkillFUA(battleData,target,sourceTurn) {
+                // const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.bladeSkillREF ??= ATKObjects.Skill["A Rain of Blades Seals Fate"].variant1;
+                const values = ATKObjects.bladeSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // const logicRef = turnLogic[ownerTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.bladeSkillFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    
+                    const scalar = "HP";
+                    const tags = ["All","Skill","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Skill","Attack","FUA"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeSkillFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: {
+                            multi: values[2],
+                            bounceCount: 4,
+                            energy: null,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 0,
+                                    "toughness": 5
+                                },
+                                "blast": null,
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            },
+                        }
+                    }
+                }
+                let ATKObject = ATKObjects.bladeSkillFUAATKOBJECT;
+                battleActions.consumeHP(battleData,false,values[3],sourceTurn,sourceTurn,skillRef.slot);
+
+                poke("mortenaxBladeGainCharge",battleData,{pointsGained: sourceTurn.rank >= 2 ? -7 : -9,sourceString:"Mortenax Blade FUA Launched"});
+                updateEnergy(battleData,25,sourceTurn,false,"Mortenax Blade FUA Launched");
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                sourceTurn.battleValues.fuaIsQueued = false;
+            },
+            bladeUltimateEnh(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bladeUltimateEnhREF ??= ATKObjects["Ultimate"]["Tenax Per Ignem"].variant1;
+
+                if (!ATKObjects.bladeUltimateEnhATKOBJECT) {
+                    const rank = sourceTurn.rank;
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult2;
+                    let values = ATKObjects.bladeUltimateEnhREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ultimate","Fire"];
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bladeUltimateEnhATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0] * (rank >= 6 ? 1.5 : 1),
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.bladeUltimateEnhATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                sourceTurn.ultyQueued = false;
+            },
+            bladeCheckHPFUA(battleData,queueObject,sourceTurn) {
+                const isHPInvalid = sourceTurn.currentHP <= 1;
+                if (isHPInvalid) {
+                    sourceTurn.battleValues.fuaIsQueued = false;
+                }
+
+                return isHPInvalid;
+            },
+            
+            bladeTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // // let charSlot = sourceTurn.name;
+                // // let skillPathing = characters[characterName].skills;
+                // let skillRef = ATKObjects.bladeTechRef ??= ATKObjects.Technique["Karma Wind"].variant1;
+                // let values = ATKObjects.bladeTechRefVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                // if (!ATKObjects.bladeTechATKObject) {
+                //     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                //     const scalar = "HP";
+                //     const tags = ["All","Technique","Wind"];
+                //     const actionTags = ["Technique","Attack"];
+                //     const keyShortcut = basicShorthand.makeKeysArray;
+                //     const realDMGKeys = keyShortcut(dmgKeys,tags);
+                //     const realPENKeys = keyShortcut(resPENKeys,tags);
+                //     const realShredKeys = keyShortcut(defShredKeys,tags);
+                //     const realVulnKeys = keyShortcut(vulnKeys,tags);
+                //     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                //     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                //     ATKObjects.bladeTechATKObject = {
+                //         multipliers: {
+                //             primary: null,
+                //             blast: null,
+                //             all: values[0],
+                //         },
+                //         energy: skillRef.energyRegen,
+                //         scalar,
+                //         DMGTags: tags,
+                //         allToughness: false,
+                //         slot: skillRef.slot,
+                //         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                //         actionTags,
+                //         compositeCacheTag
+                //     }
+                // }
+                // const ATKObject = ATKObjects.bladeTechATKObject;
+
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                // battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace Bone, Hardened ad Nauseam
+                    //battlestart regen
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    //overflow handling
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    //ult end overflow clear
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //blade attacked in zone
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+
+                    const fullCharacterArray = battleData.fullCharacterArray;
+                    let nihilityCount = -1;
+                    for (let allyCharacter of fullCharacterArray) {
+                        if (allyCharacter.path === "Nihility") {nihilityCount += 1;}
+                    }
+                    if (nihilityCount > 0) {
+                        ownerTurn.battleValues.hasNilityCharacters = true;
+                    }
+
+                    //blade hp change listener
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //e1
+                    if (rank >= 1) {
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    }
+
+                    //e2
+                    if (rank >= 2) {
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                        const listener9 = passiveListeners[8];
+                        addListenerWithPriority(battleData,listener9,listener9.trigger,ownerTurn);
+
+                        const buffSheet = this.bladeE2Sheet ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.75,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e2FUA,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["FUA"],
+                        }
+                        const allAlliesArray = battleData.allAlliesArray;
+
+                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const listener10 = passiveListeners[9];
+                        addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
+                        const listener11 = passiveListeners[10];
+                        addListenerWithPriority(battleData,listener11,listener11.trigger,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                },
+                "target": "self",
+                "listenerName": "Blade Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            const bladeTraceRegen = this.bladeTraceRegen ??= turnLogic[ownerTurn.properName].skillFunctions.bladeTraceRegen;
+                            bladeTraceRegen(battleData,ownerTurn)
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Bone, Hardened ad Nauseam: energy regen on battleStart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnergyChanged",
+                        condition(battleData,generalInfo) {
+                            // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                            const ownerTurn = this.ownerTurn;
+                            
+                            //TODO: cleanse upon reaching full, which would be when this is either gonna recognize overfill or if we can see we're at full from something like cyrene I guess, something for later
+                            const overflow = generalInfo.overFill;
+                            if (overflow) {
+                                // const characterName = ownerTurn.properName;
+                                // const logicRef = turnLogic[characterName];
+                                const valuesRef = ownerTurn.battleValues;
+                                // const rank = ownerTurn.rank;
+                                // overflowEnergy
+                                const oldAmount = valuesRef.overflowEnergy;
+                                const cap = 80;
+                                valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
+                                const amountGained = valuesRef.overflowEnergy - oldAmount;
+                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
+        
+        
+                                if (battleData.isLoggyLogger) {
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Bone, Hardened ad Nauseam [Overflow Handler]"});
+                                
+                                    if (valuesRef.overflowEnergy > oldAmount) {
+                                        ownerTurn.mortenaxBladeOverflowSummer ??= 0;
+                                        ownerTurn.mortenaxBladeOverflowSummer += amountGained;
+                                        // console.log(ownerTurn.saberSumResonance)
+                                    }
+                                    logToBattle(battleData,{
+                                        logType: "SUMMARY:SUM",
+                                        function: "mortenaxBladeOverflowSummer",
+                                        AV: battleData.sumAV,
+                                        currentValue: valuesRef.overflowEnergy,
+                                        currentSumValue: ownerTurn.mortenaxBladeOverflowSummer,
+                                        currentAddedValue: amountGained
+                                    });
+                                }
+                            }
+        
+                            // const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
+                            // poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Bone, Hardened ad Nauseam Overflow",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            const ownerTurn = this.ownerTurn;
+                            
+                            const valuesRef = ownerTurn.battleValues;
+                            const oldAmount = valuesRef.overflowEnergy;
+                            if (oldAmount) {
+                                valuesRef.overflowEnergy = 0;
+                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate use: Blessing of the Lake", bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> 0`});}
+                                if (battleData.isLoggyLogger) {
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: -oldAmount, oldEnergy:oldAmount, newEnergy:0, maximum:80, source:"Blessing of the Lake"});
+                                
+                                    if (valuesRef.overflowEnergy > oldAmount) {
+                                        ownerTurn.mortenaxBladeOverflowSummer ??= 0;
+                                        ownerTurn.mortenaxBladeOverflowSummer += amountGained;
+                                        // console.log(ownerTurn.saberSumResonance)
+                                    }
+                                    logToBattle(battleData,{
+                                        logType: "SUMMARY:SUM",
+                                        function: "mortenaxBladeOverflowSummer",
+                                        AV: battleData.sumAV,
+                                        currentValue: valuesRef.overflowEnergy,
+                                        currentSumValue: ownerTurn.mortenaxBladeOverflowSummer,
+                                        currentAddedValue: -oldAmount
+                                    });
+                                }
+                                updateEnergy(battleData,oldAmount,ownerTurn,true,"Bone, Hardened ad Nauseam [Ult Ended, cleared Overflow]");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Bone, Hardened ad Nauseam Overflow Clear",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            if (sourceTurn.isEnemy) {
+                                const bladeWasHit = targetsGotHit[ownerTurn.name];
+
+                                if (!bladeWasHit) {return;}
+
+                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"Mortenax Blade was Attacked in Zone"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+
+                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                                updateBuff(battleData,sourceTurn,balefireSheet);
+                            }
+                            else {
+                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+
+                                let targetsHitArray = [];
+                                const enemyBasedTurns = battleData.enemyBasedTurns;
+                                for (let enemySlot in targetsGotHit) {
+                                    const enemyTurn = enemyBasedTurns[enemySlot];
+                                    targetsHitArray.push(enemyTurn);
+                                }
+                                updateBuffBatchTargets(battleData,targetsHitArray,balefireSheet);
+
+                                const preObject = this.preObject2 ??= {pointsGained: 1,sourceString:"Allied Entity attacked target in Zone"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Soul, Tempered ad Mortem/Talent - Attack DMG end listetner, both ally/enemy",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo) {
+                            // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                            poke("mortenaxBladeQueueFUA",battleData,null)
+                            //we don't actually need anything, we're just sharing the queueFUA poke with the charge handler, this event is my way of allowing both to have the same handling
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Mortenax Blade hp change listener",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const queueTag = generalInfo.queueTag;
+                            if (queueTag != "BladeME1ExtraSkill") {return;}
+                            
+                            let ownerTurn = this.ownerTurn;
+                            actionAdvance(-0.15,ownerTurn.mortenaxBladeUltTURNEVENT,battleData,"E1: Countdown Delayed");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E1 countdown delay handler",
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.slotRef;
+        
+                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+        
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+                            const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
+                            updateBuff(battleData,targetTurn,e1Sheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "E1: Enemy created while zone active debuff application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Ultimate") {return;}
+
+                            const ATKObject = generalInfo.ATKObject;
+
+                            let alreadyHasFUA = false;
+                            for (let tag of ATKObject.actionTags) {
+                                if (tag === "FUA") {
+                                    alreadyHasFUA = true;
+                                    break;
+                                }
+                            }
+
+                            if (alreadyHasFUA) {return;}
+
+                            ATKObject.actionTags.push("FUA");
+                            ATKObject.bladeME2InjectedFUA = true;
+
+                            battleActions.invalidateTargetDMGCache(battleData,sourceTurn);
+                        },
+                        "target": "enemy",
+                        "priority": -Infinity,
+                        "listenerName": "E2: FUA attack type extension",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Ultimate") {return;}
+
+                            const ATKObject = generalInfo.ATKObject;
+                            if (!ATKObject.bladeME2InjectedFUA) {return;}
+
+                            for (let i=0;i<ATKObject.actionTags.length;i++) {
+                                const currentTag = ATKObject.actionTags[i];
+
+                                if (currentTag === "FUA") {
+                                    ATKObject.actionTags.splice(i,1)
+                                    break;
+                                }
+                            }
+                            battleActions.invalidateTargetDMGCache(battleData,sourceTurn);
+                        },
+                        "target": "enemy",
+                        "priority": Infinity,
+                        "listenerName": "E2: FUA attack type extension removal",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EndTurn",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            ownerTurn.battleValues.isReadyforE6Gain = true;
+                            //global bc it's literally any entity
+                        },
+                        "target": "enemy",
+                        "listenerName": "E6: reset e6 charge gain cooldown",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.bladeFuryActive && battleValues.isReadyforE6Gain) {
+                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"E6: Mortenax Blade lost HP"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+                                battleValues.isReadyforE6Gain = false;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E6: blade lost hp charge gain check",
+                    },
+                ],
+            },
+            {
+                "trigger": "mortenaxBladeGainCharge",
+                condition(battleData,generalInfo) {
+                    // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.charge;
+                    const maxValue = ownerTurn.rank >= 2 ? 7 : 9;
+                    valuesRef.charge = Math.min(maxValue,oldValue + pointsGained);
+                    const newValue = valuesRef.charge;
+
+                    // if (newValue === maxValue) {
+                    //     const buffSheet = this.traceBuffSheet ??= {
+                    //         "stats": [DEFShredAll],
+                    //         [DEFShredAll]: 0.20,
+                    //         "source": "Trace",
+                    //         "sourceOwner": ownerTurn.properName,
+                    //         "buffName": turnLogic[ownerTurn.properName].buffNames.traceShred,
+                    //         "durationInTurn": null,
+                    //         "duration": 1,
+                    //         "AVApplied": 0,
+                    //         "maxStacks": 1,
+                    //         "currentStacks": 1,
+                    //         "decay": false,
+                    //         "expireType": null,
+                    //         "actionTags": ["Attack"]
+                    //     }
+                    //     valuesRef.traceShredActive = true;
+                    //     updateBuff(battleData,ownerTurn,buffSheet);
+                    // }
+                    
+                    // let enteredState = false;
+                    // if (!valuesRef.enhancedActive && newValue >= 2) {
+                    //     enteredState = true;
+                    // }
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Mortenax Blade): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.mortenaxBladeChargeSum ??= 0;
+                            ownerTurn.mortenaxBladeChargeSum += valuesRef.charge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "mortenaxBladeChargeSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.mortenaxBladeChargeSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
+                    }
+
+                    poke("mortenaxBladeQueueFUA",battleData,null)
+                    // if (enteredState && !valuesRef.enhancedQueued) {
+                    //     valuesRef.enhancedQueued = true;
+
+                    //     const queueObject = this.queueObject ??= {
+                    //         name: this.listenerName + ": Reached 2+ Syzygy",
+                    //         priority: priorityList.ability.CharacterBuffSelf,
+                    //         queueTag: "QueuedInsert",
+
+                    //         actionCall: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
+                    //         action: "Insert", 
+                    //         points: 0,
+                    //         energyCost: null,
+                    //         // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                    //         // specialEnergyPoke: "SW999GainMMR",
+                            
+                    //         isEnhanced: false,
+                    //         isTieBreaker: false,
+                    //         isExtraTurn: false,
+                    //         isInserted: true,
+                    //         skipEXDisplay: false,
+                    //         allowUlts: false,
+                    //         decrementBuffs: false,
+                    //         extraTurnHasChoice: false,
+                    //         dontKeepNextWave: false,//ults always clear out
+                    //         isAttack: false,
+                    //         isAbility: true,
+                    //         useAnyTriggers: true,
+                    //         eventTypeStartLOG: "GenericAbilityStart",
+                    //         eventTypeStart: "GenericAbilityStart",
+                    //         eventTypeEnd: "GenericAbilityEnd",
+
+                    //         properName: ownerTurn.properName,
+                    //         sourceTurn: null,
+                    //         // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                    //         target: this.target,
+                    //         poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                    //         elationForcedPunchline: null,
+                    //     }
+
+                    //     queueObject.sourceTurn = ownerTurn;
+                    //     queueObject.target = [ownerTurn];
+                    //     queueInsertAbility(battleData,queueObject);
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Mortenax Blade Charge Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "mortenaxBladeQueueExit",
+                condition(battleData,generalInfo) {
+                    // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterBuffOthers,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: false,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        target: this.target,
+                        poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+
+                    queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = [ownerTurn];
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Mortenax Blade Queue Exit Infinity Fury",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "mortenaxBladeQueueFUA",
+                condition(battleData,generalInfo) {
+                    // poke("mortenaxBladeQueueFUA",battleData,null);
+                    let ownerTurn = this.ownerTurn;
+
+                    const battleValues = ownerTurn.battleValues;
+                    const currentCharge = battleValues.charge;
+
+                    if (battleValues.fuaIsQueued) {return;}
+                    if (currentCharge < (ownerTurn.rank >= 2 ? 7 : 9)) {return;}
+                    if (ownerTurn.currentHP <= 1) {return;}
+                    //if the FUA is already queued, if we don't have enough charge, or if we have invalid HP, then abort the queue before we even queue it.
+
+                    battleValues.fuaIsQueued = true;
+
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.turn.Default,
+                        queueTag: "BladeME1ExtraSkill",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeSkillFUA,
+                        action: "Skill", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: true,
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        isInserted: false,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "SkillStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                        abortCheck: turnLogic[ownerTurn.properName].skillFunctions.bladeCheckHPFUA,
+
+                        target: this.target,
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+
+                        elationForcedPunchline: null,
+                    }
+
+                    queueObject.sourceTurn = ownerTurn;
+                    // queueObject.target = [ownerTurn];
+                    queueExtraTurn(battleData,queueObject);
+                    // queueInsertAbility(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Mortenax Blade Queue FUA Skill",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const isEnhanced = ownerTurn.battleValues.bladeFuryActive;
+
+                        if (isEnhanced) {
+                            const queueObject = this.queueObjectEnh ??= {
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedUltimate",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimateEnh,
+                                action: "Ultimate", 
+                                points: 0,
+                                energyCost: ownerTurn.maxEnergy,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+    
+                                isEnhanced: true,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: true,//ults always clear out
+                                isAttack: true,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "UltimateStart",
+                                // eventTypeStart: "UltimateStart",
+                                // eventTypeEnd: "UltimateEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: this.target,
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.UltimateEnh,
+    
+                                elationForcedPunchline: null,
+                            }
+                            // queueObject.target = [ownerTurn];
+                            queueObject.sourceTurn = ownerTurn;
+                            queueUltimate(battleData,queueObject);
+                        }
+                        else {
+                            const queueObject = this.queueObject ??= {
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedUltimate",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
+                                action: "Ultimate", 
+                                points: 0,
+                                energyCost: ownerTurn.maxEnergy,
+                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                                // specialEnergyPoke: "SW999GainMMR",
+    
+                                isEnhanced: false,
+                                isTieBreaker: false,
+                                isExtraTurn: false,
+                                skipEXDisplay: false,
+                                allowUlts: false,
+                                decrementBuffs: false,
+                                extraTurnHasChoice: false,
+                                dontKeepNextWave: true,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "UltimateStart",
+                                // eventTypeStart: "UltimateStart",
+                                // eventTypeEnd: "UltimateEnd",
+    
+                                properName: ownerTurn.properName,
+                                sourceTurn: null,
+                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                                target: this.target,
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+    
+                                elationForcedPunchline: null,
+                            }
+                            queueObject.target = [ownerTurn];
+                            queueObject.sourceTurn = ownerTurn;
+                            queueUltimate(battleData,queueObject);
+                        }
+                    }
+                },
+                "target": "Self",
+                "listenerName": "Mortenax Blade - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.bladeTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Mortenax Blade Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "overflowEnergy": 0,
+            "hasNilityCharacters": false,
+            "charge": 0,
+            "bladeFuryActive": false,
+            "fuaIsQueued": false,
+            "isReadyforE6Gain": true,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "balefire": "Balefire Bind (Blade)",
+            "infiniteFury": "Infinite Fury (Ultimate)",
+            "zoneDMG": "Heart, Refined ad Infinitum",
+            "zoneDMGUlt": "Heart, Refined ad Infinitum (>1 Nihility)",
+            "zoneDMGSelf": "Heart, Refined ad Infinitum (Alone)",
+            "balefireE1": "E1: Ere My Death, I Stood Unmade",
+            "e2FUA": "E2: Ash Was My Heart, Yet the Flame Stayed",
         },
         "characterValuesBattle": {},
     },
@@ -25099,8 +26513,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
                             const ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.name != ownerTurn.name) {return;}
                             
         
                             const overflow = generalInfo.overFill;
@@ -25118,7 +26530,7 @@ const turnLogic = {
         
         
                                 if (battleData.isLoggyLogger) {
-                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: sourceTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
+                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
                                 
                                     if (valuesRef.overflowEnergy > oldAmount) {
                                         ownerTurn.saberOverflowSummer ??= 0;
@@ -25140,6 +26552,7 @@ const turnLogic = {
                             poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Blessing of the Lake Overflow",
                         "ownerTurn": {},
                     },
@@ -29277,7 +30690,10 @@ const turnLogic = {
 
                 if (!ATKObjects.rmcUltimateATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
-                    let values = ATKObjects.rmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    let values = ATKObjects.rmcUltimateREFVALUES ??= [
+                        2.25,
+                        0.4
+                      ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     const scalar = "ATK";
                     // const tags = ["All","Basic","Lightning"];
@@ -29290,7 +30706,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["Attack","Ultimate"];
+                    const actionTags = ["All","Attack","Ultimate"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.rmcUltimateATKOBJECT = {
                         multipliers: {
