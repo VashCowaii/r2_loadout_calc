@@ -25099,7 +25099,7 @@ const turnLogic = {
                 updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
-            applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {//duration change/expire added   //RES PEN added for trace
+            applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 
@@ -25157,7 +25157,7 @@ const turnLogic = {
                 
                 updateBuff(battleData,targetTurn,buffSheet);
             },
-            sparkleAdvance(battleData,target,sourceTurn) {//no changes
+            sparkleAdvance(battleData,target,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -25229,7 +25229,6 @@ const turnLogic = {
 
                 const buffNAMES = logicRef.buffNames;
                 let buffName = buffNAMES.cipher;
-                let buffName2 = buffNAMES.redHerring;
                 let buffName3 = buffNAMES.dreamdiver;
 
                 if (!ATKObjects.sparkleUltimateCIPHERSHEET) {
@@ -25247,229 +25246,44 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": "EndTurn",
-                        "expireFunction": logicRef.skillFunctions.cipherExpired,
-                        "expireParam": null,
+                        // "expireFunction": logicRef.skillFunctions.cipherExpired,
+                        // "expireParam": null,
                         "removeOnDeath": true,
                     }
                 }
                 let buffSheet = ATKObjects.sparkleUltimateCIPHERSHEET;
+                const allyPositions = battleData.allyPositions;
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet)
                 
-                let dreamDiverFound = false;
-                const recreate = logicRef.skillFunctions.sparkleRecreateHerringBuff;
-                for (let targetTurn of battleData.allyPositions) {
-                    const currentBuffs = targetTurn.buffsObject;
-                    let alreadyHasHerring = currentBuffs[buffName2];
-                    let alreadyHasDiver = currentBuffs[buffName3];
-                    if (alreadyHasDiver) {dreamDiverFound = true;}//for e6
-                    
-                    buffSheet.expireParam = currentBuffs[buffName] ? null : {targetTurn:targetTurn.name,sourceTurn:sourceTurn.name};//no need to construct the expire param if they already have it
-                    //ALSO, needs to be a slot that passes on the param, bc this is cyclic in the log otherwise
-                    updateBuff(battleData,targetTurn,buffSheet);
-
-                    if (alreadyHasHerring) {
-                        recreate(battleData,targetTurn,sourceTurn);
-                        //then remake the herring buff object
-                        //also set a trigger that will remake it again when the cipher buff expires if it ever does
+                if (e6) {
+                    let dreamDiverFound = false;
+                    for (let targetTurn of allyPositions) {
+                        const currentBuffs = targetTurn.buffsObject;
+                        let alreadyHasDiver = currentBuffs[buffName3];
+                        if (alreadyHasDiver) {
+                            dreamDiverFound = true;
+                            break;
+                        }//for e6
                     }
-                }
 
-                if (e6 && dreamDiverFound) {
-                    let diver = logicRef.skillFunctions.applyDreamdiver;
-                    for (let targetTurn of battleData.allyPositions) {
-                        diver(battleData,targetTurn,sourceTurn,e6);
-                        //the phrasing here technically implies we should look for people with cipher but like
-                        //bro we just ulted, everyone has cipher, who are we shitting rn. Just give it to em.
+                    if (dreamDiverFound) {
+                        let diver = logicRef.skillFunctions.applyDreamdiver;
+                        for (let targetTurn of battleData.allyPositions) {
+                            diver(battleData,targetTurn,sourceTurn,e6);
+                            //the phrasing here technically implies we should look for people with cipher but like
+                            //bro we just ulted, everyone has cipher, who are we shitting rn. Just give it to em.
+                        }
                     }
-                    //my fear is that this is like cipher's dmg increase that is tied to red herring
-                    //bc if it is, jesus FUCKING christ that will be annoying. Not that I can't account
-                    //for it bc I absolutely can, I just don't want to lmfao. No way to know though without e6 on-hand
-                    //so we'll see later if some e6-haver complains.
                 }
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            cipherExpired(battleData,param) {
-                const namedTurns = battleData.nameBasedTurns;
-                let targetTurn = namedTurns[param.targetTurn];
-                let sourceTurn = namedTurns[param.sourceTurn];
-                let characterName = sourceTurn.properName;
-
-                let logicRef = turnLogic[characterName];
-                let buffName2 = logicRef.buffNames.redHerring;
-                let alreadyHasHerring = targetTurn.buffsObject[buffName2];
-
-                if (alreadyHasHerring) {//if herring is on this character, redo the herring buff to remove the bonus dmg added from cipher
-                    logicRef.skillFunctions.sparkleRecreateHerringBuff(battleData,targetTurn,sourceTurn);
-                }
-            },
-            sparkleRecreateHerringBuff(battleData,currentSlot,ownerTurn) {
-                //ideally this should remain silent in logging when remade since red herring existed already, we just don't have a really correct way to have two separate buffs where one scales the values of the other
-                //so this is my super hacky fix for that, for now. Not sure how best to do this but I can look at it again later.
-                let silent = true;
-                let isRedone = true;
-                
-
-                turnLogic.Sparkle.skillFunctions.sparkleCreateHerringBuff(battleData,ownerTurn,null,silent,isRedone,currentSlot);
-            },
-            sparkleCreateHerringBuff(battleData,sourceTurn,totalChange,silent,isRedone,currentSlot) {
-                const logicRef = turnLogic[sourceTurn.properName];
-                const ATKObjects = logicRef.ATKObjects;
-
-                let characterName = sourceTurn.properName;
-                
-                // let skillPathing = characters[characterName].skills;
-                let skillRef = ATKObjects.sparkleCreateHerringBuffREF ??= ATKObjects.Talent["Red Herring"].variant1;
-                let values = ATKObjects.sparkleCreateHerringBuffREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                const buffNames = turnLogic[characterName].buffNames;
-                let buffName = buffNames.redHerring;
-                let cipherName = buffNames.cipher;
-                const buffsObject = sourceTurn.buffsObject;
-                if (!ATKObjects.sparkleCreateHerringBuffDMGSHEET) {
-                    let e2 = sourceTurn.rank >= 2;
-                    ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF = {
-                        "stats": null,
-                        "source": "Talent",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffNames.talentFakeDebuff,
-                        "durationInTurn": null,
-                        "duration": 0,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "removeOnDeath": true,
-                        "isDebuff": true,
-                    }
-                    ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown = {
-                        "stats": null,
-                        "source": "Talent",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffNames.redHerringCountdown,
-                        "durationInTurn": 3,
-                        "duration": 2,
-                        "AVApplied": 0,
-                        "maxStacks": 3,
-                        "currentStacks": totalChange,
-                        "decay": false,
-                        "expireType": "EndTurn",
-                        "removeOnDeath": true,
-                        expireFunction: logicRef.skillFunctions.talentZoneExpired,
-                        expireParam: {
-                            buffName,
-                            slot:sourceTurn.name,
-                            fakeName: ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF},
-                    }
-                    
-                    let skillRef2 = ATKObjects.sparkleUltimateREF ??= ATKObjects.Ultimate["The Hero with a Thousand Faces"].variant1;
-                    let values2 = ATKObjects.sparkleUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
-                    
-                    ATKObjects.sparkleCreateHerringBuffDMGSHEET = {
-                        "stats": [DEFShredAll],
-                        "statsOnHit": [VulnAll],
-                        [VulnAll]: 0,
-                        [DEFShredAll]: e2 ? 0.10 : 0,//the e2 def shred is independent of cipher existing or not, purely related to e2 alone so we can give a static add here
-                        "source": "Talent",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffName,
-                        "durationInTurn": null,
-                        "duration": 0,
-                        "AVApplied": 0,
-                        "maxStacks": 3,
-                        "currentStacks": totalChange,
-                        "decay": false,
-                        "expireType": null,
-                        // "removeOnDeath": true,
-                    }
-                }
-
-                let values2 = ATKObjects.sparkleUltimateREFVALUES
-
-                const buffSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEET;
-                // const redoName = turnToRedo ? turnToRedo.properName : null;
-
-                const noCipherValue = values[1];
-                const fullCipherValue = values[1] + values2[2];
-
-                const countdown = ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown;
-
-                const allyTargets = battleData.allAllyTargetsArray;
-                
-                const buffCheck = buffsObject[countdown.buffName];
-
-                if (buffCheck) {
-                    const stackCheck = buffCheck.currentStacks === buffCheck.maxStacks;
-                    
-                    if (isRedone) {
-                        buffSheet.currentStacks = buffCheck.currentStacks;
-
-                        if (currentSlot) {
-                            removeBuff(battleData,currentSlot,buffSheet,true,null,false,true);
-                            const hasCipherBuff = currentSlot.buffsObject[cipherName];
-                            buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                            
-                            updateBuff(battleData,currentSlot,buffSheet);
-                        }
-                        else {
-                            for (let ally of allyTargets) {
-                                removeBuff(battleData,ally,buffSheet,true,null,false,true);
-                                const hasCipherBuff = ally.buffsObject[cipherName];
-                                buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                                
-                                updateBuff(battleData,ally,buffSheet);
-                            }
-                        }
-
-                        return;
-                    }
-                    else if (!stackCheck) {
-                        buffSheet.currentStacks = totalChange;
-                        for (let ally of allyTargets) {
-                            const hasCipherBuff = ally.buffsObject[cipherName];
-                            buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                            updateBuff(battleData,ally,buffSheet);
-                        }
-                        //the reason we don't care about updating the vulnAll value here is bc it already exists on the target
-                        //w/e buff that exists if reapplied will keep the values it started with, so if we just add more stacks
-                        //it doesn't redo the value it has, so no removal needs to happen here p much ever
-                        //since we already handled updating the vuln value in the isRedone check
-                        updateBuff(battleData,sourceTurn,countdown);
-                    }
-                    else {
-                        //since if we're already at max stacks, the only thing that changes is the duration getting refreshed,
-                        //we're gonna skip the buff handler here entirely, and just handle duration with direct assignment
-                        buffCheck.duration = sourceTurn.turnState ? 3 : 2;
-                    }
-                }
-                else {
-                    buffSheet.currentStacks = totalChange;
-                    for (let ally of allyTargets) {
-                        const hasCipherBuff = ally.buffsObject[cipherName];
-                        buffSheet[VulnAll] = hasCipherBuff ? fullCipherValue : noCipherValue;
-                        updateBuff(battleData,ally,buffSheet);
-                    }
-                    
-                    updateBuff(battleData,sourceTurn,countdown);
-
-                    sourceTurn.battleValues.talentZoneActive = true;
-
-                    const fakeSheet = ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
-                    const enemyPositions = battleData.enemyPositions;
-                    updateBuffBatchTargets(battleData,enemyPositions,fakeSheet,false,null,true)
-                }
-            },
             talentZoneExpired(battleData,expireParam) {
                 const sparkleTurn = battleData.nameBasedTurns[expireParam.slot];
-                const buffSheet = sparkleTurn.buffsObject[expireParam.buffName]
+                // const buffSheet = sparkleTurn.buffsObject[expireParam.buffName]
 
                 sparkleTurn.battleValues.talentZoneActive = false;
-                const allyTargets = battleData.allAllyTargetsArray;
-
-                removeBuffFromBatch(battleData,allyTargets,buffSheet);
-
-                
                 const fakeObject = expireParam.fakeName;
 
                 const enemyPositions = battleData.enemyPositions;
@@ -25539,10 +25353,12 @@ const turnLogic = {
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     const listener4 = passiveListeners[3];
                     addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
 
                     if (rank >= 1) {
-                        const listener5 = passiveListeners[4];
-                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
@@ -25627,8 +25443,66 @@ const turnLogic = {
         
         
                                 let totalChange = Math.min(3, fullChange);//since the bonus caps out at 3 stacks we limit it to a maximum of 3 total spent that can stack here
-                                const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
-                                sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
+
+                                const logicRef = turnLogic[characterName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                battleValues.talentZoneActive = true;
+
+                                if (!ATKObjects.sparkleFigmentDEBUFFSHEET) {
+                                    const buffNames = logicRef.buffNames;
+                                    ATKObjects.sparkleFigmentDEBUFFSHEET = {
+                                        "stats": [DEFP],
+                                        [DEFP]: ownerTurn.rank >= 2 ? -0.10 : 0,
+                                        "source": "Talent",
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffNames.figmentDebuff,
+                                        "durationInTurn": null,
+                                        "duration": 0,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "isDebuff": true,
+                                    }
+
+                                    ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown = {
+                                        "stats": null,
+                                        "source": "Talent",
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffNames.redHerringCountdown,
+                                        "durationInTurn": 3,
+                                        "duration": 2,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "removeOnDeath": true,
+                                        expireFunction: logicRef.skillFunctions.talentZoneExpired,
+                                        expireParam: {
+                                            slot:sourceTurn.name,
+                                            fakeName: ATKObjects.sparkleFigmentDEBUFFSHEET},
+                                    }
+                                }
+                                const countdownSheet = ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown;
+                                countdownSheet.currentStacks = totalChange;
+                                updateBuff(battleData,ownerTurn,countdownSheet);
+
+                                const debuffSheet = ATKObjects.sparkleFigmentDEBUFFSHEET;
+                                // const debuffName = debuffSheet.buffName;
+
+                                const enemyPositions = battleData.enemyPositions;
+                                if (!enemyPositions.length) {return;}
+                                debuffSheet.currentStacks = totalChange;
+                                // const debuffCheck = enemyPositions[0].buffsObject[debuffName];
+                                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet,false,null
+                                    // ,debuffCheck
+                                )
+
+                                // const sparkleCreateHerringBuff = this.sparkleCreateHerringBuff ??= turnLogic[characterName].skillFunctions.sparkleCreateHerringBuff;
+                                // sparkleCreateHerringBuff(battleData,ownerTurn,totalChange,false);
         
                                 const dreamDiverBuffName = this.dreamName ??= turnLogic[ownerTurn.properName].buffNames.dreamdiver;
                                 if (sourceTurn.buffsObject[dreamDiverBuffName]) {
@@ -25646,12 +25520,95 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             if (!ownerTurn.battleValues.talentZoneActive) {return;}
         
-        
-                            let targetTurn = generalInfo.slotRef;
-        
-                            let buffSheet = this.buffSheet ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffFAKEDEBUFF;
-        
-                            updateBuff(battleData,targetTurn,buffSheet);
+                            const countdownName = this.countdownName ??= turnLogic[ownerTurn.properName].ATKObjects.sparkleCreateHerringBuffDMGSHEETCountdown.buffName;
+                            const currentStacks = ownerTurn.buffsObject[countdownName].currentStacks;
+
+                            if (currentStacks) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                const debuffSheet = ATKObjects.sparkleFigmentDEBUFFSHEET;
+                                debuffSheet.currentStacks = currentStacks;
+
+                                let targetTurn = generalInfo.slotRef;
+                                updateBuff(battleData,targetTurn,buffSheet);
+                            }
+                        },
+                        "target": "enemy",
+                        "listenerName": "Talent vuln(fake) application for new enemies added to field",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (ownerTurn.battleValues.talentZoneActive) {
+                                const cipherName = this.cipherName ??= turnLogic[ownerTurn.properName].buffNames.cipher;
+                                const sourceBuffs = sourceTurn.buffsObject;
+                                const sourceHasCipher = sourceBuffs[cipherName];
+
+                                const countdownName = this.countdownName ??= turnLogic[ownerTurn.properName].buffNames.redHerringCountdown;
+                                const vulnStacks = ownerTurn.buffsObject[countdownName].currentStacks;
+
+                                if (!ownerTurn.sparkleFigmentVulnValues) {
+                                    const logicRef = turnLogic[ownerTurn.properName];
+                                    const ATKObjects = logicRef.ATKObjects;
+
+                                    let skillRef = ATKObjects.sparkleCreateHerringBuffREF ??= ATKObjects.Talent["Red Herring"].variant1;
+                                    let values = ATKObjects.sparkleCreateHerringBuffREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                                    let skillRef2 = ATKObjects.sparkleUltimateREF ??= ATKObjects.Ultimate["The Hero with a Thousand Faces"].variant1;
+                                    let values2 = ATKObjects.sparkleUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,ownerTurn);
+
+                                    const talentVulnValue = values[1];
+                                    const ultVulnValue = values2[2];
+
+                                    ownerTurn.sparkleFigmentVulnValues = [talentVulnValue,ultVulnValue];
+
+                                    ownerTurn.sparkleOnHitVULNSHEET = {
+                                        "stats": [VulnAll],
+                                        [VulnAll]: 0,
+                                        "source": "Talent",
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": logicRef.buffNames.figmentVuln,
+                                        "durationInTurn": null,
+                                        "duration": 0,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                const vulnValues = ownerTurn.sparkleFigmentVulnValues;
+
+                                const buffSheet = ownerTurn.sparkleOnHitVULNSHEET;
+
+                                const buffCheck = sourceBuffs[buffSheet.buffName];
+                                const currentVulnValue = (vulnValues[0] + (sourceHasCipher ? vulnValues[1] : 0)) * vulnStacks;
+
+                                if (buffCheck) {
+                                    const activeVulnValue = buffCheck[VulnAll];
+                                    if (activeVulnValue === currentVulnValue) {return;}
+                                    removeBuff(battleData,sourceTurn,buffCheck,true,null,false,true);
+                                    buffSheet[VulnAll] = currentVulnValue;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else {
+                                    buffSheet[VulnAll] = currentVulnValue;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            }
+                            else {
+                                //if we ever reach a point where the figment is NOT active but somehow the on-hit vuln IS, then remove it from the ally
+                                const fakeVulnName = this.fakeVulnName ??= turnLogic[ownerTurn.properName].buffNames.figmentVuln;
+                                const buffCheck = sourceTurn.buffsObject[fakeVulnName];
+
+                                if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                            }
                         },
                         "target": "enemy",
                         "listenerName": "Talent vuln(fake) application for new enemies added to field",
@@ -25825,6 +25782,7 @@ const turnLogic = {
         "characterValues": {
             "reservePoints": 0,
             "nextSkillFree": false,
+            "talentZoneActive": false,
         },
         "useTechnique": true,
         "techniqueType": "Buff",
@@ -25832,10 +25790,10 @@ const turnLogic = {
             "nocturne": "Nocturne: Bonus ATK%",
             "redHerringCountdown": "Figment (Sparkle)",
             "e1SPD": "E1: Suspension of Disbelief",
-            "talentFakeDebuff": "Red Herring (Debuff)",
+            "figmentDebuff": "Red Herring (Debuff)",
+            "figmentVuln": "Red Herring (On-Hit Vuln)",
 
             "cipher": "Cipher",
-            "redHerring": "Red Herring",
             "dreamdiver": "Dreamdiver"
         },
         "characterValuesBattle": {},
