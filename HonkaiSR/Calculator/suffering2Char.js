@@ -28755,7 +28755,6 @@ const turnLogic = {
                         compositeCacheTag,
                         valuesRef: values,
                         customMulti: logicRef.skillFunctions.pullMultiCUSTOMFIREFLY
-                        // ATKObject.customMulti(playerStats,playerStatsONHIT,hitType,ATKObject)
                     }
 
                     const actionTags2 = ["All","Heal","Skill"];
@@ -31642,7 +31641,6 @@ const turnLogic = {
                     ATKObjects.aggyUltimateSTANCESHEET = {
                         "stats": [SPDP],
                         [SPDP]: values[0],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -31678,7 +31676,6 @@ const turnLogic = {
                         ATKObjects.aggyUltimateE6PENSHEET = {
                             "stats": [ResistanceLightningPEN],
                             [ResistanceLightningPEN]: 0.20,
-                            "statsOnHit": null,
                             "source": "E6",
                             "sourceOwner": sourceTurn.properName,
                             "buffName": buffName,
@@ -33061,7 +33058,6 @@ const turnLogic = {
                     ATKObjects.eveyWasSummonedDMGSHEET = {
                         "stats": [DamageAll],
                         [DamageAll]: values[0],
-                        "statsOnHit": null,
                         "source": eveyTurn.properName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffNames.eveySummonDMG,
@@ -33276,7 +33272,6 @@ const turnLogic = {
                     ATKObjects.eveyDiedSPDSheet = {
                         "stats": [SPDP],
                         [SPDP]: 0.10,
-                        "statsOnHit": null,
                         "source": "Evey Death",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.eveyDiedSPD,
@@ -33313,7 +33308,6 @@ const turnLogic = {
                     ATKObjects.traceHPConsumeCritDMGSHEET = {
                         "stats": [CritDamageBase],
                         [CritDamageBase]: 0.15,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": evernightTurn.properName,
                         "buffName": logicRef.buffNames.traceCritConsume,
@@ -33396,7 +33390,6 @@ const turnLogic = {
                     ATKObjects.evernightUltimateVulnSHEET = {
                         "stats": [VulnAll],
                         [VulnAll]: values[3],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultVuln,
@@ -33412,7 +33405,6 @@ const turnLogic = {
                     ATKObjects.evernightUltimateDMGSHEET = {
                         "stats": [DamageAll],
                         [DamageAll]: values[2],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultDMG,
@@ -33532,7 +33524,6 @@ const turnLogic = {
                     const buffSheet = this.evernightTraceDARKCRITSHEET ??= {
                         "stats": [CritRateBase],
                         [CritRateBase]: 0.35,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.traceCrit,
@@ -33598,7 +33589,6 @@ const turnLogic = {
                         const buffSheet = this.evernightE4BreakSHEET ??= {
                             "stats": [DamageBreakEfficiency],
                             [DamageBreakEfficiency]: 0.25,
-                            "statsOnHit": null,
                             "source": "E4",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e4AllyBreakEff,
@@ -33707,7 +33697,6 @@ const turnLogic = {
                                 ATKObjects.talentHPLostCRITDMGSHEET = {
                                     "stats": [CritDamageBase],
                                     [CritDamageBase]: values[1],
-                                    "statsOnHit": null,
                                     "source": "Talent",
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": logicRef.buffNames.talentHPLossCrit,
@@ -34783,7 +34772,6 @@ const turnLogic = {
                         "stats": [HPP,HPFlat],
                         [HPP]: values[2] + (rank>=1 ? 0.50 : 0),
                         [HPFlat]: values[3],
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultHP,
@@ -34798,7 +34786,6 @@ const turnLogic = {
                     }
                     ATKObjects.hyacineUltCountdown = {
                         "stats": null,
-                        "statsOnHit": null,
                         "source": "Ultimate",
                         "sourceOwner": characterName,
                         "buffName": buffNames.ultCountdown,
@@ -35027,7 +35014,6 @@ const turnLogic = {
                                 this.hyacineE2SPDheet = {
                                     "stats": [SPDP],
                                     [SPDP]: 0.30,
-                                    "statsOnHit": null,
                                     "source": "Talent",
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": logicRef.buffNames.e2SPD,
@@ -38183,7 +38169,7 @@ const turnLogic = {
                             const hpThreshold = 0.5;
                             
                             let buffSheet = this.buffSheet ??= {
-                                "statsOnHit": [DamageAll], 
+                                "stats": [DamageAll], 
                                 [DamageAll]: 0.15,
                                 "source": "Trace",
                                 "sourceOwner": ownerTurn.properName,
@@ -38194,7 +38180,8 @@ const turnLogic = {
                                 "maxStacks": 1,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             };
         
                             if (hpRatio <= hpThreshold) {
@@ -39234,7 +39221,7 @@ const turnLogic = {
                             }
         
                             const buffSheet = this.anaxaTraceShredSHEET ??= {
-                                "statsOnHit": [DEFShredAll],
+                                "stats": [DEFShredAll],
                                 [DEFShredAll]: 0.04,
                                 "source": "Trace",
                                 "sourceOwner": ownerTurn.properName,
@@ -39245,7 +39232,8 @@ const turnLogic = {
                                 "maxStacks": 7,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             };
                             const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
         
@@ -44111,7 +44099,6 @@ const turnLogic = {
                             // [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
                             // [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
                             // [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
-                            "statsOnHit": null,
                             "source": "Ultimate",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": buffName,
