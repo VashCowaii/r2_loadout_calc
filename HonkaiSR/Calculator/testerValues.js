@@ -341,7 +341,7 @@ const customDisplayValuesLog = {
     ],
 
     "Mortenax Blade": [//tracker done
-        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true},
+        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM"},
     ],
@@ -359,6 +359,8 @@ const permaConditionsTextLibrary = {
     "atLeast2SP": "Skill Points: Current >= 2",
     "archerSub5casts": "Skill Use Count < 5",
     "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
+
+    "mortenaxBladeSkill": "Zone Active<br>HPCurrent > 1",
 
     //TARGET DEFAULT EXPLANATIONS
     "supportDefaultChar1": "If user-defined targets fail, this ability will default to target Character 1.",
@@ -503,6 +505,14 @@ const conditionsCharacterDisplayWarning = {
     "Pela": defaultStandardAbilityDisplayWarnings,
     "Black Swan": defaultStandardAbilityDisplayWarnings,
     "Welt": defaultStandardAbilityDisplayWarnings,
+    "Mortenax Blade": {
+        hasEnhancedState: true,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.mortenaxBladeSkill,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
     
 
     //PRESERVATION
