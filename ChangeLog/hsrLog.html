@@ -33,15 +33,23 @@
                 <li>Reforged in Hellfire</li>
             </ul>
         </li>
+        <li>While in-part an optimization change, the On-Hit stats table has been deprecated and will no longer display on action or DMG inspections.
+            <ul>
+                <li>The On-Hit table has been replaced with the action tag table under the tag of "All" since functionally, On-Hit dmg is action-tagged, just for anything.</li>
+                <li>And yes for those that care, technically I say On-Hit but really mean On-DMG because On-Hit refers to real hits in an attack, that's just what it was called in the calc before.</li>
+            </ul>
+        </li>
 
         <h4>Fixes</h4>
         <li>Fixed an issue where the new Master Smith set wasn't recognizing debuff applications if they were handled in batches of enemies rather than singular targets.</li>
         <li>Fixed an issue where Lies Dance on the Breeze wasn't properly applying it's DEF reduction.</li>
         <li>Related to the Sparkle code update listed below, fixed an issue where Sparkle's E2 DEF reduction wasn't considered as DEF reduction on the enemy and was instead still counted as DEF shred on allies(like the old sparkle)</li>
+        <li>Fixed an issue where some DOT dmg instances failed to properly access action-tagged bonuses.</li>
 
         <h4>Optimization</h4>
         <li>Converted Saber's energy overflow listener to a personal listener, so she's not trying to listen to everyone's energy changes and THEN determine if they're hers or not.</li>
         <li>Updated Sparkle's code, she was the 2nd ever character to be added to the calculator and even with her novaflare she just had some crazy old code in there that needed updating.</li>
+
     </ul>
 </div>
 <div>
