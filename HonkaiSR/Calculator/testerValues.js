@@ -341,7 +341,7 @@ const customDisplayValuesLog = {
     ],
 
     "Mortenax Blade": [//tracker done
-        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true},
+        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM"},
     ],
