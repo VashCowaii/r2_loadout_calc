@@ -1512,39 +1512,6 @@ const battleActions = {
                 }
             }
         }
-        // console.log("Multi check preAll: ", resultingMulti,characterActions)
-        const allRef = characterActions.All;
-        if (allRef) {
-            for (let buffName in allRef) {
-                const currentMultiBuff = allRef[buffName];
-                if (!currentMultiBuff) {continue;}
-                // console.log("Actual multi from All: ",allRef[buffName].multiplier,characterActions)
-                resultingMulti *= allRef[buffName].multiplier ?? 1
-            }
-        }
-
-        // if (actionTags) {
-        //     for (let i=0;i<actionTags.length;i++) {
-        //         let currentTag = actionTags[i];
-        //         let activeTable = characterActions[currentTag] ??= {};//make the stat sheet if it doesn't exist yet
-
-        //         for (let buffName in activeTable) {
-        //             const currentMultiBuff = activeTable[buffName];
-        //             if (!currentMultiBuff) {continue;}
-        //             resultingMulti += (activeTable[buffName].multiplier ?? 1) - 1;
-        //         }
-        //     }
-        // }
-        // // console.log("Multi check preAll: ", resultingMulti,characterActions)
-        // const allRef = characterActions.All;
-        // if (allRef) {
-        //     for (let buffName in allRef) {
-        //         const currentMultiBuff = allRef[buffName];
-        //         if (!currentMultiBuff) {continue;}
-        //         // console.log("Actual multi from All: ",allRef[buffName].multiplier,characterActions)
-        //         resultingMulti += (allRef[buffName].multiplier ?? 1) - 1;
-        //     }
-        // }
         return resultingMulti;
     },
     getToughnessSum(battleData,reduction,attackerTurn,enemyTurn) {//TODO: right now WBE only exists in static bonus form, with no action tags, but later we need to cachetag this
