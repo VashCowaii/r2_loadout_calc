@@ -3516,8 +3516,8 @@ const turnLogicLightcones = {
                                 let rankParams = lcPathing[ownerRank-1];
         
                                 sourceTurn.lcLiesAlongBreezeSHREDSHEET1 = {
-                                    "stats": [DEFShredAll],
-                                    [DEFShredAll]: rankParams[2],
+                                    "stats": [DEFP],
+                                    [DEFP]: -rankParams[2],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName,
@@ -3531,8 +3531,8 @@ const turnLogicLightcones = {
                                     "isDebuff": true,
                                 }
                                 sourceTurn.lcLiesAlongBreezeSHREDSHEET2 = {
-                                    "stats": [DEFShredAll],
-                                    [DEFShredAll]: rankParams[5],
+                                    "stats": [DEFP],
+                                    [DEFP]: -rankParams[5],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName2,
