@@ -13415,7 +13415,6 @@ const turnLogic = {
                     ATKObjects.blackswanSkillDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[3],
-                        "statsOnHit": null,
                         "source": "Skill",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.skillShred,
@@ -18774,8 +18773,7 @@ const turnLogic = {
                                 const logicRef = turnLogic[ownerTurn.properName];
     
                                 this.E1SUB80SHEET = {
-                                    "stats": null,
-                                    "statsOnHit": [DEFShredAll,CritRateBase],
+                                    "stats": [DEFShredAll,CritRateBase],
                                     [DEFShredAll]: 0.20,
                                     [CritRateBase]: 0.15,
                                     "source": "E1",
@@ -18788,6 +18786,7 @@ const turnLogic = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": null,
+                                    "actionTags": ["All"],
                                     // "removeOnDeath": true,
                                 }
                             }
@@ -19812,7 +19811,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
         
                             const traceDebuffDMG = this.traceDebuffDMG ??= {
-                                "statsOnHit": [DamageAll],
+                                "stats": [DamageAll],
                                 [DamageAll]: 0.10,
                                 "source": "E1",
                                 "sourceOwner": ownerTurn.properName,
@@ -19823,7 +19822,8 @@ const turnLogic = {
                                 "maxStacks": 5,
                                 "currentStacks": 1,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             }
         
                             let targetTurn = generalInfo.targetTurn;
@@ -24544,7 +24544,6 @@ const turnLogic = {
                     const buffSheet = this.ruanTalentSPDSheet ??= {
                         "stats": [SPDP],
                         [SPDP]: values[0],
-                        "statsOnHit": null,
                         "source": "Talent",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.talentSPD,
@@ -24566,7 +24565,6 @@ const turnLogic = {
                     const buffSheet2 = this.ruanTraceBESHEET ??= {
                         "stats": [DamageBreak],
                         [DamageBreak]: 0.20,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.traceBE,
@@ -24620,7 +24618,7 @@ const turnLogic = {
                             if (!this.ruanmeiE2ATKSHEET) {
                                 const buffNames = turnLogic[ownerTurn.properName].buffNames;
                                 this.ruanmeiE2ATKSHEET = {
-                                    "statsOnHit": [ATKP],
+                                    "stats": [ATKP],
                                     [ATKP]: 0.40,
                                     "source": "E2",
                                     "sourceOwner": ownerTurn.properName,
@@ -24631,7 +24629,8 @@ const turnLogic = {
                                     "maxStacks": 1,
                                     "currentStacks": 1,
                                     "decay": false,
-                                    "expireType": null
+                                    "expireType": null,
+                                    "actionTags": ["All"],
                                 }
                             }
                             const buffSheet = this.ruanmeiE2ATKSHEET;
@@ -26272,7 +26271,6 @@ const turnLogic = {
 
                     const buffSheet2 = this.saberManaBurstSHEET ??= {
                         "stats": null,
-                        "statsOnHit": null,
                         "source": "Trace",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": turnLogic[ownerTurn.properName].buffNames.mana,
@@ -26325,7 +26323,6 @@ const turnLogic = {
                         const buffSheet = this.saberE4Sheet ??= {
                             "stats": [ResistanceWindPEN],
                             [ResistanceWindPEN]: 0.08,
-                            "statsOnHit": null,
                             "source": "E4",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e4Pen,
@@ -26535,7 +26532,6 @@ const turnLogic = {
                                 this.saberSagaSixteenDaysPENSHEET = {
                                     "stats": [ResistanceWindPEN],
                                     [ResistanceWindPEN]: 0.04,
-                                    "statsOnHit": null,
                                     "source": "E4",
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": buffName,
@@ -27300,7 +27296,6 @@ const turnLogic = {
                             const buffSheet = this.buffSheet ??= {
                                 "stats": [HealingIncoming],
                                 [HealingIncoming]: 0.20,
-                                "statsOnHit": null,
                                 "source": "Trace",
                                 "sourceOwner": ownerTurn.properName,
                                 "buffName": turnLogic[ownerTurn.properName].buffNames.traceHealing,
@@ -28604,7 +28599,6 @@ const turnLogic = {
                         "actionTags": ["Break"]
                     }
                     // "VulnBreak": rankParams[1] //WHY IS THIS A FUCKING VULN GOD DAMNIT
-                    //might wanna look into a statsOnHit{} that I bundle into the buff sheet for times like this, bc that is some jank shit
 
                     //E1 gives skill def shred but only to the enhanced skill
                     //so... is there a reason to bundle it anywhere else but the cumbustion buff?
