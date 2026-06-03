@@ -201,7 +201,7 @@ const battleActions = {
             }
         }//if it DOES exist but we're still applying it, if it can stack and has room to stack, then STACK it.
 
-        if (changeStats && (currentReference.stats != undefined || currentReference.statsOnHit != undefined)) {
+        if (changeStats && currentReference.stats != undefined) {
             buffStatChange(battleData,sourceTurn,buffSheet,currentReference,timesToApply,1,ignoreFamilyPokes);
         }
     },
@@ -216,7 +216,7 @@ const battleActions = {
         
         // if (!ignoreDebuffPokes) {poke("DebuffAppliedBatch",battleData,{sourceTurn,currentReference},sourceTurn);}
 
-        const hasStatsAtAll = buffSheet.stats != undefined || buffSheet.statsOnHit != undefined;
+        const hasStatsAtAll = buffSheet.stats != undefined;
         for (let sourceTurn of sourceTurnArray) {
             let buffRef = sourceTurn.buffsObject;
             
@@ -390,7 +390,7 @@ const battleActions = {
         //but also if it's a source-specific event, then switch to the source table for the character that applied the buff/debuff
 
         // basicShorthand.mappedCacheTags 
-        const {buffName,stats,actionTags,statsOnHit,onTurnStats,isSourceSpecific,sourceOwner} = currentReference;
+        const {buffName,stats,actionTags,isSourceSpecific,sourceOwner} = currentReference;
         // const buffName = currentReference.buffName;
 
         // const statDirection = applyOrRemove === "Apply" ? 1 : -1;
@@ -433,22 +433,6 @@ const battleActions = {
                     // for (let familyName of familyRef) {
                     //     poke(familyName,battleData,genInfo,sourceTurn);//onhit properties do NOT trigger conditionals since they exist outside the stat sheet
                     // }
-                }
-            }
-            // const onHitStats = currentReference.statsOnHit;
-            if (statsOnHit) {
-                let currentStatTable = sourceTurn.statTableONHIT;
-                for (let elements of statsOnHit) {
-                    currentStatTable[elements] += (currentReference[elements] * composite);
-                    // console.log(currentReference[elements],currentStatTable[elements],statsOnHit)
-                }
-            }
-
-            // const onTurnStats = currentReference.onTurnStats;
-            if (onTurnStats) {
-                let currentStatTable = sourceTurn.statTableONTurn;
-                for (let elements of onTurnStats) {
-                    currentStatTable[elements] += (currentReference[elements] * composite);
                 }
             }
         }
@@ -506,7 +490,7 @@ const battleActions = {
             logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName,buffDisplayIcon: currentReference.buffDisplayIcon, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
         }
 
-        const changeStats = currentReference.stats != undefined || currentReference.statsOnHit != undefined;
+        const changeStats = currentReference.stats != undefined;
         if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
 
 
@@ -583,7 +567,7 @@ const battleActions = {
     },
     buffRemovalEndBatchTargets(battleData,sourceTurnArray,currentReference,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes) {
         const buffName = currentReference.buffName;
-        const changeStats = currentReference.stats != undefined || currentReference.statsOnHit != undefined;
+        const changeStats = currentReference.stats != undefined;
 
         currentReference.expireFunction?.(battleData,currentReference.expireParam);
         const isDebuff = currentReference.isDebuff;
@@ -707,7 +691,7 @@ const battleActions = {
     getBuffCacheFamilies(buffSheet) {
         const familyRef = basicShorthand.mappedCacheTags;
         // console.log(familyRef)
-        const statsRef = [...(buffSheet.stats ?? []),...(buffSheet.statsOnHit ?? [])];
+        const statsRef = [...(buffSheet.stats ?? [])];
         let familySet = null;
         let familyNameArary = [];
         for (let statName of statsRef) {
