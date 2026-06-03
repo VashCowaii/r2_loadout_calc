@@ -9285,7 +9285,7 @@ const turnLogic = {
                     let values = ATKObjects.huohuoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Imaginary"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -9329,7 +9329,7 @@ const turnLogic = {
                     let values = ATKObjects.luochaSkillHealHealREFVALUES ?? battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Heal","Skill"];
+                    const actionTags = ["All","Heal","Skill"];
                     const compositeCacheTag = actionTags + sourceTurn.properName;
 
                     ATKObjects.luochaSkillHealHealHEALOBJECT = {
@@ -9370,7 +9370,7 @@ const turnLogic = {
                     }
 
 
-                    const actionTags2 = ["Shield"];
+                    const actionTags2 = ["All","Shield"];
                     const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
                     ATKObjects.luochaE2SHIELDSHEET = {
                         "stats": null,
@@ -9496,7 +9496,7 @@ const turnLogic = {
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -9859,7 +9859,7 @@ const turnLogic = {
                         let values = ATKObjects.luochaAddZoneREFVALUES;
                         let characterName = ownerTurn.properName;
 
-                        const actionTags = ["Heal","Talent"];
+                        const actionTags = ["All","Heal","Talent"];
                         const compositeCacheTag = actionTags + ownerTurn.properName;
 
                         ATKObjects.luochaSelfHealHEALOBJECT = {
@@ -10184,7 +10184,7 @@ const turnLogic = {
                     let values = ATKObjects.swBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Basic","Quantum"];
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10226,7 +10226,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
                     const tags = ["All","Skill","Quantum"];
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10335,7 +10335,7 @@ const turnLogic = {
                     let values = ATKObjects.silverwolfUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Quantum"];
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10515,7 +10515,7 @@ const turnLogic = {
                     let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Quantum"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -10551,7 +10551,7 @@ const turnLogic = {
                 if (!ATKObjects.swE4DMGREF) {
                     const scalar = "ATK";
                     const tags = ["All","Quantum"];
-                    const actionTags = ["Additional"];
+                    const actionTags = ["All","Additional"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11034,7 +11034,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaBasicATKOBJECT = {
@@ -11113,7 +11113,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaSkillATKOBJECT = {
@@ -11192,7 +11192,7 @@ const turnLogic = {
                     let values = ATKObjects.kafkaFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","FUA","Lightning"];
-                    const actionTags = ["FUA","Attack"];
+                    const actionTags = ["All","FUA","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11250,7 +11250,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.kafkaUltimateATKOBJECT = {
@@ -11318,7 +11318,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.kafkaUltimateDOTSHEET = {
@@ -11383,7 +11383,7 @@ const turnLogic = {
                     const values = ATKObjects.kafkaTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Technique","Lightning"];
-                    const actionTags = ["Technique","Attack"];
+                    const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11862,7 +11862,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.fishladyBasicATKOBJECT = {
                         multipliers: {
@@ -11902,7 +11902,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.fishladySkillATKOBJECT = {
@@ -12127,7 +12127,7 @@ const turnLogic = {
                     // const realShredKeys = keyShortcut(defShredKeys,tags);
                     // const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT"];
+                    const actionTags = ["All","DOT"];
 
                     const compositeCacheTagL = tagsLightning + actionTags + sourceTurn.properName;
                     const compositeCacheTagF = tagsFire + actionTags + sourceTurn.properName;
@@ -12442,7 +12442,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.fishladyUltimateATKOBJECT = {
@@ -13017,7 +13017,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Basic","Attack"];
+                    const actionTags = ["All","Basic","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.blackswanBasicATKOBJECT = {
                         multipliers: {
@@ -13143,7 +13143,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["DOT","BSArcana"];
+                    const actionTags = ["All","DOT","BSArcana"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.blackswanArcanaDOTSHEET = {
@@ -13242,7 +13242,7 @@ const turnLogic = {
                     ATKObjects.talentBlastRef = {
                         buffName: "Arcana Blast (Stacks >= 3)",
                         tags,
-                        actionTags: ["DOT"],
+                        actionTags: ["All","DOT"],
                         realDMGKeys: keyShortcut(dmgKeys,tags),
                         realPENKeys: keyShortcut(resPENKeys,tags),
                         realShredKeys: keyShortcut(defShredKeys,tags),
@@ -13293,7 +13293,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.blackswanSkillATKOBJECT = {
                         multipliers: {
@@ -13339,7 +13339,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.blackswanUltimateATKOBJECT = {
