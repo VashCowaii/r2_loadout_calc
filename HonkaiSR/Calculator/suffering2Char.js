@@ -28577,8 +28577,6 @@ const turnLogic = {
                         [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
                         [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
                         [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
-                        "statsOnHit": [VulnBreak],
-                        [VulnBreak]: values[0],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -28590,6 +28588,21 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null
                     }
+                    ATKObjects.fireflyUltimateCOMBUSTIONSHEET2 = {
+                        "stats": [VulnBreak],
+                        [VulnBreak]: values[0],
+                        "source": characterName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.combustion2,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Break"]
+                    }
                     // "VulnBreak": rankParams[1] //WHY IS THIS A FUCKING VULN GOD DAMNIT
                     //might wanna look into a statsOnHit{} that I bundle into the buff sheet for times like this, bc that is some jank shit
 
@@ -28600,8 +28613,10 @@ const turnLogic = {
                     //this is probably the easiest fuckin set of eidolons I've ever done, holy shit lmao, e2 is the only remotely tricky one
                 }
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
+                let buffSheet2 = ATKObjects.fireflyUltimateCOMBUSTIONSHEET2;
 
                 updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet2);
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.combustionActive = true;
@@ -28641,7 +28656,9 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
                 logicRef.characterValuesBattle.combustionActive = false;
                 let buffSheet = ATKObjects.fireflyUltimateCOMBUSTIONSHEET;
+                let buffSheet2 = ATKObjects.fireflyUltimateCOMBUSTIONSHEET2;
                 removeBuff(battleData,fireflyTurn,buffSheet);
+                removeBuff(battleData,fireflyTurn,buffSheet2);
 
                 const eventName = eventTurn.properName;
                 const nextAV = battleData.nextTurnAV;
@@ -29299,6 +29316,7 @@ const turnLogic = {
         "buffNames": {
             "coreOverload": "Module γ: Core Overload",
             "combustion": "Complete Combustion",
+            "combustion2": "Complete Combustion (Break Vuln)",
             "implant": "Fyrefly Type-IV: Deathstar Overload",
             "techImplant": "Δ Order: Meteoric Incineration"
         },
