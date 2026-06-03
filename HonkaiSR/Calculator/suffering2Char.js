@@ -5895,14 +5895,14 @@ const turnLogic = {
             "element": "N/A",
             "energyMax": 110,
             "skills": {
-                "Basic ATK": {
+                "Enemy ATK": {
                     "Generic AOE ATK": {
                         "variant1": {
                             "skillID": 1100601,
                             "trigger": "Skill01",
                             "name": "System Warning",
                             "type": "AoE",
-                            "slot": "Basic ATK",
+                            "slot": "Enemy ATK",
                             "desc": "",
                             "energyCost": null,
                             "energyRegen": 0,
@@ -6153,7 +6153,7 @@ const turnLogic = {
                 const logicRef = turnLogic[enemyTypeAttack];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Basic ATK"]["Generic AOE ATK"].variant1;
+                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Enemy ATK"]["Generic AOE ATK"].variant1;
 
                 if (!ATKObjects.genericBossBasic) {
                     let values = skillRef.params[6];
@@ -6216,14 +6216,14 @@ const turnLogic = {
             "element": "N/A",
             "energyMax": 110,
             "skills": {
-                "Basic ATK": {
+                "Enemy ATK": {
                     "Generic ST ATK": {
                         "variant1": {
                             "skillID": 1100601,
                             "trigger": "Skill01",
                             "name": "System Warning",
                             "type": "AoE",
-                            "slot": "Basic ATK",
+                            "slot": "Enemy ATK",
                             "desc": "",
                             "energyCost": null,
                             "energyRegen": 0,
@@ -6474,7 +6474,7 @@ const turnLogic = {
                 const logicRef = turnLogic[enemyTypeAttack];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Basic ATK"]["Generic ST ATK"].variant1;
+                let skillRef = ATKObjects.genericBossBasicREF ??= turnLogic[enemyTypeAttack].enemyData.skills["Enemy ATK"]["Generic ST ATK"].variant1;
 
                 if (!ATKObjects.genericBossBasic) {
                     let values = skillRef.params[6];
