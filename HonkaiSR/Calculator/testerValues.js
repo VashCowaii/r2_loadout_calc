@@ -360,6 +360,8 @@ const permaConditionsTextLibrary = {
     "archerSub5casts": "Skill Use Count < 5",
     "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
 
+    "mortenaxBladeSkill": "Zone Active<br>HPCurrent > 1",
+
     //TARGET DEFAULT EXPLANATIONS
     "supportDefaultChar1": "If user-defined targets fail, this ability will default to target Character 1.",
 }
@@ -503,6 +505,14 @@ const conditionsCharacterDisplayWarning = {
     "Pela": defaultStandardAbilityDisplayWarnings,
     "Black Swan": defaultStandardAbilityDisplayWarnings,
     "Welt": defaultStandardAbilityDisplayWarnings,
+    "Mortenax Blade": {
+        hasEnhancedState: true,
+        "Skill": "",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.mortenaxBladeSkill,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
     
 
     //PRESERVATION
