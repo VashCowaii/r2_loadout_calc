@@ -15704,7 +15704,7 @@ const turnLogic = {
 
                     const oldValue = valuesRef.charge;
                     const maxValue = ownerTurn.rank >= 2 ? 7 : 9;
-                    valuesRef.charge = Math.min(maxValue,oldValue + pointsGained);
+                    valuesRef.charge = oldValue + pointsGained;
                     const newValue = valuesRef.charge;
 
                     // if (newValue === maxValue) {
