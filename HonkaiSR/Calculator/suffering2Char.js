@@ -30529,10 +30529,7 @@ const turnLogic = {
 
                 if (!ATKObjects.rmcUltimateATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
-                    let values = ATKObjects.rmcUltimateREFVALUES ??= [
-                        2.25,
-                        0.4
-                      ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    let values = ATKObjects.rmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                     const scalar = "ATK";
                     // const tags = ["All","Basic","Lightning"];
