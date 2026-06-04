@@ -72,6 +72,7 @@ global.calcAllowedSet = new Set([
     "Aglaea",//DONE
     "Evernight",//DONE
     "Hyacine",//DONE
+    "Castorice",
     //4star
 
     //ELATION
