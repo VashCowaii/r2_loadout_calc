@@ -401,7 +401,6 @@ const battleActions = {
         if (actionTags !== undefined) {
             const characterActions = sourceTurn.tagSpecific;
             //action tags don't have onhit checks bc for all intents and purposes, action tags ARE onhit effects, just a matter of what actions
-            //TODO: possibly go through and set all actual onhit effects to be the attack action tag instead
             const actionTagLength = actionTags.length;
             for (let i=0;i<actionTagLength;i++) {
                 let currentTag = actionTags[i];

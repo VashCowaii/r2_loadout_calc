@@ -433,88 +433,14 @@ const turnLogicLightcones = {
     "In the Night": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
-            statCheck(battleData,currentTurn,ownersSlots) {
-                let ownerRank = ownersSlots[currentTurn.name];
-
-                if (!currentTurn.lcPerfectTimingERToHealingSHEET) {
-                    let lcNameRef = "In the Night";
-                    let lcPathing = lightcones[lcNameRef].params;
-                    let rankParams = lcPathing[ownerRank-1];
-
-                    currentTurn.lcIntoTheNightSKILLBASICSHEET = {
-                        "stats": [DamageAll],
-                        [DamageAll]: rankParams[2],
-                        "source": lcNameRef,
-                        "sourceOwner": currentTurn.properName,
-                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 6,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "actionTags": ["Basic","Skill"]
-                    }
-                    currentTurn.lcIntoTheNightULTIMATESHEET = {
-                        "stats": [CritDamageBase],
-                        [CritDamageBase]: rankParams[3],
-                        "source": lcNameRef,
-                        "sourceOwner": currentTurn.properName,
-                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 6,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "actionTags": ["Ultimate"]
-                    }
-                }
-                let buffSheet = currentTurn.lcIntoTheNightSKILLBASICSHEET;
-                let buffSheet2 = currentTurn.lcIntoTheNightULTIMATESHEET;
-                const buffName = buffSheet.buffName;
-                const buffsRef = currentTurn.buffsObject;
-                const buffCheck = buffsRef[buffName];
-
+            statCheck(battleData,currentTurn) {
                 const SPDFinal = calcs.getSPDFinal(currentTurn.statTable).SPDFinal;
 
                 const minSPD = 100;
                 const usableSPD = Math.max(0,SPDFinal - minSPD);
                 const validStacks = Math.floor(usableSPD/10);
 
-                if (buffCheck) {
-                    const currentAmount = buffCheck.currentStacks;
-                    if (currentAmount === validStacks) {return;}
-                    else if (currentAmount < validStacks) {
-                        const stackDiff = validStacks - currentAmount;
-                        buffSheet.currentStacks = stackDiff;
-                        buffSheet2.currentStacks = stackDiff;
-                        updateBuff(battleData,currentTurn,buffSheet);
-                        updateBuff(battleData,currentTurn,buffSheet2);
-                        return;
-                    }
-                    else {
-                        const stackDiff = validStacks - currentAmount;
-                        if (-stackDiff === currentAmount) {
-                            removeBuff(battleData,currentTurn,buffSheet);
-                            removeBuff(battleData,currentTurn,buffSheet2);
-                            return;
-                        }
-                        buffSheet.currentStacks = stackDiff;
-                        buffSheet2.currentStacks = stackDiff;
-                        updateBuff(battleData,currentTurn,buffSheet);
-                        updateBuff(battleData,currentTurn,buffSheet2);
-                        return;
-                    }
-                }
-                if (!validStacks) {return;}
-
-                buffSheet.currentStacks = validStacks;
-                buffSheet2.currentStacks = validStacks;
-                updateBuff(battleData,currentTurn,buffSheet);
-                updateBuff(battleData,currentTurn,buffSheet2);
+                currentTurn.lcIntotheNightTOTALSTACKCOUNT = validStacks;
             }
         },
         "listeners": [
@@ -538,6 +464,7 @@ const turnLogicLightcones = {
                         statCheck(battleData,currentTurn,ownersSlots);
 
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
@@ -548,14 +475,128 @@ const turnLogicLightcones = {
                         "trigger": "UpdateStatSPD",//SPD stat family
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
-                            let ownersSlots = this.ownersSlots;
         
                             const statCheck = this.statCheck ??= turnLogicLightcones["In the Night"].skillFunctions.statCheck;
-                            statCheck(battleData,sourceTurn,ownersSlots);
+                            statCheck(battleData,sourceTurn);
                         },
                         "target": "self",
                         "isPersonal": true,
                         "listenerName": "In the Night SPD check",
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            let isValidUlt = false;
+                            let isValidBasicSkill = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "Ultimate") {
+                                    isValidUlt = true;
+                                }
+                                else if (tag === "Skill" || tag === "Basic") {
+                                    isValidBasicSkill = true;
+                                }
+                            }
+                            // if (!isValid) {return;}
+
+                            const SPDStacks = sourceTurn.lcIntotheNightTOTALSTACKCOUNT ?? 0;
+
+                            if (!sourceTurn.lcPerfectTimingERToHealingSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "In the Night";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+            
+                                sourceTurn.lcIntoTheNightSKILLBASICSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 6,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"]
+                                }
+                                sourceTurn.lcIntoTheNightULTIMATESHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 6,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"]
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcIntoTheNightSKILLBASICSHEET;
+                            let buffSheet2 = sourceTurn.lcIntoTheNightULTIMATESHEET;
+
+                            const buffsRef = sourceTurn.buffsObject;
+                            const buffCheck1 = buffsRef[buffSheet.buffName];
+                            const buffCheck2 = buffsRef[buffSheet2.buffName];
+
+                            if (isValidBasicSkill) {
+                                if (buffCheck1) {
+                                    const currentStacks = buffCheck1.currentStacks;
+                                    if (currentStacks != SPDStacks) {
+                                        const stackDiff = SPDStacks - currentStacks;
+                                        if (-stackDiff === currentStacks) {
+                                            removeBuff(battleData,sourceTurn,buffCheck1);
+                                        }
+                                        else {
+                                            buffSheet.currentStacks = stackDiff;
+                                            updateBuff(battleData,sourceTurn,buffSheet);
+                                        }
+                                    }
+                                }
+                                else {
+                                    buffSheet.currentStacks = SPDStacks;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            }
+                            else if (buffCheck1) {
+                                removeBuff(battleData,sourceTurn,buffCheck1);
+                            }
+
+                            if (isValidUlt) {
+                                if (buffCheck2) {
+                                    const currentStacks = buffCheck2.currentStacks;
+                                    if (currentStacks != SPDStacks) {
+                                        const stackDiff = SPDStacks - currentStacks;
+                                        if (-stackDiff === currentStacks) {
+                                            removeBuff(battleData,sourceTurn,buffCheck2);
+                                        }
+                                        else {
+                                            buffSheet2.currentStacks = stackDiff;
+                                            updateBuff(battleData,sourceTurn,buffSheet2);
+                                        }
+                                    }
+                                }
+                                else {
+                                    buffSheet2.currentStacks = SPDStacks;
+                                    updateBuff(battleData,sourceTurn,buffSheet2);
+                                }
+                            }
+                            else if (buffCheck2) {
+                                removeBuff(battleData,sourceTurn,buffCheck2);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "In the Night DMG check",
                     },
                 ]
             },
@@ -4590,7 +4631,7 @@ const turnLogicLightcones = {
                             let buffCheck = targetTurn.buffsObject[buffName];
         
                             if (!buffCheck) {
-                                if (!sourceTurn.incessantRainCRITSHEET) {
+                                if (!sourceTurn.resolutionShinesDEFSHREDSHEET) {
                                     let lcNameRef = "Resolution Shines As Pearls of Sweat";
                                     let ownersSlots = this.ownersSlots;
                                     let ownerRank = ownersSlots[sourceTurn.name];
@@ -5866,38 +5907,80 @@ const turnLogicLightcones = {
                 "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
-                    let lcNameRef = "A Trail of Bygone Blood";
-                    let lcPathing = lightcones[lcNameRef].params;
-                
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
 
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
-                        let ownerName = currentTurn.properName;
-
-                        let buffSheet = currentTurn.lcTrailBygoneBloodBONUSSHEET ??= {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": ownerName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Skill","Ultimate"]
-                        }
-                        
-                        updateBuff(battleData,currentTurn,buffSheet);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
                 "listenerName": "A Trail of Bygone Blood - battlestart buff application",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            let isValid = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "Ultimate" || tag === "Skill") {
+                                    isValid = true;
+                                    break;
+                                }
+                            }
+                            // if (!isValid) {return;}
+    
+                            if (!sourceTurn.lcTrailBygoneBloodBONUSSHEET ) {
+                                let lcNameRef = "A Trail of Bygone Blood";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcTrailBygoneBloodBONUSSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcTrailBygoneBloodBONUSSHEET ;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            //NOTE: this would include converted crit rate bonuses
+                            if (isValid) {//if the target has enough cr for the buff, then we can apply it
+                                if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "A Trail of Bygone Blood check",
+                    },
+                ],
             },
         ],
         "buffNames": {
@@ -5982,39 +6065,82 @@ const turnLogicLightcones = {
             {
                 "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
-                    let lcNameRef = "Collapsing Sky";
-                    let lcPathing = lightcones[lcNameRef].params;
-                    
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
 
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
-                        let ownerName = currentTurn.properName;
-
-                        const buffSheet = currentTurn.lcCollapsingSkyDMGSHEET ??= {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[0],
-                            "source": lcNameRef,
-                            "sourceOwner": ownerName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Basic","Skill"],
-                        }
-                        
-                        updateBuff(battleData,currentTurn,buffSheet);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
                 "listenerName": "Collapsing Sky - battlestart dmg application",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            let isValid = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "Basic" || tag === "Skill") {
+                                    isValid = true;
+                                    break;
+                                }
+                            }
+                            // if (!isValid) {return;}
+    
+                            if (!sourceTurn.lcCollapsingSkyDMGSHEET) {
+                                let lcNameRef = "Collapsing Sky";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcCollapsingSkyDMGSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcCollapsingSkyDMGSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            //NOTE: this would include converted crit rate bonuses
+                            if (isValid) {//if the target has enough cr for the buff, then we can apply it
+                                if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Collapsing Sky DMG check",
+                    },
+                ],
             },
         ],
         "buffNames": {
