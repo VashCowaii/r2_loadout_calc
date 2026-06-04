@@ -3142,7 +3142,7 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
         
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
@@ -10675,32 +10675,17 @@ const turnLogicRelics = {
                         const namedTurns = battleData.nameBasedTurns;
                         const subListeners = this.subListeners[0];
                         const subListeners2 = this.subListeners[1];
-
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageUltimate,DamageSkill],
-                            [DamageUltimate]: 0.20,
-                            [DamageSkill]: 0.20,
-                            "source": "Scholar Lost in Erudition",
-                            "sourceOwner": "",
-                            "buffName": turnLogicRelics["Scholar Lost in Erudition"]["4pc"].buffNames.skillUltyDmg,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
+                        const subListeners3 = this.subListeners[2];
+                        const subListeners4 = this.subListeners[3];
 
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
 
-                            buffSheet.sourceOwner = currentTurn.properName,
-                            updateBuff(battleData,currentTurn,buffSheet);
-
                             addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners2,subListeners2.trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners3,subListeners3.trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners4,subListeners4.trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -10715,6 +10700,21 @@ const turnLogicRelics = {
 
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
+                                sourceTurn.scholarIsReadyForSkillBuff = true;
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Scholar ulty listener",
+                        },
+                        {
+                            "trigger": "AbilityStart",
+                            condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Skill") {return;}
+
+                                let sourceTurn = generalInfo.sourceTurn;
+                                if (!sourceTurn.scholarIsReadyForSkillBuff) {return;}
+                                sourceTurn.scholarIsReadyForSkillBuff = false;
         
                                 if (!this.scholarErudtionSKILLDMGSHEET) {
                                     let relicNameRef = "Scholar Lost in Erudition";
@@ -10724,8 +10724,8 @@ const turnLogicRelics = {
                                     // greatTableIndex
                                     // greatTableKeys
                                     this.scholarErudtionSKILLDMGSHEET = {
-                                        "stats": [DamageSkill],
-                                        [DamageSkill]: relicPathing[1],
+                                        "stats": [DamageAll],
+                                        [DamageAll]: relicPathing[1],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
                                         "buffName": buffName,
@@ -10736,6 +10736,7 @@ const turnLogicRelics = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
         
@@ -10748,7 +10749,7 @@ const turnLogicRelics = {
                             },
                             "target": "self",
                             "isPersonal": true,
-                            "listenerName": "Scholar ulty listener",
+                            "listenerName": "Scholar skill listener",
                         },
                         {
                             "trigger": "AbilityEnd",
@@ -10769,6 +10770,60 @@ const turnLogicRelics = {
                             "target": "self",
                             "isPersonal": true,
                             "listenerName": "Scholar skill listener",
+                        },
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+
+                                let isValid = false;
+                                const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                                for (let tag of actionTags) {
+                                    if (tag === "Ultimate" || tag === "Skill") {
+                                        isValid = true;
+                                        break;
+                                    }
+                                }
+                                // if (!isValid) {return;}
+        
+                                if (!this.scholarBase4PCSHEET) {
+                                    let relicNameRef = "Scholar Lost in Erudition";
+                                    let buffName = turnLogicRelics[relicNameRef]["4pc"].buffNames;
+                                    let relicPathing = relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    this.scholarBase4PCSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: 0.20,
+                                        "source": "Scholar Lost in Erudition",
+                                        "sourceOwner": "",
+                                        "buffName": turnLogicRelics["Scholar Lost in Erudition"]["4pc"].buffNames.skillUltyDmg,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                let buffSheet = this.scholarBase4PCSHEET;
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+            
+                                //NOTE: this would include converted crit rate bonuses
+                                if (isValid) {//if the target has enough cr for the buff, then we can apply it
+                                    if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                    removeBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Scholar Ult/Skill DMG check",
                         },
                     ]
                 },
@@ -13456,6 +13511,7 @@ const turnLogicRelics = {
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[3],subListeners[3].trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -13532,6 +13588,86 @@ const turnLogicRelics = {
                             "isPersonal": true,
                             "listenerName": "As Navigator Isee Sees It - turn start listener",
                         },
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+
+                                let isValid = false;
+                                const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                                for (let tag of actionTags) {
+                                    if (tag === "Ultimate" || tag === "Skill") {
+                                        isValid = true;
+                                        break;
+                                    }
+                                }
+                                // if (!isValid) {return;}
+
+                                if (!sourceTurn.relicIseeSeesItSHEETREAL) {
+                                    let relicNameRef = "As Navigator Isee Sees It";
+                                    let pcRef = "4pc";
+                                    const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    sourceTurn.relicIseeSeesItSHEETREAL = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: relicPathing[1],
+                                        "source": relicNameRef,
+                                        "sourceOwner": currentTurn.properName,
+                                        "buffName": buffNames.dmgBuffReal,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                const buffSheet = sourceTurn.relicIseeSeesItSHEETREAL;
+
+                                const stackSheet = sourceTurn.buffsObject[sourceTurn.relicIseeSeesItSHEET.buffName];
+                                const stackCount = stackSheet.currentStacks;
+        
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+            
+                                if (isValid) {//if this is valid dmg
+                                    if (buffCheck) {//if we have the buff
+                                        const currentStacks = buffCheck.currentStacks;
+                                        if (currentStacks === stackCount) {return;}//if we're at the right stacks abort
+                                        else if (stackCount > currentStacks) {//if we need more stacks, add em
+                                            const stackDiff = stackCount - currentStacks;
+
+                                            buffSheet.currentStacks = stackDiff;
+                                            updateBuff(battleData,sourceTurn,buffSheet);
+                                            return;
+                                        }
+                                        else {//if we have too many, remove em
+                                            const stackDiff = stackCount - currentStacks;
+                                            if (-stackDiff === currentStacks) {//if the amount removed would be equal to the total stack count overall, kill the whole thing
+                                                removeBuff(battleData,sourceTurn,buffCheck);
+                                                return;
+                                            }
+
+                                            buffSheet.currentStacks = stackDiff;
+                                            updateBuff(battleData,sourceTurn,buffSheet);
+                                            return;
+                                        }
+                                    }
+                                    else if (stackCount) {//otherwise if we didn't have the buff yet, add it
+                                        buffSheet.currentStacks = stackDiff;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                                else if (buffCheck) {//if it's not valid dmg, and we have the buff, kill it
+                                    removeBuff(battleData,sourceTurn,buffCheck);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Navigator Ult/Skill DMG check",
+                        },
                     ]
                 },
                 {
@@ -13552,8 +13688,7 @@ const turnLogicRelics = {
                                 const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
                                 let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                 currentTurn.relicIseeSeesItSHEET = {
-                                    "stats": [DamageAll],
-                                    [DamageAll]: relicPathing[1],
+                                    "stats": null,
                                     "source": relicNameRef,
                                     "sourceOwner": currentTurn.properName,
                                     "buffName": buffNames.dmgBuff,
@@ -13564,7 +13699,6 @@ const turnLogicRelics = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": null,
-                                    "actionTags": ["Skill","Ultimate"],
                                 }
                             }
                             const buffSheet = currentTurn.relicIseeSeesItSHEET;
@@ -13579,7 +13713,8 @@ const turnLogicRelics = {
                 },
             ],
             "buffNames": {
-                "dmgBuff": "As Navigator Isee Sees It",
+                "dmgBuff": "As Navigator Isee Sees It (Stack Holder)",
+                "dmgBuffReal": "As Navigator Isee Sees It (On-Hit Buff)",
             },
         }
     },
@@ -13739,58 +13874,18 @@ const turnLogicRelics = {
     "Rutilant Arena": {//REDONE
         "2pc": {
             logic(thisTurn,battleData) {},
-            "skillFunctions": {
-                statCheck(battleData,currentTurn) {
-                    if (!currentTurn.rutilantDMGbyCRITSHEET) {
-                        let relicNameRef = "Rutilant Arena";
-                        let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames.basicSkillBuff;
-                        let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
-
-                        currentTurn.rutilantDMGbyCRITSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: relicPathing[2],
-                            "source": relicNameRef,
-                            "sourceOwner": currentTurn.properName,
-                            "buffName": buffName,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Skill","Basic"]
-                        }
-                    }
-                    let buffSheet = currentTurn.rutilantDMGbyCRITSHEET;
-                    const buffName = buffSheet.buffName;
-                    const buffCheck = currentTurn.buffsObject[buffName];
-
-                    //NOTE: this would include converted crit rate, just not on-hit
-                    if (currentTurn.statTable[CritRateBase] >= 0.7) {//if the target has enough cr for the buff, then we can apply it
-                        if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        updateBuff(battleData,currentTurn,buffSheet);
-                    }
-                    else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
-                        removeBuff(battleData,currentTurn,buffSheet);
-                    }
-                }
-            },
+            "skillFunctions": {},
             "listeners": [
                 {
                     "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
                         let ownerRef = this.owners;
 
-                        const statCheck = this.statCheck ??= turnLogicRelics["Rutilant Arena"]["2pc"].skillFunctions.statCheck;
-
                         const namedTurns = battleData.nameBasedTurns;
                         const subListeners = this.subListeners;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
-
-                            statCheck(battleData,currentTurn);
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                         }
@@ -13800,12 +13895,54 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "UpdateStatCritRate",//CritRate stat family
+                            "trigger": "AllyDMGStart",
                             condition(battleData,generalInfo) {
                                 let sourceTurn = generalInfo.sourceTurn;
+
+                                let isValid = false;
+                                const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                                for (let tag of actionTags) {
+                                    if (tag === "Basic" || tag === "Skill") {
+                                        isValid = true;
+                                        break;
+                                    }
+                                }
+                                // if (!isValid) {return;}
         
-                                const statCheck = this.statCheck ??= turnLogicRelics["Rutilant Arena"]["2pc"].skillFunctions.statCheck;
-                                statCheck(battleData,sourceTurn);
+                                if (!this.rutilantDMGbyCRITSHEET) {
+                                    let relicNameRef = "Rutilant Arena";
+                                    let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames;
+                                    let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                                    this.rutilantDMGbyCRITSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: relicPathing[2],
+                                        "source": relicNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffName.basicSkillBuff,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                let buffSheet = this.rutilantDMGbyCRITSHEET;
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+            
+                                //NOTE: this would include converted crit rate bonuses
+                                if (isValid && sourceTurn.statTable[CritRateBase] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
+                                    if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else if (!isValid && buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                    removeBuff(battleData,sourceTurn,buffSheet);
+                                }
                             },
                             "target": "self",
                             "isPersonal": true,
@@ -13822,57 +13959,18 @@ const turnLogicRelics = {
     "Inert Salsotto": {//REDONE
         "2pc": {
             logic(thisTurn,battleData) {},
-            "skillFunctions": {
-                statCheck(battleData,currentTurn) {
-                    if (!currentTurn.salsottoDMGbyCRITSHEET) {
-                        let relicNameRef = "Inert Salsotto";
-                        let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames;
-                        let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
-                        currentTurn.salsottoDMGbyCRITSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: relicPathing[2],
-                            "source": relicNameRef,
-                            "sourceOwner": currentTurn.properName,
-                            "buffName": buffName.basicSkillBuff,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["FUA","Ultimate"],
-                        }
-                    }
-                    let buffSheet = currentTurn.salsottoDMGbyCRITSHEET;
-                    const buffName = buffSheet.buffName;
-                    const buffCheck = currentTurn.buffsObject[buffName];
-
-                    //NOTE: this would include converted crit rate bonuses
-                    if (currentTurn.statTable[CritRateBase] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
-                        if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
-                        updateBuff(battleData,currentTurn,buffSheet);
-                    }
-                    else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
-                        removeBuff(battleData,currentTurn,buffSheet);
-                    }
-                }
-            },
+            "skillFunctions": {},
             "listeners": [
                 {
                     "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
                         let ownerRef = this.owners;
 
-                        const statCheck = this.statCheck ??= turnLogicRelics["Inert Salsotto"]["2pc"].skillFunctions.statCheck;
-
                         const namedTurns = battleData.nameBasedTurns;
                         const subListeners = this.subListeners;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
-
-                            statCheck(battleData,currentTurn);
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                         }
@@ -13882,12 +13980,54 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "UpdateStatCritRate",//CritRate stat family
+                            "trigger": "AllyDMGStart",
                             condition(battleData,generalInfo) {
                                 let sourceTurn = generalInfo.sourceTurn;
+
+                                let isValid = false;
+                                const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                                for (let tag of actionTags) {
+                                    if (tag === "FUA" || tag === "Ultimate") {
+                                        isValid = true;
+                                        break;
+                                    }
+                                }
+                                // if (!isValid) {return;}
         
-                                const statCheck = this.statCheck ??= turnLogicRelics["Inert Salsotto"]["2pc"].skillFunctions.statCheck;
-                                statCheck(battleData,sourceTurn);
+                                if (!this.salsottoDMGbyCRITSHEET) {
+                                    let relicNameRef = "Inert Salsotto";
+                                    let buffName = turnLogicRelics[relicNameRef]["2pc"].buffNames;
+                                    let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                                    this.salsottoDMGbyCRITSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: relicPathing[2],
+                                        "source": relicNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffName.basicSkillBuff,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                let buffSheet = this.salsottoDMGbyCRITSHEET;
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+            
+                                //NOTE: this would include converted crit rate bonuses
+                                if (isValid && sourceTurn.statTable[CritRateBase] >= 0.5) {//if the target has enough cr for the buff, then we can apply it
+                                    if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else if (!isValid && buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                    removeBuff(battleData,sourceTurn,buffSheet);
+                                }
                             },
                             "target": "self",
                             "isPersonal": true,

@@ -6,6 +6,45 @@
     </ul>
 </div> -->
 <div>
+    <h1>June 4th, 2026</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <!-- <h4>Additions</h4>
+        <li>Added the following new characters:
+            <ul>
+                <li>Mortenax Blade</li>
+            </ul>
+        </li> -->
+
+        <h4>Fixes</h4>
+        <li>Fixed an issue where Incessant Rain after a recent update was failing to apply the Aether Code vulnerability debuff.</li>
+        <li>Updated Scholar Lost in Erudition to properly give DamageAll during the entire duration of the skill while holding the buff, rather than giving skill damage while the buff is active.
+            <ul>
+                <li>An oversight on my part, but this would only matter in scenarios where the attacker is also a source owner of something like Additional DMG as DamageAll would actually benefit that damage but DamageSkill would not.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue on the following relic sets/lightcones where the bonuses provided were action tagged for both cases the bonus would have been applied, instead of EITHER case, meaning if an action happened to have overlap on action tags it would apply twice.
+            <ul>
+                <li>Why is this an issue now? Mortenax Blade mainly, but also the new Navigator Set as an example would cause an overlap on E6 Acheron where her Skill is considered Ultimate DMG and the bonus would stack twice but that's not how that works.</li>
+                <ul>
+                    <li>Inert Salsotto</li>
+                    <li>Rutilant Arena</li>
+                    <li>As Navigator Isee Sees It</li>
+                    <li>Scholar Lost in Erudition</li>
+                    <li>Collapsing Sky</li>
+                    <li>Trail of Bygone Blood</li>
+                    <li>In the Night</li>
+                </ul>
+            </ul>
+        </li>
+
+        <!-- <h4>Optimization</h4>
+        <li>Converted Saber's energy overflow listener to a personal listener, so she's not trying to listen to everyone's energy changes and THEN determine if they're hers or not.</li> -->
+
+    </ul>
+</div>
+
+<div>
     <h1>June 3th, 2026</h1>
     <ul>
         <h3>Library</h3>
