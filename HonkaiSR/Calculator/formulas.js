@@ -17,7 +17,7 @@ const calcs = {
         const HPBonusPercent = index[HPP];
         const HPBonusFlat = index[HPFlat];
 
-        const HPFinal = HPBaseFinal * (1 + HPBonusPercent) + HPBonusFlat;
+        const HPFinal = index[HPOverride] || HPBaseFinal * (1 + HPBonusPercent) + HPBonusFlat;
 
         return {
             HPBaseFinal,HPBonusPercent,HPBonusFlat,HPFinal
