@@ -13511,6 +13511,7 @@ const turnLogicRelics = {
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[3],subListeners[3].trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -13587,6 +13588,86 @@ const turnLogicRelics = {
                             "isPersonal": true,
                             "listenerName": "As Navigator Isee Sees It - turn start listener",
                         },
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+
+                                let isValid = false;
+                                const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                                for (let tag of actionTags) {
+                                    if (tag === "Ultimate" || tag === "Skill") {
+                                        isValid = true;
+                                        break;
+                                    }
+                                }
+                                // if (!isValid) {return;}
+
+                                if (!sourceTurn.relicIseeSeesItSHEETREAL) {
+                                    let relicNameRef = "As Navigator Isee Sees It";
+                                    let pcRef = "4pc";
+                                    const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
+                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    sourceTurn.relicIseeSeesItSHEETREAL = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: relicPathing[1],
+                                        "source": relicNameRef,
+                                        "sourceOwner": currentTurn.properName,
+                                        "buffName": buffNames.dmgBuffReal,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                const buffSheet = sourceTurn.relicIseeSeesItSHEETREAL;
+
+                                const stackSheet = sourceTurn.buffsObject[sourceTurn.relicIseeSeesItSHEET.buffName];
+                                const stackCount = stackSheet.currentStacks;
+        
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+            
+                                if (isValid) {//if this is valid dmg
+                                    if (buffCheck) {//if we have the buff
+                                        const currentStacks = buffCheck.currentStacks;
+                                        if (currentStacks === stackCount) {return;}//if we're at the right stacks abort
+                                        else if (stackCount > currentStacks) {//if we need more stacks, add em
+                                            const stackDiff = stackCount - currentStacks;
+
+                                            buffSheet.currentStacks = stackDiff;
+                                            updateBuff(battleData,sourceTurn,buffSheet);
+                                            return;
+                                        }
+                                        else {//if we have too many, remove em
+                                            const stackDiff = stackCount - currentStacks;
+                                            if (-stackDiff === currentStacks) {//if the amount removed would be equal to the total stack count overall, kill the whole thing
+                                                removeBuff(battleData,sourceTurn,buffCheck);
+                                                return;
+                                            }
+
+                                            buffSheet.currentStacks = stackDiff;
+                                            updateBuff(battleData,sourceTurn,buffSheet);
+                                            return;
+                                        }
+                                    }
+                                    else if (stackCount) {//otherwise if we didn't have the buff yet, add it
+                                        buffSheet.currentStacks = stackDiff;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                                else if (buffCheck) {//if it's not valid dmg, and we have the buff, kill it
+                                    removeBuff(battleData,sourceTurn,buffCheck);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Navigator Ult/Skill DMG check",
+                        },
                     ]
                 },
                 {
@@ -13607,8 +13688,7 @@ const turnLogicRelics = {
                                 const buffNames = this.buffNames ??= turnLogicRelics[relicNameRef][pcRef].buffNames;
                                 let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
                                 currentTurn.relicIseeSeesItSHEET = {
-                                    "stats": [DamageAll],
-                                    [DamageAll]: relicPathing[1],
+                                    "stats": null,
                                     "source": relicNameRef,
                                     "sourceOwner": currentTurn.properName,
                                     "buffName": buffNames.dmgBuff,
@@ -13619,7 +13699,6 @@ const turnLogicRelics = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": null,
-                                    "actionTags": ["Skill","Ultimate"],
                                 }
                             }
                             const buffSheet = currentTurn.relicIseeSeesItSHEET;
@@ -13634,7 +13713,8 @@ const turnLogicRelics = {
                 },
             ],
             "buffNames": {
-                "dmgBuff": "As Navigator Isee Sees It",
+                "dmgBuff": "As Navigator Isee Sees It (Stack Holder)",
+                "dmgBuffReal": "As Navigator Isee Sees It (On-Hit Buff)",
             },
         }
     },
