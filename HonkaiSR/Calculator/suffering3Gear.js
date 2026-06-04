@@ -4590,7 +4590,7 @@ const turnLogicLightcones = {
                             let buffCheck = targetTurn.buffsObject[buffName];
         
                             if (!buffCheck) {
-                                if (!sourceTurn.incessantRainCRITSHEET) {
+                                if (!sourceTurn.resolutionShinesDEFSHREDSHEET) {
                                     let lcNameRef = "Resolution Shines As Pearls of Sweat";
                                     let ownersSlots = this.ownersSlots;
                                     let ownerRank = ownersSlots[sourceTurn.name];
