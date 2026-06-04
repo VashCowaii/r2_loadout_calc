@@ -49,6 +49,7 @@
         <li>Related to the Sparkle code update listed below, fixed an issue where Sparkle's E2 DEF reduction wasn't considered as DEF reduction on the enemy and was instead still counted as DEF shred on allies(like the old sparkle)</li>
         <li>Fixed an issue where some DOT dmg instances failed to properly access action-tagged bonuses.</li>
         <li>Fixed an issue where Blade's E2 was still applying to memosprite-related ultimates(the irony, being that I am the one who found that bug in-game and didn't add it in the calc)</li>
+        <li>Fixed an issue where Blade's Charge was getting capped at its launch-threshold, but that's not a functional cap it's just the threshold.</li>
 
         <h4>Optimization</h4>
         <li>Converted Saber's energy overflow listener to a personal listener, so she's not trying to listen to everyone's energy changes and THEN determine if they're hers or not.</li>
