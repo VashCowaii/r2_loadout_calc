@@ -1663,7 +1663,7 @@ const battleActions = {
         //supposedly it is:
         //base * abilityMulti * 1+breakEffect * 1+breakDMGIncrease
         //*DEFstuff * RESstuff * VULNstuff * brokenMulti
-        const turnMerge = {targetTurn,sourceTurn};
+        const turnMerge = {targetTurn,sourceTurn,ATKObject};
         poke("BreakDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
 
@@ -1785,7 +1785,7 @@ const battleActions = {
         //base * abilityMulti * 1+breakEffect * 1+breakDMGIncrease
         //*DEFstuff * RESstuff * VULNstuff * brokenMulti
         
-        const turnMerge = {targetTurn,sourceTurn,isSuperBreak};
+        const turnMerge = {targetTurn,sourceTurn,isSuperBreak,ATKObject};
         poke("BreakDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
 
@@ -1888,7 +1888,7 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
         
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
+        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
 
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
@@ -2259,7 +2259,7 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
         
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag},sourceTurn);
+        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
         let atkEntryRef = atkEntry[hitType];
@@ -2772,7 +2772,7 @@ const battleActions = {
         let targetStatsTeamBased = emptyTableNeverAdd;
 
 
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn},sourceTurn);
+        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,ATKObject},sourceTurn);
         let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
         
         let multiOf = scalar ? pullScalar(statTable,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
@@ -2905,7 +2905,7 @@ const battleActions = {
         let targetStatsTeamBased = emptyTableNeverAdd;
 
 
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn},sourceTurn);
+        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,ATKObject},sourceTurn);
         let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
         let multiOf = battleActions.elationLevelRef;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
@@ -3154,7 +3154,7 @@ const battleActions = {
         const sourceCache = sourceTurn.cacheTagValues;
         const targetCache = targetTurn.cacheTagValues;
 
-        const turnMerge = {targetTurn,sourceTurn,element,isDetonated,sourceOverride,isBreakDOT};
+        const turnMerge = {targetTurn,sourceTurn,element,isDetonated,sourceOverride,isBreakDOT,ATKObject: currentBuff};
 
 
 
@@ -14232,7 +14232,7 @@ const turnLogic = {
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    const actionTags = ["All","Skill","Attack"];
+                    const actionTags = ["All","Skill","Attack","WeltUltOrSkill"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     ATKObjects.weltSkillATKOBJECT = {
                         multipliers: {
@@ -14281,7 +14281,7 @@ const turnLogic = {
                     let values = ATKObjects.weltUltimateVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
                     const tags = ["All","Ultimate","Imaginary"];
-                    const actionTags = ["All","Ultimate","Attack"];
+                    const actionTags = ["All","Ultimate","Attack","WeltUltOrSkill"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -14518,7 +14518,7 @@ const turnLogic = {
                                 "currentStacks": 1,
                                 "decay": false,
                                 "expireType": null,
-                                "actionTags": ["Ultimate","Skill"]
+                                "actionTags": ["WeltUltOrSkill"]
                             }
                             let buffName = buffSheet.buffName;
                             const buffCheck = sourceTurn.buffsObject[buffName];
