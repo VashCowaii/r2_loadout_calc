@@ -5866,38 +5866,80 @@ const turnLogicLightcones = {
                 "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
-                    let lcNameRef = "A Trail of Bygone Blood";
-                    let lcPathing = lightcones[lcNameRef].params;
-                
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
                     for (let owner of ownerRef) {
                         let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
 
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
-                        let ownerName = currentTurn.properName;
-
-                        let buffSheet = currentTurn.lcTrailBygoneBloodBONUSSHEET ??= {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[1],
-                            "source": lcNameRef,
-                            "sourceOwner": ownerName,
-                            "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "actionTags": ["Skill","Ultimate"]
-                        }
-                        
-                        updateBuff(battleData,currentTurn,buffSheet);
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
                 "listenerName": "A Trail of Bygone Blood - battlestart buff application",
                 "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            let isValid = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "Ultimate" || tag === "Skill") {
+                                    isValid = true;
+                                    break;
+                                }
+                            }
+                            // if (!isValid) {return;}
+    
+                            if (!sourceTurn.lcTrailBygoneBloodBONUSSHEET ) {
+                                let lcNameRef = "A Trail of Bygone Blood";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcTrailBygoneBloodBONUSSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcTrailBygoneBloodBONUSSHEET ;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            //NOTE: this would include converted crit rate bonuses
+                            if (isValid) {//if the target has enough cr for the buff, then we can apply it
+                                if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "A Trail of Bygone Blood check",
+                    },
+                ],
             },
         ],
         "buffNames": {
