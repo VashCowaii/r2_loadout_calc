@@ -4471,6 +4471,43 @@ const userTriggers = {
                             </div>
                         </div>`
                 },
+                "Castorice"(turnRef,action) {
+
+                    let slashStringer = "";
+                    const current = turnRef.specialEnergyCurrent;
+
+                    //fill shutter
+                    //detail outline
+                    //boundary
+
+                    // const fillPercent = (turnRef.specialEnergyCurrent / turnRef.specialEnergyMax) * 100;
+                    const actualPercent = turnRef.specialEnergyCurrent / turnRef.specialEnergyMax;
+                    // const actualPercent = 0.3;
+                    const fillPercent = actualPercent * 90;
+
+                    const netherIsActive = turnRef.battleValues.netherIsActive;
+
+                    slashStringer = `
+                        
+                        <img src="/HonkaiSR/misc/castorice/${netherIsActive ? "FrameSpecialSp_Red" : "FrameSpecialSp"}.png" class="castoriceMainOutlineCUSTOMEnergyImage"/>
+                        <div class="castoriceFillShutterCUSTOMEnergyImageBOX" style="height: ${fillPercent}%;">
+                            <img src="/HonkaiSR/misc/castorice/ProgressSpecialSp.png" class="castoriceFillShutterCUSTOMEnergyImage"/>
+                        </div>
+                        <img src="/HonkaiSR/misc/castorice/OutlineSpecialSp.png" class="castoriceMainOutlineCUSTOMEnergyImage"/>
+                        ${netherIsActive ? `<img src="/HonkaiSR/misc/castorice/IconSkillBtnFobidden.png" class="castoriceLOCKCUSTOMEnergyImage"/>` : ""}
+                        
+                    `;
+
+                    return `
+                        <div class="actionDetailHeaderRowCharacterCUSTOMEnergyBox">
+                            ${slashStringer}
+                            
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
+                            </div>
+                        </div>`;
+                },
             }
 
 

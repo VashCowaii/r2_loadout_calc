@@ -19,7 +19,6 @@
     left: 0;
     scale: 1.2;
 }
-
 .acheronCenterVortex { 
     width: 100%;
     height: 100%;
@@ -30,7 +29,6 @@
     scale: 1;
     transform: translateY(-4%);
 }
-
 .acheronSlashIcon,.acheronSlashIconSmol { 
     /* width: 100%;
     height: 100%; */
@@ -51,3 +49,50 @@
     width:  51px;
     height: 51px;
 }
+
+
+.castoriceMainOutlineCUSTOMEnergyImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* opacity: 0.8; */
+    position: absolute;
+    left: 0;
+    scale: 1.1;
+}
+.castoriceFillShutterCUSTOMEnergyImage {
+    width:  110px;
+    height: 110px;
+    object-fit: contain;
+    /* opacity: 0.8; */
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    
+    scale: 1;
+
+
+}
+.castoriceFillShutterCUSTOMEnergyImageBOX {
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    bottom: 8%;
+    overflow: hidden;
+    position: absolute;
+    /* border: 1px solid red; */
+}
+.castoriceLOCKCUSTOMEnergyImage {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    /* opacity: 0.8; */
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    scale: 1;
+}
+
+
+
