@@ -10675,32 +10675,17 @@ const turnLogicRelics = {
                         const namedTurns = battleData.nameBasedTurns;
                         const subListeners = this.subListeners[0];
                         const subListeners2 = this.subListeners[1];
-
-                        const buffSheet = this.buffSheet ??= {
-                            "stats": [DamageUltimate,DamageSkill],
-                            [DamageUltimate]: 0.20,
-                            [DamageSkill]: 0.20,
-                            "source": "Scholar Lost in Erudition",
-                            "sourceOwner": "",
-                            "buffName": turnLogicRelics["Scholar Lost in Erudition"]["4pc"].buffNames.skillUltyDmg,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
+                        const subListeners3 = this.subListeners[2];
+                        const subListeners4 = this.subListeners[3];
 
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
 
-                            buffSheet.sourceOwner = currentTurn.properName,
-                            updateBuff(battleData,currentTurn,buffSheet);
-
                             addListenerWithPriority(battleData,subListeners,subListeners.trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners2,subListeners2.trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners3,subListeners3.trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners4,subListeners4.trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -10715,6 +10700,21 @@ const turnLogicRelics = {
 
                                 // let ownerRef = this.owners;
                                 let sourceTurn = generalInfo.sourceTurn;
+                                sourceTurn.scholarIsReadyForSkillBuff = true;
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Scholar ulty listener",
+                        },
+                        {
+                            "trigger": "AbilityStart",
+                            condition(battleData,generalInfo) {
+                                const action = generalInfo.action;
+                                if (action != "Skill") {return;}
+
+                                let sourceTurn = generalInfo.sourceTurn;
+                                if (!sourceTurn.scholarIsReadyForSkillBuff) {return;}
+                                sourceTurn.scholarIsReadyForSkillBuff = false;
         
                                 if (!this.scholarErudtionSKILLDMGSHEET) {
                                     let relicNameRef = "Scholar Lost in Erudition";
@@ -10724,8 +10724,8 @@ const turnLogicRelics = {
                                     // greatTableIndex
                                     // greatTableKeys
                                     this.scholarErudtionSKILLDMGSHEET = {
-                                        "stats": [DamageSkill],
-                                        [DamageSkill]: relicPathing[1],
+                                        "stats": [DamageAll],
+                                        [DamageAll]: relicPathing[1],
                                         "source": relicNameRef,
                                         "sourceOwner": null,
                                         "buffName": buffName,
@@ -10736,6 +10736,7 @@ const turnLogicRelics = {
                                         "currentStacks": 1,
                                         "decay": false,
                                         "expireType": null,
+                                        "actionTags": ["All"],
                                     }
                                 }
         
@@ -10748,7 +10749,7 @@ const turnLogicRelics = {
                             },
                             "target": "self",
                             "isPersonal": true,
-                            "listenerName": "Scholar ulty listener",
+                            "listenerName": "Scholar skill listener",
                         },
                         {
                             "trigger": "AbilityEnd",
@@ -10769,6 +10770,60 @@ const turnLogicRelics = {
                             "target": "self",
                             "isPersonal": true,
                             "listenerName": "Scholar skill listener",
+                        },
+                        {
+                            "trigger": "AllyDMGStart",
+                            condition(battleData,generalInfo) {
+                                let sourceTurn = generalInfo.sourceTurn;
+
+                                let isValid = false;
+                                const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                                for (let tag of actionTags) {
+                                    if (tag === "Ultimate" || tag === "Skill") {
+                                        isValid = true;
+                                        break;
+                                    }
+                                }
+                                // if (!isValid) {return;}
+        
+                                if (!this.scholarBase4PCSHEET) {
+                                    let relicNameRef = "Scholar Lost in Erudition";
+                                    let buffName = turnLogicRelics[relicNameRef]["4pc"].buffNames;
+                                    let relicPathing = relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                                    this.scholarBase4PCSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: 0.20,
+                                        "source": "Scholar Lost in Erudition",
+                                        "sourceOwner": "",
+                                        "buffName": turnLogicRelics["Scholar Lost in Erudition"]["4pc"].buffNames.skillUltyDmg,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+                                let buffSheet = this.scholarBase4PCSHEET;
+                                const buffName = buffSheet.buffName;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+            
+                                //NOTE: this would include converted crit rate bonuses
+                                if (isValid) {//if the target has enough cr for the buff, then we can apply it
+                                    if (buffCheck) {return;}//if the target already has the buff, skip, no need to "renew" perma buffs like this
+
+                                    buffSheet.sourceOwner = sourceTurn.properName;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else if (buffCheck) {//but if the target fails the crit check and HAS the buff, then remove it
+                                    removeBuff(battleData,sourceTurn,buffSheet);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Scholar Ult/Skill DMG check",
                         },
                     ]
                 },
