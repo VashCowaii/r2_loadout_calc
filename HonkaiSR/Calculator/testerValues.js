@@ -1913,6 +1913,17 @@ const defaultConditions = {
             // "Skill"
         ],
     },
+    "Castorice": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
 
     //NIHILITY
     "Silver Wolf": {
