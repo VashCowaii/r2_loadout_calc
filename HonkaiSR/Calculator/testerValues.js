@@ -117,6 +117,8 @@ const customDisplayValuesLog = {
         // {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
+
+    //DESTRUCTION
     "Blade": [//tracker done
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "bladeFUAStackSum",summaryType: "SUM"},
         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
@@ -129,43 +131,6 @@ const customDisplayValuesLog = {
         {valueName: "Countdown Delay Remaining", refName: "traceDelayRemaining", isBattleValue: true},
         {valueName: "E2 Cooldown", refName: "e2AdvanceCooldown", isBattleValue: true, isCharacterState: true, requiresEidolon: 2},
     ],
-    "Archer": [//tracker done
-        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
-        {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
-        {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
-    ],
-    "Kafka": [//tracker done
-        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
-    ],
-    "Hysilens": [//no tracker needed?
-        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
-    ],
-    "Aventurine": [//tracker done
-        {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
-        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
-    ],
-    "Evernight": [//not on live
-        {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Memoria", refName: "memoria", isBattleValue: true,summaryValue: "evernightMemoPointSum",summaryType: "SUM"},
-        {valueName: "Darkest Riddle", refName: "riddleStacks", isBattleValue: true},
-    ],
-    "Castorice": [//not on live
-        {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true},
-    ],
-    "Hyacine": [
-        {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
-        {valueName: "After Rain", refName: "hyacineAfterRainActive", isBattleValue: true, isCharacterState: true},
-    ],  
-    "Robin": [
-        {valueName: "Aria Active", refName: "ariaIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Concerto Active", refName: "robinConcertoActive", isBattleValue: true, isCharacterState: true},
-    ],  
-    "Sunday": [
-        {valueName: "The Beatified", refName: "charWithBeatifiedNameSlot", isBattleValue: true, isCharacterSlot:true},
-    ], 
     "Saber": [
         {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
         {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM"},
@@ -180,93 +145,6 @@ const customDisplayValuesLog = {
         // {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
         // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ],
-    "Argenti": [//no tracker needed
-        {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
-    ], 
-    "Ruan Mei": [
-        {valueName: "Overtone Active", refName: "overtoneIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Zone Active", refName: "ruanmeiZoneActive", isBattleValue: true, isCharacterState: true},
-    ], 
-    "Trailblazer - Remembrance": [
-        {valueName: "Mem on Field", refName: "memIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Mem's Charge", refName: "memCharge", isBattleValue: true},
-        {valueName: "Mem is Enhanced", refName: "memIsEnhanced", isBattleValue: true, isCharacterState: true},
-        {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
-    ], 
-    "Aglaea": [
-        {valueName: "Garment on Field", refName: "garmentIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Supreme Stance", refName: "supremeStanceActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
-        // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
-    ], 
-    "Dan Heng • Permansor Terrae": [
-        {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
-        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
-        {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
-    ], 
-    "Topaz & Numby": [
-        {valueName: "Bonanza Attacks", refName: "bonanzaStacks", isBattleValue: true},
-        // {valueName: "E6 Ult Counter", refName: "e2AdvanceCooldown", isBattleValue: true, requiresEidolon: 6},
-    ], 
-    "Tingyun": [//def no tracker needed
-        {valueName: "Ally with Benediction", refName: "charWithBenediction", isBattleValue: true, isCharacterSlot:true},
-    ],
-    "Silver Wolf": [],
-    "Pela": [],
-    "Gallagher": [//prob no tracker needed
-        {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
-    ],
-    "Huohuo": [//prob no tracker needed
-        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
-        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
-    ],
-    "Luocha": [//tracker done
-        {valueName: "Skill Injection Ready", refName: "isReadyToInjectSkill", isBattleValue: true, isCharacterState: true},
-        {valueName: "Skill Injection Cooldown", refName: "skillInjectCooldown", isBattleValue: true},
-        {valueName: "Zone Active", refName: "zoneIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Zone Queued", refName: "zoneIsQueued", isBattleValue: true, isCharacterState: true},
-        
-        {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true,summaryValue: "luochaAbyssSummer",summaryType: "SUM"}, 
-    ],
-    "Tribbie": [//no tracker needed
-        {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
-        {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
-        
-        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
-    ],
-    "Bronya": [
-        {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
-        {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
-    ],  
-    "Asta": [//tracker done
-        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
-        {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
-    ],
-    "Natasha": [],  
-    "Lynx": [], 
-    "Anaxa": [],
-    "Yao Guang": [//tracker done
-        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerYao Guang`,summaryType: "SUM"},
-    ],
-    "Sparxie": [//tracker done
-        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSparxie`,summaryType: "SUM"},
-        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
-    ],
-    "Trailblazer - Elation": [//tracker done
-        // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerTrailblazer - Elation`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerTrailblazer - Elation`,summaryType: "SUM"},
-    ],
-
-    "Sparkle": [//tracker done
-        {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true,summaryValue: "sparkleReserveSum",summaryType: "SUM"},
-        {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
-        {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
-    ],
     "Jingliu": [//tracker done
         {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
         {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
@@ -276,6 +154,40 @@ const customDisplayValuesLog = {
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
 
+    //HUNT
+    "Archer": [//tracker done
+        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
+        {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
+        {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
+    ],
+    "Topaz & Numby": [
+        {valueName: "Bonanza Attacks", refName: "bonanzaStacks", isBattleValue: true},
+        // {valueName: "E6 Ult Counter", refName: "e2AdvanceCooldown", isBattleValue: true, requiresEidolon: 6},
+    ], 
+    "Seele": [//tracker done
+        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
+        
+        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+
+        
+        {valueName: "E6 Ult DMG Tracked", refName: "e6DMGTracked", isBattleValue: true, requiresEidolon: 6},
+    ],
+    "Dr. Ratio": [//tracker done
+        {valueName: "Wiseman's Folly FUA Stacks", refName: "wisemanStacks", isBattleValue: true},
+    ],
+
+    //NIHILITY
+    "Kafka": [//tracker done
+        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
+    ],
+    "Hysilens": [//no tracker needed?
+        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
+    ],
+    "Silver Wolf": [],
+    "Pela": [],
     "Black Swan": [//tracker done
         // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
         // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
@@ -292,16 +204,131 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
-    "Seele": [//tracker done
-        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
-        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
-        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
-        
-        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    "Acheron": [//tracker done
+        {valueName: "Slashed Dream Overflow", refName: "slashOverflow", isBattleValue: true},
+    ],
+    "Mortenax Blade": [//tracker done
+        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM"},
+    ],
 
+    //PRESERVATION
+    "Aventurine": [//tracker done
+        {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
+    "Dan Heng • Permansor Terrae": [
+        {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
+        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
+        {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
+    ], 
+
+    //REMEMBRANCE
+    "Evernight": [//not on live
+        {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Memoria", refName: "memoria", isBattleValue: true,summaryValue: "evernightMemoPointSum",summaryType: "SUM"},
+        {valueName: "Darkest Riddle", refName: "riddleStacks", isBattleValue: true},
+    ],
+    "Castorice": [//not on live
+        {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true},
+    ],
+    "Hyacine": [
+        {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
+        {valueName: "After Rain", refName: "hyacineAfterRainActive", isBattleValue: true, isCharacterState: true},
+    ],  
+    "Trailblazer - Remembrance": [
+        {valueName: "Mem on Field", refName: "memIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Mem's Charge", refName: "memCharge", isBattleValue: true},
+        {valueName: "Mem is Enhanced", refName: "memIsEnhanced", isBattleValue: true, isCharacterState: true},
+        {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
+    ], 
+    "Aglaea": [
+        {valueName: "Garment on Field", refName: "garmentIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Supreme Stance", refName: "supremeStanceActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
+        // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
+    ], 
+
+    //HARMONY
+    "Robin": [
+        {valueName: "Aria Active", refName: "ariaIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Concerto Active", refName: "robinConcertoActive", isBattleValue: true, isCharacterState: true},
+    ],  
+    "Sunday": [
+        {valueName: "The Beatified", refName: "charWithBeatifiedNameSlot", isBattleValue: true, isCharacterSlot:true},
+    ], 
+    "Ruan Mei": [
+        {valueName: "Overtone Active", refName: "overtoneIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Zone Active", refName: "ruanmeiZoneActive", isBattleValue: true, isCharacterState: true},
+    ], 
+    "Tingyun": [//def no tracker needed
+        {valueName: "Ally with Benediction", refName: "charWithBenediction", isBattleValue: true, isCharacterSlot:true},
+    ],
+    "Tribbie": [//no tracker needed
+        {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
+        {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
         
-        {valueName: "E6 Ult DMG Tracked", refName: "e6DMGTracked", isBattleValue: true, requiresEidolon: 6},
+        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
+    ],
+    "Bronya": [
+        {valueName: "E1 Skillpoint Ready", refName: "e1SPRegenReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 1},
+        {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
+    ],  
+    "Asta": [//tracker done
+        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
+        {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
+    ],
+    "Sparkle": [//tracker done
+        {valueName: "Reserve SP", refName: "reservePoints", isBattleValue: true,summaryValue: "sparkleReserveSum",summaryType: "SUM"},
+        {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
+        {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
+    ],
+    
+    //ERUDITION
+    "Argenti": [//no tracker needed
+        {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
+    ], 
+    "Anaxa": [],
+    
+    //ABUNDANCE
+    "Gallagher": [//prob no tracker needed
+        {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
+    ],
+    "Huohuo": [//prob no tracker needed
+        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
+        // {valueName: "Clease Remaining", refName: "cleanseCounter"},
+    ],
+    "Luocha": [//tracker done
+        {valueName: "Skill Injection Ready", refName: "isReadyToInjectSkill", isBattleValue: true, isCharacterState: true},
+        {valueName: "Skill Injection Cooldown", refName: "skillInjectCooldown", isBattleValue: true},
+        {valueName: "Zone Active", refName: "zoneIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Zone Queued", refName: "zoneIsQueued", isBattleValue: true, isCharacterState: true},
+        
+        {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true,summaryValue: "luochaAbyssSummer",summaryType: "SUM"}, 
+    ],
+    "Natasha": [],  
+    "Lynx": [], 
+
+    //ELATION
+    "Yao Guang": [//tracker done
+        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerYao Guang`,summaryType: "SUM"},
+    ],
+    "Sparxie": [//tracker done
+        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSparxie`,summaryType: "SUM"},
+        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
+    ],
+    "Trailblazer - Elation": [//tracker done
+        // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerTrailblazer - Elation`,summaryType: "SUM"},
+        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerTrailblazer - Elation`,summaryType: "SUM"},
     ],
     "Silver Wolf LV.999": [//tracker done
         {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
@@ -330,24 +357,6 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
-
-
-    "Acheron": [//tracker done
-        {valueName: "Slashed Dream Overflow", refName: "slashOverflow", isBattleValue: true},
-    ],
-
-    "Dr. Ratio": [//tracker done
-        {valueName: "Wiseman's Folly FUA Stacks", refName: "wisemanStacks", isBattleValue: true},
-    ],
-
-    "Mortenax Blade": [//tracker done
-        {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM"},
-    ],
-    
-
-    
 }
 
 const permaConditionsTextLibrary = {
