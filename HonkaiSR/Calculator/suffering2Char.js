@@ -10245,7 +10245,7 @@ const turnLogic = {
                 if (!ATKObjects.silverwolfSkillATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Quantum"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -11128,7 +11128,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Lightning"];
+                    const tags = ["All","Lightning"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11918,7 +11918,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Physical"];
+                    const tags = ["All","Physical"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -13309,7 +13309,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Wind"];
+                    const tags = ["All","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -14343,7 +14343,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Imaginary"];
+                    const tags = ["All","Imaginary"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -15241,7 +15241,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     
                     const scalar = "HP";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -15302,7 +15302,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     
                     const scalar = "HP";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -16284,7 +16284,7 @@ const turnLogic = {
                 if (!ATKObjects.pelaSkillATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Ice"];
+                    const tags = ["All","Ice"];
                     const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -16927,7 +16927,7 @@ const turnLogic = {
                     // skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -17807,7 +17807,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.archerSkillInstanceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Quantum"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -17835,8 +17835,8 @@ const turnLogic = {
                     let buffName = logicRef.buffNames.caladbolg;
                     let e6 = sourceTurn.rank >= 6;
                     ATKObjects.archerSkillInstanceBUFFSHEET = {
-                        "stats": [DamageSkill],
-                        [DamageSkill]: values[1],
+                        "stats": [DamageAll],
+                        [DamageAll]: values[1],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -17846,7 +17846,8 @@ const turnLogic = {
                         "maxStacks": e6 ? 3 : 2,
                         "currentStacks": 1,
                         "decay": false,
-                        "expireType": "EndTurn"
+                        "expireType": "EndTurn",
+                        "actionTags": ["Skill"],
                     }
                 }
                 const battleValues = sourceTurn.battleValues
@@ -18048,8 +18049,8 @@ const turnLogic = {
                         const listener1 = passiveListeners[0];
                         addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
                         let buffSheet = this.archerE6SkillSHRESHEET ??= {
-                            "stats": [DEFShredSkill],
-                            [DEFShredSkill]: 0.20,
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: 0.20,
                             "source": "E6",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": "E6: The Endless Pilgrimage",
@@ -18059,7 +18060,8 @@ const turnLogic = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["Skill"]
                         }
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
@@ -18560,7 +18562,7 @@ const turnLogic = {
 
                     let values = ATKObjects.seeleSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Quantum"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -19536,7 +19538,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let values = ATKObjects.ratioSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Imaginary"];
+                    const tags = ["All","Imaginary"];
                     const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -23748,7 +23750,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -25980,7 +25982,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Wind"];
+                    const tags = ["All","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -27773,7 +27775,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     let values = ATKObjects.jingliuSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
-                    const tags = ["All","Skill","Ice"];
+                    const tags = ["All","Ice"];
                     const actionTags = ["All","Skill","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -27953,7 +27955,7 @@ const turnLogic = {
                     skillRef.hitSplits = rank >= 1 ? hitSplitters[sourceTurn.properName].skill2E1 : hitSplitters[sourceTurn.properName].skill2;
                     let values = ATKObjects.jingliuSkillEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "HP";
-                    const tags = ["All","Skill","Ice"];
+                    const tags = ["All","Ice"];
                     const actionTags = ["All","Skill","Attack","JingliuEnhanced"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -28562,7 +28564,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -28610,14 +28612,13 @@ const turnLogic = {
                     const buffName = logicRef.buffNames.combustion;
                     const rank = sourceTurn.rank;
                     ATKObjects.fireflyUltimateCOMBUSTIONSHEET = {
-                        "stats": [SPDFlat,DamageBreakEfficiency,DamageBreak,EffectRES,DEFShredSkill,ResistanceFirePEN],
+                        "stats": [SPDFlat,DamageBreakEfficiency,DamageBreak,EffectRES,ResistanceFirePEN],
                         [SPDFlat]: values[2],
                         [DamageBreak]: 0.25,//from trace, static value
                         [DamageBreakEfficiency]: values[1] + (rank >= 6 ? 0.50 : 0),
                         [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
-                        [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
                         [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
-                        "source": characterName,
+                        "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
                         "durationInTurn": null,
@@ -28631,7 +28632,7 @@ const turnLogic = {
                     ATKObjects.fireflyUltimateCOMBUSTIONSHEET2 = {
                         "stats": [VulnBreak],
                         [VulnBreak]: values[0],
-                        "source": characterName,
+                        "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.combustion2,
                         "durationInTurn": null,
@@ -28783,7 +28784,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].es;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29051,6 +29052,14 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
+                    //e1
+                    if (rank >= 1) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,2,true,false)
                 },
                 "target": "self",
@@ -29150,11 +29159,8 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                             let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.name != ownerTurn.name) {return;}
         
                             const logicRefValues = ownerTurn.battleValues;
-                            
                             if (!logicRefValues.combustionActive) {return;}//only applies inside combustion state
         
                             if (!logicRefValues.e2AdvanceCooldown) {
@@ -29163,40 +29169,91 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "E2 From Shattered Sky, I Free Fall Weakness Break check",
-                        "ownerTurn": {},
                     },
                     {
                         "trigger": "StartTurn",
                         condition(battleData,generalInfo) {
                             // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.name != ownerTurn.name) {return;}
         
                             const logicRefValues = ownerTurn.battleValues;
-    
                             logicRefValues.e2AdvanceCooldown = false;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "E2 From Shattered Sky, I Free Fall cooldown increment",
-                        "ownerTurn": {},
                     },
                     {
                         "trigger": "UpdateStatATK",//ATK stat family
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.name != ownerTurn.name) {return;}
         
                             const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
-                            statCheck(battleData,sourceTurn);
+                            statCheck(battleData,ownerTurn);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Firefly Module γ: Core Overload ATK check",
-                        "ownerTurn": {},
                     },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" || !generalInfo.isEnhanced) {return}
+                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
+                            let ownerTurn = this.ownerTurn;
 
+
+                            const e1Sheet = this.e1Sheet ??= {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: 0.15,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e1Shred,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            updateBuff(battleData,ownerTurn,e1Sheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E1 Enh Skill Start",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" || !generalInfo.isEnhanced) {return}
+                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
+                            let ownerTurn = this.ownerTurn;
+
+                            const e1Sheet = this.e1Sheet ??= {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: 0.15,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e1Shred,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            removeBuff(battleData,ownerTurn,e1Sheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E1 Enh Skill End",
+                    },
                 ],
             },
             {
@@ -29357,7 +29414,8 @@ const turnLogic = {
             "combustion": "Complete Combustion",
             "combustion2": "Complete Combustion (Break Vuln)",
             "implant": "Fyrefly Type-IV: Deathstar Overload",
-            "techImplant": "Δ Order: Meteoric Incineration"
+            "techImplant": "Δ Order: Meteoric Incineration",
+            "e1Shred": "E1: In Reddened Chrysalis, I Once Rest",
         },
         "characterValuesBattle": {},
     },
@@ -29477,7 +29535,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
 
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29519,7 +29577,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill2;
 
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29847,8 +29905,8 @@ const turnLogic = {
                     //e1
                     if (rank >= 1) {
                         const buffSheet = this.hookE1BuffSHEET ??= {
-                            "stats": [DamageSkill],
-                            [DamageSkill]: 0.20,
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.20,
                             "source": "E1",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
@@ -37910,7 +37968,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Physical"];
+                    const tags = ["All","Physical"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -38519,7 +38577,7 @@ const turnLogic = {
                     let values = ATKObjects.anaxaSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Wind"];
+                    const tags = ["All","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -38562,8 +38620,8 @@ const turnLogic = {
                     }
 
                     ATKObjects.anaxaSkillPerTargetDMGSHEET ??= {
-                        "stats": [DamageSkill],
-                        [DamageSkill]: values[2],
+                        "stats": [DamageAll],
+                        [DamageAll]: values[2],
                         "source": "Skill",
                         "sourceOwner": characterName,
                         "buffName": logicRef.buffNames.skillTargetBonus,
@@ -38574,6 +38632,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        actionTags: ["Skill"],
                     }
                     ATKObjects.anaxaE4SkillATKSHEET ??= {
                         "stats": [ATKP],
@@ -41816,7 +41875,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Lightning"];
+                    const tags = ["All","Lightning"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -43422,7 +43481,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Imaginary"];
+                    const tags = ["All","Imaginary"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -44145,7 +44204,6 @@ const turnLogic = {
                             "stats": null,
                             // [SPDFlat]: values[2],
                             // [EffectRES]: values2[3] + (rank >= 4 ? 0.50 : 0),
-                            // [DEFShredSkill]: rank >= 1 ? 0.15 : 0,
                             // [ResistanceFirePEN]: rank >= 6 ? 0.20 : 0,
                             "source": "Ultimate",
                             "sourceOwner": ownerTurn.properName,
@@ -44797,7 +44855,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Skill","Physical"];
+                    const tags = ["All","Physical"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);

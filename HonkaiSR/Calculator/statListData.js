@@ -52,7 +52,6 @@ const greatTableKnowerOfAll = {
 
     //DMG
     "DamageAll": 0,
-    "DamageSkill": 0,
     "DamageDOT": 0,
     "DamageBreak": 0,"DamageBreakSuper": 0,"DamageBreakEfficiency": 0,"DamageBreakBonus": 0,"ToughnessRatioAdjustment": 0,
     "DamageBreakNULL": 0,
@@ -61,14 +60,12 @@ const greatTableKnowerOfAll = {
 
     //VULN
     "VulnAll": 0,
-    "VulnSkill": 0,
     "VulnDOT": 0,
     "VulnBreak": 0,
     "VulnIce": 0,"VulnLightning": 0,"VulnFire": 0,"VulnQuantum": 0,"VulnImaginary": 0,"VulnWind": 0,"VulnPhysical": 0,
 
     //SHRED
     "DEFShredAll": 0,
-    "DEFShredSkill": 0,
     "DEFShredDOT": 0,
     "DEFShredBreak": 0,"DEFShredBreakSuper": 0,
     "DEFShredIce": 0,"DEFShredLightning": 0,"DEFShredFire": 0,"DEFShredQuantum": 0,"DEFShredImaginary": 0,"DEFShredWind": 0,"DEFShredPhysical": 0,
@@ -80,7 +77,6 @@ const greatTableKnowerOfAll = {
     "ResistanceAll": 0,
     "ResistanceAllPEN": 0,
 
-    "ResistanceSkillPEN": 0,
     "ResistanceDOTPEN": 0,
     "ResistanceBreakPEN": 0,"ResistanceBreakSuperPEN": 0,
 
@@ -358,7 +354,6 @@ const CritDamageFlat = greatTableIndex.CritDamageFlat;
 const CritDamageBaseNULL = greatTableIndex.CritDamageBaseNULL;
 
 const DamageAll = greatTableIndex.DamageAll;
-const DamageSkill = greatTableIndex.DamageSkill;
 const DamageDOT = greatTableIndex.DamageDOT;
 
 const DamageBreak = greatTableIndex.DamageBreak;
@@ -378,8 +373,6 @@ const DamagePhysical = greatTableIndex.DamagePhysical;
 
 const VulnAll = greatTableIndex.VulnAll;
 
-const VulnSkill = greatTableIndex.VulnSkill;
-
 const VulnDOT = greatTableIndex.VulnDOT;
 const VulnBreak = greatTableIndex.VulnBreak;
 
@@ -392,7 +385,6 @@ const VulnWind = greatTableIndex.VulnWind;
 const VulnPhysical = greatTableIndex.VulnPhysical;
 
 const DEFShredAll = greatTableIndex.DEFShredAll;
-const DEFShredSkill = greatTableIndex.DEFShredSkill;
 const DEFShredDOT = greatTableIndex.DEFShredDOT;
 const DEFShredBreak = greatTableIndex.DEFShredBreak;
 const DEFShredBreakSuper = greatTableIndex.DEFShredBreakSuper;
@@ -410,7 +402,6 @@ const Toughness = greatTableIndex.Toughness;
 const ResistanceAll = greatTableIndex.ResistanceAll;
 const ResistanceAllPEN = greatTableIndex.ResistanceAllPEN;
 
-const ResistanceSkillPEN = greatTableIndex.ResistanceSkillPEN;
 const ResistanceDOTPEN = greatTableIndex.ResistanceDOTPEN;
 const ResistanceBreakPEN = greatTableIndex.ResistanceBreakPEN;
 const ResistanceBreakSuperPEN = greatTableIndex.ResistanceBreakSuperPEN;
@@ -758,11 +749,6 @@ const propertyImagePaths = {
                 "specific": "DEF Shred All",
                 "unit": "%"
             },
-            [greatTableIndex["DEFShredSkill"]]: {
-                "display": "DEF Shred",
-                "specific": "DEF Shred Skill",
-                "unit": "%"
-            },
             [greatTableIndex["DEFShredDOT"]]: {
                 "display": "DEF Shred",
                 "specific": "DEF Shred DOT",
@@ -1051,11 +1037,6 @@ const propertyImagePaths = {
                 "specific": "Damage: All",
                 "unit": "%"
             },
-            [greatTableIndex["DamageSkill"]]: {
-                "display": "DMG Skill",
-                "specific": "Damage: Skill",
-                "unit": "%"
-            },
             [greatTableIndex["DamageDOT"]]: {
                 "display": "DMG DoT",
                 "specific": "Damage: DoT",
@@ -1097,11 +1078,6 @@ const propertyImagePaths = {
                 "specific": "PEN: All",
                 "unit": "%"
             },
-            [greatTableIndex["ResistanceSkillPEN"]]: {
-                "display": "Skill RES PEN",
-                "specific": "PEN: Skill",
-                "unit": "%"
-            },
 
             [greatTableIndex["ResistanceDOTPEN"]]: {
                 "display": "DOT RES PEN",
@@ -1127,11 +1103,6 @@ const propertyImagePaths = {
             [greatTableIndex["VulnAll"]]: {
                 "display": "All Vuln",
                 "specific": "Vulnerability: All",
-                "unit": "%"
-            },
-            [greatTableIndex["VulnSkill"]]: {
-                "display": "Skill Vuln",
-                "specific": "Vulnerability: Skill",
                 "unit": "%"
             },
             [greatTableIndex["VulnDOT"]]: {
