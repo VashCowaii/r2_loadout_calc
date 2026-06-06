@@ -10214,17 +10214,20 @@ const turnLogic = {
                     const implantRef = ATKObjects.implantSheets ??= {};
                     const buffNames = logicRef.buffNames;
                     const elementKeys = logicRef.weaknessIndexConversion;
+                    const resKeys = logicRef.resistanceIndexConversion;
 
                     //we need to construct and cache just once, the initial debuff sheet for every possible element implant available to sw
                     //then we can modify the res reduction aspect after the fact
                     for (let elementKey in elementKeys) {
+                        const finalIndex = elementKeys[elementKey];
+                        const finalResIndex = resKeys[elementKey];
                         implantRef[elementKey] = {
                             "stats": [
-                                [`Weakness${elementKey}`],
-                                [`Resistance${elementKey}`]
+                                [finalIndex],
+                                [finalResIndex]
                             ],
-                            [`Weakness${elementKey}`]: 1,
-                            [`Resistance${elementKey}`]: 0,
+                            [finalIndex]: 1,
+                            [finalResIndex]: 0,
                             "source": "Skill",
                             "sourceOwner": characterName,
                             "buffName": buffNames[`implant${elementKey}`],
