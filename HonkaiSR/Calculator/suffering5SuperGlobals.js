@@ -70,6 +70,9 @@ const superGlobal = {
             "UpdateStatDamage": {
                 //compositeCacheTag will define itself here when used, and the tag will be the key
             },
+            "UpdateStatATK": {},
+            "UpdateStatHP": {},
+            // "UpdateStatDEFScalar": {},
             "UpdateStatElation": {},
             "UpdateStatMerryMake": {},
             "UpdateStatDamageReduction": {},

@@ -1615,6 +1615,12 @@ const cacheTagFamilies = {
     "DEF": {
         ...propertyImagePaths.DEF.sets,
     },
+    "ATK": {
+        ...propertyImagePaths.ATK.sets,
+    },
+    "HP": {
+        ...propertyImagePaths.HP.sets,
+    },
     "PEN": {
         ...propertyImagePaths.PEN.sets,//resistance all is bundled under pen as well, no need to add it separately
         [ResistancePhysicalPEN]: propertyImagePaths.PhysicalRES.sets.ResistancePhysicalPEN,
