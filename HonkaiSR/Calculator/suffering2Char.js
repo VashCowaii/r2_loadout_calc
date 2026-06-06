@@ -39296,6 +39296,7 @@ const turnLogic = {
                                     "decay": false,
                                     "expireType": null,
                                     "isDebuff": true,
+                                    "actionTags": ["All"],
                                     "isSourceSpecific": true
                                 }
                             }
