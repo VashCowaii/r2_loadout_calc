@@ -3221,13 +3221,10 @@ const battleActions = {
         let targetStatsTeamBased = emptyTableNeverAdd;
         const actionTables = sourceTurn.tagSpecific;
         const actionTablesTarget = targetTurn.tagSpecific;
-        // const actionTags = ["DOT"];
         
         let isEnemy = false;//sourceTurn.isEnemy
 
         const {isBreakDOT,actionTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys} = currentBuff;
-
-        // let newTags = isBreakDOT ? ["All",element,"DOT","Break"] : ["All",element,"DOT"];
 
 
         const sourceCache = sourceTurn.cacheTagValues;
@@ -3343,7 +3340,7 @@ const battleActions = {
 
             if (!breakTagging[element]) {
                 const keyShortcut = basicShorthand.makeKeysArray;
-                let newTags = ["All",element,"DOT","Break"];
+                let newTags = ["All",element,"Break"];
                 let actionTags = ["All","Break","DOT"];
 
                 breakTagging[element] = {
@@ -11334,7 +11331,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let buffName = logicRef.buffNames.ultShock;
 
-                    const tags = ["All","Lightning","DOT"];
+                    const tags = ["All","Lightning"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -11602,8 +11599,8 @@ const turnLogic = {
                                 const characterName = ownerTurn.properName;
                                 let buffName = turnLogic[characterName].buffNames.e1DOTVuln;
                                 this.e1DOTVulnDEBUFFSHEET = {
-                                    "stats": [VulnDOT],
-                                    [VulnDOT]: 0.30,
+                                    "stats": [VulnAll],
+                                    [VulnAll]: 0.30,
                                     "source": characterName,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName,
@@ -11614,7 +11611,8 @@ const turnLogic = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": "EndTurn",
-                                    "isDebuff": true
+                                    "isDebuff": true,
+                                    "actionTags": ["DOT"],
                                 }
                             }
                             const buffSheet = this.e1DOTVulnDEBUFFSHEET;
@@ -11637,8 +11635,8 @@ const turnLogic = {
                                 let characterName = ownerTurn.properName;
                                 let buffName = turnLogic[characterName].buffNames.e2DOTDmg;
                                 this.kafkaE2DOTSHEET = {
-                                    "stats": [DamageDOT],
-                                    [DamageDOT]: 0.33,
+                                    "stats": [DamageAll],
+                                    [DamageAll]: 0.33,
                                     "source": characterName,
                                     "sourceOwner": ownerTurn.properName,
                                     "buffName": buffName,
@@ -11650,6 +11648,7 @@ const turnLogic = {
                                     "decay": false,
                                     "expireType": null,
                                     "removeOnDeath": true,
+                                    actionTags: ["DOT"],
                                 }
                             }
                             
@@ -12140,10 +12139,10 @@ const turnLogic = {
                     // "talentBleed": "Bleed [Sirenic Serenade]",
 
 
-                    const tagsLightning = ["All","Lightning","DOT"];
-                    const tagsFire = ["All","Fire","DOT"];
-                    const tagsWind = ["All","Wind","DOT"];
-                    const tagsPhysical = ["All","Physical","DOT"];
+                    const tagsLightning = ["All","Lightning"];
+                    const tagsFire = ["All","Fire"];
+                    const tagsWind = ["All","Wind"];
+                    const tagsPhysical = ["All","Physical"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
                     // const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -12696,7 +12695,7 @@ const turnLogic = {
                     let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     if (!this.ultyPhysicalRef) {
                         const keyShortcut = basicShorthand.makeKeysArray;
-                        const tags = ["All","Physical","DOT"];
+                        const tags = ["All","Physical"];
                         const actionTags = ["All","DOT"];
                         const compositeCacheTag = tags + actionTags + ownerTurn.properName;
                         this.ultyPhysicalRef = {
@@ -12751,7 +12750,7 @@ const turnLogic = {
                     let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     if (!this.ultyPhysicalRef) {
                         const keyShortcut = basicShorthand.makeKeysArray;
-                        const tags = ["All","Physical","DOT"];
+                        const tags = ["All","Physical"];
                         const actionTags = ["All","DOT"];
                         const compositeCacheTag = tags + actionTags + ownerTurn.properName;
                         this.ultyPhysicalRef = {
@@ -13159,7 +13158,7 @@ const turnLogic = {
                 if (!ATKObjects.blackswanArcanaDOTSHEET) {
                     const buffNames = logicRef.buffNames;
 
-                    const tags = ["All","Wind","DOT"];
+                    const tags = ["All","Wind"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -13261,7 +13260,7 @@ const turnLogic = {
 
                 if (!ATKObjects.talentBlastRef) {
                     const keyShortcut = basicShorthand.makeKeysArray;
-                    const tags = ["All","Wind","DOT"];
+                    const tags = ["All","Wind"];
                     ATKObjects.talentBlastRef = {
                         buffName: "Arcana Blast (Stacks >= 3)",
                         tags,
@@ -23692,7 +23691,7 @@ const turnLogic = {
                     let characterName = sourceTurn.properName;
                     let buffName = logicRef.buffNames.traceDOT;
 
-                    const tags = ["All","Fire","DOT"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29621,7 +29620,7 @@ const turnLogic = {
                     let skillRef = ATKObjects.hookSkillREF ??= ATKObjects["Skill"]["Hey! Remember Hook?"].variant1;
                     let values = ATKObjects.hookSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                    const tags = ["All","Fire","DOT"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -29848,7 +29847,7 @@ const turnLogic = {
                     let skillRef = ATKObjects.hookTechniqueREF;
                     let values = ATKObjects.hookTechniqueREFVALUES;
 
-                    const tags = ["All","Fire","DOT"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);

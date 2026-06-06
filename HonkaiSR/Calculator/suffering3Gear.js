@@ -3970,7 +3970,7 @@ const turnLogicLightcones = {
                                 let rankParams = lcPathing[ownerRank-1];
                                 // let ownerName = sourceTurn.properName;
         
-                                const tags = ["All","Lightning","DOT"];
+                                const tags = ["All","Lightning"];
                                 const keyShortcut = basicShorthand.makeKeysArray;
                                 const realDMGKeys = keyShortcut(dmgKeys,tags);
                                 const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -4053,8 +4053,8 @@ const turnLogicLightcones = {
                     
 
                     ownerTurn.oceanSingEnthrallmentSHEET = {
-                        "stats": [VulnDOT],
-                        [VulnDOT]: rankParams[3],
+                        "stats": [VulnAll],
+                        [VulnAll]: rankParams[3],
                         "source": lcNameRef,
                         "sourceOwner": ownerName,
                         "buffName": buffName,
@@ -4065,7 +4065,8 @@ const turnLogicLightcones = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": "EndTurn",
-                        "isDebuff": true
+                        "isDebuff": true,
+                        "actionTags": ["DOT"],
                     }
                 }
                 let buffSheet = ownerTurn.oceanSingEnthrallmentSHEET;
@@ -4267,17 +4268,16 @@ const turnLogicLightcones = {
                                 let ownerRank = ownersSlots[sourceTurn.name];
 
                                 let lcNameRef = "Reforged Remembrance";
-                                let buffName = turnLogicLightcones[lcNameRef].buffNames.prophet;
+                                const buffNames = turnLogicLightcones[lcNameRef].buffNames;
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
         
                                 sourceTurn.reforgedRemembranceSTACKSHEET = {
-                                    "stats": [ATKP,DEFShredDOT],
+                                    "stats": [ATKP],
                                     [ATKP]: rankParams[1],
-                                    [DEFShredDOT]: rankParams[2],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
-                                    "buffName": buffName,
+                                    "buffName": buffNames.prophet,
                                     "durationInTurn": null,
                                     "duration": 1,
                                     "AVApplied": 0,
@@ -4286,8 +4286,24 @@ const turnLogicLightcones = {
                                     "decay": false,
                                     "expireType": null,
                                 }
+                                sourceTurn.reforgedRemembranceSTACKSHEET2 = {
+                                    "stats": [DEFShredAll],
+                                    [DEFShredAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.prophetShred,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 4,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["DOT"],
+                                }
                             }
                             let buffSheet = sourceTurn.reforgedRemembranceSTACKSHEET;
+                            let buffSheet2 = sourceTurn.reforgedRemembranceSTACKSHEET2;
                             
         
                             // dots: {
@@ -4318,7 +4334,9 @@ const turnLogicLightcones = {
         
                             if (stacksToApply) {
                                 buffSheet.currentStacks = stacksToApply;
+                                buffSheet2.currentStacks = stacksToApply;
                                 updateBuff(battleData,sourceTurn,buffSheet);
+                                updateBuff(battleData,sourceTurn,buffSheet2);
                             }
         
                             const allDone = sourceTurn.reforgedPhysicalStackDone && sourceTurn.reforgedFireStackDone && sourceTurn.reforgedLightningStackDone && sourceTurn.reforgedWindStackDone;
@@ -4334,7 +4352,8 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {
-            "prophet": "Prophet [Reforged Remembrance]"
+            "prophet": "Prophet [Reforged Remembrance]",
+            "prophetShred": "Prophet (Shred) [Reforged Remembrance]",
         },
     },
     "Those Many Springs": {//REDONE
