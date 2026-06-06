@@ -1405,10 +1405,10 @@ const compare = {
         }
 
         pushDebug(`FILTER: Lightcones - Starting`);
-        const char1FilteredLightcone = applyFilters(lightconeSets,char1Filters.lightconeOcclusions,char1Filters.lightcone,null,true,characters[charObjectRef.char1.name].path);
-        const char2FilteredLightcone = applyFilters(lightconeSets,char2Filters.lightconeOcclusions,char2Filters.lightcone,null,true,characters[charObjectRef.char2.name].path);
-        const char3FilteredLightcone = applyFilters(lightconeSets,char3Filters.lightconeOcclusions,char3Filters.lightcone,null,true,characters[charObjectRef.char3.name].path);
-        const char4FilteredLightcone = applyFilters(lightconeSets,char4Filters.lightconeOcclusions,char4Filters.lightcone,null,true,characters[charObjectRef.char4.name].path);
+        const char1FilteredLightcone = applyFilters(lightconeSets,char1Filters.lightconeOcclusions,char1Filters.lightcone,char1Filters.lightconeLocks,true,characters[charObjectRef.char1.name].path);
+        const char2FilteredLightcone = applyFilters(lightconeSets,char2Filters.lightconeOcclusions,char2Filters.lightcone,char2Filters.lightconeLocks,true,characters[charObjectRef.char2.name].path);
+        const char3FilteredLightcone = applyFilters(lightconeSets,char3Filters.lightconeOcclusions,char3Filters.lightcone,char3Filters.lightconeLocks,true,characters[charObjectRef.char3.name].path);
+        const char4FilteredLightcone = applyFilters(lightconeSets,char4Filters.lightconeOcclusions,char4Filters.lightcone,char4Filters.lightconeLocks,true,characters[charObjectRef.char4.name].path);
         pushDebug(`FILTER: Lightcones - Completed`);
         yield;
         
@@ -1492,7 +1492,15 @@ const compare = {
             && !char1Filters.mainstatBodyOcclusions.length
             && !char1Filters.mainstatFeetOcclusions.length
             && !char1Filters.mainstatOrbOcclusions.length
-            && !char1Filters.mainstatRopeOcclusions.length;
+            && !char1Filters.mainstatRopeOcclusions.length
+            && !char1Filters.mainstatRopeLocks.length
+            && !char1Filters.mainstatOrbLocks.length
+            && !char1Filters.mainstatFeetLocks.length
+            && !char1Filters.mainstatBodyLocks.length
+            && !char1Filters.planarSetLocks.length
+            && !char12pcLock.length
+            && !char14pcLock.length
+            && !char1Filters.lightconeLocks.length;
 
         const char2NoFilters = !char2Filters.lightconeOcclusions.length 
             && !char2Filters.armorSetOcclusions.length 
@@ -1500,7 +1508,15 @@ const compare = {
             && !char2Filters.mainstatBodyOcclusions.length
             && !char2Filters.mainstatFeetOcclusions.length
             && !char2Filters.mainstatOrbOcclusions.length
-            && !char2Filters.mainstatRopeOcclusions.length;
+            && !char2Filters.mainstatRopeOcclusions.length
+            && !char2Filters.mainstatRopeLocks.length
+            && !char2Filters.mainstatOrbLocks.length
+            && !char2Filters.mainstatFeetLocks.length
+            && !char2Filters.mainstatBodyLocks.length
+            && !char2Filters.planarSetLocks.length
+            && !char22pcLock.length
+            && !char24pcLock.length
+            && !char2Filters.lightconeLocks.length;
 
         const char3NoFilters = !char3Filters.lightconeOcclusions.length 
             && !char3Filters.armorSetOcclusions.length 
@@ -1508,7 +1524,15 @@ const compare = {
             && !char3Filters.mainstatBodyOcclusions.length
             && !char3Filters.mainstatFeetOcclusions.length
             && !char3Filters.mainstatOrbOcclusions.length
-            && !char3Filters.mainstatRopeOcclusions.length;
+            && !char3Filters.mainstatRopeOcclusions.length
+            && !char3Filters.mainstatRopeLocks.length
+            && !char3Filters.mainstatOrbLocks.length
+            && !char3Filters.mainstatFeetLocks.length
+            && !char3Filters.mainstatBodyLocks.length
+            && !char3Filters.planarSetLocks.length
+            && !char32pcLock.length
+            && !char34pcLock.length
+            && !char3Filters.lightconeLocks.length;
 
         const char4NoFilters = !char4Filters.lightconeOcclusions.length 
             && !char4Filters.armorSetOcclusions.length 
@@ -1516,7 +1540,15 @@ const compare = {
             && !char4Filters.mainstatBodyOcclusions.length
             && !char4Filters.mainstatFeetOcclusions.length
             && !char4Filters.mainstatOrbOcclusions.length
-            && !char4Filters.mainstatRopeOcclusions.length;
+            && !char4Filters.mainstatRopeOcclusions.length
+            && !char4Filters.mainstatRopeLocks.length
+            && !char4Filters.mainstatOrbLocks.length
+            && !char4Filters.mainstatFeetLocks.length
+            && !char4Filters.mainstatBodyLocks.length
+            && !char4Filters.planarSetLocks.length
+            && !char42pcLock.length
+            && !char44pcLock.length
+            && !char4Filters.lightconeLocks.length;
 
         if (char1NoFilters || char2NoFilters || char3NoFilters || char4NoFilters) {
             alert(`Character(s) ${(char1NoFilters ? "[1]" : "") + (char2NoFilters ? "[2]" : "") + (char3NoFilters ? "[3]" : "") + (char4NoFilters ? "[4]" : "")} has no filters in place. I'm doing you a favor by aborting the search now.\nPlease add filters and try again.\n\nIf you believe you're seeing this message in error, join the discord linked at the bottom of the page and ping Vash to let him know.`)

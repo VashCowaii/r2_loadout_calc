@@ -19,7 +19,7 @@
 
         <h4>Fixes</h4>
         <li>Fixed an issue in the Optimizer where the user was able to select more than one item on Lock filters, which should have been impossible as Lock filters are basically Inclusion filters but only for one item.</li>
-
+        <li>Fixed an issue in the Optimizer where if the user only had Lock filters in place on a character, the Optimizer would mistakenly think the user had no filters in place on that character at all and would abort the search while notifying the user of their "lack of filters"</li>
         <!-- <h4>Optimization</h4>
         <li>Converted Saber's energy overflow listener to a personal listener, so she's not trying to listen to everyone's energy changes and THEN determine if they're hers or not.</li> -->
 
