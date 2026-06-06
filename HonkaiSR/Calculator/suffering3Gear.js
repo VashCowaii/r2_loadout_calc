@@ -9114,7 +9114,7 @@ const turnLogicLightcones = {
                         const energyMax = Math.min(rankParams[2],currentTurn.maxEnergy);
                         const totalBonus = energyMax * rankParams[1]
 
-                        buffSheet[DamageUltimate] = totalBonus;
+                        buffSheet[DamageAll] = totalBonus;
                         buffSheet.sourceOwner = currentTurn.properName;
                         updateBuff(battleData,currentTurn,buffSheet);
                     }
