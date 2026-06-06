@@ -380,6 +380,7 @@ const permaConditionsTextLibrary = {
     "atLeast2SP": "Skill Points: Current >= 2",
     "archerSub5casts": "Skill Use Count < 5",
     "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
+    "noTerritory": "No Other Territory Active",
 
     "mortenaxBladeSkill": "Zone Active<br>HPCurrent > 1",
 
@@ -518,6 +519,15 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Hyacine": defaultStandardAbilityDisplayWarnings,
+    "Castorice": {
+        hasEnhancedState: true,
+        "Skill": "",
+        "Ultimate": "",
+        "MemoSkillEnh": "ONLY the Enhanced MemoSkill can be used on Netherwing's 3rd turn and conditions will be ignored.",
+
+        "SkillPermaConditions": [],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedSpecial,permaConditionsTextLibrary.noTerritory]
+    },
     
     //NIHILITY
     "Silver Wolf": defaultStandardAbilityDisplayWarnings,
