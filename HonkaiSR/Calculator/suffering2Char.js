@@ -3535,7 +3535,7 @@ const battleActions = {
 
                 for (let ee=0;ee<allLength;ee++) {
                     const currentTarget = allTargetArray[ee];
-                    if (currentTarget.cantBeTargeted) {continue;}
+                    if (currentTarget.isUnselectable) {continue;}
                     hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);
                 }
             }
@@ -3589,7 +3589,7 @@ const battleActions = {
                     
                     for (let ee=0;ee<allLength;ee++) {
                         const currentTarget = allTargetArray[ee];
-                        if (currentTarget.cantBeTargeted) {continue;}
+                        if (currentTarget.isUnselectable) {continue;}
                         hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);
                     }
                 }
@@ -4540,7 +4540,7 @@ const battleActions = {
 
                 let percentBlast = multipliers[hitTypeBlast] ?? 0;
                 let flatBlast = flatAmounts[hitTypeBlast] ?? 0;
-                if (targetTurn.cantBeTargeted && !forceHeal) {return;}
+                if (targetTurn.isUnselectable && !forceHeal) {return;}
                 if (logger && timesToHeal>1) {logToBattle(battleData,{logType: "HealAllyStart"});}
                 poke("HealAllyStart",battleData,{sourceTurn,targetTurn});
 
@@ -4562,7 +4562,7 @@ const battleActions = {
             else {
                 let percent = multipliers[hitTypePrimary] ?? 0;
                 let flat = flatAmounts[hitTypePrimary] ?? 0;
-                if (targetTurn.cantBeTargeted && !forceHeal) {return;}
+                if (targetTurn.isUnselectable && !forceHeal) {return;}
                 if (logger && timesToHeal>1) {logToBattle(battleData,{logType: "HealAllyStart"});}
                 poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
                 for (let i=0;i<timesToHeal;i++) {
@@ -4766,6 +4766,45 @@ const battleActions = {
         poke("ConsumedAllyHPList",battleData,{isAllAllies,targetTurn,totalEaten,sourceTurn,skillSlot},sourceTurn);//for characters that need a running total on the full HP consume across the team
         return returnObject
     },
+    consumeHPNew(battleData,targetFilterFunction,percent,targetTurn,sourceTurn,skillSlot,forceConsume,isCurrentHP) {
+        const logger = battleData.isLoggyLogger;
+        let totalEaten = 0;
+        if (targetTurn?.length) {
+            const allies = targetTurn;
+            const min = Math.min;
+            if (logger) {logToBattle(battleData,{logType: "ConsumeHPStart"});}
+            for (let ally of allies) {
+                if ((ally.isUnselectable && !forceConsume) || (targetFilterFunction && !targetFilterFunction(battleData,sourceTurn,ally))) {continue;}
+                const amountToEat = isCurrentHP ? ally.currentHP * percent : ally.maxHP * percent;
+                // calcs.customCeiling
+                const currentHP = ally.currentHP - 1;//-1 here bc consuming can't reduce a character below 1hp
+                const amountEaten = min(amountToEat,currentHP);
+                ally.currentHP -= amountEaten;
+                totalEaten += amountEaten;
+                // totalEaten += calcs.customTruncate(amountEaten,1);
+                if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:ally.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
+                poke("ConsumedAllyHP",battleData,{targetTurn:ally,amountEaten,sourceTurn,skillSlot},ally);
+                poke("AllyLostHP",battleData,{sourceTurn:ally,HPLost: amountEaten,lossSource: sourceTurn},ally);
+                poke("AllyHPChange",battleData,null,ally);
+            }
+            if (logger) {logToBattle(battleData,{logType: "ConsumeHPEnd", name:sourceTurn.properName,totalEaten,targetTurn:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
+        }
+        else if (!targetTurn.isUnselectable || forceConsume) {
+            const amountToEat = isCurrentHP ? targetTurn.currentHP * percent : targetTurn.maxHP * percent;
+            const currentHP = targetTurn.currentHP - 1;//-1 here bc consuming can't reduce a character below 1hp
+            const amountEaten = Math.min(amountToEat,currentHP);//then min to see if it's smaller to reduce to 1, or consume the full %
+            targetTurn.currentHP -= amountEaten;
+            totalEaten += amountEaten;
+            if (logger) {logToBattle(battleData,{logType: "ConsumeHP", name:sourceTurn.properName, amountEaten, target:targetTurn.properName, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
+            poke("ConsumedAllyHP",battleData,{targetTurn,amountEaten,sourceTurn,skillSlot},targetTurn);
+            poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: amountEaten,lossSource: sourceTurn},targetTurn);
+            poke("AllyHPChange",battleData,null,targetTurn);
+        }
+
+        const returnObject = {targetTurn,totalEaten,sourceTurn,skillSlot};
+        poke("ConsumedAllyHPList",battleData,{targetTurn,totalEaten,sourceTurn,skillSlot},sourceTurn);//for characters that need a running total on the full HP consume across the team
+        return returnObject
+    },
     cleanseDebuff(battleData,targetTurn,amountToRemove,removeType) {
         if (!targetTurn.debuffCounter) {return;}
 
@@ -4901,7 +4940,7 @@ const battleActions = {
         let blastTargets = [];
         let fullBlastTargets = [];
 
-        let newPositions = allyPositions.filter(ally => {return (!ally.isDead && !ally.isOffField && !ally.isDeparted && !ally.cantBeTargeted);});
+        let newPositions = allyPositions.filter(ally => {return (!ally.isDead && !ally.isOffField && !ally.isDeparted && !ally.isUnselectableToEnemies);});
         let aggroSort = [...newPositions].sort((x, y) => {
             //pull highest current aggro first
             if (y.currentAggro !== x.currentAggro) return y.currentAggro - x.currentAggro;
@@ -5119,12 +5158,12 @@ const battleActions = {
 
         const listenerToInject = logicRef.techniqueListener;
         listenerToInject.ownerTurn = ownerTurn;
-        addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+        addListenerWithPriority(battleData,listenerToInject,listenerToInject.trigger);
 
         if (techCount > 1) {
             const listenerToInject = logicRef.techniqueListener2;
             listenerToInject.ownerTurn = ownerTurn;
-            addListenerWithPriority(battleData,listenerToInject,"WaveStart");
+            addListenerWithPriority(battleData,listenerToInject,listenerToInject.trigger);
         }
 
         if (isAttack) {battleData.attackTechniqueUsed = true;}
@@ -5168,6 +5207,7 @@ const addListenerWithPriority = battleActions.addListenerWithPriority;
 const addListenerPREPPriority = battleActions.addListenerPREPPriority;
 const removeListener = battleActions.removeListenerInBattle;
 const getTechnique = battleActions.getTechnique;
+const consumeHP = battleActions.consumeHPNew;
 
 
 const turnLogic = {
@@ -14989,7 +15029,10 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,balefireSheet);
 
-                battleActions.consumeHP(battleData,false,0.20,sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,0.20,sourceTurn,sourceTurn,skillRef.slot,false,false);
+
+                // const allyPositions = battleData.allyPositions;
+                // consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,values[0],allyPositions,sourceTurn,skillRef.slot,false,true)
 
                 //infinite fury
                 const battleValues = sourceTurn.battleValues;
@@ -15029,7 +15072,7 @@ const turnLogic = {
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
                     // additionalDMGObject: {},
-                    cantBeTargeted: true,
+                    isUnselectable: true,
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.infiniteFuryQueuedExpired,
@@ -15161,7 +15204,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.bladeSkillATKOBJECT;
-                battleActions.consumeHP(battleData,false,values[3],sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,values[3],sourceTurn,sourceTurn,skillRef.slot,false,false);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
             bladeSkillFUA(battleData,target,sourceTurn) {
@@ -15222,7 +15265,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.bladeSkillFUAATKOBJECT;
-                battleActions.consumeHP(battleData,false,values[3],sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,values[3],sourceTurn,sourceTurn,skillRef.slot,false,false);
 
                 poke("mortenaxBladeGainCharge",battleData,{pointsGained: sourceTurn.rank >= 2 ? -7 : -9,sourceString:"Mortenax Blade FUA Launched"});
                 updateEnergy(battleData,25,sourceTurn,false,"Mortenax Blade FUA Launched");
@@ -17227,7 +17270,7 @@ const turnLogic = {
                         // buffsStartTurn: [],
                         // buffsEndTurn: [],
                         // additionalDMGObject: {},
-                        cantBeTargeted: true,
+                        isUnselectable: true,
                         diesWithOwner: true,
                         isUniqueEvent: true,
                         isSummon: true,
@@ -22404,7 +22447,7 @@ const turnLogic = {
                 let HPTally = 0;
                 const getHPFinal = calcs.getHPFinal;
                 for (let ally of allyPositions) {
-                    if (ally.isDead || ally.cantBeTargeted || ally.isMemosprite) {continue;}
+                    if (ally.isDead || ally.isUnselectable || ally.isMemosprite) {continue;}
                     const allyStatTable = ally.statTable;
                     const finalHP = getHPFinal(allyStatTable).HPFinal;
                     const nullHP = allyStatTable[HPFlatNULL];
@@ -23131,7 +23174,7 @@ const turnLogic = {
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
                     // additionalDMGObject: {},
-                    cantBeTargeted: true,
+                    isUnselectable: true,
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.concertoExpired,
@@ -26834,8 +26877,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.bladeBasicEnhancedATKOBJECT;
-
-                battleActions.consumeHP(battleData,false,values[0],sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,values[0],sourceTurn,sourceTurn,skillRef.slot,false,false);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
             bladeSkillInstance(battleData,target,sourceTurn) {
@@ -26873,7 +26915,7 @@ const turnLogic = {
                 
                 const exoTurnRef = {sourceTurn};
 
-                battleActions.consumeHP(battleData,false,values[0],sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,values[0],sourceTurn,sourceTurn,skillRef.slot,false,false);
 
                 let buffSheet = ATKObjects.bladeSkillInstanceBUFFSHEET;
                 updateBuff(battleData,sourceTurn,buffSheet);
@@ -27068,7 +27110,7 @@ const turnLogic = {
                 }
 
                 if (consume) {
-                    battleActions.consumeHP(battleData,false,variance,sourceTurn,sourceTurn,skillRef.slot);
+                    consumeHP(battleData,null,variance,sourceTurn,sourceTurn,skillRef.slot,false,false);
                 }
                 else if (heal) {
                     const healObject = ATKObjects.bladeUltimateHEALOBJECT;
@@ -27128,7 +27170,7 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,values[1],sourceTurn,sourceTurn,skillRef.slot,false,false);
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
@@ -27997,7 +28039,9 @@ const turnLogic = {
                             if (sourceTurn.properName != ownerTurn.properName || !ownerTurn.battleValues.enhancedActive) {return;}
         
                             let values = turnLogic[ownerTurn.properName].ATKObjects.jingliuTalentREFVALUES;
-                            battleActions.consumeHP(battleData,true,values[1],ownerTurn,ownerTurn,"Talent",false,false,true);
+
+                            const allyPositions = battleData.allyPositions;
+                            consumeHP(battleData,presetTargetFilters.excludeSelf,values[1],allyPositions,ownerTurn,"Talent",false,false);
                         },
                         "target": "self",
                         "listenerName": "Talent - consume from attack in enhanced state",
@@ -28445,8 +28489,7 @@ const turnLogic = {
 
                 const energyBump = sourceTurn.maxEnergy * 0.60;
                 updateEnergy(battleData,energyBump,sourceTurn,true);
-                // battleActions.consumeHP(battleData,isAllAllies,percent,targetTurn,sourceTurn)
-                battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
+                consumeHP(battleData,null,values[1],sourceTurn,sourceTurn,skillRef.slot,false,false);
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
@@ -28535,7 +28578,7 @@ const turnLogic = {
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
                     // additionalDMGObject: {},
-                    cantBeTargeted: true,
+                    isUnselectable: true,
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.combustionExpired,
@@ -30858,7 +30901,7 @@ const turnLogic = {
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
                         path: null,
-                        cantBeTargeted: false,
+                        isUnselectable: false,
                         diesWithOwner: true,
                         isUniqueEvent: true,
                         isSummon: true,
@@ -31614,7 +31657,7 @@ const turnLogic = {
                     actionCounter: 0,
                     turnState: 0,
                     properName: "Aglaea Supreme Stance Timer",
-                    cantBeTargeted: true,
+                    isUnselectable: true,
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.supremeStanceExpired,
@@ -32315,7 +32358,7 @@ const turnLogic = {
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
                         path: null,
-                        cantBeTargeted: false,
+                        isUnselectable: false,
                         diesWithOwner: true,
                         isUniqueEvent: true,
                         isSummon: true,
@@ -32791,8 +32834,7 @@ const turnLogic = {
                 let values = ATKObjects.evernightSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
-                battleActions.consumeHP(battleData,false,0.10,sourceTurn,sourceTurn,"Skill",false,true);
-                //this is batshit crazy, but using the skill does count as an ally single target, for the sake of something like sacerdos
+                consumeHP(battleData,null,0.10,sourceTurn,sourceTurn,skillRef.slot,false,true);
                 
                 const eveyTurn = sourceTurn.everEveyTURNEVENT;
                 if (eveyTurn.isActive) {
@@ -33135,7 +33177,8 @@ const turnLogic = {
                 const logicRef = turnLogic[ownerTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                battleActions.consumeHP(battleData,false,1,deathTurn,ownerTurn,"Talent",false,true);
+                consumeHP(battleData,null,1,deathTurn,ownerTurn,"Talent",false,true);
+
                 let skillRef = ATKObjects.eveyTalentREF ??= ATKObjects["Memosprite Talent"]["You, Parting, Beyond Reach"].variant1;
                 
                 deathTurn.currentHP = 0;
@@ -33205,8 +33248,7 @@ const turnLogic = {
                 poke("AllyDied",battleData,{targetTurn:deathTurn},deathTurn);
             },
             traceHPConsume(battleData,evernightTurn,consumeTarget) {
-
-                battleActions.consumeHP(battleData,false,0.05,consumeTarget,evernightTurn,"Trace",false,true);
+                consumeHP(battleData,null,0.05,consumeTarget,evernightTurn,"Trace",false,true);
 
                 const logicRef = turnLogic[evernightTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -33827,7 +33869,7 @@ const turnLogic = {
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
                         path: null,
-                        cantBeTargeted: false,
+                        isUnselectable: false,
                         diesWithOwner: true,
                         isUniqueEvent: true,
                         isSummon: true,
@@ -34202,9 +34244,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.hyacineSkillREF ??= ATKObjects.Skill["Love Over the Rainbow"].variant1;
                 let values = ATKObjects.hyacineSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                // logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
-                // battleActions.consumeHP(battleData,false,0.10,sourceTurn,sourceTurn,"Skill",false,true);
                 
                 // const eveyTurn = sourceTurn.everEveyTURNEVENT;
                 const icaTurn = sourceTurn.hyacineIcaTURNEVENT;
@@ -34609,7 +34648,7 @@ const turnLogic = {
                     }
                     const healObject = ATKObjects.hyacineIcaPassiveHEALOBJECT;
                     //consume is index 0
-                    battleActions.consumeHP(battleData,false,values[0],icaTurn,icaTurn,skillRef.slot,false,false);
+                    consumeHP(battleData,null,values[0],icaTurn,icaTurn,skillRef.slot,false,false);
                     healAlly(battleData,healObject,null,icaTurn,skillRef.slot,1,alliesToHeal);
 
                     // icaTurn.turnState
@@ -34912,7 +34951,7 @@ const turnLogic = {
                             // poke("AllyLostHP",battleData,{sourceTurn,HPLost: shieldOverflow,wasAttack:true});
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
-                            // if (sourceTurn.cantBeTargeted) {return;}
+                            // if (sourceTurn.isUnselectable) {return;}
         
         
                             if (!this.hyacineE2SPDheet) {
@@ -35180,7 +35219,7 @@ const turnLogic = {
                         rank: ownerTurn.rank,
                         element: ownerTurn.element,
                         path: null,
-                        cantBeTargeted: false,
+                        isUnselectable: false,
                         diesWithOwner: true,
                         isUniqueEvent: true,
                         isSummon: true,
@@ -36571,7 +36610,7 @@ const turnLogic = {
                         // buffsStartTurn: [],
                         // buffsEndTurn: [],
                         // additionalDMGObject: {},
-                        cantBeTargeted: true,
+                        isUnselectable: true,
                         diesWithOwner: true,
                         isUniqueEvent: true,
                         isSummon: true,
