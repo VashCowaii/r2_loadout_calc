@@ -399,7 +399,7 @@ const battleActions = {
         // const actionTags = currentReference.actionTags;
 
         if (actionTags !== undefined) {
-            const characterActions = sourceTurn.tagSpecific;
+            const characterActions = isSourceSpecific ? sourceTurn[sourceOwner] ??= {} : sourceTurn.tagSpecific;
             //action tags don't have onhit checks bc for all intents and purposes, action tags ARE onhit effects, just a matter of what actions
             const actionTagLength = actionTags.length;
             for (let i=0;i<actionTagLength;i++) {
@@ -415,7 +415,7 @@ const battleActions = {
         }
         else  {
             if (stats) {
-                let currentStatTable = isSourceSpecific ? sourceTurn[sourceOwner] ??= new Array(greatTableSize).fill(0) : sourceTurn.statTable;//Array
+                let currentStatTable = sourceTurn.statTable;//Array
 
                 for (let elements of stats) {
                     currentStatTable[elements] += (currentReference[elements] * composite);
@@ -1666,7 +1666,7 @@ const battleActions = {
         poke("BreakDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
 
-        const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
+        const targetStatsSourceBased = targetTurn[sourceTurn.properName];
 
         //might seem dumb to have this stat stuff redone in the break dmg calcs, but bc the act of breaking something might trigger new bonuses or onhit effects, we HAVE to have new calcs and pokes in here
 
@@ -1790,7 +1790,7 @@ const battleActions = {
         poke("BreakDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
 
-        const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
+        const targetStatsSourceBased = targetTurn[sourceTurn.properName];
 
         //might seem dumb to have this stat stuff redone in the break dmg calcs, but bc the act of breaking something might trigger new bonuses or onhit effects, we HAVE to have new calcs and pokes in here
         const pulledComposite = pullCompositeStats(element,cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,targetStatsTeamBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
@@ -1891,7 +1891,7 @@ const battleActions = {
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
 
-        const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
+        const targetStatsSourceBased = targetTurn[properName];
         const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
@@ -2264,7 +2264,7 @@ const battleActions = {
         
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
-        const targetStatsSourceBased = targetTurn[properName] ?? emptyTableNeverAdd;
+        const targetStatsSourceBased = targetTurn[properName];
         let atkEntryRef = atkEntry[hitType];
         const energyGain = (isBounce ? (ATKObject.bounceData.energy ?? 0) : (ATKObject.energy ?? 0)) * (atkEntryRef.energyRatio ?? 0);
         if (energyGain && !ignoreEnergy) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
@@ -2782,7 +2782,7 @@ const battleActions = {
 
 
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,ATKObject},sourceTurn);
-        let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
+        let targetStatsSourceBased = targetTurn[sourceTurn.properName];
         
         let multiOf = scalar ? pullScalar(statTable,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
@@ -2918,7 +2918,7 @@ const battleActions = {
 
 
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,ATKObject},sourceTurn);
-        let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
+        let targetStatsSourceBased = targetTurn[sourceTurn.properName];
         let multiOf = battleActions.elationLevelRef;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
         // console.log(ElationPercentOverride,ATKObject)
@@ -3177,7 +3177,7 @@ const battleActions = {
         let currentMulti = multi;//the %multi from the description of the current attack
         poke("DOTDMGStart",battleData,turnMerge,sourceTurn);
         poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
-        let targetStatsSourceBased = targetTurn[characterName] ?? emptyTableNeverAdd;
+        let targetStatsSourceBased = targetTurn[characterName];
         // let detonateMulti //passed through as a param, no need to define
 
 
@@ -3419,8 +3419,6 @@ const battleActions = {
         // let enemyStats = targetTurn.statTable;
         // let targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? greatTableKnowerOfAll;
         // let targetStatsTeamBased = greatTableKnowerOfAll;
-        // const actionTables = sourceTurn.tagSpecific;
-        // const actionTablesTarget = targetTurn.tagSpecific;
         // const actionTags = ATKObject.actionTags;
         let isEnemy = false;//sourceTurn.isEnemy
 
@@ -3821,8 +3819,6 @@ const battleActions = {
         let hitTypeBlast = "blast";
         let hitTypeAll = "all";
 
-        // console.log(sourceTurn.tagSpecific)
-        // const hasTagTables = !isEnemy && Object.keys(sourceTurn.tagSpecific).length;
         const generalInfo = chainedAttackRef ?? {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
         generalInfo.ATKObject = ATKObject;
         if (!attackState || attackState === "Start") {poke("AttackStart",battleData,generalInfo,sourceTurn);}
@@ -4060,8 +4056,6 @@ const battleActions = {
         let hitTypeBlast = "blast";
         let hitTypeAll = "all";
 
-        // console.log(sourceTurn.tagSpecific)
-        // const hasTagTables = !isEnemy && Object.keys(sourceTurn.tagSpecific).length;
         const isJointAttack = true;
         const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,isJointAttack};
         const generalInfo2 = {sourceTurn:sourceTurn2,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject:ATKObject2,element,totals:totals2,overBreakTotals,overKillTotals,isJointAttack};
@@ -4414,7 +4408,7 @@ const battleActions = {
 
         const turnMerge = {targetTurn,sourceTurn}
         poke("HealStart",battleData,turnMerge,sourceTurn);
-        const targetStatsSourceBased = targetTurn[sourceTurn.properName] ?? emptyTableNeverAdd;
+        const targetStatsSourceBased = targetTurn[sourceTurn.properName];
 
         const healObject = generalInfo.healObject;
         const compositeCacheTag = healObject.compositeCacheTag;
