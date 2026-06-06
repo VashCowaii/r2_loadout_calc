@@ -7366,8 +7366,8 @@ const turnLogicLightcones = {
                         }
 
                         sourceTurn.timeWovenBrocadeBASICSTACKSHEET = {
-                            "stats": [DamageBasic],
-                            [DamageBasic]: rankParams[2],
+                            "stats": [DamageAll],
+                            [DamageAll]: rankParams[2],
                             "source": lcNameRef,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": buffNames.brocadeBasic,
@@ -7378,6 +7378,7 @@ const turnLogicLightcones = {
                             "currentStacks": 6,
                             "decay": false,
                             "expireType": null,
+                            "actionTags": ["Basic"],
                         }
                     }
                     let buffSheet = sourceTurn.timeWovenBrocadeSTACKSHEET;
