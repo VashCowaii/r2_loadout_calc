@@ -1850,6 +1850,18 @@ const customMenu = {
             }
             tagString += "</div>";
 
+            let actionTagString = "";
+            if (hitData.actionTags?.length) {
+                actionTagString = `<div class="actionDetailBodyCenterTags">Action Tags</div><div class="actionDetailBodyCenterTags">[`;
+
+                for (let entry of hitData.actionTags) {
+                    const isLastEntry = entry === hitData.actionTags[hitData.actionTags.length-1];
+                    actionTagString += `${entry}${isLastEntry ? "" : `, `}`;
+                }
+                actionTagString += "]</div>";
+            }
+            
+
             //quick note, player and enemy data are relative to who is attacking. If an enemy is attacking a character, they are playerdata here, and the character is enemydata
             let playerData = JSON.parse(hitData.playerData);
             let enemyData = JSON.parse(hitData.enemyData);
@@ -2432,6 +2444,7 @@ const customMenu = {
                 ${toughnessDataRow}
 
                 ${hitData.isBreakDOT ? "" : tagString}
+                ${actionTagString}
                 ${hitData.shieldOverflow>0 && hitData.shieldOverflow != hitData.DMGTotalAVG ? `<div class="actionDetailBodyCenterTags">Target shields were broken by this DMG</div>` : ""}
 
                 ${hitData.enemyIsDead ? `<div class="actionDetailBodyCenterTags">Target was killed by this DMG</div>` : ""}
