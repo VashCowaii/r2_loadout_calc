@@ -3346,18 +3346,17 @@ const turnLogicLightcones = {
                                 let ownerRank = ownersSlots[sourceTurn.name];
 
                                 let lcNameRef = "Along the Passing Shore";
-                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+                                const buffNames = turnLogicLightcones[lcNameRef].buffNames;
                             
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
         
                                 sourceTurn.lcAlongPassingShoreDMGSHEET = {
-                                    "stats": [DamageAll,DamageUltimate],
+                                    "stats": [DamageAll],
                                     [DamageAll]: rankParams[1],
-                                    [DamageUltimate]: rankParams[2],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
-                                    "buffName": buffName,
+                                    "buffName": buffNames.buff1,
                                     "durationInTurn": 2,
                                     "duration": 1,
                                     "AVApplied": 0,
@@ -3366,12 +3365,32 @@ const turnLogicLightcones = {
                                     "decay": false,
                                     "expireType": "EndTurn",
                                     "isDebuff": true,
-                                    isSourceSpecific: true
+                                    "actionTags": ["All"],
+                                    "isSourceSpecific": true
+                                }
+                                sourceTurn.lcAlongPassingShoreDMGSHEET2 = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.buff2,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": false,//the first is already a debuff, this is not two debuffs just one that we split for performance sake
+                                    "actionTags": ["Ultimate"],
+                                    "isSourceSpecific": true
                                 }
                             }
                             
                             let buffSheet = sourceTurn.lcAlongPassingShoreDMGSHEET;
+                            let buffSheet2 = sourceTurn.lcAlongPassingShoreDMGSHEET2;
                             updateBuff(battleData,targetTurn,buffSheet);
+                            updateBuff(battleData,targetTurn,buffSheet2);
                         },
                         "target": "self",
                         "isPersonal": true,
@@ -3382,6 +3401,7 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "buff1": "Along the Passing Shore",
+            "buff2": "Along the Passing Shore (Ult)",
         },
     },
     "In the Name of the World": {//REDONE
@@ -4530,6 +4550,7 @@ const turnLogicLightcones = {
                                     "decay": false,
                                     "expireType": "EndTurn",
                                     "isDebuff": false,
+                                    "actionTags": ["All"],
                                     "isSourceSpecific": true,
                                 }
                             }
@@ -5095,6 +5116,7 @@ const turnLogicLightcones = {
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": "EndTurn",
+                                    "actionTags": ["All"],
                                     "isSourceSpecific": true,
                                 }
         
