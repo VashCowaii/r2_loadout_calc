@@ -2366,6 +2366,7 @@ const customMenu = {
 
             
             if (hitData.sumVULN) {bonusTotalArray.push({rowName: "Vuln%",rowDisplayValue: ((hitData.sumVULN - 1)*100).toLocaleString() + "%"})}
+            if (hitData.enemyBaseDEF != undefined) {bonusTotalArray.push({rowName: "Target DEF Base",rowDisplayValue: hitData.enemyBaseDEF.toLocaleString()})}
             if (hitData.enemyDEFRed || hitData.sumSHRED) {
                 const sumShredValue = Math.abs((hitData.enemyDEFRed ?? 0) - (hitData.sumSHRED ?? 0))
                 const isCapped = sumShredValue >= 1;
