@@ -226,28 +226,40 @@ const customDisplayValuesLog = {
     ], 
 
     //REMEMBRANCE
-    "Evernight": [//not on live
-        {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true},
+    "Evernight": [
+        {valueName: "Evey on Field", refName: "eveyIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
         {valueName: "Memoria", refName: "memoria", isBattleValue: true,summaryValue: "evernightMemoPointSum",summaryType: "SUM"},
         {valueName: "Darkest Riddle", refName: "riddleStacks", isBattleValue: true},
     ],
     "Castorice": [//not on live
-        {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true},
+        {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
+        {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        },
     ],
     "Hyacine": [
-        {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
         {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
         {valueName: "After Rain", refName: "hyacineAfterRainActive", isBattleValue: true, isCharacterState: true},
     ],  
     "Trailblazer - Remembrance": [
-        {valueName: "Mem on Field", refName: "memIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Mem on Field", refName: "memIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
         {valueName: "Mem's Charge", refName: "memCharge", isBattleValue: true},
         {valueName: "Mem is Enhanced", refName: "memIsEnhanced", isBattleValue: true, isCharacterState: true},
         {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
     ], 
     "Aglaea": [
-        {valueName: "Garment on Field", refName: "garmentIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Garment on Field", refName: "garmentIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
         {valueName: "Supreme Stance", refName: "supremeStanceActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
         // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
