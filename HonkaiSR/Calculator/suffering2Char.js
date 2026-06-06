@@ -26367,8 +26367,8 @@ const turnLogic = {
                     //e6
                     if (rank >= 6) {
                         const buffSheet = this.saberE6SHEET ??= {
-                            "stats": [ResistanceUltimatePEN],
-                            [ResistanceUltimatePEN]: 0.20,
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
                             "source": ownerTurn.properName,
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e6Pen,
@@ -26379,6 +26379,7 @@ const turnLogic = {
                             "currentStacks": 1,
                             "decay": false,
                             "expireType": null,
+                            "actionTags": ["Ultimate"],
                         }
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
@@ -38146,8 +38147,8 @@ const turnLogic = {
                     //e6
                     if (rank >= 6) {
                         const buffSheet = this.argentiE6Sheet ??= {
-                            "stats": [DEFShredUltimate],
-                            [DEFShredUltimate]: 0.30,
+                            "stats": [DEFShredAll],
+                            [DEFShredAll]: 0.30,
                             "source": "E6",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e6Shred,
@@ -38158,6 +38159,7 @@ const turnLogic = {
                             "currentStacks": 1,
                             "decay": false,
                             "expireType": null,
+                            "actionTags": ["Ultimate"],
                         }
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
