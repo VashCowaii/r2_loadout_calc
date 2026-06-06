@@ -1706,7 +1706,9 @@ const battleActions = {
             let hitDataBreak = {
                 DMGTotalEndBreak,
                 DMGTotalAVG:DMGTotalEndBreak,DMGOverkill,element,
-                tags: newTags,enemyIsDead,
+                tags: [...newTags],
+                actionTags: [...actionTags],
+                enemyIsDead,
                 breakObject,
 
                 isBroken,
@@ -1810,9 +1812,6 @@ const battleActions = {
         
         battleData.battleDamageSUM += DMGTotalEndBreak;
         
-        // console.log(DMGTotalEndBreak,sumRES)
-        // logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken});
-        // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead});}
         if (battleData.isLoggyLogger) {
             const enemyIsDead = hurtResult.enemyIsDead;
             const DMGOverkill = hurtResult.DMGOverkill;
@@ -1839,7 +1838,9 @@ const battleActions = {
                 toughMulti,
                 breakMulti:instanceMulti,
 
-                tags: newTags,instanceMulti,rawReduction,enemyIsDead,
+                tags: [...newTags],
+                actionTags: [...actionTags],
+                instanceMulti,rawReduction,enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
@@ -2125,7 +2126,10 @@ const battleActions = {
             const hitData = {
                 scalar: scalarToUse,
                 bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
-                currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
+                currentSplit,currentMulti,multiOf,
+                tags:[...DMGTags],
+                actionTags: [...actionTags],
+                element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
 
                 sumDMG,
@@ -2498,7 +2502,10 @@ const battleActions = {
                 scalar: banger ? "Certified Banger" : "Punchline",
                 elationValueToUse,punchlineMulti,sumMerry,
                 bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
-                currentSplit,currentMulti,multiOf,tags:DMGTags,element,finalMulti,
+                currentSplit,currentMulti,multiOf,
+                tags: [...DMGTags],
+                actionTags: [...actionTags],
+                element,finalMulti,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
 
                 sumDMG,
@@ -2679,7 +2686,10 @@ const battleActions = {
             // console.log(sourceTurn.statTable)
             const hitData = {
                 scalar: "",
-                currentSplit:0,currentMulti:0,multiOf:0,tags,element:0,finalMulti:0,
+                currentSplit:0,currentMulti:0,multiOf:0,
+                tags: [...tags],
+                actionTags: [],
+                element:0,finalMulti:0,
                 DMGTotalEnd:0,DMGTotalCrit:0,DMGTotalAVG:0,DMGOverkill:0,shieldOverflow:0,
                 strongestShieldRef:null,
                 // breakerDMG,
@@ -2812,7 +2822,10 @@ const battleActions = {
             // const DMGOverkill = hurtResult.DMGOverkill;
             let hitData = {
                 scalar,
-                currentMulti,multiOf,tags:DMGTags,element,
+                currentMulti,multiOf,
+                tags: [...DMGTags],
+                actionTags: [...actionTags],
+                element,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
     
                 sumDMG,
@@ -2959,7 +2972,10 @@ const battleActions = {
             let hitData = {
                 scalar: banger ? "Certified Banger" : "Punchline",
                 elationValueToUse,punchlineMulti,sumMerry,
-                currentMulti,multiOf,tags:DMGTags,element,
+                currentMulti,multiOf,
+                tags: [...DMGTags],
+                actionTags: [...actionTags],
+                element,
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
     
                 sumDMG,
@@ -3174,6 +3190,7 @@ const battleActions = {
         let DMGTotalEnd = null;
         let DMGTotalAVG = null;
         let enemyDEFRed = null;
+        let breakActionTags = null;
 
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         let sumDR = 1;
@@ -3277,6 +3294,7 @@ const battleActions = {
             const compositeCacheTag = currentBreakCaching.realTag + targetTurn.properName;
             tags = currentBreakCaching.newTags;
             const actionTags = currentBreakCaching.actionTags;
+            breakActionTags = actionTags;
             const realPENKeys = currentBreakCaching.realPENKeys;
             const realShredKeys = currentBreakCaching.realShredKeys;
             const realVulnKeys = currentBreakCaching.realVulnKeys;
@@ -3358,7 +3376,10 @@ const battleActions = {
 
             let hitData = {
                 scalar,isBreakDOT,finalMulti,
-                currentMulti,multiOf,detonateMulti,tags,element,bleedMultiOf,bleedLimit,
+                currentMulti,multiOf,detonateMulti,
+                tags: [...tags],
+                actionTags: actionTags ? [...actionTags] : [...breakActionTags],
+                element,bleedMultiOf,bleedLimit,
                 DMGTotalEnd,DMGTotalAVG,DMGOverkill,averaged,
 
                 sumDMG: XsumDMG,
@@ -3434,7 +3455,10 @@ const battleActions = {
             sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + DMGOverkill;
             let hitData = {
                 scalar: null,
-                currentMulti:percentInstance,multiOf:null,tags:["True"],element:"True",
+                currentMulti:percentInstance,multiOf:null,
+                tags:["True"],
+                actionTags: [],
+                element:"True",
                 DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,
                 enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
@@ -17999,8 +18023,8 @@ const turnLogic = {
                     //e4
                     if (rank >= 4) {
                         let buffSheet = this.archerE4DMGSheet ??= {
-                            "stats": [DamageUltimate],
-                            [DamageUltimate]: 1.5,
+                            "stats": [DamageAll],
+                            [DamageAll]: 1.5,
                             "source": "E4",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": "E4: The Unsung Life",
@@ -18010,7 +18034,8 @@ const turnLogic = {
                             "maxStacks": 1,
                             "currentStacks": 1,
                             "decay": false,
-                            "expireType": null
+                            "expireType": null,
+                            "actionTags": ["Ultimate"],
                         }
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
@@ -26245,8 +26270,8 @@ const turnLogic = {
                     //e1
                     if (rank >= 1) {
                         const buffSheet = this.saberE1BuffSHEET ??= {
-                            "stats": [DamageUltimate],
-                            [DamageUltimate]: 0.60,
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.60,
                             "source": "E1",
                             "sourceOwner": ownerTurn.properName,
                             "buffName": turnLogic[ownerTurn.properName].buffNames.e1DMG,
@@ -26257,6 +26282,7 @@ const turnLogic = {
                             "currentStacks": 1,
                             "decay": false,
                             "expireType": null,
+                            "actionTags": ["Ultimate"],
                         }
                         updateBuff(battleData,ownerTurn,buffSheet);
 
@@ -27804,9 +27830,8 @@ const turnLogic = {
                     let skillRef = ATKObjects.jingliuTalentREF ??= ATKObjects["Talent"]["Crescent Transmigration"].variant1;
                     let values = ATKObjects.jingliuTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     ATKObjects.jingliuTalentEnhancedSHEET = {
-                        "stats": [CritRateBase,DamageUltimate,EffectRES,ResistanceIcePEN],
+                        "stats": [CritRateBase,EffectRES,ResistanceIcePEN],
                         [CritRateBase]: values[6],
-                        [DamageUltimate]: 0.20,
                         [EffectRES]: 0.35,
                         [ResistanceIcePEN]: rank >= 6 ? 0.30 : 0,
                         "source": "Talent",
@@ -27819,6 +27844,21 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                    }
+                    ATKObjects.jingliuTalentEnhancedSHEETULT = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
+                        "source": "Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.enhancedStateULT,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
                     }
 
                     ATKObjects.jingliuTalentEnhancedMoonlightSHEET = {
@@ -27837,7 +27877,9 @@ const turnLogic = {
                     }
                 }
                 const buffSheet = ATKObjects.jingliuTalentEnhancedSHEET;
+                const buffSheet2 = ATKObjects.jingliuTalentEnhancedSHEETULT;
                 updateBuff(battleData,sourceTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet2);
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.enhancedActive = true;
@@ -28020,8 +28062,10 @@ const turnLogic = {
                                 }
                                 
                                 let buffName1 = this.buffName1 ??= turnLogic[ownerTurn.properName].buffNames.enhancedState;
+                                let buffName3 = this.buffName3 ??= turnLogic[ownerTurn.properName].buffNames.enhancedStateULT;
                                 const buffsObject = ownerTurn.buffsObject;
                                 removeBuff(battleData,ownerTurn,buffsObject[buffName1]);
+                                removeBuff(battleData,ownerTurn,buffsObject[buffName3]);
         
                                 valuesRef.moonlightFinished = false;
                                 let buffName2 = this.buffName2 ??= turnLogic[ownerTurn.properName].buffNames.moonlight;
@@ -28304,6 +28348,7 @@ const turnLogic = {
             "e1CritDMG": "E1: Moon Crashes Tianguan Gate",
             "traceShred": "Frost Wraith (Jingliu)",
             "enhancedState": "Spectral Transmigration",
+            "enhancedStateULT": "Spectral Transmigration (Ult)",
             "moonlight": "Moonlight (Jingliu)",
             "e2DMG": "E2: Crescent Shadows Qixing Dipper",
         },
