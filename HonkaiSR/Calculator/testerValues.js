@@ -1951,11 +1951,16 @@ const defaultConditions = {
     },
     "Castorice": {
         "hasEnhancedState": true,
+        "extraUseConditions": ["MemoSkillEnh"],
         "Skill": {
             "type": "AND",
             "array": []
         },
         "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
+        "MemoSkillEnh": {
             "type": "AND",
             "array": []
         }
