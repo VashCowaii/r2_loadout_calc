@@ -1589,6 +1589,7 @@ const propertyImagePaths = {
 
 
 //kind of cancer but I don't want to double-define things in case I change them later, would rather have one reference used twice so changes will be applied universally
+const globalEnemyVersion = 1;
 const cacheTagFamilies = {
     "Elation": {
         ...propertyImagePaths.Elation.sets,
