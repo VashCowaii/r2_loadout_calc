@@ -7760,7 +7760,10 @@ const turnLogicLightcones = {
                     }
                     const values = sourceTurn.longMayRainbowsVALUES;
                     // console.log(values[1])
-                    const consumeValue = battleActions.consumeHP(battleData,true,values[1],null,sourceTurn,"Lightcone",false,true).totalEaten;
+
+                    const allyPositions = battleData.allyPositions;
+                    const consumeValue = consumeHP(battleData,null,values[1],allyPositions,sourceTurn,"Lightcone",false,true).totalEaten;
+
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
                     // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
 
