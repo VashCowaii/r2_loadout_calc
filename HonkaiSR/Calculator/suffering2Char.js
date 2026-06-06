@@ -1008,7 +1008,6 @@ const battleActions = {
         return sourceDeposit.cacheValue;
     },
     pullElationDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
-        // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatElation[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatElation[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
@@ -1043,7 +1042,6 @@ const battleActions = {
         return sourceDeposit.cacheValue;
     },
     pullMerryMakeDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
-        // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatMerryMake[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatMerryMake[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
@@ -1210,13 +1208,17 @@ const battleActions = {
         if (hasChangedDEF) {
             const enemyDEFRed = enemyTable[DEFP];
             const sumSHRED = sourceDepositShred.cacheValue;
-            let enemyDEF = Math.max(0, enemyTable[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+            const enemyBaseDEF = enemyTable[DEFBase];
+            let enemyDEF = Math.max(0, enemyBaseDEF * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
             let attackerDiffDEF = table[LVL] * 10 + 200;//80 being the player's level here
             let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
 
             sourceDepositDEF.valueIsCurrentAsAttacker = true;
             targetDepositDEF.valueIsCurrentAsTarget = true;
             sourceDepositDEF.cacheValue = sumDEF;
+            sourceDepositDEF.enemyDEF = enemyDEF;
+            sourceDepositDEF.enemyBaseDEF = enemyBaseDEF;
+            sourceDepositDEF.enemyDEFRed = enemyDEFRed;
 
             //DEF doesn't need tag based instances, since SHRED is functionally onhit DEF adjustments, so we only need to care about flat out basic values
             //to get the composite here
@@ -1247,7 +1249,9 @@ const battleActions = {
             sumPEN:sourceDepositPEN.cacheValue,
             sumSHRED:sourceDepositShred.cacheValue,
             sumDEF,
-            enemyDEF: null,
+            enemyDEF:sourceDepositDEF.enemyDEF,
+            enemyDEFRed:sourceDepositDEF.enemyDEFRed,
+            enemyBaseDEF:sourceDepositDEF.enemyBaseDEF,
             sumVULN,
             sumDR,
             sumRES,
@@ -1415,13 +1419,17 @@ const battleActions = {
         if (hasChangedDEF) {
             const enemyDEFRed = enemyTable[DEFP];
             const sumSHRED = sourceDepositShred.cacheValue;
-            let enemyDEF = Math.max(0, enemyTable[DEFBase] * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
+            const enemyBaseDEF = enemyTable[DEFBase];
+            let enemyDEF = Math.max(0, enemyBaseDEF * (1 + enemyDEFRed - sumSHRED));//def shred will always be a positive value, just how I'd prefer it. So always - here
             let attackerDiffDEF = table[LVL] * 10 + 200;//80 being the player's level here
             let sumDEF = 1 - (enemyDEF / (enemyDEF + attackerDiffDEF));
 
             sourceDepositDEF.valueIsCurrentAsAttacker = true;
             targetDepositDEF.valueIsCurrentAsTarget = true;
             sourceDepositDEF.cacheValue = sumDEF;
+            sourceDepositDEF.enemyDEF = enemyDEF;
+            sourceDepositDEF.enemyBaseDEF = enemyBaseDEF;
+            sourceDepositDEF.enemyDEFRed = enemyDEFRed;
 
             // DEF doesn't need tag based instances, since SHRED is functionally onhit DEF adjustments, so we only need to care about flat out basic values
             //to get the composite here
@@ -1451,7 +1459,9 @@ const battleActions = {
             sumPEN: sourceDepositPEN.cacheValue,sumSHRED: sourceDepositShred.cacheValue,
             sumVULN,
             sumDEF,
-            enemyDEF: null,
+            enemyDEF:sourceDepositDEF.enemyDEF,
+            enemyDEFRed:sourceDepositDEF.enemyDEFRed,
+            enemyBaseDEF:sourceDepositDEF.enemyBaseDEF,
             totalCritDMG: sourceDepositCritDMG.cacheValue, totalCritRate: sourceDepositCritRate.cacheValue,
             sumDR,
             sumRES,
@@ -1459,15 +1469,63 @@ const battleActions = {
         }
     },
     
-    pullScalarSum(table,targetStatsSourceBased,scalarTag) {//TODO: need to revisit this now with these changes
+    pullScalarSumOLD(table,targetStatsSourceBased,scalarTag) {//TODO: need to revisit this now with these changes
         const base = scalarBaseKey[scalarTag];
         const perc = scalarPercKey[scalarTag];
         const flat = scalarFlatKey[scalarTag];
         
         return (table[base]) * (1 + table[perc]) + table[flat];
-        // let bonus = table[`${scalarTag}Base`] * (1 + table[`${scalarTag}%`]) + table[`${scalarTag}Flat`];
-        // let bonus = table[scalarComponents.b] * (1 + table[scalarComponents.p]) + table[scalarComponents.f];
-        // let bonus = table[scalarBaseKey[scalarTag]] * (1 + table[scalarPercKey[scalarTag]]) + table[scalarFlatKey[scalarTag]];
+    },
+    scalarFamilyReferences: {
+        "ATK": "UpdateStatATK",
+        "DEF": "UpdateStatDEF",
+        "HP": "UpdateStatHP",
+    },
+    pullScalarSum(scalarTag,sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
+        const base = scalarBaseKey[scalarTag];
+        const perc = scalarPercKey[scalarTag];
+        const flat = scalarFlatKey[scalarTag];
+        // console.log(targetStatsSourceBased)
+
+        let scalarFamily = battleActions.scalarFamilyReferences[scalarTag];
+        if (!scalarFamily) {
+            alert(`Unknown scalar tag unaccounted for: ${scalarTag}\nNotify Vash in the discord if you EVER see this.`);
+            throw new Error(`pullScalarSum couldn't find scalarFamilyReferences for tag: ${scalarTag}`);
+        }
+
+        const fullCache = compositeCacheTag + "SCALAR";
+
+        const sourceDeposit = sourceCache[scalarFamily][fullCache] ??= {};
+        const targetDeposit = targetCache[scalarFamily][fullCache] ??= {};
+        const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
+
+        if (hasChanged) {
+            let bonus = 0;
+            sourceDeposit.valueIsCurrentAsAttacker = true;
+            targetDeposit.valueIsCurrentAsTarget = true;
+            // console.log(tags)
+
+            bonus += (table[base]) * (1 + table[perc]) + table[flat];
+
+            if (actionTags) {
+                // for (let tag of tags) {
+                    for (let action of actionTags) {
+                        const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                        const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+
+                        bonus += (tableSource[base] + tableTarget[base] + actionTableTargetSources[base])
+                        * (1 + tableSource[perc] + tableTarget[perc] + actionTableTargetSources[perc])
+                        + tableSource[flat] + tableTarget[flat] + actionTableTargetSources[flat];
+                    }
+                // }
+            }
+
+            sourceDeposit.cacheValue = bonus;
+        }
+
+        return sourceDeposit.cacheValue;
+        
     },
     pullFinalMultiplier(sourceTurn,actionTags) {
         let resultingMulti = 1;
@@ -1912,7 +1970,7 @@ const battleActions = {
         if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
         let scalarToUse = atkEntry.scalarOverride ?? scalar;
 
-        let multiOf = scalarAmountOverride ?? pullScalar(scalarSourceStats,targetStatsSourceBased,scalarToUse);//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalarAmountOverride ?? pullScalar(scalarToUse,cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//the stat that this attacks scales off of, so ATK or HP etc
 
         
         // console.log(multiOf)
@@ -2790,7 +2848,7 @@ const battleActions = {
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,ATKObject},sourceTurn);
         let targetStatsSourceBased = targetTurn[sourceTurn.properName];
         
-        let multiOf = scalar ? pullScalar(statTable,targetStatsSourceBased,scalar) : 1;//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalar ? pullScalar(scalar,cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget) : 1;//the stat that this attacks scales off of, so ATK or HP etc
         let preDMG = multiOf * currentMulti;//sum amount of the scalar, before DMG bonuses come into play
         let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
         
@@ -3206,9 +3264,10 @@ const battleActions = {
 
         if (!isBreakDOT) {
             // console.log(element)
-            multiOf = pullScalar(playerStats,targetStatsSourceBased,scalar);//the stat that this attacks scales off of, so ATK or HP etc
-
             const compositeCacheTag = currentBuff.compositeCacheTag + targetTurn.properName;
+            multiOf = pullScalar(scalar,sourceCache,targetCache,compositeCacheTag,playerStats,targetStatsSourceBased,realDMGKeys,actionTables,actionTags,actionTablesTarget);//the stat that this attacks scales off of, so ATK or HP etc
+
+            
             // sourceTurn.hysilensTalentDOTSHEETPhysical = {
             //     "stats": null,
             //     "source": characterName,
@@ -4426,12 +4485,10 @@ const battleActions = {
         let sourceMulti = 1 + (isFixedHealing ? 0 : pullCompositeHealBonus(sourceCache,targetCache,compositeCacheTag,sourceStats,targetStats,targetStatsSourceBased,actionTablesSource,actionTags,actionTablesTarget));
         let composite = sourceMulti;// * targetMulti;
 
-        const pseudoTable = emptyTableNeverAdd;
-
         const scalarSourceOverride = generalInfo.scalarSourceOverride;
         
         const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : sourceStats;
-        let scalarSUM = scalar ? pullScalar(scalarSourceStats,pseudoTable,scalar) : targetTurn.maxHP;//if no scalar is specified, assume that %heals are on the target's hp
+        let scalarSUM = scalar ? pullScalar(scalar,sourceCache,targetCache,compositeCacheTag,scalarSourceStats,targetStats,targetStatsSourceBased,actionTablesSource,actionTags,actionTablesTarget) : targetTurn.maxHP;//if no scalar is specified, assume that %heals are on the target's hp
 
         let percentHealed = percent * composite * scalarSUM;
         let flatHealed = flat * composite;
@@ -4671,7 +4728,7 @@ const battleActions = {
 
         const scalar = sourceRef.scalar;
 
-        let scalarSUM = scalar ? pullScalar(sourceStats,emptyTableNeverAdd,scalar) : targetTurn[maxHP];//if no scalar is specified, assume that %shields are on the target's hp
+        let scalarSUM = scalar ? pullScalar(scalar,sourceCache,targetCache,compositeCacheTag,sourceStats,targetStats,targetStatsSourceBased,actionTablesSource,actionTags,actionTablesTarget) : targetTurn.maxHP;//if no scalar is specified, assume that %shields are on the target's hp
 
         let percentShield = addPercent * composite * scalarSUM;
         let flatShield = addFlat * composite;
