@@ -603,6 +603,8 @@ const sim = {
 
 
 
+
+
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
             battleData.enemiesCreated++;
@@ -610,17 +612,25 @@ const sim = {
 
             // let ref = enemiesDataRef[currentEntry.entry];
             const enemyType = currentEntry.enemyType;
+
+            const enemyVersion = currentEntry.version ?? 0;
+            //global can be found in statListData if I ever forget
+            if (!enemyVersion || enemyVersion < globalEnemyVersion) {
+                alert(`The enemy you are trying to import/use is in a format version that is no longer supported.
+                    \nVersion Detected: ${enemyVersion} --- Supported: ${globalEnemyVersion}
+                    \nIf you're seeing this while using a file that was made before June 6th 2026, this is intended.
+                    \nI have taken steps to ensure this never has to happen again, but a change did need to happen overall.`)
+                continue;
+            }
+
             let name = "Enemy " + enemiesMade + " " + currentEntry.name + " (" + enemyType + ")";
             let enemyRealName = currentEntry.name;
             let slot = "enemy" + enemiesMade;
-            let stats = [...currentEntry.stats];
+            let stats = new Array(greatTableSize).fill(0);//[...currentEntry.stats];
+            const statsObject = currentEntry.stats;
 
-            const statsLength = stats.length;
-            if (statsLength != greatTableSize) {
-                const sizeDiff = greatTableSize - statsLength;
-                for (let b=0;b<sizeDiff;b++) {
-                    stats.push(0);
-                }
+            for (let statsKey in statsObject) {
+                stats[greatTableIndex[statsKey]] = statsObject[statsKey];
             }
 
             summaryTurns[name] = 0;

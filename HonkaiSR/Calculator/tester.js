@@ -6452,6 +6452,7 @@ const userTriggers = {
             const enemyLvL = +readSelection("addEnemyLevelSlider").value;
             const baseRes = 0.20;
             const enemyObject = {
+                version: globalEnemyVersion,//global can be found in statListData if I ever forget
                 image: null,
                 entry: null,
                 name: enemyName,
@@ -6495,6 +6496,30 @@ const userTriggers = {
 
             // Object.assign(psuedoStats,enemyObject.stats);
             enemyObject.finalStats = updateFormulas(null,enemyStats);
+
+            enemyObject.stats = {
+                LVL: enemyLvL,
+                HPBase: enemyHP,
+                ATKBase: enemyATK,
+                SPDBase: enemySPD,
+                Toughness: enemyToughness,
+                EffectRES: enemyEffectRES,
+                DEFBase: (enemyLvL*10) + 200,
+                ResistanceImaginary: (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100,
+                ResistanceQuantum: (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100,
+                ResistanceWind: (weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0))/100,
+                ResistanceLightning: (weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0))/100,
+                ResistanceIce: (weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0))/100,
+                ResistanceFire: (weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0))/100,
+                ResistancePhysical: (weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0))/100,
+                WeaknessImaginary: weaknessOverrides.Imaginary ? 1 : 0,
+                WeaknessQuantum: weaknessOverrides.Quantum ? 1 : 0,
+                WeaknessWind: weaknessOverrides.Wind  ? 1 : 0,
+                WeaknessLightning: weaknessOverrides.Lightning ? 1 : 0,
+                WeaknessIce: weaknessOverrides.Ice ? 1 : 0,
+                WeaknessFire: weaknessOverrides.Fire ? 1 : 0,
+                WeaknessPhysical: weaknessOverrides.Physical ? 1 : 0,
+            }
 
             if (isExport) {
                 const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
@@ -6623,29 +6648,29 @@ const userTriggers = {
                 <div class="imageRowStatisticBox1">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">ATK</div>
-                    <div class="imageRowStatisticStatBox">${stats[ATKBase]}</div>
+                    <div class="imageRowStatisticStatBox">${stats.ATKBase}</div>
                 </div>
 
                 <div class="imageRowStatisticBox2">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconSpeed.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">SPD</div>
-                    <div class="imageRowStatisticStatBox">${stats[SPDBase]}</div>
+                    <div class="imageRowStatisticStatBox">${stats.SPDBase}</div>
                 </div>
 
                 <div class="imageRowStatisticBox1">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconStatusResistance.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">Effect RES</div>
-                    <div class="imageRowStatisticStatBox">${stats[EffectRES]}</div>
+                    <div class="imageRowStatisticStatBox">${stats.EffectRES}</div>
                 </div>
                 <div class="imageRowStatisticBox2">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">Toughness</div>
-                    <div class="imageRowStatisticStatBox">${stats[Toughness].toLocaleString()} ${enemyEntry.toughnessBars > 1 ? "x" + enemyEntry.toughnessBars : ""}</div>
+                    <div class="imageRowStatisticStatBox">${stats.Toughness.toLocaleString()} ${enemyEntry.toughnessBars > 1 ? "x" + enemyEntry.toughnessBars : ""}</div>
                 </div>
                 <div class="imageRowStatisticBox1">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">HP</div>
-                    <div class="imageRowStatisticStatBox">${stats[HPBase].toLocaleString()} ${enemyEntry.hpBars > 1 ? "x" + enemyEntry.hpBars : ""}</div>
+                    <div class="imageRowStatisticStatBox">${stats.HPBase.toLocaleString()} ${enemyEntry.hpBars > 1 ? "x" + enemyEntry.hpBars : ""}</div>
                 </div>
                 
             </div>`;
