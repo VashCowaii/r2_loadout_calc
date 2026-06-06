@@ -37,7 +37,8 @@ const greatTableKnowerOfAll = {
 
     //DMG
     "DamageAll": 0,
-    "DamageBasic": 0,"DamageSkill": 0,"DamageUltimate": 0,
+    "DamageBasic": 0,"DamageSkill": 0,
+    // "DamageUltimate": 0,
     "DamageDOT": 0,
     "DamageBreak": 0,"DamageBreakSuper": 0,"DamageBreakEfficiency": 0,"DamageBreakBonus": 0,"ToughnessRatioAdjustment": 0,
     "DamageBreakNULL": 0,
@@ -356,7 +357,6 @@ const DamageBasic = greatTableIndex.DamageBasic;
 const DamageSkill = greatTableIndex.DamageSkill;
 const DamageUltimate = greatTableIndex.DamageUltimate;
 const DamageDOT = greatTableIndex.DamageDOT;
-const DamageFUA = greatTableIndex.DamageFUA;
 
 const DamageBreak = greatTableIndex.DamageBreak;
 const DamageBreakSuper = greatTableIndex.DamageBreakSuper;
@@ -380,7 +380,6 @@ const VulnSkill = greatTableIndex.VulnSkill;
 const VulnUltimate = greatTableIndex.VulnUltimate;
 
 const VulnDOT = greatTableIndex.VulnDOT;
-const VulnFUA = greatTableIndex.VulnFUA;
 const VulnBreak = greatTableIndex.VulnBreak;
 
 const VulnIce = greatTableIndex.VulnIce;
@@ -396,7 +395,6 @@ const DEFShredBasic = greatTableIndex.DEFShredBasic;
 const DEFShredSkill = greatTableIndex.DEFShredSkill;
 const DEFShredUltimate = greatTableIndex.DEFShredUltimate;
 const DEFShredDOT = greatTableIndex.DEFShredDOT;
-const DEFShredFUA = greatTableIndex.DEFShredFUA;
 const DEFShredBreak = greatTableIndex.DEFShredBreak;
 const DEFShredBreakSuper = greatTableIndex.DEFShredBreakSuper;
 
@@ -417,7 +415,6 @@ const ResistanceBasicPEN = greatTableIndex.ResistanceBasicPEN;
 const ResistanceSkillPEN = greatTableIndex.ResistanceSkillPEN;
 const ResistanceUltimatePEN = greatTableIndex.ResistanceUltimatePEN;
 const ResistanceDOTPEN = greatTableIndex.ResistanceDOTPEN;
-const ResistanceFUAPEN = greatTableIndex.ResistanceFUAPEN;
 const ResistanceBreakPEN = greatTableIndex.ResistanceBreakPEN;
 const ResistanceBreakSuperPEN = greatTableIndex.ResistanceBreakSuperPEN;
 
@@ -474,7 +471,6 @@ const possibleTags = [
     "All",
     "Basic","Skill","Ultimate",
     "DOT",
-    // "FUA",
     "Break",
     "BreakSuper",
     "Elation",
@@ -785,11 +781,6 @@ const propertyImagePaths = {
                 "specific": "DEF Shred DOT",
                 "unit": "%"
             },
-            [greatTableIndex["DEFShredFUA"]]: {
-                "display": "DEF Shred",
-                "specific": "DEF Shred FUA",
-                "unit": "%"
-            },
             [greatTableIndex["DEFShredBreak"]]: {
                 "display": "DEF Shred",
                 "specific": "DEF Shred Break",
@@ -1093,11 +1084,6 @@ const propertyImagePaths = {
                 "specific": "Damage: DoT",
                 "unit": "%"
             },
-            [greatTableIndex["DamageFUA"]]: {
-                "display": "DMG FuA",
-                "specific": "Damage: Follow-up",
-                "unit": "%"
-            },
         }
     },
     "Misc": {
@@ -1156,11 +1142,6 @@ const propertyImagePaths = {
                 "specific": "PEN: DOT",
                 "unit": "%"
             },
-            [greatTableIndex["ResistanceFUAPEN"]]: {
-                "display": "FUA RES PEN",
-                "specific": "PEN: FUA",
-                "unit": "%"
-            },
             [greatTableIndex["ResistanceBreakPEN"]]: {
                 "display": "Break RES PEN",
                 "specific": "PEN: Break",
@@ -1200,11 +1181,6 @@ const propertyImagePaths = {
             [greatTableIndex["VulnDOT"]]: {
                 "display": "DOT Vuln",
                 "specific": "Vulnerability: DOT",
-                "unit": "%"
-            },
-            [greatTableIndex["VulnFUA"]]: {
-                "display": "FUA Vuln",
-                "specific": "Vulnerability: FUA",
                 "unit": "%"
             },
             [greatTableIndex["VulnBreak"]]: {
