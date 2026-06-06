@@ -757,6 +757,7 @@ const sim = {
             charactersRemaining: 0,
             backupHPOnField: 0,
             backupHPObject: {},
+            territoryActive: false,
             battleIsOver: false,
             battleFailed: false,
             attackTechniqueUsed: false,
