@@ -2889,7 +2889,7 @@ const customMenu = {
 
                     const regString = `customMenu.closeMenu();userTriggers.updateSelectedLightcone(\`${lcName}\`)`;
                     const occlusionString = `customHTML.addFilter('lightconeOcclusionsInput','lightconeOcclusionsContainer','lightconeOcclusions',null,null,\`${lcName}\`);customMenu.updateSearchResults()`;
-                    const lockString = `customMenu.closeMenu();customHTML.addFilter('lightconeLocksInput','lightconeLocksContainer','lightconeLocks',null,null,\`${lcName}\`)`;
+                    const lockString = `customMenu.closeMenu();customHTML.addFilter('lightconeLocksInput','lightconeLocksContainer','lightconeLocks',null,1,\`${lcName}\`)`;
 
 
 

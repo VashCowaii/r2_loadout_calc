@@ -546,7 +546,7 @@ const customHTML = {
         // console.log(table)
         //If we are submitting more than the allowed locks, don't do anything, don't add, etc
         // if (table.length>=limit) {filterName.value = "";return;}
-        if (compareTable && table.length === limit) {
+        if (limit && table.length === limit) {
             filterName.value = "";
             return;
         }
