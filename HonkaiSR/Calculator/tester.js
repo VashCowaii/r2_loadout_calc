@@ -2889,7 +2889,7 @@ const customMenu = {
 
                     const regString = `customMenu.closeMenu();userTriggers.updateSelectedLightcone(\`${lcName}\`)`;
                     const occlusionString = `customHTML.addFilter('lightconeOcclusionsInput','lightconeOcclusionsContainer','lightconeOcclusions',null,null,\`${lcName}\`);customMenu.updateSearchResults()`;
-                    const lockString = `customMenu.closeMenu();customHTML.addFilter('lightconeLocksInput','lightconeLocksContainer','lightconeLocks',null,null,\`${lcName}\`)`;
+                    const lockString = `customMenu.closeMenu();customHTML.addFilter('lightconeLocksInput','lightconeLocksContainer','lightconeLocks',null,1,\`${lcName}\`)`;
 
 
 
@@ -4471,6 +4471,43 @@ const userTriggers = {
                             </div>
                         </div>`
                 },
+                "Castorice"(turnRef,action) {
+
+                    let slashStringer = "";
+                    const current = turnRef.specialEnergyCurrent;
+
+                    //fill shutter
+                    //detail outline
+                    //boundary
+
+                    // const fillPercent = (turnRef.specialEnergyCurrent / turnRef.specialEnergyMax) * 100;
+                    const actualPercent = turnRef.specialEnergyCurrent / turnRef.specialEnergyMax;
+                    // const actualPercent = 0.3;
+                    const fillPercent = actualPercent * 90;
+
+                    const netherIsActive = turnRef.battleValues.netherIsActive;
+
+                    slashStringer = `
+                        
+                        <img src="/HonkaiSR/misc/castorice/${netherIsActive ? "FrameSpecialSp_Red" : "FrameSpecialSp"}.png" class="castoriceMainOutlineCUSTOMEnergyImage"/>
+                        <div class="castoriceFillShutterCUSTOMEnergyImageBOX" style="height: ${fillPercent}%;">
+                            <img src="/HonkaiSR/misc/castorice/ProgressSpecialSp.png" class="castoriceFillShutterCUSTOMEnergyImage"/>
+                        </div>
+                        <img src="/HonkaiSR/misc/castorice/OutlineSpecialSp.png" class="castoriceMainOutlineCUSTOMEnergyImage"/>
+                        ${netherIsActive ? `<img src="/HonkaiSR/misc/castorice/IconSkillBtnFobidden.png" class="castoriceLOCKCUSTOMEnergyImage"/>` : ""}
+                        
+                    `;
+
+                    return `
+                        <div class="actionDetailHeaderRowCharacterCUSTOMEnergyBox">
+                            ${slashStringer}
+                            
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
+                            </div>
+                        </div>`;
+                },
             }
 
 
@@ -4572,7 +4609,56 @@ const userTriggers = {
                                 if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
                                 if (entry.requiresEidolon && turnRef.rank < entry.requiresEidolon) {continue;}
 
-                                customValuesString += `<div class="actionDetailBody">${entry.valueName}: ${valueAdjusted}</div>`
+                                if (entry.isMemoSpriteDisplay) {
+                                    if (valueAdjusted == true) {
+                                        // characters[ownerTurn.properName].traces.Point04.icon
+                                        const memoRef = turnRef.memospriteEventRef;
+                                        const memoTurn = turnRef[memoRef];
+
+                                        const memoHP = (memoTurn.currentHP / memoTurn.maxHP);
+
+                                        // so 67 deg up and down will line up, prayge
+                                        const rotation = memoHP * 2 * 67 - 67;
+                                        customValuesString += `<div class="customEnergyMemoBoxBar">
+                                            <div class="memoHPBar">
+                                                <div class="memoHPShutter" style="transform:translate(000px,0%) rotate(${rotation}deg) translate(100px,0%);"></div>
+                                            </div>
+                                            <div class="customEnergyMemoBoxImageBox">
+                                                <img src="/HonkaiSR/${memoTurn.eventImage}" class="customEnergyMemoBoxImage"/>
+                                            </div>
+                                        </div>`
+                                    }
+                                    else {
+                                        customValuesString += `<div class="customEnergyMemoBoxBar">
+                                            <div class="customEnergyMemoBoxImageBoxMemoDead">
+                                                <img src="/HonkaiSR/${characters[turnRef.properName].traces.Point02.icon}" class="customEnergyMemoBoxImage"/>
+                                            </div>
+                                        </div>`
+                                    }
+                                    
+                                }
+                                else if (entry.customDisplay) {
+                                    const markMax = entry.markMax;
+                                    let marksStringer = "";
+                                    for (let i=1;i<=markMax;i++) {
+                                        const isFilled = valueAdjusted >= i;
+                                        // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
+                                        const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
+                                        marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
+                                        style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+
+                                        
+                                        
+                                        // customEnergyBodyMarksCIRCLE
+                                    }
+
+                                    customValuesString += `<div class="customEnergyBodyMarksBar">${marksStringer}</div>`
+                                }
+                                else {
+                                    customValuesString += `<div class="actionDetailBody">${entry.valueName}: ${valueAdjusted}</div>`
+                                }
+
+                                
                             }
                         }
                     }

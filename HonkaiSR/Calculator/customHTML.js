@@ -1,4 +1,5 @@
 let globalTargetPoolKeyDisplay = null;
+const defaultValidUseConditions = new Set (["Skill","Ultimate"]);
 const customHTML = {
     ...traceTreeVisualData,
     rowUniqueStatExceptions: {
@@ -298,8 +299,31 @@ const customHTML = {
             mainBoxTarget.style.display = "flex";
             missingBoxTarget.style.display = "none";
 
-            customHTML.megaRotationAbilityDisplay(conditionsRef,"Ultimate",characterName);
-            customHTML.megaRotationAbilityDisplay(conditionsRef,"Skill",characterName);
+            let fullReturnString = "";
+
+            fullReturnString += customHTML.megaRotationAbilityDisplay(conditionsRef,"Ultimate",characterName);
+            fullReturnString += customHTML.megaRotationAbilityDisplay(conditionsRef,"Skill",characterName);
+            fullReturnString += `<div class="rotationsSectionRowHolder">
+                                    <!-- <div class="traceTypeDisplayBox">
+                                        <div class="traceTypeDisplay">Basic ATK</div>
+                                    </div> -->
+                                    <div class="statFiltersRowHeader">Basic ATK</div>
+                                    <div class="traceContentBodyBoxRotationsWarning">Basic ATK is always called when skill conditions fail.</div>
+                                </div>`;
+
+            let memoStringer = "";
+            memoStringer += customHTML.megaRotationAbilityDisplay(conditionsRef,"MemoSkillEnh",characterName);
+            if (memoStringer) {
+                memoStringer += `<div class="rotationsSectionRowHolder">
+                                    <!-- <div class="traceTypeDisplayBox">
+                                        <div class="traceTypeDisplay">MemoSkill</div>
+                                    </div> -->
+                                    <div class="statFiltersRowHeader">MemoSkill</div>
+                                    <div class="traceContentBodyBoxRotationsWarning">MemoSkill is used when the Enhanced MemoSkill conditions fail.</div>
+                                </div>`
+            }
+
+            mainBox.innerHTML = fullReturnString + memoStringer;
 
 
             const targetHasValidChecks = conditionsRef.validTargetChecks ?? [];
@@ -329,7 +353,7 @@ const customHTML = {
 
             customHTML.megaRotationTargetDisplay(conditionsRef,"Skill",characterName,abilityTargetPools) 
             customHTML.megaRotationTargetDisplay(conditionsRef,"Ultimate",characterName,abilityTargetPools) 
-            customHTML.megaRotationTargetDisplay(conditionsRef,"MemoSkill",characterName,abilityTargetPools) 
+            customHTML.megaRotationTargetDisplay(conditionsRef,"MemoSkill",characterName,abilityTargetPools)
             customHTML.megaRotationTargetDisplay(conditionsRef,"MemoSkillEnh",characterName,abilityTargetPools) 
             
 
@@ -339,25 +363,32 @@ const customHTML = {
     megaRotationAbilityDisplay(conditionsRef,refSkillString,characterName) {
         const warningRef = conditionsCharacterDisplayWarning[characterName];
 
-
         const ultyCheck = conditionsRef ? conditionsRef[refSkillString] ??= rotationsUISuffering.getReturnStruct("AND") : null;
+        if (!defaultValidUseConditions.has(refSkillString)) {
+            const hasExtraUseConditions = conditionsRef.extraUseConditions ? new Set(conditionsRef.extraUseConditions) : null;
+            if (hasExtraUseConditions) {
+                if (!hasExtraUseConditions.has(refSkillString)) {
+                    return "";
+                }
+            }
+            else {
+                return "";
+            }
+        }
+
         let indexCounter = -1;
         let layerCount = 0;
 
-        const ultimateRotations = readSelection(`rotationsConditionsBodyBox${refSkillString}`);
-        ultimateRotations.innerHTML = "";
-
-        readSelection(`rotationsConditionsWarningBox${refSkillString}`).innerHTML = warningRef ? warningRef[refSkillString] : "";
-
-        const permaConditionsBoxUlt = readSelection(`rotationsConditionsBox${refSkillString}Perma`);
-        permaConditionsBoxUlt.innerHTML = "";
+        let rotationStringer = "";
+        let permaConditionStringer = "";
+        let warningStringer = warningRef ? warningRef[refSkillString] : "";
 
         const arrayToPass = [];
         if (ultyCheck) {
-            ultimateRotations.innerHTML = rotationsUISuffering.displayLoop(characterName,ultyCheck,indexCounter,layerCount,arrayToPass,refSkillString);
+            rotationStringer = rotationsUISuffering.displayLoop(characterName,ultyCheck,indexCounter,layerCount,arrayToPass,refSkillString);
 
             const fullWarningRef = `${refSkillString}PermaConditions`;
-            if (warningRef?.[fullWarningRef].length) {
+            if (warningRef?.[fullWarningRef]?.length) {
                 let addedString = ""
                 addedString = `<details class="rotationsPermaConditionsExpand">
                     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (${warningRef[fullWarningRef].length})</summary>`;
@@ -366,10 +397,22 @@ const customHTML = {
                     addedString += `<div class="actionDetailBody">- ${conditionText}</div>`
                 }      
                 
-                permaConditionsBoxUlt.innerHTML = addedString + `</details>`
+                permaConditionStringer = addedString + `</details>`
             }
-            else {permaConditionsBoxUlt.innerHTML = "";}
         }
+
+
+        let returnStringer = `<div class="rotationsSectionRowHolder">
+            <!-- <div class="traceTypeDisplayBox">
+                <div class="traceTypeDisplay">${refSkillString}</div>
+            </div> -->
+            <div class="statFiltersRowHeader">${refSkillString}</div>
+            <div class="rotationsPermaConditionsExpandHolder" id="rotationsConditionsBox${refSkillString}Perma">${permaConditionStringer}</div>
+            <div class="traceContentBodyBoxRotationsWarning" id="rotationsConditionsWarningBox${refSkillString}">${warningStringer}</div>
+            <div class="rotationsConditionsBodyBox" id="rotationsConditionsBodyBox${refSkillString}">${rotationStringer}</div>
+        </div>`;
+
+        return returnStringer;
     },
     megaRotationTargetDisplay(conditionsRef,refSkillString,characterName,abilityTargetPools) {
         const warningRef = conditionsCharacterDisplayWarning[characterName];
@@ -503,7 +546,7 @@ const customHTML = {
         // console.log(table)
         //If we are submitting more than the allowed locks, don't do anything, don't add, etc
         // if (table.length>=limit) {filterName.value = "";return;}
-        if (compareTable && table.length === limit) {
+        if (limit && table.length === limit) {
             filterName.value = "";
             return;
         }

@@ -103,6 +103,8 @@ const greatTableKnowerOfAll = {
     "MerryMakeAll": 0,
 
     "HealingOutgoingNULL": 0,
+
+    "HPOverride": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
@@ -308,6 +310,7 @@ const HPBase = greatTableIndex.HPBase;
 const HPP = greatTableIndex["HP%"];
 const HPFlat = greatTableIndex.HPFlat;
 const HPFlatNULL = greatTableIndex.HPFlatNULL;
+const HPOverride = greatTableIndex.HPOverride;
 
 const ATKBase = greatTableIndex.ATKBase;
 const ATKP = greatTableIndex["ATK%"];
@@ -661,6 +664,11 @@ const propertyImagePaths = {
     "HP": {
         "icon": initialPropertyPath + "IconMaxHP.png",
         "sets": {
+            [greatTableIndex["HPOverride"]]: {
+                "display": "HP",
+                "specific": "HP Override",
+                "unit": ""
+            },
             [greatTableIndex["HPBase"]]: {
                 "display": "HP",
                 "specific": "HP Base",
