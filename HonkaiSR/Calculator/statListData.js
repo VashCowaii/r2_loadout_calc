@@ -4,27 +4,32 @@ const greatTableKnowerOfAll = {
     "LVL": 0,
 
     //MAIN STATS
-    "HPBase": 0,"HP%": 0,"HPFlat": 0,
+    "HPBase": 0,"HP%": 0,"HPFlat": 0,"HPOverride": 0,
     "HPFlatNULL": 0,
 
     "ATKBase": 0,"ATK%": 0,"ATKFlat": 0,
     "ATKFlatNULL": 0,
 
-    "DEFBase": 0,"DEF%": 0,"DEFFlat": 0,
+    "DEFBase": 0,"DEF%": 0,"DEFFlat": 0,"DEFFlatNULL": 0,
 
-    "SPDBase": 0,"SPD%": 0,"SPDFlat": 0,
+    "SPDBase": 0,"SPD%": 0,"SPDFlat": 0,"SPDFlatNull": 0,
 
     "CharacterAggroBase": 0,"AggroBase%": 0,"Aggro%": 0,"AggroFlat": 0,
 
-    "ShieldOutgoing": 0,"ShieldIncoming": 0,
-
+    //EFFECT SUCCESS
     "EffectRES": 0,
     "CrowdControlRES": 0,
     "EffectHitRate": 0,
-    "EnergyRegenRate": 0,
-    "HealingOutgoing": 0,
+    
+    //HEALING
+    "HealingOutgoing": 0,"HealingOutgoingNULL": 0,
     "HealingIncoming": 0,
 
+    //SHIELD
+    "ShieldOutgoing": 0,"ShieldIncoming": 0,
+
+    //ENERGY
+    "EnergyRegenRate": 0,
     "EnergyMax": 0,
     "EnergyMaxSpecial": 0,
 
@@ -35,6 +40,16 @@ const greatTableKnowerOfAll = {
     "CritDamageBase": 0,"CritDamage%": 0,"CritDamageFlat": 0,
     "CritDamageBaseNULL": 0,//conversion
 
+    //ELATION
+    "ElationDMGAll": 0,"ElationDMGAllNULL": 0,
+    "MerryMakeAll": 0,
+
+    //WEAKEN
+    "Weaken%": 0,
+
+    //DR
+    "DamageReductionStandard": 0,
+
     //DMG
     "DamageAll": 0,
     "DamageBasic": 0,"DamageSkill": 0,
@@ -44,20 +59,24 @@ const greatTableKnowerOfAll = {
 
     "DamageIce": 0,"DamageLightning": 0,"DamageFire": 0,"DamageQuantum": 0,"DamageImaginary": 0,"DamageWind": 0,"DamagePhysical": 0,
 
+    //VULN
     "VulnAll": 0,
     "VulnBasic": 0,"VulnSkill": 0,
     "VulnDOT": 0,
     "VulnBreak": 0,
     "VulnIce": 0,"VulnLightning": 0,"VulnFire": 0,"VulnQuantum": 0,"VulnImaginary": 0,"VulnWind": 0,"VulnPhysical": 0,
 
+    //SHRED
     "DEFShredAll": 0,
     "DEFShredBasic": 0,"DEFShredSkill": 0,
     "DEFShredDOT": 0,
     "DEFShredBreak": 0,"DEFShredBreakSuper": 0,
     "DEFShredIce": 0,"DEFShredLightning": 0,"DEFShredFire": 0,"DEFShredQuantum": 0,"DEFShredImaginary": 0,"DEFShredWind": 0,"DEFShredPhysical": 0,
 
+    //TOUGHNESS
     "Toughness": 0,
 
+    //RESISTANCE
     "ResistanceAll": 0,
     "ResistanceAllPEN": 0,
 
@@ -86,21 +105,8 @@ const greatTableKnowerOfAll = {
     "ResistancePhysical": 0,
     "ResistancePhysicalPEN": 0,
 
+    //WEAKNESS
     "WeaknessAll": 0,"WeaknessIce": 0,"WeaknessLightning": 0,"WeaknessFire": 0,"WeaknessQuantum": 0,"WeaknessImaginary": 0,"WeaknessWind": 0,"WeaknessPhysical": 0,
-    
-    "DEFFlatNULL": 0,
-
-    "ElationDMGAll": 0,
-    "Weaken%": 0,
-
-    "DamageReductionStandard": 0,
-    "SPDFlatNull": 0,
-    "ElationDMGAllNULL": 0,
-    "MerryMakeAll": 0,
-
-    "HealingOutgoingNULL": 0,
-
-    "HPOverride": 0,
 }
 const greatTableKeys = Object.keys(greatTableKnowerOfAll);
 const greatTableSize = greatTableKeys.length;
