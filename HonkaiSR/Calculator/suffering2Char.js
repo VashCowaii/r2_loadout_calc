@@ -985,16 +985,20 @@ const battleActions = {
 
             if (actionTags) {
                 for (let tag of tags) {
-                    bonus += table[tag] + targetStatsSourceBased[tag]; 
+                    bonus += table[tag]; 
 
                     for (let action of actionTags) {
-                        bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
+                        const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                        const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+                        // console.log(actionTableTargetSources)
+                        bonus += tableSource[tag] + tableTarget[tag] + actionTableTargetSources[tag];
                     }
                 }
             }
             else {
                 for (let tag of tags) {
-                    bonus += table[tag] + targetStatsSourceBased[tag];
+                    bonus += table[tag];
                 }
             }
 
@@ -1002,9 +1006,6 @@ const battleActions = {
         }
 
         return sourceDeposit.cacheValue;
-
-        // greatTableIndex
-        // return bonus;
     },
     pullElationDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
@@ -1020,16 +1021,19 @@ const battleActions = {
 
             if (actionTags) {
                 for (let tag of tags) {
-                    bonus += table[tag] + targetStatsSourceBased[tag]; 
+                    bonus += table[tag]; 
 
                     for (let action of actionTags) {
-                        bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
+                        const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                        const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+                        bonus += tableSource[tag] + tableTarget[tag] + actionTableTargetSources[tag];
                     }
                 }
             }
             else {
                 for (let tag of tags) {
-                    bonus += table[tag] + targetStatsSourceBased[tag];
+                    bonus += table[tag];
                 }
             }
 
@@ -1037,9 +1041,6 @@ const battleActions = {
         }
 
         return sourceDeposit.cacheValue;
-
-        // greatTableIndex
-        // return bonus;
     },
     pullMerryMakeDMGBonus(sourceCache,targetCache,compositeCacheTag,table,targetStatsSourceBased,tags,actionTables,actionTags,actionTablesTarget) {
         // console.log(targetStatsSourceBased)
@@ -1055,16 +1056,19 @@ const battleActions = {
 
             if (actionTags) {
                 for (let tag of tags) {
-                    bonus += table[tag] + targetStatsSourceBased[tag]; 
+                    bonus += table[tag]; 
 
                     for (let action of actionTags) {
-                        bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
+                        const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                        const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+                        bonus += tableSource[tag] + tableTarget[tag] + actionTableTargetSources[tag];
                     }
                 }
             }
             else {
                 for (let tag of tags) {
-                    bonus += table[tag] + targetStatsSourceBased[tag];
+                    bonus += table[tag];
                 }
             }
 
@@ -1072,9 +1076,6 @@ const battleActions = {
         }
 
         return sourceDeposit.cacheValue;
-
-        // greatTableIndex
-        // return bonus;
     },
     invalidateTargetDMGCache(battleData,sourceTurn) {
         const sourceCache = sourceTurn.cacheTagValues;
@@ -1141,28 +1142,30 @@ const battleActions = {
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN];}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred];}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln];}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN];}
+                    if (hasChangedShred) {sumSHRED += table[tagShred];}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln];}
                     
 
                     for (let action of actionTags) {
-                        const actionTableSource = actionTables[action];
-                        const actionTableTarget = actionTablesTarget[action];
+                        const actionTableSource = actionTables[action] ?? emptyTableNeverAdd;
+                        const actionTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
                         // bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
-                        if (hasChangedPEN) {sumPEN += (actionTableSource?.[tagPEN] ?? 0) + (actionTableTarget?.[tagPEN] ?? 0);}
-                        if (hasChangedShred) {sumSHRED += (actionTableSource?.[tagShred] ?? 0) + (actionTableTarget?.[tagShred] ?? 0);}
-                        if (hasChangedVuln) {sumVULN += (actionTableSource?.[tagVuln] ?? 0) + (actionTableTarget?.[tagVuln] ?? 0);}
+                        if (hasChangedPEN) {sumPEN += actionTableSource[tagPEN] + actionTableTarget[tagPEN] + actionTableTargetSources[tagPEN];}
+                        if (hasChangedShred) {sumSHRED += actionTableSource[tagShred] + actionTableTarget[tagShred] + actionTableTargetSources[tagShred];}
+                        if (hasChangedVuln) {sumVULN += actionTableSource[tagVuln] + actionTableTarget[tagVuln] + actionTableTargetSources[tagVuln];}
                     }
                 }
 
                 if (hasChangedDR) {
                     for (let action of actionTags) {
-                        const currentTable = actionTables[action];
-                        const currentTableTarget = actionTablesTarget[action];
+                        const currentTable = actionTables[action] ?? emptyTableNeverAdd;
+                        const currentTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                        sumDR += (currentTable?.[standardDRIndex] ?? 0) + (currentTableTarget?.[standardDRIndex] ?? 0);
+                        sumDR += currentTable[standardDRIndex] + currentTableTarget[standardDRIndex] + actionTableTargetSources[standardDRIndex];
                     }
                 }
             }
@@ -1172,9 +1175,9 @@ const battleActions = {
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN];}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred];}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln];}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN];}
+                    if (hasChangedShred) {sumSHRED += table[tagShred];}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln];}
                 }
             }
 
@@ -1194,7 +1197,7 @@ const battleActions = {
                 sourceDepositVuln.cacheValue = sumVULN;
             }
             if (hasChangedDR) {
-                sumDR += enemyTable[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
+                sumDR += enemyTable[standardDRIndex]; 
 
                 sourceDepositDR.valueIsCurrentAsAttacker = true;
                 targetDepositDR.valueIsCurrentAsTarget = true;
@@ -1321,37 +1324,40 @@ const battleActions = {
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN];}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred];}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln];}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN]}
+                    if (hasChangedShred) {sumSHRED += table[tagShred]}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln]}
 
                     for (let action of actionTags) {
-                        const actionTableSource = actionTables[action];
-                        const actionTableTarget = actionTablesTarget[action];
+                        const actionTableSource = actionTables[action] ?? emptyTableNeverAdd;
+                        const actionTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
                         // bonus += (actionTables[action]?.[tag] ?? 0) + (actionTablesTarget[action]?.[tag] ?? 0);
-                        if (hasChangedPEN) {sumPEN += (actionTableSource?.[tagPEN] ?? 0) + (actionTableTarget?.[tagPEN] ?? 0);}
-                        if (hasChangedShred) {sumSHRED += (actionTableSource?.[tagShred] ?? 0) + (actionTableTarget?.[tagShred] ?? 0);}
-                        if (hasChangedVuln) {sumVULN += (actionTableSource?.[tagVuln] ?? 0) + (actionTableTarget?.[tagVuln] ?? 0);}
+                        if (hasChangedPEN) {sumPEN += actionTableSource[tagPEN] + actionTableTarget[tagPEN] + actionTableTargetSources[tagPEN];}
+                        if (hasChangedShred) {sumSHRED += actionTableSource[tagShred] + actionTableTarget[tagShred] + actionTableTargetSources[tagShred];}
+                        if (hasChangedVuln) {sumVULN += actionTableSource[tagVuln] + actionTableTarget[tagVuln] + actionTableTargetSources[tagVuln];}
                     }
                 }
 
                 if (hasCritChange) {
                     for (let action of actionTags) {
-                        const currentTable = actionTables[action];
-                        const currentTableTarget = actionTablesTarget[action];
+                        const currentTable = actionTables[action] ?? emptyTableNeverAdd;
+                        const currentTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
                         // console.log(currentTable.CritDamageBase)
-                        if (hasChangedCritRate) {totalCritRate += (currentTable ? currentTable[CritRateBase] : 0) + (currentTableTarget ? currentTableTarget[CritRateBase] : 0);}
-                        if (hasChangedCritDMG) {totalCritDMG += (currentTable ? currentTable[CritDamageBase] : 0) + (currentTableTarget ? currentTableTarget[CritDamageBase] : 0);}
+                        if (hasChangedCritRate) {totalCritRate += currentTable[CritRateBase] + currentTableTarget[CritRateBase] + actionTableTargetSources[CritRateBase];}
+                        if (hasChangedCritDMG) {totalCritDMG += currentTable[CritDamageBase] + currentTableTarget[CritDamageBase] + actionTableTargetSources[CritDamageBase];}
                     }
                 }
 
                 if (hasChangedDR) {
                     for (let action of actionTags) {
-                        const currentTable = actionTables[action];
-                        const currentTableTarget = actionTablesTarget[action];
+                        const currentTable = actionTables[action] ?? emptyTableNeverAdd;
+                        const currentTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                        sumDR += (currentTable?.[standardDRIndex] ?? 0) + (currentTableTarget?.[standardDRIndex] ?? 0);
+                        sumDR += currentTable[standardDRIndex] + currentTableTarget[standardDRIndex] + actionTableTargetSources[standardDRIndex];
                     }
                 }
             }
@@ -1361,9 +1367,9 @@ const battleActions = {
                     const tagShred = tagsShred[i];
                     const tagVuln = tagsVuln[i];
 
-                    if (hasChangedPEN) {sumPEN += table[tagPEN] + targetStatsSourceBased[tagPEN]}
-                    if (hasChangedShred) {sumSHRED += table[tagShred] + targetStatsSourceBased[tagShred]}
-                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln] + targetStatsSourceBased[tagVuln]}
+                    if (hasChangedPEN) {sumPEN += table[tagPEN]}
+                    if (hasChangedShred) {sumSHRED += table[tagShred]}
+                    if (hasChangedVuln) {sumVULN += enemyTable[tagVuln]}
                 }
             }
 
@@ -1383,14 +1389,14 @@ const battleActions = {
                 sourceDepositVuln.cacheValue = sumVULN;
             }
             if (hasChangedCritRate) {
-                totalCritRate += table[CritRateBase] + targetStatsSourceBased[CritRateBase];// + targetStatsTeamBased[CritRateBase];
+                totalCritRate += table[CritRateBase];// + targetStatsTeamBased[CritRateBase];
 
                 sourceDepositCritRate.valueIsCurrentAsAttacker = true;
                 targetDepositCritRate.valueIsCurrentAsTarget = true;
                 sourceDepositCritRate.cacheValue = totalCritRate;
             }
             if (hasChangedCritDMG) {
-                totalCritDMG += table[CritDamageBase] + targetStatsSourceBased[CritDamageBase];// + targetStatsTeamBased[CritDamageBase];
+                totalCritDMG += table[CritDamageBase];// + targetStatsTeamBased[CritDamageBase];
 
                 sourceDepositCritDMG.valueIsCurrentAsAttacker = true;
                 targetDepositCritDMG.valueIsCurrentAsTarget = true;
@@ -1398,7 +1404,7 @@ const battleActions = {
             }
 
             if (hasChangedDR) {
-                sumDR += enemyTable[standardDRIndex] + targetStatsSourceBased[standardDRIndex]; 
+                sumDR += enemyTable[standardDRIndex]; 
 
                 sourceDepositDR.valueIsCurrentAsAttacker = true;
                 targetDepositDR.valueIsCurrentAsTarget = true;
@@ -1453,12 +1459,12 @@ const battleActions = {
         }
     },
     
-    pullScalarSum(table,targetStatsSourceBased,scalarTag) {
+    pullScalarSum(table,targetStatsSourceBased,scalarTag) {//TODO: need to revisit this now with these changes
         const base = scalarBaseKey[scalarTag];
         const perc = scalarPercKey[scalarTag];
         const flat = scalarFlatKey[scalarTag];
         
-        return (table[base] + targetStatsSourceBased[base]) * (1 + table[perc] + targetStatsSourceBased[perc]) + table[flat] + targetStatsSourceBased[flat];
+        return (table[base]) * (1 + table[perc]) + table[flat];
         // let bonus = table[`${scalarTag}Base`] * (1 + table[`${scalarTag}%`]) + table[`${scalarTag}Flat`];
         // let bonus = table[scalarComponents.b] * (1 + table[scalarComponents.p]) + table[scalarComponents.f];
         // let bonus = table[scalarBaseKey[scalarTag]] * (1 + table[scalarPercKey[scalarTag]]) + table[scalarFlatKey[scalarTag]];
@@ -1543,7 +1549,6 @@ const battleActions = {
         "Physical": true,
     },
     pullBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
-        // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
@@ -1555,16 +1560,17 @@ const battleActions = {
             let bonusBreak = 1;
             let bonusBreakMulti = 1;
 
-            bonusBreak += table[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
+            bonusBreak += table[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus];
 
             if (actionTags) {
                 for (let action of actionTags) {
-                    const tableSource = actionTables[action];
-                    const tableTarget = actionTablesTarget[action];
+                    const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                    const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                    const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                    bonusBreak += (tableSource?.[DamageBreak] ?? 0) + (tableTarget?.[DamageBreak] ?? 0);
-                    bonusBreakMulti += (tableSource?.[DamageBreakBonus] ?? 0) + (tableTarget?.[DamageBreakBonus] ?? 0);
+                    bonusBreak += tableSource[DamageBreak] + tableTarget[DamageBreak] + actionTableTargetSources[DamageBreak];
+                    bonusBreakMulti += tableSource[DamageBreakBonus] + tableTarget[DamageBreakBonus] + actionTableTargetSources[DamageBreakBonus];
                 }
             }
 
@@ -1576,7 +1582,6 @@ const battleActions = {
         return sourceDeposit.cacheValue;
     },
     pullSuperBreakDMGMulti(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
-        // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatBreak[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
@@ -1589,18 +1594,19 @@ const battleActions = {
             let bonusBreakMulti = 1;
             let superMulti = 1;
 
-            bonusBreak += table[DamageBreak] + targetStatsSourceBased[DamageBreak];
-            bonusBreakMulti += table[DamageBreakBonus] + targetStatsSourceBased[DamageBreakBonus];
-            superMulti += table[DamageBreakSuper] + targetStatsSourceBased[DamageBreakSuper];
+            bonusBreak += table[DamageBreak];
+            bonusBreakMulti += table[DamageBreakBonus];
+            superMulti += table[DamageBreakSuper];
 
             if (actionTags) {
                 for (let action of actionTags) {
-                    const tableSource = actionTables[action];
-                    const tableTarget = actionTablesTarget[action];
+                    const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                    const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                    const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                    bonusBreak += (tableSource?.[DamageBreak] ?? 0) + (tableTarget?.[DamageBreak] ?? 0);
-                    bonusBreakMulti += (tableSource?.[DamageBreakBonus] ?? 0) + (tableTarget?.[DamageBreakBonus] ?? 0);
-                    superMulti += (tableSource?.[DamageBreakSuper] ?? 0) + (tableTarget?.[DamageBreakSuper] ?? 0);
+                    bonusBreak += tableSource[DamageBreak] + tableTarget[DamageBreak] + actionTableTargetSources[DamageBreak];
+                    bonusBreakMulti += tableSource[DamageBreakBonus] + tableTarget[DamageBreakBonus] + actionTableTargetSources[DamageBreakBonus];
+                    superMulti += tableSource[DamageBreakSuper] + tableTarget[DamageBreakSuper] + actionTableTargetSources[DamageBreakSuper];
                 }
             }
 
@@ -4368,7 +4374,6 @@ const battleActions = {
         sumSlotRef2[action] = (sumSlotRef2[action] ?? 0) + 1;
     },
     pullCompositeHealBonus(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
-        // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatHealing[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatHealing[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
@@ -4377,17 +4382,15 @@ const battleActions = {
             let bonus = 0;
             sourceDeposit.valueIsCurrentAsAttacker = true;
             targetDeposit.valueIsCurrentAsTarget = true;
-            // console.log(tags)
 
-            // for (let tag of tags) {
-            //     bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
-            // }
-
-            bonus += table[HealingOutgoing] + targetTable[HealingIncoming] + targetStatsSourceBased[HealingOutgoing];
+            bonus += table[HealingOutgoing] + targetTable[HealingIncoming];
 
             if (actionTags) {
                 for (let action of actionTags) {
-                    bonus += (actionTables[action]?.[HealingOutgoing] ?? 0) + (actionTablesTarget[action]?.[HealingIncoming] ?? 0);
+                    const tableSource = actionTables[action] ?? emptyTableNeverAdd
+                    const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd
+                    const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+                    bonus += tableSource[HealingOutgoing] + tableTarget[HealingIncoming] + actionTableTargetSources[HealingOutgoing];//TODO: need to revisit if we have a conflict with source/target bothing having source bonuses on ally to ally instances
                 }
             }
 
@@ -4604,7 +4607,6 @@ const battleActions = {
         // poke("ConsumedAllyHPList",battleData,{isAllAllies,targetTurn,totalHealed,sourceTurn,skillSlot});//for characters that need a running total on the full HP consume across the team
     },
     pullCompositeShieldBonus(sourceCache,targetCache,compositeCacheTag,table,targetTable,targetStatsSourceBased,actionTables,actionTags,actionTablesTarget) {
-        // console.log(targetStatsSourceBased)
         const sourceDeposit = sourceCache.UpdateStatShield[compositeCacheTag] ??= {};
         const targetDeposit = targetCache.UpdateStatShield[compositeCacheTag] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
@@ -4613,17 +4615,16 @@ const battleActions = {
             let bonus = 0;
             sourceDeposit.valueIsCurrentAsAttacker = true;
             targetDeposit.valueIsCurrentAsTarget = true;
-            // console.log(tags)
 
-            // for (let tag of tags) {
-            //     bonus += table[tag] + tableONHIT[tag] + targetStatsSourceBased[tag];
-            // }
-
-            bonus += table[ShieldOutgoing] + targetTable[ShieldIncoming] + targetStatsSourceBased[ShieldOutgoing];
+            bonus += table[ShieldOutgoing] + targetTable[ShieldIncoming];
 
             if (actionTags) {
                 for (let action of actionTags) {
-                    bonus += (actionTables[action]?.[ShieldOutgoing] ?? 0) + (actionTablesTarget[action]?.[ShieldIncoming] ?? 0);
+                    const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                    const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                    const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+
+                    bonus += tableSource[ShieldOutgoing] + tableTarget[ShieldIncoming] + actionTableTargetSources[ShieldOutgoing];//TODO: need to revisit if we have a conflict with source/target bothing having source bonuses on ally to ally instances
                 }
             }
 
