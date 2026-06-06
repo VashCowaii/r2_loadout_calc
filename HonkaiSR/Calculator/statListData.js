@@ -449,7 +449,6 @@ const possibleTags = [
     "All",
     "Break",
     "BreakSuper",
-    "Elation",
     "Ice","Lightning","Fire","Quantum","Imaginary","Wind","Physical",
 ]
 const possibleScalars = [

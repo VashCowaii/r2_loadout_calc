@@ -5626,7 +5626,7 @@ const turnLogic = {
                 if (!ATKObjects.yaoCertifiedElationADDEDATKOBJECT) {
                     // let values = ATKObjects.yaoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
-                    const tags = ["All","Quantum","Elation"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -39648,7 +39648,7 @@ const turnLogic = {
                 if (!sourceTurn.yaoCertifiedElationADDEDATKOBJECT) {
                     let values = ATKObjects.yaoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
-                    const tags = ["All",sourceTurn.element,"Elation"];
+                    const tags = ["All",sourceTurn.element];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -40126,7 +40126,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].elation;
                     const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     // const scalar = null;
-                    const tags = ["All","Elation","ElationSkill","Physical"];
+                    const tags = ["All","Physical"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -40860,7 +40860,7 @@ const turnLogic = {
                 if (!ATKObjects.sparxUltCertifiedElationADDEDATKOBJECT) {
                     let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
-                    const tags = ["All","Fire","Elation"];
+                    const tags = ["All","Fire"];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -41078,7 +41078,7 @@ const turnLogic = {
                 if (!ATKObjects.sparxEBACertifiedElationADDEDATKOBJECT) {
                     let values = ATKObjects.sparxTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
-                    const tags = ["All","Fire","Elation"];
+                    const tags = ["All","Fire"];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -41212,7 +41212,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].elation;
                     const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     // const scalar = null;
-                    const tags = ["All","Elation","ElationSkill","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -42008,7 +42008,7 @@ const turnLogic = {
                 if (!sourceTurn.emcCertifiedElationADDEDATKOBJECT) {
                     let values = ATKObjects.emcTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
-                    const tags = ["All","Lightning","Elation"];
+                    const tags = ["All","Lightning"];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -42237,7 +42237,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].elation;
                     const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     // const scalar = null;
-                    const tags = ["All","Elation","ElationSkill","Lightning"];
+                    const tags = ["All","Lightning"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -42869,7 +42869,7 @@ const turnLogic = {
                         isDistributed: true,
                     }
 
-                    const tags2 = ["All","Elation","Imaginary"];
+                    const tags2 = ["All","Imaginary"];
                     const realElationDMGKeys = keyShortcut(elationKeys,tags2);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags2);
                     // const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -43682,7 +43682,7 @@ const turnLogic = {
                 if (!ATKObjects.sw999TalentCertifiedElationADDEDATKOBJECT) {
                     let values = ATKObjects.sw999TalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
                     // const scalar = "ATK";
-                    const tags = ["All","Imaginary","Elation"];
+                    const tags = ["All","Imaginary"];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -43752,7 +43752,7 @@ const turnLogic = {
                         const values = ATKObjects.sw999ElationSkillREFVALUES2 ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
                         // const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                         // const scalar = null;
-                        const tags = ["All","Elation","ElationSkill","Imaginary"];
+                        const tags = ["All","Imaginary"];
                         const keyShortcut = basicShorthand.makeKeysArray;
                         const realElationDMGKeys = keyShortcut(elationKeys,tags);
                         const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
@@ -44220,7 +44220,7 @@ const turnLogic = {
                         let skillRef2 = ATKObjects.sw999BasicEnhREF ??= ATKObjects["Basic ATK"]["Bonus Stage: αWolf Instant"].variant1;
                         skillRef2.hitSplits = hitSplitters[ownerTurn.properName].basicEnh;
 
-                        const tags2 = ["All","Elation","Imaginary"];
+                        const tags2 = ["All","Imaginary"];
                         const realElationDMGKeys = keyShortcut(elationKeys,tags2);
                         const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags2);
                         // const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -44916,7 +44916,7 @@ const turnLogic = {
                 if (!ATKObjects.evaTalentCertifiedElationADDEDATKOBJECT) {
                     let values = ATKObjects.evaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                     // const scalar = "ATK";
-                    const tags = ["All","Physical","Elation"];
+                    const tags = ["All","Physical"];
                     const actionTags = ["All","Elation"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
@@ -45301,7 +45301,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].elation;
                     const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     // const scalar = null;
-                    const tags = ["All","Elation","ElationSkill","Physical"];
+                    const tags = ["All","Physical"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realElationDMGKeys = keyShortcut(elationKeys,tags);
                     const realMerryDMGKeys = keyShortcut(merryMakeKeys,tags);
