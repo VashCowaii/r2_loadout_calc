@@ -12,6 +12,7 @@ importScripts(
     "/HonkaiSR/Calculator/suffering5SuperGlobals.js",
     "/HonkaiSR/Calculator/suffering4Analytics.js",
     "/HonkaiSR/Calculator/suffering3Gear.js",
+    "/HonkaiSR/Calculator/suffering2Filters.js",
     "/HonkaiSR/Calculator/suffering2Char.js",
     "/HonkaiSR/Calculator/t_combos.js",
     "/HonkaiSR/Calculator/suffering1Sim.js",
