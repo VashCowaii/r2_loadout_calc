@@ -1034,6 +1034,7 @@ const conditionLibrary = {
         if (targetResult.length === 0) {return [];}//if we don't even have a primary target, wtf is the point
 
         const primaryTarget = targetResult[0];
+
         if (primaryTarget.isEnemy) {
             const enemyPositions = battleData.enemyPositions;
             if (enemyPositions.length === 1) {return [];}//if the primary target is the only target, then we have no subs
@@ -1050,6 +1051,8 @@ const conditionLibrary = {
             return returnArray;
         }
         else {
+            if (primaryTarget.isBackRowEntity) {return targetResult;}//entities like netherwing that are backrow can't be hit by blast nor can they propagate blast effects when primarily targeted
+
             const allyPositions = battleData.allyPositions;
             if (allyPositions.length === 1) {return [];}//if the primary target is the only target, then we have no subs
 
@@ -1057,10 +1060,22 @@ const conditionLibrary = {
             if (targetIndex === -1) {return [];}//if the target is somehow unselectable, that means it's not on field to HAVE blast targets, think like Netherwing
 
             let returnArray = [];
-            const subCheck1 = allyPositions[targetIndex - 1];
-            const subCheck2 = allyPositions[targetIndex + 1];
-            if (subCheck1) {returnArray.push(subCheck1)}
-            if (subCheck2) {returnArray.push(subCheck2)}
+
+            for (let i=targetIndex-1;i>=0;i--) {
+                const subCheck1 = allyPositions[i];
+                if (subCheck1 && !subCheck1.isBackRowEntity) {
+                    returnArray.push(subCheck1)
+                    break;
+                }
+            }
+
+            for (let i=targetIndex+1;i<allyPositions.length;i++) {
+                const subCheck2 = allyPositions[i];
+                if (subCheck2 && !subCheck2.isBackRowEntity) {
+                    returnArray.push(subCheck2)
+                    break;
+                }
+            }
 
             return returnArray;
         }
