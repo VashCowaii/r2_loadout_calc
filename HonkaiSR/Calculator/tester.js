@@ -1265,7 +1265,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">ATK</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsATK" value="${isEdit ? slotRef.stats[ATKBase] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsATK" value="${isEdit ? slotRef.stats.ATKBase : ""}"/>
                     </div>
                 </div>
             </div>
@@ -1274,7 +1274,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">SPD</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsSPD" value="${isEdit ? slotRef.stats[SPDBase] : ""}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsSPD" value="${isEdit ? slotRef.stats.SPDBase : ""}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
                     </div>
                 </div>
             </div>
@@ -1283,7 +1283,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">Effect RES</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats[EffectRES] : "0.30"}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats.EffectRES : "0.30"}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
                     </div>
                 </div>
             </div>
@@ -1292,7 +1292,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">Toughness</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsToughness" value="${isEdit ? slotRef.stats[Toughness] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsToughness" value="${isEdit ? slotRef.stats.Toughness : ""}"/>
                     </div>
                 </div>
             </div>
@@ -1301,7 +1301,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">HP</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsHP" value="${isEdit ? slotRef.stats[HPBase] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsHP" value="${isEdit ? slotRef.stats.HPBase : ""}"/>
                     </div>
                 </div>
             </div>
