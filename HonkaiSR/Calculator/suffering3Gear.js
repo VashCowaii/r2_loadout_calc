@@ -9445,6 +9445,158 @@ const turnLogicLightcones = {
             "defShred": "Life Should Be Cast to Flames (-DEF)",
         },
     },
+    "Before Dawn": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Before Dawn - passive application",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            let isValid = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "Ultimate" || tag === "Skill") {
+                                    isValid = true;
+                                    break;
+                                }
+                            }
+                            // if (!isValid) {return;}
+    
+                            if (!sourceTurn.lcBeforeDawnDMGSHEET) {
+                                let lcNameRef = "Before Dawn";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcBeforeDawnDMGSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcBeforeDawnDMGSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            if (isValid) {
+                                if (buffCheck) {return;}
+
+                                buffSheet.sourceOwner = sourceTurn.properName;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Before Dawn DMG check",
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcBeforeDawnSOMNUSSHEET) {
+                                const ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                const lcNameRef = "Before Dawn";
+                                const lcPathing = lightcones[lcNameRef].params;
+                                const rankParams = lcPathing[ownerRank-1];
+    
+                                sourceTurn.lcBeforeDawnSOMNUSSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["FUA"],
+                                }
+                            }
+                            
+                            const buffSheet = sourceTurn.lcBeforeDawnSOMNUSSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Before Dawn - FUA listener",
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            
+                            const buffName = this.buffName ??= turnLogicLightcones["Before Dawn"].buffNames.buff2;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Before Dawn - FUA Ended",
+                    },
+                ],
+            },
+        ],
+        "buffNames": {
+            "buff1": "Before Dawn (LC)",
+            "buff2": "Somnus Corpus (LC)",
+        },
+    },
 
     //ELATION
     //5star
