@@ -35918,7 +35918,7 @@ const turnLogic = {
                 if (!ATKObjects.netherStandardATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill;
                     const scalar = "HP";
-                    const tags = ["All","MemoSkill","Quantum"];
+                    const tags = ["All","Quantum"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -35964,7 +35964,7 @@ const turnLogic = {
 
                 if (!ATKObjects.netherStandardATKOBJECTEND) {
                     const scalar = "HP";
-                    const tags = ["All","MemoSkill","Quantum"];
+                    const tags = ["All","Quantum"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -36026,7 +36026,7 @@ const turnLogic = {
                 if (!ATKObjects.netherwingEnhancedAttackATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill2;
                     const scalar = "HP";
-                    const tags = ["All","MemoSkill","Quantum"];
+                    const tags = ["All","Quantum"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -36275,7 +36275,7 @@ const turnLogic = {
                     if (!ATKObjects.netherwingSuicideATKOBJECT) {
                         skillRef.hitSplits = hitSplitters[ownerTurn.properName].memoSkill3;
                         const scalar = "HP";
-                        const tags = ["All","MemoSkill","Quantum"];
+                        const tags = ["All","Quantum"];
                         const keyShortcut = basicShorthand.makeKeysArray;
                         const realDMGKeys = keyShortcut(dmgKeys,tags);
                         const realPENKeys = keyShortcut(resPENKeys,tags);
