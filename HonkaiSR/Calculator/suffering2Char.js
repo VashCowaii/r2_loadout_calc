@@ -4574,7 +4574,7 @@ const battleActions = {
             poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
             for (let i=0;i<timesToHeal;i++) {
                 for (let batchMember of batchArray) {
-                    if ((batchMember.cantBeHealed && !forceHeal) || !filterFunction(battleData,sourceTurn,batchMember)) {continue}
+                    if ((batchMember.cantBeHealed && !forceHeal) || (filterFunction && !filterFunction(battleData,sourceTurn,batchMember))) {continue}
                     healer(battleData,batchMember,skillSlot,percent,flat,generalInfo,isFixedHealing);
                 }
             }
