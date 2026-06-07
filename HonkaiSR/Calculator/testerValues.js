@@ -239,11 +239,12 @@ const customDisplayValuesLog = {
         },
         {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
             customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
         },
         {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2},
 
-        {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true},
-        {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true},
+        {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true,hide: true},
+        {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true,hide: true},
     ],
     "Hyacine": [
         {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true,

@@ -4613,6 +4613,7 @@ const userTriggers = {
                         const customValues = customDisplayValuesLog[turnRef.properName];
                         if (customValues) {
                             for (let entry of customValues) {
+                                if (entry.hide) {continue;}
                                 const valueActual = entry.isBattleValue ? turnRef.battleValues[entry.refName] : turnRef[entry.refName];
                                 let valueAdjusted = null;
                                 const typeOfValue = typeof valueActual;
@@ -4622,6 +4623,29 @@ const userTriggers = {
 
                                 if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
                                 if (entry.requiresEidolon && turnRef.rank < entry.requiresEidolon) {continue;}
+
+                                if (entry.displayRequiresIndex != undefined) {
+                                    const indexValue = customValues[entry.displayRequiresIndex];
+
+                                    const valueActual = indexValue.isBattleValue ? turnRef.battleValues[indexValue.refName] : turnRef[indexValue.refName];
+                                    let valueAdjusted = null;
+                                    const typeOfValue = typeof valueActual;
+
+                                    if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
+                                    else {valueAdjusted = valueActual;}
+
+                                    if (entry.displayRequiresType) {
+                                        const displayRequiresType = entry.displayRequiresType;
+                                        if (displayRequiresType === "boolean") {
+                                            const displayRequiresBoolean = entry.displayRequiresBoolean;
+                                            if (valueAdjusted !== displayRequiresBoolean) {continue;}
+                                        }
+                                    }
+                                    else if (valueAdjusted !== true) {continue;}
+                                }
+
+                                // {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
+                                //     isMemoSpriteDisplay: true,displayRequiresIndex
 
                                 if (entry.isMemoSpriteDisplay) {
                                     if (valueAdjusted == true) {
