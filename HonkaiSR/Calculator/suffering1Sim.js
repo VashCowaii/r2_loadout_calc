@@ -1326,6 +1326,7 @@ const sim = {
 
         const charLogic = turnLogic[charName];
         let isContinuousTurn = false;
+        let chainedAttackRef = null;
         while (!turnEnded && !battleData.battleIsOver) {
             if (!isContinuousTurn) {clearFUA(battleData);}
 
@@ -1380,13 +1381,15 @@ const sim = {
             // const typeEnd = designatedAction.eventTypeEnd;
 
             const isAbility = designatedAction.isAbility;
-            if (isAbility) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
-            actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
-            if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
-
+            if (isAbility && !isContinuousTurn) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
+            chainedAttackRef = actionCall(battleData,designatedAction.target,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
+            //right now netherwing is the only entity in the entire calc that is going to use chainedAttackRef as an actual ability param
+            //if this ever changes I might wanna go back and add it into every ability's overarching param list just to keep things uniform, but for now fuck it.
 
             const preCheckContinue = designatedAction.isContinuousTurn;
             isContinuousTurn = preCheckContinue;
+
+            if (isAbility && !isContinuousTurn) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
 
             if (!preCheckContinue) {
