@@ -5175,24 +5175,6 @@ const userTriggers = {
                     }
                     // DMGTotalEnd,DMGTotalAVG,DMGOverkill,averaged
                     else if (action.hitType && action.hitType === "DOT") {
-                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                        //     <div class="actionDetailBodyInner">${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[DOT] ${colorOpening}[${hitData.element}]${colorClose} - DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
-                        // </div>`;
-
-                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                            
-                        //     ${action.isBreakDOT ? `<img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIconPrefix"/>` : ""}
-                        //     <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconPrefix"/>
-                        //     <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
-                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                        //     <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                        //         <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
-                        //     </div>
-                        //     <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
-                        // </div>`;
-
-
 
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
                             
@@ -5206,6 +5188,7 @@ const userTriggers = {
                                     <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${hitSourceNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
+                            ${hitData.buffDisplayIcon ? `<img src="/HonkaiSR/${hitData.buffDisplayIcon}" class="characterDisplayLogStatIconCenter"/>` : ""}
                             <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconCenter"/>
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                                 ${action.target.toLowerCase().includes("enemy") ? `
@@ -5215,25 +5198,6 @@ const userTriggers = {
                             </div>
                             <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})</div>
                         </div>`;
-
-
-                        
-
-
-
-                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                        //     <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
-
-                            
-
-                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-
-                            // <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                            //     <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
-                            // </div>
-
-                        //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""} ${action.enemyIsDead ? "[KILL] " : ""} DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose} --> ${action.target}</div>
-                        // </div>`;
                     }
                     else {
                         // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>

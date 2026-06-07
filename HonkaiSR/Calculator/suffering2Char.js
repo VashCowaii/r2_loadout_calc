@@ -3438,6 +3438,7 @@ const battleActions = {
                 enemyIsDead,buffName:currentBuff.buffName,
                 playerData: logger ? JSON.stringify(sourceTurn) : null,
                 enemyData: logger ? JSON.stringify(targetTurn) : null,
+                buffDisplayIcon: currentBuff.buffDisplayIcon,
                 AV:battleData.sumAV
             }
             logToBattle(battleData,{logType: "HitEnemy", hitType: "DOT", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,sourceString:"",isBreakDOT});
@@ -12690,7 +12691,8 @@ const turnLogic = {
                             realPENKeys: keyShortcut(resPENKeys,tags),
                             realShredKeys: keyShortcut(defShredKeys,tags),
                             realVulnKeys: keyShortcut(vulnKeys,tags),
-                            actionNameOverride: "Zone DOT Proc"
+                            actionNameOverride: "Zone DOT Proc",
+                            "buffDisplayIcon": "misc/hysilens/Icon1410Dot_B.png"
                         }
                     }
                     const ultyPhysicalRef = this.ultyPhysicalRef;
@@ -12745,7 +12747,8 @@ const turnLogic = {
                             realPENKeys: keyShortcut(resPENKeys,tags),
                             realShredKeys: keyShortcut(defShredKeys,tags),
                             realVulnKeys: keyShortcut(vulnKeys,tags),
-                            actionNameOverride: "Zone DOT Proc"
+                            actionNameOverride: "Zone DOT Proc",
+                            "buffDisplayIcon": "misc/hysilens/Icon1410Dot_B.png"
                         }
                     }
                     const ultyPhysicalRef = this.ultyPhysicalRef;
@@ -13181,7 +13184,8 @@ const turnLogic = {
                         customTurnStartFunction: logicRef.skillFunctions.blackswanArcanaDOTTurnStart,
                         isSpecialDOTLast: true,
                         tags,actionTags,compositeCacheTag,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        "buffDisplayIcon": "misc/blackSwan/Icon1307Dot_B.png"
                     }
                 }
                 const arcanaSheet = ATKObjects.blackswanArcanaDOTSHEET;
