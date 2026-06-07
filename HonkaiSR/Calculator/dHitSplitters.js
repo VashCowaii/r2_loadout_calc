@@ -1593,6 +1593,158 @@ const hitSplitters = {
       }
     ],
   },
+  "Castorice": {
+    "basic": [
+      {
+        "primary": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "primary": {
+          "hitRatio": 0.8,
+          "energyRatio": 0.8,
+          "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "skill": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20
+        },
+        "blast": {
+          "hitRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "es": [
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true
+      },
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isMemo": true,
+        "isSourceFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "memoSkill": [
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "memoSkill2": [
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        }
+      },
+      {
+        "all": {
+          "hitRatio": 0.10,
+          "energyRatio": 0.10,
+          "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "memoSkill3": [],
+  },
 
   //PRESERVATION
   "Aventurine": {//DONE

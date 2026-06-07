@@ -1468,14 +1468,6 @@ const battleActions = {
             totalMulti: sumRES * sumDR * sumVULN * sumDEF,
         }
     },
-    
-    pullScalarSumOLD(table,targetStatsSourceBased,scalarTag) {//TODO: need to revisit this now with these changes
-        const base = scalarBaseKey[scalarTag];
-        const perc = scalarPercKey[scalarTag];
-        const flat = scalarFlatKey[scalarTag];
-        
-        return (table[base]) * (1 + table[perc]) + table[flat];
-    },
     scalarFamilyReferences: {
         "ATK": "UpdateStatATK",
         "DEF": "UpdateStatDEF",
@@ -1970,7 +1962,7 @@ const battleActions = {
         if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
         let scalarToUse = atkEntry.scalarOverride ?? scalar;
 
-        let multiOf = scalarAmountOverride ?? pullScalar(scalarToUse,cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//the stat that this attacks scales off of, so ATK or HP etc
+        let multiOf = scalarAmountOverride ?? pullScalar(scalarToUse,cacheTagValues,targetCache,realCacheTag,scalarSourceStats,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//the stat that this attacks scales off of, so ATK or HP etc
 
         
         // console.log(multiOf)
@@ -2020,8 +2012,8 @@ const battleActions = {
         //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
         let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
         
+        
         let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
-
         
         let DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
         // console.log(preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
@@ -4525,7 +4517,7 @@ const battleActions = {
         totals.actualHeal += actualHeal;
         totals.overHeal += overHeal;
     },
-    healAlly(battleData,healObject,targetTurn,sourceTurn,skillSlot,timesToHeal,batchArray,forceHeal) {
+    healAlly(battleData,healObject,targetTurn,sourceTurn,skillSlot,timesToHeal,batchArray,forceHeal,filterFunction) {
         const logger = battleData.isLoggyLogger;
         let totalHealed = 0;
 
@@ -4582,7 +4574,7 @@ const battleActions = {
             poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
             for (let i=0;i<timesToHeal;i++) {
                 for (let batchMember of batchArray) {
-                    if (batchMember.cantBeHealed && !forceHeal) {continue}
+                    if ((batchMember.cantBeHealed && !forceHeal) || !filterFunction(battleData,sourceTurn,batchMember)) {continue}
                     healer(battleData,batchMember,skillSlot,percent,flat,generalInfo,isFixedHealing);
                 }
             }
@@ -30408,7 +30400,6 @@ const turnLogic = {
 
                 const logicRef = turnLogic[sourceTurn.properName];
                 const charValuesRef = sourceTurn.battleValues;
-                // charValuesRef.netherRemainingTurns = 3;
 
                 sourceTurn.activeSummons += 1;
                 sourceTurn.activeMemosprites += 1;
@@ -33143,7 +33134,6 @@ const turnLogic = {
 
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
-                // charValuesRef.netherRemainingTurns = 3;
 
                 sourceTurn.activeSummons += 1;
                 sourceTurn.activeMemosprites += 1;
@@ -34536,7 +34526,6 @@ const turnLogic = {
                     }
                 }
                 const charValuesRef = sourceTurn.battleValues;
-                // charValuesRef.netherRemainingTurns = 3;
 
                 sourceTurn.activeSummons += 1;
                 sourceTurn.activeMemosprites += 1;
@@ -35661,6 +35650,1789 @@ const turnLogic = {
             // }
 
             // return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {},
+        "abilityTargetPools": {},
+        "skillFunctions": {},
+        "listeners": [],
+        "characterValues": {},
+        "buffNames": {},
+        "characterValuesBattle": {},
+    },
+    "Castorice": {
+        logic(thisTurn,battleData) {
+            // if (battleData.battleIsOver) {return {action: "EndTurn"}}
+            const shortRef = this;
+            let E1 = true;
+            let actionUsed = false;
+
+            let statCalls = thisTurn.battleValues;
+            const summonUp = statCalls.garmentIsActive
+            let shortCalls = shortRef.skillFunctions;
+
+            let currentSP = battleData.skillPointCurrent;
+            // let minimumPointsToStart = 4;
+            // let desiredCasts = 5;
+            // let maximumCasts = 5;
+            const minimum = currentSP>0;
+            // const isCombustion = statCalls.combustionActive;
+            // const rank = thisTurn.rank;
+            const netherTurn = thisTurn.castoriceNetheringTURNEVENT;
+            const isEnhanced = netherTurn.isActive;
+
+            // const skillToCall = isEnhanced ? shortCalls.castoriceSkillEnhanced : shortCalls.castoriceSkill
+            //     return {action: "Skill", points: 0, actionCall: skillToCall, target: "enemy"};
+            // // }
+
+            if (checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = isEnhanced ? this.returnSkillCallEnh : this.returnSkillCall;
+                return returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+            //default to basic atk when all else fails
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: 0, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.castoriceSkill, 
+                target: "self",
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            this.returnSkillCall.sourceTurn = thisTurn;
+            // this.returnSkillCall.target = battleData.allyPositions;
+
+            this.returnSkillCallEnh ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: 0, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.castoriceSkillEnhanced, 
+                target: "self",
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            this.returnSkillCallEnh.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.castoriceBasic, 
+                target: "enemy",
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Self",
+            "BasicATK": "Enemies (On-Field)",
+            "MemoSkill": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            castoriceBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.castoriceBasicREF ??= ATKObjects["Basic ATK"]["Lament, Nethersea's Ripple"].variant1;
+
+                if (!ATKObjects.castoriceBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.castoriceBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Quantum"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    ATKObjects.castoriceBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        energy: null,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.castoriceBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            castoriceSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.castoriceBasicREF ??= ATKObjects["Skill"]["Silence, Wraithfly's Caress"].variant1;
+                let values = ATKObjects.castoriceBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.castoriceSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    const scalar = "HP";
+                    const tags = ["All","Quantum"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.castoriceSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[1],
+                            blast: values[2],
+                            all: null,
+                        },
+                        scalar,
+                        energy: null,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.castoriceSkillATKOBJECT;
+
+                const allyPositions = battleData.allyPositions;
+                consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,values[0],allyPositions,sourceTurn,skillRef.slot,false,true)
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            castoriceSkillEnhanced(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.castoriceSkillEnhancedREF ??= ATKObjects["Skill"]["Boneclaw, Doomdrake's Embrace"].variant1;
+                let values = ATKObjects.castoriceSkillEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.castoriceSkillEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].es;
+                    const scalar = "HP";
+                    const tags = ["All","Quantum"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Skill","Attack","CasE1Ability"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    const actionTags2 = ["Skill","Attack","Summon","Memosprite","CasE1Ability"];
+                    const compositeCacheTag2 = tags + actionTags;
+                    ATKObjects.castoriceSkillEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    ATKObjects.castoriceSkillEnhancedNetherATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[2],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: rank>=6,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        scalarSourceOverride: sourceTurn.name,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2
+                    }
+                }
+                let ATKObject = ATKObjects.castoriceSkillEnhancedATKOBJECT;
+                let ATKObject2 = ATKObjects.castoriceSkillEnhancedNetherATKOBJECT;
+                const netherTurn = sourceTurn.castoriceNetheringTURNEVENT;
+
+                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                const allyPositions = battleData.allyPositions;
+                consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,values[0],allyPositions,sourceTurn,skillRef.slot,false,true)
+                battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,netherTurn,ATKObject,ATKObject2);
+
+
+                if (rank >= 2) {
+                    poke("CastoriceGainNewbud",battleData,{pointsGained: sourceTurn.specialEnergyMax * 0.30,sourceString:"E2: Crown on Wings of Bloom",forcedNewbuds: true});
+                }
+
+
+                // battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,sourceTurn,ATKObject,ATKObject2);
+            },
+            netherwingStandardAttack(battleData,target,memoTurn,chainedAttackRef) {
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.netherwingStandardAttackREF ??= ATKObjects["Memosprite Skill"]["Claw Splits the Veil"].variant1;
+                let values = ATKObjects.netherwingStandardAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.netherStandardATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill;
+                    const scalar = "HP";
+                    const tags = ["All","MemoSkill","Quantum"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    ATKObjects.netherStandardATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: sourceTurn.rank >= 6,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        scalarSourceOverride: sourceTurn.name,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.netherStandardATKOBJECT;
+
+                if (chainedAttackRef) {
+                    battleActions.attackWrapperChained(battleData,skillRef,memoTurn,ATKObject,"End",chainedAttackRef);
+                }
+                else {
+                    battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                }
+            },
+            netherWingWaveBreak(battleData,target,memoTurn,chainedAttackRef) {
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.netherwingENDAttackREF ??= ATKObjects["Memosprite Talent"]["Mooncocoon Shrouds the Form"].variant1;
+
+                if (!ATKObjects.netherStandardATKOBJECTEND) {
+                    const scalar = "HP";
+                    const tags = ["All","MemoSkill","Quantum"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    ATKObjects.netherStandardATKOBJECTEND = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: "Memosprite Skill",
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        scalarSourceOverride: sourceTurn.name,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.netherWaveBreakSPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: 1,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.netherWaveSPD,
+                        "durationInTurn": 2,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                }
+                let ATKObject = ATKObjects.netherStandardATKOBJECTEND;
+                battleActions.attackWrapperChained(battleData,skillRef,memoTurn,ATKObject,"End",chainedAttackRef);
+
+                const SPDSheet = ATKObjects.netherWaveBreakSPDSHEET;
+                updateBuff(battleData,memoTurn,SPDSheet);
+            },
+            netherwingEnhancedAttack(battleData,target,memoTurn,chainedAttackRef) {
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.netherwingEnhancedAttackREF ??= ATKObjects["Memosprite Skill"]["Breath Scorches the Shadow"].variant1;
+                let values = ATKObjects.netherwingEnhancedAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.netherwingEnhancedAttackATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill2;
+                    const scalar = "HP";
+                    const tags = ["All","MemoSkill","Quantum"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    if (skillRef.hitSplits.length) {skillRef.hitSplits.length = 0;}
+                    ATKObjects.netherwingEnhancedAttackATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        scalar,
+                        energy: null,
+                        DMGTags: tags,
+                        allToughness: rank>=6,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        scalarSourceOverride: sourceTurn.name,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: null,
+                    }
+                    ATKObjects.netherEnhancedMultipliers = {
+                        1: values[1],
+                        2: values[2],
+                        3: values[3]
+                    }
+                    ATKObjects.netherChainCastDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.30,
+                        "source": "Memo Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.netherChainDMG,
+                        "durationInTurn": 1,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 6,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                }
+                const ATKObject = ATKObjects.netherwingEnhancedAttackATKOBJECT;
+                const buffSheet = ATKObjects.netherChainCastDMGSHEET;
+                const multiRef = ATKObjects.netherEnhancedMultipliers;
+
+                const chainedAttack = battleActions.attackWrapperChained;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.skillCasts = Math.min(3, battleValues.skillCasts + 1);
+                battleValues.totalCasts += 1;
+                const skillCasts = battleValues.skillCasts;
+                
+                const multiValuesRef = ATKObject.multipliers;
+                multiValuesRef.all = multiRef[skillCasts];
+
+                const totalCasts = battleValues.totalCasts;
+                if (totalCasts <= 6) {updateBuff(battleData,memoTurn,buffSheet);}
+
+                if (!battleValues.ardentWillStacks) {
+                    consumeHP(battleData,null,values[0],memoTurn,memoTurn,skillRef.slot,false,false);
+                }
+                else {//this is for E2's ardent will stacks that subvert the HP drain
+                    battleValues.ardentWillStacks -= 1;
+                }
+                battleValues.netherShouldDie = memoTurn.currentHP <= 1;
+
+                attackState = skillCasts === 1 ? "Start" : "Middle";
+                const finalRef = chainedAttackRef = chainedAttack(battleData,skillRef,memoTurn,ATKObject,attackState,chainedAttackRef);
+
+                const enemyPositions = battleData.enemyPositions;
+                if (!enemyPositions.length) {
+                    battleValues.netherTurnShouldEnd = true;
+                }
+                else {
+                    let foundLivingEnemy = false;
+                    for (let enemy of enemyPositions) {
+                        const currentHP = enemy.currentHP;
+                        if (currentHP > 0) {
+                            foundLivingEnemy = true;
+                            break;
+                        }
+                    }
+                    if (!foundLivingEnemy) {
+                        battleValues.netherTurnShouldEnd = true;
+                    }
+                }
+
+                return finalRef;
+            },
+            castoriceTerritoryAlreadyActive(battleData,queueObject,sourceTurn) {
+                const alreadyActive = battleData.territoryActive;
+                if (alreadyActive) {
+                    sourceTurn.ultyQueued = false;
+                    return true;
+                }
+                else {return false;}
+            },
+            castoriceUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                const valuesRef = sourceTurn.battleValues;
+                let skillRef = ATKObjects.castoriceUltimateREF ??= ATKObjects.Ultimate["Doomshriek, Dawn's Chime"].variant1;
+                let values = ATKObjects.castoriceUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                // poke("CastoriceGainNewbud",battleData,{pointsGained: -sourceTurn.specialEnergyMax,sourceString:"Ult cast"});
+
+                logicRef.skillFunctions.addNetherwingToField(battleData,sourceTurn);
+                //unlike aggy, it's impossible for cas to get ulty energy while the summon is up (outside of e2)
+                //so rather than check to see if the summon is already up to heal it or not, we just always summon it
+
+                const netherTurn = sourceTurn.castoriceNetheringTURNEVENT;
+                if (ATKObjects.talentAnyAllyLostHPDMGSHEET) {
+                    const buffName = ATKObjects.talentAnyAllyLostHPDMGSHEET.buffName;
+                    const buffCheck = sourceTurn.buffsObject[buffName];
+                    if (buffCheck) {
+                        updateBuff(battleData,netherTurn,buffCheck);
+                    }
+                }
+                // energy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            addNetherwingToField(battleData,sourceTurn) {
+                const netherTurnObject = sourceTurn.castoriceNetheringTURNEVENT;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                netherTurnObject.currentHP = netherTurnObject.maxHP;//reset HP to full
+                netherTurnObject.isDead = false;
+                netherTurnObject.isActive = true;
+
+                netherTurnObject.AV = netherTurnObject.AVBase;//reset accumulated AV
+
+                //inserting into physical positions
+                const alliedSpots = battleData.allyPositions;
+                for (let i=0;i<alliedSpots.length;i++) {
+                    const currentTurn = alliedSpots[i];
+                    //look for aggy's position and put garment in AFTER her, slotwise, so if she's char1, garment is inserted between char1 and char2
+                    if (currentTurn.properName === sourceTurn.properName) {
+                        alliedSpots.splice(i+1,0,netherTurnObject);
+                        break;
+                    }
+                }
+
+                const charValuesRef = sourceTurn.battleValues;
+                charValuesRef.netherRemainingTurns = 3;
+                const rank = sourceTurn.rank;
+
+                sourceTurn.activeSummons += 1;
+                sourceTurn.activeMemosprites += 1;
+                battleData.backupHPOnField += 1;
+                battleData.territoryActive = true;
+                charValuesRef.netherIsActive = true;
+                charValuesRef.netherShouldDie = false;
+                charValuesRef.skillCasts = 0;
+                charValuesRef.totalCasts = 0;
+                charValuesRef.ardentWillStacks = rank >= 2 ? 2 : 0;
+
+                //inserting into the actual turn order
+                battleData.nextTurnAV.push(netherTurnObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: netherTurnObject.eventImage, AV: battleData.sumAV});}
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: netherTurnObject});
+                poke("AllyCreated",battleData,{targetTurn:netherTurnObject});
+                battleActions.assignAttackTargetsEnemy(battleData);
+
+                if (!ATKObjects.netherWasSummonedDMGSHEET) {
+                    const buffNames = logicRef.buffNames;
+                    // const buffName = logicRef.buffNames.netherSummonDMG;
+                    ATKObjects.netherWasSummonedDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.10,
+                        "source": netherTurnObject.properName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.netherSummonDMG,
+                        "durationInTurn": 4,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+
+                    let skillRef = ATKObjects.castoriceUltimateREF ??= ATKObjects.Ultimate["Doomshriek, Dawn's Chime"].variant1;
+                    let values = ATKObjects.castoriceUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    ATKObjects.castoriceUltimateTerritoryDEBUFFSHEET = {
+                        "stats": [ResistanceAll],
+                        [ResistanceAll]: -values[3],
+                        "statsOnHit": null,
+                        "source": netherTurnObject.properName,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.territoryName,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                    }
+                }
+                let buffSheet = ATKObjects.netherWasSummonedDMGSHEET;
+                const allyPositions = battleData.allyPositions;
+                for (let allyTurn of allyPositions) {
+                    updateBuff(battleData,allyTurn,buffSheet);
+                }
+
+                // backupHPOnField: 0,
+                // backupHPObject: {},
+
+
+                // territoryObject
+                // territoryObject: {buffsObject:{}},
+                const debuffSheet = ATKObjects.castoriceUltimateTerritoryDEBUFFSHEET;
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
+                
+
+                actionAdvance(1,netherTurnObject,battleData,"Netherwing summoned advance");
+                
+                const e2 = rank >= 2;
+                if (e2) {
+                    actionAdvance(1,sourceTurn,battleData,"E2 summoned advancement");
+                }
+            },
+            netherwingDeathFunction(battleData,target,deathTurn,chainedAttackRef) {
+                const ownerTurn = battleData.nameBasedTurns[deathTurn.eventOwner];
+
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                ownerTurn.battleValues.netherInLimbo = true;
+                if (!battleData.battleIsOver) {
+                    let skillRef = ATKObjects.netherwingSuicideAttackREF ??= ATKObjects["Memosprite Skill"]["Wings Sweep the Ruins"].variant1;
+
+                    if (!ATKObjects.netherwingSuicideATKOBJECT) {
+                        skillRef.hitSplits = hitSplitters[ownerTurn.properName].memoSkill3;
+                        const scalar = "HP";
+                        const tags = ["All","MemoSkill","Quantum"];
+                        const keyShortcut = basicShorthand.makeKeysArray;
+                        const realDMGKeys = keyShortcut(dmgKeys,tags);
+                        const realPENKeys = keyShortcut(resPENKeys,tags);
+                        const realShredKeys = keyShortcut(defShredKeys,tags);
+                        const realVulnKeys = keyShortcut(vulnKeys,tags);
+                        const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                        const compositeCacheTag = tags + actionTags + ownerTurn.properName;
+
+                        let values = ATKObjects.netherwingSuicideAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+    
+                        const rank = ownerTurn.rank;
+                        if (skillRef.hitSplits.length) {skillRef.hitSplits.length = 0;}
+                        ATKObjects.netherwingSuicideATKOBJECT = {
+                            multipliers: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar,
+                            DMGTags: tags,
+                            allToughness: rank>=6,
+                            slot: skillRef.slot,
+                            realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                            isFUA: false,
+                            scalarSourceOverride: ownerTurn.name,
+                            actionTags,
+                            compositeCacheTag,
+                            bounceData: {
+                                multi: values[0],
+                                bounceCount: rank>=6 ? 9 : 6,
+                                hitSplit: {
+                                    "primary": {
+                                        "hitRatio": 1,
+                                        "energyRatio": 1,
+                                        "toughness": 5
+                                    },
+                                    "blast": null,
+                                    "all": null,
+                                    "allEnemiesHit": null,
+                                    "unknownTypers": false
+                                },
+                            }
+                        }
+
+                        const actionTags2 = ["All","Heal"];
+                        ATKObjects.netherSuicideHealSHEET = {
+                            multipliers: {
+                                primary: values[2],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: values[3],
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "HP",
+                            DMGTags: [],
+                            actionTags: actionTags2,
+                            compositeCacheTag: actionTags2 + deathTurn.properName,
+                            allToughness: false,
+                            slot: skillRef.slot
+                        }
+                    }
+                    const suicideObject = ATKObjects.netherwingSuicideATKOBJECT;
+
+                    if (deathTurn.currentHP > 0) {
+                        consumeHP(battleData,null,deathTurn.currentHP,deathTurn,deathTurn,"Talent",false,false);
+                    }
+                    
+                    if (chainedAttackRef) {
+                        battleActions.attackWrapperChained(battleData,skillRef,deathTurn,suicideObject,"End",chainedAttackRef);
+                    }
+                    else {
+                        battleActions.attackWrapper(battleData,skillRef,deathTurn,suicideObject);
+                    }
+
+                    
+                    const healObject = ATKObjects.netherSuicideHealSHEET;
+                    battleActions.healAlly(battleData,healObject,null,deathTurn,skillRef.slot,1,battleData.allyPositions,false,presetTargetFilters.excludeSelf);
+                }
+                
+
+
+                deathTurn.currentHP = 0;//reset HP to full
+                deathTurn.isDead = true;
+                deathTurn.isActive = false;
+
+                ownerTurn.battleValues.netherIsActive = false;
+                ownerTurn.battleValues.netherDeathIsQueued = false;
+
+                //remove nether from the turn order
+                const eventName = deathTurn.properName;
+                const nextAV = battleData.nextTurnAV;
+                for (let i=0;i<nextAV.length;i++) {
+                    let deathTurn = nextAV[i];
+                    if (deathTurn.properName === eventName) {
+                        nextAV.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+                //removal from actual lineup positions
+                const positions = battleData.allyPositions;
+                for (let i=0;i<positions.length;i++) {
+                    let deathTurn = positions[i];
+                    if (deathTurn.properName === eventName) {
+                        positions.splice(i, 1);
+                        break;//we found the event to remove, so we need to obv remove it now
+                    }
+                }
+
+                
+                ownerTurn.activeSummons -= 1;
+                ownerTurn.activeMemosprites -= 1;
+                battleData.backupHPOnField -= 1;
+                battleData.territoryActive = false;
+
+                
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Remove", assignedTo: ownerTurn.properName, summonedBy: ownerTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: deathTurn.eventImage, AV: battleData.sumAV});}
+                const debuffSheet = ATKObjects.castoriceUltimateTerritoryDEBUFFSHEET;
+                const enemyPositions = battleData.enemyPositions;
+                for (let enemy of enemyPositions) {
+                    removeBuff(battleData,enemy,debuffSheet);
+                }
+
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Remove",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: deathTurn});
+                battleActions.assignAttackTargetsEnemy(battleData);
+                ownerTurn.battleValues.netherInLimbo = false;
+            },
+            talentSPDChecker(battleData,ownerTurn) {
+                const logicRef = turnLogic[ownerTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.castoriceInvertedTouchSPDSHEET) {
+                    const characterName = ownerTurn.properName;
+                    const logicRef = turnLogic[characterName];
+                    const buffNames = logicRef.buffNames;
+                    // let skillRef = ownerTurn.castoriceTalentREF ??= ownerTurn["Talent"]["Desolation Across Palms"].variant1;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    ATKObjects.castoriceInvertedTouchSPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: 0.40,
+                        "statsOnHit": null,
+                        "source": characterName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": buffNames.inverted,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const currentHP = ownerTurn.currentHP;
+                const maxHP = ownerTurn.maxHP;
+                const shouldGetBuff = currentHP >= (maxHP * 0.5);
+
+                let buffSheet = ATKObjects.castoriceInvertedTouchSPDSHEET;
+                const buffName = buffSheet.buffName;
+                const buffCheck = ownerTurn.buffsObject[buffName];
+                if (shouldGetBuff) {
+                    if (buffCheck) {return;}
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                }
+                else {
+                    if (buffCheck) {removeBuff(battleData,ownerTurn,buffSheet);}
+                    else {return;}
+                }
+            },
+            netherBackupHPHandling(battleData,memoTurn,dmgToDeal) {
+                const dmgPenalty = 5;
+                let leftoverDamage = 0;
+                const convertedDMG = dmgToDeal * dmgPenalty;
+                const oldHP = memoTurn.currentHP;
+                memoTurn.currentHP -= convertedDMG;
+                const remainingHP = memoTurn.currentHP;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Mooncocoon Shrouds the Form", bodyText: `Backup HP Drain --> ${memoTurn.properName}: ${oldHP.toLocaleString()} --> ${remainingHP.toLocaleString()}/${memoTurn.maxHP.toLocaleString()}`});}
+                if (remainingHP <= 0) {
+                    const ownerTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                    if (!ownerTurn.battleValues.netherDeathIsQueued) {
+                        poke("CastoriceKillNetherwing",battleData,null,null);
+                    }
+                    if (remainingHP < 0) {
+                        leftoverDamage = (-remainingHP)/dmgPenalty;
+                    }
+                    memoTurn.currentHP = 0;
+                }
+
+                return leftoverDamage
+            },
+            castoriceTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+
+                let skillRef = ATKObjects.casTechREF ??= ATKObjects.Technique["Wail, Death's Herald"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                logicRef.skillFunctions.addNetherwingToField(battleData,sourceTurn);
+                const netherTurnObject = sourceTurn.castoriceNetheringTURNEVENT;
+                netherTurnObject.currentHP = netherTurnObject.maxHP * 0.50;//technique summon brings him to 50%, otherwise all other summons are 100%
+            },
+            castoriceTechnique2(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+
+                let skillRef = ATKObjects.casTechREF ??= ATKObjects.Technique["Wail, Death's Herald"].variant1;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const allyPositions = battleData.allyPositions;
+                consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,0.40,allyPositions,sourceTurn,skillRef.slot,false,true);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+
+
+                    //talent inherents
+                    //battlestart newbud gen (no tech)
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    //alies(excluding nether) lost hp listener for DMG
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    //allies lost HP for newbud
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //trace contained dark tide
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //trace inverted torch
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                    //passivecall hp% checker
+                    const talentSPDChecker = this.talentSPDChecker ??= turnLogic[ownerTurn.properName].skillFunctions.talentSPDChecker
+                    talentSPDChecker(battleData,ownerTurn);
+
+                    //e2    //ardent will handling, already built into other shit
+
+                    //e4
+                    if (rank >= 4) {
+                        if (!this.castoriceE4HealingBonusSHEET) {
+                            let characterName = ownerTurn.properName;
+                            let buffName = turnLogic[characterName].buffNames.e4HealingBonus;
+                            this.castoriceE4HealingBonusSHEET = {
+                                "stats": [HealingIncoming],
+                                [HealingIncoming]: 0.20,
+                                "source": "E4",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": null,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                        }
+                        const buffSheet = this.castoriceE4HealingBonusSHEET;
+
+                        const allAlliesArray = battleData.allAlliesArray;
+                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                    }
+
+                    //e6
+                    if (rank >= 6) {
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [ResistanceQuantumPEN],
+                            [ResistanceQuantumPEN]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6resPEN,
+                            "durationInTurn": null,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+
+                        updateBuff(battleData,netherTurn,buffSheet);
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    if (rank >= 1) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        const listener8 = passiveListeners[7];
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,netherTurn);
+                    }
+
+                    //netherwing turn countdown
+                    const listener9 = passiveListeners[8];
+                    addListenerWithPriority(battleData,listener9,listener9.trigger,netherTurn);
+
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false);
+                },
+                "target": "self",
+                "listenerName": "Castorice Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+            
+                            let ownerTurn = this.ownerTurn;
+
+                            if (ownerTurn.battleValues.netherIsActive) {return;}
+                            //if the technique is used, that's the only way Netherwing could be active before the waveStart triggers could fire
+                            //and since you DO NOT get the starting 30% newbud if the tech was used, we skip that here if we detect nether ever being active
+
+                            const exoObject = this.exoObject ??= {pointsGained: ownerTurn.specialEnergyMax * 0.30,sourceString:"Battlestart 30% Newbud Gain",forcedNewbuds: true};
+                            poke("CastoriceGainNewbud",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Castorice battlestart newbud gen (No Technique)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            // if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+                            if (!ATKObjects.talentAnyAllyLostHPDMGSHEET) {
+                                const characterName = ownerTurn.properName;
+                                const buffNames = logicRef.buffNames;
+                                let skillRef = ATKObjects.castoriceTalentREF ??= ATKObjects["Talent"]["Desolation Across Palms"].variant1;
+                                let values = ATKObjects.castoriceTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                                ATKObjects.talentAnyAllyLostHPDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: values[1],
+                                    "source": characterName,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.talentDMG,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+
+                            let buffSheet = ATKObjects.talentAnyAllyLostHPDMGSHEET;
+                            // const buffName = buffSheet.buffName;
+                            // const buffCheck = ownerTurn.buffsObject[buffName];
+
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                            if (netherTurn.isActive) {
+                                updateBuff(battleData,netherTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Castorice talent dmg allied HP lost listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            // poke("HealEnd",battleData,turnMerge);
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+                            if (sourceTurn.properName === netherTurn.properName) {return;}
+        
+                            // const HPLost = Math.floor(generalInfo.HPLost);
+                            const HPLost = generalInfo.HPLost;
+                            const exoObject = this.exoObject ??= {pointsGained: HPLost,sourceString:"Ally lost HP"}
+                            exoObject.pointsGained = HPLost;
+
+                            poke("CastoriceGainNewbud",battleData,exoObject);
+                            // if (resultingConversion) {poke("CastoriceGainNewbud",battleData,{pointsGained: resultingConversion,sourceString:"Ally healed"});}
+                        },
+                        "target": "self",
+                        "listenerName": "Talent newbud generator - ally hp lost listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HealEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("HealEnd",battleData,turnMerge);
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.targetTurn;
+                            const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+                            if (sourceTurn.isEnemy || sourceTurn.properName === netherTurn.properName) {return;}
+                            // if (sourceTurn.properName === ownerTurn.properName) {return;}
+
+                            if (ownerTurn.battleValues.netherInLimbo) {return;}
+                            
+                            const maxConversion = ownerTurn.specialEnergyMax * 0.12;
+
+                            const trackers = ownerTurn.newbudTracker ??= {};
+                            const targetTurn = generalInfo.targetTurn;
+                            const currentTracker = trackers[targetTurn.properName] ??= {conversionAmount: 0};
+
+                            // // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal});
+                            const totalHealed = generalInfo.totalHealed;
+                            const oldAmount = currentTracker.conversionAmount;
+                            currentTracker.conversionAmount = Math.min(maxConversion,oldAmount + totalHealed);
+                            const diff = currentTracker.conversionAmount - oldAmount;
+
+                            
+                            if (diff > 0) {
+                                // console.log(diff,maxConversion,oldAmount,currentTracker)
+                                const exoObject = this.exoObject ??= {pointsGained: diff,sourceString:"Ally healed"};
+                                exoObject.pointsGained = diff;
+                                poke("CastoriceGainNewbud",battleData,exoObject);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Contained Dark Tide - Ally healing conversion listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const trackers = ownerTurn.newbudTracker;
+                            if (trackers) {
+                                for (let tracked in trackers) {
+                                    trackers[tracked].conversionAmount = 0;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Contained Dark Tide - Ally healing conversion reset (action taken)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const talentSPDChecker = this.talentSPDChecker ??= turnLogic[ownerTurn.properName].skillFunctions.talentSPDChecker;
+                            talentSPDChecker(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Inverted Torch HPcheck spd bonus (was damaged or healed)",
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {//cas version
+                            // let ownerRef = this.owners;
+                            const ownerTurn = this.ownerTurn;
+                            const netherTurnObject = ownerTurn.castoriceNetheringTURNEVENT;
+    
+                            const isSkill = generalInfo.slot === "Skill";
+                            //if it's not sourced from nether or cas, abort bc we don't care nor need to remove a buff
+                            
+                            const targetTurn = generalInfo.targetTurn;
+                            const HPRatio = targetTurn.currentHP / targetTurn.maxHP;
+                            const HPCheck50 = HPRatio <= 0.50;
+                            const HPCheck80 = HPRatio <= 0.80;
+                            const netherIsActive = netherTurnObject.isActive;
+    
+                            if (!this.E1FinalMulti50SHEET) {
+                                const characterName = ownerTurn.properName;
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const buffNames = logicRef.buffNames;
+                                this.E1FinalMulti80SHEET = {
+                                    "stats": null,
+                                    "multiplier": 1.2,
+                                    "source": "E1",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e1SmallBuff,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "isFinalMulti": true,
+                                    "actionTags": ["CasE1Ability"]
+                                }
+                                this.E1FinalMulti50SHEET = {
+                                    "stats": null,
+                                    "multiplier": 1.4,
+                                    "source": "E1",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e1BigBuff,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "isFinalMulti": true,
+                                    "actionTags": ["CasE1Ability"]
+                                }
+                            }
+    
+                            const buffBigger = this.E1FinalMulti50SHEET;
+                            const buffBiggerName = buffBigger.buffName;
+                            const buffSmaller = this.E1FinalMulti80SHEET;
+                            const buffSmallerName = buffSmaller.buffName;
+    
+                            const sourceBuffs = ownerTurn.buffsObject;
+                            const checkSmaller = sourceBuffs[buffSmallerName];
+                            const checkBigger = sourceBuffs[buffBiggerName];
+
+                            if (netherIsActive && isSkill) {
+                                if (!HPCheck80) {//if the enemy is higher than any E1 hp thresholds, remove any active buffs, and abort
+                                    if (checkSmaller) {removeBuff(battleData,ownerTurn,checkSmaller);}
+                                    if (checkBigger) {removeBuff(battleData,ownerTurn,checkBigger);}
+                                    return;
+                                }
+                                else {
+                                    if (!HPCheck50) {
+                                        //so if the enemy is between 50% and 80%HP, then that means we can apply the smallest buff if we don't have it yet
+                                        if (!checkSmaller) {updateBuff(battleData,ownerTurn,buffSmaller);}
+                                        ///but because we failed the 50% check, we can't stack both regardless, remove the bigger buff so only one final multi exists on the source
+                                        if (checkBigger) {removeBuff(battleData,ownerTurn,checkBigger);}
+                                    }
+                                    else {//we only reach this point if we pass the enemy 50% or lower check
+                                        //because we can't have overlapping multipliers, we need to remove the smallest buff if it exists
+                                        if (checkSmaller) {removeBuff(battleData,ownerTurn,checkSmaller);}
+                                        //and if we don't already have the biggest buff, then apply it
+                                        if (!checkBigger) {updateBuff(battleData,ownerTurn,buffBigger);}
+                                    }
+                                }
+                            }
+                            else {
+                                if (checkSmaller) {removeBuff(battleData,ownerTurn,checkSmaller);}
+                                if (checkBigger) {removeBuff(battleData,ownerTurn,buffBigger);}
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E1 CASTORICE Snowbound Maiden, Memory to Tomb - enemy HP evaluation for final dmg multi",
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            const netherTurnObject = this.ownerTurn;
+                            // const netherTurnObject = ownerTurn.castoriceNetheringTURNEVENT;
+                            const ownerTurn = battleData.nameBasedTurns[netherTurnObject.eventOwner];
+                            //if it's not sourced from nether or cas, abort bc we don't care nor need to remove a buff
+                            
+                            const targetTurn = generalInfo.targetTurn;
+                            const HPRatio = targetTurn.currentHP / targetTurn.maxHP;
+                            const HPCheck50 = HPRatio <= 0.50;
+                            const HPCheck80 = HPRatio <= 0.80;
+                            const netherIsActive = netherTurnObject.isActive;
+    
+                            if (!this.E1FinalMulti50SHEET) {
+                                const characterName = ownerTurn.properName;
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const buffNames = logicRef.buffNames;
+                                this.E1FinalMulti80SHEET = {
+                                    "stats": null,
+                                    "multiplier": 1.2,
+                                    "source": "E1",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e1SmallBuff,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "isFinalMulti": true,
+                                    "actionTags": ["CasE1Ability"]
+                                }
+                                this.E1FinalMulti50SHEET = {
+                                    "stats": null,
+                                    "multiplier": 1.4,
+                                    "source": "E1",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.e1BigBuff,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "isFinalMulti": true,
+                                    "actionTags": ["CasE1Ability"]
+                                }
+                            }
+    
+                            const buffBigger = this.E1FinalMulti50SHEET;
+                            const buffBiggerName = buffBigger.buffName;
+                            const buffSmaller = this.E1FinalMulti80SHEET;
+                            const buffSmallerName = buffSmaller.buffName;
+    
+                            const sourceBuffs = netherTurnObject.buffsObject;
+                            const checkSmaller = sourceBuffs[buffSmallerName];
+                            const checkBigger = sourceBuffs[buffBiggerName];
+                            
+                            // netherIsActive
+                            // HPCheck80
+                            if (!HPCheck80) {//if the enemy is higher than any E1 hp thresholds, remove any active buffs, and abort
+                                if (checkSmaller) {removeBuff(battleData,netherTurnObject,checkSmaller);}
+                                if (checkBigger) {removeBuff(battleData,netherTurnObject,checkBigger);}
+                                return;
+                            }
+                            else {//otherwise, at this point we are at a minimum getting the smallest buff
+                                if (!HPCheck50) {
+                                    //so if the enemy is between 50% and 80%HP, then that means we can apply the smallest buff if we don't have it yet
+                                    if (!checkSmaller) {updateBuff(battleData,netherTurnObject,buffSmaller);}
+                                    ///but because we failed the 50% check, we can't stack both regardless, remove the bigger buff so only one final multi exists on the source
+                                    if (checkBigger) {removeBuff(battleData,netherTurnObject,checkBigger);}
+                                }
+                                else {//we only reach this point if we pass the enemy 50% or lower check
+                                    //because we can't have overlapping multipliers, we need to remove the smallest buff if it exists
+                                    if (checkSmaller) {removeBuff(battleData,netherTurnObject,checkSmaller);}
+                                    //and if we don't already have the biggest buff, then apply it
+                                    if (!checkBigger) {updateBuff(battleData,netherTurnObject,buffBigger);}
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E1 NETHERWING Snowbound Maiden, Memory to Tomb - enemy HP evaluation for final dmg multi",
+                    },
+                    {
+                        "trigger": "StartTurn",
+                        condition(battleData,generalInfo) {
+                            let netherTurn = this.ownerTurn;
+                            const ownerTurn = battleData.nameBasedTurns[netherTurn.eventOwner];
+        
+                            const valuesRef = ownerTurn.battleValues;
+                            valuesRef.netherTurnShouldEnd = false;
+                            valuesRef.netherRemainingTurns -= 1;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Netherwing turn countdown",
+                    },
+                ],
+            },
+            {
+                "trigger": "CastoriceGainNewbud",
+                condition(battleData,generalInfo) {
+                    // poke("CastoriceGainNewbud",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const forcedNewbuds = generalInfo.forcedNewbuds;
+                    // ownerTurn.specialEnergyMax = (currentLevel ** 2) * 5.3125;
+                    // ownerTurn.specialEnergyCurrent = logicRef.useTechnique ? 0 : 0.30 * ownerTurn.specialEnergyMax;
+
+
+
+
+
+                    // const logicRef = turnLogic[ownerTurn.properName];
+                    const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+
+                    if (!netherTurn.isActive || forcedNewbuds) {
+                        const oldValue = ownerTurn.specialEnergyCurrent;
+                        const maxValue = ownerTurn.specialEnergyMax;
+                        ownerTurn.specialEnergyCurrent = Math.min(maxValue,ownerTurn.specialEnergyCurrent + pointsGained)
+                        const newbudFinal = ownerTurn.specialEnergyCurrent;
+                        const sourceString = generalInfo.sourceString;
+                        if (pointsGained && battleData.isLoggyLogger) {
+                            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Newbud (Castorice): ${oldValue.toLocaleString()} --> ${newbudFinal.toLocaleString()}/${maxValue.toLocaleString()} [${sourceString}]`});
+
+                                // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Newbud (Castorice): ${oldValue.toLocaleString()} --> ${newbudFinal.toLocaleString()}/${maxValue.toLocaleString()} [${sourceString}]`});
+                            
+                            if (pointsGained > 0) {
+                                ownerTurn.castoriceNewbudGainedSum ??= 0;
+                                ownerTurn.castoriceNewbudGainedSum += newbudFinal - oldValue;
+                                
+                            }
+                            logToBattle(battleData,{
+                                logType: "SUMMARY:SUM",
+                                function: "castoriceNewbudGainedSum",
+                                AV: battleData.sumAV,
+                                currentValue: newbudFinal,
+                                currentSumValue: ownerTurn.castoriceNewbudGainedSum,
+                                currentAddedValue: newbudFinal - oldValue
+                            });
+                        }
+                        if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                    }
+                    else {
+                        const healObject = this.newbudNetherwingHEALOBJECT ??= {
+                            multipliers: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: 0,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: null,
+                            DMGTags: [],
+                            actionTags: ["All","Heal"],
+                            compositeCacheTag: ["All","Heal"] + netherTurn.properName,//I just don't wanna define the action tags here as an external array bc why do that here really
+                            allToughness: false,
+                            slot: "Talent",
+                            isFixedHealing: true,
+                        }
+
+
+                        if (pointsGained<0) {return;}
+                        healObject.flatAmounts.primary = pointsGained;
+                        // battleActions.healed(battleData,netherTurn,null,null,pointsGained,{sourceTurn:netherTurn,scalar:null,totals:battleData.battleTotal},true);
+                        battleActions.healAlly(battleData,healObject,netherTurn,netherTurn,"Netherwing",1,null,true);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Newbud Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CastoriceKillNetherwing",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    ownerTurn.battleValues.netherDeathIsQueued = true;
+
+                    const queueObject = this.queueObject ??= {
+                        name: "Netherwing Queued Suicide",
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedNetherwingSuicide",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.netherwingDeathFunction,
+                        action: "MemoSkill",
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+                        
+                        isEnhanced: true,
+                        isTieBreaker: false,
+                        isInserted: true,
+                        isExtraTurn: false,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "MemoSkillStart",
+                        // eventTypeStart: "ExtraTurnStart",
+                        // eventTypeEnd: "ExtraTurnEnd",
+
+                        properName: ownerTurn.properName,
+                        sourceTurn: null,
+                        // eventOverrideImage: "misc/evanescia/labubu.png",
+
+                        target: "enemy",
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.MemoSkill,
+                        
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+                    queueExtraTurn(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Netherwing HP Backup Drained, Queued Suicide",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const rank = ownerTurn.rank;
+                    const charValuesRef = ownerTurn.battleValues;
+                    const buffNames = logicRef.buffNames;
+
+
+                    const currentLevel = ownerTurn.statTable[LVL];
+                    ownerTurn.specialEnergy = true;
+                    ownerTurn.specialEnergyMax = (currentLevel ** 2) * 5.3125;
+                    ownerTurn.specialEnergyCurrent = 0;
+                    // ownerTurn.specialEnergyOverflowLimit = 240;
+                    charValuesRef.specialEnergyCurrentName = "newbudCurrent";
+                    charValuesRef.specialEnergyMaxName = "newbudMax";
+
+                    const casMenuStats = [...battleData.menuStats[ownerTurn.name]];
+                    let skillRef = ATKObjects.castoriceUltimateREF ??= ATKObjects["Ultimate"]["Doomshriek, Dawn's Chime"].variant1;
+                    let values = ATKObjects.castoriceUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    const SPDScalar = values[0];
+                    const HPScalar = values[2];
+                    // const flatHP = values[5];
+                    Object.assign(casMenuStats,{
+                        [SPDBase]: SPDScalar,
+                        [SPDFlat]: 0,
+                        [SPDP]: 0,
+
+                        [HPOverride]: ownerTurn.specialEnergyMax * HPScalar,
+                        [HPBase]: 0,
+                        [HPFlat]: 0,
+                        [HPP]: 0,
+                        [LVL]: 80,
+
+                        [CharacterAggroBase]: characters[ownerTurn.properName]?.baseSummonInfo?.BaseAggro ?? 0,
+                    });
+
+                    let AggroStats = calcs.getAggroFinal(casMenuStats);
+                    let SPDStats = calcs.getSPDFinal(casMenuStats);
+                    let HPStats = calcs.getHPFinal(casMenuStats);
+                    const skillFunctionsRef = logicRef.skillFunctions;
+                    const netherwingTurnLogic = skillFunctionsRef.netherwingTurnLogic;
+                    const ActionEntry = {
+                        AV:SPDStats.SPDActionValue,
+                        AVBase:SPDStats.SPDActionValue,
+                        SPD:SPDStats.SPDFinal,
+
+                        currentHP: HPStats.HPFinal,
+                        maxHP: HPStats.HPFinal,
+
+                        currentAggro: AggroStats.AggroFinal,
+                        baseAggro: AggroStats.AggroBaseFinal,
+
+                        maxEnergy: ownerTurn.maxEnergy,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        debuffCounter: 0,
+                        DOTCounter: 0,
+                        activeFinalMultipliers: {},
+                        finalMultiCounter: 0,
+                        shieldCounter: 0,
+                        shieldValueCurrent: 0,
+                        shieldValueMax: 0,
+                        activeShields: {},
+
+                        properName: "Netherwing: Pollux",
+                        name: "castoriceMemosprite",
+                        
+                        statTable: casMenuStats,
+                        buffsObject: {},
+                        teamDebuffs: {},
+                        buffsStartTurn: [],
+                        buffsEndTurn: [],
+                        tagSpecific: {},
+                        cacheTagValues: superGlobal.createEntityCache(),
+                        isDead: false,
+                        rank: ownerTurn.rank,
+                        element: ownerTurn.element,
+                        path: null,
+                        isUnselectable: false,
+                        isUnselectableToEnemies: true,
+                        isBackRowEntity: true,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isMemosprite: true,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: netherwingTurnLogic,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Netherwing: Pollux"],
+                        deathFunction: skillFunctionsRef.netherwingDeathFunction,
+                        deathParam: null,
+                        backupHPFunction: skillFunctionsRef.netherBackupHPHandling
+                    };
+                    battleData.nameIndex["Netherwing: Pollux"] = "castoriceMemosprite";
+                    
+
+                    // summaryTurns[properName] = 0;
+                    battleData.nameBasedTurns["castoriceMemosprite"] = ActionEntry;
+                    battleData.backupHPObject["Netherwing: Pollux"] = ActionEntry;
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.allAlliesArray.push(ActionEntry);
+                    battleData.allAllyTargetsArray.push(ActionEntry);
+                    ownerTurn.castoriceNetheringTURNEVENT = ActionEntry;
+                    ownerTurn.summonEventRef = "castoriceNetheringTURNEVENT";
+                    ownerTurn.memospriteEventRef = "castoriceNetheringTURNEVENT";
+                    
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Netherwing creation", bodyText: `Memosprite "${ActionEntry.properName}" entity constructed`});}
+                },
+                "target": "self",
+                "listenerName": "Castorice Netherwing turn construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+                    let energyCheck = ownerTurn.specialEnergyCurrent === ownerTurn.specialEnergyMax;
+                    const noTerritoryActive = !battleData.territoryActive;
+
+                    let otherObscureCondition = !netherTurn.isActive && energyCheck && noTerritoryActive && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.castoriceUltimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.specialEnergyMax,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            specialEnergyPoke: "CastoriceGainNewbud",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            abortCheck: turnLogic[ownerTurn.properName].skillFunctions.castoriceTerritoryAlreadyActive,
+
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Castorice - Ultimate queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+                    const netherTurnObject = ownerTurn.castoriceNetheringTURNEVENT;
+
+                    if (!netherTurnObject || !netherTurnObject.isActive) {return;}
+                    //first check is only needed in case this triggers on enemy creation in the battle prep phase
+                    //the territory debuff only applies to enemies when netherwing EXISTS
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const enemyTurn = generalInfo.slotRef;
+                    const debuffSheet = ATKObjects.castoriceUltimateTerritoryDEBUFFSHEET;
+                    updateBuff(battleData,enemyTurn,debuffSheet);
+                },
+                "target": "self",
+                "listenerName": "Territory - enemy added to field listener",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "PreBattleSettings",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.castoriceTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "listenerName": "Castorice Technique Summon",
+            "ownerTurn": {},
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.castoriceTechnique2;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -81,
+            "listenerName": "Castorice Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "specialEnergyCurrentName": null,
+            "specialEnergyMaxName": null,
+            "netherIsActive": false,
+            "netherRemainingTurns": 3,
+            "ardentWillStacks": 0,
+
+            "netherTurnShouldEnd": false,
+            "netherShouldDie": false,
+            "skillCasts": 0,
+            "totalCasts": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "talentDMG": "Desolation Across Palms",
+            "inverted": "Inverted Torch",
+            "netherWaveSPD": "Inverted Torch (Wave Reset)",
+            "netherSummonDMG": "Roar Rumbles the Realm",
+            "territoryName": "Lost Netherland",
+            "e1BigBuff": "E1: Snowbound Maiden, Memory to Tomb (<=50)",
+            "e1SmallBuff": "E1: Snowbound Maiden, Memory to Tomb (<=80)",
+            "netherChainDMG": "Where The West Wind Dwells",
+            "e4HealingBonus": "E4: Rest in Songs of Gloom",
+            "e6resPEN": "E6: Await for Years to Loom",
+        },
+        "characterValuesBattle": {},
+    },
+    "Netherwing: Pollux": {
+        logic(thisTurn,battleData) {
+
+            const casTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
+            const battleValues = casTurn.battleValues;
+
+            const netherRemainingTurns = battleValues.netherRemainingTurns;
+            const netherTurnShouldEnd = battleValues.netherTurnShouldEnd;
+
+            const netherShouldDie = battleValues.netherShouldDie;
+            if (netherShouldDie) {
+                //suicide call here
+                const returnNetherSuicide = this.returnNetherSuicide ??= {
+                    action: "MemoSkill", 
+                    isAttack: true,
+                    isAbility: true,
+                    isEnhanced: false,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    // eventTypeStart: "BasicATKStart",
+                    // eventTypeEnd: "BasicATKEnd",
+                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingDeathFunction, 
+                    target: null,
+                    poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
+                }
+                returnNetherSuicide.sourceTurn = thisTurn;
+                return returnNetherSuicide;
+            }
+            else if (netherTurnShouldEnd) {
+                const waveEndBreak = this.waveEndBreak ??= {
+                    action: "MemoSkill", 
+                    isAttack: true,
+                    isAbility: true,
+                    isEnhanced: false,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    // eventTypeStart: "BasicATKStart",
+                    // eventTypeEnd: "BasicATKEnd",
+                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherWingWaveBreak, 
+                    target: null,
+                    poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
+                }
+                waveEndBreak.sourceTurn = thisTurn;
+                return waveEndBreak;
+            }
+            else if (netherRemainingTurns === 0 || checkSkill(battleData,casTurn,"MemoSkillEnh")) {
+                //force enh memoskill if 0 turns left
+                const returnSkillCall = this.returnSkillCall ??= {
+                    action: "MemoSkill", 
+                    isAttack: true,
+                    isAbility: true,
+                    isEnhanced: true,
+                    points: 0, 
+                    properName: thisTurn.properName,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+                    isContinuousTurn: true,
+                    // eventTypeStart: "SkillStart",
+                    // eventTypeEnd: "SkillEnd",
+                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingEnhancedAttack, 
+                    target: "self",
+                    poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
+                }
+                returnSkillCall.sourceTurn = thisTurn;
+                return returnSkillCall;
+            }
+
+            //default to reg memoskill
+            const returnBasicEnhCall = this.returnBasicEnhCall ??= {
+                action: "MemoSkill", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: false,
+                points: 0, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "MemoSkillStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingStandardAttack, 
+                target: null,
+                poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
+            }
+            returnBasicEnhCall.sourceTurn = thisTurn;
+            return returnBasicEnhCall;
         },
         preLogic(thisTurn,battleData) {},
         "abilityTargetPools": {},
