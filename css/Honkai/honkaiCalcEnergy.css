@@ -173,6 +173,9 @@
     overflow: hidden;
     margin-left: -37px;
 }
+.customEnergyMemoBoxImageBox:hover {
+    opacity: 0.5;
+}
 .customEnergyMemoBoxImageBoxMemoDead {
     background-color: rgba(46, 46, 46, 0.575);
     margin-left: 10px;

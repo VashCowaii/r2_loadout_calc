@@ -1572,7 +1572,7 @@ const customMenu = {
 
         // copyToClipboard
     },
-    createCharacterStatScreenBattleLogged(actionIndex) {
+    createCharacterStatScreenBattleLogged(actionIndex,isMemoInspect) {
         // globalRecords.battleData
 
         // battleData.battleLog.push({logType: "HitEnemy", hitType: "Single Target", target: enemyPrimary.properName, source:charName, hitData});
@@ -1825,6 +1825,12 @@ const customMenu = {
         // console.log(actionIndex,currentAction)
         if (currentAction.logType === "StartTurn") {
             let playerData = JSON.parse(currentAction.turnRef);
+            if (isMemoInspect) {
+                const memoKey = playerData.memospriteEventRef;
+                const memoTurn = playerData[memoKey];
+                playerData = memoTurn;
+            }
+
             readSelection("customMenuSearchTitle").innerHTML = "Turn Start";
 
             let sourceString = getStatsAndBuffsDisplay(playerData,playerData.properName);
@@ -4661,8 +4667,8 @@ const userTriggers = {
                                             <div class="memoHPBar">
                                                 <div class="memoHPShutter" style="transform:translate(000px,0%) rotate(${rotation}deg) translate(100px,0%);"></div>
                                             </div>
-                                            <div class="customEnergyMemoBoxImageBox">
-                                                <img src="/HonkaiSR/${memoTurn.eventImage}" class="customEnergyMemoBoxImage"/>
+                                            <div class="customEnergyMemoBoxImageBox clickable">
+                                                <img src="/HonkaiSR/${memoTurn.eventImage}" class="customEnergyMemoBoxImage" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
                                             </div>
                                         </div>`
                                     }
