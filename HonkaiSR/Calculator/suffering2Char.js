@@ -15333,7 +15333,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.bladeSkillFUAATKOBJECT;
                 consumeHP(battleData,null,values[3],sourceTurn,sourceTurn,skillRef.slot,false,false);
 
-                poke("mortenaxBladeGainCharge",battleData,{pointsGained: sourceTurn.battleValues.chargeMax,sourceString:"Mortenax Blade FUA Launched"});
+                poke("mortenaxBladeGainCharge",battleData,{pointsGained: -sourceTurn.battleValues.chargeMax,sourceString:"Mortenax Blade FUA Launched"});
                 updateEnergy(battleData,25,sourceTurn,false,"Mortenax Blade FUA Launched");
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
