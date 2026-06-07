@@ -33727,7 +33727,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
 
-                            if (!sourceTurn.isMemosprite || sourceTurn.properName != ownerTurn.properName) {return}
+                            if (sourceTurn.isEnemy || !sourceTurn.isMemosprite || (!sourceTurn.isMemosprite && sourceTurn.properName != ownerTurn.properName)) {return}
 
                             const energyToRegen = 5;
         
