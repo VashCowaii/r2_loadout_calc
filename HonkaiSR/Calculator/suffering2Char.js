@@ -36035,7 +36035,6 @@ const turnLogic = {
                     const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
-                    if (skillRef.hitSplits.length) {skillRef.hitSplits.length = 0;}
                     ATKObjects.netherwingEnhancedAttackATKOBJECT = {
                         multipliers: {
                             primary: null,
