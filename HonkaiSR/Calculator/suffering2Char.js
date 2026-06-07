@@ -23253,7 +23253,7 @@ const turnLogic = {
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.concertoExpired,
-                    eventImage: "icon/skill/1309_ultimate1.png",
+                    eventImage: "misc/robin/BattleEvent_1309_A.png",
                 };
                 nextAV.push(ActionEntry);
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Robin Ultimate", bodyText: `Robin was removed from the turn order`});}
@@ -28677,7 +28677,7 @@ const turnLogic = {
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.combustionExpired,
-                    eventImage: "icon/skill/1310_ultimate1.png",
+                    eventImage: "misc/firefly/BattleEvent_1310_02.png",
                 };
                 battleData.nextTurnAV.push(ActionEntry);
                 sourceTurn.ultyQueued = false;
@@ -31812,7 +31812,7 @@ const turnLogic = {
                     isUniqueEvent: true,
                     eventOwner: sourceTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
                     uniqueEventFunction: logicRef.skillFunctions.supremeStanceExpired,
-                    eventImage: "icon/skill/1402_ultimate.png",
+                    eventImage: "misc/aglaea/BattleEvent_1402.png",
                 };
 
                 if (ActionEntry.isActive) {
