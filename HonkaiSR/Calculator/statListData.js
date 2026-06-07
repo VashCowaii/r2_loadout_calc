@@ -1048,7 +1048,7 @@ const propertyImagePaths = {
         }
     },
     "PEN": {
-        "icon": noIconPath,
+        "icon": "/HonkaiSR/misc/IconBuffDamagePenetrateElement.png",
         "sets": {
             [greatTableIndex["ResistanceAllPEN"]]: {
                 "display": "All RES PEN",
@@ -1069,7 +1069,7 @@ const propertyImagePaths = {
     },
 
     "Vulnerable": {
-        "icon": noIconPath,
+        "icon": "/HonkaiSR/misc/IconDeBuffDamageTakenRatio.png",
         "sets": {
             [greatTableIndex["VulnAll"]]: {
                 "display": "All Vuln",
