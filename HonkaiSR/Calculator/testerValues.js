@@ -240,6 +240,10 @@ const customDisplayValuesLog = {
         {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
             customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
         },
+        {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2},
+
+        {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true},
+        {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true},
     ],
     "Hyacine": [
         {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true,
@@ -1464,8 +1468,8 @@ const defaultConditions = {
         
         return result
     },
-    getSkillCondition(battleData,sourceTurn) { 
-        const conditionPath = battleData[sourceTurn.name]?.Skill;
+    getSkillCondition(battleData,sourceTurn,slotOverride) {
+        const conditionPath = battleData[sourceTurn.name]?.[slotOverride ?? "Skill"];
         // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
         if (!conditionPath) {return true}//if someone doesn't have an ulty condition, then default to true so this doesn't prevent an ult
 
