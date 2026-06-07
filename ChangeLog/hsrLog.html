@@ -18,14 +18,19 @@
         </li>
         <li>Added a visual distinction when inspecting entities anywhere, to separate buffs/other vs debuffs in their own expandable menus.</li>
         <li>Buff expand will now hide on an entity inspection if the entity has no buffs to display, instead of showing an expand only to expand it and show nothing lol. This also goes for the new debuff display.</li>
+        <li>Added a character icon display next to source-specific buffs to display after the action tag of the related buff, to help illustrate it is a bonus specifically for that entity and their actions against that target</li>
         <!-- <li>Added the following new characters:
             <ul>
                 <li>Castorice</li>
             </ul>
         </li> -->
 
-        <!-- <h4>Fixes</h4>
-        <li></li> -->
+        <h4>Fixes</h4>
+        <li>Fixed an issue where source-specific bonuses(like Whereabouts Dreams Should Rest) weren't displaying on entity stat table inspections due to the recent rework to how source-specific bonuses are handld internally.
+            <ul>
+                <li>Note: they still displayed the buff/debuff application on the target, it just didn't show in the summary tables.</li>
+            </ul>
+        </li>
 
         <!-- <h4>Optimization</h4>
         <li>Converted Saber's energy overflow listener to a personal listener, so she's not trying to listen to everyone's energy changes and THEN determine if they're hers or not.</li> -->

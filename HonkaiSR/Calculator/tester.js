@@ -1698,7 +1698,7 @@ const customMenu = {
                     // if (!currentBuff.actionTags) {buffStringer += `<div class="actionDetailBody">Regular Stats:</div>`;}
                     
                     if (currentBuff.actionTags) {
-                        let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}`
+                        let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}${currentBuff.isSourceSpecific ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}`
 
                         taggerString += `</div>`
                         buffStringer += taggerString;
@@ -1709,15 +1709,6 @@ const customMenu = {
                         adjustedStatsObject[statEntry] = currentBuff[statEntry];
                     }
                     buffStringer += customHTML.createAlternatingStatRows(currentBuff.stats,adjustedStatsObject,null,null,true);
-                }
-                if (currentBuff.statsOnHit) {
-                    buffStringer += `<div class="actionDetailBody">On-Hit Stats:</div>`
-                    // let displayOrder = Object.keys(currentBuff.statsOnHit);
-                    let adjustedStatsObject = {};
-                    for (let statEntry of currentBuff.statsOnHit) {
-                        adjustedStatsObject[statEntry] = currentBuff[statEntry];
-                    }
-                    buffStringer += customHTML.createAlternatingStatRows(currentBuff.statsOnHit,adjustedStatsObject,null,null,true);
                 }
                 if (currentBuff.isFinalMulti) {
                     if (currentBuff.actionTags) {
@@ -1767,38 +1758,28 @@ const customMenu = {
             playerStatStringer += customHTML.createAlternatingStatRows(greatIndexArrayOrder,turnData.statTable,null,null,true);
             playerStatStringer += `</details>`;
 
-            playerStatStringerONHIT = "";
-            if (turnData.statTableONHIT) {
-                playerStatStringerONHIT = `
-                    <details class="actionDetailBodyDetailExpand">
-                        <summary class="actionDetailBodyDetailExpandHeader clickable">Stat Totals (ON-HIT)</summary>
-                        <div class="actionDetailBody">On-Hit bonuses can apply to DMG when attacking enemies, but do not actually apply to the character.</div>
-                    `;
-                let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,turnData.statTableONHIT,null,null,true);
-                playerStatStringerONHIT += testString;
-                playerStatStringerONHIT += `</details>`;
-                if (testString === "") {playerStatStringerONHIT = "";}
-                // console.log(playerStatStringerONHIT)
-            }
-
-            const taggers = turnData.tagSpecific;
-            let tagSpecificStringer = "";
-            if (Object.keys(taggers).length) {
-                for (let actionTag of Object.keys(taggers)) {
-                    const currentTable = taggers[actionTag];
-                    newTagString = `
-                    <details class="actionDetailBodyDetailExpand">
-                        <summary class="actionDetailBodyDetailExpandHeader clickable">Action-Based: ${actionTag}</summary>
-                        <div class="actionDetailBody">Action-based bonuses exist outside the character stat sheet, and apply only to their specifc action types.</div>
-                    `;
-                    let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,currentTable,null,null,true);
-                    newTagString += testString;
-                    newTagString += `</details>`;
-                    if (testString === "") {newTagString = "";}
-                    tagSpecificStringer += newTagString;
+            function getActionBasedTagStats(taggers) {
+                let tagSpecificStringer = "";
+                if (Object.keys(taggers).length) {
+                    for (let actionTag of Object.keys(taggers)) {
+                        const currentTable = taggers[actionTag];
+                        newTagString = `
+                        <details class="actionDetailBodyDetailExpand">
+                            <summary class="actionDetailBodyDetailExpandHeader clickable">Action-Based: ${actionTag}</summary>
+                            <div class="actionDetailBody">Action-based bonuses exist outside the character stat sheet, and apply only to their specifc action types.</div>
+                        `;
+                        let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,currentTable,null,null,true);
+                        newTagString += testString;
+                        newTagString += `</details>`;
+                        if (testString === "") {newTagString = "";}
+                        tagSpecificStringer += newTagString;
+                    }
                 }
+                return tagSpecificStringer;
             }
 
+            let tagSpecificStringer = getActionBasedTagStats(turnData.tagSpecific);
+            
 
             let characterSpecificStringer = "";
             for (let enemy in battleData.enemyBasedTurns) {
@@ -1812,11 +1793,10 @@ const customMenu = {
                             <summary class="actionDetailBodyDetailExpandHeader clickable">Target-Based: ${enemyName}</summary>
                             <div class="actionDetailBody">Target specific bonuses are bonuses that only take effect when the target of an attack/heal is the target listed above.</div>
                         `;
-                    let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,refChecker,null,null,true);
+                    let testString = getActionBasedTagStats(refChecker);
                     newStringer += testString;
                     newStringer += `</details>`;
                     if (testString === "") {newStringer = "";}
-                    // console.log(playerStatStringerONHIT)
                 }
                 characterSpecificStringer += newStringer;
             }
@@ -1831,16 +1811,15 @@ const customMenu = {
                             <summary class="actionDetailBodyDetailExpandHeader clickable">Source-Based: ${allyName}</summary>
                             <div class="actionDetailBody">Source-specific bonuses are bonuses that only take effect when the source of an attack/heal is the name listed above.</div>
                         `;
-                    let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,refChecker,null,null,true);
+                    let testString = getActionBasedTagStats(refChecker);
                     newStringer += testString;
                     newStringer += `</details>`;
                     if (testString === "") {newStringer = "";}
-                    // console.log(playerStatStringerONHIT)
                 }
                 characterSpecificStringer += newStringer;
             }
 
-            totalPlayerStringer += playerBuffsStringer + debuffStringer + playerStatStringer + playerStatStringerONHIT + tagSpecificStringer + characterSpecificStringer;
+            totalPlayerStringer += playerBuffsStringer + debuffStringer + playerStatStringer + tagSpecificStringer + characterSpecificStringer;
             returnString += totalPlayerStringer;
             return returnString;
         }
