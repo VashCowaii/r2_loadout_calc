@@ -240,6 +240,10 @@ const customDisplayValuesLog = {
         {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
             customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
         },
+        {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2},
+
+        {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true},
+        {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true},
     ],
     "Hyacine": [
         {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true,
@@ -380,6 +384,7 @@ const permaConditionsTextLibrary = {
     "atLeast2SP": "Skill Points: Current >= 2",
     "archerSub5casts": "Skill Use Count < 5",
     "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
+    "noTerritory": "No Other Territory Active",
 
     "mortenaxBladeSkill": "Zone Active<br>HPCurrent > 1",
 
@@ -518,6 +523,15 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Hyacine": defaultStandardAbilityDisplayWarnings,
+    "Castorice": {
+        hasEnhancedState: true,
+        "Skill": "",
+        "Ultimate": "",
+        "MemoSkillEnh": "ONLY the Enhanced MemoSkill can be used on Netherwing's 3rd turn and conditions will be ignored.",
+
+        "SkillPermaConditions": [],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedSpecial,permaConditionsTextLibrary.noTerritory]
+    },
     
     //NIHILITY
     "Silver Wolf": defaultStandardAbilityDisplayWarnings,
@@ -1454,8 +1468,8 @@ const defaultConditions = {
         
         return result
     },
-    getSkillCondition(battleData,sourceTurn) { 
-        const conditionPath = battleData[sourceTurn.name]?.Skill;
+    getSkillCondition(battleData,sourceTurn,slotOverride) {
+        const conditionPath = battleData[sourceTurn.name]?.[slotOverride ?? "Skill"];
         // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
         if (!conditionPath) {return true}//if someone doesn't have an ulty condition, then default to true so this doesn't prevent an ult
 

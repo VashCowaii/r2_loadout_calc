@@ -1265,7 +1265,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">ATK</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsATK" value="${isEdit ? slotRef.stats[ATKBase] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsATK" value="${isEdit ? slotRef.stats.ATKBase : ""}"/>
                     </div>
                 </div>
             </div>
@@ -1274,7 +1274,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">SPD</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsSPD" value="${isEdit ? slotRef.stats[SPDBase] : ""}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsSPD" value="${isEdit ? slotRef.stats.SPDBase : ""}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
                     </div>
                 </div>
             </div>
@@ -1283,7 +1283,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">Effect RES</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats[EffectRES] : "0.30"}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsEffectRES" value="${isEdit ? slotRef.stats.EffectRES : "0.30"}" onchange="userTriggers.updateEnemyAddedMenuUI()"/>
                     </div>
                 </div>
             </div>
@@ -1292,7 +1292,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">Toughness</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsToughness" value="${isEdit ? slotRef.stats[Toughness] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsToughness" value="${isEdit ? slotRef.stats.Toughness : ""}"/>
                     </div>
                 </div>
             </div>
@@ -1301,7 +1301,7 @@ const customMenu = {
                 <div class="imageRowStatisticNameBox">HP</div>
                 <div class="imageRowStatisticStatBox">
                     <div class="presetsSelectorBox">
-                        <input type="number" class="tagInput" id="addEnemyStatsHP" value="${isEdit ? slotRef.stats[HPBase] : ""}"/>
+                        <input type="number" class="tagInput" id="addEnemyStatsHP" value="${isEdit ? slotRef.stats.HPBase : ""}"/>
                     </div>
                 </div>
             </div>
@@ -1850,6 +1850,18 @@ const customMenu = {
             }
             tagString += "</div>";
 
+            let actionTagString = "";
+            if (hitData.actionTags?.length) {
+                actionTagString = `<div class="actionDetailBodyCenterTags">Action Tags</div><div class="actionDetailBodyCenterTags">[`;
+
+                for (let entry of hitData.actionTags) {
+                    const isLastEntry = entry === hitData.actionTags[hitData.actionTags.length-1];
+                    actionTagString += `${entry}${isLastEntry ? "" : `, `}`;
+                }
+                actionTagString += "]</div>";
+            }
+            
+
             //quick note, player and enemy data are relative to who is attacking. If an enemy is attacking a character, they are playerdata here, and the character is enemydata
             let playerData = JSON.parse(hitData.playerData);
             let enemyData = JSON.parse(hitData.enemyData);
@@ -2354,6 +2366,7 @@ const customMenu = {
 
             
             if (hitData.sumVULN) {bonusTotalArray.push({rowName: "Vuln%",rowDisplayValue: ((hitData.sumVULN - 1)*100).toLocaleString() + "%"})}
+            if (hitData.enemyBaseDEF != undefined) {bonusTotalArray.push({rowName: "Target DEF Base",rowDisplayValue: hitData.enemyBaseDEF.toLocaleString()})}
             if (hitData.enemyDEFRed || hitData.sumSHRED) {
                 const sumShredValue = Math.abs((hitData.enemyDEFRed ?? 0) - (hitData.sumSHRED ?? 0))
                 const isCapped = sumShredValue >= 1;
@@ -2432,6 +2445,7 @@ const customMenu = {
                 ${toughnessDataRow}
 
                 ${hitData.isBreakDOT ? "" : tagString}
+                ${actionTagString}
                 ${hitData.shieldOverflow>0 && hitData.shieldOverflow != hitData.DMGTotalAVG ? `<div class="actionDetailBodyCenterTags">Target shields were broken by this DMG</div>` : ""}
 
                 ${hitData.enemyIsDead ? `<div class="actionDetailBodyCenterTags">Target was killed by this DMG</div>` : ""}
@@ -6438,6 +6452,7 @@ const userTriggers = {
             const enemyLvL = +readSelection("addEnemyLevelSlider").value;
             const baseRes = 0.20;
             const enemyObject = {
+                version: globalEnemyVersion,//global can be found in statListData if I ever forget
                 image: null,
                 entry: null,
                 name: enemyName,
@@ -6481,6 +6496,30 @@ const userTriggers = {
 
             // Object.assign(psuedoStats,enemyObject.stats);
             enemyObject.finalStats = updateFormulas(null,enemyStats);
+
+            enemyObject.stats = {
+                LVL: enemyLvL,
+                HPBase: enemyHP,
+                ATKBase: enemyATK,
+                SPDBase: enemySPD,
+                Toughness: enemyToughness,
+                EffectRES: enemyEffectRES,
+                DEFBase: (enemyLvL*10) + 200,
+                ResistanceImaginary: (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100,
+                ResistanceQuantum: (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100,
+                ResistanceWind: (weaknessOverrides.Wind ? 0 : (resistantTo.Wind ?? 0))/100,
+                ResistanceLightning: (weaknessOverrides.Lightning ? 0 : (resistantTo.Lightning ?? 0))/100,
+                ResistanceIce: (weaknessOverrides.Ice ? 0 : (resistantTo.Ice ?? 0))/100,
+                ResistanceFire: (weaknessOverrides.Fire ? 0 : (resistantTo.Fire ?? 0))/100,
+                ResistancePhysical: (weaknessOverrides.Physical ? 0 : (resistantTo.Physical ?? 0))/100,
+                WeaknessImaginary: weaknessOverrides.Imaginary ? 1 : 0,
+                WeaknessQuantum: weaknessOverrides.Quantum ? 1 : 0,
+                WeaknessWind: weaknessOverrides.Wind  ? 1 : 0,
+                WeaknessLightning: weaknessOverrides.Lightning ? 1 : 0,
+                WeaknessIce: weaknessOverrides.Ice ? 1 : 0,
+                WeaknessFire: weaknessOverrides.Fire ? 1 : 0,
+                WeaknessPhysical: weaknessOverrides.Physical ? 1 : 0,
+            }
 
             if (isExport) {
                 const trimToFirstWordAndInitials = userTriggers.trimToFirstWordAndInitials;
@@ -6609,29 +6648,29 @@ const userTriggers = {
                 <div class="imageRowStatisticBox1">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">ATK</div>
-                    <div class="imageRowStatisticStatBox">${stats[ATKBase]}</div>
+                    <div class="imageRowStatisticStatBox">${stats.ATKBase}</div>
                 </div>
 
                 <div class="imageRowStatisticBox2">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconSpeed.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">SPD</div>
-                    <div class="imageRowStatisticStatBox">${stats[SPDBase]}</div>
+                    <div class="imageRowStatisticStatBox">${stats.SPDBase}</div>
                 </div>
 
                 <div class="imageRowStatisticBox1">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconStatusResistance.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">Effect RES</div>
-                    <div class="imageRowStatisticStatBox">${stats[EffectRES]}</div>
+                    <div class="imageRowStatisticStatBox">${stats.EffectRES}</div>
                 </div>
                 <div class="imageRowStatisticBox2">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">Toughness</div>
-                    <div class="imageRowStatisticStatBox">${stats[Toughness].toLocaleString()} ${enemyEntry.toughnessBars > 1 ? "x" + enemyEntry.toughnessBars : ""}</div>
+                    <div class="imageRowStatisticStatBox">${stats.Toughness.toLocaleString()} ${enemyEntry.toughnessBars > 1 ? "x" + enemyEntry.toughnessBars : ""}</div>
                 </div>
                 <div class="imageRowStatisticBox1">
                     <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"/></div>
                     <div class="imageRowStatisticNameBox">HP</div>
-                    <div class="imageRowStatisticStatBox">${stats[HPBase].toLocaleString()} ${enemyEntry.hpBars > 1 ? "x" + enemyEntry.hpBars : ""}</div>
+                    <div class="imageRowStatisticStatBox">${stats.HPBase.toLocaleString()} ${enemyEntry.hpBars > 1 ? "x" + enemyEntry.hpBars : ""}</div>
                 </div>
                 
             </div>`;

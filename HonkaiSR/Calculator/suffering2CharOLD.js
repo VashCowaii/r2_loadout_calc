@@ -3789,3 +3789,13 @@ const turnLogic = {
 //     battleData.nextTurnAV.push(extraTurnObject);
 //     if (isImmediateAction) {battleData.extraTurnPriority += 1;}
 // },
+
+
+
+// pullScalarSumOLD(table,targetStatsSourceBased,scalarTag) {
+//     const base = scalarBaseKey[scalarTag];
+//     const perc = scalarPercKey[scalarTag];
+//     const flat = scalarFlatKey[scalarTag];
+    
+//     return (table[base]) * (1 + table[perc]) + table[flat];
+// },

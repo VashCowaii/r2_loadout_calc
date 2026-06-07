@@ -603,6 +603,8 @@ const sim = {
 
 
 
+
+
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
             battleData.enemiesCreated++;
@@ -610,17 +612,25 @@ const sim = {
 
             // let ref = enemiesDataRef[currentEntry.entry];
             const enemyType = currentEntry.enemyType;
+
+            const enemyVersion = currentEntry.version ?? 0;
+            //global can be found in statListData if I ever forget
+            if (!enemyVersion || enemyVersion < globalEnemyVersion) {
+                alert(`The enemy you are trying to import/use is in a format version that is no longer supported.
+                    \nVersion Detected: ${enemyVersion} --- Supported: ${globalEnemyVersion}
+                    \nIf you're seeing this while using a file that was made before June 6th 2026, this is intended.
+                    \nI have taken steps to ensure this never has to happen again, but a change did need to happen overall.`)
+                continue;
+            }
+
             let name = "Enemy " + enemiesMade + " " + currentEntry.name + " (" + enemyType + ")";
             let enemyRealName = currentEntry.name;
             let slot = "enemy" + enemiesMade;
-            let stats = [...currentEntry.stats];
+            let stats = new Array(greatTableSize).fill(0);//[...currentEntry.stats];
+            const statsObject = currentEntry.stats;
 
-            const statsLength = stats.length;
-            if (statsLength != greatTableSize) {
-                const sizeDiff = greatTableSize - statsLength;
-                for (let b=0;b<sizeDiff;b++) {
-                    stats.push(0);
-                }
+            for (let statsKey in statsObject) {
+                stats[greatTableIndex[statsKey]] = statsObject[statsKey];
             }
 
             summaryTurns[name] = 0;
@@ -747,6 +757,7 @@ const sim = {
             charactersRemaining: 0,
             backupHPOnField: 0,
             backupHPObject: {},
+            territoryActive: false,
             battleIsOver: false,
             battleFailed: false,
             attackTechniqueUsed: false,
@@ -1315,6 +1326,7 @@ const sim = {
 
         const charLogic = turnLogic[charName];
         let isContinuousTurn = false;
+        let chainedAttackRef = null;
         while (!turnEnded && !battleData.battleIsOver) {
             if (!isContinuousTurn) {clearFUA(battleData);}
 
@@ -1369,13 +1381,15 @@ const sim = {
             // const typeEnd = designatedAction.eventTypeEnd;
 
             const isAbility = designatedAction.isAbility;
-            if (isAbility) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
-            actionCall(battleData,designatedAction.target,sourceTurn);//call the actual function now that we gave cerydra-type bullshit a chance.
-            if (isAbility) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
-
+            if (isAbility && !isContinuousTurn) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
+            chainedAttackRef = actionCall(battleData,designatedAction.target,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
+            //right now netherwing is the only entity in the entire calc that is going to use chainedAttackRef as an actual ability param
+            //if this ever changes I might wanna go back and add it into every ability's overarching param list just to keep things uniform, but for now fuck it.
 
             const preCheckContinue = designatedAction.isContinuousTurn;
             isContinuousTurn = preCheckContinue;
+
+            if (isAbility && !isContinuousTurn) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
 
 
             if (!preCheckContinue) {
