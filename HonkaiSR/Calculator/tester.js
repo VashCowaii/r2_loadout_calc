@@ -1605,14 +1605,21 @@ const customMenu = {
             //     <div class="buffShieldHealthValueDisplay">HP: ${turnData.currentHP.toLocaleString()}/${turnData.maxHP.toLocaleString()}</div>
             // </div>`
             let totalPlayerStringer = ``;
-            let playerBuffsStringer = `<details class="actionDetailBodyDetailExpandBuffsBox">
-                <summary class="actionDetailBodyDetailExpandHeader clickable">Buffs/Debuffs</summary>`;
+
+            let playerBuffsStringer = "";
+            let buffOrOtherCounter = 0;
+
+            let debuffStringerPRE = "";
+            let debuffStringer = "";
+            let debuffCounter = 0;
 
 
             for (let buffEntry in currentBuffsPlayer) {
                 let currentBuff = currentBuffsPlayer[buffEntry];
                 if (!currentBuff) {continue;}
                 let buffStringer = "";
+
+                const isDebuff = currentBuff.isDebuff;
 
                 // console.log(currentBuff)
                 // shieldRemaining,shieldCap
@@ -1731,9 +1738,25 @@ const customMenu = {
                 
                 
                 buffStringer += `</details>`;
-                playerBuffsStringer += buffStringer;
+
+                if (isDebuff) {
+                    debuffStringer += buffStringer;
+                    debuffCounter++;
+                }
+                else {
+                    playerBuffsStringer += buffStringer;
+                    buffOrOtherCounter++
+                }
             }
-            playerBuffsStringer += `</details>`;
+
+            if (playerBuffsStringer) {
+                playerBuffsStringer = `<details class="actionDetailBodyDetailExpandBuffsBox">
+                <summary class="actionDetailBodyDetailExpandHeader clickable">Buffs/Other <span class="actionDetailBodyBuffCOUNTER">${buffOrOtherCounter}</span></summary>` + playerBuffsStringer + `</details>`;
+            }
+            if (debuffStringer) {
+                debuffStringer = `<details class="actionDetailBodyDetailExpandBuffsBoxDEBUFF">
+                <summary class="actionDetailBodyDetailExpandHeader clickable">Debuffs <span class="actionDetailBodyDebuffCOUNTER">${debuffCounter}</span></summary>` + debuffStringer + `</details>`;
+            }
 
             let playerStatStringer = `
                 <details class="actionDetailBodyDetailExpand">
@@ -1817,7 +1840,7 @@ const customMenu = {
                 characterSpecificStringer += newStringer;
             }
 
-            totalPlayerStringer += playerBuffsStringer + playerStatStringer + playerStatStringerONHIT + tagSpecificStringer + characterSpecificStringer;
+            totalPlayerStringer += playerBuffsStringer + debuffStringer + playerStatStringer + playerStatStringerONHIT + tagSpecificStringer + characterSpecificStringer;
             returnString += totalPlayerStringer;
             return returnString;
         }

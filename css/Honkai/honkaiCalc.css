@@ -3384,7 +3384,7 @@ details[open] > summary::before {
 
     /* #145053 */
 }
-.actionDetailBodyDetailExpandBuffsBox {
+.actionDetailBodyDetailExpandBuffsBox,.actionDetailBodyDetailExpandBuffsBoxDEBUFF {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -3399,6 +3399,15 @@ details[open] > summary::before {
     background: linear-gradient(200deg, transparent,transparent, #0d393b3d);
     border-bottom: 2px solid #ffffff1A;
     border-top: 2px solid #ffffff1A;
+}
+.actionDetailBodyDetailExpandBuffsBoxDEBUFF {
+    background: linear-gradient(200deg, transparent,transparent, #9103033a);;
+}
+.actionDetailBodyBuffCOUNTER {
+    color: #87E0FF;
+}
+.actionDetailBodyDebuffCOUNTER {
+    color: #FF5A3F;
 }
 .actionDetailBodyDetailExpandHeader {
     width: 100%;
