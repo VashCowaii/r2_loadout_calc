@@ -15333,7 +15333,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.bladeSkillFUAATKOBJECT;
                 consumeHP(battleData,null,values[3],sourceTurn,sourceTurn,skillRef.slot,false,false);
 
-                poke("mortenaxBladeGainCharge",battleData,{pointsGained: sourceTurn.rank >= 2 ? -7 : -9,sourceString:"Mortenax Blade FUA Launched"});
+                poke("mortenaxBladeGainCharge",battleData,{pointsGained: sourceTurn.battleValues.chargeMax,sourceString:"Mortenax Blade FUA Launched"});
                 updateEnergy(battleData,25,sourceTurn,false,"Mortenax Blade FUA Launched");
 
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
@@ -15446,6 +15446,8 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+                    ownerTurn.battleValues.chargeMax = rank >= 2 ? 7 : 9;
 
 
                     //trace Bone, Hardened ad Nauseam
@@ -15811,7 +15813,7 @@ const turnLogic = {
                     const valuesRef = ownerTurn.battleValues;
 
                     const oldValue = valuesRef.charge;
-                    const maxValue = ownerTurn.rank >= 2 ? 7 : 9;
+                    const maxValue = valuesRef.chargeMax;
                     valuesRef.charge = oldValue + pointsGained;
                     const newValue = valuesRef.charge;
 
@@ -15972,8 +15974,10 @@ const turnLogic = {
                     const battleValues = ownerTurn.battleValues;
                     const currentCharge = battleValues.charge;
 
+                    const maxValue = battleValues.chargeMax;
+
                     if (battleValues.fuaIsQueued) {return;}
-                    if (currentCharge < (ownerTurn.rank >= 2 ? 7 : 9)) {return;}
+                    if (currentCharge < maxValue) {return;}
                     if (ownerTurn.currentHP <= 1) {return;}
                     //if the FUA is already queued, if we don't have enough charge, or if we have invalid HP, then abort the queue before we even queue it.
 
@@ -16156,6 +16160,7 @@ const turnLogic = {
             "overflowEnergy": 0,
             "hasNilityCharacters": false,
             "charge": 0,
+            "chargeMax": null,
             "bladeFuryActive": false,
             "fuaIsQueued": false,
             "isReadyforE6Gain": true,

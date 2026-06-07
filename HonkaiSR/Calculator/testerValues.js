@@ -210,7 +210,18 @@ const customDisplayValuesLog = {
     "Mortenax Blade": [//tracker done
         {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM"},
+        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: characters["Mortenax Blade"].traces.Point04.icon
+        },
+        {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+
+        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
+        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
+        // },
     ],
 
     //PRESERVATION

@@ -4616,31 +4616,34 @@ const userTriggers = {
                     const isEvent = turnRef.isUniqueEvent;
                     const isMemo = isEvent && turnRef.isMemosprite;
 
+
+                    function getRequiredDisplayValue(entry,customValues,turnRef) { //customValues[entry.displayRequiresIndex]
+                        const valueActual = entry.isBattleValue ? turnRef.battleValues[entry.refName] : turnRef[entry.refName];
+                        let valueAdjusted = null;
+                        const typeOfValue = typeof valueActual;
+
+                        if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
+                        else {valueAdjusted = valueActual;}
+
+                        if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
+
+                        return valueAdjusted;
+                    }
+
                     let customValuesString = "";
                     if (!isEnemy && !turnRef.isUniqueEvent) {
                         const customValues = customDisplayValuesLog[turnRef.properName];
                         if (customValues) {
                             for (let entry of customValues) {
                                 if (entry.hide) {continue;}
-                                const valueActual = entry.isBattleValue ? turnRef.battleValues[entry.refName] : turnRef[entry.refName];
-                                let valueAdjusted = null;
-                                const typeOfValue = typeof valueActual;
-
-                                if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
-                                else {valueAdjusted = valueActual;}
-
-                                if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
                                 if (entry.requiresEidolon && turnRef.rank < entry.requiresEidolon) {continue;}
 
-                                if (entry.displayRequiresIndex != undefined) {
-                                    const indexValue = customValues[entry.displayRequiresIndex];
+                                let valueAdjusted = getRequiredDisplayValue(entry,customValues,turnRef);
 
-                                    const valueActual = indexValue.isBattleValue ? turnRef.battleValues[indexValue.refName] : turnRef[indexValue.refName];
-                                    let valueAdjusted = null;
-                                    const typeOfValue = typeof valueActual;
-
-                                    if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
-                                    else {valueAdjusted = valueActual;}
+                                const requiresIndex = entry.displayRequiresIndex != undefined;
+                                let requiredIndexValue = requiresIndex ? getRequiredDisplayValue(customValues[entry.displayRequiresIndex],customValues,turnRef) : null;
+                                if (requiresIndex) {
+                                    let valueAdjusted = requiredIndexValue;
 
                                     if (entry.displayRequiresType) {
                                         const displayRequiresType = entry.displayRequiresType;
@@ -4649,7 +4652,7 @@ const userTriggers = {
                                             if (valueAdjusted !== displayRequiresBoolean) {continue;}
                                         }
                                     }
-                                    else if (valueAdjusted !== true) {continue;}
+                                    // else if (valueAdjusted !== true) {continue;}
                                 }
 
                                 // {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
@@ -4667,7 +4670,7 @@ const userTriggers = {
                                         const rotation = memoHP * 2 * 67 - 67;
                                         customValuesString += `<div class="customEnergyMemoBoxBar">
                                             <div class="memoHPBar">
-                                                <div class="memoHPShutter" style="transform:translate(000px,0%) rotate(${rotation}deg) translate(100px,0%);"></div>
+                                                <div class="memoHPShutter" style="transform:translate(0px,0%) rotate(${rotation}deg) translate(100px,0%);"></div>
                                             </div>
                                             <div class="customEnergyMemoBoxImageBox clickable">
                                                 <img src="/HonkaiSR/${memoTurn.eventImage}" class="customEnergyMemoBoxImage" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
@@ -4684,21 +4687,40 @@ const userTriggers = {
                                     
                                 }
                                 else if (entry.customDisplay) {
-                                    const markMax = entry.markMax;
-                                    let marksStringer = "";
-                                    for (let i=1;i<=markMax;i++) {
-                                        const isFilled = valueAdjusted >= i;
-                                        // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
-                                        const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
-                                        marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
-                                        style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+                                    const customDisplay = entry.customDisplay;
+                                    if (customDisplay === "marks") {
+                                        const markMax = entry.markMax;
+                                        let marksStringer = "";
+                                        for (let i=1;i<=markMax;i++) {
+                                            const isFilled = valueAdjusted >= i;
+                                            // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
+                                            const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
+                                            marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
+                                            style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
 
-                                        
-                                        
-                                        // customEnergyBodyMarksCIRCLE
+                                            // customEnergyBodyMarksCIRCLE
+                                        }
+
+                                        customValuesString += `<div class="customEnergyBodyMarksBar">${marksStringer}</div>`
                                     }
+                                    else if (customDisplay === "progress") {
+                                        const customDisplayType = entry.customDisplayType;
+                                        if (customDisplayType === "circle") {
+                                            const markMax = entry.markMax ?? (requiresIndex ? requiredIndexValue : null);
+                                            const markFillColor = specialEnergyData[turnRef.element].energyColor1;
 
-                                    customValuesString += `<div class="customEnergyBodyMarksBar">${marksStringer}</div>`
+                                            const fillProgress = Math.min(100,Math.max(1,(valueAdjusted / markMax) * 100));
+
+                                            customValuesString += `<div class="customEnergyBodyPROGRESSBar">
+                                                <div class="customEnergyBodyMarksCIRCLEPROGRESS"
+                                                    style="background:conic-gradient(${markFillColor} 0 ${fillProgress}%,#3333337c ${fillProgress}% 100%);">
+                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                </div>
+                                                ${valueAdjusted} / ${markMax} ${entry.valueName}
+                                            </div>`
+                                        }
+                                    }
+                                    
                                 }
                                 else {
                                     customValuesString += `<div class="actionDetailBody">${entry.valueName}: ${valueAdjusted}</div>`
