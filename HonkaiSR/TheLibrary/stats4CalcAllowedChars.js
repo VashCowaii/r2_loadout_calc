@@ -7,7 +7,8 @@ global.calcAllowedSet = new Set([
     "Black Swan",//DONE
     "Welt",//DONE
     "Acheron",//DONE
-    "Mortenax Blade",//
+    "Mortenax Blade",//DONE
+    // "The Dahlia",
     //4star
     "Pela",//DONE
     
@@ -16,6 +17,7 @@ global.calcAllowedSet = new Set([
     //5star
     "Argenti",//DONE
     "Anaxa",//DONE
+    "Jing Yuan",
     //4star
     "Serval",               //not yet
     "Herta",                //not yet
@@ -72,7 +74,7 @@ global.calcAllowedSet = new Set([
     "Aglaea",//DONE
     "Evernight",//DONE
     "Hyacine",//DONE
-    "Castorice",
+    "Castorice",//DONE
     //4star
 
     //ELATION
