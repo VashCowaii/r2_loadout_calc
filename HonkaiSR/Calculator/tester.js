@@ -4691,12 +4691,22 @@ const userTriggers = {
                                     if (customDisplay === "marks") {
                                         const markMax = entry.markMax;
                                         let marksStringer = "";
+                                        const markType = entry.customDisplayType;
                                         for (let i=1;i<=markMax;i++) {
                                             const isFilled = valueAdjusted >= i;
                                             // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
                                             const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
-                                            marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
-                                            style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+
+                                            if (markType === "image") {
+                                                // marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
+                                                // style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+
+                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? entry.imageFilled : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>`
+                                            }
+                                            else if (markType === "circle") {
+                                                marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
+                                                style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+                                            }
 
                                             // customEnergyBodyMarksCIRCLE
                                         }

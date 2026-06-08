@@ -155,7 +155,8 @@ const customDisplayValuesLog = {
     ],
     "Dan Heng • Imbibitor Lunae": [
         {valueName: "Squama Sacrosancta", refName: "fakePoints", isBattleValue: true,summaryValue: "dhilFakePointSum",summaryType: "SUM",
-            customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+            customDisplay: "marks", customDisplayType: "image", markMax: 3, imageFilled: "misc/dhil/IconDot121301.png", imageEmpty: "misc/dhil/IconDot121302.png",
+            // innerMarkColor: "#9083FF",
         },
         {valueName: "Squama Sacrosancta Max", refName: "fakePointsMax", isBattleValue: true,hide: true},
         {valueName: "EBA Enhancement Level", refName: "skillCounter", isBattleValue: true,hide: true},
