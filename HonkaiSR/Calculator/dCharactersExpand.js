@@ -13110,6 +13110,1546 @@ let characters = {
     ],
     "isBuffed": true
   },
+  "Dan Heng • Imbibitor Lunae": {
+    "internalID": 1213,
+    "name": "Dan Heng • Imbibitor Lunae",
+    "path": "Destruction",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 698.544,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "121301",
+        "name": "Tethered to Sky",
+        "rank": 1,
+        "desc": "Increases the stackable Righteous Heart count by 4, and gains 1 extra stack of Righteous Heart for each hit during an attack.",
+        "icon": "icon/skill/1213_rank1.png",
+        "paramsEido": [
+          4
+        ]
+      },
+      {
+        "id": "121302",
+        "name": "Imperium On Cloud Nine",
+        "rank": 2,
+        "desc": "After using his Ultimate, Dan Heng • Imbibitor Lunae's action advances by 100% and gains 1 extra \"Squama Sacrosancta.\"",
+        "icon": "icon/skill/1213_rank2.png",
+        "extraEffects": {
+          "Action Advance": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "121303",
+        "name": "Clothed in Clouds",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1213_skill.png"
+      },
+      {
+        "id": "121304",
+        "name": "Zephyr's Bliss",
+        "rank": 4,
+        "desc": "The buff effect granted by \"Outroar\" lasts until the end of this unit's next turn.",
+        "icon": "icon/skill/1213_rank4.png",
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          }
+        }
+      },
+      {
+        "id": "121305",
+        "name": "Fall is the Pride",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1213_ultimate.png"
+      },
+      {
+        "id": "121306",
+        "name": "Reign, Returned",
+        "rank": 6,
+        "desc": "After another ally character uses their Ultimate, the Imaginary RES PEN of Dan Heng • Imbibitor Lunae's next \"Fulgurant Leap\" attack increases by 20%. This effect can stack up to 3 time(s).",
+        "icon": "icon/skill/1213_rank6.png",
+        "paramsEido": [
+          0.2,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Beneficent Lotus": {
+          "variant1": {
+            "skillID": 121301,
+            "trigger": "Skill01",
+            "name": "Beneficent Lotus",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Uses a 2-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill01_Camera",
+              "Avatar_DanHengIL_00_Skill01_Phase01",
+              "Avatar_DanHengIL_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Transcendence": {
+          "variant1": {
+            "skillID": 121308,
+            "trigger": "Skill11",
+            "name": "Transcendence",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Uses a 3-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.3
+              ],
+              "2": [
+                1.56
+              ],
+              "3": [
+                1.82
+              ],
+              "4": [
+                2.08
+              ],
+              "5": [
+                2.34
+              ],
+              "6": [
+                2.6
+              ],
+              "7": [
+                2.86
+              ],
+              "8": [
+                3.12
+              ],
+              "9": [
+                3.38
+              ],
+              "10": [
+                3.64
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill11_Camera",
+              "Avatar_DanHengIL_00_Skill11_Phase01",
+              "Avatar_DanHengIL_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Divine Spear": {
+          "variant1": {
+            "skillID": 121310,
+            "trigger": "Skill12",
+            "name": "Divine Spear",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Uses a 5-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. From the fourth hit onward, simultaneously deals Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 35,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 2,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.9,
+                0.3
+              ],
+              "2": [
+                2.28,
+                0.36
+              ],
+              "3": [
+                2.66,
+                0.42
+              ],
+              "4": [
+                3.04,
+                0.48
+              ],
+              "5": [
+                3.42,
+                0.54
+              ],
+              "6": [
+                3.8,
+                0.6
+              ],
+              "7": [
+                4.18,
+                0.66
+              ],
+              "8": [
+                4.56,
+                0.72
+              ],
+              "9": [
+                4.94,
+                0.78
+              ],
+              "10": [
+                5.32,
+                0.84
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill12_Camera",
+              "Avatar_DanHengIL_00_Skill12_Phase01",
+              "Avatar_DanHengIL_00_Skill12_Phase02"
+            ],
+            "toughnessList": [
+              90,
+              0,
+              30
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fulgurant Leap": {
+          "variant1": {
+            "skillID": 121312,
+            "trigger": "Skill13",
+            "name": "Fulgurant Leap",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Uses a 7-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. From the fourth hit onward, simultaneously deal Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 40,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 40,
+            "skillPointCost": 3,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.5,
+                0.9
+              ],
+              "2": [
+                3,
+                1.08
+              ],
+              "3": [
+                3.5,
+                1.26
+              ],
+              "4": [
+                4,
+                1.44
+              ],
+              "5": [
+                4.5,
+                1.62
+              ],
+              "6": [
+                5,
+                1.8
+              ],
+              "7": [
+                5.5,
+                1.98
+              ],
+              "8": [
+                6,
+                2.16
+              ],
+              "9": [
+                6.5,
+                2.34
+              ],
+              "10": [
+                7,
+                2.52
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill13_Camera",
+              "Avatar_DanHengIL_00_Skill13_Phase01",
+              "Avatar_DanHengIL_00_Skill13_Phase02"
+            ],
+            "toughnessList": [
+              120,
+              0,
+              60
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dracore Libre": {
+          "variant1": {
+            "skillID": 121302,
+            "trigger": "Skill02",
+            "name": "Dracore Libre",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Enhances Basic ATK. Enhancements may be applied up to 3 times consecutively. Using this ability does not consume Skill Points and is not considered as using a Skill.\\nEnhanced once, Beneficent Lotus becomes Transcendence.\\nEnhanced twice, Beneficent Lotus becomes Divine Spear.\\nEnhanced thrice, Beneficent Lotus becomes Fulgurant Leap.\\nWhen using Divine Spear or Fulgurant Leap, starting from the fourth hit, 1 stack of Outroar is gained before every hit. Each stack of Outroar increases Dan Heng • Imbibitor Lunae's CRIT DMG by #1[f1]%, for a max of #2[i] stacks. These stacks last until the end of his turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.06,
+                4
+              ],
+              "2": [
+                0.066,
+                4
+              ],
+              "3": [
+                0.072,
+                4
+              ],
+              "4": [
+                0.078,
+                4
+              ],
+              "5": [
+                0.084,
+                4
+              ],
+              "6": [
+                0.09,
+                4
+              ],
+              "7": [
+                0.0975,
+                4
+              ],
+              "8": [
+                0.105,
+                4
+              ],
+              "9": [
+                0.1125,
+                4
+              ],
+              "10": [
+                0.12,
+                4
+              ],
+              "11": [
+                0.126,
+                4
+              ],
+              "12": [
+                0.132,
+                4
+              ],
+              "13": [
+                0.138,
+                4
+              ],
+              "14": [
+                0.144,
+                4
+              ],
+              "15": [
+                0.15,
+                4
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill02_Camera01",
+              "Avatar_DanHengIL_00_Skill02_Camera02",
+              "Avatar_DanHengIL_00_Skill02_Camera03",
+              "Avatar_DanHengIL_00_Skill02_Phase01",
+              "Avatar_DanHengIL_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Cancel": {
+          "variant1": {
+            "skillID": 121309,
+            "trigger": "Skill21",
+            "name": "Cancel",
+            "type": "Cancel",
+            "slot": "Skill",
+            "desc": "Cancel Enhancement",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill21_Phase01",
+              "Avatar_DanHengIL_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Azure's Aqua Ablutes All": {
+          "variant1": {
+            "skillID": 121303,
+            "trigger": "Skill03",
+            "name": "Azure's Aqua Ablutes All",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Uses a 3-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. At the same time, deals Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets. Then, obtains #3[i] \"Squama Sacrosancta.\"\\nIt's possible to hold up to #4[i] \"Squama Sacrosancta,\" which can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. Consuming \"Squama Sacrosancta\" is considered equivalent to consuming skill points.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.8,
+                0.84,
+                2,
+                3
+              ],
+              "2": [
+                1.92,
+                0.896,
+                2,
+                3
+              ],
+              "3": [
+                2.04,
+                0.952,
+                2,
+                3
+              ],
+              "4": [
+                2.16,
+                1.008,
+                2,
+                3
+              ],
+              "5": [
+                2.28,
+                1.064,
+                2,
+                3
+              ],
+              "6": [
+                2.4,
+                1.12,
+                2,
+                3
+              ],
+              "7": [
+                2.55,
+                1.19,
+                2,
+                3
+              ],
+              "8": [
+                2.7,
+                1.26,
+                2,
+                3
+              ],
+              "9": [
+                2.85,
+                1.33,
+                2,
+                3
+              ],
+              "10": [
+                3,
+                1.4,
+                2,
+                3
+              ],
+              "11": [
+                3.12,
+                1.456,
+                2,
+                3
+              ],
+              "12": [
+                3.24,
+                1.512,
+                2,
+                3
+              ],
+              "13": [
+                3.36,
+                1.568,
+                2,
+                3
+              ],
+              "14": [
+                3.48,
+                1.624,
+                2,
+                3
+              ],
+              "15": [
+                3.6,
+                1.68,
+                2,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill03_Camera",
+              "Avatar_DanHengIL_00_Skill03_EnterReady",
+              "Avatar_DanHengIL_00_Skill03_Phase01",
+              "Avatar_DanHengIL_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              60
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Righteous Heart": {
+          "variant1": {
+            "skillID": 121304,
+            "trigger": "SkillP01",
+            "name": "Righteous Heart",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After each hit dealt during an attack, Dan Heng • Imbibitor Lunae gains 1 stack of Righteous Heart, increasing his DMG by #1[f1]%. This effect can stack up to #2[i] time(s), lasting until the end of his turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.05,
+                6
+              ],
+              "2": [
+                0.055,
+                6
+              ],
+              "3": [
+                0.06,
+                6
+              ],
+              "4": [
+                0.065,
+                6
+              ],
+              "5": [
+                0.07,
+                6
+              ],
+              "6": [
+                0.075,
+                6
+              ],
+              "7": [
+                0.08125,
+                6
+              ],
+              "8": [
+                0.0875,
+                6
+              ],
+              "9": [
+                0.09375,
+                6
+              ],
+              "10": [
+                0.1,
+                6
+              ],
+              "11": [
+                0.105,
+                6
+              ],
+              "12": [
+                0.11,
+                6
+              ],
+              "13": [
+                0.115,
+                6
+              ],
+              "14": [
+                0.12,
+                6
+              ],
+              "15": [
+                0.125,
+                6
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Heaven-Quelling Prismadrakon": {
+          "variant1": {
+            "skillID": 121307,
+            "trigger": "SkillMaze",
+            "name": "Heaven-Quelling Prismadrakon",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using his Technique, Dan Heng • Imbibitor Lunae enters the Leaping Dragon state for #2[i] seconds. While in the Leaping Dragon state, using his attack enables him to move forward rapidly for a set distance, attacking all enemies he touches and blocking all incoming attacks. After entering combat via attacking enemies in the Leaping Dragon state, Dan Heng • Imbibitor Lunae deals Imaginary DMG equal to #3[i]% of his ATK to all enemies, and gains #1[i] Squama Sacrosancta.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                20,
+                1.2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1213_basic_atk.png",
+        "skillRef": {
+          "skillName": "Beneficent Lotus",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1213_skill.png",
+        "skillRef": {
+          "skillName": "Dracore Libre",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1213_ultimate.png",
+        "skillRef": {
+          "skillName": "Azure's Aqua Ablutes All",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1213_talent.png",
+        "skillRef": {
+          "skillName": "Righteous Heart",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1213_technique.png",
+        "skillRef": {
+          "skillName": "Heaven-Quelling Prismadrakon",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Star Veil",
+        "icon": "icon/skill/1213_skilltree1.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point07": {
+        "name": "Aqua Reign",
+        "icon": "icon/skill/1213_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "traceAbility": "DanHengIL_DanHengIL_Trace02",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Jolt Anew",
+        "icon": "icon/skill/1213_skilltree3.png",
+        "desc": "When dealing DMG to enemy targets with Imaginary Weakness, CRIT DMG increases by #1[i]%.",
+        "params": [
+          0.24
+        ],
+        "traceAbility": "DanHengIL_DanHengIL_Trace03"
+      },
+      "Point09": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1213.png",
+    "preview": "image/character_preview/1213.png",
+    "portrait": "image/character_portrait/1213.png",
+    "bannerOffsets": [
+      -35.8,
+      -74.6,
+      0.8,
+      -35.8,
+      -74.6,
+      0.8,
+      -35.8,
+      -74.6,
+      0.8
+    ],
+    "isBuffed": false
+  },
+  "Hanya": {
+    "internalID": 1215,
+    "name": "Hanya",
+    "path": "Harmony",
+    "element": "Physical",
+    "rarity": 4,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 564.48,
+      "DEFBase": 352.79999999999995,
+      "HPBase": 917.28,
+      "SPDBase": 110,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "121501",
+        "name": "One Heart",
+        "rank": 1,
+        "desc": "When an ally target with Hanya's Ultimate effect defeats an enemy, Hanya's action advances by 15%. This effect can only be triggered 1 time(s) per turn.",
+        "icon": "icon/skill/1215_rank1.png",
+        "paramsEido": [
+          0.15,
+          1
+        ],
+        "extraEffects": {
+          "Action Advance": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "121502",
+        "name": "Two Views",
+        "rank": 2,
+        "desc": "After using the Skill, this character's SPD increases by 20% for 1 turn(s).",
+        "icon": "icon/skill/1215_rank2.png",
+        "paramsEido": [
+          0.2,
+          1
+        ]
+      },
+      {
+        "id": "121503",
+        "name": "Three Temptations",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1215_skill.png"
+      },
+      {
+        "id": "121504",
+        "name": "Four Truths",
+        "rank": 4,
+        "desc": "The Ultimate's duration is additionally extended for 1 turn(s).",
+        "icon": "icon/skill/1215_rank4.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "121505",
+        "name": "Five Skandhas",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1215_ultimate.png"
+      },
+      {
+        "id": "121506",
+        "name": "Six Reverences",
+        "rank": 6,
+        "desc": "Increase the DMG Boost effect of the Talent by an additional 10%.",
+        "icon": "icon/skill/1215_rank6.png",
+        "paramsEido": [
+          0.1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Oracle Brush": {
+          "variant1": {
+            "skillID": 121501,
+            "trigger": "Skill01",
+            "name": "Oracle Brush",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Hanya_00_Skill01_Phase01",
+              "Avatar_Hanya_00_Skill01_Camera",
+              "Avatar_Hanya_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Samsara, Locked": {
+          "variant1": {
+            "skillID": 121502,
+            "trigger": "Skill02",
+            "name": "Samsara, Locked",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to one designated enemy target, then applies \"Burden\" to them.\\nFor every 2 Basic ATKs, Skills, or Ultimates allies use on an enemy with \"Burden,\" allies will immediately recover 1 Skill Point. \"Burden\" is only active on the latest target it is applied to, and will be dispelled automatically after the Skill Point recovery effect has been triggered #2[i] times.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2,
+                2
+              ],
+              "2": [
+                1.32,
+                2
+              ],
+              "3": [
+                1.44,
+                2
+              ],
+              "4": [
+                1.56,
+                2
+              ],
+              "5": [
+                1.68,
+                2
+              ],
+              "6": [
+                1.8,
+                2
+              ],
+              "7": [
+                1.95,
+                2
+              ],
+              "8": [
+                2.1,
+                2
+              ],
+              "9": [
+                2.25,
+                2
+              ],
+              "10": [
+                2.4,
+                2
+              ],
+              "11": [
+                2.52,
+                2
+              ],
+              "12": [
+                2.64,
+                2
+              ],
+              "13": [
+                2.76,
+                2
+              ],
+              "14": [
+                2.88,
+                2
+              ],
+              "15": [
+                3,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hanya_00_Skill02_Phase01",
+              "Avatar_Hanya_00_Skill02_Camera",
+              "Avatar_Hanya_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Ten-Lords' Decree, All Shall Obey": {
+          "variant1": {
+            "skillID": 121503,
+            "trigger": "Skill03",
+            "name": "Ten-Lords' Decree, All Shall Obey",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Increases the SPD of a target ally by #3[f1]% of Hanya's SPD and increases the same target ally's ATK by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                2,
+                0.15
+              ],
+              "2": [
+                0.384,
+                2,
+                0.155
+              ],
+              "3": [
+                0.408,
+                2,
+                0.16
+              ],
+              "4": [
+                0.432,
+                2,
+                0.165
+              ],
+              "5": [
+                0.456,
+                2,
+                0.17
+              ],
+              "6": [
+                0.48,
+                2,
+                0.175
+              ],
+              "7": [
+                0.51,
+                2,
+                0.18125
+              ],
+              "8": [
+                0.54,
+                2,
+                0.1875
+              ],
+              "9": [
+                0.57,
+                2,
+                0.19375
+              ],
+              "10": [
+                0.6,
+                2,
+                0.2
+              ],
+              "11": [
+                0.624,
+                2,
+                0.205
+              ],
+              "12": [
+                0.648,
+                2,
+                0.21
+              ],
+              "13": [
+                0.672,
+                2,
+                0.215
+              ],
+              "14": [
+                0.696,
+                2,
+                0.22
+              ],
+              "15": [
+                0.72,
+                2,
+                0.225
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hanya_00_Skill03_EnterReady",
+              "Avatar_Hanya_00_Skill03_Phase01",
+              "Avatar_Hanya_00_Skill03_Phase02",
+              "Avatar_Hanya_00_Skill03_Camera"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Sanction": {
+          "variant1": {
+            "skillID": 121504,
+            "trigger": "SkillP01",
+            "name": "Sanction",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "When an ally uses a Basic ATK, Skill, or Ultimate on an enemy inflicted with Burden, the DMG dealt increases by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                2
+              ],
+              "2": [
+                0.165,
+                2
+              ],
+              "3": [
+                0.18,
+                2
+              ],
+              "4": [
+                0.195,
+                2
+              ],
+              "5": [
+                0.21,
+                2
+              ],
+              "6": [
+                0.225,
+                2
+              ],
+              "7": [
+                0.24375,
+                2
+              ],
+              "8": [
+                0.2625,
+                2
+              ],
+              "9": [
+                0.28125,
+                2
+              ],
+              "10": [
+                0.3,
+                2
+              ],
+              "11": [
+                0.315,
+                2
+              ],
+              "12": [
+                0.33,
+                2
+              ],
+              "13": [
+                0.345,
+                2
+              ],
+              "14": [
+                0.36,
+                2
+              ],
+              "15": [
+                0.375,
+                2
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hanya_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Netherworld Judgment": {
+          "variant1": {
+            "skillID": 121507,
+            "trigger": "SkillMaze",
+            "name": "Netherworld Judgment",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, applies Burden equivalent to that applied by the Skill to a random enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Hanya_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1215_basic_atk.png",
+        "skillRef": {
+          "skillName": "Oracle Brush",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1215_skill.png",
+        "skillRef": {
+          "skillName": "Samsara, Locked",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1215_ultimate.png",
+        "skillRef": {
+          "skillName": "Ten-Lords' Decree, All Shall Obey",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1215_talent.png",
+        "skillRef": {
+          "skillName": "Sanction",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1215_technique.png",
+        "skillRef": {
+          "skillName": "Netherworld Judgment",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Scrivener",
+        "icon": "icon/skill/1215_skilltree1.png",
+        "desc": "Allies triggering Burden's Skill Point recovery effect have their ATK increased by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.1,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Netherworld",
+        "icon": "icon/skill/1215_skilltree2.png",
+        "desc": "If the trigger count for the Burden's Skill Point recovery effect is #1[i] or lower when an enemy with Burden is defeated, then additionally recovers #2[i] Skill Point(s).",
+        "params": [
+          1,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Reanimated",
+        "icon": "icon/skill/1215_skilltree3.png",
+        "desc": "When Burden's Skill Point recovery effect is triggered, this character regenerates #1[i] Energy.",
+        "params": [
+          2
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1215.png",
+    "preview": "image/character_preview/1215.png",
+    "portrait": "image/character_portrait/1215.png",
+    "bannerOffsets": [
+      29.3,
+      11.9,
+      0.66,
+      29.3,
+      11.9,
+      0.66,
+      29.3,
+      11.9,
+      0.66
+    ],
+    "isBuffed": false
+  },
   "Huohuo": {
     "internalID": 1217,
     "name": "Huohuo",
