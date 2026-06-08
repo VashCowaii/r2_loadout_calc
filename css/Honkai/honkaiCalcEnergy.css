@@ -232,3 +232,14 @@
     background: linear-gradient(to right, transparent 5px,black 30px, transparent 150px);
 }
 
+
+
+.customEnergyBodyMarksIMAGEIcon {
+    height: 30px;
+    width:  30px;
+    object-fit: contain;
+    scale: 1;
+    /* background-color: black; */
+    /* border-radius: 50%; */
+}
+
