@@ -1,13 +1,14 @@
 const battleActions = {
     // updateSkillPoints(cost,battleData,generalInfo,skipConsume) {
-    updateSkillPoints(battleData,cost,sourceTurn,skipConsume,sourceString) {
+    updateSkillPoints(battleData,cost,sourceTurn,skipConsume,sourceString,pointsOffset) {
         let minimum = 0;
         let maximum = battleData.battleTable.SPMax;
         // let sourceTurn = generalInfo.sourceTurn;
         let charName = sourceTurn.properName;
 
         let oldSP = battleData.skillPointCurrent;
-        const proposedFinal = oldSP + cost;
+        const finalOffset = pointsOffset ?? 0;
+        const proposedFinal = oldSP + (cost + finalOffset);
         const proposedValue = Math.max(minimum,Math.min(maximum,proposedFinal));
         battleData.skillPointCurrent = skipConsume && proposedValue < oldSP ? oldSP : proposedValue;
         let newSP = battleData.skillPointCurrent;
@@ -29447,6 +29448,892 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Dan Heng • Imbibitor Lunae": {
+        logic(thisTurn,battleData) {
+            let actionUsed = false;
+            let currentSP = battleData.skillPointCurrent;
+            const statCalls = thisTurn.battleValues;
+            const minimum = currentSP>0 || statCalls.fakePoints>0;
+            const isEnhanced = statCalls.forceBasic;
+
+            if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {
+                return this.returnSkillCall;
+            }
+
+            const costOffset = statCalls.fakePointsUsed;
+            statCalls.fakePointsUsed = 0;
+            const enhancementLevel = statCalls.skillCounter;
+            statCalls.skillCounter = 0;
+
+            if (enhancementLevel) {
+                statCalls.forceBasic = false;
+                if (enhancementLevel >= 3) {
+                    const eba3 = this.returnBasicEnhCall3;
+                    eba3.pointsOffset = costOffset;
+                    return eba3;
+                }
+                else if (enhancementLevel >= 2) {
+                    const eba2 = this.returnBasicEnhCall2;
+                    eba2.pointsOffset = costOffset;
+                    return eba2;
+                }
+                else {
+                    const eba1 = this.returnBasicEnhCall;
+                    eba1.pointsOffset = costOffset;
+                    return eba1;
+                }
+            }
+
+            //reg basic
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: false,
+                points: 0, 
+                properName: thisTurn.properName,
+                useAnyTriggers: false,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.dhilSkillInstance, 
+                target: "self", 
+                isContinuousTurn: true,
+            }
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.dhilBasic, 
+                target: "enemy", 
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK
+            }
+            this.returnBasicCall.sourceTurn = thisTurn;
+
+            this.returnBasicEnhCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: -1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.dhilBasic1, 
+                target: "enemy", 
+                isContinuousTurnBREAK: true,
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK
+            }
+            this.returnBasicEnhCall.sourceTurn = thisTurn;
+
+            this.returnBasicEnhCall2 ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: -2, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.dhilBasic2, 
+                target: "enemy", 
+                isContinuousTurnBREAK: true,
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK
+            }
+            this.returnBasicEnhCall2.sourceTurn = thisTurn;
+
+            this.returnBasicEnhCall3 ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                isEnhanced: true,
+                points: -3, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.dhilBasic3, 
+                target: "enemy", 
+                isContinuousTurnBREAK: true,
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK
+            }
+            this.returnBasicEnhCall3.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            // "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "UltimateEnh": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            dhilBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dhilBasicREF ??= ATKObjects["Basic ATK"]["Beneficent Lotus"].variant1;
+
+                if (!ATKObjects.dhilBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.dhilBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.dhilBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            dhilBasic1(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dhilBasic1REF ??= ATKObjects["Basic ATK"]["Transcendence"].variant1;
+
+                if (!ATKObjects.dhilBasic1ATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.dhilBasic1ATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.dhilBasic1ATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            dhilBasic2(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dhilBasic2REF ??= ATKObjects["Basic ATK"]["Divine Spear"].variant1;
+
+                if (!ATKObjects.dhilBasic2ATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba2;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.dhilBasic2ATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.dhilBasic2ATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            dhilBasic3(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dhilBasic3REF ??= ATKObjects["Basic ATK"]["Fulgurant Leap"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.dhilBasic3ATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba3;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.dhilBasic3ATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.dhilE6BuffSheet = {
+                        "stats": [ResistanceImaginaryPEN],
+                        [ResistanceImaginaryPEN]: 0.20,
+                        "source": "E6",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.e6PEN,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let ATKObject = ATKObjects.dhilBasic3ATKOBJECT;
+                const e6BuffSheet = ATKObjects.dhilE6BuffSheet;
+                const battleValues = sourceTurn.battleValues;
+                let appliedE6 = false;
+
+                if (rank >= 6 && battleValues.e6UltStacks) {
+                    appliedE6 = true;
+                    e6BuffSheet.currentStacks = Math.min(3, battleValues.e6UltStacks);
+                    battleValues.e6UltStacks = 0;
+                    updateBuff(battleData,sourceTurn,e6BuffSheet);
+                }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                if (rank >= 6 && appliedE6) {
+                    removeBuff(battleData,sourceTurn,e6BuffSheet);
+                }
+            },
+            dhilUltimate(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+                const skillRef = ATKObjects.dhilUltimateREF ??= ATKObjects.Ultimate["Azure's Aqua Ablutes All"].variant1;
+
+                if (!ATKObjects.dhilUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realElationDMGKeys = keyShortcut(elationKeys,tags);
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.dhilUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: null,
+                    };
+                }
+                let ATKObject = ATKObjects.dhilUltimateATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                if (rank >= 2) {
+                    poke("dhilFakePointsGained",battleData,{pointsGained: 3,sourceString:"DHIL Ult + E2"});
+                    actionAdvance(1,sourceTurn,battleData,"DHIL E2 Post-Ult")
+                }
+                else {
+                    poke("dhilFakePointsGained",battleData,{pointsGained: 2,sourceString:"DHIL Ult"});
+                }
+
+                sourceTurn.ultyQueued = false;
+            },
+            dhilSkillInstance(battleData,target,sourceTurn) {
+                // const logicRef = turnLogic[sourceTurn.properName];
+                // const ATKObjects = logicRef.ATKObjects;
+                // const rank = sourceTurn.rank;
+                const battleValues = sourceTurn.battleValues;
+
+
+                if (battleValues.fakePoints) {
+                    poke("dhilFakePointsGained",battleData,{pointsGained: -1,sourceString:"Skill consumed Squama Sacrosancta"});
+                    battleValues.fakePointsUsed += 1;
+                }
+                battleValues.skillCounter += 1;
+                // "fakePoints": 0,
+
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point02.icon,sourceName: sourceTurn.properName, source:this.listenerName, bodyText: `DHIL BasicATK Enhancement +1`});
+                }
+
+                // const skillRef = ATKObjects.dhilSkillREF ??= ATKObjects.Skill["Dracore Libre"].variant1;
+                // const values = ATKObjects.dhilSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                
+                const currentSP = battleData.skillPointCurrent;
+                let validSPPool = currentSP + (battleValues.fakePoints - battleValues.skillCounter)
+
+                while (validSPPool && battleValues.skillCounter < 3) {
+                    if (battleValues.fakePoints) {
+                        poke("dhilFakePointsGained",battleData,{pointsGained: -1,sourceString:"Skill consumed Squama Sacrosancta -- cost offset by 1"});
+                        battleValues.fakePointsUsed += 1;
+                    }
+                    battleValues.skillCounter += 1;
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[sourceTurn.properName].traces.Point02.icon,sourceName: sourceTurn.properName, source:this.listenerName, bodyText: `DHIL BasicATK Enhancement +1`});
+                    }
+                     
+
+                    validSPPool = currentSP + (battleValues.fakePoints - battleValues.skillCounter);
+                }
+
+                sourceTurn.battleValues.forceBasic = true;
+            },
+            dhilTechnique(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.dhilTechniqueREF ??= ATKObjects.Technique["Heaven-Quelling Prismadrakon"].variant1;
+                let values = ATKObjects.dhilTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.dhilTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const actionTags = ["All","Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.dhilTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[2],
+                        },
+                        energy: null,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.dhilTechniqueATKObject
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            dhilTechnique2(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.dhilTechniqueREF ??= ATKObjects.Technique["Heaven-Quelling Prismadrakon"].variant1;
+                // let values = ATKObjects.dhilTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("dhilFakePointsGained",battleData,{pointsGained: 1,sourceString:"DHIL Technique"});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //skill point listener
+
+                    //trace star veil
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace jolt anew
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //attack count listener, which we'll prob shift to a hitenemy end listener instead
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+
+                    //extra skill point listener not sure yet
+
+
+
+                    //trace Aqua Reign
+                    let buffSheet = this.dhilCCRes ??= {
+                        "stats": [CrowdControlRES],
+                        [CrowdControlRES]: 0.35,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.ccRES,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    updateBuff(battleData,ownerTurn,buffSheet)
+
+                    if (rank >= 6) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
+                },
+                "target": "self",
+                "listenerName": "Sparxie Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+
+                            let ownerTurn = this.ownerTurn;
+                            updateEnergy(battleData,15,ownerTurn,false,"Trace: Star Veil")
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Trace Star Veil battlestart regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.targetTurn;
+    
+                            let buffSheet = this.geniusQUANTUMSHREDSHEET ??= {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.24,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.imaginary,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["All"],
+                            };
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = ownerTurn.buffsObject[buffName];
+    
+                            if (targetTurn.statTable[WeaknessImaginary] <= 0) {//if there is no imaginary weakness
+                                if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck);}//then remove the buff if we have it
+                                // else {return;}
+                            }
+                            else {//if weakness found, apply buff
+                                if (buffCheck) {return;}//if the owner already has the buff, then skip it so we don't reclutter the log 30k times
+                                
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Jolt Anew - Imaginary Weakness listener",
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate" && action != "BasicATK") {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            ownerTurn.battleValues.trackingHitCountActive = true;
+                            if (action === "BasicATK") {
+                                ownerTurn.battleValues.trackingHitCountActiveEBA = true;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Talent hit listener - tracking start on ability",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate" && action != "BasicATK") {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            ownerTurn.battleValues.trackingHitCountActive = false;
+                            if (action === "BasicATK") {
+                                ownerTurn.battleValues.trackingHitCountActiveEBA = false;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Talent hit listener - tracking end on ability",
+                    },
+                    {
+                        "trigger": "HitEnemyEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.trackingHitCountActive || generalInfo.hitType != "primary") {return;}
+                            //blast hits are NOT factored for the dmg bonus
+
+                            if (!ownerTurn.talentPostHitDMGSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+                                const rank = ownerTurn.rank;
+
+                                const skillRef = ATKObjects.dhilTalentREF ??= ATKObjects.Talent["Righteous Heart"].variant1;
+                                const values = ATKObjects.dhilTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                                const buffNames = logicRef.buffNames;
+                                ownerTurn.talentPostHitDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: values[0],
+                                    "source": "Talent",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.talentDMG,
+                                    "durationInTurn": 1,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 6 + (rank >= 1 ? 4 : 0),
+                                    "currentStacks": 1 + (rank >= 1 ? 1 : 0),
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+
+                            const buffSheet = ownerTurn.talentPostHitDMGSHEET;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Talent hit listener - posthit buff application",
+                    },
+                    {
+                        "trigger": "HitEnemyStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.trackingHitCountActiveEBA || generalInfo.hitType != "primary") {return;}
+                            //blast hits are NOT factored for the dmg bonus
+
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const targetHitCount = targetsGotHit[targetTurn.name];
+                            if (targetHitCount < 4) {return;}//only gain outroar on hit 4 and beyond, including hit 4
+
+                            if (!ownerTurn.skillPreHitCRITSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+                                const rank = ownerTurn.rank;
+
+                                const skillRef = ATKObjects.dhilSkillREF ??= ATKObjects.Skill["Dracore Libre"].variant1;
+                                const values = ATKObjects.dhilSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                                const buffNames = logicRef.buffNames;
+                                ownerTurn.skillPreHitCRITSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: values[0],
+                                    "source": "Skill",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.hit4CritDMG,
+                                    "durationInTurn": 1 + (rank >= 4 ? 1 : 0),
+                                    "duration": 1 + (rank >= 4 ? 1 : 0),
+                                    "AVApplied": 0,
+                                    "maxStacks": 4,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+
+                            const buffSheet = ownerTurn.skillPreHitCRITSHEET;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Talent hit listener - prehit buff application",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            if (sourceTurn.properName == ownerTurn.properName) {return;}//can't ever be his ults
+
+                            ownerTurn.battleValues.e6UltStacks += 1;
+
+                            if (battleData.isLoggyLogger) {
+                                logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `DHIL E6 Ally Ult count +1`});
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Talent hit listener - tracking end on ability",
+                    },
+                ],
+            },
+            {
+                "trigger": "dhilFakePointsGained",
+                condition(battleData,generalInfo) {
+                    // poke("dhilFakePointsGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.fakePoints;
+                    const maxValue = valuesRef.fakePointsMax;
+                    valuesRef.fakePoints = Math.min(maxValue,oldValue + pointsGained);
+
+                    const sourceString = generalInfo.sourceString
+                    if (pointsGained && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Squama Sacrosancta (DHIL): ${oldValue} --> ${valuesRef.fakePoints}/${maxValue} [${sourceString}]`});
+                    
+                        if (pointsGained > 0) {
+                            ownerTurn.dhilFakePointSum ??= 0;
+                            ownerTurn.dhilFakePointSum += valuesRef.fakePoints - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "dhilFakePointSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.fakePoints,
+                            currentSumValue: ownerTurn.dhilFakePointSum,
+                            currentAddedValue: valuesRef.fakePoints - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "DHIL fake skill point Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhilUltimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: this.target,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "DHIL - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.dhilTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "DHIL Technique",
+            "ownerTurn": {},
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.dhilTechnique2;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "DHIL Technique 2",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "trackingHitCountActive": false,
+            "trackingHitCountActiveEBA": false,
+            "fakePoints": 0,
+            "fakePointsMax": 3,
+            "fakePointsUsed": 0,
+            "skillCounter": 0,
+            "e6UltStacks": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "ccRES": "Aqua Reign (Trace)",
+            "imaginary": "Jolt Anew (Trace)",
+            "talentDMG": "Righteous Heart",
+            "hit4CritDMG": "Outroar (Skill)",
+            "e6PEN": "E6: Reign, Returned",
+        },
+        "characterValuesBattle": {},
+    },
     "Hook": {
         logic(thisTurn,battleData) {
             // let statCalls = thisTurn.battleValues;
@@ -43306,6 +44193,7 @@ const turnLogic = {
                 // eventTypeEnd: "BasicATKEnd",
                 actionCall: this.skillFunctions.sparxBasicEnhanced, 
                 target: "enemy", 
+                isContinuousTurnBREAK: true,
             }
             this.returnBasicEnhCall.sourceTurn = thisTurn;
         },
@@ -43949,7 +44837,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    ATKObjects.argentiTechATKObject = {
+                    ATKObjects.sparxTechniqueATKObject = {
                         multipliers: {
                             primary: null,
                             blast: null,
@@ -43965,7 +44853,7 @@ const turnLogic = {
                         compositeCacheTag
                     }
                 }
-                let ATKObject = ATKObjects.argentiTechATKObject
+                let ATKObject = ATKObjects.sparxTechniqueATKObject
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);

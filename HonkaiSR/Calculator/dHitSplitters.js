@@ -1052,6 +1052,227 @@ const hitSplitters = {
       }
     ],
   },
+  "Dan Heng • Imbibitor Lunae": {//DONE
+    "basic": [
+      {
+        "primary": {
+          "hitRatio": 0.3,
+          "energyRatio": 0.3,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+      },
+      {
+        "primary": {
+          "hitRatio": 0.7,
+          "energyRatio": 0.7,
+          "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "eba": [
+      {
+        "primary": {
+          "hitRatio": 0.33,
+          "energyRatio": 0.33,
+          "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+      },
+      {
+        "primary": {
+          "hitRatio": 0.33,
+          "energyRatio": 0.33,
+          "toughness": 20
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.34,
+          "energyRatio": 0.34,
+          "toughness": 20
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "eba2": [
+      {
+        "primary": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 30
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+      },
+      {
+        "primary": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 30
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 30
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 30
+        },
+        "blast": {
+          "hitRatio": 0.5,
+          "toughness": 10
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 30
+        },
+        "blast": {
+          "hitRatio": 0.5,
+          "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "eba3": [
+      {
+        "primary": {
+          "hitRatio": 0.142,
+          "energyRatio": 0.142,
+          "toughness": 40
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+      },
+      {
+        "primary": {
+          "hitRatio": 0.142,
+          "energyRatio": 0.142,
+          "toughness": 40
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.142,
+          "energyRatio": 0.142,
+          "toughness": 40
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.142,
+          "energyRatio": 0.142,
+          "toughness": 40
+        },
+        "blast": {
+          "hitRatio": 0.25,
+          "toughness": 20
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.142,
+          "energyRatio": 0.142,
+          "toughness": 40
+        },
+        "blast": {
+          "hitRatio": 0.25,
+          "toughness": 20
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.142,
+          "energyRatio": 0.142,
+          "toughness": 40
+        },
+        "blast": {
+          "hitRatio": 0.25,
+          "toughness": 20
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.148,
+          "energyRatio": 0.148,
+          "toughness": 40
+        },
+        "blast": {
+          "hitRatio": 0.25,
+          "toughness": 20
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "ult": [
+      {
+        "primary": {
+          "hitRatio": 0.3,
+          "energyRatio": 0.3,
+          "toughness": 20
+        },
+        "blast": {
+          "hitRatio": 0.3,
+          "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+      },
+      {
+        "primary": {
+          "hitRatio": 0.3,
+          "energyRatio": 0.3,
+          "toughness": 20
+        },
+        "blast": {
+          "hitRatio": 0.3,
+          "toughness": 20
+        },
+      },
+      {
+        "primary": {
+          "hitRatio": 0.4,
+          "energyRatio": 0.4,
+          "toughness": 20
+        },
+        "blast": {
+          "hitRatio": 0.4,
+          "toughness": 20
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "tech": [
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 0,
+          "toughness": 0
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+  },
   "Hook": {//DONE
     "basic": [
       {

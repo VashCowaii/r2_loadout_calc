@@ -3373,6 +3373,61 @@ const maslowCharactersDestruction = {
             addTeamWant: [],
         },
     },
+    "Dan Heng • Imbibitor Lunae": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","DamageBreak","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","SPDFlat","EffectRES","HP%"],
+        0: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: [],
+            givesTeam: [],
+            wants: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Imaginary","Skill","Ultimate","SkillPoints",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersHarmony = {
     //HARMONY
