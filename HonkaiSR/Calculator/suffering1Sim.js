@@ -1370,7 +1370,7 @@ const sim = {
                 }
             }
 
-            if (cost) {updateSkillPoints(battleData,cost,sourceTurn,false,currentAction);}//costs are applied as the action is launched
+            if (cost) {updateSkillPoints(battleData,cost,sourceTurn,false,currentAction,designatedAction.pointsOffset);}//costs are applied as the action is launched
             //aight so I always thought costs were applied before the action(skill usage) and gains were applied AFTER but nope
             //just confirmed with solo archer in a calyx, if he starts with a basic attack that would put him to 4SP total, even before the attack lands he gets that crit dmg buff from guardian. Fuck me man. At least this simplifies the code.
             sourceTurn.actionAssigned = true;
@@ -1381,7 +1381,7 @@ const sim = {
             // const typeEnd = designatedAction.eventTypeEnd;
 
             const isAbility = designatedAction.isAbility;
-            if (isAbility && !isContinuousTurn) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
+            if (isAbility && (!isContinuousTurn || designatedAction.isContinuousTurnBREAK)) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
             chainedAttackRef = actionCall(battleData,designatedAction.target,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
             //right now netherwing is the only entity in the entire calc that is going to use chainedAttackRef as an actual ability param
             //if this ever changes I might wanna go back and add it into every ability's overarching param list just to keep things uniform, but for now fuck it.

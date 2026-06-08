@@ -153,6 +153,23 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+    "Dan Heng • Imbibitor Lunae": [
+        {valueName: "Squama Sacrosancta", refName: "fakePoints", isBattleValue: true,summaryValue: "dhilFakePointSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        },
+        {valueName: "Squama Sacrosancta Max", refName: "fakePointsMax", isBattleValue: true,hide: true},
+        {valueName: "EBA Enhancement Level", refName: "skillCounter", isBattleValue: true,hide: true},
+        {valueName: "E6 Ult Stacks", refName: "e6UltStacks", isBattleValue: true, requiresEidolon: 6},
+
+
+        // {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
+        //     isMemoSpriteDisplay: true,
+        // },
+        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
+        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
+        // },
+    ],
 
     //HUNT
     "Archer": [//tracker done
@@ -413,6 +430,9 @@ const permaConditionsTextLibrary = {
     "atLeast1SPORFree": "Skill Points: Current >= 1 OR Free Skill Cast",
     "noTerritory": "No Other Territory Active",
 
+    "atLeast1SPORFakeSP": "Skill Points: Current >= 1 OR Fake Skill Points >= 1",
+    "enhancementLimit3": "Enhancement Level < 3",
+
     "mortenaxBladeSkill": "Zone Active<br>HPCurrent > 1",
 
     //TARGET DEFAULT EXPLANATIONS
@@ -484,6 +504,14 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Firefly": defaultStandardAbilityDisplayWarnings,
+    "Dan Heng • Imbibitor Lunae": {
+        hasEnhancedState: false,
+        "Skill": "Skill conditions are evaluated for EVERY enhancement.",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFakeSP,permaConditionsTextLibrary.enhancementLimit3],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
     
     //HARMONY
     "Sunday": defaultStandardAbilityDisplayWarnings,
@@ -1649,6 +1677,25 @@ const defaultConditions = {
             ]
         },
         "validTargetChecks": []
+    },
+    "Dan Heng • Imbibitor Lunae": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Turn",
+                    "target": "Self",
+                    "targetType": "Character",
+                    "phase": "Post-Action",
+                    "state": false
+                }
+            ]
+        }
     },
     "Hook": {
         "hasEnhancedState": true,
