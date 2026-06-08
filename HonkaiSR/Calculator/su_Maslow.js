@@ -4045,6 +4045,61 @@ const maslowCharactersErudition = {
             addTeamWant: [],
         },
     },
+    "Jing Yuan": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["SummonSource","FUASource"],
+            givesTeam: ["SummonSource","FUASource"],
+            wants: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Skill","Ultimate",...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersHunt = {
     "Topaz & Numby": {
