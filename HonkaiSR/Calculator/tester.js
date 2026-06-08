@@ -4701,7 +4701,7 @@ const userTriggers = {
                                                 // marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
                                                 // style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
 
-                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? entry.imageFilled : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>`
+                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? entry.imageFilled : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon"/>`
                                             }
                                             else if (markType === "circle") {
                                                 marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
