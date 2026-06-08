@@ -66,6 +66,8 @@ const superGlobal = {
         return targetOverride ?? battleData.nameBasedTurns.char1;
     },
     createEntityCache() {//got tired of needing to ctrl f on this stuff, just making it a uniform function and idk why I didn't do this sooner lmao
+
+        //REVISIT cacheTagFamilies in statListData if you EVER change these
         return {
             "UpdateStatDamage": {
                 //compositeCacheTag will define itself here when used, and the tag will be the key

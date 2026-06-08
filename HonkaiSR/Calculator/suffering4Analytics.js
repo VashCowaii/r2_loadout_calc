@@ -3891,15 +3891,16 @@ const graphs = {
         }
     },
     summonCustomImages: {
-        "Numby": "icon/avatar/UI_Message_Contacts_Zhangzhang.png",
+        "Numby": "misc/topaz/1112_BE.png",
         "Netherwing: Pollux": "misc/11407B.png",
         "Garmentmaker": "icon/avatar/UI_Message_Contacts_AglaeaServant.png",
         "Evey": "misc/11413B.png",
         "Little Ica": "misc/11409B.png",
         "Mem": "misc/18007B.png",
-        "Souldragon": "icon/skill/1414_skill.png",
+        "Souldragon": "misc/dhpt/1414_BE.png",
         "Demiurge": "misc/11415B.png",
         "Aha Instant": "BEicons/HoshinoKami_007.png",
+        "Lightning Lord": "misc/jingYuan/1204Shadow.png",
     },
     enemyCustomImages: {
         "default": "misc/glorp.png",

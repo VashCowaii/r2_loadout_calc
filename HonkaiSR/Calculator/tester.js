@@ -1572,7 +1572,7 @@ const customMenu = {
 
         // copyToClipboard
     },
-    createCharacterStatScreenBattleLogged(actionIndex) {
+    createCharacterStatScreenBattleLogged(actionIndex,isMemoInspect) {
         // globalRecords.battleData
 
         // battleData.battleLog.push({logType: "HitEnemy", hitType: "Single Target", target: enemyPrimary.properName, source:charName, hitData});
@@ -1605,14 +1605,21 @@ const customMenu = {
             //     <div class="buffShieldHealthValueDisplay">HP: ${turnData.currentHP.toLocaleString()}/${turnData.maxHP.toLocaleString()}</div>
             // </div>`
             let totalPlayerStringer = ``;
-            let playerBuffsStringer = `<details class="actionDetailBodyDetailExpandBuffsBox">
-                <summary class="actionDetailBodyDetailExpandHeader clickable">Buffs/Debuffs</summary>`;
+
+            let playerBuffsStringer = "";
+            let buffOrOtherCounter = 0;
+
+            let debuffStringerPRE = "";
+            let debuffStringer = "";
+            let debuffCounter = 0;
 
 
             for (let buffEntry in currentBuffsPlayer) {
                 let currentBuff = currentBuffsPlayer[buffEntry];
                 if (!currentBuff) {continue;}
                 let buffStringer = "";
+
+                const isDebuff = currentBuff.isDebuff;
 
                 // console.log(currentBuff)
                 // shieldRemaining,shieldCap
@@ -1691,7 +1698,7 @@ const customMenu = {
                     // if (!currentBuff.actionTags) {buffStringer += `<div class="actionDetailBody">Regular Stats:</div>`;}
                     
                     if (currentBuff.actionTags) {
-                        let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}`
+                        let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}${currentBuff.isSourceSpecific ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}`
 
                         taggerString += `</div>`
                         buffStringer += taggerString;
@@ -1702,15 +1709,6 @@ const customMenu = {
                         adjustedStatsObject[statEntry] = currentBuff[statEntry];
                     }
                     buffStringer += customHTML.createAlternatingStatRows(currentBuff.stats,adjustedStatsObject,null,null,true);
-                }
-                if (currentBuff.statsOnHit) {
-                    buffStringer += `<div class="actionDetailBody">On-Hit Stats:</div>`
-                    // let displayOrder = Object.keys(currentBuff.statsOnHit);
-                    let adjustedStatsObject = {};
-                    for (let statEntry of currentBuff.statsOnHit) {
-                        adjustedStatsObject[statEntry] = currentBuff[statEntry];
-                    }
-                    buffStringer += customHTML.createAlternatingStatRows(currentBuff.statsOnHit,adjustedStatsObject,null,null,true);
                 }
                 if (currentBuff.isFinalMulti) {
                     if (currentBuff.actionTags) {
@@ -1731,9 +1729,25 @@ const customMenu = {
                 
                 
                 buffStringer += `</details>`;
-                playerBuffsStringer += buffStringer;
+
+                if (isDebuff) {
+                    debuffStringer += buffStringer;
+                    debuffCounter++;
+                }
+                else {
+                    playerBuffsStringer += buffStringer;
+                    buffOrOtherCounter++
+                }
             }
-            playerBuffsStringer += `</details>`;
+
+            if (playerBuffsStringer) {
+                playerBuffsStringer = `<details class="actionDetailBodyDetailExpandBuffsBox">
+                <summary class="actionDetailBodyDetailExpandHeader clickable">Buffs/Other <span class="actionDetailBodyBuffCOUNTER">${buffOrOtherCounter}</span></summary>` + playerBuffsStringer + `</details>`;
+            }
+            if (debuffStringer) {
+                debuffStringer = `<details class="actionDetailBodyDetailExpandBuffsBoxDEBUFF">
+                <summary class="actionDetailBodyDetailExpandHeader clickable">Debuffs <span class="actionDetailBodyDebuffCOUNTER">${debuffCounter}</span></summary>` + debuffStringer + `</details>`;
+            }
 
             let playerStatStringer = `
                 <details class="actionDetailBodyDetailExpand">
@@ -1744,38 +1758,28 @@ const customMenu = {
             playerStatStringer += customHTML.createAlternatingStatRows(greatIndexArrayOrder,turnData.statTable,null,null,true);
             playerStatStringer += `</details>`;
 
-            playerStatStringerONHIT = "";
-            if (turnData.statTableONHIT) {
-                playerStatStringerONHIT = `
-                    <details class="actionDetailBodyDetailExpand">
-                        <summary class="actionDetailBodyDetailExpandHeader clickable">Stat Totals (ON-HIT)</summary>
-                        <div class="actionDetailBody">On-Hit bonuses can apply to DMG when attacking enemies, but do not actually apply to the character.</div>
-                    `;
-                let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,turnData.statTableONHIT,null,null,true);
-                playerStatStringerONHIT += testString;
-                playerStatStringerONHIT += `</details>`;
-                if (testString === "") {playerStatStringerONHIT = "";}
-                // console.log(playerStatStringerONHIT)
-            }
-
-            const taggers = turnData.tagSpecific;
-            let tagSpecificStringer = "";
-            if (Object.keys(taggers).length) {
-                for (let actionTag of Object.keys(taggers)) {
-                    const currentTable = taggers[actionTag];
-                    newTagString = `
-                    <details class="actionDetailBodyDetailExpand">
-                        <summary class="actionDetailBodyDetailExpandHeader clickable">Action-Based: ${actionTag}</summary>
-                        <div class="actionDetailBody">Action-based bonuses exist outside the character stat sheet, and apply only to their specifc action types.</div>
-                    `;
-                    let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,currentTable,null,null,true);
-                    newTagString += testString;
-                    newTagString += `</details>`;
-                    if (testString === "") {newTagString = "";}
-                    tagSpecificStringer += newTagString;
+            function getActionBasedTagStats(taggers) {
+                let tagSpecificStringer = "";
+                if (Object.keys(taggers).length) {
+                    for (let actionTag of Object.keys(taggers)) {
+                        const currentTable = taggers[actionTag];
+                        newTagString = `
+                        <details class="actionDetailBodyDetailExpand">
+                            <summary class="actionDetailBodyDetailExpandHeader clickable">Action-Based: ${actionTag}</summary>
+                            <div class="actionDetailBody">Action-based bonuses exist outside the character stat sheet, and apply only to their specifc action types.</div>
+                        `;
+                        let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,currentTable,null,null,true);
+                        newTagString += testString;
+                        newTagString += `</details>`;
+                        if (testString === "") {newTagString = "";}
+                        tagSpecificStringer += newTagString;
+                    }
                 }
+                return tagSpecificStringer;
             }
 
+            let tagSpecificStringer = getActionBasedTagStats(turnData.tagSpecific);
+            
 
             let characterSpecificStringer = "";
             for (let enemy in battleData.enemyBasedTurns) {
@@ -1789,11 +1793,10 @@ const customMenu = {
                             <summary class="actionDetailBodyDetailExpandHeader clickable">Target-Based: ${enemyName}</summary>
                             <div class="actionDetailBody">Target specific bonuses are bonuses that only take effect when the target of an attack/heal is the target listed above.</div>
                         `;
-                    let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,refChecker,null,null,true);
+                    let testString = getActionBasedTagStats(refChecker);
                     newStringer += testString;
                     newStringer += `</details>`;
                     if (testString === "") {newStringer = "";}
-                    // console.log(playerStatStringerONHIT)
                 }
                 characterSpecificStringer += newStringer;
             }
@@ -1808,16 +1811,15 @@ const customMenu = {
                             <summary class="actionDetailBodyDetailExpandHeader clickable">Source-Based: ${allyName}</summary>
                             <div class="actionDetailBody">Source-specific bonuses are bonuses that only take effect when the source of an attack/heal is the name listed above.</div>
                         `;
-                    let testString = customHTML.createAlternatingStatRows(greatIndexArrayOrder,refChecker,null,null,true);
+                    let testString = getActionBasedTagStats(refChecker);
                     newStringer += testString;
                     newStringer += `</details>`;
                     if (testString === "") {newStringer = "";}
-                    // console.log(playerStatStringerONHIT)
                 }
                 characterSpecificStringer += newStringer;
             }
 
-            totalPlayerStringer += playerBuffsStringer + playerStatStringer + playerStatStringerONHIT + tagSpecificStringer + characterSpecificStringer;
+            totalPlayerStringer += playerBuffsStringer + debuffStringer + playerStatStringer + tagSpecificStringer + characterSpecificStringer;
             returnString += totalPlayerStringer;
             return returnString;
         }
@@ -1825,6 +1827,12 @@ const customMenu = {
         // console.log(actionIndex,currentAction)
         if (currentAction.logType === "StartTurn") {
             let playerData = JSON.parse(currentAction.turnRef);
+            if (isMemoInspect) {
+                const memoKey = playerData.memospriteEventRef;
+                const memoTurn = playerData[memoKey];
+                playerData = memoTurn;
+            }
+
             readSelection("customMenuSearchTitle").innerHTML = "Turn Start";
 
             let sourceString = getStatsAndBuffsDisplay(playerData,playerData.properName);
@@ -4608,20 +4616,47 @@ const userTriggers = {
                     const isEvent = turnRef.isUniqueEvent;
                     const isMemo = isEvent && turnRef.isMemosprite;
 
+
+                    function getRequiredDisplayValue(entry,customValues,turnRef) { //customValues[entry.displayRequiresIndex]
+                        const valueActual = entry.isBattleValue ? turnRef.battleValues[entry.refName] : turnRef[entry.refName];
+                        let valueAdjusted = null;
+                        const typeOfValue = typeof valueActual;
+
+                        if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
+                        else {valueAdjusted = valueActual;}
+
+                        if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
+
+                        return valueAdjusted;
+                    }
+
                     let customValuesString = "";
                     if (!isEnemy && !turnRef.isUniqueEvent) {
                         const customValues = customDisplayValuesLog[turnRef.properName];
                         if (customValues) {
                             for (let entry of customValues) {
-                                const valueActual = entry.isBattleValue ? turnRef.battleValues[entry.refName] : turnRef[entry.refName];
-                                let valueAdjusted = null;
-                                const typeOfValue = typeof valueActual;
-
-                                if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
-                                else {valueAdjusted = valueActual;}
-
-                                if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
+                                if (entry.hide) {continue;}
                                 if (entry.requiresEidolon && turnRef.rank < entry.requiresEidolon) {continue;}
+
+                                let valueAdjusted = getRequiredDisplayValue(entry,customValues,turnRef);
+
+                                const requiresIndex = entry.displayRequiresIndex != undefined;
+                                let requiredIndexValue = requiresIndex ? getRequiredDisplayValue(customValues[entry.displayRequiresIndex],customValues,turnRef) : null;
+                                if (requiresIndex) {
+                                    let valueAdjusted = requiredIndexValue;
+
+                                    if (entry.displayRequiresType) {
+                                        const displayRequiresType = entry.displayRequiresType;
+                                        if (displayRequiresType === "boolean") {
+                                            const displayRequiresBoolean = entry.displayRequiresBoolean;
+                                            if (valueAdjusted !== displayRequiresBoolean) {continue;}
+                                        }
+                                    }
+                                    // else if (valueAdjusted !== true) {continue;}
+                                }
+
+                                // {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
+                                //     isMemoSpriteDisplay: true,displayRequiresIndex
 
                                 if (entry.isMemoSpriteDisplay) {
                                     if (valueAdjusted == true) {
@@ -4635,10 +4670,10 @@ const userTriggers = {
                                         const rotation = memoHP * 2 * 67 - 67;
                                         customValuesString += `<div class="customEnergyMemoBoxBar">
                                             <div class="memoHPBar">
-                                                <div class="memoHPShutter" style="transform:translate(000px,0%) rotate(${rotation}deg) translate(100px,0%);"></div>
+                                                <div class="memoHPShutter" style="transform:translate(0px,0%) rotate(${rotation}deg) translate(100px,0%);"></div>
                                             </div>
-                                            <div class="customEnergyMemoBoxImageBox">
-                                                <img src="/HonkaiSR/${memoTurn.eventImage}" class="customEnergyMemoBoxImage"/>
+                                            <div class="customEnergyMemoBoxImageBox clickable">
+                                                <img src="/HonkaiSR/${memoTurn.eventImage}" class="customEnergyMemoBoxImage" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
                                             </div>
                                         </div>`
                                     }
@@ -4652,21 +4687,40 @@ const userTriggers = {
                                     
                                 }
                                 else if (entry.customDisplay) {
-                                    const markMax = entry.markMax;
-                                    let marksStringer = "";
-                                    for (let i=1;i<=markMax;i++) {
-                                        const isFilled = valueAdjusted >= i;
-                                        // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
-                                        const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
-                                        marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
-                                        style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+                                    const customDisplay = entry.customDisplay;
+                                    if (customDisplay === "marks") {
+                                        const markMax = entry.markMax;
+                                        let marksStringer = "";
+                                        for (let i=1;i<=markMax;i++) {
+                                            const isFilled = valueAdjusted >= i;
+                                            // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
+                                            const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
+                                            marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
+                                            style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
 
-                                        
-                                        
-                                        // customEnergyBodyMarksCIRCLE
+                                            // customEnergyBodyMarksCIRCLE
+                                        }
+
+                                        customValuesString += `<div class="customEnergyBodyMarksBar">${marksStringer}</div>`
                                     }
+                                    else if (customDisplay === "progress") {
+                                        const customDisplayType = entry.customDisplayType;
+                                        if (customDisplayType === "circle") {
+                                            const markMax = entry.markMax ?? (requiresIndex ? requiredIndexValue : null);
+                                            const markFillColor = specialEnergyData[turnRef.element].energyColor1;
 
-                                    customValuesString += `<div class="customEnergyBodyMarksBar">${marksStringer}</div>`
+                                            const fillProgress = Math.min(100,Math.max(1,(valueAdjusted / markMax) * 100));
+
+                                            customValuesString += `<div class="customEnergyBodyPROGRESSBar">
+                                                <div class="customEnergyBodyMarksCIRCLEPROGRESS"
+                                                    style="background:conic-gradient(${markFillColor} 0 ${fillProgress}%,#3333337c ${fillProgress}% 100%);">
+                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                </div>
+                                                ${valueAdjusted} / ${markMax} ${entry.valueName}
+                                            </div>`
+                                        }
+                                    }
+                                    
                                 }
                                 else {
                                     customValuesString += `<div class="actionDetailBody">${entry.valueName}: ${valueAdjusted}</div>`
@@ -5143,24 +5197,6 @@ const userTriggers = {
                     }
                     // DMGTotalEnd,DMGTotalAVG,DMGOverkill,averaged
                     else if (action.hitType && action.hitType === "DOT") {
-                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                        //     <div class="actionDetailBodyInner">${action.source} ${action.enemyIsDead ? "[KILL] " : ""}[DOT] ${colorOpening}[${hitData.element}]${colorClose} - DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
-                        // </div>`;
-
-                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                            
-                        //     ${action.isBreakDOT ? `<img src="${propertyImagePaths.Break.icon}" class="characterDisplayLogStatIconPrefix"/>` : ""}
-                        //     <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconPrefix"/>
-                        //     <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
-                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-                        //     <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                        //         <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
-                        //     </div>
-                        //     <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose}) --> ${action.target}</div>
-                        // </div>`;
-
-
 
                         returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
                             
@@ -5174,6 +5210,7 @@ const userTriggers = {
                                     <div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${hitSourceNumber}</div>` :
                                 `<img src="/HonkaiSR/${characters[action.source]?.icon ?? graphs.summonCustomImages[action.source]}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>`}
                             </div>
+                            ${hitData.buffDisplayIcon ? `<img src="/HonkaiSR/${hitData.buffDisplayIcon}" class="characterDisplayLogStatIconCenter"/>` : ""}
                             <img src="/HonkaiSR/misc/Icon_DoT.png" class="characterDisplayLogStatIconCenter"/>
                             <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                                 ${action.target.toLowerCase().includes("enemy") ? `
@@ -5183,25 +5220,6 @@ const userTriggers = {
                             </div>
                             <div class="actionDetailBodyInner">${action.enemyIsDead ? "[KILL] " : ""} DMG:${colorOpening}${hitData.DMGTotalEnd.toLocaleString()}${colorClose} (AVG:${colorOpening}${hitData.DMGTotalAVG.toLocaleString()}${colorClose})</div>
                         </div>`;
-
-
-                        
-
-
-
-                        // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
-                        //     <img src="/HonkaiSR/misc/${elementToDotImage[hitData.element]}" class="characterDisplayLogStatIcon"/>
-
-                            
-
-                        //     <div class="characterSearchButtonDMGDetails clickable" id="" onclick="customMenu.createCharacterStatScreenBattleLogged(${newIndex})">Details</div>
-
-                            // <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
-                            //     <img src="/HonkaiSR/${characters[action.source].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
-                            // </div>
-
-                        //     <div class="actionDetailBodyInner">${action.sourceString ? `[${action.sourceString}] ` : ""} ${action.enemyIsDead ? "[KILL] " : ""} DMG: ${colorOpening}${hitData.DMGTotalEndBreak.toLocaleString()}${colorClose} --> ${action.target}</div>
-                        // </div>`;
                     }
                     else {
                         // returnString = `<div class="actionDetailBody" ${action.enemyIsDead ? `style="color:lightcoral"` : ""}>
