@@ -217,11 +217,6 @@ const customDisplayValuesLog = {
             progressIcon: characters["Mortenax Blade"].traces.Point04.icon
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
-
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
 
     //PRESERVATION
@@ -321,6 +316,26 @@ const customDisplayValuesLog = {
         {valueName: "Talent Stacks", refName: "apotheosisStacks", isBattleValue: true},
     ], 
     "Anaxa": [],
+    "Jing Yuan": [//tracker done
+        // valuesRef.prana;
+        // const maxValue = valuesRef.pranaMax;
+        {valueName: "Prana", refName: "prana", isBattleValue: true,summaryValue: "jingYuanPranaSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: characters["Jing Yuan"].traces.Point04.icon
+        },
+        {valueName: "Prana Max", refName: "pranaMax", isBattleValue: true,hide: true},
+
+        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        
+
+        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
+        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
+        // },
+    ],
     
     //ABUNDANCE
     "Gallagher": [//prob no tracker needed
@@ -3255,6 +3270,17 @@ const defaultConditions = {
         },
     },
     "Anaxa": {
+        hasEnhancedState: false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
+    },
+    "Jing Yuan": {
         hasEnhancedState: false,
         "Skill": {
             "type": "AND",

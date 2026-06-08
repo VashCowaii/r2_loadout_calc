@@ -1236,6 +1236,69 @@ const hitSplitters = {
       },
     ],
   },
+  "Jing Yuan": {//
+    "basic": [
+      {
+        "primary": {
+          "hitRatio": 0.45,
+          "energyRatio": 0.45,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "primary": {
+          "hitRatio": 0.55,
+          "energyRatio": 0.55,
+          "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "skill": [
+      {
+        "all": {
+            "hitRatio": 0.4,
+            "energyRatio": 0.4,
+            "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "all": {
+            "hitRatio": 0.3,
+            "energyRatio": 0.3,
+            "toughness": 10
+        },
+      },
+      {
+        "all": {
+            "hitRatio": 0.3,
+            "energyRatio": 0.3,
+            "toughness": 10
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "ult": [
+      {
+        "all": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "passive": [],
+  },
 
   //REMEMBRANCE
   "Aglaea": {//DONE
@@ -1593,7 +1656,7 @@ const hitSplitters = {
       }
     ],
   },
-  "Castorice": {
+  "Castorice": {//DONE
     "basic": [
       {
         "primary": {

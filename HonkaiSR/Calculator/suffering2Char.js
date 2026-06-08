@@ -1939,7 +1939,7 @@ const battleActions = {
         // ElationPercentOverride
         
         
-        const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
+        const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag,hitType};
         
         poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
@@ -3693,6 +3693,42 @@ const battleActions = {
             }
             else if (atkEntry.blast) {
                 //TODO: bounce logic on a blast type bounce, that could be weird
+
+                const enemyPositions = battleData.enemyPositions;
+                for (let i=0;i<bounceCount;i++) {
+                    if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
+                    const currentEnemy = bounceOrder[currentEnemyIndex];
+                    currentEnemyIndex++;
+                    if (!enemyPositions.length || battleData.battleIsOver) {break;}
+                    if (currentEnemy === undefined) {continue;}
+
+                    if (currentEnemy.isDead) {
+                        i--;
+                        continue;
+                    }//skip dead bois
+
+                    hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+                    totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+
+
+                    if (!atkEntry.blast) {continue;}
+                    
+
+                    let blastTargetArray = [];
+                    const primaryTargetIndex = enemyPositions.indexOf(currentEnemy);
+
+                    const blast1 = enemyPositions[primaryTargetIndex-1];
+                    if (blast1) {blastTargetArray.push(blast1)}
+                    const blast2 = enemyPositions[primaryTargetIndex+1];
+                    if (blast2) {blastTargetArray.push(blast2)}
+
+                    if (blastTargetArray.length) {
+                        totalHits += blastTargetArray.length;
+                        for (let enemyEntry of blastTargetArray) {
+                            hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo,isLastHit,isBounce,blastLength+1);
+                        }
+                    }
+                }
             }
             else {
                 for (let i=0;i<bounceCount;i++) {
@@ -41304,6 +41340,856 @@ const turnLogic = {
             "anaxaLightning": "Implant Lightning (Anaxa)",
             "anaxaPhysical": "Implant Physical (Anaxa)",
             "anaxaQuantum": "Implant Quantum (Anaxa)",
+        },
+        "characterValuesBattle": {},
+    },
+    "Jing Yuan": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                return skillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            const call1 = this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: true,
+                isAbility: true,
+                points: -1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.jingYuanSkill, 
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.Skill,
+                target: "enemy",
+            }
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.jingYuanBasic, 
+                poolKey: turnLogic[thisTurn.properName].abilityTargetPools.BasicATK,
+                target: "enemy",
+            }
+            call2.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "FUA": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            jingYuanBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.jingYuanBasicREF ??= ATKObjects["Basic ATK"]["Glistening Light"].variant1;
+
+                if (!ATKObjects.jingYuanBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    
+                    ATKObjects.jingYuanBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: true,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.jingYuanBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            jingYuanSkill(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const battleValues = sourceTurn.battleValues;
+
+                let skillRef = ATKObjects.jingYuanSkillREF ??= ATKObjects["Skill"]["Rifting Zenith"].variant1;
+                
+
+                if (!ATKObjects.jingYuanSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = ATKObjects.jingYuanSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.jingYuanSkillATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.jingYuanTraceSkillCRITSHEET = {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.10,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.traceSkillCrit,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                }
+                let ATKObject = ATKObjects.jingYuanSkillATKOBJECT;
+
+                poke("jingYuanGainPrana",battleData,{pointsGained: 2,sourceString:"Jing Yuan Skill"});
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                //TODO: strictly speaking this is actually a chained attack since the energy gains of hits 2 and 3 come after the hits instead of before
+                //which is wonky as hell but w/e
+
+                const buffSheet = ATKObjects.jingYuanTraceSkillCRITSHEET;
+                updateBuff(battleData,sourceTurn,buffSheet);
+
+                // if (isEnhanced) {
+                //     valuesRef.bonanzaStacks -= 1;
+                //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Numby Action", bodyText: `Windfall Bonanza Stacks: ${valuesRef.bonanzaStacks+1} --> ${valuesRef.bonanzaStacks}`});}
+                //     valuesRef.isBonanzaActive = valuesRef.bonanzaStacks>0 ? true : false;
+                //     if (!valuesRef.isBonanzaActive) {
+                //         const buffName = logicRef.buffNames.bonanza;
+                //         removeBuff(battleData,sourceTurn,sourceTurn.buffsObject[buffName]);
+                //     }
+                //     updateEnergy(battleData,10,sourceTurn,false,"Stonks Market");
+                // }
+                // if (sourceTurn.rank>=2) {updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
+            },
+            lightningLordTurnAttack(battleData,eventTurn) {
+                poke("JingYuanFUAQueue",battleData,{eventTurn},null);
+            },
+            lightningLordTurnAttackAction(battleData,targetTurn,sourceTurn) {
+                // const sourceTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+    
+                let skillRef = ATKObjects.jingYuanTalentREF ??= ATKObjects["Talent"]["Prana Extirpated"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.jingYuanTalentATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","FUA","Attack","Summon"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.jingYuanTalentATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        instanceTag: "JingYuanBouncyBouncer",
+                        bounceData: {
+                            multi: values[1],
+                            bounceCount: 3,
+                            energy: rank >= 4 ? 2 : null,
+                            hitSplit: {
+                                "primary": {
+                                    "hitRatio": 1,
+                                    "energyRatio": 1,
+                                    "toughness": 5
+                                },
+                                "blast": {
+                                    "hitRatio": 1 * values[4] + (rank >= 1 ? 0.25 : 0),
+                                },
+                                "all": null,
+                                "allEnemiesHit": null,
+                                "unknownTypers": false
+                            }
+                        }
+                    }
+
+                    ATKObjects.jingYuanTraceCRITDAMAGESHEET = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 0.25,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.traceFUACrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    ATKObjects.jingYuanE2SHEET = {
+                        "stats": null,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e2Sheet,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                }
+                let ATKObject = ATKObjects.jingYuanTalentATKOBJECT;
+                const battleValues = sourceTurn.battleValues;
+
+                const pranaCount = battleValues.prana;
+                ATKObject.bounceData.bounceCount = pranaCount;
+                const buffSheet = ATKObjects.jingYuanTraceCRITDAMAGESHEET;
+
+                let had6OrMore = false;
+                if (pranaCount >= 6) {
+                    had6OrMore = true;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                if (had6OrMore) {
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                }
+                poke("jingYuanGainPrana",battleData,{pointsGained: -pranaCount,sourceString:"Lightning Lord Hit-Count Reset"});
+
+                if (rank >= 2) {
+                    const placeholderSheet = ATKObjects.jingYuanE2SHEET;//this is a placeholder, the real dmg check is inside the e2 passive listener
+                    updateBuff(battleData,sourceTurn,placeholderSheet);
+
+                    if (rank >= 6) {
+                        const buffName = logicRef.buffNames.e6Vuln;
+                        const enemyPositions = battleData.enemyPositions;
+
+                        for (let enemy of enemyPositions) {
+                            const buffCheck = enemy.buffsObject[buffName];
+                            if (buffCheck) {
+                                removeBuff(battleData,enemy,buffCheck);
+                            }
+                        }
+                    }
+                }
+            },
+            jingYuanUltimate(battleData,sourceTurn,target) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const battleValues = sourceTurn.battleValues;
+
+                let skillRef = ATKObjects.jingYuanUltimateREF ??= ATKObjects["Ultimate"]["Lightbringer"].variant1;
+
+                if (!ATKObjects.jingYuanUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.jingYuanUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.jingYuanUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    // ATKObjects.jingYuanTraceSkillCRITSHEET = {
+                    //     "stats": [CritRateBase],
+                    //     [CritRateBase]: 0.10,
+                    //     "source": "Trace",
+                    //     "sourceOwner": sourceTurn.properName,
+                    //     "buffName": logicRef.buffNames.traceSkillCrit,
+                    //     "durationInTurn": 3,
+                    //     "duration": 2,
+                    //     "AVApplied": 0,
+                    //     "maxStacks": 1,
+                    //     "currentStacks": 1,
+                    //     "decay": false,
+                    //     "expireType": "EndTurn",
+                    // }
+                }
+                let ATKObject = ATKObjects.jingYuanUltimateATKOBJECT;
+
+                
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                poke("jingYuanGainPrana",battleData,{pointsGained: 3,sourceString:"Jing Yuan Ultimate"});
+
+                // const buffSheet = ATKObjects.jingYuanTraceSkillCRITSHEET;
+                // updateBuff(battleData,sourceTurn,buffSheet);
+
+                sourceTurn.ultyQueued = false;
+            },
+            jingYuanTechnique(battleData,target,sourceTurn) {
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"Technique"});}
+
+
+                poke("jingYuanGainPrana",battleData,{pointsGained: 3,sourceString:"Jing Yuan Technique"});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+
+                    //trace savant
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //the starting prana count is by default, it does NOT factor for battlestart gain or for LL speed bonuses
+
+                    // e2
+                    if (rank >= 2) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    }
+
+                    // e6
+                    if (rank >= 6) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
+                },
+                "target": "self",
+                "listenerName": "Jing Yuan Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+            
+                            let ownerTurn = this.ownerTurn;
+                            updateEnergy(battleData,15,ownerTurn,false,"Savant Providence");
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Savant Providence battlestart regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            let isValid = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "Ultimate" || tag === "Skill" || tag === "Basic") {
+                                    isValid = true;
+                                    break;
+                                }
+                            }
+                            // if (!isValid) {return;}
+
+                            const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.e2SheetReal;
+                            const buffCheck = ownerTurn.buffsObject[buffName];
+
+                            if (isValid) {
+                                if (buffCheck) {return;}
+
+                                const buffSheet = this.buffSheet ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: 0.20,
+                                    "source": "E2",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": turnLogic[ownerTurn.properName].buffNames.e2SheetReal,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+
+                                updateBuff(battleData,ownerTurn,buffSheet)
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,ownerTurn,buffCheck)
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E2 Valid DMG check",
+                    },
+                    {
+                        "trigger": "HitEnemyEnd",
+                        condition(battleData,generalInfo) {
+                            const instanceTag = generalInfo.instanceTag;
+                            if (instanceTag != "JingYuanBouncyBouncer") {return;}
+
+                            const hitType = generalInfo.hitType;
+                            if (hitType != "primary") {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [VulnAll],
+                                [VulnAll]: 0.12,
+                                "source": "E6",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e6Vuln,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 3,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "isDebuff": false,//NOT A MISTAKE, ITS NOT A FUCKIN DEBUFF
+                                "expireType": null,
+                            }
+
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E6 vuln application to primary target",
+                    },
+                ],
+            },
+            {
+                "trigger": "jingYuanGainPrana",
+                condition(battleData,generalInfo) {
+                    // poke("jingYuanGainPrana",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.prana;
+                    const maxValue = valuesRef.pranaMax;
+                    valuesRef.prana = Math.max(3, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.prana;
+
+                    const valueWasDiff = (newValue - oldValue) != 0;
+
+                    if (valueWasDiff) {
+                        const valueDiff = newValue - oldValue;
+
+                        const buffSheet = this.lightningSPDSHEET ??= {
+                            "stats": [SPDFlat],
+                            [SPDFlat]: 10,
+                            "source": "Trace",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.lightningLordSPD,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 7,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+
+                        const lightningLordTurn = ownerTurn.jingYuanLORDTURNEVENT;
+
+                        if (newValue === 3) {
+                            const buffCheck = lightningLordTurn.buffsObject[buffSheet.buffName];
+                            removeBuff(battleData,lightningLordTurn,buffCheck);
+                        }
+                        else {
+                            buffSheet.currentStacks = valueDiff;
+                            updateBuff(battleData,lightningLordTurn,buffSheet);
+                        }
+                    }
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Prana (Jing Yuan): ${oldValue} --> ${valuesRef.prana}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.jingYuanPranaSum ??= 0;
+                            ownerTurn.jingYuanPranaSum += valuesRef.prana - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "jingYuanPranaSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.prana,
+                            currentSumValue: ownerTurn.jingYuanPranaSum,
+                            currentAddedValue: valuesRef.prana - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Jing Yuan Prana Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "JingYuanFUAQueue",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const queueObject = this.queueObject ??= {
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.lightningLordTurnAttackAction,
+                        action: "Insert", 
+                        points: 0,
+                        energyCost: null,
+                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                        // specialEnergyPoke: "SW999GainMMR",
+
+                        isEnhanced: false,
+                        isTieBreaker: false,
+                        isExtraTurn: false,
+                        isInserted: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+                        // eventTypeStart: "GenericAbilityStart",
+                        // eventTypeEnd: "GenericAbilityEnd",
+
+                        properName: generalInfo.eventTurn.properName,
+                        sourceTurn: null,
+                        eventOverrideImage: graphs.summonCustomImages["Lightning Lord"],
+
+                        target: "enemy",
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                        elationForcedPunchline: null,
+                    }
+                    queueObject.sourceTurn = ownerTurn;
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "enemy",
+                "listenerName": "Jing Yuan - Lightning Lord Attack [FUA ATTACK]",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let stats = new Array(greatTableSize).fill(0);
+                    stats[SPDBase] = 60;
+                    let SPDStats = calcs.getSPDFinal(stats);
+
+                    const lightningLordTurnAttack = ATKObjects.lightningLordTurnAttack ??= turnLogic[ownerTurn.properName].skillFunctions.lightningLordTurnAttack;
+                    const ActionEntry = ownerTurn.jingYuanLORDTURNEVENT ??= {
+                        // name:characterEntry,
+
+                        AV:SPDStats.SPDActionValue,
+                        AVBase:SPDStats.SPDActionValue,
+                        SPD:SPDStats.SPDFinal,
+                        // AV:10000/60,
+                        // AVBase:10000/60,
+                        // SPD:60,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        name: "jingYuanSummon",
+                        properName: "Lightning Lord",
+
+                        statTable: stats,
+                        buffsObject: {},
+                        
+                        // buffsObject: {},
+                        // buffsStartTurn: [],
+                        // buffsEndTurn: [],
+                        // additionalDMGObject: {},
+                        isUnselectable: true,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isActive: true,
+                        isMemosprite: false,
+                        currentlyOwnedBy: ownerTurn.name,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: lightningLordTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Lightning Lord"],
+                    };
+                    ownerTurn.summonEventRef = "jingYuanLORDTURNEVENT";
+                    ownerTurn.activeSummons += 1;
+                    battleData.declaredSummons.push(ActionEntry);
+                    battleData.nextTurnAV.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.jingYuanLORDTURNEVENT},ownerTurn);
+
+
+
+
+
+                    // let AggroStats = calcs.getAggroFinal(hyacineMenuStats);
+                    // let SPDStats = calcs.getSPDFinal(hyacineMenuStats);
+                    // let HPStats = calcs.getHPFinal(hyacineMenuStats);
+                    // const skillFunctionsRef = logicRef.skillFunctions;
+                    // const icaTurnAttack = skillFunctionsRef.icaTurnAttack;
+                    // const ActionEntry = {
+                    //     AV:0,
+                    //     AVBase:0,
+                    //     SPD:SPDStats.SPDFinal,
+
+                    //     currentHP: HPStats.HPFinal,
+                    //     maxHP: HPStats.HPFinal,
+
+                    //     currentAggro: AggroStats.AggroFinal,
+                    //     baseAggro: AggroStats.AggroBaseFinal,
+
+                    //     maxEnergy: ownerTurn.maxEnergy,
+
+                    //     actionCounter: 0,
+                    //     turnState: 0,
+                    //     debuffCounter: 0,
+                    //     DOTCounter: 0,
+                    //     activeFinalMultipliers: {},
+                    //     finalMultiCounter: 0,
+                    //     shieldCounter: 0,
+                    //     shieldValueCurrent: 0,
+                    //     shieldValueMax: 0,
+                    //     activeShields: {},
+
+                    //     properName: "Little Ica",
+                    //     name: "hyacineMemosprite",
+                        
+                    //     statTable: hyacineMenuStats,
+                    //     buffsObject: {},
+                    //     teamDebuffs: {},
+                    //     buffsStartTurn: [],
+                    //     buffsEndTurn: [],
+                    //     tagSpecific: {},
+                    //     cacheTagValues: superGlobal.createEntityCache(),
+                    //     isDead: false,
+                    //     rank: ownerTurn.rank,
+                    //     element: ownerTurn.element,
+                    //     path: null,
+                    //     isUnselectable: false,
+                    //     diesWithOwner: true,
+                    //     isUniqueEvent: true,
+                    //     isSummon: true,
+                    //     isMemosprite: true,
+                    //     eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                    //     uniqueEventFunction: icaTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                    //     eventImage: graphs.summonCustomImages["Little Ica"],
+                    //     deathFunction: skillFunctionsRef.icaDeathFunction,
+                    //     deathParam: ownerTurn.name,
+                    // };
+                    // battleData.nameIndex["Little Ica"] = "hyacineMemosprite";
+
+                    // // summaryTurns[properName] = 0;
+                    // battleData.nameBasedTurns["hyacineMemosprite"] = ActionEntry;
+                    // ownerTurn.hyacineIcaTURNEVENT = ActionEntry;
+                    // ownerTurn.hyacineBattleHealingTally = 0;
+                    // battleData.declaredMemosprites.push(ActionEntry);
+                    // battleData.allAlliesArray.push(ActionEntry);
+                    // battleData.allAllyTargetsArray.push(ActionEntry);
+                    // battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    // ownerTurn.summonEventRef = "hyacineIcaTURNEVENT";
+                    // ownerTurn.memospriteEventRef = "hyacineIcaTURNEVENT";
+                },
+                "target": "self",
+                "listenerName": "Jing Yuan: Lightning Lord event creation",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.jingYuanUltimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: null,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        // queueObject.target = [ownerTurn];
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Jing Yuan - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.jingYuanTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Jing Yuan Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "prana": 3,
+            "pranaMax": 10,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "traceSkillCrit": "War Marshal (Crit)",
+            "lightningLordSPD": "Lightning Lord Speed",
+            "traceFUACrit": "Battalia Crush (Trace)",
+            "e2Sheet": "E2: Swing, Skies Squashed (Placeholder)",
+            "e2SheetReal": "E2: Swing, Skies Squashed",
+            "e6Vuln": "E6: Sweep, Souls Slain",
         },
         "characterValuesBattle": {},
     },
