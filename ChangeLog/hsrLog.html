@@ -50,6 +50,7 @@
         </li>
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where after yesterday's update, which included optimizations to how scalar related bonuses get pulled, scalars wouldn't update after the first calculation on a given enemy(so if you hit an enemy once but then got more ATK after, it wouldn't try to reupdate the ATK value and cause several problems that way)</li>
         <li>Fixed an issue where source-specific bonuses(like Whereabouts Dreams Should Rest) weren't displaying on entity stat table inspections due to the recent rework to how source-specific bonuses are handld internally.
             <ul>
                 <li>Note: they still displayed the buff/debuff application on the target, it just didn't show in the summary tables.</li>

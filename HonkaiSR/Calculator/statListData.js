@@ -1455,7 +1455,7 @@ const propertyImagePaths = {
 
 //kind of cancer but I don't want to double-define things in case I change them later, would rather have one reference used twice so changes will be applied universally
 const globalEnemyVersion = 1;
-const cacheTagFamilies = {
+const cacheTagFamilies = {//REVISIT createEntityCache in suffering5SuperGlobal if you EVER CHANGE THESE
     "Elation": {
         ...propertyImagePaths.Elation.sets,
     },
@@ -1529,18 +1529,12 @@ const cacheTagFamilies = {
         ...propertyImagePaths.Break.sets,
     },
 }
-const familyCacheTagSet = new Set ([
-    "UpdateStatDamage",
-    "UpdateStatElation","UpdateStatMerryMake",
-    "UpdateStatDamageReduction",
-    "UpdateStatDEFShred","UpdateStatDEF",
-    "UpdateStatPEN",
-    "UpdateStatRES",
-    "UpdateStatVulnerable",
-    "UpdateStatCritRate","UpdateStatCritDamage",
-    "UpdateStatHealing","UpdateStatShield",
-    "UpdateStatBreak",
-])
+const taggeroniKeys = Object.keys(cacheTagFamilies);
+let taggeroniPreSetArray = [];
+for (let tagKey of taggeroniKeys) {
+    taggeroniPreSetArray.push("UpdateStat" + tagKey)
+}
+const familyCacheTagSet = new Set (taggeroniPreSetArray);
 
 // const testArray = new Array(greatTableSize);
 // testArray[0] += 1
