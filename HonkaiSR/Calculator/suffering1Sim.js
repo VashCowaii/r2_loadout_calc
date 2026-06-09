@@ -615,7 +615,7 @@ const sim = {
             let name = "Enemy " + enemiesMade + " " + currentEntry.name + " (" + enemyType + ")";
             let enemyRealName = currentEntry.name;
             let slot = "enemy" + enemiesMade;
-            let stats = new Array(greatTableSize).fill(0);//[...currentEntry.stats];
+            let stats = new Array(greatTableSize).fill(0);
             const statsObject = currentEntry.stats;
 
             for (let statsKey in statsObject) {
@@ -630,7 +630,6 @@ const sim = {
 
             nameIndex[name] = slot;
             const slotRef = enemyTurns[slot] ??= {
-                // ...baseEnemyData,
                 name:slot,
                 enemyNumber: enemiesMade,
                 AV:finalStats.SPDActionValue,
@@ -646,7 +645,6 @@ const sim = {
                 statTable: stats,
                 statTableFinals: finalStats,
                 tagSpecific: {},
-                tagSpecificArray: [],
                 buffsObject: {},
                 buffsStartTurn: [],
                 buffsEndTurn: [],
@@ -864,7 +862,6 @@ const sim = {
                 buffsEndTurn: [],
                 additionalDMGObject: {},
                 tagSpecific: {},
-                // tagSpecificArray: [],
                 cacheTagValues: superGlobal.createEntityCache(),
                 isDead: false,
                 canBeTargeted: true,
