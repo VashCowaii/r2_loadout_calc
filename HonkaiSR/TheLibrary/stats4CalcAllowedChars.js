@@ -58,6 +58,7 @@ global.calcAllowedSet = new Set([
     //5star
     "Huohuo",                           //DONE
     "Luocha",                           //DONE
+    "Bailu",                            //not yet
     //4star
     "Gallagher",                        //DONE
     "Natasha",                          //DONE
