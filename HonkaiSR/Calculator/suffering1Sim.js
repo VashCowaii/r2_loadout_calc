@@ -557,7 +557,6 @@ const sim = {
         // let enemiesMade = 0;
         const summaryTurns = battleData.battleTotal.Turns;
 
-
         // {
         //     "image": null,
         //     "entry": null,
@@ -588,22 +587,12 @@ const sim = {
         const enemyTurns = battleData.enemyBasedTurns ??= [];
         const enemyPositions = battleData.enemyPositions ??= [];
         const nextTurn = battleData.nextTurnAV;
-        const dotsObject = {
-            "Lightning": 0,
-            "Fire": 0,
-            "Wind": 0,
-            "Physical": 0
-        }
 
         const enemyRankID = {
             "boss": 3,
             "elite": 2,
             "minion": 1,
         }
-
-
-
-
 
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
@@ -668,7 +657,7 @@ const sim = {
                 shieldValueMax: 0,
                 activeShields: {},
                 DOTCounter: 0,
-                dots: {...dotsObject},
+                dots: superGlobal.createEntityDOTObject(),
                 currentDotsArray: [],
                 specialDotsArray: [],
                 cacheTagValues: superGlobal.createEntityCache(),
@@ -730,7 +719,7 @@ const sim = {
             char3: characterObject.char3?.conditions,
             char4: characterObject.char4?.conditions,
             "nameIndex": {},
-            battleTable: {...battleTableKnowerOfAll},//overarching battle stats like skill point max
+            battleTable: superGlobal.getStarterBattleTable(),
             battleTotal: {
                 DMG: {},
                 DMGOverkill: {},
@@ -866,12 +855,7 @@ const sim = {
                 activeFinalMultipliers: {},
                 finalMultiCounter: 0,
                 DOTCounter: 0,
-                dots: {
-                    "Lightning": 0,
-                    "Fire": 0,
-                    "Wind": 0,
-                    "Physical": 0
-                },
+                dots: superGlobal.createEntityDOTObject(),
                 currentDotsArray: [],
                 properName: properName,
                 statTable: statRefTemp.tableReference,

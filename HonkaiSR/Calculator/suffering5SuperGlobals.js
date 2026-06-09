@@ -65,6 +65,19 @@ const superGlobal = {
 
         return targetOverride ?? battleData.nameBasedTurns.char1;
     },
+    getStarterBattleTable() {
+        return {
+            "SPMax": 5,
+        }
+    },
+    createEntityDOTObject() {
+        return {
+            "Lightning": 0,
+            "Fire": 0,
+            "Wind": 0,
+            "Physical": 0
+        }
+    },
     createEntityCache() {//got tired of needing to ctrl f on this stuff, just making it a uniform function and idk why I didn't do this sooner lmao
 
         //REVISIT cacheTagFamilies in statListData if you EVER change these
