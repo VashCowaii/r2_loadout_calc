@@ -1375,11 +1375,6 @@ const sim = {
             //just confirmed with solo archer in a calyx, if he starts with a basic attack that would put him to 4SP total, even before the attack lands he gets that crit dmg buff from guardian. Fuck me man. At least this simplifies the code.
             sourceTurn.actionAssigned = true;
 
-
-
-            // const typeStart = designatedAction.eventTypeStart;
-            // const typeEnd = designatedAction.eventTypeEnd;
-
             const isAbility = designatedAction.isAbility;
             if (isAbility && (!isContinuousTurn || designatedAction.isContinuousTurnBREAK)) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
             chainedAttackRef = actionCall(battleData,designatedAction.target,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
@@ -1567,22 +1562,11 @@ const sim = {
                         AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                     battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                 }
-
-                // if (useAnyTrigger) {
-                    // const typeStart = currentFUA.eventTypeStart;
-                    // const typeEnd = currentFUA.eventTypeEnd;
                     
-                    const isAbility = currentFUA.isAbility;
-                    if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
-                    // poke(typeStart,battleData,generalInfo);
-                    
-                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                    if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
-                    // poke(typeEnd,battleData,generalInfo);
-                // }
-                // else {
-                //     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                // }
+                const isAbility = currentFUA.isAbility;
+                if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
+                currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
             }
         }
     },

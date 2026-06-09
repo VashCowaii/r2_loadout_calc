@@ -30231,42 +30231,25 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        const queueObject = this.queueObject ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhilUltimate,
-                            action: "Ultimate", 
-                            points: 0,
-                            energyCost: ownerTurn.maxEnergy,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
+                            action: "Ultimate",
 
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
+                            energyCost: ownerTurn.maxEnergy,
+
                             dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "UltimateStart",
-                            eventTypeStart: "UltimateStart",
-                            eventTypeEnd: "UltimateEnd",
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
 
-                            elationForcedPunchline: null,
-                        }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
                     }
@@ -44043,42 +44026,25 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        const queueObject = this.queueObject ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.yaoUltimate,
-                            action: "Ultimate", 
-                            points: 0,
-                            energyCost: ownerTurn.maxEnergy,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
+                            action: "Ultimate",
 
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
+                            energyCost: ownerTurn.maxEnergy,
+
                             dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "UltimateStart",
-                            eventTypeStart: "UltimateStart",
-                            eventTypeEnd: "UltimateEnd",
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
 
-                            elationForcedPunchline: null,
-                        }
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = battleData.allyPositions;
                         queueUltimate(battleData,queueObject);
@@ -45235,42 +45201,25 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        const queueObject = this.queueObject ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sparxUltimate,
-                            action: "Ultimate", 
-                            points: 0,
-                            energyCost: ownerTurn.maxEnergy,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
+                            action: "Ultimate",
 
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
+                            energyCost: ownerTurn.maxEnergy,
+
                             dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "UltimateStart",
-                            eventTypeStart: "UltimateStart",
-                            eventTypeEnd: "UltimateEnd",
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
 
-                            elationForcedPunchline: null,
-                        }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
                     }
@@ -46123,42 +46072,25 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        const queueObject = this.queueObject ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.emcUltimate,
-                            action: "Ultimate", 
-                            points: 0,
-                            energyCost: ownerTurn.maxEnergy,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
+                            action: "Ultimate",
 
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
+                            energyCost: ownerTurn.maxEnergy,
+
                             dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "UltimateStart",
-                            eventTypeStart: "UltimateStart",
-                            eventTypeEnd: "UltimateEnd",
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
 
-                            elationForcedPunchline: null,
-                        }
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
                         queueUltimate(battleData,queueObject);
@@ -48100,51 +48032,28 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        // poke("SW999GainMMR",battleData,{pointsGained: -clearValue,sourceString:"Exited God-Mode-Player State"});
-                        const queueObject = this.queueObject ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.sw999Ultimate,
-                            action: "Ultimate", 
-                            points: 0,
+                            action: "Ultimate",
+
                             energyCost: ownerTurn.specialEnergyMax,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
                             specialEnergyPoke: "SW999GainMMR",
 
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
                             dontKeepNextWave: true,//ults always clear out
                             isAttack: false,
                             isAbility: true,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "UltimateStart",
-                            eventTypeStart: "UltimateStart",
-                            eventTypeEnd: "UltimateEnd",
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: ownerTurn.properName,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                            // targetObject: {targetType:"Single", sourceTurn, targetTurn: sourceTurn, targetSkill:skillRef.slot,targetChildEntities: false},
-                        
-                            elationForcedPunchline: null,
-                        }
+                        })
+
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = [ownerTurn];
-                        // const targetObject = queueObject.queueObject;
-                        // targetObject.sourceTurn = ownerTurn;
-                        // targetObject.targetTurn = ownerTurn;
-
-                        // queueObject.target = ownerTurn;
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -49467,42 +49376,26 @@ const turnLogic = {
 
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
-                        const queueObject = this.queueObject ??= {
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedUltimate",
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaUltimate,
-                            action: "Ultimate", 
-                            points: 0,
-                            energyCost: ownerTurn.maxEnergy * 0.5,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
+                            action: "Ultimate",
 
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
+                            energyCost: ownerTurn.maxEnergy * 0.5,
+
                             dontKeepNextWave: true,//ults always clear out
                             isAttack: true,
                             isAbility: true,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "UltimateStart",
-                            eventTypeStart: "UltimateStart",
-                            eventTypeEnd: "UltimateEnd",
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: this.target,
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
 
-                            elationForcedPunchline: null,
-                        }
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
                     }
