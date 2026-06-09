@@ -328,6 +328,12 @@ let mocSchedule = [
                 "enemyLevel": 82,
                 "modifiersToAdd": [],
                 "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 60013
+                  }
+                ],
                 "stageType": "Cocoon",
                 "enemyList": [
                   [
@@ -532,6 +538,18 @@ let mocSchedule = [
                 "enemyLevel": 82,
                 "modifiersToAdd": [],
                 "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 60006,
+                    "actualParams": [
+                      3.6,
+                      120,
+                      20,
+                      10
+                    ]
+                  }
+                ],
                 "stageType": "Cocoon",
                 "enemyList": [
                   [
@@ -634,8 +652,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "Colossus_PassiveAbility02_Weekly",
-                    "BEKey": -414341064
+                    "realModifierNamne": null,
+                    "BEKey": 60004
                   }
                 ],
                 "stageType": "Cocoon",
