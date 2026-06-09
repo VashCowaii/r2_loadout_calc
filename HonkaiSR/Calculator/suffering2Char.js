@@ -6970,7 +6970,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.gallagherTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Fire"];
+                    const tags = ["All","Fire"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -8197,7 +8197,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.natashaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Physical"];
+                    const tags = ["All","Physical"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -10556,7 +10556,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Quantum"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -11424,7 +11424,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const values = ATKObjects.kafkaTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Lightning"];
+                    const tags = ["All","Lightning"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -14468,7 +14468,7 @@ const turnLogic = {
             //         skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
             //         let values = ATKObjects.swTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
             //         const scalar = "ATK";
-            //         const tags = ["All","Technique","Quantum"];
+            //         const tags = ["All","Quantum"];
             //         const actionTags = ["Technique","Attack"];
             //         const keyShortcut = basicShorthand.makeKeysArray;
             //         const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -15440,7 +15440,7 @@ const turnLogic = {
                 // if (!ATKObjects.bladeTechATKObject) {
                 //     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                 //     const scalar = "HP";
-                //     const tags = ["All","Technique","Wind"];
+                //     const tags = ["All","Wind"];
                 //     const actionTags = ["Technique","Attack"];
                 //     const keyShortcut = basicShorthand.makeKeysArray;
                 //     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -16478,7 +16478,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.pelaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Ice"];
+                    const tags = ["All","Ice"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -18010,7 +18010,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Quantum"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -18719,7 +18719,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.seeleTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Quantum"];
+                    const tags = ["All","Quantum"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -23884,7 +23884,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.astaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Fire"];
+                    const tags = ["All","Fire"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -27255,7 +27255,7 @@ const turnLogic = {
                 if (!ATKObjects.bladeTechATKObject) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "HP";
-                    const tags = ["All","Technique","Wind"];
+                    const tags = ["All","Wind"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -28924,7 +28924,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.fireflyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Fire"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -30717,7 +30717,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.hookTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Fire"];
+                    const tags = ["All","Fire"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -31711,7 +31711,7 @@ const turnLogic = {
                 if (!ATKObjects.rmcTechATKObject) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Ice"];
+                    const tags = ["All","Ice"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -33007,7 +33007,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.aggyTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Lightning"];
+                    const tags = ["All","Lightning"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -40833,7 +40833,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Physical"];
+                    const tags = ["All","Physical"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -44828,7 +44828,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Fire"];
+                    const tags = ["All","Fire"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
@@ -48799,7 +48799,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
                     let values = ATKObjects.archerTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Technique","Physical"];
+                    const tags = ["All","Physical"];
                     const actionTags = ["All","Technique","Attack"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
