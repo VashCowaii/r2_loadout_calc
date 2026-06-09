@@ -21,18 +21,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -221,18 +211,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -423,18 +403,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -601,18 +571,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -825,28 +785,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
@@ -1108,18 +1048,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -1351,18 +1281,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -1524,18 +1444,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -1705,18 +1615,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -1936,28 +1836,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
@@ -2227,18 +2107,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -2437,18 +2307,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -2627,18 +2487,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -2875,18 +2725,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -3077,28 +2917,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
@@ -3340,18 +3160,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -3519,18 +3329,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -3711,18 +3511,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -3884,18 +3674,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -4105,28 +3885,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
@@ -4387,18 +4147,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -4526,18 +4276,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -4703,18 +4443,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -4892,18 +4622,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -5036,28 +4756,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
@@ -5240,18 +4940,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -5414,18 +5104,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -5606,18 +5286,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -5779,18 +5449,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -5906,28 +5566,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
@@ -6093,18 +5733,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -6263,18 +5893,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -6446,18 +6066,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
                     "actualParams": [
                       0.5,
                       7,
@@ -6694,18 +6304,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      7,
-                      4,
-                      0.5
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
                     "actualParams": [
                       0.5,
                       7,
@@ -6892,28 +6492,8 @@ let mocSchedule = [
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
-                    "realModifierNamne": "BattleEventAbility_SummonMonsterInfinite",
-                    "BEKey": -1097634517,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_CountDown",
-                    "BEKey": 1912336050,
-                    "actualParams": [
-                      0.5,
-                      3,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "realModifierNamne": "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect",
-                    "BEKey": 1912336050,
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
                     "actualParams": [
                       0.5,
                       3,
