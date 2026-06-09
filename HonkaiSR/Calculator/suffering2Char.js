@@ -5447,7 +5447,6 @@ const turnLogic = {
 
                     statTable: new Array(greatTableSize).fill(0),
                     // buffsObject: {},
-                    // teamDebuffs: {},
                     // buffsStartTurn: [],
                     // buffsEndTurn: [],
                     tagSpecific: {},
@@ -31949,7 +31948,6 @@ const turnLogic = {
                         
                         statTable: rmcMenuStats,
                         buffsObject: {},
-                        teamDebuffs: {},
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -33406,7 +33404,6 @@ const turnLogic = {
                         
                         statTable: aggyMenuStats,
                         buffsObject: {},
-                        teamDebuffs: {},
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -34916,7 +34913,6 @@ const turnLogic = {
                         
                         statTable: evernightMenuStats,
                         buffsObject: {},
-                        teamDebuffs: {},
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -36265,7 +36261,6 @@ const turnLogic = {
                         
                         statTable: hyacineMenuStats,
                         buffsObject: {},
-                        teamDebuffs: {},
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -38061,7 +38056,6 @@ const turnLogic = {
                         
                         statTable: casMenuStats,
                         buffsObject: {},
-                        teamDebuffs: {},
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -42892,77 +42886,6 @@ const turnLogic = {
                     battleData.nextTurnAV.push(ActionEntry);
                     battleData.battleTotal.Turns[ActionEntry.properName] = 0;
                     poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.jingYuanLORDTURNEVENT},ownerTurn);
-
-
-
-
-
-                    // let AggroStats = calcs.getAggroFinal(hyacineMenuStats);
-                    // let SPDStats = calcs.getSPDFinal(hyacineMenuStats);
-                    // let HPStats = calcs.getHPFinal(hyacineMenuStats);
-                    // const skillFunctionsRef = logicRef.skillFunctions;
-                    // const icaTurnAttack = skillFunctionsRef.icaTurnAttack;
-                    // const ActionEntry = {
-                    //     AV:0,
-                    //     AVBase:0,
-                    //     SPD:SPDStats.SPDFinal,
-
-                    //     currentHP: HPStats.HPFinal,
-                    //     maxHP: HPStats.HPFinal,
-
-                    //     currentAggro: AggroStats.AggroFinal,
-                    //     baseAggro: AggroStats.AggroBaseFinal,
-
-                    //     maxEnergy: ownerTurn.maxEnergy,
-
-                    //     actionCounter: 0,
-                    //     turnState: 0,
-                    //     debuffCounter: 0,
-                    //     DOTCounter: 0,
-                    //     activeFinalMultipliers: {},
-                    //     finalMultiCounter: 0,
-                    //     shieldCounter: 0,
-                    //     shieldValueCurrent: 0,
-                    //     shieldValueMax: 0,
-                    //     activeShields: {},
-
-                    //     properName: "Little Ica",
-                    //     name: "hyacineMemosprite",
-                        
-                    //     statTable: hyacineMenuStats,
-                    //     buffsObject: {},
-                    //     teamDebuffs: {},
-                    //     buffsStartTurn: [],
-                    //     buffsEndTurn: [],
-                    //     tagSpecific: {},
-                    //     cacheTagValues: superGlobal.createEntityCache(),
-                    //     isDead: false,
-                    //     rank: ownerTurn.rank,
-                    //     element: ownerTurn.element,
-                    //     path: null,
-                    //     isUnselectable: false,
-                    //     diesWithOwner: true,
-                    //     isUniqueEvent: true,
-                    //     isSummon: true,
-                    //     isMemosprite: true,
-                    //     eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
-                    //     uniqueEventFunction: icaTurnAttack,//logicRef.skillFunctions.combustionExpired,
-                    //     eventImage: graphs.summonCustomImages["Little Ica"],
-                    //     deathFunction: skillFunctionsRef.icaDeathFunction,
-                    //     deathParam: ownerTurn.name,
-                    // };
-                    // battleData.nameIndex["Little Ica"] = "hyacineMemosprite";
-
-                    // // summaryTurns[properName] = 0;
-                    // battleData.nameBasedTurns["hyacineMemosprite"] = ActionEntry;
-                    // ownerTurn.hyacineIcaTURNEVENT = ActionEntry;
-                    // ownerTurn.hyacineBattleHealingTally = 0;
-                    // battleData.declaredMemosprites.push(ActionEntry);
-                    // battleData.allAlliesArray.push(ActionEntry);
-                    // battleData.allAllyTargetsArray.push(ActionEntry);
-                    // battleData.battleTotal.Turns[ActionEntry.properName] = 0;
-                    // ownerTurn.summonEventRef = "hyacineIcaTURNEVENT";
-                    // ownerTurn.memospriteEventRef = "hyacineIcaTURNEVENT";
                 },
                 "target": "self",
                 "listenerName": "Jing Yuan: Lightning Lord event creation",
