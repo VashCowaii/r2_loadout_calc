@@ -541,24 +541,27 @@ const endgameModeDisplay = {
 
                         // readSelection("mocDescriptionBox").innerHTML = endgameModeDisplay.getBuffDisplayBox(buffOverride);
 
-                        
-                        for (let beAbilityEntry of checkBattleEventAbilities) {
-                            let existingKey = beAbilityEntry.BEKey;
-                            let hasMatch = false;
-
-                            for (let beAbilityEntryOuter of battleEventAbilities) {
-                                let existingKey2 = beAbilityEntryOuter.BEKey;
-
-                                if (existingKey === existingKey2) {
-                                    hasMatch = true;
-                                    break
-                                }
-                                if (hasMatch) {break;}
-                            }
-                            if (!hasMatch) {
-                                battleEventAbilities.push(beAbilityEntry);
-                            }
+                        for (let BEEvent of checkBattleEventAbilities) {
+                            BEEvent.side = sideNumber;
+                            battleEventAbilities.push(BEEvent);
                         }
+                        // for (let beAbilityEntry of checkBattleEventAbilities) {
+                        //     let existingKey = beAbilityEntry.BEKey;
+                        //     let hasMatch = false;
+
+                        //     for (let beAbilityEntryOuter of battleEventAbilities) {
+                        //         let existingKey2 = beAbilityEntryOuter.BEKey;
+
+                        //         if (existingKey === existingKey2) {
+                        //             hasMatch = true;
+                        //             break
+                        //         }
+                        //         if (hasMatch) {break;}
+                        //     }
+                        //     if (!hasMatch) {
+                        //         battleEventAbilities.push(beAbilityEntry);
+                        //     }
+                        // }
 
 
 
@@ -715,7 +718,7 @@ const endgameModeDisplay = {
 
                             
                             // newScaleHard,newScaleElite,enemyLevel,potentialElite
-                            console.log(potentialElite,newScaleElite)
+                            // console.log(potentialElite,newScaleElite)
                             const seralize = {
                                 ov: enemyEntry.id,
                                 scH: newScaleHard,
@@ -847,7 +850,7 @@ const endgameModeDisplay = {
                             innerStringer += potentialEliteScale.toughnessScalar != 1 ? `<div class="imageRowStatisticImageBoxROWDATA"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"></div>
                                 <div class="imageRowStatisticStatBoxROWDATA">x${potentialEliteScale.toughnessScalar}</div>` : ""
 
-                                console.log(innerStringer)
+                                // console.log(innerStringer)
                                 scalarStringer = `<div class="imageRowStatisticBoxENDGAMEROWDATA">
                                 ${innerStringer != "" ? `<div class="imageRowStatisticStatBoxROWDATA">Used: </div>` : ""}
                                 ${innerStringer}
@@ -2110,15 +2113,15 @@ const endgameModeDisplay = {
                     //     <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                     // </a>` : ""}`
 
-                    const displayName = beEntry.realModifierNamne.replace("BattleEventAbility_","").replace("ChallengePeakBattle_","")
+                    // const displayName = beEntry.realModifierNamne.replace("BattleEventAbility_","").replace("ChallengePeakBattle_","")
 
                     buttonString += `${beEntry.BEKey ? `<div class="eidolonRowBoxHolderBEAbility">
                         <div class="rightDescriptionBoxEidolons smallFont">
-                            <div class="eidolonRowNameTriggerBEAbility">${displayName}
+                            <div class="eidolonRowNameTriggerBEAbility">Side ${beEntry.side}
                             
                                 <div class="actionDetailBody" style="width: auto;">
-                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${beEntry.BEKey}/#${encodeURIComponent(beEntry.realModifierNamne)}" >
-                                        Go to BE Ability&nbsp;
+                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${beEntry.BEKey}/" >
+                                        Battle Event ${beEntry.BEKey}&nbsp;
                                         <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                                     </a>
                                 </div>
