@@ -7949,6 +7949,576 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    //TODO: talent revive shit, which also would extend to E6 as well
+    "Bailu": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                return returnSkillCall;
+            }
+
+            return this.returnBasicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            const call1 = this.returnSkillCall ??= {
+                action: "Skill", 
+                isAttack: false,
+                isAbility: true,
+                points: -1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+                // eventTypeStart: "SkillStart",
+                // eventTypeEnd: "SkillEnd",
+                actionCall: this.skillFunctions.bailuSkillHeal, 
+                target: null,
+                poolKey: this.abilityTargetPools.Skill,
+            }
+            call1.sourceTurn = thisTurn;
+            const call2 = this.returnBasicCall ??= {
+                action: "BasicATK", 
+                isAttack: true,
+                isAbility: true,
+                points: 1, 
+                properName: thisTurn.properName,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+                // eventTypeStart: "BasicATKStart",
+                // eventTypeEnd: "BasicATKEnd",
+                actionCall: this.skillFunctions.bailuBasic, 
+                target: "enemy",
+                poolKey: this.abilityTargetPools.BasicATK,
+            }
+            call2.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "Skill": "Allies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            bailuBasic(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+
+                let skillRef = ATKObjects.bailuBasicREF ??= ATKObjects["Basic ATK"]["Diagnostic Kick"].variant1;
+                if (!ATKObjects.bailuBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.bailuBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.bailuBasicATKOBJECT;
+
+                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+            },
+            bailuSkillHeal(battleData,target,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const targetTurn = target[0];
+
+                let skillRef = ATKObjects.bailuSkillHealREF ??= ATKObjects.Skill["Singing Among Clouds"].variant1;
+                let values = ATKObjects.bailuSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                let rank = sourceTurn.rank;
+                // let e2 = rank >= 2;
+                
+                
+                if (!ATKObjects.bailuSkillHealHEALOBJECT) {
+
+                    const actionTags = ["All","Heal","Skill"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                    ATKObjects.bailuSkillHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag,
+                    }
+                    ATKObjects.bailuSkillHealHEALOBJECT2 = {
+                        multipliers: {
+                            primary: values[0] * 0.85,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1] * 0.85,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag,
+                    }
+                    ATKObjects.bailuSkillHealHEALOBJECT3 = {
+                        multipliers: {
+                            primary: values[0] * 0.85 * 0.85,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1] * 0.85 * 0.85,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag,
+                    }
+                }
+
+                const allyPositions = battleData.allyPositions;
+                const allyLength = allyPositions.length;
+
+                const battleValues = sourceTurn.battleValues;
+                battleValues.skillRandoCycler += 1;
+                if (rank >= 4) {battleValues.inSkillHealing = true;}
+                //NOTE: this can't just be an ability start/end toggle, bc it does happen after it starts, and before it ends
+
+                if (battleValues.skillRandoCycler >= allyLength) {battleValues.skillRandoCycler = 0;}
+
+                let bounce2Index = battleValues.skillRandoCycler + 2;
+                if (bounce2Index >= allyLength) {bounce2Index -= (allyLength > 1 ? allyLength : 2)}
+                //ally memo ally memo ally ally
+                //0     na  2     na   na   na
+                //ally ally  ally
+                //0     na   2
+                //ally
+                //0
+                /*
+                    The idea here is just that we don't wanna bounce only on lowhp allies, since this is in fact random
+                    so we'll cycle the "random" placement index by one for every skill use, and that gives us the target 
+                    of the 2nd healing instance, and then we add 2 to that index to get the 3rd and last target
+                    if the 3rd target is beyond the bounds of the ally length, then we reset it by subtracting that length
+                    the only exception being that if the ally length is 1 then we just negate the +2 since it's single target at that point.
+                */
+
+
+                let healObject = ATKObjects.bailuSkillHealHEALOBJECT;
+                let healObject2 = ATKObjects.bailuSkillHealHEALOBJECT2;
+                let healObject3 = ATKObjects.bailuSkillHealHEALOBJECT3;
+                healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
+                healAlly(battleData,healObject2,allyPositions[battleValues.skillRandoCycler],sourceTurn,skillRef.slot,1,null)
+                healAlly(battleData,healObject3,allyPositions[bounce2Index],sourceTurn,skillRef.slot,1,null)
+
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                if (rank >= 4) {battleValues.inSkillHealing = false;}
+            },
+            bailuUltimate(battleData,sourceTurn,target) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bailuUltimateREF ??= ATKObjects.Ultimate["Felicitous Thunderleap"].variant1;
+                let rank = sourceTurn.rank;
+
+                if (!ATKObjects.bailuUltimateHealHEALOBJECT) {
+                    let values = ATKObjects.bailuUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const actionTags = ["All","Heal","Ultimate"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+                    ATKObjects.bailuUltimateHealHEALOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[1],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag
+                    }
+
+                    ATKObjects.bailuE2HealingSHEET ??= {
+                        "stats": [HealingOutgoing], 
+                        [HealingOutgoing]: 0.15,
+                        "source": "E2",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.e2Healing,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    };
+                }
+                let healObject = ATKObjects.bailuUltimateHealHEALOBJECT;
+                healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,target);
+
+                const invigoration = ATKObjects.bailuInvigorationSHEET;
+                invigoration.currentStacks = 3;
+                const drSheet = ATKObjects.bailuTraceDRSHEET;
+
+                for (let ally of target) {
+                    const buffCheck = ally.buffsObject[invigoration.buffName];
+
+                    if (buffCheck) {
+                        buffCheck.duration += 1;
+                        //if ulting on targets that ALREADY have invigoration, it just increases the duration by one, it does NOT
+                        //increase or refresh the stack count, which is kinda lame tbh.
+                    }
+                    else {
+                        updateBuff(battleData,ally,invigoration);
+                    }
+                }
+                updateBuffBatchTargets(battleData,target,drSheet);
+
+                if (rank >= 2) {
+                    const e2Sheet = ATKObjects.bailuE2HealingSHEET;
+                    updateBuff(battleData,sourceTurn,e2Sheet);
+                }
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+
+                sourceTurn.ultyQueued = false;
+            },
+            bailuTechnique(battleData,target,sourceTurn) {
+                let characterName = sourceTurn.properName;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bailuTechniqueREF ??= ATKObjects.Technique["Saunter in the Rain"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const allyPositions = battleData.allyPositions;
+
+                const invigoration = ATKObjects.bailuInvigorationSHEET;
+                invigoration.currentStacks = 3;
+                const drSheet = ATKObjects.bailuTraceDRSHEET;
+
+                updateBuffBatchTargets(battleData,allyPositions,invigoration);
+                updateBuffBatchTargets(battleData,allyPositions,drSheet);
+            },
+        },
+        "listeners": [//skillHOT
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const passiveListeners = this.passiveListeners;
+
+                    ATKObjects.bailuInvigorationSHEET ??= {
+                        "stats": null, 
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.invigoration,
+                        "durationInTurn": 2,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    };
+                    ATKObjects.bailuTraceDRSHEET ??= {
+                        "stats": [DamageReductionStandard], 
+                        [DamageReductionStandard]: 0.10,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceDR,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    };
+
+                    // trace Qihuang Analects AND E4 listener
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //talent invigoration ally hit listener
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
+                },
+                "target": "self",
+                "listenerName": "Bailu Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "HealEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const targetTurn = generalInfo.targetTurn;
+
+                            if (ownerTurn.battleValues.inSkillHealing) {
+                                let buffSheet = this.e4DMGSheet ??= {
+                                    "stats": [DamageAll], 
+                                    [DamageAll]: 0.10,
+                                    "source": "E4",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": turnLogic[ownerTurn.properName].buffNames.e4DMG,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                };
+                                updateBuff(battleData,targetTurn,buffSheet);
+                            }
+    
+                            const hadOverflow = generalInfo.overHeal;
+                            if (hadOverflow) {
+                                let buffSheet = this.traceHPSheet ??= {
+                                    "stats": [HPP], 
+                                    [HPP]: 0.10,
+                                    "source": "Trace",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": turnLogic[ownerTurn.properName].buffNames.traceHP,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                };
+                                updateBuff(battleData,targetTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Trace & E4 skill healing listener",
+                    },
+                    {
+                        "trigger": "AttackEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const allyTurns = battleData.nameBasedTurns;
+
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+                            const invigoration = this.invigoration ??= ATKObjects.bailuInvigorationSHEET;
+                            //normally don't EVER cache an ATKObjects sheet, but this sheet doesn't have stats so we don't actually care
+                            const invigName = invigoration.buffName;
+                            const drName = this.drName ??= turnLogic[ownerTurn.properName].buffNames.traceDR;
+                            const rank = ownerTurn.rank;
+
+                            
+
+
+                            if (!ATKObjects.bailuTalentHealHEALOBJECT) {
+                                let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
+                                let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+            
+                                const actionTags = ["All","Heal","Talent"];
+                                const compositeCacheTag = actionTags + ownerTurn.properName;
+                                ATKObjects.bailuTalentHealHEALOBJECT = {
+                                    multipliers: {
+                                        primary: values[0],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: values[1],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: skillRef.slot,
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            let healObject = ATKObjects.bailuTalentHealHEALOBJECT;
+                            
+                            for (let allyHit in targetsGotHit) {
+                                const currentAlly = allyTurns[allyHit];
+
+                                const buffsObject = currentAlly.buffsObject;
+                                const buffCheck = buffsObject[invigName];
+                                if (buffCheck) {
+
+                                    healAlly(battleData,healObject,currentAlly,ownerTurn,"Talent",1,null);
+
+                                    const currentStacks = buffCheck.currentStacks;
+                                    if (currentStacks === 1) {
+                                        removeBuff(battleData,currentAlly,buffCheck);
+                                        removeBuff(battleData,currentAlly,buffsObject[drName]);
+
+                                        if (rank >= 1) {
+                                            const hpMaxed = currentAlly.currentHP === currentAlly.maxHP;
+                                            if (hpMaxed) {
+                                                updateEnergy(battleData,8,currentAlly,true,"Bailu E1 Invigoration Ended")
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        invigoration.currentStacks = -1;
+                                        updateBuff(battleData,currentAlly,invigoration);
+                                    }
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Attack end - allies with Invigoration hit/regen",
+                        "owners": []
+                    },
+
+                ],
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= {
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bailuUltimate,
+                            action: "Ultimate", 
+                            points: 0,
+                            energyCost: ownerTurn.maxEnergy,
+                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+                            // specialEnergyPoke: "SW999GainMMR",
+
+                            isEnhanced: false,
+                            isTieBreaker: false,
+                            isExtraTurn: false,
+                            skipEXDisplay: false,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+                            eventTypeStart: "UltimateStart",
+                            eventTypeEnd: "UltimateEnd",
+
+                            properName: ownerTurn.properName,
+                            sourceTurn: null,
+                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+
+                            target: null,
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+
+                            elationForcedPunchline: null,
+                        }
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Bailu - Ultimate queued - Ultimate",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.bailuTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Bailu Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "inSkillHealing": false,
+            "skillRandoCycler": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Restore",
+        "buffNames": {
+            "e4DMG": "E4: Evil Excision",
+            "traceHP": "Qihuang Analects (Trace)",
+            "traceDR": "Aquatic Benediction (Trace)",
+            "e2Healing": "E2: Sylphic Slumber",
+            "invigoration": "Invigoration (Talent)",
+        },
+        "characterValuesBattle": {},
+    },
     //TODO: circle back and add weaken into the dmg calc functions  //TODO: skill cleanse later
     "Natasha": {
         logic(thisTurn,battleData) {

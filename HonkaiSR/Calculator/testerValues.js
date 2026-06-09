@@ -371,6 +371,17 @@ const customDisplayValuesLog = {
         
         {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true,summaryValue: "luochaAbyssSummer",summaryType: "SUM"}, 
     ],
+    "Bailu": [//tracker done
+        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
+        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 3, displayRequiresType: "number",
+        //     displayRequiresBoolean: false,
+        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
+        // },
+        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+    ],
     "Natasha": [],  
     "Lynx": [], 
 
@@ -647,6 +658,7 @@ const conditionsCharacterDisplayWarning = {
     "Luocha": defaultStandardAbilityDisplayWarnings,
     "Natasha": defaultStandardAbilityDisplayWarnings,
     "Gallagher": defaultStandardAbilityDisplayWarnings,
+    "Bailu": defaultStandardAbilityDisplayWarnings,
 }
 
 
@@ -3139,6 +3151,71 @@ const defaultConditions = {
         }
     },
     "Lynx": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "<",
+                    "array": [
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "currentEnergy"
+                        },
+                        {
+                            "type": "Character: Value",
+                            "target": "Self",
+                            "targetType": "Character",
+                            "characterValue": "maxEnergy"
+                        }
+                    ]
+                }
+            ]
+        },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Healing Presets",
+                                    "statName": "Lowest HP Ally (On-Field)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: HP <= 75%"
+                }
+            ]
+        }
+    },
+    "Bailu": {
         "hasEnhancedState": false,
         "Skill": {
             "type": "AND",
