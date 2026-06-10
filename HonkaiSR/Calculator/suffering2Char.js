@@ -11381,7 +11381,10 @@ const turnLogic = {
             //shortRef.skillFunctions.swCheckWeakness(battleData);
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -15296,7 +15299,10 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.enemyPositions;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -16023,7 +16029,10 @@ const turnLogic = {
             const minimumHP = thisTurn.currentHP > 1;
 
             if (isEnhanced && minimumHP && checkSkill(battleData,thisTurn)) {//disable the skill if not enhanced, or if hp is <= 1
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = battleData.enemyPositions;
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
@@ -17397,7 +17406,10 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -18019,8 +18031,10 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
                 skillCall.isEnhanced = thisTurn.battleValues.isBonanzaActive;
-                return this.returnSkillCall;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -18808,7 +18822,11 @@ const turnLogic = {
             if (statCalls.skillStarted) {
                 if (currentSP >= 2 && statCalls.skillCounter < maximumCasts && (skipSecondaryCheckSameSkill || checkSkill(battleData,thisTurn))) {
                     statCalls.skillCounter += 1;
-                    return this.returnSkillCall;
+
+                    const skillCall = this.returnSkillCall;
+                    skillCall.target = [battleData.primaryTarget];
+                    // skillCall.subTarget = battleData.blastTargets;
+                    return skillCall;
                 }
                 else {
                     statCalls.skillCounter = 0;
@@ -19629,7 +19647,10 @@ const turnLogic = {
             const minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -20508,7 +20529,10 @@ const turnLogic = {
             const minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -24626,7 +24650,10 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.enemyPositions;
+                return skillCall;;
             }
 
             return this.returnBasicCall;
@@ -26828,7 +26855,10 @@ const turnLogic = {
             const isEnhanced = statCalls.isEnhanced;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
@@ -28588,10 +28618,16 @@ const turnLogic = {
             const isEnhanced = thisTurn.battleValues.enhancedActive;
 
             if (isEnhanced) {
-                return this.returnSkillCall2;
+                const skillCall = this.returnSkillCall2;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
             else if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -29329,9 +29365,25 @@ const turnLogic = {
 
             if (canUseSkill) {
                 if (isCombustion) {
-                    return rank>=1 ? this.returnSkillCallEnhE1 : this.returnSkillCallEnh;
+                    if (rank >= 1) {
+                        const skillCall = this.returnSkillCallEnhE1;
+                        skillCall.target = [battleData.primaryTarget];
+                        skillCall.subTarget = battleData.blastTargets;
+                        return skillCall;
+                    }
+                    else {
+                        const skillCall = this.returnSkillCallEnh;
+                        skillCall.target = [battleData.primaryTarget];
+                        skillCall.subTarget = battleData.blastTargets;
+                        return skillCall;
+                    }
                 }
-                else {return this.returnSkillCall;}
+                else {
+                    const skillCall = this.returnSkillCall;
+                    skillCall.target = [battleData.primaryTarget];
+                    // skillCall.subTarget = battleData.blastTargets;
+                    return skillCall;
+                }
             }
 
             const actionChosen = isCombustion ? this.returnBasicEnhCall : this.returnBasicCall;
@@ -31176,7 +31228,18 @@ const turnLogic = {
             const isEnhanced = thisTurn.battleValues.isEnhanced;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return isEnhanced ? this.returnSkillCallEnh : this.returnSkillCall;
+                if (isEnhanced) {
+                    const skillCall = this.returnSkillCallEnh;
+                    skillCall.target = [battleData.primaryTarget];
+                    skillCall.subTarget = battleData.blastTargets;
+                    return skillCall;
+                }
+                else {
+                    const skillCall = this.returnSkillCall;
+                    skillCall.target = [battleData.primaryTarget];
+                    // skillCall.subTarget = battleData.blastTargets;
+                    return skillCall;
+                }
             }
 
             return this.returnBasicCall;
@@ -37343,8 +37406,18 @@ const turnLogic = {
             // // }
 
             if (checkSkill(battleData,thisTurn)) {
-                const returnSkillCall = isEnhanced ? this.returnSkillCallEnh : this.returnSkillCall;
-                return returnSkillCall;
+                if (isEnhanced) {
+                    const skillCall = this.returnSkillCall;
+                    skillCall.target = battleData.enemyPositions;
+                    // skillCall.subTarget = battleData.blastTargets;
+                    return skillCall;
+                }
+                else {
+                    const skillCall = this.returnSkillCall;
+                    skillCall.target = [battleData.primaryTarget];
+                    skillCall.subTarget = battleData.blastTargets;
+                    return skillCall;
+                }
             }
 
             return this.returnBasicCall;
@@ -41252,7 +41325,10 @@ const turnLogic = {
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {//lockout skill when enhanced, user defined condition is irrelevant at that point for her
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = battleData.enemyPositions;
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -41853,7 +41929,10 @@ const turnLogic = {
             let minimum = currentSP >= 1;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.enemyPositions;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -42898,6 +42977,8 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
+                skillCall.target = battleData.enemyPositions;
+                // skillCall.subTarget = battleData.blastTargets;
                 return skillCall;
             }
 
@@ -44699,7 +44780,19 @@ const turnLogic = {
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {
                 return this.returnSkillCall;
             }
-            return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+
+            if (isEnhanced) {
+                const skillCall = this.returnBasicCallEnh;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
+            else {
+                const skillCall = this.returnBasicCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -45861,7 +45954,10 @@ const turnLogic = {
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = battleData.enemyPositions;
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
@@ -46738,7 +46834,10 @@ const turnLogic = {
             const isEnhanced = thisTurn.battleValues.godModeActive;
 
             if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = battleData.enemyPositions;
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return isEnhanced ? this.returnBasicCallEnh : this.returnBasicCall;
@@ -48755,7 +48854,10 @@ const turnLogic = {
             const minimum = currentSP>0;
 
             if (minimum && checkSkill(battleData,thisTurn)) {
-                return this.returnSkillCall;
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
             }
 
             return this.returnBasicCall;
