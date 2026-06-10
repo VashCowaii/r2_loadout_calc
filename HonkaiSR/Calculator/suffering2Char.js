@@ -7243,21 +7243,19 @@ const turnLogic = {
             return thisTurn.battleValues.nextBasicEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.gallagherSkillHeal,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.gallagherSkillHeal, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.gallagherBasicEnhanced,
@@ -7949,21 +7947,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.huohuoSkillHeal,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.huohuoSkillHeal, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.huohuoBasic,
@@ -8637,21 +8633,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.bailuSkillHeal,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.bailuSkillHeal, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.bailuBasic,
@@ -9206,21 +9200,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.natashaSkillHeal,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.natashaSkillHeal, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.natashaBasic,
@@ -9928,21 +9920,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.lynxSkillHeal,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.lynxSkillHeal, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.lynxBasic,
@@ -10517,21 +10507,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.luochaSkillHeal,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.luochaSkillHeal, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.luochaBasic,
@@ -11399,20 +11387,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.swSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.swSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.swBasic,
@@ -12253,20 +12240,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.kafkaSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.kafkaSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.kafkaBasic,
@@ -13127,20 +13113,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.fishladySkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.fishladySkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.fishladyBasic,
@@ -14274,20 +14259,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.blackswanSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.blackswanSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.blackswanBasic,
@@ -15318,20 +15302,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.weltSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.weltSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.weltBasic,
@@ -16047,22 +16030,20 @@ const turnLogic = {
             return actionChosen;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.bladeSkill,
+                action: "Skill",
+                points: 0, 
+
+                isEnhanced: true,
                 isAttack: true,
                 isAbility: true,
-                isEnhanced: true,
-                points: 0, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.bladeSkill, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
             // call1.target = [thisTurn];
 
             this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
@@ -17422,20 +17403,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.pelaSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.pelaSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.pelaBasic,
@@ -18046,20 +18026,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.topazSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.topazSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.topazBasic,
@@ -18842,32 +18821,33 @@ const turnLogic = {
             //default to basic atk when all else fails
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.archerSkillInstance,
+                action: "Skill",
+                points: -2, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -2, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.archerSkillInstance, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
-            const call2 = this.returnSkillCallEnd ??= {
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnSkillCallEnd ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.archerSkillInstance,
                 action: "EndTurn",
+                points: 0, 
+
                 isAttack: false,
                 isAbility: false,
-                points: 0,
-                properName: thisTurn.properName,
                 useAnyTriggers: false,
-                // eventTypeStartLOG: "BasicATKStart",
-                // eventTypeStart: "BasicATKStart",
-                // eventTypeEnd: "BasicATKEnd",
-            }
-            call2.sourceTurn = thisTurn;
+                eventTypeStartLOG: null,
+
+                // poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCallEnd.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.archerBasic,
@@ -19655,20 +19635,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.seeleSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.seeleSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.seeleBasic,
@@ -20535,21 +20514,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.ratioSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.ratioSkill, 
+
                 poolKey: this.abilityTargetPools.Skill,
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.ratioBasic,
@@ -21316,21 +21293,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.tingyunSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.tingyunSkill, 
-                target: "char1",
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.tingyunBasic,
@@ -21927,21 +21902,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.bronyaAdvance,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.bronyaAdvance, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.bronyaBasic,
@@ -22511,21 +22484,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.sundayAdvance,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.sundayAdvance, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.sundayBasic,
@@ -23238,22 +23209,20 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.tribbieSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.tribbieSkill, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
-            call1.target = [thisTurn];
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.tribbieBasic,
@@ -24060,22 +24029,20 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.robinSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.robinSkill, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
-            call1.target = [thisTurn];
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.robinBasic,
@@ -24665,20 +24632,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.astaSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.astaSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.astaBasic,
@@ -25297,22 +25263,20 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.ruanmeiSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.ruanmeiSkill,
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
-            call1.target = [thisTurn];
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.ruanmeiBasic,
@@ -26108,21 +26072,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.sparkleAdvance,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.sparkleAdvance, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.sparkleBasic,
@@ -26872,20 +26834,19 @@ const turnLogic = {
             return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.saberSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.saberSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.saberBasicEnhanced,
@@ -27801,22 +27762,20 @@ const turnLogic = {
             return actionChosen;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.bladeSkillInstance,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.bladeSkillInstance, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
-            call1.sourceTurn = thisTurn;
-            call1.target = [thisTurn];
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
 
             this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.bladeBasicEnhanced,
@@ -28638,35 +28597,34 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCall ??= {
-                action: "Skill", 
-                isAttack: true,
-                isAbility: true,
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.jingliuSkill,
+                action: "Skill",
                 points: -1, 
-                properName: thisTurn.properName,
-                useAnyTriggers: true,
-                eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.jingliuSkill, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
-            const call2 = this.returnSkillCall2 ??= {
-                action: "Skill", 
+
                 isAttack: true,
                 isAbility: true,
-                points: 0, 
-                isEnhanced: true,
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.jingliuSkillEnhanced, 
-                target: "enemy",
-            }
-            call2.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnSkillCall2 ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.jingliuSkillEnhanced,
+                action: "Skill",
+                points: 0, 
+
+                isEnhanced: true,
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall2.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.jingliuBasic,
@@ -29381,50 +29339,49 @@ const turnLogic = {
             //default to basic atk when all else fails
         },
         preLogic(thisTurn,battleData) {
-            const call1 = this.returnSkillCallEnhE1 ??= {
-                action: "Skill", 
-                isAttack: true,
-                isAbility: true,
+            this.returnSkillCallEnhE1 ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.fireflySkillEnhanced,
+                action: "Skill",
                 points: 0, 
+
                 isEnhanced: true,
-                properName: thisTurn.properName,
-                useAnyTriggers: true,
-                eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.fireflySkillEnhanced, 
-                target: "enemy",
-            }
-            call1.sourceTurn = thisTurn;
-            const call2 = this.returnSkillCallEnh ??= {
-                action: "Skill", 
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                isEnhanced: true,
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.fireflySkillEnhanced, 
-                target: "enemy",
-            }
-            call2.sourceTurn = thisTurn;
-            const call3 = this.returnSkillCall ??= {
-                action: "Skill", 
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCallEnhE1.sourceTurn = thisTurn;
+
+            this.returnSkillCallEnh ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.fireflySkillEnhanced,
+                action: "Skill",
+                points: -1, 
+
+                isEnhanced: true,
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.fireflySkillReg, 
-                target: "enemy",
-            }
-            call3.sourceTurn = thisTurn;
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCallEnh.sourceTurn = thisTurn;
+
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.fireflySkillReg,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.fireflyBasicEnhanced,
@@ -30389,20 +30346,19 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.dhilSkillInstance,
+                action: "Skill",
+                points: 0, 
+
+                isContinuousTurn: true,
                 isAttack: false,
                 isAbility: false,
-                points: 0, 
-                properName: thisTurn.properName,
                 useAnyTriggers: false,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.dhilSkillInstance, 
-                target: "self", 
-                isContinuousTurn: true,
-            }
+
+                // poolKey: this.abilityTargetPools.Skill,
+            })
             this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
@@ -31226,34 +31182,33 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hookSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.hookSkill, 
-                target: "enemy",
-            }
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
             this.returnSkillCall.sourceTurn = thisTurn;
-            this.returnSkillCallEnh ??= {
-                action: "Skill", 
+
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hookSkillEnh,
+                action: "Skill",
+                points: -1, 
+
+                isEnhanced: true,
                 isAttack: true,
                 isAbility: true,
-                points: -1, 
-                isEnhanced: true,
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.hookSkillEnh, 
-                target: "enemy",
-            }
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
             this.returnSkillCallEnh.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
@@ -31951,20 +31906,18 @@ const turnLogic = {
             return actionChosen;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.rmcSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.rmcSkill, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
+            })
             this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
@@ -33164,20 +33117,18 @@ const turnLogic = {
             //TODO: within prelogic we can probably do the same shit we just set up on aggy EBA, but for everything, and then potentially bind some pathing to the returnAbilityCall objects and pass that through on actual
             //turn logic call, and if we do it properly we can probably trim out ATKObjects calls from within ability calls, idk about LogicRef though that might need to stay at a minimum
             //and that would probably cut down on property access by a fuckload across the board, it'd just suck to make that change.
-            this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.aggySkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.aggySkill, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
+            })
             this.returnSkillCall.sourceTurn = thisTurn;
             // this.returnSkillCall.target = [thisTurn];
 
@@ -34645,20 +34596,18 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.evernightSkill,
+                action: "Skill",
+                points: 0, 
+
                 isAttack: false,
                 isAbility: true,
-                points: 0, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.evernightSkill, 
-                target: null,
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
+            })
             this.returnSkillCall.sourceTurn = thisTurn;
             this.returnSkillCall.target = [thisTurn];
 
@@ -36036,20 +35985,18 @@ const turnLogic = {
             return this.returnBasicCall;
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
-                action: "Skill", 
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hyacineSkill,
+                action: "Skill",
+                points: -1, 
+
                 isAttack: false,
                 isAbility: true,
-                points: -1, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.hyacineSkill, 
-                target: "self",
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
+            })
             this.returnSkillCall.sourceTurn = thisTurn;
             this.returnSkillCall.target = battleData.allyPositions;
 
@@ -37404,38 +37351,33 @@ const turnLogic = {
             //default to basic atk when all else fails
         },
         preLogic(thisTurn,battleData) {
-            this.returnSkillCall ??= {
-                action: "Skill", 
-                isAttack: true,
-                isAbility: true,
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.castoriceSkill,
+                action: "Skill",
                 points: 0, 
-                properName: thisTurn.properName,
-                useAnyTriggers: true,
-                eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.castoriceSkill, 
-                target: "self",
-                poolKey: this.abilityTargetPools.Skill,
-            }
-            this.returnSkillCall.sourceTurn = thisTurn;
-            // this.returnSkillCall.target = battleData.allyPositions;
 
-            this.returnSkillCallEnh ??= {
-                action: "Skill", 
                 isAttack: true,
                 isAbility: true,
-                isEnhanced: true,
-                points: 0, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "SkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: this.skillFunctions.castoriceSkillEnhanced, 
-                target: "self",
+
                 poolKey: this.abilityTargetPools.Skill,
-            }
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnSkillCallEnh ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.castoriceSkillEnhanced,
+                action: "Skill",
+                points: 0, 
+
+                isEnhanced: true,
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
             this.returnSkillCallEnh.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
