@@ -12747,7 +12747,11 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60045_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60045_Skill03_Phase02",
+              "BattleEventAbility_60045_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -12777,7 +12781,9 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60045_PassiveSkill01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -12812,7 +12818,11 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60045_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60045_Skill03_Phase02",
+          "BattleEventAbility_60045_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -12838,7 +12848,9 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60045_PassiveSkill01"
+        ],
         "toughnessList": [
           0,
           0,
