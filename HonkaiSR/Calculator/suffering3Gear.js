@@ -7872,8 +7872,6 @@ const turnLogicLightcones = {
             {
                 "trigger": "AdditionalTriggerAttackEnd",
                 condition(battleData,generalInfo) {
-                    // const generalInfo = {sourceTurn,enemiesToHit,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
-
                     // let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.isEnemy || !sourceTurn.isMemosprite) {return;}//only tracking memo attacks
