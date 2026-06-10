@@ -7240,7 +7240,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return thisTurn.battleValues.nextBasicEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            const basicCall = thisTurn.battleValues.nextBasicEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -7944,7 +7946,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -8630,7 +8634,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -9197,7 +9203,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -9917,7 +9925,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -10504,7 +10514,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -11387,7 +11399,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -12240,7 +12254,7 @@ const turnLogic = {
 
             const basicCall = this.returnBasicCall;
             basicCall.target = [battleData.primaryTarget];
-            return this.returnBasicCall;
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -15305,7 +15319,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -16035,8 +16051,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
-            return actionChosen;
+            const basicCall = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -17412,7 +17429,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -18037,7 +18056,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -18835,7 +18856,9 @@ const turnLogic = {
                 }
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
             //default to basic atk when all else fails
         },
         preLogic(thisTurn,battleData) {
@@ -19653,7 +19676,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -20535,7 +20560,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -21314,7 +21341,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -21923,7 +21952,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -22505,7 +22536,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -23230,7 +23263,10 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            basicCall.subTarget = battleData.blastTargets;
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -24050,7 +24086,9 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -24656,7 +24694,9 @@ const turnLogic = {
                 return skillCall;;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -25287,7 +25327,9 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -26096,7 +26138,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -26861,7 +26905,16 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
+            if (isEnhanced) {
+                const basicCall = this.returnBasicEnhCall;
+                basicCall.target = battleData.enemyPositions;
+                return basicCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -27788,8 +27841,17 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
-            return actionChosen;
+            if (isEnhanced) {
+                const basicCall = this.returnBasicEnhCall;
+                basicCall.target = [battleData.primaryTarget];
+                basicCall.subTarget = battleData.blastTargets
+                return basicCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -28630,7 +28692,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -29386,9 +29450,9 @@ const turnLogic = {
                 }
             }
 
-            const actionChosen = isCombustion ? this.returnBasicEnhCall : this.returnBasicCall;
-            return actionChosen;
-            //default to basic atk when all else fails
+            const basicCall = isCombustion ? this.returnBasicEnhCall : this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCallEnhE1 ??= createQueueObject(thisTurn,{
@@ -30380,22 +30444,29 @@ const turnLogic = {
                 if (enhancementLevel >= 3) {
                     const eba3 = this.returnBasicEnhCall3;
                     eba3.pointsOffset = costOffset;
+                    eba3.target = [battleData.primaryTarget];
+                    eba3.subTarget = battleData.blastTargets;
                     return eba3;
                 }
                 else if (enhancementLevel >= 2) {
                     const eba2 = this.returnBasicEnhCall2;
                     eba2.pointsOffset = costOffset;
+                    eba2.target = [battleData.primaryTarget];
+                    eba2.subTarget = battleData.blastTargets;
                     return eba2;
                 }
                 else {
                     const eba1 = this.returnBasicEnhCall;
                     eba1.pointsOffset = costOffset;
+                    eba1.target = [battleData.primaryTarget];
                     return eba1;
                 }
             }
 
             //reg basic
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -31242,7 +31313,9 @@ const turnLogic = {
                 }
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -31965,8 +32038,16 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            const actionChosen = basicIsEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
-            return actionChosen;
+            if (basicIsEnhanced) {
+                const basicCall = this.returnBasicEnhCall;
+                basicCall.target = battleData.enemyPositions;
+                return basicCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -33173,8 +33254,17 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            const actionChosen = isEnhanced ? this.returnBasicEnhCall : this.returnBasicCall;
-            return actionChosen;
+            if (isEnhanced) {
+                const basicCall = this.returnBasicEnhCall;
+                basicCall.target = [battleData.primaryTarget];
+                basicCall.subTarget = battleData.blastTargets;
+                return basicCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
         },
         preLogic(thisTurn,battleData) {
             //TODO: within prelogic we can probably do the same shit we just set up on aggy EBA, but for everything, and then potentially bind some pathing to the returnAbilityCall objects and pass that through on actual
@@ -34656,7 +34746,9 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -36045,7 +36137,9 @@ const turnLogic = {
                 return returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -37420,8 +37514,9 @@ const turnLogic = {
                 }
             }
 
-            return this.returnBasicCall;
-            //default to basic atk when all else fails
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -40385,7 +40480,9 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -41331,7 +41428,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -41935,7 +42034,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -42982,7 +43083,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -43744,7 +43847,10 @@ const turnLogic = {
                 return this.returnSkillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            basicCall.subTarget = battleData.blastTargets;
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -45960,7 +46066,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -46840,7 +46948,16 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return isEnhanced ? this.returnBasicCallEnh : this.returnBasicCall;
+            if (isEnhanced) {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = battleData.enemyPositions;
+                return basicCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
@@ -48860,7 +48977,9 @@ const turnLogic = {
                 return skillCall;
             }
 
-            return this.returnBasicCall;
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
