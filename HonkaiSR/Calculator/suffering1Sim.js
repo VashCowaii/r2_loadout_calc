@@ -557,7 +557,6 @@ const sim = {
         // let enemiesMade = 0;
         const summaryTurns = battleData.battleTotal.Turns;
 
-
         // {
         //     "image": null,
         //     "entry": null,
@@ -588,22 +587,12 @@ const sim = {
         const enemyTurns = battleData.enemyBasedTurns ??= [];
         const enemyPositions = battleData.enemyPositions ??= [];
         const nextTurn = battleData.nextTurnAV;
-        const dotsObject = {
-            "Lightning": 0,
-            "Fire": 0,
-            "Wind": 0,
-            "Physical": 0
-        }
 
         const enemyRankID = {
             "boss": 3,
             "elite": 2,
             "minion": 1,
         }
-
-
-
-
 
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
@@ -626,7 +615,7 @@ const sim = {
             let name = "Enemy " + enemiesMade + " " + currentEntry.name + " (" + enemyType + ")";
             let enemyRealName = currentEntry.name;
             let slot = "enemy" + enemiesMade;
-            let stats = new Array(greatTableSize).fill(0);//[...currentEntry.stats];
+            let stats = new Array(greatTableSize).fill(0);
             const statsObject = currentEntry.stats;
 
             for (let statsKey in statsObject) {
@@ -641,7 +630,6 @@ const sim = {
 
             nameIndex[name] = slot;
             const slotRef = enemyTurns[slot] ??= {
-                // ...baseEnemyData,
                 name:slot,
                 enemyNumber: enemiesMade,
                 AV:finalStats.SPDActionValue,
@@ -657,8 +645,6 @@ const sim = {
                 statTable: stats,
                 statTableFinals: finalStats,
                 tagSpecific: {},
-                tagSpecificArray: [],
-                teamDebuffs: {},
                 buffsObject: {},
                 buffsStartTurn: [],
                 buffsEndTurn: [],
@@ -668,7 +654,7 @@ const sim = {
                 shieldValueMax: 0,
                 activeShields: {},
                 DOTCounter: 0,
-                dots: {...dotsObject},
+                dots: superGlobal.createEntityDOTObject(),
                 currentDotsArray: [],
                 specialDotsArray: [],
                 cacheTagValues: superGlobal.createEntityCache(),
@@ -730,7 +716,7 @@ const sim = {
             char3: characterObject.char3?.conditions,
             char4: characterObject.char4?.conditions,
             "nameIndex": {},
-            battleTable: {...battleTableKnowerOfAll},//overarching battle stats like skill point max
+            battleTable: superGlobal.getStarterBattleTable(),
             battleTotal: {
                 DMG: {},
                 DMGOverkill: {},
@@ -866,23 +852,16 @@ const sim = {
                 activeFinalMultipliers: {},
                 finalMultiCounter: 0,
                 DOTCounter: 0,
-                dots: {
-                    "Lightning": 0,
-                    "Fire": 0,
-                    "Wind": 0,
-                    "Physical": 0
-                },
+                dots: superGlobal.createEntityDOTObject(),
                 currentDotsArray: [],
                 properName: properName,
                 statTable: statRefTemp.tableReference,
                 // statTableFinals: statRefTemp.returnObject,
                 buffsObject: {},
-                teamDebuffs: {},
                 buffsStartTurn: [],
                 buffsEndTurn: [],
                 additionalDMGObject: {},
                 tagSpecific: {},
-                // tagSpecificArray: [],
                 cacheTagValues: superGlobal.createEntityCache(),
                 isDead: false,
                 canBeTargeted: true,
@@ -1375,11 +1354,6 @@ const sim = {
             //just confirmed with solo archer in a calyx, if he starts with a basic attack that would put him to 4SP total, even before the attack lands he gets that crit dmg buff from guardian. Fuck me man. At least this simplifies the code.
             sourceTurn.actionAssigned = true;
 
-
-
-            // const typeStart = designatedAction.eventTypeStart;
-            // const typeEnd = designatedAction.eventTypeEnd;
-
             const isAbility = designatedAction.isAbility;
             if (isAbility && (!isContinuousTurn || designatedAction.isContinuousTurnBREAK)) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
             chainedAttackRef = actionCall(battleData,designatedAction.target,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
@@ -1567,22 +1541,11 @@ const sim = {
                         AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                     battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                 }
-
-                // if (useAnyTrigger) {
-                    // const typeStart = currentFUA.eventTypeStart;
-                    // const typeEnd = currentFUA.eventTypeEnd;
                     
-                    const isAbility = currentFUA.isAbility;
-                    if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
-                    // poke(typeStart,battleData,generalInfo);
-                    
-                    currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                    if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
-                    // poke(typeEnd,battleData,generalInfo);
-                // }
-                // else {
-                //     currentFUA.actionCall(battleData,targetTurn,sourceTurn);
-                // }
+                const isAbility = currentFUA.isAbility;
+                if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
+                currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
             }
         }
     },

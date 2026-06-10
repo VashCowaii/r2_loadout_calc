@@ -65,6 +65,19 @@ const superGlobal = {
 
         return targetOverride ?? battleData.nameBasedTurns.char1;
     },
+    getStarterBattleTable() {
+        return {
+            "SPMax": 5,
+        }
+    },
+    createEntityDOTObject() {
+        return {
+            "Lightning": 0,
+            "Fire": 0,
+            "Wind": 0,
+            "Physical": 0
+        }
+    },
     createEntityCache() {//got tired of needing to ctrl f on this stuff, just making it a uniform function and idk why I didn't do this sooner lmao
 
         //REVISIT cacheTagFamilies in statListData if you EVER change these
@@ -122,4 +135,60 @@ const superGlobal = {
     generateAllATKObjects() {
 
     },
+    createQueueObject(ownerTurn,overrideObject) {
+        const queueObject = {
+            name: null,
+            priority: priorityList.turn.Default,
+            queueTag: "QueuedUltimate",
+
+            actionCall: null,
+            action: "Ultimate",
+            isContinuousTurn: false,
+            isContinuousTurnBREAK: false,
+
+            points: 0,
+            pointsOffset: 0,
+            //for shit like DHIL cost offset, which won't stop it from being part of the initial cost read to events,
+            //but will stop SP from being drained
+
+            energyCost: null,
+            energyCostFunction: null,
+            //for shit that involves determining which ult to use, like Argenti's, whether it's enhanced how much it drains etc
+            //turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
+            specialEnergyPoke: null,
+            //"SW999GainMMR",   //for shit like special energy costs
+
+            //EXTRA TURN PAIN
+            isTieBreaker: false,
+            isExtraTurn: false,
+            skipEXDisplay: false,
+            allowUlts: false,
+            decrementBuffs: false,
+            extraTurnHasChoice: false,
+
+            //mainly visual, but can be used elsewhere
+            isInserted: false,
+
+            dontKeepNextWave: false,//ults always clear out
+            isEnhanced: false,
+            isAttack: false,
+            isAbility: false,
+            useAnyTriggers: false,
+            eventTypeStartLOG: "UltimateStart",
+
+            properName: ownerTurn.properName,
+            sourceTurn: null,
+            eventOverrideImage: null,//"BEicons/BattleEvent_1506_Box.png"
+
+            target: null,
+            poolKey: null,
+
+            elationForcedPunchline: null,
+        }
+
+        Object.assign(queueObject,overrideObject);
+
+        return queueObject;
+    }
 }
+const createQueueObject = superGlobal.createQueueObject;

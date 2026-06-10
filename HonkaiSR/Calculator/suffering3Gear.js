@@ -2742,7 +2742,7 @@ const turnLogicLightcones = {
                             const allyPositions = battleData.allyPositions;
                             for (let targetTurn of allyPositions) {
                                 if (targetTurn.name === sourceTurn.name) {continue;}//exclude self from energy considerations
-                                else if (targetTurn.maxEnergy === 0 || targetTurn.currentEnergy < (targetTurn.maxEnergy * 0.50)) {availableToGive.push(targetTurn.name);}
+                                else if (targetTurn.specialEnergy || targetTurn.currentEnergy < (targetTurn.maxEnergy * 0.50)) {availableToGive.push(targetTurn.name);}
                             }
                             if (!availableToGive.length) {return;}
         

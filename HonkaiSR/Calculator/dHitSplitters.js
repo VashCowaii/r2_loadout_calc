@@ -79,6 +79,21 @@ const hitSplitters = {
       },
     ],
   },
+  "Bailu": {//DONE
+    "basic": [
+      {
+        "primary": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true,
+      },
+    ],
+  },
   "Natasha": {//DONE
     "basic": [
       {

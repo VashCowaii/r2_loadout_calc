@@ -278,6 +278,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Defence",
             "maxLevel": 15,
@@ -1177,6 +1178,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -1220,6 +1222,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -1859,6 +1862,7 @@ let characters = {
                 15
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -2593,6 +2597,7 @@ let characters = {
                 0.05
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -2636,6 +2641,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -4216,6 +4222,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Impair",
             "maxLevel": 15,
             "configAbilityList": [
@@ -4838,6 +4845,7 @@ let characters = {
                 0.9
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -5344,6 +5352,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Fire",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -5454,6 +5463,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Fire",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -6127,6 +6137,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -6564,6 +6575,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Wind",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -6695,6 +6707,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -6818,6 +6831,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -7427,6 +7441,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -7468,6 +7483,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -8706,6 +8722,7 @@ let characters = {
                 768.75
               ]
             },
+            "element": "Ice",
             "attackType": "Ultra",
             "skillEffect": "Defence",
             "maxLevel": 15,
@@ -8786,6 +8803,7 @@ let characters = {
                 0.625
               ]
             },
+            "element": "Ice",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -8828,6 +8846,7 @@ let characters = {
                 150
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Defence",
             "maxLevel": 1,
@@ -9268,6 +9287,7 @@ let characters = {
                 246
               ]
             },
+            "element": "Physical",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -9363,6 +9383,7 @@ let characters = {
                 471.5
               ]
             },
+            "element": "Physical",
             "attackType": "Ultra",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -9458,6 +9479,7 @@ let characters = {
                 0.625
               ]
             },
+            "element": "Physical",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -10133,6 +10155,7 @@ let characters = {
                 12.5
               ]
             },
+            "element": "Ice",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -10730,6 +10753,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -11563,6 +11587,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Wind",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -11604,6 +11629,7 @@ let characters = {
                 0.25
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -12880,6 +12906,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -12990,6 +13017,7 @@ let characters = {
                 461.25
               ]
             },
+            "element": "Quantum",
             "attackType": "Ultra",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -13135,6 +13163,7 @@ let characters = {
                 153.75
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -13169,6 +13198,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Restore",
             "maxLevel": 1,
@@ -13932,6 +13962,7 @@ let characters = {
                 0.935
               ]
             },
+            "element": "Physical",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -14518,6 +14549,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Fire",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -14677,6 +14709,7 @@ let characters = {
                 10000
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -15163,6 +15196,7 @@ let characters = {
                 4
               ]
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -15329,6 +15363,7 @@ let characters = {
                 0.9
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -15368,6 +15403,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -15784,6 +15820,7 @@ let characters = {
                 0.3
               ]
             },
+            "element": "Lightning",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -15899,6 +15936,7 @@ let characters = {
                 0.65
               ]
             },
+            "element": "Lightning",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -15979,6 +16017,7 @@ let characters = {
                 0.75
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -16018,6 +16057,7 @@ let characters = {
                 50
               ]
             },
+            "element": "Lightning",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -16446,6 +16486,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -16671,6 +16712,7 @@ let characters = {
                 307.5
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -16711,6 +16753,7 @@ let characters = {
             "params": {
               "1": []
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Restore",
             "maxLevel": 1,
@@ -17414,6 +17457,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Lightning",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -19380,6 +19424,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -19640,6 +19685,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -20087,6 +20133,7 @@ let characters = {
                 0.15
               ]
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Defence",
             "maxLevel": 15,
@@ -20285,6 +20332,7 @@ let characters = {
                 0.95
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -20322,6 +20370,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Defence",
             "maxLevel": 1,
@@ -21039,6 +21088,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -22225,6 +22275,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Lightning",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -22335,6 +22386,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Lightning",
             "attackType": "Ultra",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -22475,6 +22527,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -22515,6 +22568,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Lightning",
             "attackType": "Maze",
             "skillEffect": "Restore",
             "maxLevel": 1,
@@ -23375,6 +23429,7 @@ let characters = {
                 15
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -23993,6 +24048,7 @@ let characters = {
                 4
               ]
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -24028,6 +24084,7 @@ let characters = {
             "params": {
               "1": []
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -24247,6 +24304,7 @@ let characters = {
                 6
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -24283,6 +24341,7 @@ let characters = {
                 1.2
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -25463,6 +25522,7 @@ let characters = {
                 0.225
               ]
             },
+            "element": "Physical",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -25558,6 +25618,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -26035,6 +26096,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Wind",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -26149,6 +26211,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -26319,6 +26382,7 @@ let characters = {
                 6
               ]
             },
+            "element": "Wind",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -26362,6 +26426,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -27134,6 +27199,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -28215,6 +28281,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -28846,6 +28913,7 @@ let characters = {
                 120
               ]
             },
+            "element": "Physical",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -29012,6 +29080,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -29846,6 +29915,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -30504,6 +30574,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Lightning",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -31050,6 +31121,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -31282,6 +31354,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -31320,6 +31393,7 @@ let characters = {
                 30
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -31855,6 +31929,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Fire",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -32082,6 +32157,7 @@ let characters = {
                 0.4
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -32566,6 +32642,7 @@ let characters = {
                 2020
               ]
             },
+            "element": "Fire",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -33544,6 +33621,7 @@ let characters = {
                 15
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -33961,6 +34039,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -34100,6 +34179,7 @@ let characters = {
                 0.6
               ]
             },
+            "element": "Ice",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -34207,6 +34287,7 @@ let characters = {
                 1.5
               ]
             },
+            "element": "Ice",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -34249,6 +34330,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -34684,6 +34766,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Defence",
             "maxLevel": 15,
@@ -34998,6 +35081,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Defence",
             "maxLevel": 1,
@@ -35667,6 +35751,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -36111,6 +36196,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -36252,6 +36338,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Quantum",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -36377,6 +36464,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -36413,6 +36501,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -37190,6 +37279,7 @@ let characters = {
                 50
               ]
             },
+            "element": "Wind",
             "skillEffect": "Impair",
             "maxLevel": 15,
             "configAbilityList": [
@@ -37233,6 +37323,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -38340,6 +38431,7 @@ let characters = {
                 0.25
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -38787,6 +38879,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Physical",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -38942,6 +39035,7 @@ let characters = {
                 1.5
               ]
             },
+            "element": "Physical",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -39045,6 +39139,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -39080,6 +39175,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -39909,6 +40005,7 @@ let characters = {
                 70
               ]
             },
+            "element": "Fire",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -40760,6 +40857,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -40795,6 +40893,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -41225,6 +41324,7 @@ let characters = {
                 0.625
               ]
             },
+            "element": "Imaginary",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -41349,6 +41449,7 @@ let characters = {
                 0.14
               ]
             },
+            "element": "Imaginary",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -41444,6 +41545,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -41479,6 +41581,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -42238,6 +42341,7 @@ let characters = {
                 15
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -42724,6 +42828,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "attackType": "BPSkill",
             "skillEffect": "Impair",
             "maxLevel": 15,
@@ -42997,6 +43102,7 @@ let characters = {
                 16
               ]
             },
+            "element": "Physical",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -43039,6 +43145,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -44805,6 +44912,7 @@ let characters = {
                 0.6
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -45675,6 +45783,7 @@ let characters = {
                 25
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -45714,6 +45823,7 @@ let characters = {
                 25
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -46252,6 +46362,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Lightning",
             "attackType": "BPSkill",
             "skillEffect": "Summon",
             "maxLevel": 15,
@@ -46333,6 +46444,7 @@ let characters = {
                 0.625
               ]
             },
+            "element": "Lightning",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -46487,6 +46599,7 @@ let characters = {
                 0
               ]
             },
+            "element": "Lightning",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -46866,6 +46979,7 @@ let characters = {
                 6
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -46928,6 +47042,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -46992,6 +47107,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -47433,6 +47549,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -47689,6 +47806,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -48600,6 +48718,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -48649,6 +48768,7 @@ let characters = {
                 50
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -49257,6 +49377,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Wind",
             "skillEffect": "Impair",
             "maxLevel": 15,
             "configAbilityList": [
@@ -49292,6 +49413,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -50082,6 +50204,7 @@ let characters = {
                 50
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -50774,6 +50897,7 @@ let characters = {
                 0
               ]
             },
+            "element": "Quantum",
             "attackType": "Ultra",
             "skillEffect": "Summon",
             "maxLevel": 15,
@@ -50911,6 +51035,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -51411,6 +51536,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Support",
             "maxLevel": 10,
             "configAbilityList": [
@@ -51486,6 +51612,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Support",
             "maxLevel": 10,
             "configAbilityList": [
@@ -52266,6 +52393,7 @@ let characters = {
                 0.2
               ]
             },
+            "element": "Physical",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -52696,6 +52824,7 @@ let characters = {
                 12
               ]
             },
+            "element": "Physical",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -52860,6 +52989,7 @@ let characters = {
                 0.2
               ]
             },
+            "element": "Physical",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -53356,6 +53486,7 @@ let characters = {
                 256.25
               ]
             },
+            "element": "Wind",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -53530,6 +53661,7 @@ let characters = {
                 307.5
               ]
             },
+            "element": "Wind",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -53675,6 +53807,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Wind",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -53712,6 +53845,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Restore",
             "maxLevel": 1,
@@ -53890,6 +54024,7 @@ let characters = {
                 28
               ]
             },
+            "element": "Wind",
             "skillEffect": "Restore",
             "maxLevel": 10,
             "configAbilityList": [
@@ -53970,6 +54105,7 @@ let characters = {
                 30
               ]
             },
+            "element": "Wind",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -54029,6 +54165,7 @@ let characters = {
                 0.3
               ]
             },
+            "element": "Wind",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -54816,6 +54953,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "skillEffect": "Impair",
             "maxLevel": 15,
             "configAbilityList": [
@@ -54857,6 +54995,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -55313,6 +55452,7 @@ let characters = {
                 0.11
               ]
             },
+            "element": "Wind",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -55549,6 +55689,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Wind",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -55589,6 +55730,7 @@ let characters = {
             "params": {
               "1": []
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -56059,6 +56201,7 @@ let characters = {
                 0.1
               ]
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Summon",
             "maxLevel": 15,
@@ -56215,6 +56358,7 @@ let characters = {
                 0.1
               ]
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -56518,6 +56662,7 @@ let characters = {
                 0.05
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -56561,6 +56706,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -56814,6 +56960,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Ice",
             "skillEffect": "Support",
             "maxLevel": 10,
             "configAbilityList": [
@@ -56859,6 +57006,7 @@ let characters = {
               "9": [],
               "10": []
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -56938,6 +57086,7 @@ let characters = {
                 40
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -57411,6 +57560,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Physical",
             "attackType": "BPSkill",
             "skillEffect": "Defence",
             "maxLevel": 15,
@@ -57805,6 +57955,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -58340,6 +58491,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -58472,6 +58624,7 @@ let characters = {
                 12
               ]
             },
+            "element": "Ice",
             "attackType": "Ultra",
             "skillEffect": "Summon",
             "maxLevel": 15,
@@ -58562,6 +58715,7 @@ let characters = {
                 12
               ]
             },
+            "element": "Ice",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -58707,6 +58861,7 @@ let characters = {
                 12
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -58747,6 +58902,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -58905,6 +59061,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -58998,6 +59155,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59083,6 +59241,7 @@ let characters = {
                 0.504
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59163,6 +59322,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59238,6 +59398,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59356,6 +59517,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59446,6 +59608,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59516,6 +59679,7 @@ let characters = {
                 33.6
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59596,6 +59760,7 @@ let characters = {
                 0.168
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59736,6 +59901,7 @@ let characters = {
                 4
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59840,6 +60006,7 @@ let characters = {
                 60
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59910,6 +60077,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -59995,6 +60163,7 @@ let characters = {
                 0.168
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -60095,6 +60264,7 @@ let characters = {
                 1.5
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -60170,6 +60340,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -60247,6 +60418,7 @@ let characters = {
                 0
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -60295,6 +60467,7 @@ let characters = {
               "9": [],
               "10": []
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -60947,6 +61120,7 @@ let characters = {
                 4
               ]
             },
+            "element": "Fire",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -61084,6 +61258,7 @@ let characters = {
                 0.125
               ]
             },
+            "element": "Fire",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -61329,6 +61504,7 @@ let characters = {
                 0.25
               ]
             },
+            "element": "Fire",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -61373,6 +61549,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -61984,6 +62161,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Physical",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -62128,6 +62306,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Physical",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -62222,6 +62401,7 @@ let characters = {
                 0.25
               ]
             },
+            "element": "Physical",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -62264,6 +62444,7 @@ let characters = {
                 8
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -63245,6 +63426,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Lightning",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -65108,6 +65290,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -65286,6 +65469,7 @@ let characters = {
                 0.01
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -65336,6 +65520,7 @@ let characters = {
                 99
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Summon",
             "maxLevel": 1,
@@ -65424,6 +65609,7 @@ let characters = {
                 15
               ]
             },
+            "element": "Imaginary",
             "attackType": "ElationDamage",
             "skillEffect": "Enhance",
             "maxLevel": 15,
@@ -66489,6 +66675,7 @@ let characters = {
                 30
               ]
             },
+            "element": "Fire",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -67296,6 +67483,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Physical",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -67330,6 +67518,7 @@ let characters = {
                 0.15
               ]
             },
+            "element": "Physical",
             "attackType": "Maze",
             "skillEffect": "Restore",
             "maxLevel": 1,
@@ -67808,6 +67997,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Fire",
             "attackType": "BPSkill",
             "skillEffect": "Defence",
             "maxLevel": 15,
@@ -68033,6 +68223,7 @@ let characters = {
                 102.5
               ]
             },
+            "element": "Fire",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -68069,6 +68260,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Fire",
             "attackType": "Maze",
             "skillEffect": "Defence",
             "maxLevel": 1,
@@ -68572,6 +68764,7 @@ let characters = {
                 0.375
               ]
             },
+            "element": "Imaginary",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -68660,6 +68853,7 @@ let characters = {
                 12.5
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -68695,6 +68889,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -69185,6 +69380,7 @@ let characters = {
                 0.1
               ]
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Summon",
             "maxLevel": 15,
@@ -69235,6 +69431,7 @@ let characters = {
               "14": [],
               "15": []
             },
+            "element": "Ice",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -69460,6 +69657,7 @@ let characters = {
                 760
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -69496,6 +69694,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -69667,6 +69866,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Ice",
             "attackType": "Servant",
             "skillEffect": "Support",
             "maxLevel": 10,
@@ -69751,6 +69951,7 @@ let characters = {
                 0.336
               ]
             },
+            "element": "Ice",
             "skillEffect": "Support",
             "maxLevel": 10,
             "configAbilityList": [
@@ -69812,6 +70013,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -69871,6 +70073,7 @@ let characters = {
                 0.25
               ]
             },
+            "element": "Ice",
             "skillEffect": "Enhance",
             "maxLevel": 10,
             "configAbilityList": [
@@ -70470,6 +70673,7 @@ let characters = {
                 5
               ]
             },
+            "element": "Lightning",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -70594,6 +70798,7 @@ let characters = {
                 0.375
               ]
             },
+            "element": "Lightning",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -70643,6 +70848,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Lightning",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -71592,6 +71798,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Wind",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -71631,6 +71838,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -72109,6 +72317,7 @@ let characters = {
             "params": {
               "1": []
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -72996,6 +73205,7 @@ let characters = {
                 0.75
               ]
             },
+            "element": "Imaginary",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -73039,6 +73249,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Imaginary",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -74558,6 +74769,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Impair",
             "maxLevel": 15,
             "configAbilityList": [
@@ -75203,6 +75415,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Enhance",
             "maxLevel": 15,
             "configAbilityList": [
@@ -75244,6 +75457,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -76977,6 +77191,7 @@ let characters = {
                 15
               ]
             },
+            "element": "Ice",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -77432,6 +77647,7 @@ let characters = {
                 1
               ]
             },
+            "element": "Wind",
             "attackType": "BPSkill",
             "skillEffect": "Restore",
             "maxLevel": 15,
@@ -77546,6 +77762,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Wind",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -77716,6 +77933,7 @@ let characters = {
                 6
               ]
             },
+            "element": "Wind",
             "skillEffect": "Restore",
             "maxLevel": 15,
             "configAbilityList": [
@@ -77759,6 +77977,7 @@ let characters = {
                 10
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
@@ -78186,6 +78405,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Quantum",
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -78312,6 +78532,7 @@ let characters = {
                 2
               ]
             },
+            "element": "Quantum",
             "attackType": "Ultra",
             "skillEffect": "Support",
             "maxLevel": 15,
@@ -78437,6 +78658,7 @@ let characters = {
                 3
               ]
             },
+            "element": "Quantum",
             "skillEffect": "Support",
             "maxLevel": 15,
             "configAbilityList": [
@@ -78473,6 +78695,7 @@ let characters = {
                 20
               ]
             },
+            "element": "Quantum",
             "attackType": "Maze",
             "skillEffect": "Support",
             "maxLevel": 1,
@@ -79285,6 +79508,7 @@ let characters = {
                 50
               ]
             },
+            "element": "Wind",
             "skillEffect": "Impair",
             "maxLevel": 15,
             "configAbilityList": [
@@ -79328,6 +79552,7 @@ let characters = {
                 0.5
               ]
             },
+            "element": "Wind",
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
@@ -80166,6 +80391,7 @@ let characters = {
                 70
               ]
             },
+            "element": "Fire",
             "attackType": "Ultra",
             "skillEffect": "Enhance",
             "maxLevel": 15,

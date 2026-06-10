@@ -23678,6 +23678,12 @@ let mocSchedule = [
                     0.2
                   ]
                 },
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 60019
+                  }
+                ],
                 "stageType": "Challenge",
                 "enemyList": [
                   [
@@ -24062,6 +24068,12 @@ let mocSchedule = [
                     0.2
                   ]
                 },
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 60019
+                  }
+                ],
                 "stageType": "Challenge",
                 "enemyList": [
                   [
@@ -24446,6 +24458,12 @@ let mocSchedule = [
                     0.2
                   ]
                 },
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 60019
+                  }
+                ],
                 "stageType": "Challenge",
                 "enemyList": [
                   [
@@ -24836,6 +24854,12 @@ let mocSchedule = [
                     0.2
                   ]
                 },
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 60019
+                  }
+                ],
                 "stageType": "Challenge",
                 "enemyList": [
                   [
