@@ -8,7 +8,7 @@ global.calcAllowedSet = new Set([
     "Welt",                             //DONE
     "Acheron",                          //DONE
     "Mortenax Blade",                   //DONE
-    // "The Dahlia",
+    // "The Dahlia",                    //not yet
     //4star
     "Pela",                             //DONE
     
@@ -29,7 +29,7 @@ global.calcAllowedSet = new Set([
     "Jingliu",                          //DONE
     "Firefly",                          //DONE
     "Phainon",                          //not yet
-    "Dan Heng • Imbibitor Lunae",       //not yet
+    "Dan Heng • Imbibitor Lunae",       //DONE
     //4star
     "Hook",                             //DONE
 
@@ -58,7 +58,7 @@ global.calcAllowedSet = new Set([
     //5star
     "Huohuo",                           //DONE
     "Luocha",                           //DONE
-    "Bailu",                            //not yet
+    "Bailu",                            //DONE
     //4star
     "Gallagher",                        //DONE
     "Natasha",                          //DONE
