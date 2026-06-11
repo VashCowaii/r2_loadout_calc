@@ -23489,7 +23489,7 @@ const turnLogic = {
             "Skill": "Self",
         },
         "skillFunctions": {
-            robinBasic(battleData,target,sourceTurn) {
+            robinBasic(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -23538,9 +23538,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.robinBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            robinSkill(battleData,targetTurn,sourceTurn) {
+            robinSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -23621,7 +23621,7 @@ const turnLogic = {
                 const allyArray = battleData.allAlliesArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
-            robinUltimate(battleData,sourceTurn) {
+            robinUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
