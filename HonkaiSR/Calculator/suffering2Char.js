@@ -22687,7 +22687,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            tribbieBasic(battleData,target,sourceTurn) {
+            tribbieBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -22724,9 +22724,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.tribbieBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            tribbieSkill(battleData,targetTurn,sourceTurn) {
+            tribbieSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -22813,19 +22813,19 @@ const turnLogic = {
 
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
-            tribbieTechnique(battleData,target,sourceTurn) {
+            tribbieTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.tribbieTechREF ??= ATKObjects.Technique["If You're Happy and You Know It"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const applyNuminosity = ATKObjects.applyNuminosity ??= turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity;
                 applyNuminosity(battleData,sourceTurn);
             },
-            tribbieFUA(battleData,targetTurn,sourceTurn) {
+            tribbieFUA(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -22881,11 +22881,11 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.tribbieFUAATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 const buffSheet = ATKObjects.tribbieFUABuffStackSHEET;
                 updateBuff(battleData,sourceTurn,buffSheet);
             },
-            tribbieUltimate(battleData,sourceTurn) {
+            tribbieUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -22976,7 +22976,7 @@ const turnLogic = {
                 }
 
                 const ATKObject = ATKObjects.tribbieUltimateATKOBJECT;
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
