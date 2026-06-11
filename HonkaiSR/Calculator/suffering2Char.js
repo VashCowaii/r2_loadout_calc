@@ -10674,52 +10674,6 @@ const turnLogic = {
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
-            // luochaQueuedSkillHeal(battleData,targetTurn,sourceTurn) {
-            luochaQueuedSkillHeal(battleData,queueObject,sourceTurn) {
-                const logicRef = turnLogic[sourceTurn.properName];
-
-                const targetTurn = queueObject.target[0];
-
-                const hpRatioPrior = targetTurn.currentHP / targetTurn.maxHP;
-                const hpThreshold = 0.50;
-                const targetCanSkillHeal = targetTurn.currentHP > 0 && hpRatioPrior <= hpThreshold;
-
-                if (targetCanSkillHeal) {
-                    return false;
-                }
-                else {
-                    const isLoggyLogger = battleData.isLoggyLogger;
-                    if (isLoggyLogger) {
-                        logToBattle(battleData,{logType: "GenericAction", source:"Retargeting for Skill Injection", bodyText: `Initial target is dead or above 50%, finding new target for Skill Heal.`});
-                    }
-                    const allyPositions = battleData.allyPositions;
-                    let newTarget = null;
-                    let newHPRatio = 1;
-                    
-                    for (let ally of allyPositions) {
-                        const hpRatio = ally.currentHP / ally.maxHP;
-                        if (hpRatio < newHPRatio) {
-                            newHPRatio = hpRatio;
-                            newTarget = ally;
-                        }
-                    }
-
-                    if (newHPRatio <= hpThreshold) {
-                        queueObject.target = [newTarget];
-                        return false;
-                    }
-                    else {
-                        if (isLoggyLogger) {
-                            logToBattle(battleData,{logType: "GenericAction", source:"Skill Injection Failed", bodyText: `No allies under 50%HP found, Luocha skill injection aborted.`});
-                        }
-                        const valuesRef = sourceTurn.battleValues;
-
-                        valuesRef.isReadyToInjectSkill = true;
-                        valuesRef.skillInjectCooldown = 0;
-                        return true;
-                    }
-                }
-            },
             luochaUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -11157,45 +11111,67 @@ const turnLogic = {
                             logToBattle(battleData,{logType: "GenericAction", source:"Queued Skill Use", bodyText: `Ally found with <= 50%HP, Luocha Skill Use triggered.`});
                         }
 
-                        const queueObject = this.queueObjectSkill ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.ability.CharacterHealOthers,
                             queueTag: "QueuedInsert",
-
+    
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.luochaSkillHeal,
-                            action: "Skill", 
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
-                            isTieBreaker: false,
-                            isExtraTurn: false,
+                            action: "Skill",
+                            abortCheck(battleData,actionObject,sourceTurn) {
+                                const targetTurn = actionObject.target[0];
+                
+                                const hpRatioPrior = targetTurn.currentHP / targetTurn.maxHP;
+                                const hpThreshold = 0.50;
+                                const targetCanSkillHeal = targetTurn.currentHP > 0 && hpRatioPrior <= hpThreshold && !targetTurn.isDead && !targetTurn.isLimbo;
+                
+                                if (targetCanSkillHeal) {
+                                    return false;
+                                }
+                                else {
+                                    const isLoggyLogger = battleData.isLoggyLogger;
+                                    if (isLoggyLogger) {
+                                        logToBattle(battleData,{logType: "GenericAction", source:"Retargeting for Skill Injection", bodyText: `Initial target is dead or above 50%, finding new target for Skill Heal.`});
+                                    }
+                                    const allyPositions = battleData.allyPositions;
+                                    let newTarget = null;
+                                    let newHPRatio = 1;
+                                    
+                                    for (let ally of allyPositions) {
+                                        if (ally.isDead || ally.isLimbo) {continue;}
+                                        const hpRatio = ally.currentHP / ally.maxHP;
+                                        if (hpRatio < newHPRatio) {
+                                            newHPRatio = hpRatio;
+                                            newTarget = ally;
+                                        }
+                                    }
+                
+                                    if (newHPRatio <= hpThreshold) {
+                                        actionObject.target = [newTarget];
+                                        return false;
+                                    }
+                                    else {
+                                        if (isLoggyLogger) {
+                                            logToBattle(battleData,{logType: "GenericAction", source:"Skill Injection Failed", bodyText: `No allies under 50%HP found, Luocha skill injection aborted.`});
+                                        }
+                                        const valuesRef = sourceTurn.battleValues;
+                
+                                        valuesRef.isReadyToInjectSkill = true;
+                                        valuesRef.skillInjectCooldown = 0;
+                                        return true;
+                                    }
+                                }
+                            },
+    
                             isInserted: true,
-                            abortCheck: turnLogic[ownerTurn.properName].skillFunctions.luochaQueuedSkillHeal,
-
-                            skipEXDisplay: false,
-                            allowUlts: false,
-                            decrementBuffs: false,
-                            extraTurnHasChoice: false,
                             dontKeepNextWave: false,//ults always clear out
                             isAttack: false,
                             isAbility: true,
-                            useAnyTriggers: true,//no need to specify any eventType stuff here since the skill action itself has the pokes already
+                            useAnyTriggers: true,
                             eventTypeStartLOG: "SkillStart",
-                            // eventTypeStart: "SkillStart",
-                            // eventTypeEnd: "SkillEnd",
-                            
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: null,
+    
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
-
-                            elationForcedPunchline: null,
-                        }
+                        })
 
                         queueObject.sourceTurn = ownerTurn;
                         queueObject.target = [sourceTurn];
@@ -12728,18 +12704,13 @@ const turnLogic = {
                             if (sourceTurn.properName != characterName && debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
                                 // console.log("reached queue")
                                 
-        
-                                const queueObject = this.queueObject ??= {
+                                const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                                     name: this.listenerName,
                                     priority: priorityList.ability.CharacterAttackFromSelf,
                                     queueTag: "QueuedInsert",
-        
-                                    actionCall: turnLogic[characterName].skillFunctions.kafkaFUA,
-                                    action: "Insert", 
-                                    points: 0,
-                                    energyCost: null,
-                                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                                    // specialEnergyPoke: "SW999GainMMR",
+            
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.kafkaFUA,
+                                    action: "Insert",
                                     abortCheck(battleData,actionObject,sourceTurn) {
                                         const target = actionObject.target;
                                         if (target.isDead || target.isLimbo) {
@@ -12747,32 +12718,16 @@ const turnLogic = {
                                             return true;
                                         }
                                     },
-                                    
-                                    isEnhanced: false,
-                                    isTieBreaker: false,
-                                    isExtraTurn: false,
+            
                                     isInserted: true,
-                                    skipEXDisplay: false,
-                                    allowUlts: false,
-                                    decrementBuffs: false,
-                                    extraTurnHasChoice: false,
                                     dontKeepNextWave: false,//ults always clear out
                                     isAttack: true,
                                     isAbility: true,
                                     useAnyTriggers: true,
                                     eventTypeStartLOG: "GenericAbilityStart",
-                                    // eventTypeStart: "GenericAbilityStart",
-                                    // eventTypeEnd: "GenericAbilityEnd",
-        
-                                    properName: characterName,
-                                    sourceTurn: null,
-                                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-        
-                                    target: null,
+            
                                     poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
-        
-                                    elationForcedPunchline: null,
-                                }
+                                })
 
                                 let targetArray = [];
                                 // primaryTargetArray,subTargetArray
@@ -15169,46 +15124,24 @@ const turnLogic = {
 
                 let ownerTurn = this.ownerTurn;
 
-                // const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanTechnique;
-                // callTech(battleData,null,ownerTurn);
-
-                const queueObject = this.queueObject ??= {
-                    name: "Black Swan Technique Insert",
+                const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                    name: this.listenerName,
                     priority: priorityList.ability.CharacterBuffSelf,
                     queueTag: "QueuedInsert",
 
                     actionCall: turnLogic[ownerTurn.properName].skillFunctions.blackswanTechnique,
-                    action: "Insert", 
-                    points: 0,
-                    energyCost: null,
-                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                    // specialEnergyPoke: "SW999GainMMR",
-                    
-                    isEnhanced: false,
-                    isTieBreaker: false,
-                    isExtraTurn: false,
+                    action: "Insert",
+                    abortCheck: null,//(battleData,actionObject,sourceTurn)
+
                     isInserted: true,
-                    skipEXDisplay: false,
-                    allowUlts: false,
-                    decrementBuffs: false,
-                    extraTurnHasChoice: false,
                     dontKeepNextWave: false,//ults always clear out
                     isAttack: false,
                     isAbility: false,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "GenericAbilityStart",
-                    // eventTypeStart: "GenericAbilityStart",
-                    // eventTypeEnd: "GenericAbilityEnd",
 
-                    properName: ownerTurn.properName,
-                    sourceTurn: null,
-                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png",
-
-                    target: null,
-                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                    elationForcedPunchline: null,
-                }
+                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                })
                 queueObject.sourceTurn = ownerTurn;
                 queueInsertAbility(battleData,queueObject);
             },
@@ -16045,6 +15978,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
             "Skill": "Enemies (On-Field)",
             "Ultimate": "Self",
+            "Exit": "Self",
             "UltimateEnh": "Enemies (On-Field)",
         },
         "skillFunctions": {
@@ -17029,31 +16963,6 @@ const turnLogic = {
                     valuesRef.charge = oldValue + pointsGained;
                     const newValue = valuesRef.charge;
 
-                    // if (newValue === maxValue) {
-                    //     const buffSheet = this.traceBuffSheet ??= {
-                    //         "stats": [DEFShredAll],
-                    //         [DEFShredAll]: 0.20,
-                    //         "source": "Trace",
-                    //         "sourceOwner": ownerTurn.properName,
-                    //         "buffName": turnLogic[ownerTurn.properName].buffNames.traceShred,
-                    //         "durationInTurn": null,
-                    //         "duration": 1,
-                    //         "AVApplied": 0,
-                    //         "maxStacks": 1,
-                    //         "currentStacks": 1,
-                    //         "decay": false,
-                    //         "expireType": null,
-                    //         "actionTags": ["Attack"]
-                    //     }
-                    //     valuesRef.traceShredActive = true;
-                    //     updateBuff(battleData,ownerTurn,buffSheet);
-                    // }
-                    
-                    // let enteredState = false;
-                    // if (!valuesRef.enhancedActive && newValue >= 2) {
-                    //     enteredState = true;
-                    // }
-
                     const sourceString = generalInfo.sourceString
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
@@ -17062,7 +16971,6 @@ const turnLogic = {
                         if (pointsGained > 0) {
                             ownerTurn.mortenaxBladeChargeSum ??= 0;
                             ownerTurn.mortenaxBladeChargeSum += valuesRef.charge - oldValue;
-                            
                         }
                         logToBattle(battleData,{
                             logType: "SUMMARY:SUM",
@@ -17075,51 +16983,6 @@ const turnLogic = {
                     }
 
                     poke("mortenaxBladeQueueFUA",battleData,null)
-                    // if (enteredState && !valuesRef.enhancedQueued) {
-                    //     valuesRef.enhancedQueued = true;
-
-                    //     const queueObject = this.queueObject ??= {
-                    //         name: this.listenerName + ": Reached 2+ Syzygy",
-                    //         priority: priorityList.ability.CharacterBuffSelf,
-                    //         queueTag: "QueuedInsert",
-
-                    //         actionCall: turnLogic[ownerTurn.properName].skillFunctions.enterEnhancedState,
-                    //         action: "Insert", 
-                    //         points: 0,
-                    //         energyCost: null,
-                    //         // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                    //         // specialEnergyPoke: "SW999GainMMR",
-                            
-                    //         isEnhanced: false,
-                    //         isTieBreaker: false,
-                    //         isExtraTurn: false,
-                    //         isInserted: true,
-                    //         skipEXDisplay: false,
-                    //         allowUlts: false,
-                    //         decrementBuffs: false,
-                    //         extraTurnHasChoice: false,
-                    //         dontKeepNextWave: false,//ults always clear out
-                    //         isAttack: false,
-                    //         isAbility: true,
-                    //         useAnyTriggers: true,
-                    //         eventTypeStartLOG: "GenericAbilityStart",
-                    //         eventTypeStart: "GenericAbilityStart",
-                    //         eventTypeEnd: "GenericAbilityEnd",
-
-                    //         properName: ownerTurn.properName,
-                    //         sourceTurn: null,
-                    //         // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                    //         target: this.target,
-                    //         poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                    //         elationForcedPunchline: null,
-                    //     }
-
-                    //     queueObject.sourceTurn = ownerTurn;
-                    //     queueObject.target = [ownerTurn];
-                    //     queueInsertAbility(battleData,queueObject);
-                    // }
                 },
                 "target": "self",
                 "listenerName": "Mortenax Blade Charge Handler",
@@ -17128,46 +16991,26 @@ const turnLogic = {
             {
                 "trigger": "mortenaxBladeQueueExit",
                 condition(battleData,generalInfo) {
-                    // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
 
-                    const queueObject = this.queueObject ??= {
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                         name: this.listenerName,
                         priority: priorityList.ability.CharacterBuffOthers,
                         queueTag: "QueuedInsert",
-
+    
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
-                        action: "Insert", 
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
-                        isTieBreaker: false,
-                        isExtraTurn: false,
+                        action: "Insert",
+                        abortCheck: null,//(battleData,actionObject,sourceTurn)
+    
                         isInserted: true,
-                        skipEXDisplay: false,
-                        allowUlts: false,
-                        decrementBuffs: false,
-                        extraTurnHasChoice: false,
                         dontKeepNextWave: false,//ults always clear out
                         isAttack: false,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "GenericAbilityStart",
-                        // eventTypeStart: "GenericAbilityStart",
-                        // eventTypeEnd: "GenericAbilityEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: this.target,
-                        poolKey: "Self",//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
+                    })
 
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.target = [ownerTurn];
