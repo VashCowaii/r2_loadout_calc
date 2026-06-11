@@ -145,6 +145,7 @@ const superGlobal = {
             action: "Ultimate",
             isContinuousTurn: false,
             isContinuousTurnBREAK: false,
+            abortCheck: null,
 
             points: 0,
             pointsOffset: 0,
@@ -152,7 +153,7 @@ const superGlobal = {
             //but will stop SP from being drained
 
             energyCost: null,
-            energyCostFunction: null,
+            // energyCostFunction: null,
             //for shit that involves determining which ult to use, like Argenti's, whether it's enhanced how much it drains etc
             //turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
             specialEnergyPoke: null,
@@ -180,7 +181,8 @@ const superGlobal = {
             sourceTurn: null,
             eventOverrideImage: null,//"BEicons/BattleEvent_1506_Box.png"
 
-            target: null,
+            target: [],
+            subTarget: [],
             poolKey: null,
 
             elationForcedPunchline: null,
@@ -189,6 +191,14 @@ const superGlobal = {
         Object.assign(queueObject,overrideObject);
 
         return queueObject;
-    }
+    },
+    territoryActiveAbortUltimate(battleData,queueObject,sourceTurn) {
+        const alreadyActive = battleData.territoryActive;
+        if (alreadyActive) {
+            sourceTurn.ultyQueued = false;
+            return true;
+        }
+        else {return false;}
+    },
 }
 const createQueueObject = superGlobal.createQueueObject;

@@ -37389,14 +37389,6 @@ const turnLogic = {
 
                 return finalRef;
             },
-            castoriceTerritoryAlreadyActive(battleData,queueObject,sourceTurn) {
-                const alreadyActive = battleData.territoryActive;
-                if (alreadyActive) {
-                    sourceTurn.ultyQueued = false;
-                    return true;
-                }
-                else {return false;}
-            },
             castoriceUltimate(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -38472,7 +38464,7 @@ const turnLogic = {
 
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.castoriceUltimate,
                             action: "Ultimate",
-                            abortCheck: turnLogic[ownerTurn.properName].skillFunctions.castoriceTerritoryAlreadyActive,
+                            abortCheck: superGlobal.territoryActiveAbortUltimate,
 
                             energyCost: ownerTurn.specialEnergyMax,
                             //TODO: when cyrene is added, cas will need a specialcostfunction here for the sake of overflow
