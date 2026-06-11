@@ -1356,7 +1356,7 @@ const sim = {
 
             const isAbility = designatedAction.isAbility;
             if (isAbility && (!isContinuousTurn || designatedAction.isContinuousTurnBREAK)) {poke("AbilityStart",battleData,designatedAction,sourceTurn);}
-            chainedAttackRef = actionCall(battleData,designatedAction.target,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
+            chainedAttackRef = actionCall(battleData,designatedAction,sourceTurn,chainedAttackRef);//call the actual function now that we gave cerydra-type bullshit a chance.
             //right now netherwing is the only entity in the entire calc that is going to use chainedAttackRef as an actual ability param
             //if this ever changes I might wanna go back and add it into every ability's overarching param list just to keep things uniform, but for now fuck it.
 
@@ -1544,7 +1544,7 @@ const sim = {
                     
                 const isAbility = currentFUA.isAbility;
                 if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
-                currentFUA.actionCall(battleData,targetTurn,sourceTurn);
+                currentFUA.actionCall(battleData,currentFUA,sourceTurn);
                 if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
             }
         }
@@ -1638,7 +1638,7 @@ const sim = {
                     //     continue;
                     // }
 
-                    const energyCost = currentUltimate.energyCostFunction?.(battleData,sourceTurn,currentUltimate) ?? currentUltimate.energyCost;
+                    const energyCost = currentUltimate.energyCost;
                     //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
 
                     if (isLog) {
@@ -1664,7 +1664,7 @@ const sim = {
 
                     poke("AbilityStart",battleData,currentUltimate,sourceTurn);
                     sourceTurn.ultsUsed++;
-                    currentUltyFunction(battleData,sourceTurn,target);
+                    currentUltyFunction(battleData,currentUltimate,sourceTurn);
                     poke("AbilityEnd",battleData,currentUltimate,sourceTurn);
                 }
                 else {
@@ -1701,7 +1701,7 @@ const sim = {
                         }
 
                         if (isAbility) {poke("AbilityStart",battleData,currentUltimate,sourceTurn);}
-                        currentUltyFunction(battleData,target,sourceTurn);
+                        currentUltyFunction(battleData,currentUltimate,sourceTurn);
                         if (isAbility) {poke("AbilityEnd",battleData,currentUltimate,sourceTurn);}
 
                         if (actionHasForcedPL) {
