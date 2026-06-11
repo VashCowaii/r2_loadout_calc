@@ -19063,7 +19063,7 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    "Seele": {//TODO: see note inside skill function
+    "Seele": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
             const minimum = currentSP >= 1;
@@ -19114,7 +19114,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            seeleBasic(battleData,target,sourceTurn) {
+            seeleBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -19151,11 +19151,11 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.seeleBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 actionAdvance(0.20,sourceTurn,battleData,"Trace: Rippling Waves");
             },
-            seeleSkill(battleData,target,sourceTurn) {
+            seeleSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -19214,7 +19214,6 @@ const turnLogic = {
 
                 const buffSheet = ATKObjects.seeleSkillSPDSHEET;
                 updateBuff(battleData,sourceTurn,buffSheet);
-                // poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Skill Use"});
 
                 if (!isExtraSkill) {//energy is never gained unless it's the reg skill, not inserted
                     ATKObject.energy = skillRef.energyRegen
@@ -19223,16 +19222,9 @@ const turnLogic = {
                     ATKObject.energy = null
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                //right now the calc handles enemy specific targeting since we don't have player-conditions set for those, but because of that
-                //if we inject this skill right now it's automatically gonna try and target battleData.primaryTarget instead of whichever target actually has sub 50% HP ratio
-                //that is prob just how it's gonna have to be for NOW, but we are working on player enemy targeting conditions and when those are added
-                //we'll be able to specify specific enemy overrides(which we technically could do now but I don't wanna bc I'd just remove it anyways, fuck that)
-
-                //OBV when we reach that point, evaluate HP of targets here for finding which one to actually hit.
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            seeleUltimate(battleData,sourceTurn) {
+            seeleUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -19278,11 +19270,11 @@ const turnLogic = {
 
                 poke("SeeleEnterAmplification",battleData,null);
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
-            seeleTechnique(battleData,target,sourceTurn) {
+            seeleTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -19326,11 +19318,11 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.seeleTechniqueATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
-            seeleTechnique2(battleData,target,sourceTurn) {
+            seeleTechnique2(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -19340,7 +19332,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.seeleTechniqueREF ??= ATKObjects.Technique["Phantom Illusion"].variant1;
 
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 poke("SeeleEnterAmplification",battleData,null);
             },
@@ -19634,7 +19626,6 @@ const turnLogic = {
                         }
                     }
 
-                    
                     if (targetFound) {
                         const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
