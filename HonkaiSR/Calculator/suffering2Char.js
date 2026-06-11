@@ -24723,7 +24723,7 @@ const turnLogic = {
             "ReBreak": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            ruanmeiBasic(battleData,target,sourceTurn) {
+            ruanmeiBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -24760,9 +24760,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.ruanmeiBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            ruanmeiSkill(battleData,target,sourceTurn) {
+            ruanmeiSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -24854,7 +24854,7 @@ const turnLogic = {
                 const allyArray = battleData.allAlliesArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
-            ruanmeiUltimate(battleData,sourceTurn) {
+            ruanmeiUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -24929,24 +24929,24 @@ const turnLogic = {
                 const allyArray = battleData.allAlliesArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
-            ruanmeiTechnique(battleData,target,sourceTurn) {
+            ruanmeiTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.ruanmeiTechREF ??= ATKObjects.Technique["Silken Serenade"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // const ruanmeiSkill = ATKObjects.ruanmeiSkill ??= turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill;
                 // ruanmeiSkill(battleData,"self",sourceTurn)
 
-                const queueObject = ATKObjects.dhptTechSkillCall ??= createQueueObject(ownerTurn,{
+                const queueObject = ATKObjects.dhptTechSkillCall ??= createQueueObject(sourceTurn,{
                     name: "Ruan Mei Technique Skill",//this.listenerName,
                     priority: priorityList.turn.Default,
                     queueTag: "QueuedExtraTurn",
 
-                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.ruanmeiSkill,
+                    actionCall: turnLogic[sourceTurn.properName].skillFunctions.ruanmeiSkill,
                     action: "Skill",
                     abortCheck: null,//(battleData,actionObject,sourceTurn),
 
@@ -24963,15 +24963,15 @@ const turnLogic = {
                     useAnyTriggers: true,
                     eventTypeStartLOG: "SkillStart",
 
-                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                    poolKey: turnLogic[sourceTurn.properName].abilityTargetPools.Skill,
                 })
                 queueObject.sourceTurn = sourceTurn;
                 queueObject.target = [sourceTurn];
                 queueExtraTurn(battleData,queueObject);
             },
-            ruanmeiReBreak(battleData,target,sourceTurn) {
+            ruanmeiReBreak(battleData,actionObject,sourceTurn) {
                 // console.log(targetTurn)
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
