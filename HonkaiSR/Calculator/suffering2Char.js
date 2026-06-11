@@ -9406,7 +9406,7 @@ const turnLogic = {
                 //     besotted(battleData,sourceTurn,enemySlot,false,values2);
                 // }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
 
 
                 const enemyPositions = battleData.enemyPositions;
@@ -11242,7 +11242,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            swBasic(battleData,target,sourceTurn) {
+            swBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -11279,9 +11279,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.swBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            swSkill(battleData,target,sourceTurn) {
+            swSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -11394,9 +11394,9 @@ const turnLogic = {
                 let buffSheet2 = ATKObjects.silverwolfSkillALLRESSHEET;
                 updateBuff(battleData,targetEnemy,buffSheet2);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            swUltimate(battleData,sourceTurn) {
+            swUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -11450,10 +11450,8 @@ const turnLogic = {
                 
                 let ATKObject = ATKObjects.silverwolfUltimateATKOBJECT;
                 let buffSheet = ATKObjects.silverwolfUltimateDEFDEBUFFSHEET;
-                for (let enemySlot of battleData.enemyPositions) {
-                    updateBuff(battleData,enemySlot,buffSheet);
-                }
-                let ultyHit = battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                updateBuffBatchTargets(battleData,actionObject.target,buffSheet);
+                let ultyHit = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
 
 
@@ -11573,7 +11571,7 @@ const turnLogic = {
                 buffSheet.currentStacks = stacksToApply;
                 updateBuff(battleData,currentTurn,buffSheet);
             },
-            swTechnique(battleData,target,sourceTurn) {
+            swTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -11613,8 +11611,8 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.swTechATKObject
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
             swE4DMG(battleData,generalInfo,allyTurn,allTargetsArray) {
                 const logicRef = turnLogic[allyTurn.properName];
