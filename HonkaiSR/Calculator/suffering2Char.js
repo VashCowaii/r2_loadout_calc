@@ -38774,8 +38774,6 @@ const turnLogic = {
 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            // ownerTurn.battleValues.bondmateSlot
-            // ownerTurn.dhptSouldragonTURNEVENT
             dhptSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
@@ -38923,7 +38921,7 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,shieldBuffObject,false,sourceTurn);
             },
-            dhptTalentShield(battleData,targetTurn,sourceTurn) {
+            dhptTalentShield(battleData,actionObject,sourceTurn) {
                 let rank = sourceTurn.rank;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -39471,7 +39469,7 @@ const turnLogic = {
                     priority: priorityList.turn.Default,
                     queueTag: "QueuedExtraTurn",
 
-                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptSkill,
+                    actionCall: turnLogic[sourceTurn.properName].skillFunctions.dhptSkill,
                     action: "Skill",
                     abortCheck: null,//(battleData,actionObject,sourceTurn),
 
@@ -39488,7 +39486,7 @@ const turnLogic = {
                     useAnyTriggers: true,
                     eventTypeStartLOG: "SkillStart",
 
-                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                    poolKey: turnLogic[sourceTurn.properName].abilityTargetPools.Skill,
                 })
                 queueObject.sourceTurn = sourceTurn;
                 let targetOverride = superGlobal.getStartingAttacker(battleData);
