@@ -1228,6 +1228,7 @@ const sim = {
                 }
                 
                 sourceTurn.uniqueEventFunction(battleData,sourceTurn);
+                clearULT(battleData);
 
                 if (isActualTurn) {
                     poke("EndTurn", battleData, exoTurnRef,sourceTurn);

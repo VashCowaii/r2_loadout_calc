@@ -16908,7 +16908,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            pelaBasic(battleData,target,sourceTurn) {
+            pelaBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -16945,9 +16945,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.pelaBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            pelaSkill(battleData,target,sourceTurn) {
+            pelaSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -17039,7 +17039,7 @@ const turnLogic = {
                     updateBuff(battleData,battleData.primaryTarget,bonusSheet3);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 let dispelCount = 0;
                 if (dispelCount) {
@@ -17052,7 +17052,7 @@ const turnLogic = {
                     }
                 }
             },
-            pelaUltimate(battleData,sourceTurn) {
+            pelaUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -17106,14 +17106,12 @@ const turnLogic = {
                 
                 let ATKObject = ATKObjects.pelaUltimateATKOBJECT;
                 let buffSheet = ATKObjects.pelaUltimateDEFDEBUFFSHEET;
-                for (let enemySlot of battleData.enemyPositions) {
-                    updateBuff(battleData,enemySlot,buffSheet);
-                }
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                updateBuffBatchTargets(battleData,actionObject.target,buffSheet);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
-            pelaTechnique(battleData,target,sourceTurn) {
+            pelaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -17171,13 +17169,13 @@ const turnLogic = {
 
                 // defDebuffTech
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
 
                 let buffSheet = ATKObjects.pelaTechniqueDEFDEBUFFSHEET;
                 updateBuffBatchTargets(battleData,battleData.enemyPositions,buffSheet);
             },
-            pelaE6DMG(battleData,generalInfo,allyTurn,allTargetsArray) {
+            pelaE6DMG(battleData,generalInfo,allyTurn,targetsGotHit) {
                 const logicRef = turnLogic[allyTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -17215,11 +17213,14 @@ const turnLogic = {
                 //then we check every enemy hit for debuffs, then we hit them for each debuff up to 5, god that's gonna clutter the log like fuckin mad
 
                 const allyAssignedName = allyTurn.properName;
+                const enemyTurns = battleData.enemyBasedTurns;
                 const addedWrapper = battleActions.additionalDMGWrapper;
-                for (let enemySlot of allTargetsArray) {
-                    let debuffCount = enemySlot.debuffCounter;
+                for (let enemySlot in targetsGotHit) {
+                    const currentEnemy = enemyTurns[enemySlot];
+                    if (currentEnemy.isDead) {continue;}
+                    let debuffCount = currentEnemy.debuffCounter;
 
-                    if (debuffCount) {addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,enemySlot,"E6 Feeble Pursuit");}
+                    if (debuffCount) {addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,currentEnemy,"E6 Feeble Pursuit");}
                 }
             },
         },
@@ -17322,7 +17323,7 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
         
                             let sourceTurn = generalInfo.sourceTurn;
-                            let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
+                            let enemiesAttackedThisAction = generalInfo.targetsGotHit;//her ult is an AOE attack so... everyone gets hit
         
                             //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
                             if (sourceTurn.properName != characterName) {return;}
@@ -17536,7 +17537,7 @@ const turnLogic = {
             "FUA": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            topazBasic(battleData,target,sourceTurn) {
+            topazBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -17576,9 +17577,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.topazBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            topazSkill(battleData,target,sourceTurn) {
+            topazSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -17630,7 +17631,7 @@ const turnLogic = {
                 else {ATKObject.bonusMultiplier = 0;}
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//no split energy, all at once before dmg
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 
 
@@ -17649,7 +17650,7 @@ const turnLogic = {
             numbyTurnAttack(battleData,eventTurn) {
                 poke("TopazFUAQueue",battleData,{eventTurn},null);
             },
-            numbyTurnAttackAction(battleData,targetTurn,sourceTurn) {
+            numbyTurnAttackAction(battleData,actionObject,sourceTurn) {
                 // const sourceTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -17699,7 +17700,7 @@ const turnLogic = {
                 }
                 else {ATKObject.bonusMultiplier = 0;}
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 if (isEnhanced) {
                     valuesRef.bonanzaStacks -= 1;
@@ -17713,7 +17714,7 @@ const turnLogic = {
                 }
                 if (sourceTurn.rank>=2) {updateEnergy(battleData,5,sourceTurn,false,"E2: Bona Fide Acquisition");}
             },
-            topazUltimate(battleData,sourceTurn) {
+            topazUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -17754,7 +17755,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            topazTechnique(battleData,target,sourceTurn) {
+            topazTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -17762,11 +17763,12 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.Technique["Explicit Subsidy"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 let attackEndings = battleData.battleListeners.AttackEnd ??= [];
                 const listenerToInejct = logicRef.listenersToInjectLater.techniqueEnergyGain;
                 listenerToInejct.ownerTurn = sourceTurn;
+                //TODO: shift this into reg listener insertion that we made, later
 
                 attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
             },
