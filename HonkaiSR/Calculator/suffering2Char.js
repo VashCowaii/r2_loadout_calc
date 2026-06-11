@@ -7937,7 +7937,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            huohuoBasic(battleData,target,sourceTurn) {
+            huohuoBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -7973,16 +7973,16 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.huohuoBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            huohuoSkillHeal(battleData,target,sourceTurn) {
+            huohuoSkillHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.huohuoSkillHealHealREF ??= ATKObjects.Skill["Talisman: Protection"].variant1;
                 let rank = sourceTurn.rank;
                 // let e2 = rank >= 2;
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
                 // console.log(targetTurn)
                 //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
                 
@@ -8160,7 +8160,7 @@ const turnLogic = {
                     healAlly(battleData,healObject,ally,sourceTurn,skillRef.slot,1,null);
                 }
             },
-            huohuoUltimate(battleData,sourceTurn) {
+            huohuoUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -8236,14 +8236,14 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            huohuoTechnique(battleData,target,sourceTurn) {
+            huohuoTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.huohuoTechREF ??= ATKObjects.Technique["Fiend: Impeachment of Evil"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // turnLogic[sourceTurn.properName].skillFunctions.applyNuminosity(battleData,sourceTurn);
                 if (!ATKObjects.huohuoTechBUFFSHEET) {
