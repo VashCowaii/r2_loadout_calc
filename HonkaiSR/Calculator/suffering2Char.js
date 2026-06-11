@@ -8607,7 +8607,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            bailuBasic(battleData,target,sourceTurn) {
+            bailuBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -8645,13 +8645,13 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bailuBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            bailuSkillHeal(battleData,target,sourceTurn) {
+            bailuSkillHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 let skillRef = ATKObjects.bailuSkillHealREF ??= ATKObjects.Skill["Singing Among Clouds"].variant1;
                 let values = ATKObjects.bailuSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -8755,12 +8755,13 @@ const turnLogic = {
 
                 if (rank >= 4) {battleValues.inSkillHealing = false;}
             },
-            bailuUltimate(battleData,sourceTurn,target) {
+            bailuUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.bailuUltimateREF ??= ATKObjects.Ultimate["Felicitous Thunderleap"].variant1;
                 let rank = sourceTurn.rank;
+                const target = actionObject.target;
 
                 if (!ATKObjects.bailuUltimateHealHEALOBJECT) {
                     let values = ATKObjects.bailuUltimateHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -8829,7 +8830,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            bailuTechnique(battleData,target,sourceTurn) {
+            bailuTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -8837,7 +8838,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.bailuTechniqueREF ??= ATKObjects.Technique["Saunter in the Rain"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const allyPositions = battleData.allyPositions;
 
