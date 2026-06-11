@@ -19255,42 +19255,31 @@ const turnLogic = {
                     // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
                     let ownerTurn = this.ownerTurn;
                     
-                    const queueObject = this.queueObject ??= {
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                         name: this.listenerName,
                         priority: priorityList.turn.Default,
                         queueTag: "QueuedExtraTurn",
-
+    
                         actionCall: sim.turnWrapper,
                         action: "Extra Turn",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: true,//archer has a param(use same tags as reg action) will cause him to beat out tied extra turns like an aha instant
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: true,
                         decrementBuffs: false,
                         extraTurnHasChoice: true,
+
                         dontKeepNextWave: false,
                         isAttack: false,
                         isAbility: false,
                         useAnyTriggers: false,
-                        // eventTypeStartLOG: "ExtraTurnStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
+                        // eventTypeStartLOG: "SkillStart",
+    
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                    })
 
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: this.target,
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                        elationForcedPunchline: null,
-                    }
                     queueObject.sourceTurn = ownerTurn;
                     queueExtraTurn(battleData,queueObject);
                 },
@@ -19488,7 +19477,7 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const isExtraSkill = target === "DETERMINE";
+                const isExtraSkill = actionObject.isExtraTurn;
                 let skillRef = ATKObjects.seeleSkillREF ??= ATKObjects["Skill"]["Sheathed Blade"].variant1;
 
                 if (!ATKObjects.seeleSkillATKOBJECT) {
@@ -19949,56 +19938,71 @@ const turnLogic = {
                     const enemyTurns = battleData.enemyBasedTurns;
 
                     let targetFound = false;
+                    let target = null;
                     for (let enemySlot in targetsGotHit) {
                         const currentEnemy = enemyTurns[enemySlot];
+                        // if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;} //CAN BE DEAD
 
                         const ratio = currentEnemy.currentHP / currentEnemy.maxHP;
 
                         if (ratio <= 0.5) {
                             targetFound = true;
+                            target = [currentEnemy];
                             break;
                         }
                     }
 
                     
                     if (targetFound) {
-                        const queueObject = this.queueObject ??= {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName,
                             priority: priorityList.turn.Default,
                             queueTag: "QueuedExtraTurn",
-
+        
                             actionCall: turnLogic[ownerTurn.properName].skillFunctions.seeleSkill,
                             action: "Skill",
-                            points: 0,
-                            energyCost: null,
-                            // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                            // specialEnergyPoke: "SW999GainMMR",
-                            
-                            isEnhanced: false,
+                            abortCheck(battleData,actionObject,sourceTurn) {
+                                const target = actionObject.target[0];
+                                if (target.isDead || target.isLimbo) {
+                                    const enemyPositions = battleData.enemyPositions;
+
+                                    let lowestHP = Infinity;
+                                    let lowestTarget = null;
+                                    for (let enemy of enemyPositions) {
+                                        if (enemy.currentHP < lowestHP) {
+                                            lowestHP = enemy.currentHP;
+                                            lowestTarget = enemy;
+                                        }
+                                    }
+
+                                    if (lowestTarget) {
+                                        actionObject.target = [lowestTarget];
+                                    }
+                                    else {
+                                        sourceTurn.battleValues.skillInjectReady = true;
+                                        return true;
+                                    }
+                                }
+                            },
+        
                             isTieBreaker: false,
                             isExtraTurn: true,
                             skipEXDisplay: false,
                             allowUlts: false,
                             decrementBuffs: false,
                             extraTurnHasChoice: false,
+    
                             dontKeepNextWave: false,
-                            isAttack: false,
-                            isAbility: false,
-                            useAnyTriggers: false,
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
                             eventTypeStartLOG: "SkillStart",
-                            // eventTypeStart: "SkillStart",
-                            // eventTypeEnd: "SkillEnd",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                        })
 
-                            properName: ownerTurn.properName,
-                            sourceTurn: null,
-                            // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                            target: "DETERMINE",
-                            poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                            elationForcedPunchline: null,
-                        }
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = target;
                         queueExtraTurn(battleData,queueObject);
 
                         ownerTurn.battleValues.skillInjectReady = false;
@@ -20104,42 +20108,30 @@ const turnLogic = {
                     // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
                     let ownerTurn = this.ownerTurn;
                     
-                    const queueObject = this.queueObject ??= {
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                         name: this.listenerName,
                         priority: priorityList.turn.Default,
                         queueTag: "SeeleResurgence",
-
+    
                         actionCall: sim.turnWrapper,
                         action: "Extra Turn",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: false,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: true,
+
                         dontKeepNextWave: false,
                         isAttack: false,
                         isAbility: false,
                         useAnyTriggers: false,
                         eventTypeStartLOG: "ExtraTurnStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: this.target,
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                    })
                     queueObject.sourceTurn = ownerTurn;
                     queueExtraTurn(battleData,queueObject);
                 },
