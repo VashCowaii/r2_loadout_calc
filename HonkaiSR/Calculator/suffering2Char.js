@@ -19993,7 +19993,7 @@ const turnLogic = {
             "FUA": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            ratioBasic(battleData,target,sourceTurn) {
+            ratioBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -20030,9 +20030,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.ratioBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            ratioFUA(battleData,targetTurn,sourceTurn) {
+            ratioFUA(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -20107,9 +20107,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.ratioFUAATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            ratioSkill(battleData,target,sourceTurn) {
+            ratioSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -20188,7 +20188,7 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,ratioSummationSHEET);
                 }
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 const debuffSheet = ATKObjects.ratioSkillDEBUFFSHEET;
                 updateBuff(battleData,primaryTarget,debuffSheet);
@@ -20196,7 +20196,7 @@ const turnLogic = {
                 battleValues.skillChanceCycler += 1;
                 if (fuaPass) {poke("RatioQueueFUA",battleData,{target: actionObject.target},null);}
             },
-            ratioUltimate(battleData,sourceTurn) {
+            ratioUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -20238,8 +20238,8 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.ratioUltimateATKOBJECT;
                 
-                const primaryTarget = battleData.primaryTarget;
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                const primaryTarget = actionObject.target[0];
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
 
                 if (!primaryTarget.isDead) {
@@ -20265,7 +20265,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            ratioTechnique(battleData,target,sourceTurn) {
+            ratioTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -20295,7 +20295,7 @@ const turnLogic = {
                 }
                 let buffSheet = ATKObjects.ratioTechSPDSHEET;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
@@ -20579,6 +20579,10 @@ const turnLogic = {
                     const targetHitCount = generalInfo.targetsGotHit[targetTurn.name];
 
                     if (targetHitCount != 1) {return;}//only evaluate first hits, as that is when the enemy is considered being attacked, esp for bounce type stuff
+
+                    const wisemanNAme = this.wisemanNAme ??= turnLogic[ownerTurn.properName].buffNames.wiseman;
+                    const buffCheck = targetTurn.buffsObject[wisemanNAme];
+                    if (!buffCheck) {return;}
 
                     const battleValues = ownerTurn.battleValues;
                     if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
