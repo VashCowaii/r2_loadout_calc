@@ -49519,50 +49519,30 @@ const turnLogic = {
                             // battleValues.fuaTrackerValue = 0;
                             battleValues.fuaIsQueued = true;
 
-                            const queueObject = this.queueObject ??= {
+                            const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                                 name: this.listenerName,
                                 priority: priorityList.ability.CharacterAttackFromSelf,
                                 queueTag: "QueuedInsert",
-
+            
                                 actionCall: turnLogic[ownerTurn.properName].skillFunctions.evaFUA,
-                                action: "Insert", 
-                                points: 0,
-                                energyCost: null,
-                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                                // specialEnergyPoke: "SW999GainMMR",
-                                
-                                isEnhanced: false,
-                                isTieBreaker: false,
-                                isExtraTurn: false,
+                                action: "Insert",
+                                abortCheck: null,//(battleData,actionObject,sourceTurn),
+            
                                 isInserted: true,
-                                skipEXDisplay: false,
-                                allowUlts: false,
-                                decrementBuffs: false,
-                                extraTurnHasChoice: false,
                                 dontKeepNextWave: false,//ults always clear out
                                 isAttack: true,
                                 isAbility: true,
                                 useAnyTriggers: true,
                                 eventTypeStartLOG: "GenericAbilityStart",
-                                // eventTypeStart: "GenericAbilityStart",
-                                // eventTypeEnd: "GenericAbilityEnd",
-
-                                properName: ownerTurn.properName,
-                                sourceTurn: null,
-                                // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                                target: this.target,
+            
                                 poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
-
-                                elationForcedPunchline: null,
-                            }
+                            })
                             queueObject.sourceTurn = ownerTurn;
+                            queueObject.target = battleData.enemyPositions;
         
                             queueInsertAbility(battleData,queueObject);
                         }
                     }
-
-                    // battleData,amount,sourceTurn,sourceName
                 },
                 "target": "self",
                 "listenerName": "Talent Energy to CB listener",
