@@ -192,6 +192,26 @@ const superGlobal = {
 
         return queueObject;
     },
+    createATKBounceObject(overrideObject) {
+        const bounceData = {
+            multi: 1,
+            bounceCount: 1,
+            energy: 0,
+            target: {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 10,
+            },
+            subTarget: null,
+            blast: null,
+            bounceSkipFirstTarget: false,
+            useStandardBounceOrder: true,
+        }
+
+        Object.assign(bounceData,overrideObject);
+
+        return bounceData;
+    },
     territoryActiveAbortUltimate(battleData,queueObject,sourceTurn) {
         const alreadyActive = battleData.territoryActive;
         if (alreadyActive) {

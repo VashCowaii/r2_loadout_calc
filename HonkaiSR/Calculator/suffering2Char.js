@@ -3978,183 +3978,70 @@ const battleActions = {
             }
         }
 
-        // if (all && !primary) {
-        //     totalHits += allLength * hitsLengthTotal;
-        //     for (let i=0;i<hitsLengthTotal;i++) {
-        //         isLastHit = i === hitsLengthTotal-1 ? true : false;
-        //         const atkEntry = hitSplits[i];
-
-        //         let atkEntryRef = atkEntry[hitTypeAll];
-        //         const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
-        //         if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
-
-        //         for (let ee=0;ee<allLength;ee++) {
-        //             const currentTarget = allTargetArray[ee];
-        //             if (currentTarget.isUnselectable) {continue;}
-        //             hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);
-        //         }
-        //     }
-        // }
-        // else if (blast && blastLength) {//in practice blast should never proc without a primary target also
-        //     totalHits += hitsLengthTotal * (1 + blastLength);
-            
-        //     for (let i=0;i<hitsLengthTotal;i++) {
-        //         isLastHit = i === hitsLengthTotal-1 ? true : false;
-        //         const atkEntry = hitSplits[i];
-        //         hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false,blastLength+1);
-                
-        //         if (!atkEntry.blast) {continue;}
-        //         for (let enemyEntry of enemyBlastTargets) {
-        //             hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo,isLastHit,false,blastLength+1);
-        //         }
-        //     }
-        // }
-        // else if (blastAOE && blastAOELength) {//in practice blast should never proc without a primary target also
-        //     // totalHits += hitsLengthTotal * (1 + blastLength);
-            
-        //     for (let i=0;i<hitsLengthTotal;i++) {
-        //         isLastHit = i === hitsLengthTotal-1 ? true : false;
-        //         const atkEntry = hitSplits[i];
-        //         if (atkEntry.blastAOE) {
-        //             for (let enemyEntry of enemyBlastAOETargets) {
-        //                 hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlastAOE,generalInfo,isLastHit,false,blastAOELength+1);
-        //             }
-        //             totalHits += enemyBlastAOETargets.length;
-        //         }
-        //         if (atkEntry.primary) {
-        //             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false,blastAOELength+1);
-        //             totalHits += 1;
-        //         }
-        //     }
-        // }
-        // else {//if blast is ever true but there are no blast targets, primary will still be true so it will default to this instead (jk pure bounce attacks for instance can skip all 3)
-        //     totalHits += hitsLengthTotal;
-        //     for (let i=0;i<hitsLengthTotal;i++) {
-        //         const atkEntry = hitSplits[i];
-        //         if (atkEntry.primary) {
-        //             isLastHit = i === hitsLengthTotal-1 ? true : false;
-        //             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false);
-        //         }
-        //         else if (atkEntry.all) {
-        //             isLastHit = i === hitsLengthTotal-1 ? true : false;
-
-        //             let atkEntryRef = atkEntry[hitTypeAll];
-        //             const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
-        //             if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
-                    
-        //             for (let ee=0;ee<allLength;ee++) {
-        //                 const currentTarget = allTargetArray[ee];
-        //                 if (currentTarget.isUnselectable) {continue;}
-        //                 hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);
-        //             }
-        //         }
-        //     }
-        // }
-
         const bounceRef = ATKObject.bounceData;
-        // if (bounceRef) {
-        //     const bounceOrder = battleData.bounceOrder;
-        //     const bounceCount = bounceRef.bounceCount
-        //     const isSingleTargetBounce = bounceRef.isSingleTargetBounce;
-        //     // battleData.bounceOrder = bounceOrder
-        //     const atkEntry = bounceRef.hitSplit;
-        //     const isLastHit = true;
-        //     const bounceLength = bounceOrder.length;
-        //     let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
-        //     const isBounce = true;
+        if (bounceRef) {
+            const bounceOrder = battleData.bounceOrder;
+            const bounceCount = bounceRef.bounceCount
+            // battleData.bounceOrder = bounceOrder
+            const atkEntry = bounceRef;
+            const isLastHit = true;
+            const bounceLength = bounceOrder.length;
+            let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
+            const isBounce = true;
 
-        //     if (atkEntry.all) {
-        //         totalHits += allLength * bounceCount;
-        //         for (let i=0;i<bounceCount;i++) {
-        //             // totalHits += allTargetArray.length;
-        //             if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
-        //             let atkEntryRef = atkEntry[hitTypeAll];
-        //             const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
-        //             if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+            const targetObject = atkEntry.target;
+            const subTargetObject = atkEntry.subTarget;//unused for NOW
+            const blastTargetObject = atkEntry.blast;
 
-        //             for (let enemyTarget of allTargetArray) {
-        //                 hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,isBounce,null,true);
-        //             }
-        //         }
-        //     }
-        //     else if (atkEntry.blast) {
-        //         //TODO: bounce logic on a blast type bounce, that could be weird
+            const enemyPositions = battleData.enemyPositions;
+            let cachedBlastTargets = [];
+            for (let i=0;i<bounceCount;i++) {
+                if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
+                const presetIndex = currentEnemyIndex;
+                const currentEnemy = bounceOrder[currentEnemyIndex];
+                currentEnemyIndex++;
+                if (!enemyPositions.length || battleData.battleIsOver) {break;}
+                if (currentEnemy === undefined) {continue;}
 
-        //         const enemyPositions = battleData.enemyPositions;
-        //         for (let i=0;i<bounceCount;i++) {
-        //             if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
-        //             const currentEnemy = bounceOrder[currentEnemyIndex];
-        //             currentEnemyIndex++;
-        //             if (!enemyPositions.length || battleData.battleIsOver) {break;}
-        //             if (currentEnemy === undefined) {continue;}
-
-        //             if (currentEnemy.isDead) {
-        //                 i--;
-        //                 continue;
-        //             }//skip dead bois
-
-        //             hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
-        //             totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+                if (currentEnemy.isDead || currentEnemy.isLimbo) {
+                    i--;
+                    continue;
+                }//skip dead bois
 
 
-        //             if (!atkEntry.blast) {continue;}
-                    
+                const energyGain = ATKObjectEnergy * (targetObject.energyRatio ?? 0);
+                if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
 
-        //             let blastTargetArray = [];
-        //             const primaryTargetIndex = enemyPositions.indexOf(currentEnemy);
+                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce);
+                totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
 
-        //             const blast1 = enemyPositions[primaryTargetIndex-1];
-        //             if (blast1) {blastTargetArray.push(blast1)}
-        //             const blast2 = enemyPositions[primaryTargetIndex+1];
-        //             if (blast2) {blastTargetArray.push(blast2)}
+                if (blastTargetObject) {
 
-        //             if (blastTargetArray.length) {
-        //                 totalHits += blastTargetArray.length;
-        //                 for (let enemyEntry of blastTargetArray) {
-        //                     hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo,isLastHit,isBounce,blastLength+1);
-        //                 }
-        //             }
-        //         }
-        //     }
-        //     else {
-        //         for (let i=0;i<bounceCount;i++) {
-        //             if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
-        //             const currentEnemy = isSingleTargetBounce ? enemyPrimary : bounceOrder[currentEnemyIndex];
-        //             currentEnemyIndex++;
-        //             if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
-        //             if (currentEnemy === undefined) {continue;}
+                    let targetsBlast = cachedBlastTargets[presetIndex];
+                    if (!targetsBlast) {
+                        //the idea here is just that something like jing yuan's LL bounces don't actually care about dead targets, only adjacent targets
+                        //and since right now jing yuan's LL bounces are the ONLY blast bounces in the calc so far(at least) there is no reason
+                        //not to just cache the adjacent targets based on the current enemy index and go from there
 
-        //             if (currentEnemy.isDead) {
-        //                 i--;
-        //                 continue;
-        //             }//skip dead bois
-        //             hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
-        //             totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
-        //         }
-        //     }
+                        //TODO: when we make changes for isLimbo there are tweaks that need to be made to the reg bounces above so this won't shit itself.
+                        let blastTargetArray = [];
+                        const blast1 = enemyPositions[presetIndex-1];
+                        if (blast1) {blastTargetArray.push(blast1)}
+                        const blast2 = enemyPositions[presetIndex+1];
+                        if (blast2) {blastTargetArray.push(blast2)}
+                        cachedBlastTargets[presetIndex] = blastTargetArray;
+                        targetsBlast = cachedBlastTargets[presetIndex];
+                    }
 
-        //     // for (let i=0;i<hitsLengthTotal;i++) {
-        //     //     isLastHit = i === hitsLengthTotal-1 ? true : false;
-        //     //     const atkEntry = hitSplits[i];
-        //     //     hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
-        //     // }
-
-        //     // bounceData: {
-        //     //     primary: values[1],
-        //     //     bounceCount: 10,
-        //     //     hitSplit: {
-        //     //         "primary": {
-        //     //             "hitRatio": 1,
-        //     //             "energyRatio": 1,
-        //     //             "toughness": 20
-        //     //           },
-        //     //         "blast": null,
-        //     //         "all": null,
-        //     //         "allEnemiesHit": null,
-        //     //         "unknownTypers": false
-        //     //     },
-        //     // }
-        // }
+                    if (blastTargetArray.length) {
+                        totalHits += blastTargetArray.length;
+                        for (let enemyEntry of blastTargetArray) {
+                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,blastLength+1);
+                        }
+                    }
+                } 
+            }
+        }
 
 
         poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
@@ -4352,7 +4239,6 @@ const battleActions = {
         if (bounceRef) {
             const bounceOrder = battleData.bounceOrder;
             const bounceCount = bounceRef.bounceCount
-            const isSingleTargetBounce = bounceRef.isSingleTargetBounce;
             // battleData.bounceOrder = bounceOrder
             const atkEntry = bounceRef.hitSplit;
             const isLastHit = true;
@@ -4416,7 +4302,7 @@ const battleActions = {
             else {
                 for (let i=0;i<bounceCount;i++) {
                     if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
-                    const currentEnemy = isSingleTargetBounce ? enemyPrimary : bounceOrder[currentEnemyIndex];
+                    const currentEnemy = bounceOrder[currentEnemyIndex];
                     currentEnemyIndex++;
                     if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
                     if (currentEnemy === undefined) {continue;}
@@ -13024,7 +12910,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.fishladySkillATKOBJECT;
                 const debuffSheet = ATKObjects.hysilensSkillVulnDEBUFFSHEET;
 
-                const enemyPositions = battleData.enemyPositions;
+                const enemyPositions = actionObject.target;
                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
@@ -14455,7 +14341,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.blackswanUltimateATKOBJECT;
                 const debuffSheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
                 
-                const enemyPositions = battleData.enemyPositions;
+                const enemyPositions = actionObject.target;
 
                 for (let enemy of enemyPositions) {
                     updateBuff(battleData,enemy,debuffSheet);
@@ -15048,6 +14934,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //TODO: revisit buff stack removal clearing and reapplications like the punishment trace here
+    // ,actionObject.target,actionObject.subTarget
     "Welt": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -15056,7 +14943,7 @@ const turnLogic = {
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
                 skillCall.target = [battleData.primaryTarget];
-                skillCall.subTarget = battleData.enemyPositions;
+                skillCall.subTarget = battleData.bounceOrder;
                 return skillCall;
             }
 
@@ -15099,7 +14986,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            weltBasic(battleData,target,sourceTurn) {
+            weltBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15136,7 +15023,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.weltBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -15200,7 +15087,7 @@ const turnLogic = {
                 buffSheet.currentStacks = stacksToApply;
                 updateBuff(battleData,currentTurn,buffSheet);
             },
-            weltTraceAddDMG(battleData,generalInfo,allyTurn,targetsGotHit,dmgSlot) {
+            weltTraceAddDMG(battleData,generalInfo,allyTurn,targetTurn,targetsGotHit,dmgSlot,weightlessName) {
                 const logicRef = turnLogic[allyTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15311,44 +15198,45 @@ const turnLogic = {
                         "expireType": "EndTurn"
                     }
                 }
+
+                
                 const isSkill = dmgSlot === "Skill";
+                const isSkillOrBasic = isSkill || dmgSlot === "Basic ATK";
+                const isSkillOrUlt = isSkill || dmgSlot === "Ultimate";
+                const targetIsWeightless = targetTurn.buffsObject[weightlessName];
                 let ATKObject = isSkill ? ATKObjects.weltTraceDMGSKILLREF : ATKObjects.weltTraceDMGBASICREF;
                 let slowSheet = ATKObjects.weltSkillOnlySLOWSHEET;
                 const e1Sheet = ATKObjects.weltTalentDMGE1REF;
 
                 const ATKObjectSLOW = ATKObjects.weltTalentDMGSLOWREF;
 
-                const enemyTurns = battleData.enemyBasedTurns;
                 const addedWrapper = battleActions.additionalDMGWrapper;
                 const ownerName = allyTurn.properName;
                 const rank = allyTurn.rank;
                 const isE1 = rank >= 1;
                 const isE2 = rank >= 2;
-                for (let enemySlot in targetsGotHit) {
-                    const hitCount = targetsGotHit[enemySlot];
-                    const currentEnemy = enemyTurns[enemySlot];
-                    if (hitCount === 1) {
-                        addedWrapper(battleData,allyTurn,ownerName,ATKObject,currentEnemy,"Trace: Judgment");
-                        if (isE1) {
-                            addedWrapper(battleData,allyTurn,ownerName,e1Sheet,currentEnemy,"E1: Additional Proc");
-                        }
-                    }
-                    //since the addproc from the TRACE only, can only hit an enemy once per attack, we only ever proc the dmg for hit 1, and that works to still enact the addproc
-                    //without needing to monitor a tracker buff each time a hit happens
 
-                    const slowCheck = currentEnemy.statTable[SPDP] < 0;
-                    const debuffCheck = currentEnemy.debuffCounter;
-
-                    if (slowCheck && debuffCheck) {
-                        addedWrapper(battleData,allyTurn,ownerName,ATKObjectSLOW,currentEnemy,"Talent: was Slowed");
-                        if (isE2) {updateEnergy(battleData,3,allyTurn,false,"E2");}
-                    }
-                    //we know the slow is applied AFTER the slow addproc would happen, else every hit on the skill would always proc 2 hits on the first hits, but it does not.
-
-                    if (hitCount === 1 && isSkill) {updateBuff(battleData,currentEnemy,slowSheet);}
+                const hitCount = targetsGotHit[targetTurn.name];
+                if (hitCount === 1) {
+                    if (isSkillOrBasic) {addedWrapper(battleData,allyTurn,ownerName,ATKObject,targetTurn,"Trace: Judgment");}
+                    
+                    if (isE1 && isSkillOrUlt && targetIsWeightless) {addedWrapper(battleData,allyTurn,ownerName,e1Sheet,targetTurn,"E1: Additional Proc");}
                 }
+                //since the addproc from the TRACE only, can only hit an enemy once per attack, we only ever proc the dmg for hit 1, and that works to still enact the addproc
+                //without needing to monitor a tracker buff each time a hit happens
+
+                const slowCheck = targetTurn.statTable[SPDP] < 0;
+                const debuffCheck = targetTurn.debuffCounter;
+
+                if (slowCheck && debuffCheck) {
+                    addedWrapper(battleData,allyTurn,ownerName,ATKObjectSLOW,targetTurn,"Talent: was Slowed");
+                    if (isE2) {updateEnergy(battleData,3,allyTurn,false,"E2");}
+                }
+                //we know the slow is applied AFTER the slow addproc would happen, else every hit on the skill would always proc 2 hits on the first hits, but it does not.
+
+                if (hitCount === 1 && isSkill) {updateBuff(battleData,targetTurn,slowSheet);}
             },
-            weltSkill(battleData,target,sourceTurn) {
+            weltSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -15384,29 +15272,37 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0],
                             bounceCount: 4,
                             energy: skillRef.energyRegen,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 10
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 10
                             },
-                        }
+                        })
+                        // {
+                        //     multi: values[0],
+                        //     bounceCount: 4,
+                        //     energy: skillRef.energyRegen,
+                        //     "target": {
+                        //         "hitRatio": 1,
+                        //         "energyRatio": 1,
+                        //         "toughness": 10
+                        //     },
+                        //     "blast": null,
+                        //     "all": null,
+                        //     "allEnemiesHit": null,
+                        //     "unknownTypers": false
+                        // }
                     }
                 }
                 let ATKObject = ATKObjects.weltSkillATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            weltUltimate(battleData,sourceTurn) {
+            weltUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15444,7 +15340,7 @@ const turnLogic = {
                 
                 let ATKObject = ATKObjects.weltUltimateATKOBJECT;
                 updateEnergy(battleData,5,sourceTurn,false,"Punishment");
-                let ultyHit = battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
@@ -15592,12 +15488,15 @@ const turnLogic = {
                             let sourceTurn = generalInfo.sourceTurn;
         
                             const dmgSlot = generalInfo.slot;
-                            if (sourceTurn.properName != characterName || (dmgSlot != "Skill" && dmgSlot != "Basic ATK")) {return;}
+                            if (sourceTurn.properName != characterName) {return;}
                             //only read welt's skill/basic ATK, and abort otherwise if not him
         
                             const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const weightlessName = this.weightlessName ??= turnLogic[characterName].buffNames.weight
                             const weltTraceAddDMG = this.weltTraceAddDMG ??= turnLogic[characterName].skillFunctions.weltTraceAddDMG;
-                            weltTraceAddDMG(battleData,generalInfo,sourceTurn,targetsGotHit,dmgSlot);
+                            weltTraceAddDMG(battleData,generalInfo,sourceTurn,targetTurn,targetsGotHit,dmgSlot,weightlessName);
                         },
                         "target": "enemy",
                         "listenerName": "Welt trace additional DMG controller",
@@ -24257,7 +24156,7 @@ const turnLogic = {
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
                 skillCall.target = [battleData.primaryTarget];
-                skillCall.subTarget = battleData.enemyPositions;
+                skillCall.subTarget = battleData.bounceOrder;
                 return skillCall;;
             }
 
@@ -41389,7 +41288,7 @@ const turnLogic = {
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
                 skillCall.target = [battleData.primaryTarget];
-                skillCall.subTarget = battleData.enemyPositions;
+                skillCall.subTarget = battleData.bounceOrder;
                 return skillCall;
             }
 
@@ -41980,7 +41879,7 @@ const turnLogic = {
                                         })
                                         queueObject.sourceTurn = ownerTurn;
                                         queueObject.target = [battleData.primaryTarget];
-                                        queueObject.subTarget = battleData.enemyPositions;
+                                        queueObject.subTarget = battleData.bounceOrder;
                                         queueExtraTurn(battleData,queueObject);
                                     }
                                     else {
