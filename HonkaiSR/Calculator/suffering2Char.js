@@ -14934,7 +14934,6 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     //TODO: revisit buff stack removal clearing and reapplications like the punishment trace here
-    // ,actionObject.target,actionObject.subTarget
     "Welt": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -15735,7 +15734,7 @@ const turnLogic = {
             "UltimateEnh": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            bladeBasic(battleData,target,sourceTurn) {
+            bladeBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15772,9 +15771,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bladeBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            bladeBasicEnhanced(battleData,target,sourceTurn) {
+            bladeBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15812,7 +15811,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.bladeBasicEnhancedATKOBJECT;
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             bladeTraceRegen(battleData,sourceTurn) {
                 const seventyFivePercent = sourceTurn.maxEnergy * 0.75;
@@ -15821,7 +15820,7 @@ const turnLogic = {
 
                 if (energyToRegen) {updateEnergy(battleData,energyToRegen,sourceTurn,true,"Bone, Hardened ad Nauseam");}
             },
-            bladeUltimate(battleData,sourceTurn) {
+            bladeUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -15829,65 +15828,9 @@ const turnLogic = {
                 let skillRef = ATKObjects.bladeUltimateREF ??= ATKObjects.Ultimate["Fornax Ex Corpore"].variant1;
                 const rank = sourceTurn.rank;
 
-                if (!ATKObjects.bladeUltimateATKOBJECT) {
+                if (!ATKObjects.bladeMBalefireDEBUFFSHEET) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
                     let values = ATKObjects.bladeUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    const scalar = "HP";
-                    const tags = ["All","Fire"];
-                    const actionTags = ["All","Ultimate","Attack"];
-                    const keyShortcut = basicShorthand.makeKeysArray;
-                    const realDMGKeys = keyShortcut(dmgKeys,tags);
-                    const realPENKeys = keyShortcut(resPENKeys,tags);
-                    const realShredKeys = keyShortcut(defShredKeys,tags);
-                    const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
-                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
-                    ATKObjects.bladeUltimateATKOBJECT = {
-                        multipliers: {
-                            primary: values[0],
-                            blast: values[2],
-                            all: null,
-                        },
-                        energy: skillRef.energyRegen,
-                        scalar,
-                        DMGTags: tags,
-                        allToughness: false,
-                        slot: skillRef.slot,
-                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,
-                        compositeCacheTag,
-                        bonusScalar: {
-                            primary: values[4] + (rank >= 1 ? 1.5 : 0),
-                            blast: values[5],
-                            all: null,
-                            refName: "bladeHPTally",
-                            isDynamicValue: true,
-                            refValue: 0,
-                            bonusValue: null,//see hit wrapper if I ever forget how this was used
-                        },
-                    }
-
-                    const actionTags2 = ["All","Heal","Ultimate"];
-                    const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
-                    ATKObjects.bladeUltimateHEALOBJECT = {
-                        multipliers: {
-                            primary: 0,
-                            blast: null,
-                            all: null,
-                        },
-                        flatAmounts: {
-                            primary: null,
-                            blast: null,
-                            all: null,
-                        },
-                        scalar: null,
-                        DMGTags: [],
-                        slot: skillRef.slot,
-                        actionTags: actionTags2,
-                        compositeCacheTag: compositeCacheTag2
-                    }
-
-
 
                     ATKObjects.bladeMBalefireDEBUFFSHEET = {
                         "stats": [DEFP,VulnAll],
@@ -16059,7 +16002,7 @@ const turnLogic = {
                 poke("mortenaxBladeQueueExit",battleData,null);
                 //the exit is just an insert, not an instantaneous event
             },
-            infiniteFuryExpired(battleData,target,sourceTurn) {
+            infiniteFuryExpired(battleData,actionObject,sourceTurn) {
                 const eventTurn = sourceTurn.mortenaxBladeUltTURNEVENT;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -16092,14 +16035,6 @@ const turnLogic = {
                 }
 
 
-
-                // const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
-                // const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
-
-                // const allyTargets = battleData.allAllyTargetsArray;
-                // removeBuffFromBatch(battleData,allyTargets,buffSheet);
-                // removeBuffFromBatch(battleData,allyTargets,buffSheetFUA);
-
                 const eventName = eventTurn.properName;
                 const nextAV = battleData.nextTurnAV;
                 for (let i=0;i<nextAV.length;i++) {
@@ -16111,7 +16046,7 @@ const turnLogic = {
                 }
 
             },
-            bladeSkill(battleData,target,sourceTurn) {
+            bladeSkill(battleData,actionObject,sourceTurn) {
                 // const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -16164,9 +16099,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bladeSkillATKOBJECT;
                 consumeHP(battleData,null,values[3],sourceTurn,sourceTurn,skillRef.slot,false,false);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            bladeSkillFUA(battleData,target,sourceTurn) {
+            bladeSkillFUA(battleData,actionObject,sourceTurn) {
                 // const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -16223,10 +16158,10 @@ const turnLogic = {
                 poke("mortenaxBladeGainCharge",battleData,{pointsGained: -sourceTurn.battleValues.chargeMax,sourceString:"Mortenax Blade FUA Launched"});
                 updateEnergy(battleData,25,sourceTurn,false,"Mortenax Blade FUA Launched");
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 sourceTurn.battleValues.fuaIsQueued = false;
             },
-            bladeUltimateEnh(battleData,sourceTurn) {
+            bladeUltimateEnh(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -16264,20 +16199,12 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bladeUltimateEnhATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
-            bladeCheckHPFUA(battleData,queueObject,sourceTurn) {
-                const isHPInvalid = sourceTurn.currentHP <= 1;
-                if (isHPInvalid) {
-                    sourceTurn.battleValues.fuaIsQueued = false;
-                }
-
-                return isHPInvalid;
-            },
             //TODO: do mBlade technique, we avoided it bc of taunt, funnily enough attack rework I'm doing rn will allow taunt
-            bladeTechnique(battleData,target,sourceTurn) {
+            bladeTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -16317,7 +16244,7 @@ const turnLogic = {
                 // }
                 // const ATKObject = ATKObjects.bladeTechATKObject;
 
-                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
