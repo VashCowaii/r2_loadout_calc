@@ -20773,7 +20773,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            tingyunBasic(battleData,target,sourceTurn) {
+            tingyunBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -20811,17 +20811,17 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.tingyunBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             expireFunction(battleData,param) {
                 let characterName = "Tingyun";
                 turnLogic[characterName].characterValuesBattle.charWithBenediction = null;
             },
-            tingyunSkill(battleData,target,sourceTurn) {
+            tingyunSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.tingyunSkillREF ??= ATKObjects.Skill["Soothing Melody"].variant1;
@@ -20999,7 +20999,7 @@ const turnLogic = {
                 //     ...addedHit.hit
                 // })
             },
-            tingyunUltimate(battleData,sourceTurn,target) {
+            tingyunUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -21013,7 +21013,7 @@ const turnLogic = {
 
                 let charValuesRef = logicRef.characterValuesBattle;
                 //atm we look for the ally with benediction, if nobody has it then we assume char1 gets the energy, always
-                let targetTurn = target[0];
+                let targetTurn = actionObject.target[0];
 
                 let values = ATKObjects.tingyunUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 let energyRegen = values[0] + (e6 ? 10 : 0);
@@ -21044,7 +21044,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            tingyunTechnique(battleData,target,sourceTurn) {
+            tingyunTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -21057,12 +21057,12 @@ const turnLogic = {
                 //as such, I feel the safe assumption is people are gonna double cast to get insta ult on combat start
                 //TODO: later look into technique use count specification(if needed)
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 let amount = 50;//4th param true for fixed amount
                 updateEnergy(battleData,amount,sourceTurn,true,"Tingyun Technique");
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // let amount = 50;//4th param true for fixed amount
                 updateEnergy(battleData,amount,sourceTurn,true,"Tingyun Technique");
