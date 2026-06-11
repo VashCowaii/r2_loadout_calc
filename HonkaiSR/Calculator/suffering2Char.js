@@ -9160,7 +9160,7 @@ const turnLogic = {
             "E1": "Self",
         },
         "skillFunctions": {
-            natashaBasic(battleData,target,sourceTurn) {
+            natashaBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -9202,13 +9202,13 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.natashaBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            natashaSkillHeal(battleData,target,sourceTurn) {
+            natashaSkillHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
                 let rank = sourceTurn.rank;
@@ -9265,11 +9265,10 @@ const turnLogic = {
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
-            natashaUltimate(battleData,sourceTurn) {
+            natashaUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
                 let rank = sourceTurn.rank;
 
@@ -9316,7 +9315,7 @@ const turnLogic = {
                 }
                 // let ATKObject = ATKObjects.gallagherUltimateATKOBJECT;
                 let healObject = ATKObjects.natashaUltimateHealHEALOBJECT;
-                const allyPositions = battleData.allyPositions;
+                const allyPositions = actionObject.target;
                 
 
                 if (rank >= 2) {
@@ -9340,7 +9339,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            natashaTechnique(battleData,target,sourceTurn) {
+            natashaTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -9398,7 +9397,7 @@ const turnLogic = {
                 const ATKObject = ATKObjects.natashaTechniqueATKObject;
                 const debuffSheet = ATKObjects.natashaTechWEAKENSHEET;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
                 // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
@@ -9413,7 +9412,7 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
             },
-            natashaE1InsertHeal(battleData,targetTurn,sourceTurn) {
+            natashaE1InsertHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
