@@ -21957,7 +21957,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            sundayBasic(battleData,target,sourceTurn) {
+            sundayBasic(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[characterName];
@@ -22008,9 +22008,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.sundayBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            sundayAdvance(battleData,target,sourceTurn) {
+            sundayAdvance(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -22018,7 +22018,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.sundayAdvanceREF ??= ATKObjects.Skill["Benison of Paper and Rites"].variant1;
                 let values = ATKObjects.sundayAdvanceREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 // const logicRef = turnLogic[characterName];
                 const buffRef = logicRef.buffNames;
@@ -22170,7 +22170,7 @@ const turnLogic = {
                 const charWithBeatified = sourceTurn.battleValues.charWithBeatifiedNameSlot;
                 if (charWithBeatified) {updateSkillPoints(battleData,1,sourceTurn,false,"Skill used on Beatified");}
             },
-            sundayUltimate(battleData,sourceTurn,target) {
+            sundayUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -22179,7 +22179,7 @@ const turnLogic = {
                 let values = ATKObjects.sundayUltimateREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 const allyTurns = battleData.nameBasedTurns;
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
                 
                 const maxEnergy = targetTurn.maxEnergy;
                 if (maxEnergy) {
@@ -22371,7 +22371,7 @@ const turnLogic = {
                 if (memoTurn) {removeBuff(battleData,memoTurn,targetSheet);}
                 charValuesRef.charWithBeatifiedNameSlot = null;
             },
-            sundayTechnique(battleData,target,sourceTurn) {
+            sundayTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[characterName];
@@ -22379,7 +22379,7 @@ const turnLogic = {
 
                 let skillRef = this.sundayTechPath ??= ATKObjects.Technique["The Glorious Mysteries"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // let attackEndings = battleData.battleListeners.AbilityStart ??= [];
                 
