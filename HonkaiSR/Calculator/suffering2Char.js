@@ -25500,7 +25500,7 @@ const turnLogic = {
             "Ultimate": "Allies (On-Field)",
         },
         "skillFunctions": {
-            sparkleBasic(battleData,target,sourceTurn) {
+            sparkleBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -25541,7 +25541,7 @@ const turnLogic = {
                 let ATKObject = ATKObjects.sparkleBasicATKOBJECT;
 
                 updateEnergy(battleData,10,sourceTurn,false,"Sparkle Major Trace: Almanac");//sparkle regens 10 energy on basic atk
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             applyDreamdiver(battleData,targetTurn,sourceTurn,e6) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -25601,11 +25601,11 @@ const turnLogic = {
                 
                 updateBuff(battleData,targetTurn,buffSheet);
             },
-            sparkleAdvance(battleData,target,sourceTurn) {
+            sparkleAdvance(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 if (sourceTurn.nextSkillFree) {
                     sourceTurn.nextSkillFree = false;
@@ -25642,7 +25642,7 @@ const turnLogic = {
 
                 if (targetTurn.properName != "Sparkle") {actionAdvance(0.5,targetTurn,battleData,"Sparkle Skill");}//prevent self advancement
             },
-            sparkleUltimate(battleData,sourceTurn) {
+            sparkleUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -25696,7 +25696,7 @@ const turnLogic = {
                     }
                 }
                 let buffSheet = ATKObjects.sparkleUltimateCIPHERSHEET;
-                const allyPositions = battleData.allyPositions;
+                const allyPositions = actionObject.target;
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet)
                 
                 if (e6) {
@@ -25733,7 +25733,7 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 removeBuffFromBatch(battleData,enemyPositions,fakeObject,false,null,true);
             },
-            sparkleTechnique(battleData,target,sourceTurn) {//energy gain added
+            sparkleTechnique(battleData,actionObject,sourceTurn) {//energy gain added
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -25743,7 +25743,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.sparkleTechREF ??= ATKObjects.Technique["Unreliable Narrator"].variant1;
 
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 let spRecovery = 3;
                 updateSkillPoints(battleData,spRecovery,sourceTurn,false,"Sparkle Technique");
