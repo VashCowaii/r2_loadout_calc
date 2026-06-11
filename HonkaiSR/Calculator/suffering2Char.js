@@ -15282,20 +15282,6 @@ const turnLogic = {
                                 "toughness": 10
                             },
                         })
-                        // {
-                        //     multi: values[0],
-                        //     bounceCount: 4,
-                        //     energy: skillRef.energyRegen,
-                        //     "target": {
-                        //         "hitRatio": 1,
-                        //         "energyRatio": 1,
-                        //         "toughness": 10
-                        //     },
-                        //     "blast": null,
-                        //     "all": null,
-                        //     "allEnemiesHit": null,
-                        //     "unknownTypers": false
-                        // }
                     }
                 }
                 let ATKObject = ATKObjects.weltSkillATKOBJECT;
@@ -16164,22 +16150,16 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[2],
                             bounceCount: 4,
                             energy: null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 0,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.bladeSkillATKOBJECT;
@@ -16225,22 +16205,16 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[2],
                             bounceCount: 4,
                             energy: null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 0,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.bladeSkillFUAATKOBJECT;
@@ -24329,22 +24303,16 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0],
                             bounceCount: rank >= 1 ? 5 : 4,
                             energy: skillRef.energyRegen,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.astaSkillATKOBJECT;
@@ -26555,22 +26523,16 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[1],
                             bounceCount: 10,
                             energy: null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 20/10
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 20/10
                             },
-                        }
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.saberUltimateATKOBJECT;
@@ -26648,7 +26610,6 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        bounceData: null,
                         compositeCacheTag
                     }
                 }
@@ -26656,34 +26617,15 @@ const turnLogic = {
 
                 const enemyPositions = battleData.enemyPositions;
                 if (enemyPositions.length <= 2) {
-                    // let insert = 0;
                     if (enemyPositions.length === 1) {
-                        // insert = values[3];
                         skillRef.hitSplits = hitSplitters[characterName].eba3;
                     }
                     else {
-                        // insert = values[2];
                         skillRef.hitSplits = hitSplitters[characterName].eba2;
                     }
 
-                    // ATKObject.bounceData = {
-                    //     multi: insert,
-                    //     bounceCount: 1,
-                    //     hitSplit: {
-                    //         "primary": null,
-                    //         "blast": null,
-                    //         "all": {
-                    //             "hitRatio": 1,
-                    //             "energyRatio": 0,
-                    //             "toughness": 0
-                    //         },
-                    //         "allEnemiesHit": null,
-                    //         "unknownTypers": false
-                    //     },
-                    // }
                 }
                 else {
-                    // ATKObject.bounceData = null;
                     skillRef.hitSplits = hitSplitters[characterName].eba;
                 }
 
@@ -30159,7 +30101,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: null,
                     };
                 }
                 let ATKObject = ATKObjects.dhilUltimateATKOBJECT;
@@ -31782,22 +31723,16 @@ const turnLogic = {
                         isFUA: false,
                         // scalarSourceOverride: sourceTurn.name,
                         actionTags,compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0],
                             bounceCount: 4,
                             energy: skillRef.energyRegen / 5,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
                     ATKObjects.memBasicAttackATKOBJECT2 = {
                         multipliers: {
@@ -37216,7 +37151,6 @@ const turnLogic = {
                         scalarSourceOverride: sourceTurn.name,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: null,
                     }
                     ATKObjects.netherEnhancedMultipliers = {
                         1: values[1],
@@ -37460,21 +37394,16 @@ const turnLogic = {
                             scalarSourceOverride: ownerTurn.name,
                             actionTags,
                             compositeCacheTag,
-                            bounceData: {
+                            bounceData: superGlobal.createATKBounceObject({
                                 multi: values[0],
-                                bounceCount: rank>=6 ? 9 : 6,
-                                hitSplit: {
-                                    "primary": {
-                                        "hitRatio": 1,
-                                        "energyRatio": 1,
-                                        "toughness": 5
-                                    },
-                                    "blast": null,
-                                    "all": null,
-                                    "allEnemiesHit": null,
-                                    "unknownTypers": false
+                                bounceCount: rank >= 6 ? 9 : 6,
+                                energy: null,
+                                target: {
+                                    "hitRatio": 1,
+                                    "energyRatio": 1,
+                                    "toughness": 5
                                 },
-                            }
+                            })
                         }
 
                         const actionTags2 = ["All","Heal"];
@@ -40015,22 +39944,16 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                         isFUA: true,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[2],
                             bounceCount: sourceTurn.rank >= 4 ? 10 : 7,
                             energy: skillRef.energyRegen,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 3.3333333333333335
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
-                            }
-                        }
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 3.3333333333333335
+                            },
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.aventurineFUAATKOBJECT;
@@ -40865,22 +40788,16 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values2[2],
                             bounceCount: values2[1],
-                            energy: null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: 0,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
 
 
@@ -41410,23 +41327,17 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0],
                             bounceCount: 4,
-                            bounceSkipFirstTarget: true,
                             energy: skillRef.energyRegen,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 10/2
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            bounceSkipFirstTarget: true,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 10/2
                             },
-                        }
+                        })
                     }
 
                     ATKObjects.anaxaSkillPerTargetDMGSHEET ??= {
@@ -42539,24 +42450,19 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                         instanceTag: "JingYuanBouncyBouncer",
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[1],
                             bounceCount: 3,
                             energy: rank >= 4 ? 2 : null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 5
-                                },
-                                "blast": {
-                                    "hitRatio": 1 * values[4] + (rank >= 1 ? 0.25 : 0),
-                                },
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
-                            }
-                        }
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 5
+                            },
+                            blast: {
+                                "hitRatio": 1 * values[4] + (rank >= 1 ? 0.25 : 0),
+                            },
+                        })
                     }
 
                     ATKObjects.jingYuanTraceCRITDAMAGESHEET = {
@@ -43668,22 +43574,16 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                         isElation: true,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[5] * e6MultiBonus,
-                            energy: null,
                             bounceCount: 5,
-                            hitSplit: {
-                                "primary": {//160 -> 135
-                                    "hitRatio": 1,
-                                    // "energyRatio": 1,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: null,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
 
                     ATKObjects.yaoElationSkillVULNSHEET = {
@@ -44301,7 +44201,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: null,
                         valuesRef: values,
                         customMulti: logicRef.skillFunctions.pullMultiCUSTOMSPARXULT,
                         dmgNeedsElationComposite: true,
@@ -44737,22 +44636,16 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                         isElation: true,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0],
                             bounceCount: 20,
-                            energy: null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 10/6,//1.6666666666
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: 0,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 10/6
                             },
-                        }
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.sparxElationSkillATKOBJECT;
@@ -45722,22 +45615,16 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                         isElation: true,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[1],
                             bounceCount: 8,
-                            energy: null,
-                            hitSplit: {
-                                "primary": {//
-                                    "hitRatio": 1,
-                                    "energyRatio": 1,
-                                    "toughness": 0
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: 0,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 0
                             },
-                        }
+                        })
                     }
                     ATKObjects.emcElationSkillATKOBJECT2 = {
                         multipliers: {
@@ -46251,7 +46138,6 @@ const turnLogic = {
                         compositeCacheTag,
                         isFUA: false,
                         // isElation: true,
-                        bounceData: null,
                     }
 
                     ATKObjects.sw999BasicEnhATKOBJECT = {//burst normal
@@ -46271,21 +46157,16 @@ const turnLogic = {
                         compositeCacheTag,
                         isFUA: false,
                         // isElation: true,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0] / 100,
                             bounceCount: 34,
-                            hitSplit: {
-                                "primary": {//
-                                    "hitRatio": 1,
-                                    // "energyRatio": 1,
-                                    "toughness": 50 / 100,
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: skillRef.energyRegen,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 50/100
                             },
-                        }
+                        })
                     }
                     ATKObjects.sw999BasicEnhATKOBJECT3 = {//final hit normal
                         multipliers: {
@@ -46340,21 +46221,16 @@ const turnLogic = {
                         isFUA: false,
                         isElation: true,
                         useCertifiedBanger: true,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[0] / 100,
                             bounceCount: 34,
-                            hitSplit: {
-                                "primary": {//
-                                    "hitRatio": 1,
-                                    // "energyRatio": 1,
-                                    "toughness": 50 / 100,
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: 0,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 50/100
                             },
-                        }
+                        })
                     }
                     ATKObjects.sw999BasicEnhATKOBJECT31 = {//final hit elation
                         multipliers: {
@@ -47192,21 +47068,16 @@ const turnLogic = {
                             actionTags,
                             compositeCacheTag,
                             isElation: true,
-                            bounceData: {
+                            bounceData: superGlobal.createATKBounceObject({
                                 multi: values[0],
                                 bounceCount: 6,
-                                hitSplit: {
-                                    "primary": {//
-                                        "hitRatio": 1,
-                                        // "energyRatio": 1,
-                                        "toughness": 10
-                                    },
-                                    "blast": null,
-                                    "all": null,
-                                    "allEnemiesHit": null,
-                                    "unknownTypers": false
+                                energy: 0,
+                                target: {
+                                    "hitRatio": 1,
+                                    "energyRatio": 0,
+                                    "toughness": 10
                                 },
-                            }
+                            })
                         }
                     }
 
@@ -48534,22 +48405,16 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        bounceData: {
+                        bounceData: superGlobal.createATKBounceObject({
                             multi: values[2],
                             bounceCount: 5,
-                            energy: null,
-                            hitSplit: {
-                                "primary": {
-                                    "hitRatio": 1,
-                                    "energyRatio": 0,
-                                    "toughness": 5
-                                },
-                                "blast": null,
-                                "all": null,
-                                "allEnemiesHit": null,
-                                "unknownTypers": false
+                            energy: 0,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 5
                             },
-                        }
+                        })
                     }
                 }
                 let ATKObject = ATKObjects.evaUltimateATKOBJECT;
