@@ -10410,9 +10410,10 @@ const turnLogic = {
         "abilityTargetPools": {
             "Skill": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            luochaBasic(battleData,target,sourceTurn) {
+            luochaBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -10448,16 +10449,16 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.luochaBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            luochaSkillHeal(battleData,target,sourceTurn) {
+            luochaSkillHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.luochaSkillHealHealREF ??= ATKObjects.Skill["Prayer of Abyss Flower"].variant1;
                 let rank = sourceTurn.rank;
                 // let e2 = rank >= 2;
-                targetTurn = target[0];
+                targetTurn = actionObject.target[0];
                 //in some cases the team may be healed to full already, however if we recast for the sake of renewing divine provision, then we auto to herself to heal
                 
                 //Q: do blast heal targets count as targeted for the sake of something like sacerdos or wavestrider?
@@ -10574,11 +10575,10 @@ const turnLogic = {
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
-            luochaUltimate(battleData,sourceTurn) {
+            luochaUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.luochaUltimateREF ??= ATKObjects.Ultimate["Death Wish"].variant1;
                 let rank = sourceTurn.rank;
 
@@ -10640,11 +10640,11 @@ const turnLogic = {
 
                 poke("luochaAbyssGained",battleData,{pointsGained: 1,sourceString:"Luocha Ult Use"},sourceTurn);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
-            luochaAddZone(battleData,targetTurn,sourceTurn) {
+            luochaAddZone(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -10751,14 +10751,14 @@ const turnLogic = {
                     }
                 }
             },
-            luochaTechnique(battleData,target,sourceTurn) {
+            luochaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.luochaTechniqueREF ??= ATKObjects.Technique["Mercy of a Fool"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 poke("luochaAbyssGained",battleData,{pointsGained: 2,sourceString:"Luocha Technique"},sourceTurn);
             },
