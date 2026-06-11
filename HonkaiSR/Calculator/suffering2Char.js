@@ -6373,42 +6373,30 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = battleData.ahaInstantTURNEVENT;
 
-                    const queueObject = this.queueObject ??= {
-                        name: "Aha Instant Starting",
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                        name: "Aha Instant Starting",//this.listenerName,
                         priority: priorityList.turn.AhaInstantStart,
                         queueTag: "AhaInstantQueueStarting",
-
+    
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.startAhaInstant,
                         action: "AhaInstantQueueStarting",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: false,
                         isAttack: false,
                         isAbility: false,
                         useAnyTriggers: false,
                         // eventTypeStartLOG: "ElationSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: "enemy",
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                        
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
+                    })
                     queueObject.sourceTurn = ownerTurn;
                     queueExtraTurn(battleData,queueObject);
                 },
@@ -17038,45 +17026,35 @@ const turnLogic = {
 
                     battleValues.fuaIsQueued = true;
 
-                    const queueObject = this.queueObject ??= {
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                         name: this.listenerName,
                         priority: priorityList.turn.Default,
                         queueTag: "BladeME1ExtraSkill",
-
+    
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeSkillFUA,
-                        action: "Skill", 
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: true,
+                        action: "Skill",
+                        abortCheck(battleData,actionObject,sourceTurn) {
+                            if (sourceTurn.currentHP <= 1) {
+                                sourceTurn.battleValues.fuaIsQueued = false;
+                                return true;
+                            }
+                        },
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
-                        isInserted: false,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
-                        dontKeepNextWave: false,//ults always clear out
+
+                        dontKeepNextWave: false,
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "SkillStart",
-                        // eventTypeStart: "GenericAbilityStart",
-                        // eventTypeEnd: "GenericAbilityEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        abortCheck: turnLogic[ownerTurn.properName].skillFunctions.bladeCheckHPFUA,
-
-                        target: this.target,
+    
                         poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
-
-                        elationForcedPunchline: null,
-                    }
+                    })
 
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.target = battleData.enemyPositions;
@@ -49343,43 +49321,34 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
         
-                            const queueObject = this.queueObject ??= {
-                                name: "E1 FUA 'Elation Skill' Queue",
+                            const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                                name: "E1 FUA 'Elation Skill' Queue",//this.listenerName,
                                 priority: priorityList.turn.Default,
                                 queueTag: "QueuedExtraTurn",
-    
+            
                                 actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
                                 action: "ElationSkill",
-                                points: 0,
-                                energyCost: null,
-                                // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                                // specialEnergyPoke: "SW999GainMMR",
-                                
-                                isEnhanced: false,
+                                abortCheck: null,//(battleData,actionObject,sourceTurn),
+            
                                 isTieBreaker: false,
                                 isExtraTurn: true,
                                 skipEXDisplay: true,
                                 allowUlts: false,
                                 decrementBuffs: false,
                                 extraTurnHasChoice: false,
+
                                 dontKeepNextWave: false,
                                 isAttack: true,
                                 isAbility: true,
                                 useAnyTriggers: true,
                                 eventTypeStartLOG: "ElationSkillStart",
-                                // eventTypeStart: "ExtraTurnStart",
-                                // eventTypeEnd: "ExtraTurnEnd",
-    
-                                properName: ownerTurn.properName,
-                                sourceTurn: null,
+
                                 eventOverrideImage: "misc/evanescia/labubu.png",
-    
-                                target: "enemy",
-                                poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                                
-                                elationForcedPunchline: null,
-                            }
+            
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
+                            })
                             queueObject.sourceTurn = ownerTurn;
+                            queueObject.target = battleData.enemyPositions;
                             queueExtraTurn(battleData,queueObject);
                         },
                         "target": "self",
