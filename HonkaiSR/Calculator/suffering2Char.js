@@ -18339,7 +18339,7 @@ const turnLogic = {
             "FUA": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            archerBasic(battleData,target,sourceTurn) {
+            archerBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -18376,9 +18376,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.archerBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            archerFUA(battleData,targetTurn,sourceTurn) {
+            archerFUA(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -18435,12 +18435,12 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.archerFUAATKOBJECT;
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 //FUA's regen skill points, used to be in a listener but moved it here to stop inting myself
                 updateSkillPoints(battleData,1,sourceTurn,false,"Archer - +SP - Talent")
             },
-            archerSkillInstance(battleData,target,sourceTurn) {
+            archerSkillInstance(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -18498,7 +18498,7 @@ const turnLogic = {
                 const battleValues = sourceTurn.battleValues
                 let ATKObject = ATKObjects.archerSkillInstanceATKOBJECT;
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 if (rank >= 1 && battleValues.skillCounter === 3) {//fail condition right off if no source exists or it's not archer
                     let cost = 2;
@@ -18519,7 +18519,7 @@ const turnLogic = {
                     sourceTurn.ArcherCanDoExtraTurn = true;
                 }
             },
-            archerUltimate(battleData,sourceTurn) {
+            archerUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -18588,7 +18588,7 @@ const turnLogic = {
                     //just checked and sw weakness check DOES look for implanted weaknesses too, and won't do the 20% RES reduction if archer's goes first.
                 }
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 let chargeRef = sourceTurn.battleValues;
 
                 const oldValue = chargeRef.charge;
@@ -18613,7 +18613,7 @@ const turnLogic = {
                 chargeRef.charge = newCharge;
                 sourceTurn.ultyQueued = false;
             },
-            archerTechnique(battleData,target,sourceTurn) {
+            archerTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -18653,10 +18653,10 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.archerTechATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
-            archerTechnique2(battleData,target,sourceTurn) {
+            archerTechnique2(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -18666,7 +18666,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.archerTechREF ??= ATKObjects.Technique["Clairvoyance"].variant1;
 
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 let chargeRef = sourceTurn.battleValues;
 
                 let newCharge = Math.min(4,chargeRef.charge + 1)
