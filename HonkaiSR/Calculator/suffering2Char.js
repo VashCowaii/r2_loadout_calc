@@ -7262,7 +7262,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            gallagherBasic(battleData,target,sourceTurn) {
+            gallagherBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -7299,9 +7299,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.gallagherBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            gallagherSkillHeal(battleData,target,sourceTurn) {
+            gallagherSkillHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -7309,7 +7309,7 @@ const turnLogic = {
                 let rank = sourceTurn.rank;
                 let e2 = rank >= 2;
                 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
                 
                 if (!ATKObjects.gallagherSkillHealHEALOBJECT) {
                     let characterName = sourceTurn.properName;
@@ -7403,7 +7403,7 @@ const turnLogic = {
 
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,timesToHeal,batchArray);
             },
-            gallagherBasicEnhanced(battleData,target,sourceTurn) {
+            gallagherBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -7462,11 +7462,11 @@ const turnLogic = {
                 let buffSheet = ATKObjects.gallagherBasicEnhancedBLITZSHEET;
                 updateBuff(battleData,targetTurn,buffSheet);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 logicRef.characterValuesBattle.nextBasicEnhanced = false;
             },
-            gallagherUltimate(battleData,sourceTurn) {
+            gallagherUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -7510,11 +7510,11 @@ const turnLogic = {
                 let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
                 let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
                 let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
-                for (let enemySlot of battleData.enemyPositions) {
+                for (let enemySlot of actionObject.target) {
                     besotted(battleData,sourceTurn,enemySlot,e4,values2);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 logicRef.characterValuesBattle.nextBasicEnhanced = true;
 
                 actionAdvance(1,sourceTurn,battleData,"Major Trace: Organic Yeast");//will advance when ult is cast but not within his turn, obv does nothing then
@@ -7598,7 +7598,7 @@ const turnLogic = {
                 buffSheet[HealingOutgoingNULL] = -conversion;
                 updateBuff(battleData,currentTurn,buffSheet);
             },
-            gallagherTechnique(battleData,target,sourceTurn) {
+            gallagherTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -7639,7 +7639,7 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.gallagherTechATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
                 let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
@@ -7648,7 +7648,7 @@ const turnLogic = {
                     besotted(battleData,sourceTurn,enemySlot,false,values2);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
         },
         "listeners": [
