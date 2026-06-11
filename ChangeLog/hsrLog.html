@@ -18,6 +18,11 @@
         </li> -->
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where, if switching characters in the same slot: if the character you were switching to had default conditions that had the same type of condition at the same spot, it could break the condition that should have been brought over by default.
+            <ul>
+                <li>This was actually a bug I created recently with the Castorice update, just a UI handling problem I didn't think about</li>
+            </ul>
+        </li>
         <li>Fixed a visual issue where the following ability instances weren't displaying as enhanced if they were, in the action order:
             <ul>
                 <li>RMC Basic</li>
