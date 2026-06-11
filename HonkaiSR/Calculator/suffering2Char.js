@@ -24096,7 +24096,7 @@ const turnLogic = {
             "Ultimate": "Allies (On-Field)",
         },
         "skillFunctions": {
-            astaBasic(battleData,target,sourceTurn) {
+            astaBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -24135,7 +24135,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.astaBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             astaTraceDOT(battleData,sourceTurn,generalInfo) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -24189,7 +24189,7 @@ const turnLogic = {
 
                 generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
             },
-            astaSkill(battleData,target,sourceTurn) {
+            astaSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -24240,9 +24240,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.astaSkillATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            astaUltimate(battleData,sourceTurn) {
+            astaUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -24277,10 +24277,8 @@ const turnLogic = {
                 
                 let buffSheet = ATKObjects.astaUltimateSPDSHEET;
 
-                const allyPositions = battleData.allyPositions;
-                for (ally of allyPositions) {
-                    updateBuff(battleData,ally,buffSheet);
-                }
+                const allyPositions = actionObject.target;
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 if (rank >= 2) {
                     sourceTurn.battleValues.skipCost = true;;
@@ -24289,7 +24287,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            astaTechnique(battleData,target,sourceTurn) {
+            astaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -24329,8 +24327,8 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.astaTechniqueATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
         },
         "listeners": [
