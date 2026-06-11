@@ -21385,7 +21385,7 @@ const turnLogic = {
             "FUA": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            bronyaBasic(battleData,target,sourceTurn) {
+            bronyaBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -21423,12 +21423,12 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bronyaBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 const bronyaTalent = ATKObjects.bronyaTalent ??= logicRef.skillFunctions.bronyaTalent;
                 bronyaTalent(battleData,sourceTurn);//TODO: just move the function contents inside here later nbd
             },
-            bronyaFUABasic(battleData,targetTurn,sourceTurn) {
+            bronyaFUABasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -21470,9 +21470,9 @@ const turnLogic = {
                         compositeCacheTag
                     }
                 }
-                let ATKObject = ATKObjects.bronyaFUABasic
+                let ATKObject = ATKObjects.bronyaFUABasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject,targetTurn);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             bronyaTalent(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -21486,11 +21486,11 @@ const turnLogic = {
                 let values = ATKObjects.bronyaTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 actionAdvance(values[0],sourceTurn,battleData,"Bronya Talent");
             },
-            bronyaAdvance(battleData,target,sourceTurn) {
+            bronyaAdvance(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.bronyaAdvanceREF ??= ATKObjects.Skill["Combat Redeployment"].variant1;
@@ -21561,7 +21561,7 @@ const turnLogic = {
                     updateBuff(battleData,targetTurn,buffSheet);
                 }
             },
-            bronyaUltimate(battleData,sourceTurn) {
+            bronyaUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -21600,13 +21600,13 @@ const turnLogic = {
                 buffSheet[CritDamageBase] = critDMGTotalBonus;
                 buffSheet[CritDamageBaseNULL] = -critDMGTotalBonus;
 
-                const allyPositions = battleData.allyPositions;
+                const allyPositions = actionObject.target;
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            bronyaTechnique(battleData,target,sourceTurn) {
+            bronyaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -21629,7 +21629,7 @@ const turnLogic = {
                     "expireType": "EndTurn"
                 }
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 updateBuffBatchTargets(battleData,battleData.allyPositions,buffSheet)
             },
@@ -21709,7 +21709,6 @@ const turnLogic = {
                             let sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy || sourceTurn.properName === characterName) {return;}//can't self proc off basic atk, only happens at e4+ as well
         
-                            let logicRef = turnLogic[characterName];
                             let valuesRef = ownerTurn.battleValues;
     
                             if (!valuesRef.e4FUAReady || generalInfo.dmgSlot != "Basic ATK") {return;}//abort on non basic atk ends and if the fua wasn't ready
