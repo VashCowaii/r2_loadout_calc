@@ -9842,7 +9842,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            lynxBasic(battleData,target,sourceTurn) {
+            lynxBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -9880,13 +9880,13 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.lynxBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            lynxSkillHeal(battleData,target,sourceTurn) {
+            lynxSkillHeal(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                const targetTurn = target[0];
+                const targetTurn = actionObject.target[0];
 
                 let skillRef = ATKObjects.lynxSkillHealREF ??= ATKObjects.Skill["Salted Camping Cans"].variant1;
                 let values = ATKObjects.lynxSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -10030,7 +10030,7 @@ const turnLogic = {
 
                 updateBuff(battleData,targetTurn,buffSheet,false,null,false);
             },
-            lynxUltimate(battleData,sourceTurn) {
+            lynxUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -10063,7 +10063,7 @@ const turnLogic = {
                     }
                 }
                 let healObject = ATKObjects.lynxUltimateHealHEALOBJECT;
-                const allyPositions = battleData.allyPositions;
+                const allyPositions = actionObject.target;
 
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
                 healAlly(battleData,healObject,null,sourceTurn,skillRef.slot,1,allyPositions);
@@ -10077,7 +10077,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            lynxTechnique(battleData,target,sourceTurn) {
+            lynxTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -10085,7 +10085,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.lynxTechniqueREF ??= ATKObjects.Technique["Chocolate Energy Bar"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const allyPositions = battleData.allyPositions;
 
