@@ -36816,43 +36816,33 @@ const turnLogic = {
                     if (!ownerTurn.battleValues.hyacineAfterRainActive || sourceTurn.properName != ownerTurn.properName) {return;}
                     const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
 
-                    const queueObject = this.queueObject ??= {
+                    const queueObject = this.queueObject ??= createQueueObject(icaTurn,{
                         name: this.listenerName,
                         priority: priorityList.turn.CharacterChainedSkill,
                         queueTag: "QueuedExtraTurn",
-
+    
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.icaTurnAttack,
                         action: "MemoSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: false,
                         allowUlts: false,
                         decrementBuffs: true,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: true,
-                        isAttack: false,
+                        isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "MemoSkillStart",
-                        // eventTypeStart: "MemoSkillStart",
-                        // eventTypeEnd: "MemoSkillEnd",
-                        
-                        properName: icaTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.MemoSkill,
+                    })
 
-                        target: this.target,
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                        elationForcedPunchline: null,
-                    }
                     queueObject.sourceTurn = icaTurn;
+                    queueObject.target = battleData.enemyPositions;
                     queueExtraTurn(battleData,queueObject);
                 },
                 "target": "self",
@@ -38432,45 +38422,30 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     ownerTurn.battleValues.netherDeathIsQueued = true;
 
-                    const queueObject = this.queueObject ??= {
-                        name: "Netherwing Queued Suicide",
+                    const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
+                    const queueObject = this.queueObject ??= createQueueObject(netherTurn,{
+                        name: "Netherwing Queued Suicide",//this.listenerName,
                         priority: priorityList.ability.CharacterAttackFromSelf,
                         queueTag: "QueuedNetherwingSuicide",
-
+    
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.netherwingDeathFunction,
                         action: "MemoSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isEnhanced: true,
-                        isTieBreaker: false,
                         isInserted: true,
-                        isExtraTurn: false,
-                        skipEXDisplay: false,
-                        allowUlts: false,
-                        decrementBuffs: false,
-                        extraTurnHasChoice: false,
-                        dontKeepNextWave: false,
+                        dontKeepNextWave: false,//ults always clear out
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "MemoSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "misc/evanescia/labubu.png",
-
-                        target: "enemy",
+    
                         poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.MemoSkill,
-                        
-                        elationForcedPunchline: null,
-                    }
-                    queueObject.sourceTurn = ownerTurn;
-                    queueExtraTurn(battleData,queueObject);
+                    })
+
+                    queueObject.sourceTurn = netherTurn;
+                    queueObject.target = battleData.enemyPositions;
+                    queueInsertAbility(battleData,queueObject);
                 },
                 "target": "self",
                 "listenerName": "Netherwing HP Backup Drained, Queued Suicide",
@@ -39617,42 +39592,30 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: actionObject?.target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                const queueObject = ATKObjects.dhptTechSkillCall ??= {
-                    name: "DHPT Technique Skill",
+                const queueObject = ATKObjects.dhptTechSkillCall ??= createQueueObject(sourceTurn,{
+                    name: "DHPT Technique Skill",//this.listenerName,
                     priority: priorityList.turn.Default,
                     queueTag: "QueuedExtraTurn",
 
-                    actionCall: turnLogic[characterName].skillFunctions.dhptSkill,
+                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.dhptSkill,
                     action: "Skill",
-                    points: 0,
-                    energyCost: null,
-                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                    // specialEnergyPoke: "SW999GainMMR",
-                    
-                    isEnhanced: false,
+                    abortCheck: null,//(battleData,actionObject,sourceTurn),
+
                     isTieBreaker: false,
                     isExtraTurn: true,
                     skipEXDisplay: true,
                     allowUlts: false,
                     decrementBuffs: false,
                     extraTurnHasChoice: false,
-                    dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+
+                    dontKeepNextWave: false,
                     isAttack: false,
                     isAbility: true,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "SkillStart",
-                    // eventTypeStart: "SkillStart",
-                    // eventTypeEnd: "SkillEnd",
-                    
-                    properName: sourceTurn.properName,
-                    sourceTurn: null,
-                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                    target: "Enemies",
-                    poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                    elationForcedPunchline: null,
-                }
+                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                })
                 queueObject.sourceTurn = sourceTurn;
                 let targetOverride = superGlobal.getStartingAttacker(battleData);
                 queueObject.target = [targetOverride]
@@ -43881,46 +43844,30 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                const yaoTechSkillCall = ATKObjects.yaoTechSkillCall ??= turnLogic[characterName].skillFunctions.yaoSkill;
-
-                // yaoTechSkillCall(battleData,null,sourceTurn);
-
-                const queueObject = ATKObjects.dhptTechSkillCall ??= {
-                    name: "Yao Guang Technique Skill",
+                const queueObject = ATKObjects.dhptTechSkillCall ??= createQueueObject(sourceTurn,{
+                    name: "Yao Guang Technique Skill",//this.listenerName,
                     priority: priorityList.turn.Default,
                     queueTag: "QueuedExtraTurn",
 
-                    actionCall: turnLogic[characterName].skillFunctions.yaoSkill,
+                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.yaoSkill,
                     action: "Skill",
-                    points: 0,
-                    energyCost: null,
-                    // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                    // specialEnergyPoke: "SW999GainMMR",
-                    
-                    isEnhanced: false,
+                    abortCheck: null,//(battleData,actionObject,sourceTurn),
+
                     isTieBreaker: false,
                     isExtraTurn: true,
                     skipEXDisplay: true,
                     allowUlts: false,
                     decrementBuffs: false,
                     extraTurnHasChoice: false,
-                    dontKeepNextWave: false,//tells the ult queue to completely kill this object on wave reset, instead of persisting into the new wave
+
+                    dontKeepNextWave: false,
                     isAttack: false,
                     isAbility: true,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "SkillStart",
-                    // eventTypeStart: "SkillStart",
-                    // eventTypeEnd: "SkillEnd",
-                    
-                    properName: sourceTurn.properName,
-                    sourceTurn: null,
-                    // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
 
-                    target: null,
-                    poolKey: turnLogic[characterName].abilityTargetPools.Skill,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-
-                    elationForcedPunchline: null,
-                }
+                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                })
                 queueObject.sourceTurn = sourceTurn;
                 queueObject.target = [sourceTurn];
                 // let targetOverride = superGlobal.getStartingAttacker(battleData);
