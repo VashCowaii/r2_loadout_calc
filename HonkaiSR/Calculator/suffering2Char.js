@@ -26259,6 +26259,7 @@ const turnLogic = {
                 action: "BasicATK",
                 points: 1, 
 
+                isEnhanced: true,
                 isAttack: true,
                 isAbility: true,
                 useAnyTriggers: true,
@@ -26288,7 +26289,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            saberBasicReg(battleData,target,sourceTurn) {
+            saberBasicReg(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -26326,9 +26327,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.saberBasicRegATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            saberSkill(battleData,target,sourceTurn) {
+            saberSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -26404,9 +26405,9 @@ const turnLogic = {
                     poke("SaberGainCoreResonance",battleData,{pointsGained: 3,sourceString:"Skill"},null);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            saberUltimate(battleData,sourceTurn) {
+            saberUltimate(battleData,actionObject,sourceTurn) {
                 // const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -26458,7 +26459,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.saberUltimateATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 // const logicRef = turnLogic[characterName];
                 const valuesRef = sourceTurn.battleValues;
@@ -26497,7 +26498,7 @@ const turnLogic = {
                 }
                 sourceTurn.ultyQueued = false;
             },
-            saberBasicEnhanced(battleData,target,sourceTurn) {
+            saberBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -26556,11 +26557,11 @@ const turnLogic = {
                 const battleValues = sourceTurn.battleValues;
                 battleValues.advanceReady = true;
                 poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Enhanced Basic"},null);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 battleValues.isEnhanced = false;
             },
-            saberTechnique(battleData,target,sourceTurn) {
+            saberTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -26585,7 +26586,7 @@ const turnLogic = {
                     "expireType": "EndTurn",
                 }
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 updateBuff(battleData,sourceTurn,buffSheet);
                 poke("SaberGainCoreResonance",battleData,{pointsGained: 2,sourceString:"Behold, the King of Knights"},null);
