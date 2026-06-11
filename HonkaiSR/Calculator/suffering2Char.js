@@ -43962,43 +43962,32 @@ const turnLogic = {
                     const passiveListeners = this.passiveListeners;
 
 
-                    const queueObject = logicRef.elationSkillObject ??= {
-                        name: "Yao Guang Elation Skill",
+                    const queueObject = logicRef.elationSkillObject ??= createQueueObject(ownerTurn,{
+                        name: "Yao Guang Elation Skill",//this.listenerName,
                         priority: priorityList.turn.AhaInstant,
                         queueTag: "AhaInstantElationSkill",
-
-                        actionCall: logicRef.skillFunctions.elationSkill,
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
                         action: "ElationSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: false,
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: "enemy",
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                        
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
+                    })
                     queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = battleData.enemyPositions;
 
 
 
@@ -45075,43 +45064,32 @@ const turnLogic = {
                     const passiveListeners = this.passiveListeners;
 
 
-                    const queueObject = logicRef.elationSkillObject ??= {
-                        name: "Sparxie Elation Skill",
+                    const queueObject = logicRef.elationSkillObject ??= createQueueObject(ownerTurn,{
+                        name: "Sparxie Elation Skill",//this.listenerName,
                         priority: priorityList.turn.AhaInstant,
                         queueTag: "AhaInstantElationSkill",
-
-                        actionCall: logicRef.skillFunctions.elationSkill,
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
                         action: "ElationSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: false,
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: "enemy",
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                        
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
+                    })
                     queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = battleData.enemyPositions;
 
 
 
@@ -46091,43 +46069,32 @@ const turnLogic = {
                     const passiveListeners = this.passiveListeners;
 
 
-                    const queueObject = logicRef.elationSkillObject ??= {
-                        name: "EMC Elation Skill",
+                    const queueObject = logicRef.elationSkillObject ??= createQueueObject(ownerTurn,{
+                        name: "EMC Elation Skill",//this.listenerName,
                         priority: priorityList.turn.AhaInstant,
                         queueTag: "AhaInstantElationSkill",
-
-                        actionCall: logicRef.skillFunctions.elationSkill,
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
                         action: "ElationSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: false,
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: "enemy",
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                        
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
+                    })
                     queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = battleData.enemyPositions;
 
 
                     //talent inherent
@@ -47637,42 +47604,30 @@ const turnLogic = {
                     const passiveListeners = this.passiveListeners;
 
 
-                    const queueObject = logicRef.elationSkillObject ??= {
-                        name: "SW999 Elation Skill",
+                    const queueObject = logicRef.elationSkillObject ??= createQueueObject(ownerTurn,{
+                        name: "SW999 Elation Skill",//this.listenerName,
                         priority: priorityList.turn.AhaInstant,
                         queueTag: "AhaInstantElationSkill",
-
-                        actionCall: logicRef.skillFunctions.elationSkill,
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
                         action: "ElationSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: false,
                         isAttack: false,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: "enemy",
+    
                         poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
-                        
-                        elationForcedPunchline: null,
-                    }
+                    })
                     queueObject.target = [ownerTurn];
                     queueObject.sourceTurn = ownerTurn;
 
@@ -49002,43 +48957,32 @@ const turnLogic = {
                     const passiveListeners = this.passiveListeners;
 
 
-                    const queueObject = logicRef.elationSkillObject ??= {
-                        name: "Evanescia Elation Skill",
+                    const queueObject = logicRef.elationSkillObject ??= createQueueObject(ownerTurn,{
+                        name: "Evanescia Elation Skill",//this.listenerName,
                         priority: priorityList.turn.AhaInstant,
                         queueTag: "AhaInstantElationSkill",
-
-                        actionCall: logicRef.skillFunctions.elationSkill,
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.elationSkill,
                         action: "ElationSkill",
-                        points: 0,
-                        energyCost: null,
-                        // energyCostFunction: turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
-                        // specialEnergyPoke: "SW999GainMMR",
-                        
-                        isEnhanced: false,
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
                         isTieBreaker: false,
                         isExtraTurn: true,
                         skipEXDisplay: true,
                         allowUlts: false,
                         decrementBuffs: false,
                         extraTurnHasChoice: false,
+
                         dontKeepNextWave: false,
                         isAttack: true,
                         isAbility: true,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "ElationSkillStart",
-                        // eventTypeStart: "ExtraTurnStart",
-                        // eventTypeEnd: "ExtraTurnEnd",
-
-                        properName: ownerTurn.properName,
-                        sourceTurn: null,
-                        // eventOverrideImage: "BEicons/BattleEvent_1506_Box.png"
-
-                        target: "enemy",
-                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                        
-                        elationForcedPunchline: null,
-                    }
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Elation,
+                    })
                     queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = battleData.enemyPositions;
 
 
 
