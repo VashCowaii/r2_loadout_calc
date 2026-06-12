@@ -44483,7 +44483,7 @@ const turnLogic = {
             }
 
             if (isEnhanced) {
-                const skillCall = this.returnBasicCallEnh;
+                const skillCall = this.returnBasicEnhCall;
                 skillCall.target = [battleData.primaryTarget];
                 skillCall.subTarget = battleData.blastTargets;
                 return skillCall;
@@ -44547,7 +44547,7 @@ const turnLogic = {
             "Elation": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            sparxBasic(battleData,target,sourceTurn) {
+            sparxBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -44587,7 +44587,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.sparxBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -44656,7 +44656,7 @@ const turnLogic = {
                 updateBuff(battleData,currentTurn,dmgExtraSheet);
                 // updateBuff(battleData,demiTurn,dmgExtraSheet);
             },
-            sparxUltimate(battleData,sourceTurn) {
+            sparxUltimate(battleData,actionObject,sourceTurn) {
                 // const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -44685,7 +44685,7 @@ const turnLogic = {
                         multipliers: {
                             primary: null,
                             blast: null,
-                            all: 0,
+                            all: 0,//MUST BE 0, can't be null or undefined, needs to be 0 even though we don't use it
                         },
                         energy: skillRef.energyRegen,
                         scalar,
@@ -44728,7 +44728,7 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,buffSheetE4)
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 sourceTurn.ultyQueued = false;
             },
             pullMultiCUSTOMSPARXULT(sourceTurn,targetTurn,dmgNeedsElationComposite,table,hitType,ATKObject) {
@@ -44792,7 +44792,7 @@ const turnLogic = {
                     }
                 }
             },
-            sparxSkillInstance(battleData,target,sourceTurn) {
+            sparxSkillInstance(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -44900,7 +44900,7 @@ const turnLogic = {
                     battleActions.updatePunchlineValue(battleData,1,sourceTurn,"Skill: Unreal Banger");
                 }
             },
-            sparxBasicEnhanced(battleData,target,sourceTurn) {
+            sparxBasicEnhanced(battleData,actionObject,sourceTurn) {
                 sourceTurn.battleValues.forceBasic = false;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -44953,7 +44953,7 @@ const turnLogic = {
                 multipliers.primary = values[0] + (skillCounter * stBonus);
                 multipliers.blast = values[1] + (skillCounter * blastBonus);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 battleValues.skillCounter = 0;
             },
             sparxEBACertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo) {
@@ -45089,7 +45089,7 @@ const turnLogic = {
                     }
                 }
             },
-            elationSkill(battleData,target,sourceTurn) {
+            elationSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -45151,9 +45151,9 @@ const turnLogic = {
                 
                 poke("sparxieThrillGained",battleData,{pointsGained: 2,sourceString:"Elation Skill"},null);
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            sparxTechnique(battleData,target,sourceTurn) {
+            sparxTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -45194,8 +45194,8 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.sparxTechniqueATKObject
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
 
                 updateSkillPoints(battleData,2,sourceTurn,false,"Sparxie Technique");
             },
@@ -45571,6 +45571,7 @@ const turnLogic = {
                         })
 
                         queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.enemyPositions;
                         queueUltimate(battleData,queueObject);
                     }
                 },

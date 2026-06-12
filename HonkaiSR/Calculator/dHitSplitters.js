@@ -3833,7 +3833,7 @@ const hitSplitters = {
           "hitRatio": 1,
           "energyRatio": 1,
           "toughness": 20,
-          "target": "primary"
+          "target": "all"
         },
         "isSourceFirstHit": true,
         "isAttackFirstHit": true,
