@@ -4282,3 +4282,23 @@ const turnLogic = {
 //     return generalInfo
 //     // return {generalInfo.targetsGotHit}
 // },
+
+
+// attackWrapFullHandling() {
+//     // for (let i=0;i<hitSplits.length;i++) {
+//     //     const atkEntry = hitSplits[i];
+//     //     if (isAll && atkEntry.all) {
+//     //         totalHits += allLength;
+//     //         for (let ee=0;ee<allLength;ee++) {hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo);}
+//     //     }
+//     //     else if (isPrimary && atkEntry.primary && enemyPrimary) {
+//     //         totalHits ++;
+//     //         hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo);
+
+//     //         if (isBlast && atkEntry.blast && blastLength) {//in practice blast should never proc without a primary target also
+//     //             totalHits += blastLength;
+//     //             for (let enemyEntry of enemyBlastTargets) {hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo);}
+//     //         }
+//     //     }
+//     // }
+// },
