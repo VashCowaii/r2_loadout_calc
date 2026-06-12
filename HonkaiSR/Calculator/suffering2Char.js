@@ -4510,8 +4510,10 @@ const battleActions = {
         let element = ATKPath.element;
 
         let totalHits = 0;
-        const totals = {totalAVGDMG: 0,totalBreakDMG: 0,totalBreakSuperDMG: 0,totalOverkill: 0};
-        if (chainedAttackRef) {chainedAttackRef.enemiesThatBroke = [];}
+        const totals = {totalAVGDMG: 0,totalBreakDMG: 0,totalBreakSuperDMG: 0,totalOverkill: 0,totalHits: 0};
+        if (chainedAttackRef) {
+            chainedAttackRef.enemiesThatBroke = [];
+        }
         const targetsGotHit = chainedAttackRef ? chainedAttackRef.targetsGotHit : {};
         const overBreakTotals = chainedAttackRef ? chainedAttackRef.overBreakTotals : {};
         const overKillTotals = chainedAttackRef ? chainedAttackRef.overKillTotals : {};
@@ -4520,7 +4522,7 @@ const battleActions = {
         let isEnemy = sourceTurn.isEnemy;
 
         const isElation = ATKObject.isElation;
-        // const multiRef = ATKObject.multipliers;
+        const multiRef = ATKObject.multipliers;
 
         let hitWrap = isElation ? battleActions.elationHitWrapperTEST : battleActions.hitWrapperTEST;
 
@@ -4528,42 +4530,48 @@ const battleActions = {
         generalInfo.ATKObject = ATKObject;
         if (stateIsStart) {poke("AttackStart",battleData,generalInfo,sourceTurn);}
 
-        const hitsLengthTotal = hitSplits.length;
-        let isLastHit = false;
 
-        const ATKObjectEnergy = ATKObject.energy ?? 0;
-        for (let i=0;i<hitsLengthTotal;i++) {
-            isLastHit = i === hitsLengthTotal-1 ? true : false;
-            const atkEntry = hitSplits[i];
+        const hasHits = multiRef && (multiRef.primary != undefined || multiRef.blast != undefined || multiRef.all != undefined);
+        if (attackState && logging) {logToBattle(battleData,{logType: "AttackStartSEGMENT"});}
+        if (hasHits) {
+            const hitsLengthTotal = hitSplits.length;
+            let isLastHit = false;
 
-            const targetObject = atkEntry.target;
-            const subTargetObject = atkEntry.subTarget;
+            const ATKObjectEnergy = ATKObject.energy ?? 0;
+            for (let i=0;i<hitsLengthTotal;i++) {
+                isLastHit = i === hitsLengthTotal-1 ? true : false;
+                const atkEntry = hitSplits[i];
 
-            if (targetObject) {
-                const energyGain = ATKObjectEnergy * (targetObject.energyRatio ?? 0);
-                if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+                const targetObject = atkEntry.target;
+                const subTargetObject = atkEntry.subTarget;
 
-                const hitType = targetObject.target;
-                totalHits += primaryLength;
+                if (targetObject) {
+                    const energyGain = ATKObjectEnergy * (targetObject.energyRatio ?? 0);
+                    if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
 
-                for (let ee=0;ee<primaryLength;ee++) {
-                    const currentTarget = primaryTarget[ee];
-                    // if (currentTarget.isUnselectable) {continue;}
-                    // console.log(atkEntry,hitType)
-                    hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,primaryLength);
+                    const hitType = targetObject.target;
+                    totalHits += primaryLength;
+
+                    for (let ee=0;ee<primaryLength;ee++) {
+                        const currentTarget = primaryTarget[ee];
+                        // if (currentTarget.isUnselectable) {continue;}
+                        // console.log(atkEntry,hitType)
+                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,primaryLength);
+                    }
                 }
-            }
-            if (subTargetObject) {
-                const hitType = subTargetObject.target;
-                totalHits += subLength;
+                if (subTargetObject) {
+                    const hitType = subTargetObject.target;
+                    totalHits += subLength;
 
-                for (let ee=0;ee<subLength;ee++) {
-                    const currentTarget = subTarget[ee];
-                    // if (currentTarget.isUnselectable) {continue;}
-                    hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,subLength);
+                    for (let ee=0;ee<subLength;ee++) {
+                        const currentTarget = subTarget[ee];
+                        // if (currentTarget.isUnselectable) {continue;}
+                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,subLength);
+                    }
                 }
             }
         }
+        
 
         const bounceRef = ATKObject.bounceData;
         if (bounceRef) {
@@ -4576,6 +4584,7 @@ const battleActions = {
             let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
             const isBounce = true;
 
+            const bounceEnergy = bounceRef.energy;
             const targetObject = atkEntry.target;
             const subTargetObject = atkEntry.subTarget;//unused for NOW
             const blastTargetObject = atkEntry.blast;
@@ -4588,7 +4597,7 @@ const battleActions = {
                 const currentEnemy = bounceOrder[currentEnemyIndex];
                 currentEnemyIndex++;
                 if (!enemyPositions.length || battleData.battleIsOver) {break;}
-                if (currentEnemy === undefined) {continue;}
+                // if (currentEnemy === undefined) {continue;}
 
                 if (currentEnemy.isDead || currentEnemy.isLimbo) {
                     i--;
@@ -4596,7 +4605,7 @@ const battleActions = {
                 }//skip dead bois
 
 
-                const energyGain = ATKObjectEnergy * (targetObject.energyRatio ?? 0);
+                const energyGain = bounceEnergy * (targetObject.energyRatio ?? 0);
                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
 
                 hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce);
@@ -4630,6 +4639,7 @@ const battleActions = {
             }
         }
 
+        if (attackState && logging) {logToBattle(battleData,{logType: "AttackEndSEGMENT", totalHits, isEnemy});}
         if (stateIsEnd || battleData.battleIsOver) {
             const newTotals = generalInfo.totals;
 
@@ -4655,7 +4665,7 @@ const battleActions = {
 
             battleData.attackIsActive = false;
             // poke("AttackEnd",battleData,generalInfo);
-            if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:battleData.addedDMGTallyAttack, isEnemy});}
+            if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits: newTotals.totalHits, totalAVGDMG:battleData.addedDMGTallyAttack, isEnemy});}
             battleData.addedDMGTallyAttack = 0;
 
             if (isEnemy) {//TODO: deprecate this later, bundle energy hitsplits into enemy attacks
@@ -46481,7 +46491,7 @@ const turnLogic = {
             }
 
             if (isEnhanced) {
-                const basicCall = this.returnBasicCall;
+                const basicCall = this.returnBasicCallEnh;
                 basicCall.target = battleData.enemyPositions;
                 return basicCall;
             }
@@ -46545,7 +46555,7 @@ const turnLogic = {
             "Box": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            sw999Basic(battleData,target,sourceTurn) {
+            sw999Basic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -46582,9 +46592,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.sw999BasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            sw999BasicEnh(battleData,target,sourceTurn) {
+            sw999BasicEnh(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -46791,7 +46801,6 @@ const turnLogic = {
                 
 
                 let chainedAttackRef = null;
-                const chainedAttack = battleActions.attackWrapperChained;
                 const rollFunctions = ATKObjects.boxRollIndex;
                 const sw999GetRoll = skillFunctions.sw999GetRoll;
                 
@@ -46814,34 +46823,37 @@ const turnLogic = {
 
                     const hitsThisTime = itemsLeft === 1 ? hitsLeft : Math.ceil(hitsTotal/itemsTotal);
                     burstBounceData.bounceCount = hitsThisTime;
-                    chainedAttackRef = chainedAttack(battleData,skillRef,sourceTurn,ATKObject1,chainState,chainedAttackRef);
+                    chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject1,actionObject.target,actionObject.subTarget,chainState,chainedAttackRef);
                     const hitCountPost = chainedAttackRef.totals.totalHits - hitCountPre;
+                    
                     hitsLeft -= hitCountPost;
 
                     if (hitCountPost === 0 || hitCountPost != hitsThisTime) {
                         attackEndedEarly = true;
                         break;
                     }
-                    chainedAttackRef = rollFunctions[sw999GetRoll(battleData,sourceTurn) - 1](battleData,null,sourceTurn,chainedAttackRef);
+                    chainedAttackRef = rollFunctions[sw999GetRoll(battleData,sourceTurn) - 1](battleData,actionObject,sourceTurn,chainedAttackRef);
                     itemsLeft -= 1;
+                    
 
                     if (!battleData.enemyPositions.length) {
                         attackEndedEarly = true;
                         break;
                     }
                 }
+                // console.log("postloop")
 
-                
                 if (attackEndedEarly) {
+                    // console.log("ended early")
                     let endObject = ATKObjects.sw999BasicEnhATKOBJECTEarlyEnd;
 
                     // const returnATKData = battleActions.attackWrapper(battleData,skillRef,sourceTurn,endObject);
-                    battleActions.attackWrapperChained(battleData,skillRef,sourceTurn,endObject,"End",chainedAttackRef);
+                    attackWrapper(battleData,skillRef,sourceTurn,endObject,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                     battleValues.ebaHitsLeft = hitsLeft;
                     battleValues.ebaItemsLeft = itemsLeft;
 
-                    const queueObject = ATKObjects.sw999QueueObjectDefer ??= createQueueObject(ownerTurn,{
+                    const queueObject = ATKObjects.sw999QueueObjectDefer ??= createQueueObject(sourceTurn,{
                         name: "SW999 EBA Unfinished, Defer to Next Wave",//this.listenerName,
                         priority: priorityList.turn.CharacterChainedSkill,
                         queueTag: "SW999DeferEBA",
@@ -46894,7 +46906,8 @@ const turnLogic = {
                     return;
                 }
                 //FINAL HIT IF VALID
-                chainedAttack(battleData,skillRef,sourceTurn,ATKObject3,"End",chainedAttackRef);
+                //TODO: make sure this defers to the next wave if the final hit would be on dead targets
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject3,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 //if we complete a real EBA then reset hit count
                 battleValues.ebaHitsLeft = 100;
@@ -46936,7 +46949,7 @@ const turnLogic = {
                 }
                 
             },
-            sw999ExitGodMode(battleData,targetTurn,sourceTurn) {
+            sw999ExitGodMode(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -47057,7 +47070,7 @@ const turnLogic = {
 
                 throw new Error("If you can see this it's bc Vash fucked up on the SW999 lootbox logic. Hopefully you never see this though.\n\nIf you do see it however, join the discord and let Vash know.")
             },
-            sw999Sword(battleData,targetTurn,sourceTurn,chainedAttackRef) {
+            sw999Sword(battleData,actionObject,sourceTurn,chainedAttackRef) {
                 sourceTurn.battleValues.lastRoll = 1;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -47070,14 +47083,14 @@ const turnLogic = {
                     let spinObject = ATKObjects.sw999LootSwordSpinObject;
 
                     const preDMG = chainedAttackRef.totals.totalAVGDMG;
-                    chainedAttackRef = battleActions.attackWrapperChained(battleData,skillRef3,sourceTurn,spinObject,"Middle",chainedAttackRef);//loot box
+                    chainedAttackRef = attackWrapper(battleData,skillRef3,sourceTurn,spinObject,actionObject.target,actionObject.subTarget,"Middle",chainedAttackRef);//loot box
                     const postDMG = chainedAttackRef.totals.totalAVGDMG;
                     sumATKDMG = postDMG - preDMG;
                 }
                 else {//IF THE INSTANCE IS INSERTED, AND NOT FROM BASIC ENH
                     let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
                     let LootObject = ATKObjects.sw999LootBoxObject;
-                    const returnATKData = battleActions.attackWrapper(battleData,skillRef4,sourceTurn,LootObject);
+                    const returnATKData = attackWrapper(battleData,skillRef4,sourceTurn,LootObject,actionObject.target,actionObject.subTarget);
 
                     sumATKDMG = returnATKData.generalInfo.totals.totalAVGDMG;
                 }
@@ -47096,7 +47109,7 @@ const turnLogic = {
 
                 return chainedAttackRef;
             },
-            sw999Chomper(battleData,targetTurn,sourceTurn,chainedAttackRef,bangerOverride) {
+            sw999Chomper(battleData,actionObject,sourceTurn,chainedAttackRef,bangerOverride) {
                 sourceTurn.battleValues.lastRoll = 3;
 
                 battleActions.updatePunchlineValue(battleData,3,sourceTurn,"SW999: Chomper");
@@ -47107,18 +47120,18 @@ const turnLogic = {
                 let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
 
                 if (chainedAttackRef) {
-                    chainedAttackRef = battleActions.attackWrapperChained(battleData,skillRef4,sourceTurn,LootObject,"Middle",chainedAttackRef);//loot box
+                    chainedAttackRef = attackWrapper(battleData,skillRef4,sourceTurn,LootObject,actionObject.target,actionObject.subTarget,"Middle",chainedAttackRef);//loot box
                     return chainedAttackRef;
                 }
                 else {//IF THE INSTANCE IS INSERTED, AND NOT FROM BASIC ENH
 
                     if (bangerOverride) {LootObject.BangerValueOverride = 99;}//technique only
-                    battleActions.attackWrapper(battleData,skillRef4,sourceTurn,LootObject);
+                    attackWrapper(battleData,skillRef4,sourceTurn,LootObject,actionObject.target,actionObject.subTarget);
                     if (bangerOverride) {LootObject.BangerValueOverride = null;}
                 }
                 
             },
-            sw999Bomb(battleData,targetTurn,sourceTurn,chainedAttackRef) {
+            sw999Bomb(battleData,actionObject,sourceTurn,chainedAttackRef) {
                 sourceTurn.battleValues.lastRoll = 2;
 
                 // battleActions.updatePunchlineValue(battleData,3,sourceTurn,"Chomper");
@@ -47130,29 +47143,29 @@ const turnLogic = {
                 let skillRef4 = ATKObjects.sw999BasicEnhREFChomper ??= ATKObjects["Basic ATK"]["Funky Munch Bean"].variant1;
 
                 if (chainedAttackRef) {
-                    chainedAttackRef = battleActions.attackWrapperChained(battleData,skillRef4,sourceTurn,LootObject,"Middle",chainedAttackRef);//loot box
+                    chainedAttackRef = attackWrapper(battleData,skillRef4,sourceTurn,LootObject,actionObject.target,actionObject.subTarget,"Middle",chainedAttackRef);//loot box
                     return chainedAttackRef;
                 }
                 else {//IF THE INSTANCE IS INSERTED, AND NOT FROM BASIC ENH
-                    battleActions.attackWrapper(battleData,skillRef4,sourceTurn,LootObject);
+                    attackWrapper(battleData,skillRef4,sourceTurn,LootObject,actionObject.target,actionObject.subTarget);
                 }
             },
-            sw999LootBoxPain(battleData,targetTurn,sourceTurn) {
+            sw999LootBoxPain(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 const rollFunctions = ATKObjects.boxRollIndex;
                 const sw999GetRoll = logicRef.skillFunctions.sw999GetRoll;
 
-                rollFunctions[sw999GetRoll(battleData,sourceTurn) - 1](battleData,null,sourceTurn);
+                rollFunctions[sw999GetRoll(battleData,sourceTurn) - 1](battleData,actionObject,sourceTurn);
             },
-            sw999TechInsert(battleData,targetTurn,sourceTurn) {
+            sw999TechInsert(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 const rollFunctions = ATKObjects.boxRollIndex;
 
-                rollFunctions[3 - 1](battleData,null,sourceTurn,null,99);
+                rollFunctions[3 - 1](battleData,actionObject,sourceTurn,null,99);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -47242,7 +47255,7 @@ const turnLogic = {
                 updateBuff(battleData,currentTurn,dmgExtraSheet);
                 // updateBuff(battleData,demiTurn,dmgExtraSheet);
             },
-            sw999Skill(battleData,target,sourceTurn) {
+            sw999Skill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -47299,14 +47312,7 @@ const turnLogic = {
 
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"SW999 Skill");
 
-                // if (rank >= 1) {
-                //     const buffSheet = ATKObjects.emcE1UltBonusCBSHEET;
-                //     updateBuff(battleData,sourceTurn,buffSheet);
-                // }
-
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-
-                // poke("emcSkillEndingCBGain",battleData,exoTurnRef);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             statCheck2(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -47505,7 +47511,7 @@ const turnLogic = {
                 //     }
                 // }
             },
-            elationSkill(battleData,target,sourceTurn) {
+            elationSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -47575,7 +47581,7 @@ const turnLogic = {
                     //ONLY FOR E4
 
                     if (rank >= 4) {battleData.punchlineForced += addedPLForced;}
-                    battleActions.attackWrapper(battleData,skillRef2,sourceTurn,ATKObject);
+                    attackWrapper(battleData,skillRef2,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                     if (rank >= 4) {battleData.punchlineForced -= addedPLForced;}
 
 
@@ -47608,7 +47614,7 @@ const turnLogic = {
                     }
                 }
             },
-            sw999Ultimate(battleData,sourceTurn,target) {
+            sw999Ultimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -47692,14 +47698,14 @@ const turnLogic = {
                 poke("SW999GainMMR",battleData,mmrTrace);
                 sourceTurn.ultyQueued = false;
             },
-            sw999Technique(battleData,target,sourceTurn) {
+            sw999Technique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
                 let skillRef = ATKObjects.sw999TechREF ??= ATKObjects.Technique["This? Absolute Meta!"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 let attackEndings = battleData.battleListeners.WaveStart ??= [];
                 const listenerToInject = logicRef.listenersToInjectLater.techniqueWaveStart;
