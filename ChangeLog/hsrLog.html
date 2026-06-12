@@ -9,9 +9,16 @@
     <h1>June 11th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
+        <li>Reworked the entirety of enemy targeting across every character, which allows us to do a lot of new things internally.</li>
+        <li>Greatly reworked attack handling as a whole, to allow for a lot of new things interally.</li>
         <li>Due to the targeting changes that took place, we were able to make changes to the following abilities to ensure they now function as they should. These are not bugs, nor are they really fixes, these were just things I was aware of but couldn't do anything about YET:
             <ul>
                 <li>Seele's sub50% HP skill trigger will now properly locate the enemy with sub50%HP to target, and if that target dies before the extra turn is launched, then it will retarged based on remaining enemy HP.</li>
+            </ul>
+        </li>
+        <li>Made a visual change so chained-attacks that have multiple segments inside the same action, will now display within the same attack expand rather than needing to click to expand each segment one at a time.
+            <ul>
+                <li>Most notably will impact SW999 EBAs, rather than seeing each segment isolated, you can now expand it all as one.</li>
             </ul>
         </li>
         <!-- <h4>Additions</h4>

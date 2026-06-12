@@ -700,6 +700,7 @@ const sim = {
             "allAllyTargetsArray": [],
             "eventBasedTurns": {},
             "allyPositions": [],//ally equivalent of enemyPositions
+            "enemyPositions": [],
             "actionCounter": 0,
             totalUltsQueued: 0,
             totalExTurnsQueued: 0,
