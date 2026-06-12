@@ -793,6 +793,15 @@ const battleActions = {
 
         if (HPChange != 0 && !isEnemy && !isSilentUpdate) {poke("TeamMaxHPChanged",battleData,sourceTurn);}
     },
+    updateAllyAggro(sourceTurn,battleData,source,isSilentUpdate) {
+        // currentAggro: AggroStats.AggroFinal,
+        // baseAggro: AggroStats.AggroBaseFinal,
+
+        let AggroStats = calcs.getAggroFinal(sourceTurn.statTable);
+        sourceTurn.currentAggro = AggroStats.AggroFinal;
+        
+        battleActions.assignAttackTargetsEnemy(battleData);
+    },
     queueFollowUpAttack(battleData,entry) {
         const currentQueue = battleData.followUpQueue;
         const entryPriority = entry.priority;
@@ -5959,6 +5968,18 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Universal ally died aggro redo",
+                // "ownerTurn": {},
+            },
+            {
+                "trigger": "UpdateStatAggro",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy) {return;}
+
+                    battleActions.updateAllyAggro(sourceTurn,battleData,null,null)
+                },
+                "target": "self",
+                "listenerName": "Universal ally aggro adjustment aggro redo",
                 // "ownerTurn": {},
             },
         ],
@@ -27203,7 +27224,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            bladeBasic(battleData,target,sourceTurn) {
+            bladeBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -27240,9 +27261,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bladeBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            bladeBasicEnhanced(battleData,target,sourceTurn) {
+            bladeBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -27288,9 +27309,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.bladeBasicEnhancedATKOBJECT;
                 consumeHP(battleData,null,values[0],sourceTurn,sourceTurn,skillRef.slot,false,false);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            bladeSkillInstance(battleData,target,sourceTurn) {
+            bladeSkillInstance(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -27360,7 +27381,7 @@ const turnLogic = {
                     });
                 }
             },
-            bladeFUA(battleData,targetTurn,sourceTurn) {
+            bladeFUA(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -27424,7 +27445,7 @@ const turnLogic = {
                 //the %healing is fixed, lines up with all other %healing I've seen done against max HP so far
                 //TODO: later, if a buff ever exists that give an ally or self a buff when healing is done, use that to check when the healing happens here, before or after dmg
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 updateEnergy(battleData,15,sourceTurn,false,"Cyclone of Destruction");
 
                 const valuesRef = sourceTurn.battleValues;
@@ -27435,7 +27456,7 @@ const turnLogic = {
 
                 sourceTurn.bladeFUAIsQueued = false;
             },
-            bladeUltimate(battleData,sourceTurn) {
+            bladeUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -27531,14 +27552,14 @@ const turnLogic = {
 
                 // ATKObject.bonusScalar.refValue = sourceTurn.bladeHPTally;
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 const oldAmount = sourceTurn.bladeHPTally;
                 sourceTurn.bladeHPTally *= 0.5
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ult used halving", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${sourceTurn.bladeHPTally.toLocaleString()}`});}
                 
                 sourceTurn.ultyQueued = false;
             },
-            bladeTechnique(battleData,target,sourceTurn) {
+            bladeTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -27578,10 +27599,10 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.bladeTechATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 consumeHP(battleData,null,values[1],sourceTurn,sourceTurn,skillRef.slot,false,false);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
         },
         "listeners": [
@@ -27670,14 +27691,13 @@ const turnLogic = {
                         "trigger": "AllyLostHP",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
         
                             const HPLost = generalInfo.HPLost
                             const bladeHPTallyFunction = this.bladeHPTallyFunction ??= turnLogic[ownerTurn.properName].skillFunctions.bladeHPTallyFunction;
                             bladeHPTallyFunction(battleData,ownerTurn,HPLost);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Blade HP tally - hp lost listener",
                         "ownerTurn": {},
                     },
@@ -27685,8 +27705,6 @@ const turnLogic = {
                         "trigger": "AllyLostHP",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
         
                             const wasAttack = generalInfo.wasAttack;
                             if (wasAttack && !ownerTurn.bladeReadyForAttackCharge) {return;}
@@ -27694,7 +27712,7 @@ const turnLogic = {
                             //blade can only gain 1 charge from an attack, so we have to monitor and make sure that we don't do it every time he loses HP in a single attack
         
                             const valuesRef = ownerTurn.battleValues;
-                            const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
+                            const chargeCap = ownerTurn.rank >= 6 ? 4 : 5;
                             const oldValue = valuesRef.charge;
                             valuesRef.charge = Math.min(chargeCap,valuesRef.charge + 1);
                             if (battleData.isLoggyLogger && oldValue != valuesRef.charge) {
@@ -27726,7 +27744,7 @@ const turnLogic = {
                 
                                     actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeFUA,
                                     action: "Insert",
-                                    abortCheck: null,//(battleData,actionObject,sourceTurn),
+                                    abortCheck: null,//(battleData,actionObject,ownerTurn),
                 
                                     isInserted: true,
                                     dontKeepNextWave: false,//ults always clear out
@@ -27737,12 +27755,13 @@ const turnLogic = {
                 
                                     poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
                                 })
-                                queueObject.sourceTurn =  ownerTurn;
+                                queueObject.sourceTurn = ownerTurn;
                                 queueObject.target = battleData.enemyPositions;
                                 queueInsertAbility(battleData,queueObject);
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Blade talent - charge from losing HP",
                         "ownerTurn": {},
                     },
@@ -27781,11 +27800,9 @@ const turnLogic = {
                         "trigger": "AllyLostHP",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
         
                             if (!this.bladeE4HPSHEET) {
-                                let characterName = sourceTurn.properName;
+                                let characterName = ownerTurn.properName;
                                 let buffName = turnLogic[characterName].buffNames.e4HP;
                                 this.bladeE4HPSHEET = {
                                     "stats": [HPP],
@@ -27823,6 +27840,7 @@ const turnLogic = {
                             //once we've reached max stacks, remove the listener so it's not trying to evaluate every fucking hp loss in the rest of the battle
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "E4 hp lost listener - hp buff application",
                         "ownerTurn": {},
                     }
