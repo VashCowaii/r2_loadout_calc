@@ -1914,8 +1914,11 @@ const hitSplitters = {
         },
         "isSourceFirstHit": true,
         "isAttackFirstHit": true,
-        "isSourceLastHit": true
-      },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "ebaMemo": [
       {
         "target": {
           "hitRatio": 1,
@@ -1925,6 +1928,7 @@ const hitSplitters = {
         },
         "isMemo": true,
         "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
         "isSourceLastHit": true,
         "isAttackLastHit": true
       }

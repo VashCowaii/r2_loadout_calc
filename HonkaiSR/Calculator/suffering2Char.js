@@ -31842,7 +31842,7 @@ const turnLogic = {
             const minimum = currentSP>0;
             const basicIsEnhanced = statCalls.epicStacks && summonUp;
 
-            if (minimum && checkSkill(battleData,thisTurn)) {
+            if (!basicIsEnhanced && minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
                 returnSkillCall.target = [summonUp ? thisTurn.rmcMemTURNEVENT : thisTurn];
                 return returnSkillCall;
@@ -31911,7 +31911,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {//rmcMemTURNEVENT
-            rmcBasic(battleData,target,sourceTurn) {
+            rmcBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -31949,9 +31949,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.rmcBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            rmcBasicEnhanced(battleData,target,sourceTurn) {
+            rmcBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -31960,6 +31960,9 @@ const turnLogic = {
 
                 if (!ATKObjects.rmcBasicEnhancedATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+
+                    let skillRef2 = ATKObjects.rmcBasicEnhancedREF2 ??= {...ATKObjects["Basic ATK"]["Together, We Script Tomorrow!"].variant1};
+                    skillRef2.hitSplits = hitSplitters[sourceTurn.properName].ebaMemo;
                     const scalar = "ATK";
                     const tags = ["All","Ice"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -31988,7 +31991,6 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,compositeCacheTag,
-                        isFUA: false,
                     }
 
                     ATKObjects.rmcBasicEnhancedMemATKOBJECT = {
@@ -32005,7 +32007,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags: actionTags2,
                         compositeCacheTag:compositeCacheTag2,
-                        isFUA: false,
                     }
 
                     // const hitsRef = skillRef.hitSplits;
@@ -32014,6 +32015,7 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.rmcBasicEnhancedATKOBJECT;
                 const ATKObject2 = ATKObjects.rmcBasicEnhancedMemATKOBJECT;
+                let skillRef2 = ATKObjects.rmcBasicEnhancedREF2;
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.epicStacks -= 1;
@@ -32022,12 +32024,12 @@ const turnLogic = {
                 // logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
                 // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
-                battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,memTurn,ATKObject,ATKObject2);
-                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                attackWrapper(battleData,skillRef2,memTurn,ATKObject2,actionObject.target,actionObject.subTarget);
 
                 poke("rmcMemGainedCharge",battleData,{pointsGained: values[2],sourceString:"Enhanced Basic ATK"},null);
             },
-            rmcSkill(battleData,targetTurn,sourceTurn) {
+            rmcSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -32179,7 +32181,7 @@ const turnLogic = {
                 if (!isEnhanced) {skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);}
                 else {skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);}
             },
-            memBasicAttack(battleData,target,memoTurn) {
+            memBasicAttack(battleData,actionObject,memoTurn) {
                 // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
 
@@ -32250,14 +32252,12 @@ const turnLogic = {
                 const ATKObject2 = ATKObjects.memBasicAttackATKOBJECT2;
 
                 let chainedAttackRef = null;
-                const chainedAttack = battleActions.attackWrapperChained;
-                
-                chainedAttackRef = chainedAttack(battleData,skillRef,memoTurn,ATKObject1,"Start",chainedAttackRef);
-                chainedAttack(battleData,skillRef,memoTurn,ATKObject2,"End",chainedAttackRef);
+                chainedAttackRef = attackWrapper(battleData,skillRef,memoTurn,ATKObject1,actionObject.target,actionObject.subTarget,"Start",chainedAttackRef);
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 poke("rmcMemGainedCharge",battleData,{pointsGained: 0.05,sourceString:"Petite Parable"},null);
             },
-            memSkillAdvance(battleData,target,memoTurn) {
+            memSkillAdvance(battleData,actionObject,memoTurn) {
                 // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
 
@@ -32304,7 +32304,7 @@ const turnLogic = {
                     }
                 }
 
-                const char1 = target[0];
+                const char1 = actionObject.target[0];
                 poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"},null);
 
                 actionAdvance(1,char1,battleData,"Mem's Support");
@@ -32394,7 +32394,7 @@ const turnLogic = {
 
                 actionAdvance(0.25,ownerTurn,battleData,"Mem Died");
             },
-            rmcUltimate(battleData,sourceTurn) {
+            rmcUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -32452,11 +32452,11 @@ const turnLogic = {
 
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//energy before dmg, no splits
-                battleActions.attackWrapper(battleData,skillRef,memTurn,ATKObject);
+                attackWrapper(battleData,skillRef,memTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
-            rmcTechnique(battleData,target,sourceTurn) {
+            rmcTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -32499,11 +32499,11 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.rmcTechATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const enemyPositions = battleData.enemyPositions;
                 actionAdvance(-values[1],enemyPositions,battleData,"RMC Technique Delay");
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
         },
         "listeners": [//rmcMemTURNEVENT
@@ -32975,62 +32975,42 @@ const turnLogic = {
     },
     "Mem": {
         logic(thisTurn,battleData) {
-            // let currentSP = battleData.skillPointCurrent;
-            // const minimum = currentSP>0;
-
-            // if (minimum && checkSkill(battleData,thisTurn)) {
-            //     const returnSkillCall = this.returnSkillCall;
-            //     return returnSkillCall;
-            // }
-
-            // return this.returnBasicCall;
-
             const rmcTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
-            // const logicRef = turnLogic[rmcTurn.properName];
-            // const skillFunctions = logicRef.skillFunctions;
-
             const isEnhanced = rmcTurn.battleValues.memIsEnhanced;
 
-            
-            
-
             if (!isEnhanced) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "MemoSkill", 
+                const returnSkillCall = this.returnSkillCall ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[rmcTurn.properName].skillFunctions.memBasicAttack,
+                    action: "MemoSkill",
+                    points: 0, 
+    
                     isAttack: true,
                     isAbility: true,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    // eventTypeStart: "SkillStart",
-                    // eventTypeEnd: "SkillEnd",
-                    actionCall: turnLogic[rmcTurn.properName].skillFunctions.memBasicAttack, 
-                    target: "self",
-                    poolKey: null,//this.abilityTargetPools.Skill,
-                }
+    
+                    poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkill,
+                })
                 returnSkillCall.sourceTurn = thisTurn;
+                returnSkillCall.target = [battleData.primaryTarget];
                 // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
                 return returnSkillCall;
             }
             else {
-                const returnBasicEnhCall = this.returnBasicEnhCall ??= {
-                    action: "MemoSkill", 
+                const returnBasicEnhCall = this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[rmcTurn.properName].skillFunctions.memSkillAdvance,
+                    action: "MemoSkill",
+                    points: 0, 
+    
+                    isEnhanced: true,
                     isAttack: false,
                     isAbility: true,
-                    isEnhanced: true,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    // eventTypeStart: "BasicATKStart",
-                    // eventTypeEnd: "BasicATKEnd",
-                    actionCall: turnLogic[rmcTurn.properName].skillFunctions.memSkillAdvance, 
-                    target: null,
-                    poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,//this.abilityTargetPools.BasicATKEnh,
-                }
+    
+                    poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,
+                })
                 returnBasicEnhCall.sourceTurn = thisTurn;
-                // skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);
                 returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
                 return returnBasicEnhCall;
             }

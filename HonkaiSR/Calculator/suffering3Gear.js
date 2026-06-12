@@ -12390,7 +12390,7 @@ const turnLogicRelics = {
                     "owners": []
                 },
                 {
-                    "trigger": "AttackStart",//TODO: joint attacks need some tweaking to make this work properly with personal handlers rework, see discord notes, remains global for now
+                    "trigger": "AttackStart",
                     condition(battleData,generalInfo) {
 
                         const sourceTurn = generalInfo.sourceTurn;
