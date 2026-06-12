@@ -41143,7 +41143,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            argentiBasic(battleData,target,sourceTurn) {
+            argentiBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -41181,9 +41181,9 @@ const turnLogic = {
                 let ATKObject = ATKObjects.argentiBasicATKOBJECT;
 
                 poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Basic ATK"},null);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            argentiSkill(battleData,target,sourceTurn) {
+            argentiSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -41225,10 +41225,10 @@ const turnLogic = {
                 const enemyAmount = battleData.enemyPositions.length;
                 poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Skill"},null);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             //TODO: consider separating this into two diff ults, would only strictly matter if we get ult duping in the future though otherwise nobody gives a fuck
-            argentiUltimate(battleData,sourceTurn) {
+            argentiUltimate(battleData,actionObject,sourceTurn) {
                 // const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -41329,16 +41329,16 @@ const turnLogic = {
                 poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Ultimate"},null);
                 
                 if (useEnhancedUlt) {
-                    battleActions.attackWrapper(battleData,skillRef2,sourceTurn,ATKObject2);
+                    attackWrapper(battleData,skillRef2,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget);
                 }
                 else {
-                    battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                    attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 }
 
 
                 sourceTurn.ultyQueued = false;
             },
-            argentiTechnique(battleData,target,sourceTurn) {
+            argentiTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -41379,8 +41379,8 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.argentiTechATKObject
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
                 updateEnergy(battleData,values[2],sourceTurn,false,"Argenti Technique");
             },
         },
