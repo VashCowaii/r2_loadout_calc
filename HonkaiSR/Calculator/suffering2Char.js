@@ -28802,7 +28802,7 @@ const turnLogic = {
             "Ultimate": "Self",
         },
         "skillFunctions": {
-            fireflyBasicReg(battleData,target,sourceTurn) {
+            fireflyBasicReg(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28840,9 +28840,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.fireflyBasicRegATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            fireflySkillReg(battleData,target,sourceTurn) {
+            fireflySkillReg(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28884,10 +28884,10 @@ const turnLogic = {
                 updateEnergy(battleData,energyBump,sourceTurn,true);
                 consumeHP(battleData,null,values[1],sourceTurn,sourceTurn,skillRef.slot,false,false);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 actionAdvance(0.25,sourceTurn,battleData,"Firefly Skill [Regular]");
             },
-            fireflyUltimate(battleData,sourceTurn) {
+            fireflyUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28999,7 +28999,7 @@ const turnLogic = {
                     }
                 }
             },
-            fireflyBasicEnhanced(battleData,target,sourceTurn) {
+            fireflyBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29060,9 +29060,9 @@ const turnLogic = {
                 let healObject = ATKObjects.fireflyBasicEnhancedHEALOBJECT;
 
                 healAlly(battleData,healObject,sourceTurn,sourceTurn,skillRef.slot,1)
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            fireflySkillEnhanced(battleData,target,sourceTurn) {
+            fireflySkillEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29162,7 +29162,7 @@ const turnLogic = {
                 multiRef.blast = blastConversion;
                 // console.log(multiRef,values[1])
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             pullMultiCUSTOMFIREFLY(sourceTurn,targetTurn,dmgNeedsElationComposite,table,hitType,ATKObject) {
                 // console.log("multi reached")
@@ -29173,7 +29173,7 @@ const turnLogic = {
                 const conversion = hitType === "blast" ? 0.1 * totalBreak + values[1] : 0.2 * totalBreak + values[0];
                 return conversion;
             },
-            fireflyTechniqueDMG(battleData,target,sourceTurn) {
+            fireflyTechniqueDMG(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29209,10 +29209,10 @@ const turnLogic = {
                 }
                 const ATKObject = ATKObjects.fireflyTechATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
-            fireflyTechniqueIMPLANT(battleData,target,sourceTurn) {
+            fireflyTechniqueIMPLANT(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29241,7 +29241,7 @@ const turnLogic = {
                 }
                 const buffSheet = ATKObjects.fireflyTechImplantSHEET;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 for (let enemy of battleData.enemyPositions) {
                     updateBuff(battleData,enemy,buffSheet);
                 }
