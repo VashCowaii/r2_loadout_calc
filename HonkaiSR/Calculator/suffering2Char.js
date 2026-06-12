@@ -34496,8 +34496,6 @@ const turnLogic = {
     },
     "Evernight": {
         logic(thisTurn,battleData) {
-            // const skillIsUp = thisTurn.evernightSkillIsActive;
-
             if (checkSkill(battleData,thisTurn)) {
                 return this.returnSkillCall;
             }
@@ -34540,9 +34538,10 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
             "Ultimate": "Enemies (On-Field)",
             "Skill": "Self",
+            "MemoSkill": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            evernightBasic(battleData,target,sourceTurn) {
+            evernightBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -34582,9 +34581,9 @@ const turnLogic = {
                 let ATKObject = ATKObjects.evernightBasicATKOBJECT;
 
                 logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            evernightSkill(battleData,target,sourceTurn) {
+            evernightSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -34785,7 +34784,7 @@ const turnLogic = {
 
                 actionAdvance(1,eveyTurn,battleData,"Evey summoned advance");
             },
-            eveyTurnAttack(battleData,memoTurn) {
+            eveyTurnAttack(battleData,actionObject,memoTurn) {
                 // eventOwner: ownerTurn.name
                 const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const logicRef = turnLogic[evernightTurn.properName];
@@ -34801,7 +34800,7 @@ const turnLogic = {
                     skillFunctions.eveyBasicAttack(battleData,memoTurn,evernightTurn);
                 }
             },
-            eveyBasicAttack(battleData,target,memoTurn) {
+            eveyBasicAttack(battleData,actionObject,memoTurn) {
                 const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
 
                 const logicRef = turnLogic[evernightTurn.properName];
@@ -34851,10 +34850,10 @@ const turnLogic = {
                 const extraMulti = Math.floor(memoria/4);
                 ATKObject.bonusMultiplier = values[1] *  extraMulti;
 
-                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Remembrance, Whirling, Like Rain"},null);
             },
-            eveyEnhancedAttack(battleData,target,memoTurn) {
+            eveyEnhancedAttack(battleData,actionObject,memoTurn) {
                 const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
 
                 const logicRef = turnLogic[evernightTurn.properName];
@@ -34911,7 +34910,7 @@ const turnLogic = {
                 multipliers.primary = values[0] * memoria;
                 multipliers.blastAOE = values[1] * memoria;
 
-                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 updateSkillPoints(battleData,1,evernightTurn,false,"Evey enhanced skill");
                 const finalMemoria = valuesRef.memoria;
@@ -35037,7 +35036,7 @@ const turnLogic = {
                 }
                 
             },
-            evernightUltimate(battleData,sourceTurn) {
+            evernightUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -35136,7 +35135,7 @@ const turnLogic = {
 
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
 
-                battleActions.attackWrapper(battleData,skillRef,eveyTurn,ATKObject);
+                attackWrapper(battleData,skillRef,eveyTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
@@ -35156,7 +35155,7 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 for (let enemy of enemyPositions) {removeBuff(battleData,enemy,vulnSheet);}
             },
-            evernightTechnique(battleData,target,sourceTurn) {
+            evernightTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -35166,7 +35165,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.evernightTechREF ??= ATKObjects.Technique["Let it Rain Cold On Thee"].variant1;
                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 poke("EvernightGainMemoria",battleData,{pointsGained: 1,sourceString:"Technique - Let it Rain Cold On Thee"},null);
                 logicRef.skillFunctions.evernightSkillCritDMG(battleData,sourceTurn);
@@ -35798,80 +35797,45 @@ const turnLogic = {
     },
     "Evey": {
         logic(thisTurn,battleData) {
-            // let currentSP = battleData.skillPointCurrent;
-            // const minimum = currentSP>0;
-
-            // if (minimum && checkSkill(battleData,thisTurn)) {
-            //     const returnSkillCall = this.returnSkillCall;
-            //     return returnSkillCall;
-            // }
-
-            // return this.returnBasicCall;
-
             const evernightTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
             const valuesRef = evernightTurn.battleValues
             const memoriaCheck = valuesRef.memoria;
-            // const logicRef = turnLogic[rmcTurn.properName];
-            // const skillFunctions = logicRef.skillFunctions;
-
-            // const isEnhanced = evernightTurn.battleValues.memIsEnhanced;
-
-
-            // const evernightTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
-            // const logicRef = turnLogic[evernightTurn.properName];
-            // const valuesRef = evernightTurn.battleValues
-            // const skillFunctions = logicRef.skillFunctions;
-
-            // const memoriaCheck = valuesRef.memoria;
-
-            // if (memoriaCheck >= 16) {
-            //     skillFunctions.eveyEnhancedAttack(battleData,memoTurn,evernightTurn);
-            // }
-            // else {
-            //     skillFunctions.eveyBasicAttack(battleData,memoTurn,evernightTurn);
-            // }
-
-            
-            
 
             if (memoriaCheck < 16) {
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "MemoSkill", 
+                const returnSkillCall = this.returnSkillCall ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[evernightTurn.properName].skillFunctions.eveyBasicAttack,
+                    action: "MemoSkill",
+                    points: 0, 
+    
                     isAttack: true,
                     isAbility: true,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    // eventTypeStart: "SkillStart",
-                    // eventTypeEnd: "SkillEnd",
-                    actionCall: turnLogic[evernightTurn.properName].skillFunctions.eveyBasicAttack, 
-                    target: "self",
-                    poolKey: null,//this.abilityTargetPools.Skill,
-                }
+    
+                    poolKey: turnLogic[evernightTurn.properName].abilityTargetPools.MemoSkill,
+                })
                 returnSkillCall.sourceTurn = thisTurn;
+                returnSkillCall.target = [battleData.primaryTarget];
                 // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
                 return returnSkillCall;
             }
             else {
-                const returnBasicEnhCall = this.returnBasicEnhCall ??= {
-                    action: "MemoSkill", 
+                const returnBasicEnhCall = this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[evernightTurn.properName].skillFunctions.eveyEnhancedAttack,
+                    action: "MemoSkill",
+                    points: 0, 
+    
+                    isEnhanced: true,
                     isAttack: true,
                     isAbility: true,
-                    isEnhanced: true,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    // eventTypeStart: "BasicATKStart",
-                    // eventTypeEnd: "BasicATKEnd",
-                    actionCall: turnLogic[evernightTurn.properName].skillFunctions.eveyEnhancedAttack, 
-                    target: null,
-                    poolKey: null,//turnLogic[evernightTurn.properName].abilityTargetPools.MemoSkillEnh,//this.abilityTargetPools.BasicATKEnh,
-                }
+    
+                    poolKey: turnLogic[evernightTurn.properName].abilityTargetPools.MemoSkill,
+                })
                 returnBasicEnhCall.sourceTurn = thisTurn;
-                // skillFunctions.memSkillAdvance(battleData,memoTurn,rmcTurn);
-                // returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
+                returnBasicEnhCall.target = [battleData.primaryTarget];
+                returnBasicEnhCall.subTarget = battleData.blastAOETargets;
                 return returnBasicEnhCall;
             }
         },
