@@ -35898,7 +35898,7 @@ const turnLogic = {
             "MemoSkill": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            hyacineBasic(battleData,target,sourceTurn) {
+            hyacineBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -35938,9 +35938,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hyacineBasicATKOBJECT;
         
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            hyacineSkill(battleData,target,sourceTurn) {
+            hyacineSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -36005,7 +36005,7 @@ const turnLogic = {
                 // poke("EvernightGainMemoria",battleData,{pointsGained: 2 + (sourceTurn.riddleIsActive ? 12 : 0),sourceString:"Evernight Skill"});
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
-            icaTurnAttack(battleData,target,memoTurn) {
+            icaTurnAttack(battleData,actionObject,memoTurn) {
                 // // eventOwner: ownerTurn.name
                 const hyacineTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
 
@@ -36058,7 +36058,7 @@ const turnLogic = {
                 hyacineTurn.hyacineBattleHealingTally *= endMulti;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hyacine heal tally", bodyText: `Heal tally (Hyacine): ${oldValue.toLocaleString()} --> ${hyacineTurn.hyacineBattleHealingTally.toLocaleString()}`});}
-                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             addIcaToField(battleData,sourceTurn) {
                 // const eveyTurn = sourceTurn.everEveyTURNEVENT;
@@ -36359,7 +36359,7 @@ const turnLogic = {
                     }
                 }
             },
-            hyacineUltimate(battleData,sourceTurn) {
+            hyacineUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -36473,7 +36473,6 @@ const turnLogic = {
                     }
                 }
 
-
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
@@ -36488,7 +36487,7 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
                 removeBuffFromBatch(battleData,allyPositions,HPSheet);
             },
-            hyacineTechnique(battleData,target,sourceTurn) {
+            hyacineTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -36498,7 +36497,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.hyacineTechREF ??= ATKObjects.Technique["Day So Right, Life So Fine!"].variant1;
                 
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 const buffNames = logicRef.buffNames;
 
                 if (!ATKObjects.hyacineTechHPSHEET) {
@@ -37175,6 +37174,8 @@ const turnLogic = {
             // }
 
             // return this.returnBasicCall;
+
+            //Ica doesn't exist in the action order, only takes action through extra turns which are injected so no turn logic required here
         },
         preLogic(thisTurn,battleData) {},
         "abilityTargetPools": {},
