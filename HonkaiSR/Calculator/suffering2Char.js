@@ -43530,7 +43530,7 @@ const turnLogic = {
             "Elation": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            yaoguangBasic(battleData,target,sourceTurn) {
+            yaoguangBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -43570,8 +43570,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.yaoguangBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 if (sourceTurn.battleValues.skillZoneActive) {
                     battleActions.updatePunchlineValue(battleData,3,sourceTurn,"Yao Guang Skill Zone: Basic Used");
@@ -43741,7 +43740,7 @@ const turnLogic = {
                 updateBuff(battleData,currentTurn,dmgExtraSheet);
                 // updateBuff(battleData,demiTurn,dmgExtraSheet);
             },
-            yaoSkill(battleData,targetTurn,sourceTurn) {
+            yaoSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -43894,7 +43893,7 @@ const turnLogic = {
                     removeBuffFromBatch(battleData,allyArray,spdSHEET);
                 }
             },
-            yaoUltimate(battleData,sourceTurn) {
+            yaoUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -43944,9 +43943,7 @@ const turnLogic = {
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"Yao Guang Ultimate");
 
                 const allyPositions = battleData.allyPositions;
-                for (let ally of allyPositions) {
-                    updateBuff(battleData,ally,buffSheet);
-                }
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
 
                 const queueObject = ATKObjects.queueAhaInstantObject ??= createQueueObject(battleData.ahaInstantTURNEVENT,{
                     name: "Yao Guang Ultimate 'Aha Instant' Queue",//this.listenerName,
@@ -43987,7 +43984,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            yaoTechnique(battleData,target,sourceTurn) {
+            yaoTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -43995,14 +43992,14 @@ const turnLogic = {
                 let skillRef = ATKObjects.yaoTechniqueREF ??= ATKObjects.Technique["Untethered Glimmer Sails Far"].variant1;
                 // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const queueObject = ATKObjects.dhptTechSkillCall ??= createQueueObject(sourceTurn,{
                     name: "Yao Guang Technique Skill",//this.listenerName,
                     priority: priorityList.turn.Default,
                     queueTag: "QueuedExtraTurn",
 
-                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.yaoSkill,
+                    actionCall: turnLogic[sourceTurn.properName].skillFunctions.yaoSkill,
                     action: "Skill",
                     abortCheck: null,//(battleData,actionObject,sourceTurn),
 
@@ -44019,7 +44016,7 @@ const turnLogic = {
                     useAnyTriggers: true,
                     eventTypeStartLOG: "SkillStart",
 
-                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                    poolKey: turnLogic[sourceTurn.properName].abilityTargetPools.Skill,
                 })
                 queueObject.sourceTurn = sourceTurn;
                 queueObject.target = [sourceTurn];
@@ -44027,7 +44024,7 @@ const turnLogic = {
                 // queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
             },
-            elationSkill(battleData,target,sourceTurn) {
+            elationSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -44102,7 +44099,7 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
         },
         "listeners": [
