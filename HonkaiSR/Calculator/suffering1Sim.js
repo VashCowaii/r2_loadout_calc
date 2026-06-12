@@ -3,132 +3,7 @@ function logToBattle(battleData,entry) {
 }
 
 
-const enemiesDataRef = {
-    "GenericBoss": {
-        name: "Glorp (Boss)",
-        lvl: 95,
-        stats: {
-            "HPBase": 3687106,//2000000,
-            "ATKBase": 718,
-            "SPDBase": 158,
-            "Toughness": 120,
-            "EffectRES": 0.30,
-        },
-        enemyTypeAttack: "Generic Boss",
-        enemyType: "boss",
-    },
-    "GenericElite": {
-        name: "Glorp (Elite)",
-        lvl: 66,//95
-        stats: {
-            "HPBase": 1687106,//2000000,
-            "ATKBase": 718,
-            "SPDBase": 158,
-            "Toughness": 160,
-            "EffectRES": 0.30,
-        },
-        enemyTypeAttack: "Generic Boss",
-        enemyType: "elite",
-    },
-
-    // "GenericMinion": {
-    //     name: "Glorp (Minion)",
-    //     lvl: 66,//95,
-    //     stats: {
-    //         "HPBase": 406770000,//80000,//2000000,
-    //         "ATKBase": 718,
-    //         "SPDBase": 130,
-    //         "Toughness": 30,
-    //         "EffectRES": 0.30,
-    //     },
-    //     enemyTypeAttack: "Generic Boss ST",
-    //     enemyType: "minion",
-    // },
-
-    "Frigid Prowler": {
-        name: "Fat guy",
-        lvl: 66,//95,
-        stats: {
-            "HPBase": 87139*1.3,//80000,//2000000,
-            "ATKBase": 397,
-            "SPDBase": 110,
-            "Toughness": 110,
-            "EffectRES": 0.264,
-        },
-        enemyTypeAttack: "Generic Boss ST",
-        enemyType: "minion",
-    },
-    "Everwinter Shadewalker": {//gunner boi
-        name: "Everwinter Shadewalker",
-        lvl: 66,//95,
-        stats: {
-            "HPBase": 10892*3,//70000,//2000000,
-            "ATKBase": 397,
-            "SPDBase": 110,
-            "Toughness": 200,
-            "EffectRES": 0.164,
-        },
-        enemyTypeAttack: "Generic Boss",
-        enemyType: "minion",
-    },
-
-
-    //quantum doge
-    "GenericMinion": {
-        name: "Quantum Dog",
-        lvl: 66,//95,
-        stats: {
-            "HPBase": 406770000,//80000,//2000000,
-            "ATKBase": 718,
-            "SPDBase": 130,
-            "Toughness": 30,
-            "EffectRES": 0.30,
-        },
-        enemyTypeAttack: "Generic Boss ST",
-        enemyType: "minion",
-    },
-    "GenericMinion2": {//gunner boi
-        name: "Gunner guy",
-        lvl: 66,//95,
-        stats: {
-            "HPBase": 395960000,//70000,//2000000,
-            "ATKBase": 718,
-            "SPDBase": 91,
-            "Toughness": 30,
-            "EffectRES": 0.30,
-        },
-        enemyTypeAttack: "Generic Boss",
-        enemyType: "minion",
-    },
-
-
-    "MOC6SwordBoi": {
-        name: "Sword boi",
-        lvl: 90,//66,//95,
-        stats: {
-            "HPBase": 26397,//80000,//2000000,
-            "ATKBase": 718,
-            "SPDBase": 110,
-            "Toughness": 20,
-            "EffectRES": 0.30,
-        },
-        enemyTypeAttack: "Generic Boss",
-        enemyType: "minion",
-    },
-    "MOC6Fish": {
-        name: "Fish",
-        lvl: 90,//66,//95,
-        stats: {
-            "HPBase": 32997,//70000,//2000000,
-            "ATKBase": 718,
-            "SPDBase": 132,
-            "Toughness": 20,
-            "EffectRES": 0.30,
-        },
-        enemyTypeAttack: "Generic Boss",
-        enemyType: "minion",
-    }
-}
+// const enemiesDataRef = {}
 const sim = { 
     getNextQueuedTurn(battleData,isConditionCheck,battleSettings) {
         const nextTurnAV = battleData.nextTurnAV;
@@ -599,7 +474,6 @@ const sim = {
             battleData.enemiesCreated++;
             const enemiesMade = battleData.enemiesCreated;
 
-            // let ref = enemiesDataRef[currentEntry.entry];
             const enemyType = currentEntry.enemyType;
 
             const enemyVersion = currentEntry.version ?? 0;
@@ -1488,9 +1362,6 @@ const sim = {
             }
         }
     },
-    // // if (triggerRef && triggerRef.length) {
-    //     for (let triggerEntry of triggerRef) {triggerEntry.condition(battleData,generalInfo);}
-    //     // }
     clearFollowUpAttackQueue(battleData) {
         let queue = battleData.followUpQueue;
         if (battleData.battleIsOver) {return;}
