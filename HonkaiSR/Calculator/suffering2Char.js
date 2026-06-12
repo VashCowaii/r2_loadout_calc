@@ -4759,6 +4759,7 @@ const turnLogic = {
                     battleActions.speedAdvance(sourceTurn,battleData,"SPD Change");
                 },
                 "target": "self",
+                "priority": -Infinity,
                 "listenerName": "Universal SPD Change AV Controller",
             },
             {
@@ -4769,6 +4770,7 @@ const turnLogic = {
                     battleActions.updateMaxHP(sourceTurn,battleData,"Max HP Controller");
                 },
                 "target": "self",
+                "priority": -Infinity,
                 "listenerName": "Universal Max HP adjustment controller",
             },
             {
