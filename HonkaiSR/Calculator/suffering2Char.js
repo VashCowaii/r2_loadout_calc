@@ -3578,7 +3578,7 @@ const battleActions = {
         const isElation = ATKObject.isElation;
         const multiRef = ATKObject.multipliers;
 
-        let hitWrap = isElation ? battleActions.elationHitWrapperTEST : battleActions.hitWrapperTEST;
+        let hitWrap = isElation ? elationHitWrapper : hitWrapper;
 
         const generalInfo = chainedAttackRef ?? {sourceTurn,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,primaryTargetArray,subTargetArray};
         generalInfo.ATKObject = ATKObject;
@@ -4698,6 +4698,8 @@ const getTechnique = battleActions.getTechnique;
 const consumeHP = battleActions.consumeHPNew;
 
 const attackWrapper = battleActions.attackWrapperTEST;
+const elationHitWrapper = battleActions.elationHitWrapperTEST;
+const hitWrapper = battleActions.hitWrapperTEST;
 
 
 const turnLogic = {
