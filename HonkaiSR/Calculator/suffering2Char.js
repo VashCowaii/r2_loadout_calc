@@ -28033,7 +28033,7 @@ const turnLogic = {
             "Enter": "Self",
         },
         "skillFunctions": {
-            jingliuBasic(battleData,target,sourceTurn) {
+            jingliuBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28070,9 +28070,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.jingliuBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            jingliuSkill(battleData,target,sourceTurn) {
+            jingliuSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28110,11 +28110,11 @@ const turnLogic = {
                 let ATKObject = ATKObjects.jingliuSkillATKOBJECT;
 
                 poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Skill Use"},null);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 updateEnergy(battleData,15,sourceTurn,false,"Sword Champion");
             },
-            jingliuUltimate(battleData,sourceTurn) {
+            jingliuUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28170,7 +28170,7 @@ const turnLogic = {
 
                 // ATKObject.bonusScalar.refValue = sourceTurn.bladeHPTally;
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 // const oldAmount = sourceTurn.bladeHPTally;
                 // sourceTurn.bladeHPTally *= 0.5
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ult used halving", bodyText: `Tally (Blade) ${oldAmount.toLocaleString()} --> ${sourceTurn.bladeHPTally.toLocaleString()}`});}
@@ -28183,7 +28183,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            enterEnhancedState(battleData,target,sourceTurn) {
+            enterEnhancedState(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28251,7 +28251,7 @@ const turnLogic = {
                 const pointsGainedObject = ATKObjects.pointsGainedObject ??= {pointsGained: 1 + (rank >= 6 ? 2 : 0),sourceString:"Entered Spectral Transmigration state"}
                 poke("jingliuWeirdStackGained",battleData,pointsGainedObject,null);
             },
-            jingliuSkillEnhanced(battleData,target,sourceTurn) {
+            jingliuSkillEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28289,7 +28289,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.jingliuSkillEnhancedATKOBJECT;
                 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
 
                 poke("jingliuWeirdStackGained",battleData,{pointsGained: -1,sourceString:"Enhanced Skill Use"},null);
@@ -28304,7 +28304,7 @@ const turnLogic = {
 
                 updateEnergy(battleData,8,sourceTurn,false,"Sword Champion");
             },
-            jingliuTechnique(battleData,target,sourceTurn) {
+            jingliuTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -28312,7 +28312,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.fishladyTechREF ??= ATKObjects.Technique["Shine of Truth"].variant1;
 
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 updateEnergy(battleData,15,sourceTurn,false,"Shine of Truth");
                 poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"Technique Use"},null);
