@@ -17,6 +17,7 @@
         </li>
         <li>Reworked the entirety of enemy targeting across every character, which allows us to do a lot of new things internally.</li>
         <li>Greatly reworked attack handling as a whole, to allow for a lot of new things interally.</li>
+        <li>Reworked how Joint-Attacks are handled for the sake of accuracy.</li>
         <li>Due to the targeting changes that took place, we were able to make changes to the following abilities to ensure they now function as they should. These are not bugs, nor are they really fixes, these were just things I was aware of but couldn't do anything about YET:
             <ul>
                 <li>Seele's sub50% HP skill trigger will now properly locate the enemy with sub50%HP to target, and if that target dies before the extra turn is launched, then it will retarged based on remaining enemy HP.</li>
@@ -28,7 +29,6 @@
                 <li>Most notably will impact SW999 EBAs, rather than seeing each segment isolated, you can now expand it all as one.</li>
             </ul>
         </li>
-        
         <li>Changed the visual display for attack expands to display the hit count and AVG total at the top of the expand rather than the bottom.</li>
         <!-- <h4>Additions</h4>
         <li>Added the following new characters:
@@ -38,6 +38,7 @@
         </li> -->
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where Aglaea's technique wasn't giving the 30 energy regen it should have.</li>
         <li>Fixed an issue where Sparxie's ultimate was only doing Single Target dmg instances instead of AOE.</li>
         <li>Fixed an issue where Aggro updates via buffs/states wouldn't trigger enemy retargeting logic, so if Blade got 1000% more aggro it wasn't making enemies more likely to attack him.</li>
         <li>Fixed an issue where Numby could self-advance after a recent change.</li>
@@ -63,6 +64,9 @@
         </li>
         <li>Fixed an issue where Netherwing's HP-drain-induced death could break the sim due to mistakenly getting queued as an extra-turn instead of an insert.</li>
         <li>Fixed an issue where DHPT's technique skill extra-turn wasn't counting as targeting an ally for the sake of anything that might have cared.</li>
+
+        <h4>Optimization</h4>
+        <li>Updated handling for Hysilens lightcone, giving a slight optimizer speed boost for dot teams.</li>
 
         <!-- <h3>Library</h3>
         <h4>Additions</h4>

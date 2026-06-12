@@ -1791,21 +1791,25 @@ const hitSplitters = {
           "toughness": 10,
           "target": "blast"
         },
-        "isSourceLastHit": true
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
       },
+    ],
+    "ebaMemo": [
       {
         "target": {
           "hitRatio": 1,
-          "toughness": 10,
+          "toughness": 20/2,
           "target": "primary"
         },
         "isMemo": true,
         "subTarget": {
           "hitRatio": 1,
-          "toughness": 5,
+          "toughness": 10/2,
           "target": "blast"
         },
         "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
         "isSourceLastHit": true,
         "isAttackLastHit": true
       }

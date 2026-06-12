@@ -31831,6 +31831,7 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     
+    // ,actionObject.target,actionObject.subTarget
     //Remembrance
     "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
@@ -33125,7 +33126,7 @@ const turnLogic = {
             "Detonate": "Memosprites"
         },
         "skillFunctions": {
-            aggyBasicReg(battleData,target,sourceTurn) {
+            aggyBasicReg(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -33176,9 +33177,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.aggyBasicRegATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            aggySkill(battleData,targetTurn,sourceTurn) {
+            aggySkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -33279,13 +33280,17 @@ const turnLogic = {
 
                 return generalObject
             },
-            aggyBasicEnhanced(battleData,target,sourceTurn) {
+            aggyBasicEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.aggyBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant1;
 
                 if (!ATKObjects.aggyBasicEnhancedATKOBJECT) {
+                    ATKObjects.aggyBasicEnhancedREF2 = ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant2 ??= {...ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant1};
+                    let skillRef2 = ATKObjects.aggyBasicEnhancedREF2;
+                    skillRef2.hitSplits = hitSplitters[sourceTurn.properName].ebaMemo;
+
                     const currentAbilityLevel = ATKObjects.aggyBasicEnhancedREFLEVEL ??= battleActions.getCurrentAbilityLevel(battleData,skillRef,sourceTurn);
                     const generalATKObjects = logicRef.generalATKObjects ??= logicRef.skillFunctions.aggyGenerateEBAObjects(battleData,skillRef,sourceTurn);
 
@@ -33296,9 +33301,10 @@ const turnLogic = {
                 let ATKObject = ATKObjects.aggyBasicEnhancedATKOBJECT;
                 let ATKObject2 = ATKObjects.aggyBasicEnhancedGarmentATKOBJECT;
                 const garmentTurn = sourceTurn.aggyGarmentTURNEVENT;
+                let skillRef2 = ATKObjects.aggyBasicEnhancedREF2 ??= ATKObjects["Basic ATK"]["Slash by a Thousandfold Kiss"].variant2;
 
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,garmentTurn,ATKObject,ATKObject2);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                attackWrapper(battleData,skillRef2,garmentTurn,ATKObject2,actionObject.target,actionObject.subTarget);
             },
             addGarmentToField(battleData,sourceTurn) {
                 const garmentTurnObject = sourceTurn.aggyGarmentTURNEVENT;
@@ -33335,7 +33341,7 @@ const turnLogic = {
 
                 actionAdvance(1,garmentTurnObject,battleData,"Garmentmaker Summoned talent advance");
             },
-            garmentTurnAttack(battleData,target,memoTurn) {
+            garmentTurnAttack(battleData,actionObject,memoTurn) {
                 // eventOwner: ownerTurn.name
                 const aggyTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const logicRef = turnLogic[aggyTurn.properName];
@@ -33363,9 +33369,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.garmentTurnAttackATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            aggyUltimate(battleData,sourceTurn) {
+            aggyUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -33499,7 +33505,7 @@ const turnLogic = {
                 }
                 sourceTurn.ultyQueued = false;
             },
-            garmentDeathFunctionForced(battleData,targetTurn,sourceTurn) {
+            garmentDeathFunctionForced(battleData,actionObject,sourceTurn) {
                 const garmentTurn = sourceTurn
                 const aggyTurn = battleData.nameBasedTurns[garmentTurn.eventOwner];
 
@@ -33746,7 +33752,7 @@ const turnLogic = {
                     removeBuff(battleData,garmentTurn,buffSheet);
                 }
             },
-            aggyTechnique(battleData,target,sourceTurn) {
+            aggyTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -33786,10 +33792,12 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.aggyTechATKObject
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 logicRef.characterValuesBattle.enemyWithSeam = battleData.primaryTarget;
                 logicRef.skillFunctions.addGarmentToField(battleData,sourceTurn);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+
+                updateEnergy(battleData,30,sourceTurn,false,"Aglaea Technique");
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
             seamStitchAdditionalDMG(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -34482,38 +34490,20 @@ const turnLogic = {
     },
     "Garmentmaker": {
         logic(thisTurn,battleData) {
-            // let currentSP = battleData.skillPointCurrent;
-            // const minimum = currentSP>0;
+            const returnSkillCall = this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: turnLogic[battleData.nameBasedTurns[thisTurn.eventOwner].properName].skillFunctions.garmentTurnAttack,
+                action: "MemoSkill",
+                points: 0, 
 
-            // if (minimum && checkSkill(battleData,thisTurn)) {
-            //     const returnSkillCall = this.returnSkillCall;
-            //     return returnSkillCall;
-            // }
-
-            // return this.returnBasicCall;
-
-            // const aggyTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
-            // const logicRef = turnLogic[rmcTurn.properName];
-            // const skillFunctions = logicRef.skillFunctions;
-
-            // const isEnhanced = rmcTurn.battleValues.memIsEnhanced;
-
-            const returnSkillCall = this.returnSkillCall ??= {
-                action: "MemoSkill", 
                 isAttack: true,
                 isAbility: true,
-                points: 0, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "MemoSkillStart",
-                // eventTypeStart: "SkillStart",
-                // eventTypeEnd: "SkillEnd",
-                actionCall: turnLogic[battleData.nameBasedTurns[thisTurn.eventOwner].properName].skillFunctions.garmentTurnAttack, 
-                target: "self",
-                poolKey: null,//this.abilityTargetPools.Skill,
-            }
+
+                poolKey: turnLogic[battleData.nameBasedTurns[thisTurn.eventOwner].properName].abilityTargetPools.MemoSkill,
+            })
             returnSkillCall.sourceTurn = thisTurn;
-            // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
+            returnSkillCall.target = [battleData.primaryTarget];;
             return returnSkillCall;
         },
         preLogic(thisTurn,battleData) {},
@@ -46170,8 +46160,6 @@ const turnLogic = {
                 const ATKObject2 = ATKObjects.emcElationSkillATKOBJECT2;
 
                 let chainedAttackRef = null;
-                const chainedAttack = battleActions.attackWrapperChained;
-                
                 chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject1,actionObject.target,actionObject.subTarget,"Start",chainedAttackRef);
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
@@ -48887,8 +48875,6 @@ const turnLogic = {
                 }
 
                 let chainedAttackRef = null;
-                const chainedAttack = battleActions.attackWrapperChained;
-                
                 chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",chainedAttackRef);
                 poke("EvaMidUltForceElationDMG",battleData,chainedAttackRef,null);
 
