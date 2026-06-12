@@ -4629,9 +4629,10 @@ const battleActions = {
                         targetsBlast = cachedBlastTargets[presetIndex];
                     }
 
-                    if (blastTargetArray.length) {
-                        totalHits += blastTargetArray.length;
-                        for (let enemyEntry of blastTargetArray) {
+                    if (targetsBlast.length) {
+                        const blastLength = targetsBlast.length;
+                        totalHits += blastLength;
+                        for (let enemyEntry of targetsBlast) {
                             hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,blastLength+1);
                         }
                     }
@@ -42760,7 +42761,7 @@ const turnLogic = {
 
                 poolKey: this.abilityTargetPools.Skill,
             })
-            this.returnSkillCall = thisTurn;
+            this.returnSkillCall.sourceTurn = thisTurn;
 
             this.returnBasicCall ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.jingYuanBasic,
@@ -42783,7 +42784,7 @@ const turnLogic = {
             "BasicATK": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            jingYuanBasic(battleData,target,sourceTurn) {
+            jingYuanBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -42823,9 +42824,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.jingYuanBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            jingYuanSkill(battleData,target,sourceTurn) {
+            jingYuanSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -42884,7 +42885,7 @@ const turnLogic = {
 
                 poke("jingYuanGainPrana",battleData,{pointsGained: 2,sourceString:"Jing Yuan Skill"});
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 //TODO: strictly speaking this is actually a chained attack since the energy gains of hits 2 and 3 come after the hits instead of before
                 //which is wonky as hell but w/e
 
@@ -42906,7 +42907,7 @@ const turnLogic = {
             lightningLordTurnAttack(battleData,eventTurn) {
                 poke("JingYuanFUAQueue",battleData,{eventTurn},null);
             },
-            lightningLordTurnAttackAction(battleData,targetTurn,sourceTurn) {
+            lightningLordTurnAttackAction(battleData,actionObject,sourceTurn) {
                 // const sourceTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -43001,7 +43002,7 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 if (had6OrMore) {
                     removeBuff(battleData,sourceTurn,buffSheet);
@@ -43025,7 +43026,7 @@ const turnLogic = {
                     }
                 }
             },
-            jingYuanUltimate(battleData,sourceTurn,target) {
+            jingYuanUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -43081,9 +43082,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.jingYuanUltimateATKOBJECT;
 
-                
-
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 poke("jingYuanGainPrana",battleData,{pointsGained: 3,sourceString:"Jing Yuan Ultimate"});
 
@@ -43092,9 +43091,9 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            jingYuanTechnique(battleData,target,sourceTurn) {
+            jingYuanTechnique(battleData,actionObject,sourceTurn) {
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:sourceTurn.properName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"Technique"});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:sourceTurn.properName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"Technique"});}
 
 
                 poke("jingYuanGainPrana",battleData,{pointsGained: 3,sourceString:"Jing Yuan Technique"});
@@ -47090,7 +47089,7 @@ const turnLogic = {
                     let LootObject = ATKObjects.sw999LootBoxObject;
                     const returnATKData = attackWrapper(battleData,skillRef4,sourceTurn,LootObject,actionObject.target,actionObject.subTarget);
 
-                    sumATKDMG = returnATKData.generalInfo.totals.totalAVGDMG;
+                    sumATKDMG = returnATKData.totals.totalAVGDMG;
                 }
 
                 const enemyPositions = battleData.enemyPositions;
