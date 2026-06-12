@@ -40222,7 +40222,7 @@ const turnLogic = {
             "FUA": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            aventurineBasic(battleData,target,sourceTurn) {
+            aventurineBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -40281,7 +40281,7 @@ const turnLogic = {
                     updateBuff(battleData,targetTurn,buffSheet);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -40334,7 +40334,7 @@ const turnLogic = {
                 
                 updateBuff(battleData,currentTurn,buffSheet);
             },
-            aventurineSkill(battleData,target,sourceTurn) {
+            aventurineSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -40405,7 +40405,7 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,shieldBuffObject,false,sourceTurn);
             },
-            aventurineFUA(battleData,targetTurn,sourceTurn) {
+            aventurineFUA(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -40458,7 +40458,7 @@ const turnLogic = {
                 poke("aventurineBetGained",battleData,{pointsGained: -7,sourceString:"FUA Launched"},null);
                 valuesRef.fuaStackDebt -= 7;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 const shieldCall = ATKObjects.aventurineTalentShield ??= logicRef.skillFunctions.aventurineTalentShield;
                 shieldCall(battleData,sourceTurn);
@@ -40543,7 +40543,7 @@ const turnLogic = {
                 updateBuff(battleData,allyWithLowestShield,shieldBuffObject,false,sourceTurn);
                 
             },
-            aventurineUltimate(battleData,sourceTurn) {
+            aventurineUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -40606,7 +40606,7 @@ const turnLogic = {
                 const targetEnemy = battleData.primaryTarget;
                 
                 updateBuff(battleData,targetEnemy,buffSheet);
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 if (sourceTurn.rank >= 1) {
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Prisoner's Dilemma", bodyText: `E1 shield application triggered`});}
@@ -40615,7 +40615,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            aventurineTechnique(battleData,target,sourceTurn) {
+            aventurineTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -40645,7 +40645,7 @@ const turnLogic = {
                 //TODO: since this is like tingyun and can be stacked before going into battle, look at adding multiple use counters based on how many uses the rest of the team needs
                 //like obv if the other 3 used theirs and they are one time use, he can use his twice instead, or if there are 2 dmg techniques, he can use his 3 times
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const allies = battleData.allyPositions;
                 for (let ally of allies) {
@@ -40983,7 +40983,7 @@ const turnLogic = {
                                 poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
                             })
                             queueObject.sourceTurn = ownerTurn;
-                            queueObject.target = battleData.enemyPositions;
+                            queueObject.target = battleData.bounceOrder;
                             queueInsertAbility(battleData,queueObject);
                         }
                     }
