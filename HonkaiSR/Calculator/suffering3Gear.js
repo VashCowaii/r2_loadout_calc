@@ -4172,17 +4172,12 @@ const turnLogicLightcones = {
                     let buffName = buffNames.spdBuff;
                     let buffNameVuln = buffNames.debuffStacks;
                     
-
-
-                    const enemyTurns = battleData.enemyBasedTurns;
+                    const targetTurn = generalInfo.targetTurn;
                     let enthrallRef = null;
-                    for (let enemyHit in targetsGotHit) {
-                        const currentEnemy = enemyTurns[enemyHit];
-                        const buffCheck = currentEnemy.buffsObject[buffNameVuln];
-                        if (buffCheck && targetsGotHit[enemyHit] === 1) {//ONLY EVALUATE FIRST HITS, ERGO THE START OF AN ATTACK
-                            enthrallRef = buffCheck;
-                            break;
-                        }
+
+                    const buffCheck = targetTurn.buffsObject[buffNameVuln];
+                    if (buffCheck && targetsGotHit[targetTurn.name] === 1) {//ONLY EVALUATE FIRST HITS, ERGO THE START OF AN ATTACK
+                        enthrallRef = buffCheck;
                     }
 
                     if (enthrallRef) {
