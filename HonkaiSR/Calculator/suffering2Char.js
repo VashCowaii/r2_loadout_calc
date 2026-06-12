@@ -37187,28 +37187,8 @@ const turnLogic = {
     },
     "Castorice": {
         logic(thisTurn,battleData) {
-            // if (battleData.battleIsOver) {return {action: "EndTurn"}}
-            const shortRef = this;
-            let E1 = true;
-            let actionUsed = false;
-
-            let statCalls = thisTurn.battleValues;
-            const summonUp = statCalls.garmentIsActive
-            let shortCalls = shortRef.skillFunctions;
-
-            let currentSP = battleData.skillPointCurrent;
-            // let minimumPointsToStart = 4;
-            // let desiredCasts = 5;
-            // let maximumCasts = 5;
-            const minimum = currentSP>0;
-            // const isCombustion = statCalls.combustionActive;
-            // const rank = thisTurn.rank;
             const netherTurn = thisTurn.castoriceNetheringTURNEVENT;
             const isEnhanced = netherTurn.isActive;
-
-            // const skillToCall = isEnhanced ? shortCalls.castoriceSkillEnhanced : shortCalls.castoriceSkill
-            //     return {action: "Skill", points: 0, actionCall: skillToCall, target: "enemy"};
-            // // }
 
             if (checkSkill(battleData,thisTurn)) {
                 if (isEnhanced) {
@@ -37280,7 +37260,7 @@ const turnLogic = {
             "MemoSkill": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            castoriceBasic(battleData,target,sourceTurn) {
+            castoriceBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -37319,9 +37299,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.castoriceBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            castoriceSkill(battleData,target,sourceTurn) {
+            castoriceSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -37361,9 +37341,9 @@ const turnLogic = {
 
                 const allyPositions = battleData.allyPositions;
                 consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,values[0],allyPositions,sourceTurn,skillRef.slot,false,true)
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            castoriceSkillEnhanced(battleData,target,sourceTurn) {
+            castoriceSkillEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -37373,6 +37353,9 @@ const turnLogic = {
                 const rank = sourceTurn.rank;
                 if (!ATKObjects.castoriceSkillEnhancedATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].es;
+
+                    let skillRef2 = ATKObjects.castoriceSkillEnhancedREF2 ??= {...ATKObjects["Skill"]["Boneclaw, Doomdrake's Embrace"].variant1};
+                    skillRef2.hitSplits = hitSplitters[sourceTurn.properName].esMemo;
                     const scalar = "HP";
                     const tags = ["All","Quantum"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -37422,22 +37405,18 @@ const turnLogic = {
                 let ATKObject = ATKObjects.castoriceSkillEnhancedATKOBJECT;
                 let ATKObject2 = ATKObjects.castoriceSkillEnhancedNetherATKOBJECT;
                 const netherTurn = sourceTurn.castoriceNetheringTURNEVENT;
-
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                let skillRef2 = ATKObjects.castoriceSkillEnhancedREF2;
 
                 const allyPositions = battleData.allyPositions;
                 consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,values[0],allyPositions,sourceTurn,skillRef.slot,false,true)
-                battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,netherTurn,ATKObject,ATKObject2);
-
-
-                if (rank >= 2) {
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                if (rank >= 2 && sourceTurn.battleValues.casE2NewbudReady) {
+                    sourceTurn.battleValues.casE2NewbudReady = false;
                     poke("CastoriceGainNewbud",battleData,{pointsGained: sourceTurn.specialEnergyMax * 0.30,sourceString:"E2: Crown on Wings of Bloom",forcedNewbuds: true});
                 }
-
-
-                // battleActions.attackWrapperJoint(battleData,skillRef,sourceTurn,sourceTurn,ATKObject,ATKObject2);
+                attackWrapper(battleData,skillRef2,netherTurn,ATKObject2,actionObject.target,actionObject.subTarget);
             },
-            netherwingStandardAttack(battleData,target,memoTurn,chainedAttackRef) {
+            netherwingStandardAttack(battleData,actionObject,memoTurn,chainedAttackRef) {
                 const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -37479,13 +37458,13 @@ const turnLogic = {
                 let ATKObject = ATKObjects.netherStandardATKOBJECT;
 
                 if (chainedAttackRef) {
-                    battleActions.attackWrapperChained(battleData,skillRef,memoTurn,ATKObject,"End",chainedAttackRef);
+                    attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
                 }
                 else {
-                    battleActions.attackWrapper(battleData,skillRef,memoTurn,ATKObject);
+                    attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 }
             },
-            netherWingWaveBreak(battleData,target,memoTurn,chainedAttackRef) {
+            netherWingWaveBreak(battleData,actionObject,memoTurn,chainedAttackRef) {
                 const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -37539,12 +37518,12 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.netherStandardATKOBJECTEND;
-                battleActions.attackWrapperChained(battleData,skillRef,memoTurn,ATKObject,"End",chainedAttackRef);
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 const SPDSheet = ATKObjects.netherWaveBreakSPDSHEET;
                 updateBuff(battleData,memoTurn,SPDSheet);
             },
-            netherwingEnhancedAttack(battleData,target,memoTurn,chainedAttackRef) {
+            netherwingEnhancedAttack(battleData,actionObject,memoTurn,chainedAttackRef) {
                 const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -37627,7 +37606,7 @@ const turnLogic = {
                 battleValues.netherShouldDie = memoTurn.currentHP <= 1;
 
                 attackState = skillCasts === 1 ? "Start" : "Middle";
-                const finalRef = chainedAttackRef = chainedAttack(battleData,skillRef,memoTurn,ATKObject,attackState,chainedAttackRef);
+                const finalRef = chainedAttackRef = attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget,attackState,chainedAttackRef);
 
                 const enemyPositions = battleData.enemyPositions;
                 if (!enemyPositions.length) {
@@ -37649,7 +37628,7 @@ const turnLogic = {
 
                 return finalRef;
             },
-            castoriceUltimate(battleData,sourceTurn) {
+            castoriceUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -37701,6 +37680,7 @@ const turnLogic = {
 
                 const charValuesRef = sourceTurn.battleValues;
                 charValuesRef.netherRemainingTurns = 3;
+                charValuesRef.casE2NewbudReady = true;
                 const rank = sourceTurn.rank;
 
                 sourceTurn.activeSummons += 1;
@@ -37782,7 +37762,7 @@ const turnLogic = {
                     actionAdvance(1,sourceTurn,battleData,"E2 summoned advancement");
                 }
             },
-            netherwingDeathFunction(battleData,target,deathTurn,chainedAttackRef) {
+            netherwingDeathFunction(battleData,actionObject,deathTurn,chainedAttackRef) {
                 const ownerTurn = battleData.nameBasedTurns[deathTurn.eventOwner];
 
                 const logicRef = turnLogic[ownerTurn.properName];
@@ -37862,10 +37842,10 @@ const turnLogic = {
                     }
                     
                     if (chainedAttackRef) {
-                        battleActions.attackWrapperChained(battleData,skillRef,deathTurn,suicideObject,"End",chainedAttackRef);
+                        attackWrapper(battleData,skillRef,deathTurn,suicideObject,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
                     }
                     else {
-                        battleActions.attackWrapper(battleData,skillRef,deathTurn,suicideObject);
+                        attackWrapper(battleData,skillRef,deathTurn,suicideObject,actionObject.target,actionObject.subTarget);
                     }
 
                     
@@ -37879,8 +37859,11 @@ const turnLogic = {
                 deathTurn.isDead = true;
                 deathTurn.isActive = false;
 
-                ownerTurn.battleValues.netherIsActive = false;
-                ownerTurn.battleValues.netherDeathIsQueued = false;
+                const battleValues = ownerTurn.battleValues;
+                battleValues.netherIsActive = false;
+                battleValues.netherDeathIsQueued = false;
+                battleValues.skillCasts = 0;
+                battleValues.totalCasts = 0;
 
                 //remove nether from the turn order
                 const eventName = deathTurn.properName;
@@ -37986,7 +37969,7 @@ const turnLogic = {
 
                 return leftoverDamage
             },
-            castoriceTechnique(battleData,target,sourceTurn) {
+            castoriceTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -37994,20 +37977,20 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.casTechREF ??= ATKObjects.Technique["Wail, Death's Herald"].variant1;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 logicRef.skillFunctions.addNetherwingToField(battleData,sourceTurn);
                 const netherTurnObject = sourceTurn.castoriceNetheringTURNEVENT;
                 netherTurnObject.currentHP = netherTurnObject.maxHP * 0.50;//technique summon brings him to 50%, otherwise all other summons are 100%
             },
-            castoriceTechnique2(battleData,target,sourceTurn) {
+            castoriceTechnique2(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let characterName = sourceTurn.properName;
 
                 let skillRef = ATKObjects.casTechREF ??= ATKObjects.Technique["Wail, Death's Herald"].variant1;
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:"self", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const allyPositions = battleData.allyPositions;
                 consumeHP(battleData,presetTargetFilters.excludeOwnMemosprite,0.40,allyPositions,sourceTurn,skillRef.slot,false,true);
@@ -38831,92 +38814,89 @@ const turnLogic = {
     },
     "Netherwing: Pollux": {
         logic(thisTurn,battleData) {
-
             const casTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
             const battleValues = casTurn.battleValues;
 
             const netherRemainingTurns = battleValues.netherRemainingTurns;
             const netherTurnShouldEnd = battleValues.netherTurnShouldEnd;
+            const chainStarted = battleValues.skillCasts >= 1;
 
             const netherShouldDie = battleValues.netherShouldDie;
             if (netherShouldDie) {
                 //suicide call here
-                const returnNetherSuicide = this.returnNetherSuicide ??= {
-                    action: "MemoSkill", 
+                const returnNetherSuicide = this.returnNetherSuicide ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingDeathFunction,
+                    action: "MemoSkill",
+                    points: 0, 
+    
                     isAttack: true,
                     isAbility: true,
-                    isEnhanced: false,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    // eventTypeStart: "BasicATKStart",
-                    // eventTypeEnd: "BasicATKEnd",
-                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingDeathFunction, 
-                    target: null,
+    
                     poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
-                }
+                })
                 returnNetherSuicide.sourceTurn = thisTurn;
+                returnNetherSuicide.target = battleData.enemyBasedTurns;
+                returnNetherSuicide.hideStartEvent = chainStarted;
                 return returnNetherSuicide;
             }
             else if (netherTurnShouldEnd) {
-                const waveEndBreak = this.waveEndBreak ??= {
-                    action: "MemoSkill", 
+                const waveEndBreak = this.waveEndBreak ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherWingWaveBreak,
+                    action: "MemoSkill",
+                    points: 0, 
+    
                     isAttack: true,
                     isAbility: true,
-                    isEnhanced: false,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    // eventTypeStart: "BasicATKStart",
-                    // eventTypeEnd: "BasicATKEnd",
-                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherWingWaveBreak, 
-                    target: null,
+    
                     poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
-                }
+                })
                 waveEndBreak.sourceTurn = thisTurn;
+                waveEndBreak.target = battleData.enemyPositions;
+                waveEndBreak.hideStartEvent = chainStarted;
                 return waveEndBreak;
             }
             else if (netherRemainingTurns === 0 || checkSkill(battleData,casTurn,"MemoSkillEnh")) {
                 //force enh memoskill if 0 turns left
-                const returnSkillCall = this.returnSkillCall ??= {
-                    action: "MemoSkill", 
+                const returnSkillCall = this.returnSkillCall ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingEnhancedAttack,
+                    action: "MemoSkill",
+                    points: 0, 
+    
+                    isContinuousTurn: true,
+                    isEnhanced: true,
                     isAttack: true,
                     isAbility: true,
-                    isEnhanced: true,
-                    points: 0, 
-                    properName: thisTurn.properName,
                     useAnyTriggers: true,
                     eventTypeStartLOG: "MemoSkillStart",
-                    isContinuousTurn: true,
-                    // eventTypeStart: "SkillStart",
-                    // eventTypeEnd: "SkillEnd",
-                    actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingEnhancedAttack, 
-                    target: "self",
+    
                     poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
-                }
+                })
                 returnSkillCall.sourceTurn = thisTurn;
+                returnSkillCall.target = battleData.enemyPositions;
+                returnSkillCall.hideStartEvent = chainStarted;
                 return returnSkillCall;
             }
 
             //default to reg memoskill
-            const returnBasicEnhCall = this.returnBasicEnhCall ??= {
-                action: "MemoSkill", 
+            const returnBasicEnhCall = this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
+                actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingStandardAttack,
+                action: "MemoSkill",
+                points: 0, 
+
                 isAttack: true,
                 isAbility: true,
-                isEnhanced: false,
-                points: 0, 
-                properName: thisTurn.properName,
                 useAnyTriggers: true,
                 eventTypeStartLOG: "MemoSkillStart",
-                // eventTypeStart: "BasicATKStart",
-                // eventTypeEnd: "BasicATKEnd",
-                actionCall: turnLogic[casTurn.properName].skillFunctions.netherwingStandardAttack, 
-                target: null,
+
                 poolKey: turnLogic[casTurn.properName].abilityTargetPools.MemoSkill,
-            }
+            })
             returnBasicEnhCall.sourceTurn = thisTurn;
+            returnBasicEnhCall.target = battleData.enemyPositions;
+            returnBasicEnhCall.hideStartEvent = chainStarted;
             return returnBasicEnhCall;
         },
         preLogic(thisTurn,battleData) {},

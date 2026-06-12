@@ -1341,7 +1341,7 @@ const sim = {
 
                 const displayTypeStart = designatedAction.eventTypeStartLOG;
                 battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
-                if (displayTypeStart) {
+                if (displayTypeStart && !designatedAction.hideStartEvent) {
                     // logToBattle(battleData,{logType: displayTypeStart, name:characterName, target: currentFUA.target?.properName ?? currentFUA.target, AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage});
                     logToBattle(battleData,{
                         logType: displayTypeStart,

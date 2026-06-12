@@ -176,6 +176,7 @@ const superGlobal = {
             isAbility: false,
             useAnyTriggers: false,
             eventTypeStartLOG: "UltimateStart",
+            hideStartEvent: false,
 
             properName: ownerTurn.properName,
             sourceTurn: null,
