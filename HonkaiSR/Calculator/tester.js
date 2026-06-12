@@ -4562,6 +4562,11 @@ const userTriggers = {
 
             // console.log(nameNumber,targetNumber,sourceNumber)
 
+            let isAttackStart = false;
+            let isAttackEnd = false;
+            let isSegmentStart = false;
+            let isSegmentEnd = false;
+
 
             switch (currentType) {
                 case "PassiveCalls": 
@@ -5267,15 +5272,16 @@ const userTriggers = {
                     // logToBattle(battleData,{logType: "HitEnemy", hitType: "Additional", target: enemyTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
                     break;
                 case "AttackStart":
-                    returnString = `
-                        <div class="actionDetailBody">Attack started...</div>
-                        <details class="actionDetailBodyDetailExpand">
-                        <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle per-hit Details & Sub-Events</summary>`;
-                    // battleData.battleLog.push({logType: "AttackStart"});
+                    isAttackStart = true;
+                    break;
+                case "AttackStartSEGMENT":
+                    isSegmentStart = true;
                     break;
                 case "AttackEnd":
-                    returnString = `</details><div class="actionDetailBody">Attack finished, ${action.totalHits} hit${action.totalHits>1 ? "s" : ""} for ${action.totalAVGDMG.toLocaleString()} AVG Total DMG</div>`;
-                    // battleData.battleLog.push({logType: "AttackEnd", totalHits, totalAVGDMG});
+                    isAttackEnd = true;
+                    break;
+                case "AttackEndSEGMENT":
+                    isSegmentEnd = true;
                     break;
                 case "HealAllyStart":
                     returnString = `
@@ -5389,16 +5395,21 @@ const userTriggers = {
             // </div>
             // </details>
 
-            return returnString;
+            return {returnString,isAttackStart,isAttackEnd,isSegmentStart,isSegmentEnd,action};
         }
 
         let finalDisplayString = "";
-        finalDisplayString += lineTypeDisplays(currentAction,logIndex);
+        finalDisplayString += lineTypeDisplays(currentAction,logIndex).returnString;
 
         let eventsString = ``;
         let eventOpen = `<div class="actionDetailBodyEvent">`;
         let eventClose = `</div>`;
         let skipEventBody = false;
+
+        let attacksString = "";
+        let segmentsString = "";
+        let attackCacheActive = false;
+        let segmentCacheActive = false;
 
         let awkwardLogTypes = userTriggers.awkwardLogTypes;
 
@@ -5411,7 +5422,53 @@ const userTriggers = {
                 if (actionHeadersSorta.has(newAction.logType)) {break;}
                 else {
                     if (awkwardLogTypes[newAction.logType]) {continue;}
-                    eventsString += lineTypeDisplays(newAction,i)
+
+                    const result = lineTypeDisplays(newAction,i);
+
+                    if (result.isAttackStart) {attackCacheActive = true;}
+                    if (result.isSegmentStart) {segmentCacheActive = true;}
+
+                    const action = result.action;
+                    if (result.isAttackEnd) {
+                        attackCacheActive = false;
+
+                        eventsString += `
+                            <details class="actionDetailBodyDetailExpand">
+                            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle data for ${action.totalHits} hit${action.totalHits>1 ? "s" : ""} (${action.totalAVGDMG.toLocaleString()} AVG Total)</summary>
+                                ${attacksString}
+                            </details>`;
+                        attacksString = "";
+                    }
+                    else if (result.isSegmentEnd) {
+                        segmentCacheActive = false;
+                        if (attackCacheActive) {
+                            attacksString += `
+                            <details class="actionDetailBodyDetailExpand" open>
+                            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle Segment (${action.totalHits} hit${action.totalHits>1 ? "s" : ""})</summary>
+                                ${segmentsString}
+                            </details>`;
+                            segmentsString = "";
+                        }
+                        else {
+                            eventsString += `
+                            <details class="actionDetailBodyDetailExpand" open>
+                            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle Segment (${action.totalHits} hit${action.totalHits>1 ? "s" : ""})</summary>
+                                ${segmentsString}
+                            </details>`;
+                            segmentsString = "";
+                        }
+                    }
+                    else if (segmentCacheActive) {
+                        segmentsString += result.returnString;
+                    }
+                    else if (attackCacheActive) {
+                        attacksString += result.returnString;
+                    }
+                    else {
+                        eventsString += result.returnString;
+                    }
+
+                    
                 }
             }
         }
@@ -5843,10 +5900,6 @@ const userTriggers = {
                 userTriggers.expandBattleLog(i);
                 return;
             }
-            // else {
-            //     if (awkwardLogTypes[newAction.logType]) {continue;}
-            //     eventsString += lineTypeDisplays(newAction,i)
-            // }
         }
     },
     forcePriorActionExpand() {
@@ -5865,10 +5918,6 @@ const userTriggers = {
                 userTriggers.expandBattleLog(i);
                 return;
             }
-            // else {
-            //     if (awkwardLogTypes[newAction.logType]) {continue;}
-            //     eventsString += lineTypeDisplays(newAction,i)
-            // }
         }
     },
 
