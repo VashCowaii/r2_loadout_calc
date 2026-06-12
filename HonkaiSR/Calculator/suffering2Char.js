@@ -29809,7 +29809,7 @@ const turnLogic = {
             "UltimateEnh": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            dhilBasic(battleData,target,sourceTurn) {
+            dhilBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29849,9 +29849,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.dhilBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            dhilBasic1(battleData,target,sourceTurn) {
+            dhilBasic1(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29891,9 +29891,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.dhilBasic1ATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            dhilBasic2(battleData,target,sourceTurn) {
+            dhilBasic2(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -29933,9 +29933,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.dhilBasic2ATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            dhilBasic3(battleData,target,sourceTurn) {
+            dhilBasic3(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -30001,13 +30001,13 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,e6BuffSheet);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 if (rank >= 6 && appliedE6) {
                     removeBuff(battleData,sourceTurn,e6BuffSheet);
                 }
             },
-            dhilUltimate(battleData,sourceTurn) {
+            dhilUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -30045,7 +30045,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.dhilUltimateATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 if (rank >= 2) {
                     poke("dhilFakePointsGained",battleData,{pointsGained: 3,sourceString:"DHIL Ult + E2"});
@@ -30057,7 +30057,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            dhilSkillInstance(battleData,target,sourceTurn) {
+            dhilSkillInstance(battleData,actionObject,sourceTurn) {
                 // const logicRef = turnLogic[sourceTurn.properName];
                 // const ATKObjects = logicRef.ATKObjects;
                 // const rank = sourceTurn.rank;
@@ -30097,7 +30097,7 @@ const turnLogic = {
 
                 sourceTurn.battleValues.forceBasic = true;
             },
-            dhilTechnique(battleData,target,sourceTurn) {
+            dhilTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -30138,10 +30138,10 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.dhilTechniqueATKObject
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
             },
-            dhilTechnique2(battleData,target,sourceTurn) {
+            dhilTechnique2(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -30151,7 +30151,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.dhilTechniqueREF ??= ATKObjects.Technique["Heaven-Quelling Prismadrakon"].variant1;
                 // let values = ATKObjects.dhilTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 poke("dhilFakePointsGained",battleData,{pointsGained: 1,sourceString:"DHIL Technique"});
             },
         },
