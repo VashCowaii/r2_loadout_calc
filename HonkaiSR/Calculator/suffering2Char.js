@@ -41743,7 +41743,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            anaxaBasic(battleData,target,sourceTurn) {
+            anaxaBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -41783,9 +41783,9 @@ const turnLogic = {
                 let ATKObject = ATKObjects.anaxaBasicATKOBJECT;
 
                 updateEnergy(battleData,10,sourceTurn,false,"Roaming Signifier");
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            anaxaSkill(battleData,target,sourceTurn) {
+            anaxaSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -41877,11 +41877,11 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,e4Sheet);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 removeBuff(battleData,sourceTurn,buffSheet);
             },
-            anaxaUltimate(battleData,sourceTurn) {
+            anaxaUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -41952,11 +41952,11 @@ const turnLogic = {
                     if (enemy.turnState && enemy.enemyType != "boss") {enemy.turnShouldEnd;}//brick actions for enemies that aren't bosses
                     //TODO: later I need to work out an actual bricking mechanism to prevent any action, but for now this will do.
                 }
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.ultyQueued = false;
             },
-            anaxaTechnique(battleData,target,sourceTurn) {
+            anaxaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -41966,29 +41966,29 @@ const turnLogic = {
                 let skillRef = ATKObjects.anaxaTechniqueREF ??= ATKObjects.Technique["Prism of the Pupil"].variant1;
                 let values = ATKObjects.anaxaTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                if (!ATKObjects.anaxaTechTerrifiedSHEET) {
+                // if (!ATKObjects.anaxaTechTerrifiedSHEET) {
 
-                    ATKObjects.anaxaTechTerrifiedSHEET = {
-                        "stats": [weaknessAll],
-                        [weaknessAll]: 1,
-                        "source": "Technique",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": logicRef.buffNames.terrified,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                    }
-                }
-                const ATKObject = ATKObjects.astaTechniqueATKObject;
+                //     ATKObjects.anaxaTechTerrifiedSHEET = {
+                //         "stats": [weaknessAll],
+                //         [weaknessAll]: 1,
+                //         "source": "Technique",
+                //         "sourceOwner": sourceTurn.properName,
+                //         "buffName": logicRef.buffNames.terrified,
+                //         "durationInTurn": null,
+                //         "duration": 1,
+                //         "AVApplied": 0,
+                //         "maxStacks": 1,
+                //         "currentStacks": 1,
+                //         "decay": false,
+                //         "expireType": null,
+                //     }
+                // }
+                // const ATKObject = ATKObjects.astaTechniqueATKObject;
 
-                const buffSheet = ATKObjects.anaxaTechTerrifiedSHEET;
+                // const buffSheet = ATKObjects.anaxaTechTerrifiedSHEET;
                 const enemyPositions = battleData.enemyPositions;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 const attacker = superGlobal.getStartingAttacker(battleData);
                 const attackerElement = attacker.element;
@@ -42213,15 +42213,12 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackDMGEnd",
+                        "trigger": "AbilityStart",
                         condition(battleData,generalInfo,wasDeferred) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "BasicATK") {return;}
                             let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (ownerTurn.properName != sourceTurn.properName) {return;}
-        
-                            const skillSlot = generalInfo.dmgSlot;
-                            if (skillSlot != "Skill" && skillSlot != "Basic ATK") {return;}
-                            const slotIsSkill = skillSlot === "Skill";
+                            const slotIsSkill = action === "Skill";
         
                             const battleValues = ownerTurn.battleValues;
                             if (battleValues.extraSkillActive) {
@@ -42230,120 +42227,104 @@ const turnLogic = {
                             }
         
                             const disclosureName = battleValues.anaxaDisclosureName;
-                            const targetsGotHit = generalInfo.targetsGotHit;
-        
-                            const enemyTurns = battleData.enemyBasedTurns;
+
                             let foundDisclosure = false;
-                            for (let enemyHit in targetsGotHit) {
-                                const currentEnemy = enemyTurns[enemyHit];
-                                const buffCheck = currentEnemy.buffsObject[disclosureName];
-        
+                            // const target = generalInfo.target;
+                            const subTarget = generalInfo.subTarget;
+
+                            for (let enemy of subTarget) {
+                                const buffCheck = enemy.buffsObject[disclosureName];
                                 if (buffCheck) {
                                     foundDisclosure = true;
                                     break;
                                 }
                             }
+                            //it passes the target list through to the new skill, the target that had disclosure is irrelevant
         
                             if (foundDisclosure) {
-                                // const enemyChecker = battleData.enemyPositions.length;
-        
-                                // if (enemyChecker) {
-                                    battleValues.extraSkillActive = true;
-                                    if (slotIsSkill) {
-                                        const queueObject = this.queueObjectSkill ??= createQueueObject(ownerTurn,{
-                                            name: this.listenerName,
-                                            priority: priorityList.turn.Default,
-                                            queueTag: "QueuedExtraTurn",
-                        
-                                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
-                                            action: "Skill",
-                                            abortCheck(battleData,actionObject,sourceTurn) {
-                                                const target = actionObject.target[0];
-                                                if (target.isDead && enemyPositions.length) {
-                                                    actionObject.target = [battleData.primaryTarget];
-                                                }
-                                                else {
-                                                    sourceTurn.battleValues.extraSkillActive
-                                                    return true;
-                                                }
-                                            },
-                        
-                                            isTieBreaker: false,
-                                            isExtraTurn: true,
-                                            skipEXDisplay: true,
-                                            allowUlts: false,
-                                            decrementBuffs: false,
-                                            extraTurnHasChoice: false,
-                        
-                                            dontKeepNextWave: false,
-                                            isAttack: true,
-                                            isAbility: true,
-                                            useAnyTriggers: true,
-                                            eventTypeStartLOG: "SkillStart",
-                        
-                                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
-                                        })
-                                        queueObject.sourceTurn = ownerTurn;
-                                        queueObject.target = [battleData.primaryTarget];
-                                        queueObject.subTarget = battleData.bounceOrder;
-                                        queueExtraTurn(battleData,queueObject);
-                                    }
-                                    else {
-                                        const queueObject = this.queueObjectBasic ??= createQueueObject(ownerTurn,{
-                                            name: this.listenerName,
-                                            priority: priorityList.turn.Default,
-                                            queueTag: "QueuedExtraTurn",
-                        
-                                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
-                                            action: "BasicATK",
-                                            abortCheck(battleData,actionObject,sourceTurn) {
-                                                const target = actionObject.target[0];
-                                                if (target.isDead && enemyPositions.length) {
-                                                    actionObject.target = [battleData.primaryTarget];
-                                                }
-                                                else {
-                                                    sourceTurn.battleValues.extraSkillActive
-                                                    return true;
-                                                }
-                                            },
-                        
-                                            isTieBreaker: false,
-                                            isExtraTurn: true,
-                                            skipEXDisplay: true,
-                                            allowUlts: false,
-                                            decrementBuffs: false,
-                                            extraTurnHasChoice: false,
-                        
-                                            dontKeepNextWave: false,
-                                            isAttack: true,
-                                            isAbility: true,
-                                            useAnyTriggers: true,
-                                            eventTypeStartLOG: "BasicATKStart",
-                        
-                                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.BasicATK,
-                                        })
-        
-                                        queueObject.sourceTurn = ownerTurn;
-                                        queueObject.target = [battleData.primaryTarget];
-                                        queueExtraTurn(battleData,queueObject);
-                                    }
-                                // }
-                                // else {
-                                //     const logicRef = turnLogic[ownerTurn.properName];
-                                //     const ATKObjects = logicRef.ATKObjects;
-        
-                                //     let attackEndings = battleData.battleListeners.WaveStartFinished ??= [];
-                        
-                                //     const listenerToInejct = ATKObjects.deferDupeListener ??= logicRef.listenersToInjectLater.anaxaDeferDupeToNextWave;
-                                //     listenerToInejct.ownerTurn = ownerTurn;
-                                //     listenerToInejct.supplementGeneralInfo = generalInfo;
-                                //     logToBattle(battleData,{logType: "GenericAction", source:"Ability Duplication", bodyText: `No enemies remaining, ability dupe deferred to next wave`});
-        
-                                //     attackEndings.unshift(listenerToInejct);//it will self remove after it procs, so nothing else needs to be done here
-                                // }
+                                battleValues.extraSkillActive = true;
+                                if (slotIsSkill) {
+                                    const queueObject = this.queueObjectSkill ??= createQueueObject(ownerTurn,{
+                                        name: this.listenerName,
+                                        priority: priorityList.turn.Default,
+                                        queueTag: "QueuedExtraTurn",
+                    
+                                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaSkill,
+                                        action: "Skill",
+                                        abortCheck(battleData,actionObject,sourceTurn) {
+                                            const target = actionObject.target[0];
+                                            if (target.isDead) {
+                                                actionObject.target = [battleData.primaryTarget];
+                                            }
+                                            else if (!battleData.enemyPositions.length) {
+                                                sourceTurn.battleValues.extraSkillActive = false;
+                                                return true;
+                                            }
+                                        },
+                    
+                                        isTieBreaker: false,
+                                        isExtraTurn: true,
+                                        skipEXDisplay: true,
+                                        allowUlts: false,
+                                        decrementBuffs: false,
+                                        extraTurnHasChoice: false,
+                    
+                                        dontKeepNextWave: false,
+                                        isAttack: true,
+                                        isAbility: true,
+                                        useAnyTriggers: true,
+                                        eventTypeStartLOG: "SkillStart",
+                    
+                                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                                    })
+                                    queueObject.sourceTurn = ownerTurn;
+                                    queueObject.target = generalInfo.target;
+                                    queueObject.subTarget = battleData.bounceOrder;
+                                    queueExtraTurn(battleData,queueObject);
+                                }
+                                else {
+                                    const queueObject = this.queueObjectBasic ??= createQueueObject(ownerTurn,{
+                                        name: this.listenerName,
+                                        priority: priorityList.turn.Default,
+                                        queueTag: "QueuedExtraTurn",
+                    
+                                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.anaxaBasic,
+                                        action: "BasicATK",
+                                        abortCheck(battleData,actionObject,sourceTurn) {
+                                            const target = actionObject.target[0];
+                                            if (target.isDead) {
+                                                actionObject.target = [battleData.primaryTarget];
+                                            }
+                                            else if (!battleData.enemyPositions.length) {
+                                                sourceTurn.battleValues.extraSkillActive = false;
+                                                return true;
+                                            }
+                                        },
+                    
+                                        isTieBreaker: false,
+                                        isExtraTurn: true,
+                                        skipEXDisplay: true,
+                                        allowUlts: false,
+                                        decrementBuffs: false,
+                                        extraTurnHasChoice: false,
+                    
+                                        dontKeepNextWave: false,
+                                        isAttack: true,
+                                        isAbility: true,
+                                        useAnyTriggers: true,
+                                        eventTypeStartLOG: "BasicATKStart",
+                    
+                                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.BasicATK,
+                                    })
+    
+                                    queueObject.sourceTurn = ownerTurn;
+                                    queueObject.target = generalInfo.target;
+                                    queueExtraTurn(battleData,queueObject);
+                                }
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Disclosure Ability Duplication listener",
                         "ownerTurn": {},
                     },
@@ -42603,7 +42584,6 @@ const turnLogic = {
         
                             const logicRef = turnLogic[ownerTurn.properName];
                             const ATKObjects = logicRef.ATKObjects;
-                        
         
                             if (!ATKObjects.anaxaQualDisclosureSHEET) {
                                 let skillRef = ATKObjects.anaxaTalentREF ??= ATKObjects["Talent"]["Tetrad Wisdom Reigns Thrice"].variant1;
