@@ -1409,7 +1409,7 @@ const sim = {
             
 
             poke("AbilityStart",battleData,designatedAction,sourceTurn);
-            designatedAction.actionCall(battleData,designatedAction.target,sourceTurn);
+            designatedAction.actionCall(battleData,designatedAction,sourceTurn);
             poke("AbilityEnd",battleData,designatedAction,sourceTurn);
 
             // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {

@@ -5506,6 +5506,7 @@ const turnLogic = {
                 poolKey: this.abilityTargetPools.EnemyAttack,
             })
             returnCall.sourceTurn = thisTurn;
+            returnCall.target = battleData.AOETargetsEnemy;
             return returnCall;
         },
         "abilityTargetPools": {
@@ -5542,15 +5543,17 @@ const turnLogic = {
                             "skillEffect": "AoEAttack",
                             "hitSplits": [
                                 {
-                                    "primary": null,
-                                    "blast": null,
-                                    "all": {
-                                        "hitRatio": 1,
-                                        "energyRatio": 0,
-                                        "toughness": 0
+                                    "target": {
+                                      "hitRatio": 1,
+                                      "energyRatio": 0,
+                                      "toughness": 0,
+                                      "target": "all"
                                     },
-                                    "unknownTypers": false
-                                }
+                                    "isSourceFirstHit": true,
+                                    "isAttackFirstHit": true,
+                                    "isSourceLastHit": true,
+                                    "isAttackLastHit": true
+                                },
                             ]
                         }
                     }
@@ -5770,7 +5773,7 @@ const turnLogic = {
             "hasSummon": false,
         },
         "skillFunctions": {
-            genericBossBasic(battleData,target,sourceTurn) {
+            genericBossBasic(battleData,actionObject,sourceTurn) {
                 const enemyTypeAttack = sourceTurn.enemyTypeAttack;
                 const logicRef = turnLogic[enemyTypeAttack];
                 const ATKObjects = logicRef.ATKObjects;
@@ -5807,7 +5810,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.genericBossBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
         },
         "ATKObjects": {},
@@ -5830,6 +5833,7 @@ const turnLogic = {
                 poolKey: this.abilityTargetPools.EnemyAttack,
             })
             returnCall.sourceTurn = thisTurn;
+            returnCall.target = [battleData.primaryTargetEnemy];
             return returnCall
         },
         "abilityTargetPools": {
@@ -5866,15 +5870,17 @@ const turnLogic = {
                             "skillEffect": "AoEAttack",
                             "hitSplits": [
                                 {
-                                    "primary": {
-                                        "hitRatio": 1,
-                                        "energyRatio": 0,
-                                        "toughness": 0
+                                    "target": {
+                                      "hitRatio": 1,
+                                      "energyRatio": 0,
+                                      "toughness": 0,
+                                      "target": "primary"
                                     },
-                                    "blast": null,
-                                    "all": null,
-                                    "unknownTypers": false
-                                }
+                                    "isSourceFirstHit": true,
+                                    "isAttackFirstHit": true,
+                                    "isSourceLastHit": true,
+                                    "isAttackLastHit": true
+                                },
                             ]
                         }
                     }
@@ -6094,7 +6100,7 @@ const turnLogic = {
             "hasSummon": false,
         },
         "skillFunctions": {
-            genericBossBasic(battleData,target,sourceTurn) {
+            genericBossBasic(battleData,actionObject,sourceTurn) {
                 const enemyTypeAttack = sourceTurn.enemyTypeAttack;
                 const logicRef = turnLogic[enemyTypeAttack];
                 const ATKObjects = logicRef.ATKObjects;
@@ -6131,7 +6137,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.genericBossBasic;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
         },
         "ATKObjects": {},
@@ -6307,7 +6313,6 @@ const turnLogic = {
                 let healObject = ATKObjects.gallagherSkillHealHEALOBJECT
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null);
 
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             gallagherTalentHeal(battleData,targetTurn,sourceTurn,batchArray,timesToHeal) {
@@ -6958,7 +6963,6 @@ const turnLogic = {
                 let healObject = ATKObjects.huohuoSkillHealHealHEALOBJECT;
                 healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1,null)
 
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             huohuoApplyDivineProvision(battleData,sourceTurn,turnOverride) {
@@ -8869,7 +8873,6 @@ const turnLogic = {
                 const talentHealSheet = ATKObjects.lynxTalentHealHOTHEALSHEET;
                 updateBuff(battleData,targetTurn,talentHealSheet);
 
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             lynxHPConversion(battleData,sourceTurn,targetTurn) {
@@ -9515,7 +9518,6 @@ const turnLogic = {
 
                 // logicRef.skillFunctions.huohuoApplyDivineProvision(battleData,sourceTurn);
 
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             luochaUltimate(battleData,actionObject,sourceTurn) {
@@ -14427,7 +14429,6 @@ const turnLogic = {
             //     const ATKObject = ATKObjects.swTechATKObject
 
             //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-            //     battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             // },
         },
         "listeners": [
@@ -15304,7 +15305,6 @@ const turnLogic = {
                 // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // battleActions.consumeHP(battleData,false,values[1],sourceTurn,sourceTurn,skillRef.slot);
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
         },
         "listeners": [
@@ -30494,8 +30494,6 @@ const turnLogic = {
                 valuesRef.epicStacks -= 1;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Enhanced Basic ATK", bodyText: `Epic (RMC): ${valuesRef.epicStacks + 1} --> ${valuesRef.epicStacks}`});}
 
-                // logicRef.skillFunctions.traceHPConsume(battleData,sourceTurn,sourceTurn);
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 attackWrapper(battleData,skillRef2,memTurn,ATKObject2,actionObject.target,actionObject.subTarget);
@@ -37505,8 +37503,6 @@ const turnLogic = {
                 }
 
                 skillFunctions.bondmateATKConversion(battleData,sourceTurn,char1);
-
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             bondmateATKConversion(battleData,sourceTurn,targetTurn) {
@@ -38730,8 +38726,6 @@ const turnLogic = {
                 const shieldCall = ATKObjects.aventurineSkillShield ??= logicRef.skillFunctions.aventurineSkillShield;
                 //more than one thing can reference the skill shield itself, but may not be a skill cast
                 shieldCall(battleData,sourceTurn);
-
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
             },
             aventurineSkillShield(battleData,sourceTurn) {
@@ -40388,8 +40382,6 @@ const turnLogic = {
                 }
                 battleData.forceEntryWeakness = true;
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Anaxa Technique", bodyText: `Forced matching weakness enabled for BattleStart toughness reduction, this is separate from attack techniques.`});}
-
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
             },
             anaxaImplantWeakness(battleData,sourceTurn,targetTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -44546,12 +44538,6 @@ const turnLogic = {
                         updateBuff(battleData,sourceTurn,bonusSheet);
                     }
                 }
-                
-
-                // updateEnergy(battleData,-sourceTurn.maxEnergy,sourceTurn);
-                // battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-
 
                 const ATKObject1 = ATKObjects.emcElationSkillATKOBJECT1;
                 const ATKObject2 = ATKObjects.emcElationSkillATKOBJECT2;
@@ -45209,7 +45195,6 @@ const turnLogic = {
                     // console.log("ended early")
                     let endObject = ATKObjects.sw999BasicEnhATKOBJECTEarlyEnd;
 
-                    // const returnATKData = battleActions.attackWrapper(battleData,skillRef,sourceTurn,endObject);
                     attackWrapper(battleData,skillRef,sourceTurn,endObject,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                     battleValues.ebaHitsLeft = hitsLeft;
