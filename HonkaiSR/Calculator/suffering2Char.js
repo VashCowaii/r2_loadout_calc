@@ -45671,7 +45671,7 @@ const turnLogic = {
             "Elation": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            emcBasic(battleData,target,sourceTurn) {
+            emcBasic(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -45711,9 +45711,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.emcBasicATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            emcSkill(battleData,target,sourceTurn) {
+            emcSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const rank = sourceTurn.rank;
@@ -45776,7 +45776,7 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 poke("emcSkillEndingCBGain",battleData,exoTurnRef,null);
             },
             statCheck(battleData,currentTurn) {
@@ -45913,7 +45913,7 @@ const turnLogic = {
                 }
             },
             
-            emcUltimate(battleData,sourceTurn,target) {
+            emcUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
 
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -45925,7 +45925,7 @@ const turnLogic = {
                 let values = ATKObjects.emcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 const rank = sourceTurn.rank;
 
-                let targetTurn = target[0];
+                let targetTurn = actionObject.target[0];
 
                 if (!ATKObjects.emcUltimateCRITDMGSHEET) {
                     const buffNames = logicRef.buffNames;
@@ -46035,7 +46035,7 @@ const turnLogic = {
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
                 sourceTurn.ultyQueued = false;
             },
-            emcTechnique(battleData,target,sourceTurn) {
+            emcTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -46043,7 +46043,7 @@ const turnLogic = {
                 let skillRef = ATKObjects.emcTechniqueREF ??= ATKObjects.Technique["We Are So Back!"].variant1;
                 // let values = ATKObjects.emcTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 if (!ATKObjects.emcTechELATIONSHEET) {
                     const buffNames = logicRef.buffNames;
@@ -46067,7 +46067,7 @@ const turnLogic = {
                 const allyPositions = battleData.allyPositions;
                 updateBuffBatchTargets(battleData,allyPositions,buffSheet)
             },
-            elationSkill(battleData,target,sourceTurn) {
+            elationSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -46195,8 +46195,8 @@ const turnLogic = {
                 let chainedAttackRef = null;
                 const chainedAttack = battleActions.attackWrapperChained;
                 
-                chainedAttackRef = chainedAttack(battleData,skillRef,sourceTurn,ATKObject1,"Start",chainedAttackRef);
-                chainedAttack(battleData,skillRef,sourceTurn,ATKObject2,"End",chainedAttackRef);
+                chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject1,actionObject.target,actionObject.subTarget,"Start",chainedAttackRef);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
         },
         "listeners": [
