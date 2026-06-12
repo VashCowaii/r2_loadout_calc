@@ -962,13 +962,6 @@ const sim = {
                 addListenerPREPPriority(battleData,eachListener,triggerName)
             }
         }
-        if (universalRef?.finalListeners && universalRef.finalListeners.length) {
-            for (let eachListener of universalRef.finalListeners) {
-                const currentListenerArray = battleListeners[eachListener.trigger] ??= [];
-
-                currentListenerArray.unshift(eachListener);
-            }
-        }
         
         // console.log(battleListeners.BattlePrep)
         return battleData;

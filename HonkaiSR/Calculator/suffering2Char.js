@@ -4814,8 +4814,6 @@ const turnLogic = {
                 "listenerName": "Universal ally aggro adjustment aggro redo",
                 // "ownerTurn": {},
             },
-        ],
-        "finalListeners": [//AbilityTriggerOverride
 
             {
                 "trigger": "EnemyDied",
@@ -5282,7 +5280,6 @@ const turnLogic = {
                 "listenerName": "Aha Instant end queue",
             },
         ],
-        "finalListeners": [],
         "characterValues": {},
         "characterValuesBattle": {},
     },
