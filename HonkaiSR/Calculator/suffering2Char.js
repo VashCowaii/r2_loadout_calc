@@ -30587,7 +30587,7 @@ const turnLogic = {
             })
             this.returnSkillCall.sourceTurn = thisTurn;
 
-            this.returnSkillCall ??= createQueueObject(thisTurn,{
+            this.returnSkillCallEnh ??= createQueueObject(thisTurn,{
                 actionCall: this.skillFunctions.hookSkillEnh,
                 action: "Skill",
                 points: -1, 
@@ -30622,7 +30622,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
-            hookBasicReg(battleData,target,sourceTurn) {
+            hookBasicReg(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -30660,9 +30660,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hookBasicRegATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            hookSkill(battleData,target,sourceTurn) {
+            hookSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -30703,9 +30703,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hookSkillATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            hookSkillEnh(battleData,target,sourceTurn) {
+            hookSkillEnh(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -30746,7 +30746,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hookSkillATKOBJECT2;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 sourceTurn.battleValues.isEnhanced = false;
             },
@@ -30810,7 +30810,7 @@ const turnLogic = {
                     generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
                 }
             },
-            hookUltimate(battleData,sourceTurn) {
+            hookUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 const skillRef = ATKObjects.hookUltimateREF ??= ATKObjects.Ultimate["Boom! Here Comes the Fire!"].variant1;
@@ -30846,7 +30846,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hookUltimateATKOBJECT;
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.isEnhanced = true;
@@ -30931,7 +30931,7 @@ const turnLogic = {
                     addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,enemySlot,"Hook Talent AddProc - Burning Targets");
                 }
             },
-            hookTechnique(battleData,target,sourceTurn) {
+            hookTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -30970,9 +30970,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.hookTechATKObject;
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                battleActions.attackWrapper(battleData,skillRef,sourceTurn,ATKObject);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
 
                 const techDotFunction = logicRef.skillFunctions.hookTechDOT;
                 techDotFunction(battleData,sourceTurn,null)
