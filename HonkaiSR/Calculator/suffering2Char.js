@@ -41628,6 +41628,771 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Himeko": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;;
+                return skillCall;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.himekoSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: false,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.himekoBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            himekoBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.himekoBasicREF ??= ATKObjects["Basic ATK"]["Sawblade Tuning"].variant1;
+
+                if (!ATKObjects.himekoBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.himekoBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.himekoBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.himekoBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            himekoSkill(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.himekoSkillREF ??= ATKObjects["Skill"]["Molten Detonation"].variant1;
+
+                if (!ATKObjects.himekoSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = ATKObjects.himekoSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.himekoSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    ATKObjects.himekoTraceBurnName = turnLogic[sourceTurn.properName].buffNames.traceBurnDMG
+                }
+                let ATKObject = ATKObjects.himekoSkillATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                const burnName = ATKObjects.himekoTraceBurnName;
+                const buffCheck = sourceTurn.buffsObject[burnName];
+                if (buffCheck) {
+                    //we shifted the skill burn bonus removal into the skill itself so there is slightly less to do in the listener for this
+                    //it also simplifies the logic by a hair.
+                    //it is also how it literally works in game anyways so that is a bonus too.
+                    removeBuff(battleData,sourceTurn,buffCheck);
+                }
+            },
+            himekoUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.himekoUltimateREF ??= ATKObjects.Ultimate["Heavenly Flare"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.himekoUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.himekoUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.himekoUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: rank >= 6 ? superGlobal.createATKBounceObject({
+                            multi: values[0] * 0.40,
+                            bounceCount: 2,
+                            energy: null,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 0
+                            },
+                        }) : null,
+                    }
+                }
+                let ATKObject = ATKObjects.himekoUltimateATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                
+                sourceTurn.ultyQueued = false;
+            },
+            himekoFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.himekoFUAREF ??= ATKObjects.Talent["Victory Rush"].variant1;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.himekoFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    let values = ATKObjects.himekoFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.himekoFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+
+                    ATKObjects.himekoE1SPDSHEET ??= {
+                        "stats": [SPDP],
+                        [SPDP]: 0.20,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.e1SPD,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                }
+                const ATKObject = ATKObjects.himekoFUAATKOBJECT;
+
+                poke("HimekoGainCharge",battleData,{pointsGained: -3,sourceString:"Himeko FUA Launched"});
+
+                if (rank >= 1) {
+                    const buffSheet = ATKObjects.himekoE1SPDSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                sourceTurn.battleValues.himekoFUAQueued = false;
+            },
+            himekoTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.himekoTechniqueRef ??= ATKObjects.Technique["Incomplete Combustion"].variant1;
+
+                if (!ATKObjects.himekoTechniqueVulnSheet) {
+                    ATKObjects.himekoTechniqueVulnSheet ??= {
+                        "stats": [VulnFire],
+                        [VulnFire]: 0.10,
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.techFireVuln,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                }
+                const buffSheet = ATKObjects.himekoTechniqueVulnSheet;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:sourceTurn.properName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const standardListeners = logicRef.listeners;
+                    const traceHPName = "Benchmark - hp ratio listener";
+                    for (let listener of standardListeners) {
+                        if (listener.listenerName === traceHPName) {
+                            listener.condition(battleData,null);
+                            break;
+                        }
+                    }
+                    //honestly don't feel like setting up a function just for this thing when all we really is that single listener's condition function
+                    //so we'll cheese it a smidge and just force proc the listener event
+
+
+
+                    //talent inherents
+                    //charge handling
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Battlestart Charge Gain"};
+                    poke("HimekoGainCharge",battleData,exoObject);
+
+                    if (rank >= 2) {
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true);
+                },
+                "target": "self",
+                "listenerName": "Himeko Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
+                            let ownerTurn = this.ownerTurn;
+                            //we don't actually need to verify WHO broke the weakness, only THAT an enemy was weakness broken AT ALL, from anything
+
+                            const targetTurn = generalInfo.targetTurn;
+                            const enemyRank = targetTurn.enemyRank;
+                            const slot = generalInfo.slot;
+
+                            const chargeToGain = enemyRank >= 3 ? 3 : (slot === "Skill" && ownerTurn.rank >= 4 && generalInfo.sourceTurn.properName === ownerTurn.properName ? 2 : 1);
+
+                            const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Hostile Target was Weakness Broken"};
+                            exoObject.pointsGained = chargeToGain;
+                            poke("HimekoGainCharge",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "listenerName": "Himeko: Enemy broke weakness",
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.charge === battleValues.chargeMax && !battleValues.himekoFUAQueued) {
+                                poke("HimekoFUAQueue",battleData,null,null);
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "listenerName": "Himeko Charge check on wavestart",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.charge === battleValues.chargeMax && !battleValues.himekoFUAQueued) {
+                                poke("HimekoFUAQueue",battleData,null,null);
+                            }
+                        },
+                        "target": "self",
+                        "priority": -55,
+                        "listenerName": "Himeko Charge check on battlestart techniques",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.charge === battleValues.chargeMax && !battleValues.himekoFUAQueued) {
+                                poke("HimekoFUAQueue",battleData,null,null);
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "listenerName": "Himeko Charge check on Ally Attacks",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {//cas version
+                            // let ownerRef = this.owners;
+                            const ownerTurn = this.ownerTurn;
+
+                            const targetTurn = generalInfo.targetTurn;
+                            const HPRatio = targetTurn.currentHP / targetTurn.maxHP;
+                            const HPCheck50 = HPRatio <= 0.50;
+    
+                            const buffSheet = this.E2Sub50SHEET ??= {
+                                "stats": [DamageAll],
+                                [DamageAll]: 0.15,
+                                "source": "E1",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e2HPChecker,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["All"],
+                            }
+                            const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                            if (HPCheck50) {
+                                if (buffCheck) {return;}
+
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                            else if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck);}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E2 Himeko enemy sub50% checker",
+                    },
+                ],
+            },
+            {
+                "trigger": "HimekoGainCharge",
+                condition(battleData,generalInfo) {
+                    // poke("HimekoGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.charge;
+                    const maxValue = valuesRef.chargeMax;
+                    valuesRef.charge = Math.min(maxValue, oldValue + pointsGained);
+                    const newValue = valuesRef.charge;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Himeko): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.himekoChargeSum ??= 0;
+                            ownerTurn.himekoChargeSum += valuesRef.charge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "himekoChargeSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.himekoChargeSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Himeko Charge Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HimekoFUAQueue",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.himekoFUA,
+                        action: "Insert",
+                        abortCheck(battleData,actionObject,sourceTurn) {
+                            if (!battleData.enemyPositions.length) {
+                                sourceTurn.battleValues.himekoFUAQueued = false;
+                                return true;
+                            }
+                        },
+    
+                        isInserted: true,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                    })
+                    ownerTurn.battleValues.himekoFUAQueued = true;
+
+                    queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = battleData.enemyPositions;
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "enemy",
+                "listenerName": "Himeko - FUA Queued [FUA ATTACK]",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AttackDMGEnd",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const primaryTargetArray = generalInfo.primaryTargetArray;
+                    const subTargetArray = generalInfo.subTargetArray;
+
+                    const dotSheet = this.himekoTraceBurnSHEET ??= superGlobal.createStandardElementDOTSHEET(ownerTurn,"Fire",{
+                        "source": "Trace",
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceDOT,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+
+                        "multiplier": 0.30,
+                        "scalar": "ATK",
+                        "slot": "Trace",
+                        "baseChance": 0.50,
+                    });
+
+                    for (let enemy of primaryTargetArray) {
+                        generalApplyDOT(battleData,ownerTurn,enemy,dotSheet,null,null,false);
+                    }
+                    for (let enemy of subTargetArray) {
+                        generalApplyDOT(battleData,ownerTurn,enemy,dotSheet,null,null,false);
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Starfire - dot application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HitEnemyStart",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const abilitySlot = generalInfo.slot;
+                    if (abilitySlot != "Skill") {return;}
+                    //buff removal is handled in the end of the skill itself, so we don't need to ever remove the buff here
+                    //we just need to get out if it's not a skill based hit.
+
+                    const targetTurn = generalInfo.targetTurn;
+                    const targetDOTS = targetTurn.dots;
+                    const hasBurn = targetDOTS.Fire;
+
+                    const bonusSheet = this.bonusSheet ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceBurnDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["All"],
+                    }
+                    const buffCheck = ownerTurn.buffsObject[bonusSheet.buffName];
+
+                    if (hasBurn) {
+                        if (buffCheck) {return;}//if we have the buff already leave
+
+                        updateBuff(battleData,ownerTurn,bonusSheet);
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,ownerTurn,buffCheck);
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Starfire - dot application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AllyHPChange",
+                condition(battleData,generalInfo) {
+                    // poke("AllyHPChange",battleData,null,ally);
+                    //no general info bc this is an inherently personal listener with no params to pass, otherwise use allyLostHP or healAllyEnd
+
+                    let ownerTurn = this.ownerTurn;
+                    //NOTE: the battlestart application is handled in the passive with a force proc of this event, if I ever get confused in the future.
+
+                    const hpRatio = (ownerTurn.currentHP / ownerTurn.maxHP) >= 0.80;
+
+                    const bonusSheet = this.bonusSheet ??= {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 0.15,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.traceCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    const buffCheck = ownerTurn.buffsObject[bonusSheet.buffName];
+
+                    if (hpRatio) {
+                        if (buffCheck) {return;}//if we have the buff already leave
+
+                        updateBuff(battleData,ownerTurn,bonusSheet);
+                    }
+                    else if (buffCheck) {
+                        removeBuff(battleData,ownerTurn,buffCheck);
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Benchmark - hp ratio listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AbilityStart",
+                condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}
+
+                    let ownerTurn = this.ownerTurn;
+                    ownerTurn.battleValues.himekoUltTrackingActive = true;
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Himeko Ult kill listener start",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AbilityEnd",
+                condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "Ultimate") {return;}
+
+                    let ownerTurn = this.ownerTurn;
+                    ownerTurn.battleValues.himekoUltTrackingActive = false;
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Himeko Ult kill listener start",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    let sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.name != ownerTurn.name) {return;}
+
+                    const logicRefValues = ownerTurn.battleValues;
+                    if (!logicRefValues.himekoUltTrackingActive) {return;}//only factor kills from himeko in her ultimate
+
+                    updateEnergy(battleData,5,ownerTurn,false,"Himeko Kill during Ultimate")
+                },
+                "target": "self",
+                "listenerName": "Himeko Ult kill energy listener",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.himekoUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.target = battleData.enemyPositions;
+                        // queueObject.subTarget = battleData.blastTargets;
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Himeko - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.himekoTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Himeko Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "charge": 0,
+            "chargeMax": 3,
+            "himekoFUAQueued": false,
+            "himekoUltTrackingActive": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "traceDOT": "Burn (Himeko)",
+            "traceBurnDMG": "Magma (Trace)",
+            "traceCrit": "Benchmark (Trace)",
+            "e1SPD": "E1: Childhood",
+            "e2HPChecker": "E2: Convergence",
+            "techFireVuln": "Fire Vulnerability (Himeko)",
+        },
+        "characterValuesBattle": {},
+    },
 
 
     //Elation

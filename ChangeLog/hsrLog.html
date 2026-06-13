@@ -6,9 +6,15 @@
     </ul>
 </div> -->
 <div>
-    <h1>June 12th, 2026</h1>
+    <h1>June 13th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the following new characters:
+            <ul>
+                <li>Himeko</li>
+            </ul>
+        </li>
         <li>Reworked how abilities recognize target lists in the context of abilities starting and ending, which allows us to do a lot of new things internally.</li>
         <li>Due to the changes mentioned above, the following actions/triggers have been changed to be more accurate. Many of these are being changed because the correct way just wasn't possible before but is now:
             <ul>
@@ -30,14 +36,9 @@
             </ul>
         </li>
         <li>Changed the visual display for attack expands to display the hit count and AVG total at the top of the expand rather than the bottom.</li>
-        <!-- <h4>Additions</h4>
-        <li>Added the following new characters:
-            <ul>
-                <li>Bailu</li>
-            </ul>
-        </li> -->
 
         <h4>Fixes</h4>
+        <li>Fixed a visual issue where enemy actions in the log would specify their target as "[object Object]" instead of trying to parse the targets name.</li>
         <li>Fixed an issue where Castorice's E2 newbud gain on the Enhanced Skill could proc more than once if you keep Netherwing alive with the new conditions added with the Castorice update.
             <ul>
                 <li>We never had to care about this before since Netherwing was always forced to die no matter what, leaving no chance of multiple procs.</li>

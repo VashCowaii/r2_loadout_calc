@@ -1704,6 +1704,162 @@ const hitSplitters = {
     ],
     "passive": []
   },
+  "Himeko": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 0.40,
+          "energyRatio": 0.40,
+          "toughness": 10,
+          "target": "primary"
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "target": {
+          "hitRatio": 0.60,
+          "energyRatio": 0.60,
+          "toughness": 10,
+          "target": "primary"
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10,
+          "target": "blast"
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10,
+          "target": "blast"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.05,
+          "energyRatio": 0.05,
+          "toughness": 20,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.05,
+          "energyRatio": 0.05,
+          "toughness": 20,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.05,
+          "energyRatio": 0.05,
+          "toughness": 20,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.05,
+          "energyRatio": 0.05,
+          "toughness": 20,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.4,
+          "energyRatio": 0.4,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.6,
+          "energyRatio": 0.7,
+          "toughness": 10,
+          "target": "blast"
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "ult": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20,
+          "target": "all"
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        // "isSourceLastHit": true,
+        // "isAttackLastHit": true
+      }
+    ],
+    "passive": [
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10,
+          "target": "all"
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true
+      },
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 10,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.4,
+          "energyRatio": 0.4,
+          "toughness": 10,
+          "target": "all"
+        },
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ]
+  },
 
   //REMEMBRANCE
   "Aglaea": {
