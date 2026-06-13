@@ -213,6 +213,45 @@ const superGlobal = {
 
         return bounceData;
     },
+    createStandardElementDOTSHEET(ownerTurn,element,overrideObject) {
+        const tags = ["All",element];
+        const keyShortcut = basicShorthand.makeKeysArray;
+        const realDMGKeys = keyShortcut(dmgKeys,tags);
+        const realPENKeys = keyShortcut(resPENKeys,tags);
+        const realShredKeys = keyShortcut(defShredKeys,tags);
+        const realVulnKeys = keyShortcut(vulnKeys,tags);
+        //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+        const actionTags = ["All","DOT"];
+        const compositeCacheTag = tags + actionTags + ownerTurn.properName;
+
+        const baseObject = {
+            "stats": null,
+            "source": "Trace",
+            "sourceOwner": ownerTurn.properName,
+            "buffName": "UNNAMED DOT",
+            "durationInTurn": 3,
+            "duration": 2,
+            "AVApplied": 0,
+            "maxStacks": 1,
+            "currentStacks": 1,
+            "decay": false,
+            "expireType": "EndTurn",
+            "isDOT": true,
+            "isDebuff": true,
+            "element": element,
+            "multiplier": 0.30,
+            "scalar": "ATK",
+            "slot": "Trace",
+            "ownerSlot": ownerTurn.name,
+            "avgChanceApplied": 1,
+            "baseChance": 0.50,
+            tags,actionTags,compositeCacheTag,
+            realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+        }
+
+        Object.assign(baseObject,overrideObject)
+        return baseObject;
+    },
     territoryActiveAbortUltimate(battleData,queueObject,sourceTurn) {
         const alreadyActive = battleData.territoryActive;
         if (alreadyActive) {
