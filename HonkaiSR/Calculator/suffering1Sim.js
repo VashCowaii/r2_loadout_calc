@@ -1194,9 +1194,10 @@ const sim = {
             // poke("ActionChosen", battleData, {actionType: currentAction, actionCall: actionCall, sourceTurn});
 
 
-            const poolKey = designatedAction.poolKey;
-            const target = designatedAction.target;
+            
             if (isLog) {
+                const poolKey = designatedAction.poolKey;
+                const target = designatedAction.target;
 
                 logToBattle(battleData,{
                     logType: "ActionChosen",
@@ -1266,11 +1267,18 @@ const sim = {
             //not sure we need to bother designating enemy actions, but we'll leave it here for now just to be safe. Was only added for duping skills for cerydra on the ally side
             poke("ActionChosen", battleData, {actionType: designatedAction.action, actionCall: designatedAction.actionCall, sourceTurn},sourceTurn);
             if (isLog) {
-                logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
+                const poolKey = designatedAction.poolKey;
+                const target = designatedAction.target;
+
+                logToBattle(battleData,{logType: "ActionChosen", actionType: designatedAction.action,
+                    on: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                    actionCall: designatedAction.actionCall.name, source: charName});
                 battleActions.actionLogWrapper(battleData,designatedAction.action,designatedAction.sourceTurn.properName);
 
                 // logToBattle(battleData,{logType: "EnemyAttackStart", actionType: designatedAction.action, on: designatedAction.target, actionCall: designatedAction.actionCall.name, source: charName});
-                logToBattle(battleData,{logType: "EnemyAttackStart", name:designatedAction.properName, target:"N/A", isEnemy: true, isCharacter: false, AV: battleData.sumAV, actionSlot:designatedAction.action});
+                logToBattle(battleData,{logType: "EnemyAttackStart", name:designatedAction.properName, 
+                    target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
+                    isEnemy: true, isCharacter: false, AV: battleData.sumAV, actionSlot:designatedAction.action});
             }
 
             
