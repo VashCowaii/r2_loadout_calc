@@ -1,92 +1,212 @@
-global.calcAllowedSet = new Set([
+const vashCharProgressList = [
     //NIHILITY
     //5star
-    "Silver Wolf",                      //DONE
-    "Kafka",                            //DONE
-    "Hysilens",                         //DONE
-    "Black Swan",                       //DONE
-    "Welt",                             //DONE
-    "Acheron",                          //DONE
-    "Mortenax Blade",                   //DONE
-    // "The Dahlia",                    //not yet
+    {name: "Acheron",
+        completed: true, live: false, needs80OrTraces: false, owned: true},
+    {name: "Black Swan",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Cipher",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Fugue",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Hysilens",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Jiaoqiu",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Kafka",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Mortenax Blade",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Silver Wolf",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "The Dahlia",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Welt",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     //4star
-    "Pela",                             //DONE
-    
+    {name: "Guinaifen",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Luka",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Pela",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Sampo",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+
 
     //ERUDITION
-    //5star
-    "Argenti",                          //DONE
-    "Anaxa",                            //DONE
-    "Jing Yuan",                        //DONE
-    "Himeko",                           //not yet
+    {name: "Anaxa",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Argenti",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Himeko",
+        completed: true, live: false, needs80OrTraces: false, owned: true},
+    {name: "Jade",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Jing Yuan",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Rappa",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "The Herta",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
     //4star
-    "Serval",                           //not yet
-    "Herta",                            //not yet
+    {name: "Herta",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Qingque",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Serval",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+
 
     //DESTRUCTION
-    //5star
-    "Saber",                            //DONE
-    "Blade",                            //DONE
-    "Jingliu",                          //DONE
-    "Firefly",                          //DONE
-    "Phainon",                          //not yet
-    "Dan Heng • Imbibitor Lunae",       //DONE
+    {name: "Blade",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Clara",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Dan Heng • Imbibitor Lunae",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Firefly",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Jingliu",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Mydei",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Phainon",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Saber",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Trailblazer - Destruction",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Yunli",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
     //4star
-    "Hook",                             //DONE
+    {name: "Arlan",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Hook",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Misha",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Xueyi",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
 
-    //HUNT
-    //5star
-    "Topaz & Numby",                    //DONE
-    "Archer",                           //DONE
-    "Seele",                            //DONE
-    "Dr. Ratio",                        //DONE
+    //THE HUNT
+    {name: "Archer",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Ashveil",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Boothill",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Dr. Ratio",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Feixiao",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Seele",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Topaz & Numby",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Yanqing",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
     //4star
+    {name: "Dan Heng",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "March 7th - The Hunt",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Moze",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Sushang",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
 
     //HARMONY
-    //5star
-    "Bronya",                           //DONE
-    "Robin",                            //DONE
-    "Sunday",                           //DONE
-    "Tribbie",                          //DONE
-    "Ruan Mei",                         //DONE
-    "Sparkle",                          //DONE
+    {name: "Bronya",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Cerydra",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Robin",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Ruan Mei",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Sparkle",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Sunday",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Trailblazer - Harmony",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Tribbie",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     //4star
-    "Tingyun",                          //DONE
-    "Asta",                             //DONE
-    "Hanya",                            //not yet
+    {name: "Asta",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Hanya",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Tingyun",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Yukong",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
 
     //ABUNDANCE
-    //5star
-    "Huohuo",                           //DONE
-    "Luocha",                           //DONE
-    "Bailu",                            //DONE
+    {name: "Bailu",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Huohuo",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Lingsha",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Luocha",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     //4star
-    "Gallagher",                        //DONE
-    "Natasha",                          //DONE
-    "Lynx",                             //DONE
+    {name: "Gallagher",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Lynx",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Natasha",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
 
     //PRESERVATION
-    //5star
-    "Dan Heng • Permansor Terrae",      //DONE
-    "Aventurine",                       //DONE
+    {name: "Aventurine",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Dan Heng • Permansor Terrae",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Fu Xuan",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Gepard",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
+    {name: "Trailblazer - Preservation",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
     //4star
-
+    {name: "March 7th - Preservation",
+        completed: false, live: false, needs80OrTraces: true, owned: true},
 
     //REMEMBRANCE
-    //5star
-    "Trailblazer - Remembrance",        //DONE
-    "Aglaea",                           //DONE
-    "Evernight",                        //DONE
-    "Hyacine",                          //DONE
-    "Castorice",                        //DONE
-    //4star
+    {name: "Aglaea",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Castorice",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Cyrene",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Evernight",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Hyacine",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Trailblazer - Remembrance",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
 
     //ELATION
-    //5star
-    "Yao Guang",                        //DONE
-    "Sparxie",                          //DONE
-    "Trailblazer - Elation",            //DONE
-    "Silver Wolf LV.999",               //DONE
-    "Evanescia",                        //DONE
-    //4star
-]);
+    {name: "Yao Guang",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Sparxie",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Trailblazer - Elation",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Silver Wolf LV.999",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Evanescia",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
+]
+
+let vashCharProgressListPOST = [];
+for (let charEntry of vashCharProgressList) {
+    if (charEntry.owned && !charEntry.needs80OrTraces) {
+        vashCharProgressListPOST.push(charEntry.name);
+    }
+}
+
+global.calcAllowedSet = new Set(vashCharProgressListPOST);

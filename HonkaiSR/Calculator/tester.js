@@ -41,7 +41,7 @@ const customMenu = {
         readSelection("customMenuMainHolderBox").style.display = "flex";
         readSelection("customMenuSearchTitle").innerHTML = "Lightcones";
 
-        readSelection("customMenuSearchNote").innerHTML = "Search for a lightcone NAME, DESCRIPTION, or SIGNATURE CHARACTER.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.";
+        readSelection("customMenuSearchNote").innerHTML = `Search for a lightcone <span class="descriptionNumberColor">NAME</span>, <span class="descriptionNumberColor">DESCRIPTION</span>, or <span class="descriptionNumberColor">SIGNATURE CHARACTER</span>.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.`;
 
     
 
@@ -65,7 +65,7 @@ const customMenu = {
             "3": "Relics 3-4",
         }
         readSelection("customMenuSearchTitle").innerHTML = searchRef[relicSet];
-        readSelection("customMenuSearchNote").innerHTML = "Search for a relic NAME or effect DESCRIPTION.";
+        readSelection("customMenuSearchNote").innerHTML = `Search for a relic <span class="descriptionNumberColor">NAME</span> or effect <span class="descriptionNumberColor">DESCRIPTION</span>.`;
 
         globalUI.currentSearchOpen = searchRef[relicSet];
         globalUI.currentSearchVolume = relicSets;
@@ -710,7 +710,15 @@ const customMenu = {
         readSelection("customMenuMainHolderBox").style.display = "flex";
         readSelection("customMenuSearchTitle").innerHTML = "Characters";
 
-        readSelection("customMenuSearchNote").innerHTML = "Search for character NAME, PATH, or ELEMENT.";
+        readSelection("customMenuSearchNote").innerHTML = `Search for character <span class="descriptionNumberColor">NAME</span>, <span class="descriptionNumberColor">PATH</span>, or <span class="descriptionNumberColor">ELEMENT</span>.
+        <br>
+            <div class="starAndSearchRow1">
+                <a class="characterSearchButton clickable" href="/HonkaiSR/Progress/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Progress List</a>
+            </div>
+        `;
+
+        // <a href="https://youtu.be/_4kk4EEHJKw" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">Optimizer<br>Guide</a>
+        // <a href="/HonkaiSR/Progress/" rel="noopener noreferrer" class="headerDropdownLink">Char. Progress</a>
 
         globalUI.currentSearchOpen = "characters";
         globalUI.currentSearchVolume = characters;
