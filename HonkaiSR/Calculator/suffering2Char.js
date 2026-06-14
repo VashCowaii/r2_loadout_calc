@@ -10930,32 +10930,46 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotDetonateFunction: logicRef.skillFunctions.kafkaSkillDetonate
+                    }
+                    ATKObjects.kafkaSkillATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
                     }
                 }
-                let ATKObject = ATKObjects.kafkaSkillATKOBJECT;
+                const ATKObject = ATKObjects.kafkaSkillATKOBJECT;
+                const ATKObject2 = ATKObjects.kafkaSkillATKOBJECTPOST;
+                const skillFunctions = logicRef.skillFunctions;
+                const kafkaSkillDetonate = skillFunctions.kafkaSkillDetonate;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                kafkaSkillDetonate(battleData,sourceTurn,chainedAttackRef,values)
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
-            kafkaSkillDetonate(battleData,sourceTurn,generalInfo) {
-                const logicRef = turnLogic[sourceTurn.properName];
-                const ATKObjects = logicRef.ATKObjects;
-
-                const values = ATKObjects.kafkaSkillREFVALUES;//no ??= here bc the skill will always define the values ref before this is ever called
+            kafkaSkillDetonate(battleData,sourceTurn,generalInfo,values) {
                 const primaryMulti = values[1];
                 const blastMulti = values[3];
 
                 const detonate = battleActions.dotDetonateWrapper;
 
-                const primaryTarget = battleData.primaryTarget;
-                // primaryTarget.buffsObject["Arcana [Black Swan]"].currentStacks = 17;
-                if (!primaryTarget.isDead) {detonate(battleData,sourceTurn,primaryMulti,primaryTarget);}
-                const blastArray = battleData.blastTargets;
-                if (blastArray.length) {
-                    const blast1 = blastArray[0];
-                    const blast2 = blastArray[1];
-                    if (blast1 && !blast1.isDead) {detonate(battleData,sourceTurn,blastMulti,blast1);}
-                    if (blast2 && !blast2.isDead) {detonate(battleData,sourceTurn,blastMulti,blast2);}
+                const primaryTargetArray = generalInfo.primaryTargetArray;
+                const subTargetArray = generalInfo.subTargetArray;
+
+                for (let enemy of primaryTargetArray) {
+                    detonate(battleData,sourceTurn,primaryMulti,enemy);
+                }
+                for (let enemy of subTargetArray) {
+                    detonate(battleData,sourceTurn,blastMulti,enemy);
                 }
             },
             kafkaFUA(battleData,actionObject,sourceTurn) {
@@ -11014,24 +11028,43 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        isFUA: true,
-                        dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
-                        dotDetonateFunction: logicRef.skillFunctions.kafkaTalentDetonate
+                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
+                    }
+                    ATKObjects.kafkaFUAATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                 }
-                let ATKObject = ATKObjects.kafkaFUAATKOBJECT;
+                const ATKObject = ATKObjects.kafkaFUAATKOBJECT;
+                const ATKObject2 = ATKObjects.kafkaFUAATKOBJECTPOST;
+                const skillFunctions = logicRef.skillFunctions;
+                const kafkaTalentDetonate = skillFunctions.kafkaTalentDetonate;
+                const kafkaUltimateDOT = skillFunctions.kafkaUltimateDOT;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                kafkaUltimateDOT(battleData,sourceTurn,chainedAttackRef)
+                kafkaTalentDetonate(battleData,sourceTurn,chainedAttackRef)
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
             kafkaTalentDetonate(battleData,sourceTurn,generalInfo) {
                 const talentMulti = 0.80;
 
-                const enemiesHit = generalInfo.targetsGotHit;
-                const enemyTurns = battleData.enemyBasedTurns;
+                const primaryTargetArray = generalInfo.primaryTargetArray;
                 const detonate = battleActions.dotDetonateWrapper;
-                for (let enemySlot in enemiesHit) {
-                    const currentEnemy = enemyTurns[enemySlot];
-                    detonate(battleData,sourceTurn,talentMulti,currentEnemy);
+                for (let enemy of primaryTargetArray) {
+                    detonate(battleData,sourceTurn,talentMulti,enemy);
                 }
             },
             kafkaUltimate(battleData,actionObject,sourceTurn) {
@@ -11039,10 +11072,11 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const skillRef = ATKObjects.kafkaUltimateREF ??= ATKObjects.Ultimate["Twilight Trill"].variant1;
+                const values = ATKObjects.kafkaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.kafkaUltimateATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
-                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    
                     const scalar = "ATK";
                     const tags = ["All","Lightning"];
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -11067,13 +11101,35 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
-                        dotDetonateFunction: logicRef.skillFunctions.kafkaUltimateDetonate
+                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
+                    }
+                    ATKObjects.kafkaUltimateATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                 }
-                let ATKObject = ATKObjects.kafkaUltimateATKOBJECT;
+                const ATKObject = ATKObjects.kafkaUltimateATKOBJECT;
+                const ATKObject2 = ATKObjects.kafkaUltimateATKOBJECTPOST;
+                const skillFunctions = logicRef.skillFunctions;
+                const kafkaUltimateDetonate = skillFunctions.kafkaUltimateDetonate;
+                const kafkaUltimateDOT = skillFunctions.kafkaUltimateDOT;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                kafkaUltimateDOT(battleData,sourceTurn,chainedAttackRef)
+                kafkaUltimateDetonate(battleData,sourceTurn,chainedAttackRef,values[4])
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 const valuesRef = sourceTurn.battleValues;
                 const oldValue = valuesRef.fuaStacks;
@@ -11098,7 +11154,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            kafkaUltimateDOT(battleData,sourceTurn,generalInfo) {
+            kafkaUltimateDOT(battleData,sourceTurn,generalInfo) {//chainedAttackRef
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 
@@ -11148,26 +11204,16 @@ const turnLogic = {
                 }
                 const dotSheet = ATKObjects.kafkaUltimateDOTSHEET;
 
-                const enemiesHit = generalInfo.targetsGotHit;
-                const enemyTurns = battleData.enemyBasedTurns;
-                // const getChance = battleActions.getChanceToApply;
-                // const baseChance = values[1];
-
-                generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
+                const primaryTargetArray = generalInfo.primaryTargetArray;
+                for (let enemy of primaryTargetArray) {
+                    generalApplyDOT(battleData,sourceTurn,enemy,dotSheet,null,null,false);
+                }
             },
-            kafkaUltimateDetonate(battleData,sourceTurn,generalInfo) {
-                const logicRef = turnLogic[sourceTurn.properName];
-                const ATKObjects = logicRef.ATKObjects;
-
-                const values = ATKObjects.kafkaUltimateREFVALUES
-                const ultMulti = values[4];
-
-                const enemiesHit = generalInfo.targetsGotHit;
-                const enemyTurns = battleData.enemyBasedTurns;
+            kafkaUltimateDetonate(battleData,sourceTurn,generalInfo,ultMulti) {
+                const primaryTargetArray = generalInfo.primaryTargetArray;
                 const detonate = battleActions.dotDetonateWrapper;
-                for (let enemySlot in enemiesHit) {
-                    const currentEnemy = enemyTurns[enemySlot];
-                    detonate(battleData,sourceTurn,ultMulti,currentEnemy);
+                for (let enemy of primaryTargetArray) {
+                    detonate(battleData,sourceTurn,ultMulti,enemy);
                 }
             },
             kafkaTechnique(battleData,actionObject,sourceTurn) {
