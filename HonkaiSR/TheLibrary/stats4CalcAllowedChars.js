@@ -18,6 +18,7 @@ global.calcAllowedSet = new Set([
     "Argenti",                          //DONE
     "Anaxa",                            //DONE
     "Jing Yuan",                        //DONE
+    "Himeko",                           //not yet
     //4star
     "Serval",                           //not yet
     "Herta",                            //not yet
