@@ -19012,7 +19012,21 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        isFUA: true,
+                        compositeCacheTag
+                    }
+                    ATKObjects.ratioFUAATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
                         compositeCacheTag
                     }
                 }
@@ -19022,8 +19036,16 @@ const turnLogic = {
                     updateEnergy(battleData,15,sourceTurn,false,"Dr. Ratio E4");
                 }
                 let ATKObject = ATKObjects.ratioFUAATKOBJECT;
+                let ATKObject2 = ATKObjects.ratioFUAATKOBJECTPOST;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (rank >= 2) {
+                    let enemiesAttackedThisAction = chainedAttackRef.targetsGotHit;
+        
+                    const ratioE2DMG = logicRef.skillFunctions.ratioE2DMG;
+                    ratioE2DMG(battleData,chainedAttackRef,sourceTurn,enemiesAttackedThisAction);
+                }
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
             ratioSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -19306,20 +19328,14 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                     }
-                    
-                    //e2
-                    if (rank >= 2) {
-                        const listener1 = passiveListeners[0];
-                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
-                    }
 
                     //trace deduction
-                    const listener2 = passiveListeners[1];
+                    const listener2 = passiveListeners[0];
                     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
                     //e1
                     if (rank >= 1) {
-                        const listener3 = passiveListeners[2];
+                        const listener3 = passiveListeners[1];
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
                     }
 
@@ -19351,26 +19367,6 @@ const turnLogic = {
                 "listenerName": "Dr. Ratio Passive",
                 "ownerTurn": {},
                 "passiveListeners": [
-                    {
-                        "trigger": "AdditionalTriggerAttackEnd",
-                        condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
-
-                            const slot = generalInfo.dmgSlot;
-                            if (slot != "Talent") {return;}
-        
-                            let sourceTurn = generalInfo.sourceTurn;
-                            let enemiesAttackedThisAction = generalInfo.targetsGotHit;
-        
-                            const ratioE2DMG = this.ratioE2DMG ??= turnLogic[characterName].skillFunctions.ratioE2DMG;
-                            ratioE2DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
-                        },
-                        "target": "enemy",
-                        "isPersonal": true,
-                        "listenerName": "Ratio E2 additional DMG controller",
-                        "ownerTurn": {},
-                    },
                     {
                         "trigger": "AllyDMGStart",
                         condition(battleData,generalInfo) {
