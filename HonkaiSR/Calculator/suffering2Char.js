@@ -43138,7 +43138,7 @@ const turnLogic = {
 
 
 
-
+                    const allyArray = battleData.allAlliesArray;
                     if (rank >= 1) {
                         const buffSheet = this.yaoguangE1SHREDSHEET ??= {
                             "stats": [DEFShredAll],
@@ -43156,7 +43156,7 @@ const turnLogic = {
                             "actionTags": ["Elation"]
                         };
 
-                        const allyArray = battleData.allAlliesArray;
+                        
                         updateBuffBatchTargets(battleData,allyArray,buffSheet);
                     }
 
@@ -43181,8 +43181,6 @@ const turnLogic = {
                             "expireType": null,
                             "actionTags": ["Elation"]
                         };
-
-                        const allyArray = battleData.allAlliesArray;
 
                         updateBuffBatchTargets(battleData,allyArray,buffSheet);
                     }
@@ -43212,6 +43210,11 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
+                    const listener4 = passiveListeners[3];
+                    for (let ally of allyArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ally,null,ownerTurn);
+                    }
+                    
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
@@ -43261,6 +43264,33 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Poised and Sated elation skill skill point gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (sourceTurn.isEnemy || (sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite)) {return;}
+        
+                            const useExtrahit = sourceTurn.yaoSkillPointUsedTracker && sourceTurn.yaoAttackStartedTracker;
+                            sourceTurn.yaoSkillPointUsedTracker = false;
+                            sourceTurn.yaoAttackStartedTracker = false;
+        
+                            if (!providerTurn.certifiedBanger) {return;}//banger needs to be active
+        
+                            const yaoCertifiedAdditionalDMG = this.yaoCertifiedAdditionalDMG ??= turnLogic[providerTurn.properName].skillFunctions.yaoCertifiedAdditionalDMG
+                            yaoCertifiedAdditionalDMG(battleData,providerTurn,sourceTurn,generalInfo);
+        
+                            if (useExtrahit) {
+                                yaoCertifiedAdditionalDMG(battleData,providerTurn,sourceTurn,generalInfo);
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Talent certified elation additional dmg",
                         "ownerTurn": {},
                     },
                 ],
@@ -43338,32 +43368,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Talent certified elation double dmg instance tracker: ult start",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.isEnemy || (sourceTurn.isUniqueEvent && !sourceTurn.isMemosprite)) {return;}
-
-                    const useExtrahit = sourceTurn.yaoSkillPointUsedTracker && sourceTurn.yaoAttackStartedTracker;
-                    sourceTurn.yaoSkillPointUsedTracker = false;
-                    sourceTurn.yaoAttackStartedTracker = false;
-
-                    if (!ownerTurn.certifiedBanger) {return;}//banger needs to be active
-
-                    const yaoCertifiedAdditionalDMG = this.yaoCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.yaoCertifiedAdditionalDMG
-                    yaoCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
-
-                    if (useExtrahit) {
-                        yaoCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
-                    }
-                    
-                },
-                "target": "enemy",
-                "listenerName": "Talent certified elation additional dmg",
                 "ownerTurn": {},
             },
             {
