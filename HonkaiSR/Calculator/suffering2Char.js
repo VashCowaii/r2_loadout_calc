@@ -37715,11 +37715,20 @@ const turnLogic = {
                             all: valuesUlt[1],
                         },
                         // allToughness: false,
-                        isFUA: true,
+                        isSummon: true,
+                    }
+                    const overrideATKData2 = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        // allToughness: false,
                         isSummon: true,
                     }
 
                     ATKObjects.dhptSouldragonAutoATKOBJECT = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData,skillRef.slot,null)
+                    ATKObjects.dhptSouldragonAutoATKOBJECTPOST = superGlobal.createStandardAttackObject(scalar,tags,actionTags,sourceTurn,overrideATKData2,skillRef.slot,null)
                     // ATKObjects.dhptSouldragonAutoATKOBJECT = {
                     //     multipliers: {
                     //         primary: null,
@@ -37739,8 +37748,16 @@ const turnLogic = {
                     // }
                 }
                 let ATKObject = ATKObjects.dhptSouldragonAutoATKOBJECT;
+                let ATKObject2 = ATKObjects.dhptSouldragonAutoATKOBJECTPOST;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+
+                const battleValues = sourceTurn.battleValues;
+                let bondmateTurn = battleData.nameBasedTurns[battleValues.bondmateSlot];
+                const bondmateAddedDMG = logicRef.skillFunctions.bondmateAddedDMG;
+                bondmateAddedDMG(battleData,sourceTurn,bondmateTurn,chainedAttackRef);
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
             dhptUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -37780,13 +37797,39 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag
                     }
+                    ATKObjects.dhptUltimateATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
                 }
                 const ATKObject = ATKObjects.dhptUltimateATKOBJECT;
+                const ATKObject2 = ATKObjects.dhptUltimateATKOBJECTPOST;
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.souldragonEnhancedTurns = 2 + (rank>=2 ? 2 : 0);
                 logicRef.skillFunctions.dhptUltimateShield(battleData,sourceTurn);
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+
+                const bondmateSlot = battleValues.bondmateSlot;
+                if (rank >= 6 && bondmateSlot) {
+                    let bondmateTurn = battleData.nameBasedTurns[bondmateSlot];
+                    const e6ADDDMG = logicRef.skillFunctions.bondmateAddedDMGE6;
+                    e6ADDDMG(battleData,sourceTurn,bondmateTurn,chainedAttackRef);
+                }
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 battleValues.souldragonEnhanced = true;
 
@@ -38094,8 +38137,6 @@ const turnLogic = {
                     if (rank >= 6) {
                         const listener5 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
-                        const listener6 = passiveListeners[5];
-                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
@@ -38184,26 +38225,6 @@ const turnLogic = {
                         },
                         "target": "enemy",
                         "listenerName": "E6 vuln application enemy added to field while bondmate exists",
-                        "ownerTurn": {},
-                    },
-                    {
-                        "trigger": "AdditionalTriggerAttackEnd",
-                        condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
-        
-                            const sourceTurn = generalInfo.sourceTurn;
-                            const battleValues = ownerTurn.battleValues;
-                            if (!battleValues.bondmateSlot || sourceTurn.properName != characterName || generalInfo.dmgSlot != "Ultimate") {return;}
-                            //if the bondmate isn't assigned yet, or the source of the attack isn't dan, or if it is dan but it's not considered his summon, then abort
-        
-                            // let logicRef = turnLogic[characterName];
-                            let targetTurn = battleData.nameBasedTurns[battleValues.bondmateSlot];
-                            const e6ADDDMG = this.e6ADDDMG ??= turnLogic[characterName].skillFunctions.bondmateAddedDMGE6
-                            e6ADDDMG(battleData,ownerTurn,targetTurn,generalInfo);
-                        },
-                        "target": "enemy",
-                        "listenerName": "E6 Souldragon took action - bondmate additional DMG",
                         "ownerTurn": {},
                     },
                 ],
@@ -38324,24 +38345,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "DHPT: Souldragon event creation",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (!ownerTurn.battleValues.bondmateSlot || sourceTurn.properName != characterName || !generalInfo.ATKObject.isSummon) {return;}
-                    //if the bondmate isn't assigned yet, or the source of the attack isn't dan, or if it is dan but it's not considered his summon, then abort
-
-                    let targetTurn = battleData.nameBasedTurns[ownerTurn.battleValues.bondmateSlot];
-                    const bondmateAddedDMG = this.bondmateAddedDMG ??= turnLogic[characterName].skillFunctions.bondmateAddedDMG;
-                    bondmateAddedDMG(battleData,ownerTurn,targetTurn,generalInfo);
-                },
-                "target": "enemy",
-                "listenerName": "Souldragon took action - bondmate additional DMG",
                 "ownerTurn": {},
             },
             {
