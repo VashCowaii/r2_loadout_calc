@@ -1973,7 +1973,7 @@ const turnLogicLightcones = {
                 ]
             },
             {
-                "trigger": "AdditionalTriggerAttackEnd",
+                "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
                     // let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
