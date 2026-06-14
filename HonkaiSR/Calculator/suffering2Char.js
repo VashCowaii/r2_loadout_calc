@@ -3699,12 +3699,10 @@ const battleActions = {
             const newTotals = generalInfo.totals;
 
             poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
-            ATKObject.dotApplyFunction?.(battleData,sourceTurn,generalInfo);
             poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
             poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             poke("AttackEnd",battleData,generalInfo,sourceTurn);
-            ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
             
             if (logging) {
                 let totalsRef = battleData.battleTotal;
