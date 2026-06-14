@@ -29588,12 +29588,11 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotApplyFunctionPost: logicRef.skillFunctions.hookSkillDOT,
                     }
                 }
                 let ATKObject = ATKObjects.hookSkillATKOBJECT;
-
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                logicRef.skillFunctions.hookSkillDOT(battleData,sourceTurn,chainedAttackRef)
             },
             hookSkillEnh(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
@@ -29630,17 +29629,17 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotApplyFunctionPost: logicRef.skillFunctions.hookSkillDOT,
                     }
 
                 }
                 let ATKObject = ATKObjects.hookSkillATKOBJECT2;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                logicRef.skillFunctions.hookSkillDOT(battleData,sourceTurn,chainedAttackRef)
 
                 sourceTurn.battleValues.isEnhanced = false;
             },
-            hookSkillDOT(battleData,sourceTurn,generalInfo,directTarget) {
+            hookSkillDOT(battleData,sourceTurn,generalInfo) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
                 
@@ -29691,13 +29690,14 @@ const turnLogic = {
                 }
                 const dotSheet = ATKObjects.hookSkillDOTSHEET;
 
-                if (directTarget) {
-                    generalApplyDOT(battleData,sourceTurn,directTarget,dotSheet,null,null,false);
+                const primaryTargetArray = generalInfo.primaryTargetArray;
+                const subTargetArray = generalInfo.subTargetArray;
+
+                for (let enemy of primaryTargetArray) {
+                    generalApplyDOT(battleData,sourceTurn,enemy,dotSheet,null,null,false);
                 }
-                else {
-                    const enemiesHit = generalInfo.targetsGotHit;
-                    const enemyTurns = battleData.enemyBasedTurns;
-                    generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
+                for (let enemy of subTargetArray) {
+                    generalApplyDOT(battleData,sourceTurn,enemy,dotSheet,null,null,false);
                 }
             },
             hookUltimate(battleData,actionObject,sourceTurn) {
