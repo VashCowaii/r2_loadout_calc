@@ -11741,7 +11741,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotDetonateFunction: null,//logicRef.skillFunctions.kafkaSkillDetonate
                     }
 
                     const buffNames = logicRef.buffNames;
@@ -12280,28 +12279,45 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
-                        dotDetonateFunction: logicRef.skillFunctions.fishladyUltimateDetonate
+                    }
+                    ATKObjects.fishladyUltimateATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
                     }
                 }
-                let ATKObject = ATKObjects.fishladyUltimateATKOBJECT;
+                const ATKObject = ATKObjects.fishladyUltimateATKOBJECT;
+                const ATKObject2 = ATKObjects.fishladyUltimateATKOBJECTPOST;
 
+                const detonateCall = logicRef.skillFunctions.fishladyUltimateDetonate;
                 const addHysilensField = ATKObjects.addHysilensField ??= logicRef.skillFunctions.addHysilensField;
                 addHysilensField(battleData,sourceTurn);
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                detonateCall(battleData,sourceTurn,chainedAttackRef);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 sourceTurn.ultyQueued = false;
             },
-            fishladyUltimateDetonate(battleData,sourceTurn,generalInfo) {
+            fishladyUltimateDetonate(battleData,sourceTurn,chainedAttackRef) {
                 // const values = sourceTurn.kafkaUltimateREFVALUES;
                 const ultMulti = 1.5;//this is NOT a skill param, the 150% comes from a trace
 
-                const enemiesHit = generalInfo.targetsGotHit;
-                const enemyTurns = battleData.enemyBasedTurns;
+                const target = chainedAttackRef.primaryTargetArray;
+
                 const detonate = battleActions.dotDetonateWrapper;
-                for (let enemySlot in enemiesHit) {
-                    const currentEnemy = enemyTurns[enemySlot];
-                    detonate(battleData,sourceTurn,ultMulti,currentEnemy);
+                for (let enemy of target) {
+                    detonate(battleData,sourceTurn,ultMulti,enemy);
                 }
             },
             fishladyTechnique(battleData,actionObject,sourceTurn) {
@@ -13122,7 +13138,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotDetonateFunction: null,//logicRef.skillFunctions.kafkaSkillDetonate
                     }
                 }
                 let ATKObject = ATKObjects.blackswanSkillATKOBJECT;
@@ -13169,8 +13184,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
-                        // dotDetonateFunction: logicRef.skillFunctions.fishladyUltimateDetonate
                     }
 
                     const buffNames = logicRef.buffNames;
