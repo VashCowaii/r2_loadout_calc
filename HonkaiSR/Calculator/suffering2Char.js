@@ -23043,11 +23043,11 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotApplyFunction: logicRef.skillFunctions.astaTraceDOT,
                     }
                 }
                 let ATKObject = ATKObjects.astaBasicATKOBJECT;
 
+                logicRef.skillFunctions.astaTraceDOT(battleData,sourceTurn,actionObject)
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
             astaTraceDOT(battleData,sourceTurn,generalInfo) {
@@ -23095,12 +23095,10 @@ const turnLogic = {
                     }
                 }
                 const dotSheet = ATKObjects.astaTraceDOTSHEET;
-
-                const enemiesHit = generalInfo.targetsGotHit;
-                const enemyTurns = battleData.enemyBasedTurns;
-            
-
-                generalApplyDOT(battleData,sourceTurn,null,dotSheet,enemiesHit,enemyTurns,false);
+                const primaryTargetArray = generalInfo.target;
+                for (let enemy of primaryTargetArray) {
+                    generalApplyDOT(battleData,sourceTurn,enemy,dotSheet,null,null,false);
+                }
             },
             astaSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
