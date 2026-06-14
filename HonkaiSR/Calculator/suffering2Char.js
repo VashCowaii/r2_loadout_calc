@@ -10499,21 +10499,20 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AdditionalTriggerAttackEnd",
+                        "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             let characterName = ownerTurn.properName;
-        
-                            let sourceTurn = generalInfo.sourceTurn;
                             let enemiesAttackedThisAction = battleData.enemyPositions;//her ult is an AOE attack so... everyone gets hit
         
                             //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
-                            if (sourceTurn.properName != characterName || sourceTurn.rank < 4 || generalInfo.dmgSlot != "Ultimate") {return;}
+                            if (generalInfo.dmgSlot != "Ultimate") {return;}
     
                             const swE4DMG = this.swE4DMG ??= turnLogic[characterName].skillFunctions.swE4DMG;
-                            swE4DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                            swE4DMG(battleData,generalInfo,ownerTurn,enemiesAttackedThisAction);
                         },
                         "target": "enemy",
+                        "isPersonal": true,
                         "listenerName": "Silver Wolf E4 additional DMG controller",
                         "ownerTurn": {},
                     },
