@@ -10813,6 +10813,7 @@ const turnLogic = {
             "Ultimate": "Enemies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
             "FUA": "Enemies (On-Field)",
+            "Technique": "Enemies (On-Field)",
         },
         "skillFunctions": {
             kafkaBasic(battleData,actionObject,sourceTurn) {
@@ -11027,7 +11028,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                     ATKObjects.kafkaFUAATKOBJECTPOST = {
                         multipliers: {
@@ -11043,7 +11043,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                 }
                 const ATKObject = ATKObjects.kafkaFUAATKOBJECT;
@@ -11100,7 +11099,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                     ATKObjects.kafkaUltimateATKOBJECTPOST = {
                         multipliers: {
@@ -11116,7 +11114,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                 }
                 const ATKObject = ATKObjects.kafkaUltimateATKOBJECT;
@@ -11248,13 +11245,13 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT,
                     }
                 }
                 const ATKObject = ATKObjects.kafkaTechATKObject;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: actionObject?.target, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
+                logicRef.skillFunctions.kafkaUltimateDOT(battleData,sourceTurn,chainedAttackRef)
             },
         },
         "listeners": [
@@ -11635,6 +11632,21 @@ const turnLogic = {
                 if (currentWave != 1) {return;}
 
                 let ownerTurn = this.ownerTurn;
+
+                // const techCall = this.returnTechCall ??= createQueueObject(ownerTurn,{
+                //     actionCall: this.skillFunctions.kafkaTechnique,
+                //     action: "Technique",
+                //     points: 0, 
+    
+                //     isAttack: true,
+                //     isAbility: false,
+                //     useAnyTriggers: false,
+                //     eventTypeStartLOG: "TechniqueStart",
+    
+                //     poolKey: this.abilityTargetPools.Technique,
+                // })
+                // techCall.sourceTurn = thisTurn;
+                // techCall.target = battleData.enemyPositions;
 
                 const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.kafkaTechnique;
                 callTech(battleData,null,ownerTurn);
@@ -29845,7 +29857,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunctionPost: logicRef.skillFunctions.hookTechDOT,
                     }
                 }
                 let ATKObject = ATKObjects.hookTechATKObject;
@@ -40011,7 +40022,6 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
-                        // dotApplyFunction: logicRef.skillFunctions.astaTraceDOT,
                     }
                 }
                 let ATKObject = ATKObjects.anaxaBasicATKOBJECT;
