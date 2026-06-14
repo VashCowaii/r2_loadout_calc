@@ -4493,12 +4493,13 @@ const battleActions = {
             }
         }
     },
-    addListenerWithPriority(battleData,listenerObject,trigger,assignOwnerTurn,ownersSlots) {
+    addListenerWithPriority(battleData,listenerObject,trigger,assignOwnerTurn,ownersSlots,providerTurn) {
         const isPersonal = listenerObject.isPersonal;
         const personalRef = isPersonal ? (battleData.battleListenersPersonal[assignOwnerTurn.properName] ??= {}) : null;
 
         let listenerRef = (isPersonal ? (personalRef[trigger] ??= []) : battleData.battleListeners[trigger] ??= []);
         if (assignOwnerTurn) {listenerObject.ownerTurn = assignOwnerTurn;}
+        if (providerTurn) {listenerObject.providerTurn = providerTurn;}
         if (ownersSlots) {listenerObject.ownersSlots = ownersSlots;}
 
         if (!listenerRef.length) {listenerRef.push(listenerObject);}
@@ -22817,6 +22818,12 @@ const turnLogic = {
                     const listener2 = passiveListeners[1];
                     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
+                    //additional dmg handling
+                    const listener3 = passiveListeners[2];
+                    for (let ally of allyArray) {
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
@@ -22848,6 +22855,26 @@ const turnLogic = {
                         "target": "self",
                         "priority": -80,
                         "listenerName": "Coloratura Cadenza: battlestart advance",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            if (!providerTurn.battleValues.robinConcertoActive) {return;}
+        
+                            // let characterName = ownerTurn.properName;
+                            // let logicRef = turnLogic[characterName];
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const ultAddedDMG = this.ultAddedDMG ??= turnLogic[providerTurn.properName].skillFunctions.ultAddedDMG;
+                            ultAddedDMG(battleData,generalInfo,providerTurn,targetsGotHit);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Robin ult - ally attack listener for additional dmg",
                         "ownerTurn": {},
                     },
                 ],
@@ -22894,24 +22921,7 @@ const turnLogic = {
                 "listenerName": "Robin - Ultimate queued",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy || !ownerTurn.battleValues.robinConcertoActive) {return;}
-
-                    // let characterName = ownerTurn.properName;
-                    // let logicRef = turnLogic[characterName];
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const ultAddedDMG = this.ultAddedDMG ??= turnLogic[ownerTurn.properName].skillFunctions.ultAddedDMG;
-                    ultAddedDMG(battleData,generalInfo,ownerTurn,targetsGotHit);
-                },
-                "target": "enemy",
-                "listenerName": "Robin ult - ally attack listener for additional dmg",
-                "ownerTurn": {},
-            },
+            
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
