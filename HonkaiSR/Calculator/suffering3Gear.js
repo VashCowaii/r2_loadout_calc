@@ -7775,119 +7775,141 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
-                "trigger": "AbilityStart",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "BasicATK" && action != "Skill" && action != "Ultimate") {return;}
-                    //ACTION IS NOT ACTUALLY FACTORED, the LC is only looking for use, not usetype, I was jebaited
-                    //UPDATE: they change it, it now looks for the abilities stated in the lc
+                    let ownerRef = this.owners;
 
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
 
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
 
-                    if (!sourceTurn.longMayRainbowsVALUES) {
-                        let lcNameRef = "Long May Rainbows Adorn the Sky";
-                        // const logicRef = turnLogicLightcones[lcNameRef];
-                        let lcPathing = lightcones[lcNameRef].params;
-                        sourceTurn.longMayRainbowsVALUES = lcPathing[ownerRank-1];
-                    }
-                    const values = sourceTurn.longMayRainbowsVALUES;
-                    // console.log(values[1])
+                        const memospriteEventRef = currentTurn.memospriteEventRef;
+                        const memoTurn = memospriteEventRef ? currentTurn[memospriteEventRef] : null;
 
-                    const allyPositions = battleData.allyPositions;
-                    const consumeValue = consumeHP(battleData,null,values[1],allyPositions,sourceTurn,"Lightcone",false,true).totalEaten;
-
-                    // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
-                    // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
-
-                    const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
-                    sourceTurn.longMayRainbowsHPTally += + consumeValue;
-                    if (battleData.isLoggyLogger) {
-                        logToBattle(battleData,
-                            {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
-                    }
-                },
-                "target": "self",
-                "listenerName": "Long May Rainbows Adorn the Sky - owner ability listener",
-                "owners": [],
-                "buffNames": {},
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "MemoSkill") {return;}
-
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
-
-                    let ownersSlots = this.ownersSlots;
-                    let ownerRank = ownersSlots[ownerTurn.name];
-                    if (!ownerRank) {return;}
-
-                    if (!ownerTurn.longMayRainbowsVULNSHEET) {
-                        let lcNameRef = "Long May Rainbows Adorn the Sky";
-                        const logicRef = turnLogicLightcones[lcNameRef];
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        const buffNames = logicRef.buffNames;
-                        // let ownerName = sourceTurn.properName;
-
-                        ownerTurn.longMayRainbowsVULNSHEET = {
-                            "stats": [VulnAll],
-                            [VulnAll]: rankParams[3],
-                            "source": lcNameRef,
-                            "sourceOwner": ownerTurn.properName,
-                            "buffName": buffNames.vuln,
-                            "durationInTurn": 3,
-                            "duration": 2,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "isDebuff": true,
-                            "expireType": "EndTurn",
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        if (memoTurn) {
+                            addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,memoTurn,ownersSlots);
+                            addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,memoTurn,ownersSlots);
                         }
                     }
-                    let buffSheet = ownerTurn.longMayRainbowsVULNSHEET;
-                    
-                    const enemyPositions = battleData.enemyPositions;
-                    updateBuffBatchTargets(battleData,enemyPositions,buffSheet)
                 },
                 "target": "self",
-                "listenerName": "Long May Rainbows Adorn the Sky - memoskill listener",
+                "listenerName": "Long May Rainbows Adorn the Sky listener setup",
                 "owners": [],
-                "buffNames": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    // let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy || !sourceTurn.isMemosprite) {return;}//only tracking memo attacks
-                    const ownersSlots = this.ownersSlots;
-                    const ownerSlot = sourceTurn.eventOwner;
-                    const ownerRank = ownersSlots[ownerSlot];
-                    if (!ownerRank) {return;}//if the memo owner isn't a lightcone owner, then abort
-                    const ownerTurn = battleData.nameBasedTurns[ownerSlot];
-                    const HPTally = ownerTurn.longMayRainbowsHPTally;
-                    if (!HPTally) {return;}
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" && action != "Skill" && action != "Ultimate") {return;}
+                            //ACTION IS NOT ACTUALLY FACTORED, the LC is only looking for use, not usetype, I was jebaited
+                            //UPDATE: they change it, it now looks for the abilities stated in the lc
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.longMayRainbowsVALUES) {
+                                let lcNameRef = "Long May Rainbows Adorn the Sky";
+                                // const logicRef = turnLogicLightcones[lcNameRef];
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                sourceTurn.longMayRainbowsVALUES = lcPathing[ownerRank-1];
+                            }
+                            const values = sourceTurn.longMayRainbowsVALUES;
+                            // console.log(values[1])
+        
+                            const allyPositions = battleData.allyPositions;
+                            const consumeValue = consumeHP(battleData,null,values[1],allyPositions,sourceTurn,"Lightcone",false,true).totalEaten;
+        
+                            // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + consumeValue;
+                            // sourceTurn.longMayRainbowsHPTally = (sourceTurn.longMayRainbowsHPTally ?? 0) + Math.ceil(consumeValue);
+        
+                            const oldValue = sourceTurn.longMayRainbowsHPTally ??= 0;
+                            sourceTurn.longMayRainbowsHPTally += + consumeValue;
+                            if (battleData.isLoggyLogger) {
+                                logToBattle(battleData,
+                                    {logType: "GenericAction", source:"Long May Rainbows Adorn the Sky", bodyText: `LC Consume tally (${sourceTurn.properName}): ${oldValue.toLocaleString()} --> ${sourceTurn.longMayRainbowsHPTally.toLocaleString()}`});
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Long May Rainbows Adorn the Sky - owner ability listener",
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "MemoSkill") {return;}
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const ownerTurn = battleData.nameBasedTurns[sourceTurn.eventOwner];
+        
+                            if (!ownerTurn.longMayRainbowsVULNSHEET) {
+                                let lcNameRef = "Long May Rainbows Adorn the Sky";
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[ownerTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+                                const buffNames = logicRef.buffNames;
+                                // let ownerName = sourceTurn.properName;
+        
+                                ownerTurn.longMayRainbowsVULNSHEET = {
+                                    "stats": [VulnAll],
+                                    [VulnAll]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffNames.vuln,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "isDebuff": true,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            let buffSheet = ownerTurn.longMayRainbowsVULNSHEET;
+                            
+                            const enemyPositions = battleData.enemyPositions;
+                            updateBuffBatchTargets(battleData,enemyPositions,buffSheet)
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Long May Rainbows Adorn the Sky - memoskill listener",
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
 
-                    const addedDMG = this.lcAddedDMG ??= turnLogicLightcones["Long May Rainbows Adorn the Sky"].skillFunctions.lcAddedDMG;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    
-                    const element = sourceTurn.element;
-                    addedDMG(battleData,generalInfo,ownerTurn,targetsGotHit,ownerRank,element,sourceTurn);
-                },
-                "target": "enemy",
-                "listenerName": "Long May Rainbows Adorn the Sky -  attack listener for additional dmg",
-                "owners": [],
-                "ownersSlots": {}
+                            const ownersSlots = this.ownersSlots;
+                            const ownerSlot = sourceTurn.eventOwner;
+                            const ownerRank = ownersSlots[ownerSlot];
+
+                            const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+                            const HPTally = ownerTurn.longMayRainbowsHPTally;
+                            if (!HPTally) {return;}
+        
+                            const addedDMG = this.lcAddedDMG ??= turnLogicLightcones["Long May Rainbows Adorn the Sky"].skillFunctions.lcAddedDMG;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            
+                            const element = sourceTurn.element;
+                            addedDMG(battleData,generalInfo,ownerTurn,targetsGotHit,ownerRank,element,sourceTurn);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Long May Rainbows Adorn the Sky -  attack listener for additional dmg",
+                    },
+                ]
             },
         ],
         "buffNames": {
