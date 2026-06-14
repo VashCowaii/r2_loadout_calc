@@ -16236,21 +16236,18 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AdditionalTriggerAttackEnd",
+                        "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             let characterName = ownerTurn.properName;
         
-                            let sourceTurn = generalInfo.sourceTurn;
                             let enemiesAttackedThisAction = generalInfo.targetsGotHit;//her ult is an AOE attack so... everyone gets hit
-        
-                            //we don't trigger the additional dmg unless it comes from an ultimate that is sw's, or if sw isn't e4 or higher
-                            if (sourceTurn.properName != characterName) {return;}
     
                             const pelaE6DMG = this.pelaE6DMG ??= turnLogic[characterName].skillFunctions.pelaE6DMG;
-                            pelaE6DMG(battleData,generalInfo,sourceTurn,enemiesAttackedThisAction);
+                            pelaE6DMG(battleData,generalInfo,ownerTurn,enemiesAttackedThisAction);
                         },
                         "target": "enemy",
+                        "isPersonal": true,
                         "listenerName": "Pela E6 additional DMG controller",
                         "ownerTurn": {},
                     },
