@@ -47549,15 +47549,32 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        isFUA: false,
+                        compositeCacheTag
+                    }
+                    ATKObjects.evaSkillATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
                         compositeCacheTag
                     }
 
                 }
                 let ATKObject = ATKObjects.evaSkillATKOBJECT;
+                let ATKObject2 = ATKObjects.evaSkillATKOBJECTPOST;
+                const evaTalentCertifiedAdditionalDMG = logicRef.skillFunctions.evaTalentCertifiedAdditionalDMG;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
-                // updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (sourceTurn.certifiedBanger) {evaTalentCertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 battleActions.updatePunchlineValue(battleData,10,sourceTurn,"Evanescia Skill");
             },
@@ -47691,7 +47708,7 @@ const turnLogic = {
                     }
                 }
                 else {
-                    const dmgSlot = generalInfo.dmgSlot;
+                    const dmgSlot = generalInfo.action;
                     if (dmgSlot === "Skill") {
                         let ATKObject = ATKObjects.evaTalentCertifiedElationADDEDATKOBJECT;
 
@@ -47718,19 +47735,6 @@ const turnLogic = {
 
                     }
                 }
-
-                
-
-                
-                
-                // // let targetTurn = battleData.primaryTarget;
-                // const enemyPositions = battleData.enemyPositions;
-                // const addProc = battleActions.elationDMGWrapper;
-                // if (enemyPositions.length) {
-                //     for (let enemy of enemyPositions) {
-                //         addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"SW999 Basic/Skill Elation DMG");
-                //     }
-                // }
             },
             evaFUA(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -47765,7 +47769,21 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        isFUA: true,
+                        compositeCacheTag,
+                    }
+                    ATKObjects.evaFUAATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
                         compositeCacheTag,
                     }
 
@@ -47786,6 +47804,8 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.evaFUAATKOBJECT;
+                let ATKObject2 = ATKObjects.evaFUAATKOBJECTPOST;
+                const evaTalentCertifiedAdditionalDMG = logicRef.skillFunctions.evaTalentCertifiedAdditionalDMG;
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.fuaTrackerValue -= 240;
@@ -47795,7 +47815,9 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (sourceTurn.certifiedBanger) {evaTalentCertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 if (rank >= 1) {
                     poke("EvanesciaE1ElationQueue",battleData,null,null);
@@ -47865,6 +47887,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.evaUltimateATKOBJECT;
                 let ATKObject2 = ATKObjects.evaUltimateATKOBJECT2;
+                const evaTalentCertifiedAdditionalDMG = logicRef.skillFunctions.evaTalentCertifiedAdditionalDMG;
 
                 const enemyTargets = battleData.enemyPositions.length;
                 //trace checks for current targets when determining bounce count, on top of the base 5, so will never be less than 6 bounces
@@ -47882,8 +47905,7 @@ const turnLogic = {
 
                 let chainedAttackRef = null;
                 chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",chainedAttackRef);
-                poke("EvaMidUltForceElationDMG",battleData,chainedAttackRef,null);
-
+                if (sourceTurn.certifiedBanger) {evaTalentCertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef,true);}
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 sourceTurn.ultyQueued = false;
@@ -48481,24 +48503,6 @@ const turnLogic = {
 
                     const evaTalentCertifiedAdditionalDMG = this.evaTalentCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.evaTalentCertifiedAdditionalDMG;
                     evaTalentCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo,false,true);
-                },
-                "target": "enemy",
-                "listenerName": "Talent certified elation additional dmg",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const dmgSlot = generalInfo.dmgSlot;
-                    if ((dmgSlot != "Skill" && dmgSlot != "Talent") || !ownerTurn.certifiedBanger) {return;}
-
-                    const evaTalentCertifiedAdditionalDMG = this.evaTalentCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.evaTalentCertifiedAdditionalDMG;
-                    evaTalentCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
                 },
                 "target": "enemy",
                 "listenerName": "Talent certified elation additional dmg",
