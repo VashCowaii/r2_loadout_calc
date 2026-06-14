@@ -3701,7 +3701,6 @@ const battleActions = {
             poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
             ATKObject.dotApplyFunction?.(battleData,sourceTurn,generalInfo);
             poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
-            ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
             poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
             poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             poke("AttackEnd",battleData,generalInfo,sourceTurn);
