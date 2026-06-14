@@ -1218,6 +1218,7 @@ const customMenu = {
                     <input type="range" id="addEnemyLevelSlider" name="slider" min="1" max="120" value="${isEdit ? slotRef.lvl : "95"}" step="1" list="tickmarks" onchange="userTriggers.updateEnemyAddedMenuUI()">
                 </div>
             </div>
+
             <div class="statisticSettingsRow">
                 <div class="statsRowName">HP Bars:&nbsp;<span id="addEnemyHPBarsDisplay">1</span></div>
                 <div class="statsRowToggle">
@@ -1258,7 +1259,14 @@ const customMenu = {
             </div>
 
             <div class="customMenuSearchNote">Enemy DEF is assigned automatically based on level selected</div>
-
+            <div class="statisticSettingsRow">
+                <div class="statsRowName">DEF CAP (LvL 100+ Only)&nbsp;</div>
+                <div class="statsRowToggle">
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="toggleEnemyDEFCap" onchange="userTriggers.updateEnemyAddedMenuUI()"><span class="toggleSlider"></span>
+                    </label>
+                </div>
+            </div>
             
             <div class="imageRowStatisticBox2">
                 <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
@@ -6528,6 +6536,7 @@ const userTriggers = {
 
             const enemyLvL = +readSelection("addEnemyLevelSlider").value;
             const baseRes = 0.20;
+            const defCapped = readSelection("toggleEnemyDEFCap")?.checked ?? false;
             const enemyObject = {
                 version: globalEnemyVersion,//global can be found in statListData if I ever forget
                 image: null,
@@ -6542,6 +6551,7 @@ const userTriggers = {
                 energyGain: +readSelection("addEnemyEnergyGain").value,
                 weaknessOverrides,
                 resistantTo,
+                defCap: defCapped,
             }
             const enemyStats = enemyObject.stats;
 
@@ -6552,7 +6562,7 @@ const userTriggers = {
             enemyStats[Toughness] = enemyToughness;
             // console.log(enemyStats[Toughness])
             enemyStats[EffectRES] = enemyEffectRES;
-            enemyStats[DEFBase] = (enemyLvL*10) + 200;
+            enemyStats[DEFBase] = (Math.min((defCapped ? 100 : enemyLvL), enemyLvL)*10) + 200;
 
             enemyStats[ResistanceImaginary] = (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100;
             enemyStats[ResistanceQuantum] = (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100;
