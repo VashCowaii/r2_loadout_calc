@@ -20019,6 +20019,12 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener5 = passiveListeners[4];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
@@ -20117,30 +20123,34 @@ const turnLogic = {
                         "listenerName": "Tingyun - E2 ally energy gain",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            //the effect given to the beneficiary is an owned instance, hence why we distribute to all allies on a personal level
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            let characterName = providerTurn.properName;
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let charValuesRef = providerTurn.battleValues;
+                            let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
+                            if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
+                            let sourceCheck = sourceTurn.properName === targetTurn.properName;
+                            if (!sourceCheck) {return;}//is the attack coming from an allied source
+                            const benedictionDMG = this.benedictionDMG ??= turnLogic[characterName].skillFunctions.benedictionDMG
+                            benedictionDMG(battleData,providerTurn,targetTurn);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Tingyun benediction ally atk additional DMG controller",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
-                "trigger": "AdditionalTriggerAttackEnd",
+                "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let charValuesRef = ownerTurn.battleValues;
-                    let targetTurn = battleData.nameBasedTurns[charValuesRef.charWithBenediction];
-                    if (!targetTurn) {return;}//if no character has benediction, can obv abort early.
-                    let sourceCheck = sourceTurn.properName === targetTurn.properName;
-                    if (!sourceCheck) {return;}//is the attack coming from an allied source
-                    const benedictionDMG = this.benedictionDMG ??= turnLogic[characterName].skillFunctions.benedictionDMG
-                    benedictionDMG(battleData,ownerTurn,targetTurn);
-                },
-                "target": "enemy",
-                "listenerName": "Tingyun benediction ally atk additional DMG controller",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
+                    //not a personal listener, needs to stay global like this
                     let ownerTurn = this.ownerTurn;
                     let characterName = ownerTurn.properName;
 
