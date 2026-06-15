@@ -1919,6 +1919,24 @@ const battleActions = {
         // console.log(DMGTotalEndBreak)
         return DMGTotalEndBreak
     },
+    generalSuperBreakHandling(battleData,sourceTurn,generalInfo,superBreakArray,element) {
+        const targetsGotHit = generalInfo.targetsGotHit;
+        const enemyBasedTurns = battleData.enemyBasedTurns;
+        const overBreakTotals = generalInfo.overBreakTotals;
+
+        const DMGTags = generalInfo.ATKObject.DMGTags;
+
+        const superBreakage = battleActions.getSuperBreakDamage;
+        for (let enemySlot in targetsGotHit) {
+            const currentEnemy = enemyBasedTurns[enemySlot];
+            if (currentEnemy.isDead) {continue;}
+
+            const accumulatedToughness = overBreakTotals[currentEnemy.properName];
+            if (!accumulatedToughness) {continue;}
+            superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
+
+        }
+    },
     hitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
         const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
@@ -2269,17 +2287,6 @@ const battleActions = {
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
 
                 if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
-            }
-            else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
-                const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
-                const superBreakage = battleActions.getSuperBreakDamage;
-                const accumulatedToughness = overBreakTotals[targetName];
-                for (let i = 0; i < triggerRef.length; i++) {
-                    const superDetails = triggerRef[i].condition(battleData,turnMerge);
-                    if (!superDetails) {continue;}
-                    superBreakage(battleData,element,sourceTurn,targetTurn,DMGTags,superDetails[0],superDetails[1],accumulatedToughness,generalInfo);
-                    // return [0.5,this.listenerName]
-                }
             }
         }
 
@@ -2634,17 +2641,6 @@ const battleActions = {
                 poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
 
                 if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
-            }
-            else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
-                const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
-                const superBreakage = battleActions.getSuperBreakDamage;
-                const accumulatedToughness = overBreakTotals[targetName];
-                for (let i = 0; i < triggerRef.length; i++) {
-                    const superDetails = triggerRef[i].condition(battleData,turnMerge);
-                    if (!superDetails) {continue;}
-                    superBreakage(battleData,element,sourceTurn,targetTurn,DMGTags,superDetails[0],superDetails[1],accumulatedToughness,generalInfo);
-                    // return [0.5,this.listenerName]
-                }
             }
         }
 
@@ -28446,7 +28442,7 @@ const turnLogic = {
                 ],
             },
             {
-                "trigger": "hitWrapSuperBreakCall",
+                "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
@@ -28459,13 +28455,17 @@ const turnLogic = {
                     if (breakValue < 1.5) {return}
 
                     if (breakValue >= 3) {
-                        return this.break1 ??= [1.5,this.listenerName];
+                        const superBreakArray = this.break1 ??= [1.5,this.listenerName];
+                        battleActions.generalSuperBreakHandling(battleData,sourceTurn,generalInfo,superBreakArray,"Fire")
                     }
                     else {//at this point it's guaranteed to be the 200% break, no IF needed on that given the return check above
-                        return this.break2 ??= [1,this.listenerName];
+                        const superBreakArray = this.break2 ??= [1,this.listenerName];
+                        battleActions.generalSuperBreakHandling(battleData,sourceTurn,generalInfo,superBreakArray,"Fire")
                     }
                 },
                 "target": "enemy",
+                "priority": 100,
+                "isPersonal": true,
                 "listenerName": "Module β: Autoreactive Armor",
                 "ownerTurn": {},
             },
