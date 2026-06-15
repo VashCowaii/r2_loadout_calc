@@ -22093,6 +22093,12 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener5 = passiveListeners[4];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
@@ -22174,7 +22180,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "TrueTriggerAttackEnd",
+                        "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             // poke("TrueTriggerAttackEnd",battleData,generalInfo);
                             let ownerTurn = this.ownerTurn;
@@ -22201,6 +22207,23 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Pebble at Crossroads?: ally attack listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // let ownerTurn = this.ownerTurn;
+                            const providerTurn = this.providerTurn;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            if (!providerTurn.tribbieZoneActive) {return;}
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const zoneAddedDMG = this.zoneAddedDMG ??= turnLogic[providerTurn.properName].skillFunctions.zoneAddedDMG
+                            zoneAddedDMG(battleData,generalInfo,providerTurn,targetsGotHit);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Tribbie ult zone attack listener for additional dmg",
                         "ownerTurn": {},
                     },
                 ],
@@ -22291,21 +22314,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Tribbie - Ultimate queued",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy || !ownerTurn.tribbieZoneActive) {return;}
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const zoneAddedDMG = this.zoneAddedDMG ??= turnLogic[ownerTurn.properName].skillFunctions.zoneAddedDMG
-                    zoneAddedDMG(battleData,generalInfo,ownerTurn,targetsGotHit);
-                },
-                "target": "enemy",
-                "listenerName": "Tribbie ult zone attack listener for additional dmg",
                 "ownerTurn": {},
             },
         ],
@@ -45680,10 +45688,31 @@ const turnLogic = {
                         isFUA: false,
                         compositeCacheTag
                     }
+                    ATKObjects.sw999BasicATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
                 }
                 let ATKObject = ATKObjects.sw999BasicATKOBJECT;
+                let ATKObject2 = ATKObjects.sw999BasicATKOBJECTPOST;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (sourceTurn.certifiedBanger) {
+                    const sw999TalentCertifiedAdditionalDMG = logicRef.skillFunctions.sw999TalentCertifiedAdditionalDMG;
+                    sw999TalentCertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);
+                }
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
             sw999BasicEnh(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -46382,27 +46411,33 @@ const turnLogic = {
                         isFUA: false,
                         compositeCacheTag
                     }
-
-                    // const buffNames = logicRef.buffNames;
-                    // ATKObjects.emcE1UltBonusCBSHEET = {
-                    //     "stats": null,
-                    //     "source": "E1",
-                    //     "sourceOwner": sourceTurn.properName,
-                    //     "buffName": buffNames.e1UltBonus,
-                    //     "durationInTurn": 1,
-                    //     "duration": 1,
-                    //     "AVApplied": 0,
-                    //     "maxStacks": 3,
-                    //     "currentStacks": 1,
-                    //     "decay": false,
-                    //     "expireType": null,
-                    // }
+                    ATKObjects.sw999SkillATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
                 }
                 let ATKObject = ATKObjects.sw999SkillATKOBJECT;
+                let ATKObject2 = ATKObjects.sw999SkillATKOBJECTPOST;
 
                 battleActions.updatePunchlineValue(battleData,5,sourceTurn,"SW999 Skill");
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (sourceTurn.certifiedBanger) {
+                    const sw999TalentCertifiedAdditionalDMG = logicRef.skillFunctions.sw999TalentCertifiedAdditionalDMG;
+                    sw999TalentCertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);
+                }
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
             statCheck2(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -47265,25 +47300,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "MMR Handler",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (ownerTurn.battleValues.godModeActive) {return;}//procs on the reg basic, not the EBA seemingly
-
-                    const dmgSlot = generalInfo.dmgSlot;
-                    if ((dmgSlot != "Skill" && dmgSlot != "Basic ATK") || !ownerTurn.certifiedBanger) {return;}
-
-                    const sw999TalentCertifiedAdditionalDMG = this.sw999TalentCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.sw999TalentCertifiedAdditionalDMG;
-                    sw999TalentCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
-                },
-                "target": "enemy",
-                "isPersonal": true,
-                "listenerName": "Talent certified elation additional dmg",
                 "ownerTurn": {},
             },
             {
