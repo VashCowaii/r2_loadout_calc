@@ -1684,7 +1684,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -1826,7 +1826,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__651799441\">Enemy_AML_Boss_ListenPartDie</a>",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Use Custom Character Function",

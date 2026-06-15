@@ -224,7 +224,7 @@ const configAbility = {
       "statusName": "Retribution Warning",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

@@ -3155,7 +3155,7 @@ const compositeAbilityObject = {
           "statusName": "HP Count",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",

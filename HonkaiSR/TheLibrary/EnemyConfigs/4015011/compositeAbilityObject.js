@@ -5509,7 +5509,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-283400185\">Enemy_W4_DawnsEye_DisableLookAt</a>",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]"
+              "eventTrigger": "Turn [Anyone]: Start"
             }
           ]
         },

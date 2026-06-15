@@ -156,7 +156,7 @@ const configAbility = {
           "priorityLevel": -12
         },
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

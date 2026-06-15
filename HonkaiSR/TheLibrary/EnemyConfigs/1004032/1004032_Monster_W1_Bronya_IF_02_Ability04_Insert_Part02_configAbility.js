@@ -163,7 +163,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1332478484\">Monster_W1_Bronya_IF_02_Toast</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

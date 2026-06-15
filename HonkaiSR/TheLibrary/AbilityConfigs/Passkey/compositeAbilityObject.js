@@ -28,7 +28,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__695359315\">LC_20013_Main</a>",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable",

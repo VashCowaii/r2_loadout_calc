@@ -780,7 +780,7 @@ const configAbility = {
       "statusName": "The Hero with a Thousand Faces",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

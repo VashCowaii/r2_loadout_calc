@@ -167,7 +167,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]"
+          "eventTrigger": "Turn [Anyone]: End"
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

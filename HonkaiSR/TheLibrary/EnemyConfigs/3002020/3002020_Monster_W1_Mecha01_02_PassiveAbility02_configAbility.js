@@ -158,7 +158,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__577020623\">Monster_W1_Mecha01_02_PassiveAbility02_AttackListener</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Define Custom Variable",

@@ -121,7 +121,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__392004917\">Enemy_W2_Xuanlu_Ability08_CoolDown</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

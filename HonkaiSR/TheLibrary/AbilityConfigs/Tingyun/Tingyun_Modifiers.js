@@ -103,7 +103,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1429716226\">TingYun_ByIsTingYun</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Find New Target",
