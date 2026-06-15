@@ -29547,10 +29547,28 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag
                     }
+                    ATKObjects.hookBasicRegATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
                 }
                 let ATKObject = ATKObjects.hookBasicRegATKOBJECT;
+                let ATKObject2 = ATKObjects.hookBasicRegATKOBJECTPOST;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                poke("HookMidAttackBurnHandling",battleData,chainedAttackRef,null);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
             },
             hookSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
@@ -29589,9 +29607,28 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                     }
+                    ATKObjects.hookSkillATKOBJECT2POST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
                 }
                 let ATKObject = ATKObjects.hookSkillATKOBJECT;
-                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let ATKObject2 = ATKObjects.hookSkillATKOBJECT2POST;
+
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                poke("HookMidAttackBurnHandling",battleData,chainedAttackRef,null);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
                 logicRef.skillFunctions.hookSkillDOT(battleData,sourceTurn,chainedAttackRef)
             },
             hookSkillEnh(battleData,actionObject,sourceTurn) {
@@ -29630,11 +29667,28 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                     }
-
+                    ATKObjects.hookSkillATKOBJECT2POST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
                 }
                 let ATKObject = ATKObjects.hookSkillATKOBJECT2;
+                let ATKObject2 = ATKObjects.hookSkillATKOBJECT2POST;
 
-                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                poke("HookMidAttackBurnHandling",battleData,chainedAttackRef,null);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
                 logicRef.skillFunctions.hookSkillDOT(battleData,sourceTurn,chainedAttackRef)
 
                 sourceTurn.battleValues.isEnhanced = false;
@@ -29733,10 +29787,28 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag
                     }
+                    ATKObjects.hookUltimateATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
                 }
                 let ATKObject = ATKObjects.hookUltimateATKOBJECT;
+                let ATKObject2 = ATKObjects.hookUltimateATKOBJECTPOST;
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                poke("HookMidAttackBurnHandling",battleData,chainedAttackRef,null);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
                 const valuesRef = sourceTurn.battleValues;
                 valuesRef.isEnhanced = true;
@@ -29856,12 +29928,30 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag,
                     }
+                    ATKObjects.hookTechATKObjectPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
                 }
                 let ATKObject = ATKObjects.hookTechATKObject;
+                let ATKObject2 = ATKObjects.hookTechATKObjectPOST;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[],"Start",null);
+                poke("HookMidAttackBurnHandling",battleData,chainedAttackRef,null);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,battleData.enemyPositions,[],"End",chainedAttackRef);
 
                 const techDotFunction = logicRef.skillFunctions.hookTechDOT;
                 techDotFunction(battleData,sourceTurn,null)
@@ -30023,8 +30113,12 @@ const turnLogic = {
                 ],
             },
             {
-                "trigger": "AdditionalTriggerAttackEnd",
+                "trigger": "HookMidAttackBurnHandling",
                 condition(battleData,generalInfo) {
+                    //the additional dmg procs and talent handling stuff is all BEFORE the attack close on any of her abilities, it's not actually tied to any attackdmgend or stuff like that
+                    //if someone else can ever provide attacks to hook for hook, those wouldn't proc her "burned target" effects.
+                    //at least for now, god knows if they ever do that, they'll probably go over every character and change all their handling again.
+
                     let ownerTurn = this.ownerTurn;
 
                     let sourceTurn = generalInfo.sourceTurn;
