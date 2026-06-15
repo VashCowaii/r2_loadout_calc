@@ -3699,7 +3699,17 @@ const battleActions = {
             const newTotals = generalInfo.totals;
 
             poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
-            poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
+            // poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
+
+            // for (let targetTurn of primaryTargetArray) {
+            poke("WasAttackedEnd",battleData,generalInfo,null);
+            // }
+            // for (let targetTurn of subTargetArray) {
+            //     poke("WasAttackedEnd",battleData,generalInfo,targetTurn);
+            // }
+            
+
+
             poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
             poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             poke("AttackEnd",battleData,generalInfo,sourceTurn);
@@ -32735,7 +32745,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "AdditionalTriggerAttackEnd",
+                "trigger": "WasAttackedEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
@@ -32749,7 +32759,7 @@ const turnLogic = {
                     if (sourceTurn.isMemosprite) {return;}
                     else if (sourceTurn.properName != ownerTurn.properName) {return;}
 
-                    const seamStitchAdditionalDMG = this.seamStitchAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.seamStitchAdditionalDMG
+                    const seamStitchAdditionalDMG = this.seamStitchAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.seamStitchAdditionalDMG;
                     seamStitchAdditionalDMG(battleData,ownerTurn);
                 },
                 "target": "enemy",
