@@ -2182,12 +2182,16 @@ const battleActions = {
                         // overBreakRef[targetName] += toughnessBase;
                     }
                     if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
+
+                    if (sourceTurn.accumulateAllToughness) {
+                        overBreakTotals[targetName] += rawReduction;
+                    }
                 }
                 else {//if the target IS broken already
                     overBreakTotals[targetName] += rawReduction;
                 }
             }
-            else if (targetTurn.isBroken) {
+            else if (targetTurn.isBroken || sourceTurn.accumulateAllToughness) {
                 overBreakTotals[targetName] += rawReduction;
             }
             else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
@@ -2542,12 +2546,16 @@ const battleActions = {
                         // overBreakRef[targetName] += toughnessBase;
                     }
                     if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
+
+                    if (sourceTurn.accumulateAllToughness) {
+                        overBreakTotals[targetName] += rawReduction;
+                    }
                 }
                 else {//if the target IS broken already
                     overBreakTotals[targetName] += rawReduction;
                 }
             }
-            else if (targetTurn.isBroken) {
+            else if (targetTurn.isBroken || sourceTurn.accumulateAllToughness) {
                 overBreakTotals[targetName] += rawReduction;
             }
             else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later

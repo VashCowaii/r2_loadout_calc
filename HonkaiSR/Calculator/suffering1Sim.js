@@ -750,6 +750,7 @@ const sim = {
                 actionCounter: 0,
                 certifiedBanger: 0,
                 notPresentInActionOrder: false,
+                accumulateAllToughness: false,
                 battleValues: logicRef?.characterValuesBattle,
             };
             battleData.charactersRemaining += 1;
