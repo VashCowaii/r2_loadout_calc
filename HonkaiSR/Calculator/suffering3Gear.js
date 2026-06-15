@@ -7079,25 +7079,12 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
         
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
                 "listenerName": "Memories of the Past listener setup",
                 "owners": [],
                 "subListeners": [
-                    {
-                        "trigger": "EndTurn",
-                        condition(battleData,generalInfo) {
-                            let ownersSlots = this.ownersSlots;
-                            let sourceTurn = generalInfo.sourceTurn;
-
-                            sourceTurn.lcMemoriesOfThePastCanRegen = true;
-                        },
-                        "target": "self",
-                        "isPersonal": true,
-                        "listenerName": "Memories of the Past endturn regen reset listener",
-                    },
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
@@ -7122,6 +7109,25 @@ const turnLogicLightcones = {
                         "listenerName": "Memories of the Past - owner attacked listener",
                     },
                 ]
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcMemoriesOfThePastCanRegen = true;
+                    }
+                },
+                "target": "self",
+                // "isPersonal": true,
+                "listenerName": "Memories of the Past endturn regen reset listener",
+                "owners": [],
+                "ownersSlots": {}
             },
         ],
         "buffNames": {},
@@ -7149,24 +7155,12 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
         
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
                 "listenerName": "Meshing Cogs listener setup",
                 "owners": [],
                 "subListeners": [
-                    {
-                        "trigger": "EndTurn",
-                        condition(battleData,generalInfo) {
-                            let sourceTurn = generalInfo.sourceTurn;
-
-                            sourceTurn.lcMeshingCogsCanRegen = true;
-                        },
-                        "target": "self",
-                        "isPersonal": true,
-                        "listenerName": "Meshing Cogs endturn regen reset listener",
-                    },
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
@@ -7213,7 +7207,6 @@ const turnLogicLightcones = {
                         const currentAlly = allyTurns[allyHit];
                         if (!currentRank || !currentAlly.lcMeshingCogsCanRegen) {continue;}
                         else {
-                            console.log(currentAlly.properName)
                             const rankParams = lcPathing[currentRank-1];
                             const regenValue = rankParams[0];
                             regenFunction(battleData,currentAlly,regenValue);
@@ -7222,6 +7215,25 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "Meshing Cogs - owner was attacked listener",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcMeshingCogsCanRegen = true;
+                    }
+                },
+                "target": "self",
+                // "isPersonal": true,
+                "listenerName": "Meshing Cogs endturn regen reset listener",
                 "owners": [],
                 "ownersSlots": {}
             },
