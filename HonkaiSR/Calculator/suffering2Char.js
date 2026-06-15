@@ -4696,6 +4696,7 @@ const addListenerPREPPriority = battleActions.addListenerPREPPriority;
 const removeListener = battleActions.removeListenerInBattle;
 const getTechnique = battleActions.getTechnique;
 const consumeHP = battleActions.consumeHPNew;
+const generalSuperBreak = battleActions.generalSuperBreakHandling;
 
 const attackWrapper = battleActions.attackWrapperTEST;
 const elationHitWrapper = battleActions.elationHitWrapperTEST;
@@ -28456,11 +28457,11 @@ const turnLogic = {
 
                     if (breakValue >= 3) {
                         const superBreakArray = this.break1 ??= [1.5,this.listenerName];
-                        battleActions.generalSuperBreakHandling(battleData,sourceTurn,generalInfo,superBreakArray,"Fire")
+                        generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,"Fire")
                     }
                     else {//at this point it's guaranteed to be the 200% break, no IF needed on that given the return check above
                         const superBreakArray = this.break2 ??= [1,this.listenerName];
-                        battleActions.generalSuperBreakHandling(battleData,sourceTurn,generalInfo,superBreakArray,"Fire")
+                        generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,"Fire")
                     }
                 },
                 "target": "enemy",
