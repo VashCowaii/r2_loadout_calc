@@ -5346,3 +5346,261 @@ const turnLogic = {
 //     totals.totalAVGDMG += DMGTotalAVG;
 //     totals.totalOverkill += DMGOverkill;
 // },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// getNextQueuedTurn(battleData,isConditionCheck,battleSettings) {
+    //     const nextTurnAV = battleData.nextTurnAV;
+    //     const nextAVLength = nextTurnAV.length;
+
+    //     let nextOrder = nextTurnAV[0];
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     for (let i=1;i<nextAVLength;i++) {
+    //         const currentTurn = nextTurnAV[i];
+
+    //         const currentCounter = currentTurn.actionCounter;
+    //         const nextCounter = nextOrder.actionCounter ?? 0;
+
+    //         const counterGreater = currentCounter > nextCounter;
+
+    //         if (currentTurn.isExtraTurn && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }
+
+    //         const currentAV = currentTurn.AV;
+    //         const nextAV = nextOrder.AV;
+
+    //         if (currentAV < nextAV) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }//look for lowest action value first
+
+    //         const AVEqual = currentAV === nextAV;
+    //         if (AVEqual && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     }
+
+
+    //     if (battleData.readyForNewWave) {
+
+    //         const waveID = battleData.wavesCompleted + 1;
+    //         const AVToRevertTo = battleData.currentCycle === 0 ? 150 : 100;
+    //         if (battleData.isLoggyLogger) {
+    //             logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});
+
+    //             logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `This cycle's remaining AV was reset from: ${+battleData.cycleAV.toFixed(7)}<br>To: ${+AVToRevertTo.toFixed(7)}<br>`});
+
+    //             logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
+    //             logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
+    //         }
+    //         poke("WaveStart",battleData,null,null);
+    //         battleData.readyForNewWave = false;
+
+    //         for (let battleEntity of nextTurnAV) {
+    //             if (battleEntity.blockWaveAVReset) {continue;}
+    //             logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `${battleEntity.properName} remaining AV was reset from: ${+battleEntity.AV.toFixed(7)}<br>To: ${+battleEntity.AVBase.toFixed(7)}<br>`});
+    //             battleEntity.AV = battleEntity.AVBase;//reset everyone's AV to base(or whatever their current base is)
+    //             // AV:SPDStats.SPDActionValue,
+    //             // AVBase:SPDStats.SPDActionValue,
+    //         }
+
+    //         const enemiesToMake = battleSettings["waveArray" + waveID];
+
+    //         if (!enemiesToMake.length) {//if users added a new wave, but didn't populate it yet, then end the battle
+    //             battleData.battleIsOver = true;
+    //             return null;
+    //         }
+
+    //         battleData.cycleAV = AVToRevertTo;
+
+    //         sim.createEnemyTargets(battleData,enemiesToMake);
+    //         poke("WaveStartFinished",battleData,null,null);
+    //         sim.clearUltimateQueue(battleData)
+
+    //         const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
+    //         // console.log(nextWaveTurn.properName)
+    //         return nextWaveTurn
+    //     }
+    //     else if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
+    //         //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
+    //         // console.log(`CYCLE --${battleData.currentCycle}-- END`);
+    //         battleData.currentCycle += 1;
+    //         // console.log(`CYCLE --${battleData.currentCycle}-- START`);
+
+    //         for (let AVentry of nextTurnAV) {
+    //             AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
+    //         }
+    //         battleData.sumAV += battleData.cycleAV;
+    //         battleData.cycleAV = 100;
+    //         battleData.cycleAVPassed = 0;
+    //         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
+            
+
+    //         return null;
+    //     }
+    //     return nextOrder;
+    // },
+    // getNextQueuedAllyTurn(battleData,isConditionCheck) {
+    //     const nextTurnAV = battleData.nextTurnAV;
+    //     const nextAVLength = nextTurnAV.length;
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     const objIsEvent = obj.isUniqueEvent && !obj.isMemosprite && !obj.isSummon;
+    //     //     const objIsEventOrEnemy = objIsEvent || obj.isEnemy;
+    //     //     if (!objIsEventOrEnemy && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (!objIsEventOrEnemy && obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     let nextOrder = nextTurnAV[0];
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     for (let i=1;i<nextAVLength;i++) {
+    //         const currentTurn = nextTurnAV[i];
+
+    //         const objIsEvent = currentTurn.isUniqueEvent && !currentTurn.isMemosprite && !currentTurn.isSummon;
+    //         const objIsEventOrEnemy = objIsEvent || currentTurn.isEnemy;
+    //         if (objIsEventOrEnemy) {continue;}
+
+    //         const currentCounter = currentTurn.actionCounter;
+    //         const nextCounter = nextOrder.actionCounter ?? 0;
+
+    //         const counterGreater = currentCounter > nextCounter;
+
+    //         if (currentTurn.isExtraTurn && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }
+
+    //         const currentAV = currentTurn.AV;
+    //         const nextAV = nextOrder.AV;
+
+    //         if (currentAV < nextAV) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }//look for lowest action value first
+
+    //         const AVEqual = currentAV === nextAV;
+    //         if (AVEqual && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     }
+
+    //     return nextOrder;
+    // },
+    // getNextQueuedAllyTurnBuffableOnly(battleData,isConditionCheck) {
+    //     const nextTurnAV = battleData.nextTurnAV;
+    //     const nextAVLength = nextTurnAV.length;
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     const objIsSummon = obj.isUniqueEvent && !obj.isMemosprite;
+    //     //     const isEnemyOrSummon = objIsSummon || obj.isEnemy;
+    //     //     if (!isEnemyOrSummon && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (!isEnemyOrSummon && obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     let nextOrder = nextTurnAV[0];
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     for (let i=1;i<nextAVLength;i++) {
+    //         const currentTurn = nextTurnAV[i];
+
+    //         const objIsSummon = currentTurn.isUniqueEvent && !currentTurn.isMemosprite;
+    //         const isEnemyOrSummon = objIsSummon || currentTurn.isEnemy;
+    //         if (isEnemyOrSummon) {continue;}
+
+    //         const currentCounter = currentTurn.actionCounter;
+    //         const nextCounter = nextOrder.actionCounter ?? 0;
+
+    //         const counterGreater = currentCounter > nextCounter;
+
+    //         if (currentTurn.isExtraTurn && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }
+
+    //         const currentAV = currentTurn.AV;
+    //         const nextAV = nextOrder.AV;
+
+    //         if (currentAV < nextAV) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }//look for lowest action value first
+
+    //         const AVEqual = currentAV === nextAV;
+    //         if (AVEqual && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     }
+    //     return nextOrder;
+    // },
