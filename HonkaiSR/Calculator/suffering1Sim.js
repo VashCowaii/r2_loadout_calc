@@ -36,13 +36,16 @@ const sim = {
 
             for (let battleEntity of nextTurnAV) {
                 if (battleEntity.blockWaveAVReset) {continue;}
-                logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `${battleEntity.properName} remaining AV was reset from: ${+battleEntity.AV.toFixed(7)}<br>To: ${+battleEntity.AVBase.toFixed(7)}<br>`});
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `${battleEntity.properName} remaining AV was reset from: ${+battleEntity.AV.toFixed(7)}<br>To: ${+battleEntity.AVBase.toFixed(7)}<br>`});
+                }
                 battleEntity.AV = battleEntity.AVBase;//reset everyone's AV to base(or whatever their current base is)
                 // AV:SPDStats.SPDActionValue,
                 // AVBase:SPDStats.SPDActionValue,
             }
 
-            const enemiesToMake = battleSettings["waveArray" + waveID];
+            // const enemiesToMake = battleSettings["waveArray" + waveID];
+            const enemiesToMake = battleData.eachWaveArray[waveID-1]
 
             if (!enemiesToMake.length) {//if users added a new wave, but didn't populate it yet, then end the battle
                 battleData.battleIsOver = true;
@@ -53,7 +56,7 @@ const sim = {
 
             sim.createEnemyTargets(battleData,enemiesToMake);
             poke("WaveStartFinished",battleData,null,null);
-            sim.clearUltimateQueue(battleData)
+            sim.clearUltimateQueue(battleData);
 
             const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
             // console.log(nextWaveTurn.properName)
@@ -146,250 +149,6 @@ const sim = {
         // }
         return nextOrder;
     },
-    // getNextQueuedTurn(battleData,isConditionCheck,battleSettings) {
-    //     const nextTurnAV = battleData.nextTurnAV;
-    //     const nextAVLength = nextTurnAV.length;
-
-    //     let nextOrder = nextTurnAV[0];
-    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
-    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
-    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
-    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
-    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
-
-    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
-    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     //     return min;
-    //     // });
-
-    //     for (let i=1;i<nextAVLength;i++) {
-    //         const currentTurn = nextTurnAV[i];
-
-    //         const currentCounter = currentTurn.actionCounter;
-    //         const nextCounter = nextOrder.actionCounter ?? 0;
-
-    //         const counterGreater = currentCounter > nextCounter;
-
-    //         if (currentTurn.isExtraTurn && counterGreater) {
-    //             nextOrder = currentTurn;
-    //             continue
-    //         }
-
-    //         const currentAV = currentTurn.AV;
-    //         const nextAV = nextOrder.AV;
-
-    //         if (currentAV < nextAV) {
-    //             nextOrder = currentTurn;
-    //             continue
-    //         }//look for lowest action value first
-
-    //         const AVEqual = currentAV === nextAV;
-    //         if (AVEqual && counterGreater) {
-    //             nextOrder = currentTurn;
-    //             continue;
-    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
-    //             nextOrder = currentTurn;
-    //             continue;
-    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     }
-
-
-    //     if (battleData.readyForNewWave) {
-
-    //         const waveID = battleData.wavesCompleted + 1;
-    //         const AVToRevertTo = battleData.currentCycle === 0 ? 150 : 100;
-    //         if (battleData.isLoggyLogger) {
-    //             logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});
-
-    //             logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `This cycle's remaining AV was reset from: ${+battleData.cycleAV.toFixed(7)}<br>To: ${+AVToRevertTo.toFixed(7)}<br>`});
-
-    //             logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
-    //             logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
-    //         }
-    //         poke("WaveStart",battleData,null,null);
-    //         battleData.readyForNewWave = false;
-
-    //         for (let battleEntity of nextTurnAV) {
-    //             if (battleEntity.blockWaveAVReset) {continue;}
-    //             logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `${battleEntity.properName} remaining AV was reset from: ${+battleEntity.AV.toFixed(7)}<br>To: ${+battleEntity.AVBase.toFixed(7)}<br>`});
-    //             battleEntity.AV = battleEntity.AVBase;//reset everyone's AV to base(or whatever their current base is)
-    //             // AV:SPDStats.SPDActionValue,
-    //             // AVBase:SPDStats.SPDActionValue,
-    //         }
-
-    //         const enemiesToMake = battleSettings["waveArray" + waveID];
-
-    //         if (!enemiesToMake.length) {//if users added a new wave, but didn't populate it yet, then end the battle
-    //             battleData.battleIsOver = true;
-    //             return null;
-    //         }
-
-    //         battleData.cycleAV = AVToRevertTo;
-
-    //         sim.createEnemyTargets(battleData,enemiesToMake);
-    //         poke("WaveStartFinished",battleData,null,null);
-    //         sim.clearUltimateQueue(battleData)
-
-    //         const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
-    //         // console.log(nextWaveTurn.properName)
-    //         return nextWaveTurn
-    //     }
-    //     else if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
-    //         //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
-    //         // console.log(`CYCLE --${battleData.currentCycle}-- END`);
-    //         battleData.currentCycle += 1;
-    //         // console.log(`CYCLE --${battleData.currentCycle}-- START`);
-
-    //         for (let AVentry of nextTurnAV) {
-    //             AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
-    //         }
-    //         battleData.sumAV += battleData.cycleAV;
-    //         battleData.cycleAV = 100;
-    //         battleData.cycleAVPassed = 0;
-    //         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
-            
-
-    //         return null;
-    //     }
-    //     return nextOrder;
-    // },
-    // getNextQueuedAllyTurn(battleData,isConditionCheck) {
-    //     const nextTurnAV = battleData.nextTurnAV;
-    //     const nextAVLength = nextTurnAV.length;
-    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
-    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
-    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
-    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
-    //     //     const objIsEvent = obj.isUniqueEvent && !obj.isMemosprite && !obj.isSummon;
-    //     //     const objIsEventOrEnemy = objIsEvent || obj.isEnemy;
-    //     //     if (!objIsEventOrEnemy && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
-
-    //     //     if (!objIsEventOrEnemy && obj.AV < min.AV) {return obj;}//look for lowest action value first
-    //     //     if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //     //     if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     //     return min;
-    //     // });
-
-    //     let nextOrder = nextTurnAV[0];
-    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
-    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
-    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
-    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
-    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
-
-    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
-    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     //     return min;
-    //     // });
-
-    //     for (let i=1;i<nextAVLength;i++) {
-    //         const currentTurn = nextTurnAV[i];
-
-    //         const objIsEvent = currentTurn.isUniqueEvent && !currentTurn.isMemosprite && !currentTurn.isSummon;
-    //         const objIsEventOrEnemy = objIsEvent || currentTurn.isEnemy;
-    //         if (objIsEventOrEnemy) {continue;}
-
-    //         const currentCounter = currentTurn.actionCounter;
-    //         const nextCounter = nextOrder.actionCounter ?? 0;
-
-    //         const counterGreater = currentCounter > nextCounter;
-
-    //         if (currentTurn.isExtraTurn && counterGreater) {
-    //             nextOrder = currentTurn;
-    //             continue
-    //         }
-
-    //         const currentAV = currentTurn.AV;
-    //         const nextAV = nextOrder.AV;
-
-    //         if (currentAV < nextAV) {
-    //             nextOrder = currentTurn;
-    //             continue
-    //         }//look for lowest action value first
-
-    //         const AVEqual = currentAV === nextAV;
-    //         if (AVEqual && counterGreater) {
-    //             nextOrder = currentTurn;
-    //             continue;
-    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
-    //             nextOrder = currentTurn;
-    //             continue;
-    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     }
-
-    //     return nextOrder;
-    // },
-    // getNextQueuedAllyTurnBuffableOnly(battleData,isConditionCheck) {
-    //     const nextTurnAV = battleData.nextTurnAV;
-    //     const nextAVLength = nextTurnAV.length;
-    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
-    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
-    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
-    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
-    //     //     const objIsSummon = obj.isUniqueEvent && !obj.isMemosprite;
-    //     //     const isEnemyOrSummon = objIsSummon || obj.isEnemy;
-    //     //     if (!isEnemyOrSummon && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
-
-    //     //     if (!isEnemyOrSummon && obj.AV < min.AV) {return obj;}//look for lowest action value first
-    //     //     if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //     //     if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     //     return min;
-    //     // });
-
-    //     let nextOrder = nextTurnAV[0];
-    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
-    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
-    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
-    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
-    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
-
-    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
-    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     //     return min;
-    //     // });
-
-    //     for (let i=1;i<nextAVLength;i++) {
-    //         const currentTurn = nextTurnAV[i];
-
-    //         const objIsSummon = currentTurn.isUniqueEvent && !currentTurn.isMemosprite;
-    //         const isEnemyOrSummon = objIsSummon || currentTurn.isEnemy;
-    //         if (isEnemyOrSummon) {continue;}
-
-    //         const currentCounter = currentTurn.actionCounter;
-    //         const nextCounter = nextOrder.actionCounter ?? 0;
-
-    //         const counterGreater = currentCounter > nextCounter;
-
-    //         if (currentTurn.isExtraTurn && counterGreater) {
-    //             nextOrder = currentTurn;
-    //             continue
-    //         }
-
-    //         const currentAV = currentTurn.AV;
-    //         const nextAV = nextOrder.AV;
-
-    //         if (currentAV < nextAV) {
-    //             nextOrder = currentTurn;
-    //             continue
-    //         }//look for lowest action value first
-
-    //         const AVEqual = currentAV === nextAV;
-    //         if (AVEqual && counterGreater) {
-    //             nextOrder = currentTurn;
-    //             continue;
-    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
-    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
-    //             nextOrder = currentTurn;
-    //             continue;
-    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
-    //     }
-    //     return nextOrder;
-    // },
     pullToCurrentAV(battleData,sourceTurn) {
         battleData.sumAV += sourceTurn.AV;
         battleData.cycleAV -= sourceTurn.AV;
@@ -427,130 +186,133 @@ const sim = {
         "AoE": "Generic Boss",
         "Bounce": "Generic Boss",
     },
-    createEnemyTargets(battleData,enemiesToMake) {
-        // enemiesToMake = Math.max(1, enemiesToMake ?? 1);//always 1 minimum required target created
-        // let enemiesMade = 0;
+    initializeEnemyObjects(battleData,enemyFullWaveArray) {
         const summaryTurns = battleData.battleTotal.Turns;
-
-        // {
-        //     "image": null,
-        //     "entry": null,
-        //     "name": "Gunner Guy",
-        //     "lvl": 66,
-        //     "hpBars": 1,
-        //     "toughnessBars": 1,
-        //     "stats": {
-        //         "HPBase": 395960000,
-        //         "ATKBase": 718,
-        //         "SPDBase": 91,
-        //         "Toughness": 30,
-        //         "EffectRES": 0.3
-        //     },
-        //     "enemyTypeAttack": "Bounce",
-        //     "enemyType": "minion",
-        //     "weaknessOverrides": {
-        //         "Ice": true,
-        //         "Physical": true,
-        //         "Wind": true
-        //     },
-        //     "resistantTo": {}
-        // },
-
         const attackTypes = sim.attackTypes;
 
         const nameIndex = battleData.nameIndex;
-        const enemyTurns = battleData.enemyBasedTurns ??= [];
-        const enemyPositions = battleData.enemyPositions ??= [];
-        const nextTurn = battleData.nextTurnAV;
+        const enemyTurns = battleData.enemyBasedTurns ??= {};
+        // const enemyPositions = battleData.enemyPositions ??= [];
+        const allEnemiesArray = battleData.allEnemiesArray ??= [];
+        // const nextTurn = battleData.nextTurnAV;
 
         const enemyRankID = {
-            "boss": 3,
-            "elite": 2,
+            "boss": 5,
+            "elite": 3,
             "minion": 1,
         }
 
+        const eachWaveArray = battleData.eachWaveArray ??= [];
+
+        for (let waveEntry of enemyFullWaveArray) {
+            let newWave = [];
+            for (let i=0;i<waveEntry.length;i++) {
+                let currentEntry = waveEntry[i];
+                battleData.enemiesCreated++;
+                const enemiesMade = battleData.enemiesCreated;
+    
+                const enemyType = currentEntry.enemyType;
+    
+                const enemyVersion = currentEntry.version ?? 0;
+                //global can be found in statListData if I ever forget
+                if (!enemyVersion || enemyVersion < globalEnemyVersion) {
+                    alert(`The enemy you are trying to import/use is in a format version that is no longer supported.
+                        \nVersion Detected: ${enemyVersion} --- Supported: ${globalEnemyVersion}
+                        \nIf you're seeing this while using a file that was made before June 6th 2026, this is intended.
+                        \nI have taken steps to ensure this never has to happen again, but a change did need to happen overall.`)
+                    continue;
+                }
+    
+                let name = "Enemy " + enemiesMade + " " + currentEntry.name + " (" + enemyType + ")";
+                let enemyRealName = currentEntry.name;
+                let slot = "enemy" + enemiesMade;
+                let stats = new Array(greatTableSize).fill(0);
+                const statsObject = currentEntry.stats;
+    
+                for (let statsKey in statsObject) {
+                    stats[greatTableIndex[statsKey]] = statsObject[statsKey];
+                }
+    
+                summaryTurns[name] = 0;
+    
+                //most of the enemy stat stuff now happens within userTriggers.addEnemyToWave() to keep more work outside of the loops
+                let finalStats = currentEntry.finalStats;
+                // console.log(currentEntry)
+    
+                nameIndex[name] = slot;
+                const slotRef = enemyTurns[slot] ??= {
+                    name:slot,
+                    enemyNumber: enemiesMade,
+                    AV:finalStats.SPDActionValue,
+                    AVBase:finalStats.SPDActionValue,
+                    SPD:finalStats.SPDFinal,
+                    specialEnergy: null,
+                    maxEnergy: null,
+                    currentEnergy: null,
+                    actionCounter: 0,
+                    turnState: 0,
+                    properName: name,
+                    enemyRealName,
+                    statTable: stats,
+                    statTableFinals: finalStats,
+                    tagSpecific: {},
+                    buffsObject: {},
+                    buffsStartTurn: [],
+                    buffsEndTurn: [],
+                    debuffCounter: 0,
+                    shieldCounter: 0,
+                    shieldValueCurrent: 0,
+                    shieldValueMax: 0,
+                    activeShields: {},
+                    DOTCounter: 0,
+                    dots: superGlobal.createEntityDOTObject(),
+                    currentDotsArray: [],
+                    specialDotsArray: [],
+                    cacheTagValues: superGlobal.createEntityCache(),
+                    isEnemy: true,
+                    enemyTypeAttack: attackTypes[currentEntry.enemyTypeAttack],//ref.enemyTypeAttack,
+                    enemyType,
+                    enemyRank: enemyRankID[enemyType],
+                    currentHP: finalStats.HPFinal,
+                    maxHP: finalStats.HPFinal,
+                    currentToughness: stats[Toughness],
+                    maxToughness: stats[Toughness],
+                    isDead: false,
+                    isBroken: false,
+                    turnShouldEnd: false,
+                    energyGain: currentEntry.energyGain ?? 10
+                };
+    
+                // nextTurn.push(slotRef);
+                // enemyPositions.push(slotRef);
+                allEnemiesArray.push(slotRef);
+                newWave.push(slotRef);
+    
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:slot, AV: battleData.sumAV, turnRef: JSON.stringify(battleData.enemyBasedTurns[slot])});}
+                // poke("EnemyCreated",battleData,{slotRef},slotRef);
+                // battleData.enemiesRemaining += 1;
+            }
+            eachWaveArray.push(newWave);
+        }
+    },
+    createEnemyTargets(battleData,enemiesToMake) {
+        // const attackTypes = sim.attackTypes;
+
+        // const nameIndex = battleData.nameIndex;
+        // const enemyTurns = battleData.enemyBasedTurns ??= [];
+        const enemyPositions = battleData.enemyPositions ??= [];
+        const nextTurn = battleData.nextTurnAV;
+
+
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
-            battleData.enemiesCreated++;
-            const enemiesMade = battleData.enemiesCreated;
 
-            const enemyType = currentEntry.enemyType;
+            nextTurn.push(currentEntry);
+            enemyPositions.push(currentEntry);
+            // allEnemiesArray.push(currentEntry);
 
-            const enemyVersion = currentEntry.version ?? 0;
-            //global can be found in statListData if I ever forget
-            if (!enemyVersion || enemyVersion < globalEnemyVersion) {
-                alert(`The enemy you are trying to import/use is in a format version that is no longer supported.
-                    \nVersion Detected: ${enemyVersion} --- Supported: ${globalEnemyVersion}
-                    \nIf you're seeing this while using a file that was made before June 6th 2026, this is intended.
-                    \nI have taken steps to ensure this never has to happen again, but a change did need to happen overall.`)
-                continue;
-            }
-
-            let name = "Enemy " + enemiesMade + " " + currentEntry.name + " (" + enemyType + ")";
-            let enemyRealName = currentEntry.name;
-            let slot = "enemy" + enemiesMade;
-            let stats = new Array(greatTableSize).fill(0);
-            const statsObject = currentEntry.stats;
-
-            for (let statsKey in statsObject) {
-                stats[greatTableIndex[statsKey]] = statsObject[statsKey];
-            }
-
-            summaryTurns[name] = 0;
-
-            //most of the enemy stat stuff now happens within userTriggers.addEnemyToWave() to keep more work outside of the loops
-            let finalStats = currentEntry.finalStats;
-            // console.log(currentEntry)
-
-            nameIndex[name] = slot;
-            const slotRef = enemyTurns[slot] ??= {
-                name:slot,
-                enemyNumber: enemiesMade,
-                AV:finalStats.SPDActionValue,
-                AVBase:finalStats.SPDActionValue,
-                SPD:finalStats.SPDFinal,
-                specialEnergy: null,
-                maxEnergy: null,
-                currentEnergy: null,
-                actionCounter: 0,
-                turnState: 0,
-                properName: name,
-                enemyRealName,
-                statTable: stats,
-                statTableFinals: finalStats,
-                tagSpecific: {},
-                buffsObject: {},
-                buffsStartTurn: [],
-                buffsEndTurn: [],
-                debuffCounter: 0,
-                shieldCounter: 0,
-                shieldValueCurrent: 0,
-                shieldValueMax: 0,
-                activeShields: {},
-                DOTCounter: 0,
-                dots: superGlobal.createEntityDOTObject(),
-                currentDotsArray: [],
-                specialDotsArray: [],
-                cacheTagValues: superGlobal.createEntityCache(),
-                isEnemy: true,
-                enemyTypeAttack: attackTypes[currentEntry.enemyTypeAttack],//ref.enemyTypeAttack,
-                enemyType,
-                enemyRank: enemyRankID[enemyType],
-                currentHP: finalStats.HPFinal,
-                maxHP: finalStats.HPFinal,
-                currentToughness: stats[Toughness],
-                maxToughness: stats[Toughness],
-                isDead: false,
-                isBroken: false,
-                turnShouldEnd: false,
-                energyGain: currentEntry.energyGain ?? 10
-            };
-
-            nextTurn.push(slotRef);
-            enemyPositions.push(slotRef);
-
-            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:slot, AV: battleData.sumAV, turnRef: JSON.stringify(battleData.enemyBasedTurns[slot])});}
-            poke("EnemyCreated",battleData,{slotRef},slotRef);
+            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
+            poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
             battleData.enemiesRemaining += 1;
         }
         // battleData.enemyPositions = sim.sortEnemyTargets(enemyPositions);
@@ -575,6 +337,7 @@ const sim = {
             "eventBasedTurns": {},
             "allyPositions": [],//ally equivalent of enemyPositions
             "enemyPositions": [],
+            allEnemiesArray: [],
             "actionCounter": 0,
             totalUltsQueued: 0,
             totalExTurnsQueued: 0,
@@ -981,10 +744,15 @@ const sim = {
 
         // battleSettings
         const summaryTurns = battleData.battleTotal.Turns;
-        const enemiesToMake = battleSettings.waveArray1;
+        // const enemiesToMake = battleSettings.waveArray1;
+        
         const startingEnergyPercent = battleSettings.cyclesStartingEnergyCustom;
 
         if (isLoggyLogger) {logToBattle(battleData,{logType: "PassiveCalls"});}
+
+        sim.initializeEnemyObjects(battleData,battleSettings.enemyFullWaveArray);
+        const enemiesToMake = battleData.eachWaveArray[0];
+
         poke("EntityConstruction",battleData,null,null);
         poke("PassiveCalls",battleData,null,null);
 
@@ -1309,7 +1077,7 @@ const sim = {
             const listenerRef = battleData.battleListenersPersonal[personalOwner.properName]?.[triggerName];
             if (listenerRef) {
                 for (let i = listenerRef.length-1; i>=0; i--) {
-                    listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+                    listenerRef[i].condition(battleData,generalInfo,personalOwner);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
                 }
             }
             // const listenerRef = triggerRef[triggerName] ??= [];

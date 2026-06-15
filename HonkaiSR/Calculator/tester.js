@@ -1109,7 +1109,7 @@ const customMenu = {
         readSelection("customMenuSearchNote").innerHTML = `Construct a custom enemy, or select a preset to add an enemy to your selected wave.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
-        const waveRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        const waveRef = globalRecords.battleSettings.enemyFullWaveArray[waveID-1] ?? [];//[`waveArray${waveID}`];
         const slotRef = isEdit ? waveRef[index] : null;
         // customMenuSearchBody
 
@@ -1511,9 +1511,6 @@ const customMenu = {
         readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save a wave or all battle waves in a file.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(wave or battle) and assign it within battle simulation.<br><br>Files are JSON, with .waveHSR.json/.allWaveHSR.json extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
-        // const waveRef = globalRecords.battleSettings[`waveArray${waveID}`];
-        // const slotRef = isEdit ? waveRef[index] : null;
-        // customMenuSearchBody
 
         const battleSettings = globalRecords.battleSettings;
         const totalWaves = battleSettings.totalWaves;
@@ -6002,7 +5999,8 @@ const userTriggers = {
         if (waveSlot === "ALL") {
             let exportArray = [];
             for (let i=1;i<=battleSettings.totalWaves;i++) {
-                exportArray.push(battleSettings[`waveArray${i}`]);
+                // exportArray.push(battleSettings[`waveArray${i}`]);
+                exportArray.push(battleSettings.enemyFullWaveArray[i-1]);
             }
             //waveArray entries are each distinct keys within battleSettings, not an array of arrays, but for the sake of bundling an entire battle's waves into one export, we can just do this
             // userTriggers.copyToClipboard(exportArray);
@@ -6018,7 +6016,8 @@ const userTriggers = {
             saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR.json`,exportArray,"allWaveHSR.json");
         }
         else {
-            const extractRef = battleSettings[`waveArray${waveSlot}`];
+            // const extractRef = battleSettings[`waveArray${waveSlot}`];
+            const extractRef = battleSettings.enemyFullWaveArray[waveSlot-1];
 
             let enemyNameString = "";
             for (let entry of extractRef) {
@@ -6066,7 +6065,8 @@ const userTriggers = {
                             if (isBeyondImportedLength) {break;}
 
                             const currentWaveArray = parsedData[i-1];
-                            battleSettings[`waveArray${i}`] = currentWaveArray;
+                            // battleSettings[`waveArray${i}`] = currentWaveArray;
+                            battleSettings.enemyFullWaveArray[i-1] = currentWaveArray;
                             addWave(i,null,true);
                         }
                     }
@@ -6075,7 +6075,8 @@ const userTriggers = {
                             alert("You can't import a battle array of waves into a single wave slot.\nSomehow you've manage to import a battle array of waves in a single wave slot.\n\nIf you ever see this message and you didn't intentionally brute-force file extensions to cause this, let Vash know in the discord.");
                             return
                         }
-                        battleSettings[`waveArray${waveSlot}`] = parsedData;
+                        // battleSettings[`waveArray${waveSlot}`] = parsedData;
+                        battleSettings.enemyFullWaveArray[waveSlot-1] = parsedData;
                         addWave(waveSlot,null,true);
                     }
                 }
@@ -6104,12 +6105,14 @@ const userTriggers = {
                     if (isBeyondImportedLength) {break;}
 
                     const currentWaveArray = parsedData[i-1];
-                    battleSettings[`waveArray${i}`] = currentWaveArray;
+                    // battleSettings[`waveArray${i}`] = currentWaveArray;
+                    battleSettings.enemyFullWaveArray[i-1] = currentWaveArray;
                     addWave(i,null,true);
                 }
             }
             else {
-                battleSettings[`waveArray${waveSlot}`] = parsedData;
+                // battleSettings[`waveArray${waveSlot}`] = parsedData;
+                battleSettings.enemyFullWaveArray[waveSlot-1] = parsedData;
                 addWave(waveSlot,null,true);
             }
             userTriggers.updateQuerySearchSettings(true);
@@ -6468,7 +6471,8 @@ const userTriggers = {
         // addEnemyStatsHP,addEnemyStatsToughness,addEnemyStatsEffectRES,addEnemyStatsSPD,addEnemyStatsATK,addEnemyStatsName
 
         // enemyWaveHolder1
-        const waveDeposit = globalRecords.battleSettings[`waveArray${waveID}`];
+        // const waveDeposit = globalRecords.battleSettings[`waveArray${waveID}`];
+        const waveDeposit = globalRecords.battleSettings.enemyFullWaveArray[waveID-1] ??= [];
         const elementDeposit = readSelection(`enemyWaveHolder${waveID}`);
 
         const importField = readSelection("importTextInputTeam");
@@ -6802,7 +6806,8 @@ const userTriggers = {
         userTriggers.importWaveData("ALL");
     },
     deleteEnemyFromWave(waveID,waveIndex) {
-        const depositRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        // const depositRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        const depositRef = globalRecords.battleSettings.enemyFullWaveArray[waveID-1]
         depositRef.splice(waveIndex,1);
 
         userTriggers.addEnemyToWave(waveID,null,true);
