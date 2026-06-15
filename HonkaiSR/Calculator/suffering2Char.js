@@ -3708,9 +3708,6 @@ const battleActions = {
             //     poke("WasAttackedEnd",battleData,generalInfo,targetTurn);
             // }
             
-
-
-            poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
             poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             poke("AttackEnd",battleData,generalInfo,sourceTurn);
             
@@ -12616,7 +12613,6 @@ const turnLogic = {
             {
                 "trigger": "WasAttackedEnd",
                 condition(battleData,generalInfo) {
-                    // poke("AttackDMGDetonateEnd",battleData,generalInfo);
                     const ownerTurn = this.ownerTurn;
                     const sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.isEnemy) {return;}
