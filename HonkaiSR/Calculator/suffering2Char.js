@@ -43687,6 +43687,24 @@ const turnLogic = {
                         customMulti: logicRef.skillFunctions.pullMultiCUSTOMSPARXULT,
                         dmgNeedsElationComposite: true,
                     };
+                    ATKObjects.sparxUltimateATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        valuesRef: values,
+                        customMulti: logicRef.skillFunctions.pullMultiCUSTOMSPARXULT,
+                        dmgNeedsElationComposite: true,
+                    };
 
                     const buffNames = logicRef.buffNames;
                     ATKObjects.sparxieE4CRITDMGSHEET = {
@@ -43705,6 +43723,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.sparxUltimateATKOBJECT;
+                let ATKObject2 = ATKObjects.sparxUltimateATKOBJECTPOST;
 
                 const isE4 = rank >= 4;
                 const e4PunchlineGain = isE4 ? 5 : 0;
@@ -43716,7 +43735,13 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,buffSheetE4)
                 }
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (sourceTurn.certifiedBanger) {
+                    const sparxUltCertifiedAdditionalDMG = logicRef.skillFunctions.sparxUltCertifiedAdditionalDMG;
+                    sparxUltCertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);
+                }
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
+
                 sourceTurn.ultyQueued = false;
             },
             pullMultiCUSTOMSPARXULT(sourceTurn,targetTurn,dmgNeedsElationComposite,table,hitType,ATKObject) {
@@ -43925,11 +43950,26 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        isFUA: false,
+                        compositeCacheTag
+                    }
+                    ATKObjects.sparxBasicEnhancedATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,       
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
                         compositeCacheTag
                     }
                 }
                 let ATKObject = ATKObjects.sparxBasicEnhancedATKOBJECT;
+                let ATKObject2 = ATKObjects.sparxBasicEnhancedATKOBJECTPOST;
                 const multipliers = ATKObject.multipliers;
                 // ATKObject.bonusMultiplier
 
@@ -43941,7 +43981,13 @@ const turnLogic = {
                 multipliers.primary = values[0] + (skillCounter * stBonus);
                 multipliers.blast = values[1] + (skillCounter * blastBonus);
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                if (sourceTurn.certifiedBanger) {
+                    const sparxEBACertifiedAdditionalDMG = logicRef.skillFunctions.sparxEBACertifiedAdditionalDMG;
+                    sparxEBACertifiedAdditionalDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);
+                }
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
+
                 battleValues.skillCounter = 0;
             },
             sparxEBACertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo) {
@@ -44495,36 +44541,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Thrill Handler",
-                "ownerTurn": {},
-            },
-            
-            
-            {
-                "trigger": "AdditionalTriggerAttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
-                    const dmgSlot = generalInfo.dmgSlot;
-                    if ((dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") || !ownerTurn.certifiedBanger) {return;}
-
-                    if (dmgSlot === "Ultimate") {
-                        const sparxUltCertifiedAdditionalDMG = this.sparxUltCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.sparxUltCertifiedAdditionalDMG;
-                        sparxUltCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
-                    }
-                    else if (ownerTurn.battleValues.skillCounter) {
-                        const sparxEBACertifiedAdditionalDMG = this.sparxEBACertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.sparxEBACertifiedAdditionalDMG;
-                        sparxEBACertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
-                    }
-
-                    // if (useExtrahit) {
-                    // sparxUltCertifiedAdditionalDMG(battleData,ownerTurn,sourceTurn,generalInfo);
-                    // }
-                },
-                "target": "enemy",
-                "listenerName": "Talent certified elation additional dmg",
                 "ownerTurn": {},
             },
             {
