@@ -3708,7 +3708,6 @@ const battleActions = {
             //     poke("WasAttackedEnd",battleData,generalInfo,targetTurn);
             // }
             
-            poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
             poke("AttackEnd",battleData,generalInfo,sourceTurn);
             
             if (logging) {
@@ -22198,7 +22197,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
-                            // poke("TrueTriggerAttackEnd",battleData,generalInfo);
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy || !ownerTurn.tribbieZoneActive) {return;}
