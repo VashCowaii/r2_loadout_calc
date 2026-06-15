@@ -12614,7 +12614,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "AttackDMGDetonateEnd",
+                "trigger": "WasAttackedEnd",
                 condition(battleData,generalInfo) {
                     // poke("AttackDMGDetonateEnd",battleData,generalInfo);
                     const ownerTurn = this.ownerTurn;
