@@ -926,7 +926,6 @@ const sim = {
             const endTurnBuffs = sourceTurn.buffsEndTurn;
             if (canLoseBuffsThisTurn && endTurnBuffs.length) {expireControl(battleData,sourceTurn,endTurnBuffs);}
             
-            poke("EndTurnEnd", battleData, exoTurnRef,sourceTurn);
             sourceTurn.actionAssigned = false;
             sourceTurn.turnState = false;
             sourceTurn.turnShouldEnd = false
