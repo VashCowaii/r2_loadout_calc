@@ -55,7 +55,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-768874206\">LC_23013_Main</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable",

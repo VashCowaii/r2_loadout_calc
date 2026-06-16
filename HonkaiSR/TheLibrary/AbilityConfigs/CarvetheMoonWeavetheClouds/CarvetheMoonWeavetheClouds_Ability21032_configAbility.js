@@ -115,7 +115,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__423750049\">LC_21032_Sub3</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -209,7 +209,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__406972430\">LC_21032_Sub2</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -303,7 +303,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__390194811\">LC_21032_Sub1</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

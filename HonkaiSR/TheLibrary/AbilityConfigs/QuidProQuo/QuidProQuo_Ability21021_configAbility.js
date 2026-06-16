@@ -19,7 +19,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1623581959\">LC_21021_Main</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Find New Target",
