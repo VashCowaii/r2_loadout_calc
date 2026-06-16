@@ -5439,6 +5439,123 @@ const turnLogicLightcones = {
             "dmgBuff": "The Unreachable Side [LC]"
         },
     },
+    "Something Irreplaceable": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            buffApplication(battleData,sourceTurn,ownerRank) {
+
+                if (!sourceTurn.lcSomethingIrreplaceableDMGSHEET) {
+                    let lcNameRef = "Something Irreplaceable";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+
+                    sourceTurn.lcSomethingIrreplaceableDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: rankParams[2],
+                        "source": lcNameRef,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": 1,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+
+                    const actionTags = ["All","Gear","Heal"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                    sourceTurn.lcSomethingIrreplaceableHealObject ??= {
+                        multipliers: {
+                            primary: rankParams[1],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "ATK",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: "Lightcone",
+                        actionTags,compositeCacheTag
+                    }
+                }
+                const healObject = sourceTurn.lcSomethingIrreplaceableHealObject;
+                healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1,null);
+                const buffSheet = sourceTurn.lcSomethingIrreplaceableDMGSHEET;
+                updateBuff(battleData,sourceTurn,buffSheet);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Something Irreplaceable listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            let ownersSlots = this.ownersSlots;
+                            let sourceTurn = personalOwner;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+                            // if (!ownerRank) {return;}
+        
+                            const buffSheet = sourceTurn.lcSomethingIrreplaceableDMGSHEET;
+                            if (buffSheet && sourceTurn.buffsObject[buffSheet.buffName]) {return;}//doesn't stack so we don't need to keep trying to renew it
+        
+                            const buffApplication = this.buffApplication ??= turnLogicLightcones["Something Irreplaceable"].skillFunctions.buffApplication;
+                            buffApplication(battleData,sourceTurn,ownerRank);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Something Irreplaceable - attack received end listener",
+                    },
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            let ownersSlots = this.ownersSlots;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+        
+                            const buffSheet = sourceTurn.unreachableSideDMGSHEET;
+                            if (buffSheet && sourceTurn.buffsObject[buffSheet.buffName]) {return;}//doesn't stack so we don't need to keep trying to renew it
+        
+                            const buffApplication = this.buffApplication ??= turnLogicLightcones["Something Irreplaceable"].skillFunctions.buffApplication;
+                            buffApplication(battleData,sourceTurn,ownerRank);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Something Irreplaceable kill listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "Something Irreplaceable [LC]"
+        },
+    },
     "I Shall Be My Own Sword": {//NO CHANGE YET
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
