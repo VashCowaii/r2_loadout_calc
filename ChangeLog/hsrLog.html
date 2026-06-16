@@ -19,6 +19,7 @@
         <li>Added the following new lightcones:
             <ul>
                 <li>Something Irreplaceable</li>
+                <li>Moment of Victory</li>
             </ul>
         </li>
         <li>Added the ability to restrict DEF values for LvL 100+ enemies in case you are trying to simulate against Plight enemies(they have unique scaling that limits their DEF value to a LvL 100 value despite being LvL 120)
@@ -33,6 +34,7 @@
             </ul>
         </li>
         <li>Reworked how DoT detonations are handled, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked how turn-start DoT are handled, making them considerably more accurate and in-line with the game.</li>
         <li>Reworked the timing on Additional DMG instances across every possible instance in the calculator, making them considerably more accurate and in-line with the game.</li>
         <li>Reworked the timing on Super Break DMG instances across every possible instance in the calculator, making them considerably more accurate and in-line with the game.</li>
         <li>Reworked the entirety of enemy targeting across every character, which allows us to do a lot of new things internally.</li>
@@ -41,6 +43,8 @@
         <li>Due to the targeting changes that took place, we were able to make changes to the following abilities to ensure they now function as they should. These are not bugs, nor are they really fixes, these were just things I was aware of but couldn't do anything about YET:
             <ul>
                 <li>Seele's sub50% HP skill trigger will now properly locate the enemy with sub50%HP to target, and if that target dies before the extra turn is launched, then it will retarged based on remaining enemy HP.</li>
+                <li>Archer's FUA queue should be done at the perfectly accurate time now.</li>
+                <li>Bronya's FUA queue should be done at the perfectly accurate time now.</li>
             </ul>
         </li>
         <li>Made a visual change so chained-attacks that have multiple segments inside the same action, will now display within the same attack expand rather than needing to click to expand each segment one at a time.
@@ -51,8 +55,25 @@
         </li>
         <li>Changed the visual display for attack expands to display the hit count and AVG total at the top of the expand rather than the bottom.</li>
         <li>Reworked how enemies are constructed at the start of a battle, allowing us to do a few new things internally. This will not impact your enemy save files, this only changes how enemies are made, not read.</li>
+        <li>Updated the following characters with turn-start healing of any kind, to make them more accurate:
+            <ul>
+                <li>Huohuo</li>
+                <li>Natasha</li>
+                <li>Lynx</li>
+            </ul>
+        </li>
+        <li>Updated all characters that have turn-start energy gain effects, of which there were a few.</li>
+        <li>Added a visual separation for batches of DOT damage caused by detonations.</li>
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where Why Does the Ocean Sing wasn't renewing the Enthrallment duration when the target was at max stacks already.</li>
+        <li>Fixed an issue where Black Swan's turn-start special dot function was applying one extra stack of arcana it shouldn't have been.</li>
+        <li>Fixed an issue where Lynx's turn-start healing could improperly factor for Survival Response after it had expired.</li>
+        <li>Fixed an issue where Bronya's E4 reset was triggering at the start of her turn instead of the end.
+            <ul>
+                <li>NOTE: the game shows it reset at the start, visually, but it doesn't actually reset until the end. You can confirm this using Rappa's ult which gives her an extra-turn to use a basic attack in.</li>
+            </ul>
+        </li>
         <li>Fixed an issue where Flowing Nightglow would break when the Harmony unit used their ultimate, due to a recent change.</li>
         <li>Fixed a timing issue created from a recent change where Meshing Cogs/Memories of the Past didn't properly reset the regen flag on lightcone owners in some cases.
             <ul>
@@ -111,6 +132,11 @@
             <ul>
                 <li>Turn Start [Anyone] -> Turn [Anyone]: Start</li>
                 <li>Turn End [Anyone] -> Turn [Anyone]: End</li>
+                <li>Turn [Action-End Phase] -> Turn [Owner]: Action-End Phase</li>
+                <li>Turn [Action-End Phase] [Anyone] -> Turn [Anyone]: Start Action-End Phase</li>
+                <li>Turn [Pre-action END Phase] [Anyone] -> Turn [Anyone]: End Pre-action Phase</li>
+                <li>Turn [Pre-action Phase] [Anyone] -> Turn [Anyone]: Start Pre-action Phase</li>
+                <li>Turn [Pre-action Phase] -> Turn [Owner]: Pre-action Phase</li>
             </ul>
         </li>
     </ul>

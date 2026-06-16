@@ -5296,6 +5296,14 @@ const userTriggers = {
                 case "AttackEndSEGMENT":
                     isSegmentEnd = true;
                     break;
+                case "DOTDetonateStart":
+                    returnString = `
+                        <details class="actionDetailBodyDetailExpand" open>
+                        <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle DOT Detonate Details</summary>`;
+                    break;
+                case "DOTDetonateEnd":
+                    returnString = `</details>`;
+                    break;
                 case "HealAllyStart":
                     returnString = `
                         <div class="actionDetailBody">Healing started...</div>
