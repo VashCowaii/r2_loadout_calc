@@ -40,7 +40,7 @@ const vashCharProgressList = [
     {name: "Argenti",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Himeko",
-        completed: true, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Jade",
         completed: false, live: false, needs80OrTraces: false, owned: false},
     {name: "Jing Yuan",
@@ -62,7 +62,7 @@ const vashCharProgressList = [
     {name: "Blade",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Clara",
-        completed: true, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Dan Heng • Imbibitor Lunae",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Firefly",
@@ -173,7 +173,7 @@ const vashCharProgressList = [
         completed: false, live: false, needs80OrTraces: true, owned: true},
     //4star
     {name: "March 7th - Preservation",
-        completed: false, live: false, needs80OrTraces: true, owned: true},
+        completed: false, live: false, needs80OrTraces: false, owned: true},
 
     //REMEMBRANCE
     {name: "Aglaea",
