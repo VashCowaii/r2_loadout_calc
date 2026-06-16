@@ -7071,6 +7071,15 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
                     }
 
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener6 = passiveListeners[4];
+                    const listener7 = passiveListeners[5];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ally,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ally,null,ownerTurn);
+                    }
+
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
@@ -7084,14 +7093,15 @@ const turnLogic = {
                             if (action != "Ultimate" && action != "Skill") {return;}
 
                             let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            // if (sourceTurn.properName != ownerTurn.properName) {return;}
         
                             const applyProvision = this.applyProvision ??= turnLogic[ownerTurn.properName].skillFunctions.huohuoApplyDivineProvision;
         
                             applyProvision(battleData,ownerTurn);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Apply Divine Provision - Ult/skill end listener",
                         "ownerTurn": {},
                     },
@@ -7199,38 +7209,43 @@ const turnLogic = {
                         "listenerName": "Woven Together, Cohere Forever - healed ally listener",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (!providerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
+        
+                            const provisionHeal = this.provisionHeal ??= turnLogic[providerTurn.properName].skillFunctions.provisionHeal
+                            provisionHeal(battleData,providerTurn,sourceTurn);
+                        },
+                        "target": "allies",
+                        "isPersonal": true,
+                        "listenerName": "Divine Provision Healing controller (turn started)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            const providerTurn = this.providerTurn;
+        
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (providerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
+        
+                            const provisionHeal = this.provisionHeal ??= turnLogic[providerTurn.properName].skillFunctions.provisionHeal
+                            provisionHeal(battleData,providerTurn,sourceTurn);
+                        },
+                        "target": "allies",
+                        "isPersonal": true,
+                        "listenerName": "Divine Provision Healing controller (ultimate used)",
+                        "ownerTurn": {},
+                    },
                 ],
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy || !ownerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
-
-                    const provisionHeal = this.provisionHeal ??= turnLogic[ownerTurn.properName].skillFunctions.provisionHeal
-                    provisionHeal(battleData,ownerTurn,sourceTurn);
-                },
-                "target": "allies",
-                "listenerName": "Divine Provision Healing controller (turn started)",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "AbilityStart",
-                condition(battleData,generalInfo) {
-                    const action = generalInfo.action;
-                    if (action != "Ultimate") {return;}
-
-                    let ownerTurn = this.ownerTurn;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy || !ownerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
-
-                    const provisionHeal = this.provisionHeal ??= turnLogic[ownerTurn.properName].skillFunctions.provisionHeal
-                    provisionHeal(battleData,ownerTurn,sourceTurn);
-                },
-                "target": "allies",
-                "listenerName": "Divine Provision Healing controller (ultimate used)",
-                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -8243,6 +8258,12 @@ const turnLogic = {
                     }
                     updateBuff(battleData,ownerTurn,buffSheet);
 
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener4 = passiveListeners[3]
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ally,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
@@ -8374,102 +8395,104 @@ const turnLogic = {
                         "listenerName": "Natasha E4 energy gain on attacked",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const buffsObject = sourceTurn.buffsObject ?? {};
+                            const logicRef = turnLogic[providerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            const buffNames = turnLogic[providerTurn.properName].buffNames;
+        
+                            const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
+                            const skillHOTCheck = buffsObject[skillHOTName];
+        
+                            const ultHOTName = this.ultHOTName ??= buffNames.ultHOT;
+                            const ultHOTCheck = buffsObject[ultHOTName];
+        
+                            if (skillHOTCheck) {
+                                let skillRef = ATKObjects.natashaSkillHealREF
+        
+                                // let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
+                                // let rank = sourceTurn.rank;
+                                // let e2 = rank >= 2;
+                                
+                                
+                                if (!ATKObjects.natashaSkillHealHOTOBJECT) {
+                                    let characterName = providerTurn.properName;
+                                    let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,providerTurn);
+        
+                                    const actionTags = ["All","Heal"];
+                                    const compositeCacheTag = actionTags + providerTurn.properName;
+        
+                                    ATKObjects.natashaSkillHealHOTOBJECT = {
+                                        multipliers: {
+                                            primary: values[1],
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        flatAmounts: {
+                                            primary: values[4],
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        scalar: "HP",
+                                        DMGTags: [],
+                                        allToughness: false,
+                                        slot: skillRef.slot,
+                                        actionTags,compositeCacheTag
+                                    }
+                                }
+        
+                                let healObject = ATKObjects.natashaSkillHealHOTOBJECT;
+                                healAlly(battleData,healObject,sourceTurn,providerTurn,skillRef.slot,1,null)
+        
+                            }
+                            if (ultHOTCheck) {
+        
+                                let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
+                                //we aren't ref values from this since the values are from an eidolon
+                                
+                                
+                                if (!ATKObjects.natashaUltHealHOTOBJECT) {
+        
+                                    const actionTags = ["All","Heal"];
+                                    const compositeCacheTag = actionTags + providerTurn.properName;
+        
+                                    ATKObjects.natashaUltHealHOTOBJECT = {
+                                        multipliers: {
+                                            primary: 0.06,
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        flatAmounts: {
+                                            primary: 160,
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        scalar: "HP",
+                                        DMGTags: [],
+                                        allToughness: false,
+                                        slot: skillRef.slot,
+                                        actionTags,compositeCacheTag,
+                                    }
+                                }
+        
+                                let healObject = ATKObjects.natashaUltHealHOTOBJECT;
+                                healAlly(battleData,healObject,sourceTurn,providerTurn,skillRef.slot,1,null)
+        
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Natasha - E2/Skill HoT turnstart listener",
+                        "ownerTurn": {},
+                    },
                 ],
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    const buffsObject = sourceTurn.buffsObject ?? {};
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    const buffNames = turnLogic[ownerTurn.properName].buffNames;
-
-                    const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
-                    const skillHOTCheck = buffsObject[skillHOTName];
-
-                    const ultHOTName = this.ultHOTName ??= buffNames.ultHOT;
-                    const ultHOTCheck = buffsObject[ultHOTName];
-
-                    if (skillHOTCheck) {
-                        let skillRef = ATKObjects.natashaSkillHealREF
-
-                        // let skillRef = ATKObjects.natashaSkillHealREF ??= ATKObjects.Skill["Love, Heal, and Choose"].variant1;
-                        // let rank = sourceTurn.rank;
-                        // let e2 = rank >= 2;
-                        
-                        
-                        if (!ATKObjects.natashaSkillHealHOTOBJECT) {
-                            let characterName = ownerTurn.properName;
-                            let values = ATKObjects.natashaSkillHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-
-                            const actionTags = ["All","Heal"];
-                            const compositeCacheTag = actionTags + ownerTurn.properName;
-
-                            ATKObjects.natashaSkillHealHOTOBJECT = {
-                                multipliers: {
-                                    primary: values[1],
-                                    blast: null,
-                                    all: null,
-                                },
-                                flatAmounts: {
-                                    primary: values[4],
-                                    blast: null,
-                                    all: null,
-                                },
-                                scalar: "HP",
-                                DMGTags: [],
-                                allToughness: false,
-                                slot: skillRef.slot,
-                                actionTags,compositeCacheTag
-                            }
-                        }
-
-                        let healObject = ATKObjects.natashaSkillHealHOTOBJECT;
-                        healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
-
-                    }
-                    if (ultHOTCheck) {
-
-                        let skillRef = ATKObjects.natashaUltimateREF ??= ATKObjects.Ultimate["Gift of Rebirth"].variant1;
-                        //we aren't ref values from this since the values are from an eidolon
-                        
-                        
-                        if (!ATKObjects.natashaUltHealHOTOBJECT) {
-
-                            const actionTags = ["All","Heal"];
-                            const compositeCacheTag = actionTags + ownerTurn.properName;
-
-                            ATKObjects.natashaUltHealHOTOBJECT = {
-                                multipliers: {
-                                    primary: 0.06,
-                                    blast: null,
-                                    all: null,
-                                },
-                                flatAmounts: {
-                                    primary: 160,
-                                    blast: null,
-                                    all: null,
-                                },
-                                scalar: "HP",
-                                DMGTags: [],
-                                allToughness: false,
-                                slot: skillRef.slot,
-                                actionTags,compositeCacheTag,
-                            }
-                        }
-
-                        let healObject = ATKObjects.natashaUltHealHOTOBJECT;
-                        healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
-
-                    }
-                },
-                "target": "self",
-                "listenerName": "Natasha - E2/Skill HoT turnstart listener",
-                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -8907,6 +8930,12 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
 
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener3 = passiveListeners[2];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
                 "target": "self",
@@ -8980,64 +9009,70 @@ const turnLogic = {
                         "listenerName": "Lynx E1 <=50%HP Healing bonus",
                         "owners": []
                     },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            // let characterName = ownerTurn.properName;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const buffsObject = sourceTurn.buffsObject ?? {};
+                            const logicRef = turnLogic[providerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            const buffNames = turnLogic[providerTurn.properName].buffNames;
+        
+                            
+        
+                            const ultHOTName = this.ultHOTName ??= buffNames.talentHOT;
+                            const talentHOTCheck = buffsObject[ultHOTName];
+        
+                            if (talentHOTCheck) {
+                                let skillRef = ATKObjects.lynxTalentREF;
+                                let values = ATKObjects.lynxTalentREFVALUES;
+                                //we aren't ref values from this since the values are from an eidolon
+                                
+                                const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
+                                const skillHOTCheck = buffsObject[skillHOTName];
 
-                ],
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    // let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    const buffsObject = sourceTurn.buffsObject ?? {};
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
+                                if (!ATKObjects.lynxHOTHealHOTOBJECT) {
+        
+                                    const actionTags = ["All","Heal"];
+                                    const compositeCacheTag = actionTags + providerTurn.properName;
+        
+                                    ATKObjects.lynxHOTHealHOTOBJECT = {
+                                        multipliers: {
+                                            primary: values[1] + (skillHOTCheck ? values[3] : 0),
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        flatAmounts: {
+                                            primary: values[2] + (skillHOTCheck ? values[4] : 0),
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        scalar: "HP",
+                                        DMGTags: [],
+                                        allToughness: false,
+                                        slot: skillRef.slot,
+                                        actionTags,compositeCacheTag
+                                    }
+                                }
+        
+                                let healObject = ATKObjects.lynxHOTHealHOTOBJECT;
 
-                    const buffNames = turnLogic[ownerTurn.properName].buffNames;
+                                healObject.multipliers.primary = values[1] + (skillHOTCheck ? values[3] : 0);
+                                healObject.flatAmounts.primary = values[2] + (skillHOTCheck ? values[4] : 0);
 
-                    const skillHOTName = this.skillHOTName ??= buffNames.skillHOT;
-                    const skillHOTCheck = buffsObject[skillHOTName];
-
-                    const ultHOTName = this.ultHOTName ??= buffNames.talentHOT;
-                    const talentHOTCheck = buffsObject[ultHOTName];
-
-                    if (talentHOTCheck) {
-                        let skillRef = ATKObjects.lynxTalentREF;
-                        let values = ATKObjects.lynxTalentREFVALUES;
-                        //we aren't ref values from this since the values are from an eidolon
-                        
-                        
-                        if (!ATKObjects.lynxHOTHealHOTOBJECT) {
-
-                            const actionTags = ["All","Heal"];
-                            const compositeCacheTag = actionTags + ownerTurn.properName;
-
-                            ATKObjects.lynxHOTHealHOTOBJECT = {
-                                multipliers: {
-                                    primary: values[1] + (skillHOTCheck ? values[3] : 0),
-                                    blast: null,
-                                    all: null,
-                                },
-                                flatAmounts: {
-                                    primary: values[2] + (skillHOTCheck ? values[4] : 0),
-                                    blast: null,
-                                    all: null,
-                                },
-                                scalar: "HP",
-                                DMGTags: [],
-                                allToughness: false,
-                                slot: skillRef.slot,
-                                actionTags,compositeCacheTag
+                                healAlly(battleData,healObject,sourceTurn,providerTurn,skillRef.slot,1,null)
                             }
-                        }
-
-                        let healObject = ATKObjects.lynxHOTHealHOTOBJECT;
-                        healAlly(battleData,healObject,sourceTurn,ownerTurn,skillRef.slot,1,null)
-                    }
-                },
-                "target": "self",
-                "listenerName": "Lynx - E2/Skill HoT turnstart listener",
-                "ownerTurn": {},
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Lynx - E2/Skill HoT turnstart listener",
+                        "ownerTurn": {},
+                    },
+                ],
             },
             {
                 "trigger": "UltimateReady",
@@ -10612,18 +10647,15 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            // let characterName = ownerTurn.properName;
-                            // let sourceTurn = generalInfo.sourceTurn;
         
-                            if (ownerTurn.turnState) {
-                                let amount = 5;
-                                updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                            }
+                            let amount = 5;
+                            updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Silver Wolf - Major Trace: Inject",
                         "ownerTurn": {},
                     },
@@ -17679,7 +17711,7 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             // let characterName = ownerTurn.properName;
@@ -18618,15 +18650,13 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartTurn",
+                "trigger": "PreActionPhase",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName != ownerTurn.properName) {return;}
-
                     ownerTurn.battleValues.skillInjectReady = true;
                 },
                 "target": "self",
+                "isPersonal": true,
                 "listenerName": "Seele Skill - reset skill inject cooldown",
                 "ownerTurn": {},
             },
@@ -20047,18 +20077,14 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            // let characterName = ownerTurn.properName;
-                            // let sourceTurn = generalInfo.sourceTurn;
-                            
-                            if (ownerTurn.turnState) {
-                                let amount = 5;
-                                updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                            }
+                            let amount = 5;
+                            updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Tingyun - Major Trace: Jubilant Passage",
                         "ownerTurn": {},
                     },
@@ -21435,18 +21461,14 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            // let characterName = ownerTurn.properName;
-                            // let sourceTurn = generalInfo.sourceTurn;
-        
-                            if (ownerTurn.turnState) {
-                                let amount = 8;
-                                updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
-                            }
+                            let amount = 8;
+                            updateEnergy(battleData,amount,ownerTurn,false,this.listenerName);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Sculpture's Preamble - turn start energy gain",
                         "ownerTurn": {},
                     },
@@ -23345,7 +23367,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -24153,7 +24175,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             // let characterName = ownerTurn.properName;
@@ -28391,7 +28413,7 @@ const turnLogic = {
                         "listenerName": "E2 From Shattered Sky, I Free Fall Weakness Break check",
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
@@ -31851,12 +31873,13 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            if (ownerTurn.turnState) {ownerTurn.e2EnergyAlreadyProcd = false;}
+                            ownerTurn.e2EnergyAlreadyProcd = false;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "E2 energy regen turn start reset",
                         "ownerTurn": {},
                     },
@@ -37671,7 +37694,7 @@ const turnLogic = {
                         "listenerName": "E1 NETHERWING Snowbound Maiden, Memory to Tomb - enemy HP evaluation for final dmg multi",
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let netherTurn = this.ownerTurn;
                             const ownerTurn = battleData.nameBasedTurns[netherTurn.eventOwner];
@@ -39970,7 +39993,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             const ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn
@@ -40594,7 +40617,7 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             // let characterName = ownerTurn.properName;
@@ -41317,7 +41340,7 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
