@@ -178,7 +178,7 @@ const endgameModeDisplay = {
             </div>
             <details class="actionDetailBodyDetailExpand">
                 <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Why Not?</summary>
-                    <div class="actionDetailBody">
+                    
 
                 <div class="superimpositionHolderbox">
                     <div class="actionDetailBody3Description superimpositionHolderbox">
@@ -189,7 +189,7 @@ const endgameModeDisplay = {
             </details>
             <details class="actionDetailBodyDetailExpand">
                 <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">What about Support Characters/DU Trials/PS?</summary>
-                    <div class="actionDetailBody">
+                    
 
                 <div class="superimpositionHolderbox">
                     <div class="actionDetailBody3Description superimpositionHolderbox">
