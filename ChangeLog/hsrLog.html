@@ -6,13 +6,19 @@
     </ul>
 </div> -->
 <div>
-    <h1>June 13th, 2026</h1>
+    <h1>June 16th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
         <li>Added the following new characters:
             <ul>
                 <li>Himeko</li>
+                <li>Clara</li>
+            </ul>
+        </li>
+        <li>Added the following new lightcones:
+            <ul>
+                <li>Something Irreplaceable</li>
             </ul>
         </li>
         <li>Added the ability to restrict DEF values for LvL 100+ enemies in case you are trying to simulate against Plight enemies(they have unique scaling that limits their DEF value to a LvL 100 value despite being LvL 120)
@@ -26,6 +32,9 @@
                 <li>Anaxa's ability duplication is now triggered at the start of an ability action rather than closer to the end after the attack</li>
             </ul>
         </li>
+        <li>Reworked how DoT detonations are handled, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked the timing on Additional DMG instances across every possible instance in the calculator, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked the timing on Super Break DMG instances across every possible instance in the calculator, making them considerably more accurate and in-line with the game.</li>
         <li>Reworked the entirety of enemy targeting across every character, which allows us to do a lot of new things internally.</li>
         <li>Greatly reworked attack handling as a whole, to allow for a lot of new things interally.</li>
         <li>Reworked how Joint-Attacks are handled for the sake of accuracy.</li>
@@ -41,8 +50,16 @@
             </ul>
         </li>
         <li>Changed the visual display for attack expands to display the hit count and AVG total at the top of the expand rather than the bottom.</li>
+        <li>Reworked how enemies are constructed at the start of a battle, allowing us to do a few new things internally. This will not impact your enemy save files, this only changes how enemies are made, not read.</li>
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where Flowing Nightglow would break when the Harmony unit used their ultimate, due to a recent change.</li>
+        <li>Fixed a timing issue created from a recent change where Meshing Cogs/Memories of the Past didn't properly reset the regen flag on lightcone owners in some cases.
+            <ul>
+                <li>Also removed a testing console.log() I had left in this lightcone on accident. Wouldn't have mattered unless you used it in the optimizer, but it would have caused a crash if you did.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Sparkle's reserve Skill Points could start to trigger too early, in most cases this was irrelevant.</li>
         <li>Fixed a visual issue where enemy actions in the log would specify their target as "[object Object]" instead of trying to parse the targets name.</li>
         <li>Fixed an issue where Castorice's E2 newbud gain on the Enhanced Skill could proc more than once if you keep Netherwing alive with the new conditions added with the Castorice update.
             <ul>
@@ -85,10 +102,17 @@
                 <li>ALSO NOTE: however much you think I hate this lightcone, it's still not enough.</li>
             </ul>
         </li>
+        <li>Added tweaks to how Hysilens monitored her proc count for enemies in the zone, which should be a slight performance boost to DoT teams that use her.</li>
 
         <h3>Library</h3>
         <h4>Additions</h4>
         <li>When on an enemy's page, SPD values will now display up to 7 decimals. Very few enemies need that much, but some can.</li>
+        <li>Renamed the following events for format consistency or accuracy:
+            <ul>
+                <li>Turn Start [Anyone] -> Turn [Anyone]: Start</li>
+                <li>Turn End [Anyone] -> Turn [Anyone]: End</li>
+            </ul>
+        </li>
     </ul>
 </div>
 

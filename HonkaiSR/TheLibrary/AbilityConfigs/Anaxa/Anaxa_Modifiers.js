@@ -157,7 +157,7 @@ const configAbility = {
       "stackLimit": 99999,
       "execute": [
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             "Modifier Deletes Itself"
           ]

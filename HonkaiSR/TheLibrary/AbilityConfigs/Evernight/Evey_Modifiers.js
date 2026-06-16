@@ -165,7 +165,7 @@ const configAbility = {
       "statusName": "Darkest Riddle",
       "execute": [
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -1128,7 +1128,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Define Custom Variable",

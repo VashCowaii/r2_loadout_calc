@@ -89,7 +89,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-743341522\">LC_21037_Main</a>",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "IF",
