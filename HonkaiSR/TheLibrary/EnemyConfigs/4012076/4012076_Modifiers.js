@@ -25,7 +25,7 @@ const configAbility = {
       "addStacksPerTrigger": 1,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -2653,7 +2653,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         },
         {
           "eventTrigger": "Turn [Anyone]: End",
@@ -3392,7 +3392,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "SWITCH",

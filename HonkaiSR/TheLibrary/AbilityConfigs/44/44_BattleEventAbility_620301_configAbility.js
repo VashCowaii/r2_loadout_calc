@@ -81,7 +81,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-418124996\">Modifier_BattleEventAbility_620301</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

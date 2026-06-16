@@ -1911,7 +1911,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -3076,7 +3076,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -3664,7 +3664,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -4064,7 +4064,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -4398,7 +4398,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -4868,7 +4868,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -5776,7 +5776,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -6293,7 +6293,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -6831,7 +6831,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -7301,7 +7301,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
@@ -7368,7 +7368,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -8135,7 +8135,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -8542,7 +8542,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Deleted bullshit",
                 {
@@ -9269,7 +9269,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -9983,7 +9983,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -10327,7 +10327,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__968829861\">Modifier_BattleEventAbility_Challenge_Month_33</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -10950,7 +10950,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -11409,7 +11409,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -12094,7 +12094,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -12873,7 +12873,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -13711,7 +13711,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1153530765\">Modifier_BattleEventAbility_Challenge_Month_28</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -14828,7 +14828,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -15580,7 +15580,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -16647,7 +16647,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__935421718\">Modifier_BattleEventAbility_Challenge_Month_25</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -16994,7 +16994,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -17601,7 +17601,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -18130,7 +18130,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
@@ -18347,7 +18347,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2023621930\">Modifier_BattleEventAbility_Challenge_Month_22_plus2_recoverSP</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "UI Display Event (On Entity)",
@@ -18786,7 +18786,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -19423,7 +19423,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -20129,7 +20129,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -20384,7 +20384,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1170455479\">Modifier_BattleEventAbility_Challenge_Month_17</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -20598,7 +20598,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

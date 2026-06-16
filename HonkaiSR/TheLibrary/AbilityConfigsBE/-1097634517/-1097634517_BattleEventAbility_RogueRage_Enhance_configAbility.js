@@ -28,7 +28,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-843474776\">Modifier_BattleEventAbility_RogueRage_Enhance</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

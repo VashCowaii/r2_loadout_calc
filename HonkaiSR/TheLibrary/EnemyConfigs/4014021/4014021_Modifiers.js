@@ -2472,7 +2472,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1423347162\">Enemy_W4_Nikadory_IF_WithHearse</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

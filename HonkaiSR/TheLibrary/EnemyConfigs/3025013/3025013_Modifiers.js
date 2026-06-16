@@ -2194,7 +2194,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1704895932\">Enemy_W3_Sunday_IF_EX03_Insert</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -4076,7 +4076,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Heal",

@@ -106,7 +106,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-972268997\">Modifier_BattleEventAbility_Rage</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",

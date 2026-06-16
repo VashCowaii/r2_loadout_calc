@@ -32,7 +32,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1051712844\">Enemy_W4_Manta_BEFinish</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",

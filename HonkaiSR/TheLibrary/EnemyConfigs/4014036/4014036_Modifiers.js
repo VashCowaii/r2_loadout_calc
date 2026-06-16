@@ -190,7 +190,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -242,7 +242,7 @@ const configAbility = {
       "addStacksPerTrigger": 1,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
@@ -839,7 +839,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Added Value",
@@ -1022,7 +1022,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -2493,7 +2493,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -2686,7 +2686,7 @@ const configAbility = {
       "addStacksPerTrigger": 1,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -5314,7 +5314,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         },
         {
           "eventTrigger": "Turn [Anyone]: End",
@@ -6053,7 +6053,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "SWITCH",

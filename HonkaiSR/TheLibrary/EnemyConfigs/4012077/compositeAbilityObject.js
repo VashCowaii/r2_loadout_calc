@@ -45,7 +45,7 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 1,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2673,7 +2673,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "Turn [Anyone]: End",
@@ -3412,7 +3412,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "SWITCH",

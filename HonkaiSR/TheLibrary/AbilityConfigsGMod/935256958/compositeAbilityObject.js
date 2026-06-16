@@ -515,7 +515,7 @@ const compositeAbilityObject = {
           "useEntitySnapshot": true,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -609,7 +609,7 @@ const compositeAbilityObject = {
           "useEntitySnapshot": true,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -702,7 +702,7 @@ const compositeAbilityObject = {
           "useEntitySnapshot": true,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "ATK Scaling DMG",

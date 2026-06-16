@@ -52,7 +52,7 @@ const compositeAbilityObject = {
           "stackType": "Multiple",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",
@@ -842,7 +842,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-130963537\">MLevel_WB_BlockDamagePerTurn</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",

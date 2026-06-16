@@ -2272,7 +2272,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1092187046\">Enemy_W4_IronTombCore_Main_ShowBattleCondition</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -2304,7 +2304,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1190345807\">Enemy_W4_IronTombCore_MainP3_ShowBattleCondition</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -3504,7 +3504,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -5728,7 +5728,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__458513520\">Enemy_W4_IronTombCore_BreakState</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             }
           ]
         }

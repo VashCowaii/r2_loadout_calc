@@ -2513,7 +2513,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1041338433\">Enemy_W5_Vtuber_IF_Part1FloatMessage</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -2906,7 +2906,7 @@ const compositeAbilityObject = {
           "statusName": "Epic showdown in progress!",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Reconstruct Modifier",
@@ -3088,7 +3088,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Reconstruct Modifier",
@@ -9499,7 +9499,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__40442905\">Enemy_W5_Vtuber_CountDown02</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -10017,7 +10017,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-9889952\">Enemy_W5_Vtuber_CountDown01</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Inject Ability Use",

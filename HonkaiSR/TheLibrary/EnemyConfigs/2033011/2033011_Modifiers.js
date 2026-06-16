@@ -146,7 +146,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -272,7 +272,7 @@ const configAbility = {
       "duration": 2,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Added Value",

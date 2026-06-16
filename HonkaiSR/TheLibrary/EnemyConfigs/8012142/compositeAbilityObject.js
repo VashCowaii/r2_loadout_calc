@@ -48,7 +48,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__37141670\">Enemy_AML_Boss_Part3_OnBreakRecoverSoundEffect</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

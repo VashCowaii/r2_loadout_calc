@@ -7189,7 +7189,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -7413,7 +7413,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -7495,7 +7495,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -7599,7 +7599,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -9557,7 +9557,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

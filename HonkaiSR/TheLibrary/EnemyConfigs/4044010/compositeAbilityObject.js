@@ -1318,7 +1318,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",

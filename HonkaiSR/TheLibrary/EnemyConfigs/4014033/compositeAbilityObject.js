@@ -372,7 +372,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1061433740\">Monster_W4_Pollux_StoryMode_SpecailAbility05</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -424,7 +424,7 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 1,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1021,7 +1021,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1204,7 +1204,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2675,7 +2675,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -3985,7 +3985,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "Turn [Anyone]: End",

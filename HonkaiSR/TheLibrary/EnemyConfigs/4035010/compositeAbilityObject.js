@@ -1205,7 +1205,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -3412,7 +3412,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__458513520\">Enemy_W4_IronTombCore_BreakState</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             }
           ]
         }

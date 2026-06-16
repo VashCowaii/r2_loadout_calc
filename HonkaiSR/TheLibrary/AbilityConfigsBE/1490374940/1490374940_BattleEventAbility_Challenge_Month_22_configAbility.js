@@ -208,7 +208,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "ATK Scaling DMG",
@@ -425,7 +425,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2023621930\">Modifier_BattleEventAbility_Challenge_Month_22_plus2_recoverSP</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "UI Display Event (On Entity)",

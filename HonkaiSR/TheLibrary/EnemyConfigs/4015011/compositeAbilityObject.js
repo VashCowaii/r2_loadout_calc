@@ -510,7 +510,7 @@ const compositeAbilityObject = {
           "statusName": "Eagerness",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",
@@ -4470,7 +4470,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",
@@ -4872,7 +4872,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",

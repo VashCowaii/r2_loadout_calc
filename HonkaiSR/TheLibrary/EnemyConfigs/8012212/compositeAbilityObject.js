@@ -120,7 +120,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-647503843\">Monster_W2_HuanlongPart_01_InsertAbilityController</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

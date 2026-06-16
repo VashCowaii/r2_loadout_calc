@@ -52,7 +52,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1717523406\">Modifier_BattleEventAbility_Challenge_06</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Find New Target",

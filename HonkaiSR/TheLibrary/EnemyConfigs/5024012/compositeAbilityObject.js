@@ -114,7 +114,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__209501789\">Monster_W5_Ripper_Main_HPTrigger2</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -185,7 +185,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__159168932\">Monster_W5_Ripper_Main_HPTrigger1</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -1253,7 +1253,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1277,7 +1277,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__34096710\">Monster_W5_Ripper_FleshEffect</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2159,7 +2159,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

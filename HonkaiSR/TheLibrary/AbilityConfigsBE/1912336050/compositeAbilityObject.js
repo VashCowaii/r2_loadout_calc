@@ -760,7 +760,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Increment Cycles Counter",
                 {
@@ -2005,7 +2005,7 @@ const compositeAbilityObject = {
           "statusName": "Cathartic Applause",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Adjust Team Punchline Value",
@@ -7378,7 +7378,7 @@ const compositeAbilityObject = {
           "statusName": "Hemovore+",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Consume",
@@ -7491,7 +7491,7 @@ const compositeAbilityObject = {
           "statusName": "Hemovore",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Consume",
@@ -10811,7 +10811,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1368039557\">Modifier_ChallengePeakBattle_EnhancedAbility_0012_02</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -11161,7 +11161,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-575697244\">Modifier_ChallengePeakBattle_BaseAbility_0012_02</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -13787,7 +13787,7 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 1,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -14123,7 +14123,7 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 1,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -15150,7 +15150,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1429098384\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_02</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -15342,7 +15342,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-358817238\">Modifier_ChallengePeakBattle_EnhancedAbility_0006_02</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -15534,7 +15534,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__99709199\">Modifier_ChallengePeakBattle_BaseAbility_0006_02</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",

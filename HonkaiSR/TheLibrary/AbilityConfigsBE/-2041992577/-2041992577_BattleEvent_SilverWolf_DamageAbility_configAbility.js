@@ -28,7 +28,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__968049931\">MBattleEvent_SilverWolf_DamageAbility</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -271,7 +271,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1604650808\">MBattleEvent_SilverWolf_ActionFirstModifier</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

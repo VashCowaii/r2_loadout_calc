@@ -168,7 +168,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -829,7 +829,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1068246674\">HideMonsterHUD</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "Action Choice Window [Owner]"

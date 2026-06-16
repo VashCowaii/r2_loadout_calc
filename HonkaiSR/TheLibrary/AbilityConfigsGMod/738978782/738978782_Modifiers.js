@@ -1681,7 +1681,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1542717021\">Monster_RogueBoss</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Variable with Cumulative Delay",
@@ -1765,7 +1765,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1381820489\">Monster_RogueElite</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Variable with Cumulative Delay",
@@ -1815,7 +1815,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1019940220\">Enemy_Standard_HideMonsterHUD</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         },
         {
           "eventTrigger": "Action Choice Window [Owner]"

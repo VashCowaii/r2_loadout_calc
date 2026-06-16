@@ -74,7 +74,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-575697244\">Modifier_ChallengePeakBattle_BaseAbility_0012_02</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

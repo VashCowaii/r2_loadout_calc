@@ -452,7 +452,7 @@ const configAbility = {
       "statusName": "Eagerness",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Heal",
@@ -4412,7 +4412,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Copy",
@@ -4814,7 +4814,7 @@ const configAbility = {
       "stackType": "Replace",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Copy",

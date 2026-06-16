@@ -295,7 +295,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__263808079\">Enemy_W4_Claymore_01_LocalLegend_WhiteMonst</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -335,7 +335,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -1004,7 +1004,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -1682,7 +1682,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Modifier Behavior Flag(s)",

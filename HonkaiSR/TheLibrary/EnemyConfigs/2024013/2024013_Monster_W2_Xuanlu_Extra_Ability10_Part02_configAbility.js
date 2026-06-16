@@ -389,7 +389,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-348100636\">Enemy_W2_Xuanlu_10_Extra_HealMinionShowUIModifier</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]

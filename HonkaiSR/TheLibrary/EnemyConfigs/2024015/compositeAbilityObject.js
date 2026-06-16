@@ -654,7 +654,7 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 1,
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",

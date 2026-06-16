@@ -467,7 +467,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -1569,7 +1569,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -1630,7 +1630,7 @@ const compositeAbilityObject = {
           "statusName": "Grievous",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
@@ -1771,7 +1771,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

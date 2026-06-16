@@ -90,7 +90,7 @@ const configAbility = {
       "statusName": "Epic showdown in progress!",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Reconstruct Modifier",
@@ -272,7 +272,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Reconstruct Modifier",

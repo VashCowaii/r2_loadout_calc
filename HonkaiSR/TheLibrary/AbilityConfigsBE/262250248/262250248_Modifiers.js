@@ -561,7 +561,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-796135737\">BoxingGym_Damage_AutoAddDamage</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -848,7 +848,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1374078012\">BoxingGym_Shield_AutoGetShield</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Stat",

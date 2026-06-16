@@ -95,7 +95,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1938760859\">Modifier_BattleEventAbility_TVBroadcast_Positive</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",

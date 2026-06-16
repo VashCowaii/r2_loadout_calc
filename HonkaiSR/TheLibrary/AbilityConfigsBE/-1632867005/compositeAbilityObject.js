@@ -226,7 +226,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-466539818\">VanishTest_Modifier</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -449,7 +449,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__394926151\">TurnEventMDF_HealCommon</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",
@@ -476,7 +476,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__523647058\">TurnEventMDF_DecreaseBP</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Skill Points Modification",
@@ -499,7 +499,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-156400163\">TurnEventMDF_HealSP</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Update Energy",

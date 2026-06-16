@@ -23,7 +23,7 @@ const configAbility = {
       "statusName": "Cathartic Applause",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Adjust Team Punchline Value",

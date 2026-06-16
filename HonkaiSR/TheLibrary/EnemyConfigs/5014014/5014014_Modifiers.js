@@ -2472,7 +2472,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1041338433\">Enemy_W5_Vtuber_IF_Part1FloatMessage</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Find New Target",
@@ -2865,7 +2865,7 @@ const configAbility = {
       "statusName": "Epic showdown in progress!",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Reconstruct Modifier",
@@ -3047,7 +3047,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Reconstruct Modifier",

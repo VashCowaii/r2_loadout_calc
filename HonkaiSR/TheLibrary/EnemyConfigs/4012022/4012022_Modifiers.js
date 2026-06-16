@@ -115,7 +115,7 @@ const configAbility = {
       "statusName": "Proselytize",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -652,7 +652,7 @@ const configAbility = {
       "statusName": "Proselytize",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]

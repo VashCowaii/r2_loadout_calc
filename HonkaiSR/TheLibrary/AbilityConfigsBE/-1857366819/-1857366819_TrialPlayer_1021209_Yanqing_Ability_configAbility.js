@@ -190,7 +190,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__224735379\">TrialPlayer_1021209_Yanqing_AttackFlag_Modifier</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
