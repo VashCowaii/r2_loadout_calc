@@ -8957,6 +8957,7 @@ const turnLogicLightcones = {
     },
 
     //PRESERVATIONN
+    //5star
     "Inherently Unjust Destiny": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -9210,6 +9211,93 @@ const turnLogicLightcones = {
             "redoubtSummon": "Redoubt (Summon) [LC]"
         },
     },
+    "Moment of Victory": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    const aggroSheet = this.aggroSheet ??= {
+                        "stats": [AggroP],
+                        [AggroP]: 2,
+                        "source": "Moment of Victory",
+                        "sourceOwner": null,
+                        "buffName": turnLogicLightcones["Moment of Victory"].buffNames.aggroBuff,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        aggroSheet.sourceOwner = currentTurn.properName;
+                        updateBuff(battleData,currentTurn,aggroSheet);
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Moment of Victory listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = personalOwner;
+        
+                            if (!sourceTurn.lcMomentOfVictoryDEFSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Moment of Victory";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lcMomentOfVictoryDEFSHEET = {
+                                    "stats": [DEFP],
+                                    [DEFP]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.defBuff,
+                                    "durationInTurn": 1,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcMomentOfVictoryDEFSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Moment of Victory - was attacked listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "defBuff": "Moment of Victory [LC]",
+            "aggroBuff": "Moment of Victory (Aggro) [LC]",
+        },
+    },
+        //4star
     "Landau's Choice": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -9262,6 +9350,7 @@ const turnLogicLightcones = {
             "drAggro": "Landau's Choice [LC]"
         },
     },
+        //3star
 
 
     //ERUDITON
