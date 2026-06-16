@@ -1541,7 +1541,7 @@ const turnLogicLightcones = {
                         "listenerName": "Shadowed by Night - break dmg end turn listener",
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
         
@@ -1960,7 +1960,7 @@ const turnLogicLightcones = {
                         "listenerName": "Time Waits for No One - healing listener",
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
         
@@ -2630,7 +2630,7 @@ const turnLogicLightcones = {
                         "listenerName": "Dream's Montage ATK End listener",
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
         
@@ -2733,7 +2733,7 @@ const turnLogicLightcones = {
                 "owners": [],
                 "subListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             // let ownerRef = this.owners;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -4588,7 +4588,7 @@ const turnLogicLightcones = {
                         "listenerName": "Reforged in Hellfire purgatory controller",
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             const sourceTurn = generalInfo.sourceTurn;
 
@@ -8909,7 +8909,7 @@ const turnLogicLightcones = {
                 "owners": []
             },
             {
-                "trigger": "StartTurn",
+                "trigger": "PreActionPhase",
                 condition(battleData,generalInfo) {
                     let ownersSlots = this.ownersSlots;
                     const sourceTurn = generalInfo.sourceTurn;
@@ -9580,7 +9580,7 @@ const turnLogicLightcones = {
                 "owners": [],
                 "subListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             const sourceTurn = generalInfo.sourceTurn;
         
@@ -13379,7 +13379,7 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "StartTurn",
+                            "trigger": "PreActionPhase",
                             condition(battleData,generalInfo) {
                                 let sourceTurn = generalInfo.sourceTurn;
         
@@ -14122,7 +14122,7 @@ const turnLogicRelics = {
                             "listenerName": "As Navigator Isee Sees It - ult end listener",
                         },
                         {
-                            "trigger": "StartTurn",
+                            "trigger": "PreActionPhase",
                             condition(battleData,generalInfo) {
 
                                 const sourceTurn = generalInfo.sourceTurn;
