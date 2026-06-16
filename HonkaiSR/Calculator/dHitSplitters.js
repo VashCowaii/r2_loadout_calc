@@ -1436,6 +1436,82 @@ const hitSplitters = {
       }
     ]
   },
+  "Clara": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      },
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "all"
+        }
+      },
+    ],
+    "skill2": [
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0,
+          "toughness": 0,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0,
+          "toughness": 0,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0,
+          "toughness": 0,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0,
+          "toughness": 0,
+          "target": "all"
+        },
+      },
+    ],
+    "passive": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "blast"
+        },
+      }
+    ],
+  },
   "Hook": {
     "basic": [
       {

@@ -3481,6 +3481,61 @@ const maslowCharactersDestruction = {
             addTeamWant: [],
         },
     },
+    "Clara": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","DamageBreak","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","SPDFlat","EffectRES","HP%"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Physical","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersHarmony = {
     //HARMONY
