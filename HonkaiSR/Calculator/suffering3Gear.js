@@ -398,7 +398,7 @@ const turnLogicLightcones = {
                         "listenerName": "I Venture Forth to Hunt - FUA listener",
                     },
                     {
-                        "trigger": "EndTurn",
+                        "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
                             // let ownerRef = this.owners;
                             let sourceTurn = generalInfo.sourceTurn;
