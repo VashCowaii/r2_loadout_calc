@@ -919,6 +919,7 @@ const sim = {
                 // poke("StartTurnEnd", battleData, exoTurnRef);
                 turnWrapper(turnName,sourceTurn,battleData);
             }
+            poke("ActionEndPhase", battleData, exoTurnRef,sourceTurn);
 
             poke("EndTurn", battleData, exoTurnRef,sourceTurn);
             
