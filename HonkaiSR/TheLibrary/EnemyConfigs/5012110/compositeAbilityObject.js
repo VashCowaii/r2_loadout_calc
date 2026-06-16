@@ -1083,7 +1083,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action END Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
