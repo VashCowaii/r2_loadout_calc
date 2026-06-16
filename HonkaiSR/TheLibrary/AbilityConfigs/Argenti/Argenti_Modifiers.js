@@ -243,7 +243,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__53398910\">Argenti_PointB1_AutoBonusLayerModifier</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Looped Event",

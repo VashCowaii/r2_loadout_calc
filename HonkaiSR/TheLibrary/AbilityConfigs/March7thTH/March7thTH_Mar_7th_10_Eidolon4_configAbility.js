@@ -19,7 +19,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-926052805\">Mar_7th_10_Eidolon4</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Update Energy",

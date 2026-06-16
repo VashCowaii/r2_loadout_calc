@@ -1539,7 +1539,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__499252230\">Tingyun_Tree03</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Update Energy",

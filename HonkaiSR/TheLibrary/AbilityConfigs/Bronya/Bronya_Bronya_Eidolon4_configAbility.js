@@ -31,7 +31,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__49161632\">Bronya_Eidolon4_Listen</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",

@@ -97,7 +97,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1556942892\">Advanced_Seele_Ability02_AutoInsertListen</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -244,7 +244,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable",

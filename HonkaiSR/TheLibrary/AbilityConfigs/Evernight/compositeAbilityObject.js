@@ -7437,7 +7437,7 @@ const compositeAbilityObject = {
           "statusName": "You, Parting, Beyond Reach",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]
