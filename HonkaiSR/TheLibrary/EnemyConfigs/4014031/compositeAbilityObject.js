@@ -398,7 +398,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -2703,7 +2703,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable",

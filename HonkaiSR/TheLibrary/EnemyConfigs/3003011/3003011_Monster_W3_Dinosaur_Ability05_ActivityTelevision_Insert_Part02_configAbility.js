@@ -225,7 +225,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__171728887\">FixDelay</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Action Advance/Delay",

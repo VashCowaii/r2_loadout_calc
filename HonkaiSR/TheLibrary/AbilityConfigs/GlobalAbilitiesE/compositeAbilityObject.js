@@ -97,7 +97,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1985606354\">RemoveOneMorePerturn</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",

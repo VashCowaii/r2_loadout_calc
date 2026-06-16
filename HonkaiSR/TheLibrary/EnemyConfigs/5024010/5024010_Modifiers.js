@@ -1849,7 +1849,7 @@ const configAbility = {
       "addStacksPerTrigger": 1,
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase] [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start Action-End Phase",
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -2266,7 +2266,7 @@ const configAbility = {
           "priorityLevel": 100
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "IF",

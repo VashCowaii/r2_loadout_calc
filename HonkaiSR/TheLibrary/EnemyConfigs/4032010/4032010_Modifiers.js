@@ -63,7 +63,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "IF",

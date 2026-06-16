@@ -48,7 +48,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Turn [Anyone]: End"
             },
             {
-              "eventTrigger": "Turn [Action-End Phase] [Anyone]"
+              "eventTrigger": "Turn [Anyone]: Start Action-End Phase"
             },
             {
               "eventTrigger": "Deal Damage End [Anyone]: Hit"

@@ -427,7 +427,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase] [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start Action-End Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

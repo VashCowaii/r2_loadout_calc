@@ -51,7 +51,7 @@ const compositeAbilityObject = {
           "addStacksPerTrigger": 1,
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",

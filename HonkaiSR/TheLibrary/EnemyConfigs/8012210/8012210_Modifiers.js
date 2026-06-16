@@ -26,7 +26,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -1461,7 +1461,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

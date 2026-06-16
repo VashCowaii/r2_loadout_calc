@@ -287,7 +287,7 @@ const configAbility = {
       "statusName": "Where The West Wind Dwells",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]

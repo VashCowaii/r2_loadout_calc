@@ -767,7 +767,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-167826022\">Sparkle_Eidolon4_CD</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]

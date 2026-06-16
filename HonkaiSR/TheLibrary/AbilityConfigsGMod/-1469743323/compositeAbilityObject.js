@@ -823,7 +823,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1257288835\">MLevel_WB_AddDamagePerTurn</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",

@@ -1355,7 +1355,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -3442,7 +3442,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-424201711\">Monster_W4_Nikadory_Main3_Delay</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]"
+              "eventTrigger": "Turn [Owner]: Action-End Phase"
             }
           ]
         },

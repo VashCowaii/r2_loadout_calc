@@ -110,7 +110,7 @@ const compositeAbilityObject = {
           "type": "Buff",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -201,7 +201,7 @@ const compositeAbilityObject = {
           "type": "Buff",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -344,7 +344,7 @@ const compositeAbilityObject = {
           "type": "Buff",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -471,7 +471,7 @@ const compositeAbilityObject = {
           "type": "Buff",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",

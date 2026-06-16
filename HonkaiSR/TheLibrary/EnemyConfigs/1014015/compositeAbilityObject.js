@@ -168,7 +168,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]"
+              "eventTrigger": "Turn [Owner]: Action-End Phase"
             },
             {
               "eventTrigger": "Take Damage End [Owner]: Hit",

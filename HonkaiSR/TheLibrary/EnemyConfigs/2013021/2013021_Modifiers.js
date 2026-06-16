@@ -27,7 +27,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-186638571\">Enemy_W2_Valkyrie02_RLElite_RemoveOneMore</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "IF",

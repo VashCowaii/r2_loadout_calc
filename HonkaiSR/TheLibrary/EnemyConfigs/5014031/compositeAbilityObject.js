@@ -128,7 +128,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -1025,7 +1025,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__609245042\">Enemy_W5_Painter_RemoveOneMore</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",

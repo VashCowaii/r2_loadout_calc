@@ -63,7 +63,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -739,7 +739,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -912,7 +912,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

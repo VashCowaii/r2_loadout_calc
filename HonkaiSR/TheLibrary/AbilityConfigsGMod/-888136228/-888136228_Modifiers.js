@@ -219,7 +219,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -301,7 +301,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -371,7 +371,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",
