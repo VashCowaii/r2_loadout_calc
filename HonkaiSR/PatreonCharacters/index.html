@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiHome.css"> -->
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css"> -->
+    
+    <link rel="stylesheet" href="/css/Honkai/honkaiCalc.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css">
+
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibrary.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryProgress.css">
+    <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
+    <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
+    <link rel="stylesheet" href="/css/Remnant2/substat.css">
+    <!-- <link rel="stylesheet" href="/TFD/tfdCalc.css"> -->
+    <link rel="Icon" href="/images/Cowaii.png">
+    <!-- <script src="code.js"></script> -->
+    <title>Patreon Character Rules</title> <!-- Browser Tab title -->
+
+    <meta property="og:title" content="HSR: Patreon Character Rules">
+    <meta
+      property="og:description"
+      content="Rules for adding Custom Characters through Patreon."
+    />
+    <meta
+      property="description"
+      content="Rules for adding Custom Characters through Patreon."
+    />
+    <meta
+      property="og:image"
+      content="https://cowaii.io/images/swagCat.png"
+    />
+    <meta
+      property="og:url"
+      content="https://cowaii.io/"
+    />
+    <meta property="og:site_name" content="HSR: Patreon Character Rules" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="HSR: Patreon Character Rules" />
+    <meta
+      name="twitter:description"
+      content="Rules for adding Custom Characters through Patreon."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cowaii.io/images/swagCat.png"
+    />
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSMSXXML0Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSMSXXML0Z');
+</script>
+
+
+<body>
+    <div id="tooltip" class="tooltip tooltipHSR"></div>
+    <div id="gameNav" class="sidenav"></div><div class="thisShouldNotWork"></div><!-- Sidenav -->
+
+    <div class="blockoutBackgroundShutter" id="blockoutBackgroundShutter" onclick="customMenu.closeMenu()"></div>
+    <div class="customMenuMainHolderBox" id="customMenuMainHolderBox">
+        <div class="customMenuMainHolderBoxInner">
+            <div class="customMenuTitleRow">
+                <div class="customMenuSearchTitleHolder">
+                    <div class="weirdSideSemiCircleThingerAllySnapshotBox"></div>
+                    <div class="customMenuSearchTitle" id="customMenuSearchTitle"></div>
+                </div>
+                
+            </div>
+            <div class="customMenuCloseButton clickable" id="customMenuCloseButton" onclick="customMenu.closeMenu()">x</div>
+            
+            <div class="customMenuSearchNote" id="customMenuSearchNote"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyGlobalButtons"></div>
+            <div class="customMenuSearchBarBox" id="customMenuSearchBarBox">
+                Search: <input class="customMenuSearchBarInput" id="customMenuSearchBarInput" maxlength="100" oninput="customMenu.updateSearchResults();">
+            </div>
+            <div class="customMenuSearchBody" id="customMenuSearchBody"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStats" style="display: none;"></div>
+            <div class="customMenuSearchBody" id="customMenuSearchBodyStatsAttackData" style="display: none;"></div>
+        </div>
+    </div>
+
+
+<div class="main">
+    <div class="theGreatBox">
+
+        <div class="updateBannerMegaBox">
+            <div style="color: white;">Site Updated:&nbsp;<span id="calcLastUpdated"></span></div>
+        </div>
+        <div id="r2Navbar" class="helpBarMegaBox"></div> <!-- R2 specific Header nav -->
+
+
+
+        <div class="mainGridRow" style="display: flex;width: 100%;" id="mainGridRow">
+
+          <div class="mocTitleRowMain">
+            <img src="" class="pureFictionBannerImage" id="pureFictionBannerImage">
+            <div class="mocTitleRow">
+              
+              <div class="cardBoxIconTextVersion" id="cardBoxIconTextVersion">Patreon Character Rules</div>
+            </div>
+          </div>
+          
+
+          <!-- <div class="bulletSelectorIDRowBox">
+            <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(-1)">&#9664;</div>
+            <div class="traitLevelDisplay">
+                <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="1" step="1" value="1" onchange="reactorFunctions.updateRotationDisplay()">
+            </div> 
+            <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(1)">&#9654;</div>
+          </div> -->
+          <div class="mocEachSideWholeBox" id="mainDisplayBox">
+            Rules are listed first, then pricing below.
+            <div class="mocEachSide">
+              
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">No Leaks</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    Custom characters will not ever be allowed to be a means to theorycraft leaked kits, no matter how much you dress them up otherwise. If you attempt this, I will throw your money back in your face and tell you to eat shit.
+                    <br>If the character is not in the live-version of the game publicly available to all of us, then it's off the table for any kind of fankit adjustments or theory.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Discord Messaging Required</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    Not email, not Reddit DM's, I want you in the discord server linked at the bottom of the page so I can talk to you as I go or find you later if needed.
+                    If you sign up but never make contact, I'll assume that you just meant to make a donation for some weird fuck-all reason and take the money, I'm not gonna spend time trying to hunt you down.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Fan-Novaflares</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    Fan-made novaflares are perfectly fine, however the following rules need to be adhered to:
+                    <br><br>- The characters you adjust need to be characters I've already added to the calc. See the "Character Progress" page in the Build Tools dropdown if you aren't sure where I'm at with that.
+                    <br>- If you see that I own a character that you want to adjust, but I haven't coded them yet, you can let me know and we can work on getting them expedited.
+                    <br>- If you want to adjust a character I don't own and haven't added, that's not gonna be an option until I get that character, there are too many problems with coding out characters I can't test properly, but obviously the concept behind doing these kits for you guys is it will more or less just go towards funding my character pulls so I can get the rest of them anyways and resolve this issue.
+                    <br>- Fan-made novaflares will be priced cheaper than outright new characters. However, this does not mean you get to claim it's a novaflare and just convert someone into an entirely new character. Novaflares inherently are kit-solutions/buffs, they never rework the identity of a character's kit and that is the entire reason they will be priced cheaper.
+                    <br>If you try claim it's a novaflare and then completely convert a character into another monster entirely, you'll need to pay for a new character instead.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Mechanically Possible</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    I wanna clarify outright that I'm not saying you can't add new things, but I AM saying that you can't do things that the game would just straight up never let you do.
+                    <br>If you're ever uncertain just ask me in discord, it's free to ask, but examples of impossible mechanics would be:
+                    <br>- A character with 3 memosprites.
+                    <br>- An entity with more than 1 summon they create. For example DHPT creates a summon but he loans it out, which is fine, but no character can actually be the CREATOR of more than one. A sort of cheese here could be turn-order battle-events like robin's ult countdown, and having multiple of those is realistic and people already do that(like Phainon on Khaslana turns) but the catch is that battle-events like those wouldn't be considered as summons, just events.
+                    <br>- You get the idea, but just ask to be safe if you're thinking of something HELLA outside the box.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Gear Complexity</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    Characters are more often than not fairly fucking complicated, but gear like relics/lightcones don't even hold a candle to characters. In the same sense that I won't do things that are mechanically impossible, I'm also not gonna do a lightcone or relic set that is just a new character in disguise. Fuuuuuck that.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Be Prepared</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    There are inevitably going to be things you won't think of that I'll bring up that you'll need to decide on, that's fine and I don't mind that. What I mean here is to have, to the fullest extent of your ability, your character kit prepared going into this. I am not here to conceptualize your character for you, I'm here to code and maintain it for you.
+                    <br>Examples of things you should consider and prepare:
+                    <br>- DMG or ability multipliers at max level, and at levels that may be adjusted by eidolons.
+                    <br>- Descriptions for abilities/eidolons/traces, what parameters should populate in which parts of the description, which parameters on abilities will be modified by level and which won't.
+                    <br>- Are there parameters for the ability that won't be in the description but will be scaled by level or used overall? Think Blade's Hellscape state that doesn't mention the aggro value but gives him 1000% Aggro Percentage.
+                    <br>- Stat trace values
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">No NSFW/Fetishes</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    I get it if you're into whatever shit you're into, but I am not here to indulge your fetishes. If hoyo wouldn't put it in a description, neither can you.
+                  </div>
+                </div>
+              </details>
+
+              
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Character Art is PROBABLY a no</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    Unless you literally hold commercial rights to the art you're providing, I'm not uploading it on the site.
+                    <br>Even if you commission an artist to make something, I guarantee you that you don't actually own commercial rights to the project you commissioned.
+                    <br><br>I'm open to discussion on this, it's just that I foresee way too many problems with doing this, and would much prefer you just find some random image in game that you're comfortable with representing your character.
+                    <br>NOTE: I WILL throat-punch you if you even try to offer A.I. art.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">What is/isn't realistic after we finish your characters</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    Say a month+ has passed after we already made your character.
+                    <br><br>The following scenarios would be free of charge:
+                    <br>- You find a bug, either through an interaction with a real character, or something overlooked in your own, and I fix it.
+                    <br>- I learn something new about how the game works, and while adjusting every real character/gear that uses that method/event I also update your kit to keep in-line with how the game actually works. On top of that, if it's something that is an "either/or" result from the change, if you're still in the discord I'll even consult with you on which way you'd like the change to fall in your character's kit.
+                    <br>- If you decide hey fuck it I actually want this ability to do just a tiny bit more damage, could we bump this multiplier by a bit? That's fine, because it would take 5 total seconds to adjust.
+
+                    <br><br>The following scenarios would NOT be free:
+                    <br>- You come back long after we'd already concluded work on your character and decide that ya know what? You actually want something totally diff, maybe you wanna deal dmg only using the power of friendship. No.
+                    <br>- ANY mechanical changes to the character. This means anything outside of just adjusting a value after the fact.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">You don't own my code</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    This needs to be explicitly clear: you are functionally commissioning the right to have me add your character kit to my calculator and sim for live-use at your leisure, as well as what will end up being semi-long-term support on my end given the appropriate scenarios mentioned above.
+                    <br>- Your commission does not purchase any aspect of the code I make in response to adding your kit to the sim, and you hold no rights to it. This may seem like a needless distinction, but I am not even trying to give the appearance of ownership in what this will result in as this is my project, it's not under open-source licensing, it is my code.
+                    <bR>- These are you characters, your babies and I get and support that - I'm never gonna use them for anything myself or repurpose them for something different, the only thing I'll ever do with them is fix bugs or make minor adjustments once we're done to keep them updated with the game.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">TBD...</summary>
+                <div class="superimpositionHolderbox">
+                  <div class="actionDetailBody3Description superimpositionHolderbox">
+                    These aren't necessarily the final rules for this process, right now it's too new of a task, we may add more to this as we go.
+                    <br>If for whatever reason we encounter a reason to end a character kit early due to a new rule that we'll add here, I would simply refund you.
+                  </div>
+                </div>
+              </details>
+
+              <details class="actionDetailBodyDetailExpand" open>
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">PRICING (on Patreon Memberships, benefits per month)</summary>
+                  <ul>
+                    <li>Fan-Novaflare - $60 read above for limitations</li>
+                    <li>Fan-Character Only - $160</li>
+                    <li>Fan-Character +Relic and/or Lightcone - $200</li>
+                    <li>Fan-Team(Char x4 +relics and/or LCs) - $500</li>
+                    <li>TBD - If you think something should be added here, discuss it with me.</li>
+                  </ul>
+              </details>
+
+
+            </div>
+
+            
+          </div>
+
+            <!-- <div class="mainBodyBufferleftBox">
+              <img src="/HonkaiSR/image/simulated_event/HoshinoKami_Herta.png" class="cardBoxBannerCardIcon">
+
+
+              <div class="cardBoxIconTextVersion">
+                The Library
+                <span id="versionUpdateValue" class="smallProgressValue"></span>
+              </div>
+
+              <div class="mainSelectionHeaderRow">
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Modifiers/" rel="noopener noreferrer">Effects</a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/MoC/" rel="noopener noreferrer">
+                  
+                  <img src="/HonkaiSR/icon/sign/AbyssIcon01.png" class="cardBoxGameModeIcon">
+                  MoC
+                </a>
+              </div>
+            </div>
+
+            <div class="mainBodyCardBox">
+
+              <div class="cardBoxCharacterCard cardHoverOpacity" onclick="customMenu.createCharacterSearchMenu();">
+                <img src="/HonkaiSR/image/character_portrait/1005.png" class="cardBoxCharacterCardIcon">
+                <div class="cardBoxIconText">Characters
+                  <br>
+                  <span id="charactersCompletedPercent" class="smallProgressValue"></span>
+                </div>
+
+              </div>
+
+              <div class="cardBoxLCAndRelicBox">
+
+                <div class="cardBoxLightconeCard cardHoverOpacity" onclick="customMenu.createLightconeSearchMenu();">
+                  <img src="/HonkaiSR/image/light_cone_portrait/23004.png" class="cardBoxLightconeCardIcon">
+                  <div class="cardBoxIconText">
+                    Lightcones
+                    <br>
+                    <span id="lightconesCompletedPercent" class="smallProgressValue"></span>
+                  </div>
+                </div>
+
+                <div class="cardBoxRelicCard cardHoverOpacity" onclick="customMenu.createRelicSearchMenu();">
+
+                  <img src="/HonkaiSR/icon/relic/308_0.png" class="cardBoxRelicCardIcon2">
+                  <img src="/HonkaiSR/icon/relic/110_0.png" class="cardBoxRelicCardIcon1">
+                  <div class="cardBoxIconText">
+                    Relics
+                    <br>
+                    <span id="relicsCompletedPercent" class="smallProgressValue"></span>
+                  </div>
+                </div>
+              </div>
+
+            </div> -->
+
+        </div>
+
+        
+    
+
+    </div>
+    <footer class="generalFooter" id="footerPlaceholder"></footer>
+</div>
+
+
+<script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
+<script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
+<script src="/htmlTemplates/adjustMobileNav.js"></script>
+
+<!-- <script src="dCharacters.js"></script> -->
+<script src="/HonkaiSR/TheLibrary/dCharacters.js"></script>
+
+<!-- <script src="dLightcones.js"></script> -->
+<!-- <script src="dRelicSets.js"></script> -->
+<!-- <script src="/HonkaiSR/Calculator/dRelicSets.js"></script> -->
+<!-- <script src="/HonkaiSR/Calculator/suffering4Analytics.js"></script> -->
+
+
+
+<!-- <script src="statList.js"></script> -->
+
+
+
+<!-- <script src="dLightcones.js"></script>
+<script src="dRelics.js"></script>
+<script src="dRelicSets.js"></script> -->
+
+<!-- <script src="/HonkaiSR/Calculator/statList.js"></script> -->
+<!-- <script src="wavePresets.js"></script> -->
+<!-- <script src="formulas.js"></script> -->
+
+
+<!-- <script src="globalRecords.js"></script> -->
+
+
+<!-- <script src="/HonkaiSR/Calculator/customHTML.js"></script> -->
+
+<script src="/HonkaiSR/Calculator/tooltipStorage.js"></script>
+<script src="/HonkaiSR/Calculator/tooltipMath.js"></script>
+<!-- <script src="/TFD/Calculator/UIHandling.js"></script> -->
+<script src="/MainJS/Tooltips/tooltips.js"></script><!-- generalized tooltip handling -->
+
+<script src="/HonkaiSR/TheLibrary/tester.js"></script>
+
+<script src="/HonkaiSR/TheLibrary/dEnemyImages.js"></script>
+<script src="/HonkaiSR/TheLibrary/sizeLeaderboardArray.js"></script>
+
+<!-- <script src="/HonkaiSR/TheLibrary/stats4CalcAllowedChars.js"></script> -->
+
+<script src="/HonkaiSR/TheLibrary/lastVerionHSR.js"></script>
+
+<script src="pageLoadLibrary.js"></script>
+
+<script src="/MainJS/buildTime.js"></script>
+
+
+<!-- <script src="/HonkaiSR/characters.js"></script>
+<script src="/HonkaiSR/testing.js"></script> -->
+
+</body>
+</html> 
