@@ -7238,7 +7238,7 @@ const turnLogic = {
         
                             // let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
-                            if (providerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
+                            if (!providerTurn.talentProvisionIsActive) {return;}//if it's an enemy turn start or if divine provision is not active, abort
         
                             const provisionHeal = this.provisionHeal ??= turnLogic[providerTurn.properName].skillFunctions.provisionHeal
                             provisionHeal(battleData,providerTurn,sourceTurn);
