@@ -4076,7 +4076,10 @@ const turnLogicLightcones = {
                 const buffCheck = buffsRef[buffName];
                 if (buffCheck) {
                     const stackCount = buffCheck.currentStacks;
-                    if (stackCount === finalStacks) {return;}
+                    if (stackCount === finalStacks) {
+                        buffCheck.duration = sourceTurn.turnState ? buffSheet.durationInTurn : buffSheet.duration;
+                        return;
+                    }
                     else if (stackCount < finalStacks) {
                         const stackDiff = finalStacks - stackCount;
                         buffSheet.currentStacks = stackDiff;
