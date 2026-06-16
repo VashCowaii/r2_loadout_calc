@@ -6961,6 +6961,8 @@ const turnLogicLightcones = {
                             if (!sourceTurn.flowingNightglowCadenzaSheet) {
                                 let lcNameRef = "Flowing Nightglow";
                                 let lcPathing = lightcones[lcNameRef].params;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
                                 let rankParams = lcPathing[ownerRank-1];
                                 const logicRef = turnLogicLightcones[lcNameRef];
                                 const buffNames = logicRef.buffNames;
@@ -7033,10 +7035,9 @@ const turnLogicLightcones = {
                     const allyTurns = battleData.nameBasedTurns;
                     for (let ownerSlot in ownersSlots) {
                         const currentOwner = allyTurns[ownerSlot];
-                        const ownerRank = ownersSlots[ownerSlot];
 
                         if (!currentOwner.flowingNightglowCantillationSheet) {
-                            
+                            const ownerRank = ownersSlots[ownerSlot];
                             let lcPathing = lightcones[lcNameRef].params;
                             let rankParams = lcPathing[ownerRank-1];
                             let buffName = logicRef.buffNames.attackStack;
