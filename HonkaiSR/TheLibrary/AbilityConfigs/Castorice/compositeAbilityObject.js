@@ -6447,7 +6447,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-60952050\">Memosprite_CastoriceServant_PlayCrossHairPreviewFadeIn</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

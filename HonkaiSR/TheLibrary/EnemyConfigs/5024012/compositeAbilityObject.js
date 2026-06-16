@@ -409,7 +409,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2042265236\">Monster_W5_Ripper_Main2</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__62518190\">Monster_W5_Ripper_Main</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

@@ -19,7 +19,7 @@ const configAbility = {
           "eventTrigger": "Turn [Anyone]: Start"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase] [Anyone]"
+          "eventTrigger": "Turn [Anyone]: Start Pre-action Phase"
         },
         {
           "eventTrigger": "Action Phase Start [Anyone][?]"

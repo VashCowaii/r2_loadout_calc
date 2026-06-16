@@ -460,7 +460,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1271577147\">Monster_W2_Feixiao_TalkSentence_06</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -569,7 +569,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1817449894\">Monster_W2_Feixiao_MainTutorial</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

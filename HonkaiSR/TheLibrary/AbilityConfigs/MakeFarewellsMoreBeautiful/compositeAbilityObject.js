@@ -118,7 +118,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__184962042\">LC_23040_Main</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
