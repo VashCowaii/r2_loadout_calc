@@ -11319,7 +11319,7 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "EndTurn",
+                        "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -14418,7 +14418,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "EndTurn",
+                        "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             // let characterName = ownerTurn.properName;
@@ -17639,7 +17639,10 @@ const turnLogic = {
 
                     //talent fua listener
                     const listener2 = passiveListeners[1];
-                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ally,null,ownerTurn);
+                    }
 
                     //trace hero of justice
                     const listener3 = passiveListeners[2];
@@ -17688,27 +17691,29 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Archer - +SP/StartTurn - E6",
                         "ownerTurn": {},
                     },
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            let characterName = providerTurn.properName;
                             
                             let sourceTurn = generalInfo.sourceTurn;
-                            let chargeRef = ownerTurn.battleValues;
+                            let chargeRef = providerTurn.battleValues;
         
                             if (sourceTurn.isEnemy) {return;}
                             if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
         
-                                const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                                const queueObject = this.queueObject ??= createQueueObject(providerTurn,{
                                     name: this.listenerName,
                                     priority: priorityList.ability.CharacterAttackFromSelf,
                                     queueTag: "QueuedInsert",
                 
-                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.archerFUA,
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.archerFUA,
                                     action: "Insert",
                                     abortCheck: null,//(battleData,actionObject,sourceTurn)
                 
@@ -17719,10 +17724,10 @@ const turnLogic = {
                                     useAnyTriggers: true,
                                     eventTypeStartLOG: "GenericAbilityStart",
                 
-                                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.FUA,
                                 })
 
-                                queueObject.sourceTurn = ownerTurn;
+                                queueObject.sourceTurn = providerTurn;
                                 queueObject.target = [battleData.primaryTarget];
                                 queueInsertAbility(battleData,queueObject);
                                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Archer Charge ${chargeRef.charge} --> ${chargeRef.charge-1}/4`});}
@@ -17731,6 +17736,7 @@ const turnLogic = {
                             }
                         },
                         "target": "enemy",
+                        "isPersonal": true,
                         "listenerName": "Archer - Follow-up queued - Talent",
                         "ownerTurn": {},
                     },
@@ -20612,8 +20618,10 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
+                            //so this is fuckin jank? it resets the bar visually at the start of her turn but then it won't actually reset the flag until the end?
+                            //which means even if someone can inject a basic atk during her own turn, it wouldn't trigger until she could reach the end to reset it?
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
         
@@ -20621,12 +20629,16 @@ const turnLogic = {
                             ownerTurn.battleValues.e4FUAReady = true;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Bronya E4 FUA stack reset",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}
+
                             let ownerTurn = this.ownerTurn;
                             let characterName = ownerTurn.properName;
                             
@@ -20634,20 +20646,26 @@ const turnLogic = {
                             if (sourceTurn.isEnemy || sourceTurn.properName === characterName) {return;}//can't self proc off basic atk, only happens at e4+ as well
         
                             let valuesRef = ownerTurn.battleValues;
+                            if (!valuesRef.e4FUAReady) {return;}//abort on non basic atk ends and if the fua wasn't ready
     
-                            if (!valuesRef.e4FUAReady || generalInfo.dmgSlot != "Basic ATK") {return;}//abort on non basic atk ends and if the fua wasn't ready
-    
-                            const targetsGotHit = generalInfo.targetsGotHit;
-    
+
+                            const target = generalInfo.target;
                             let enemyToFUA = null;
-                            const enemyTurns = battleData.enemyBasedTurns;
-    
-                            for (let enemySlot in targetsGotHit) {
-                                const currentEnemy = enemyTurns[enemySlot];
-                                if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
-                                if (currentEnemy.statTable[WeaknessWind]) {
-                                    enemyToFUA = currentEnemy;
+                            for (let enemySlot of target) {
+                                if (enemySlot.isDead || enemySlot.isLimbo) {continue;}
+                                if (enemySlot.statTable[WeaknessWind]) {
+                                    enemyToFUA = enemySlot;
                                     break;
+                                }
+                            }
+                            if (!enemyToFUA) {
+                                const subTarget = generalInfo.subTarget;
+                                for (let enemySlot of subTarget) {
+                                    if (enemySlot.isDead || enemySlot.isLimbo) {continue;}
+                                    if (enemySlot.statTable[WeaknessWind]) {
+                                        enemyToFUA = enemySlot;
+                                        break;
+                                    }
                                 }
                             }
         
@@ -27333,7 +27351,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "EndTurn",
+                        "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
