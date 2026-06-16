@@ -890,7 +890,7 @@ const sim = {
             if (sourceTurn.isEnemy) {
                 if (sourceTurn.DOTCounter) {
                     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-                    poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
+                    // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
                 }
                 if (!sourceTurn.isDead) {
                     let turnShouldEnd = false;
