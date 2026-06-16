@@ -1205,7 +1205,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -1796,7 +1796,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -3412,7 +3412,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__458513520\">Enemy_W4_IronTombCore_BreakState</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             }
           ]
         }
@@ -3925,7 +3925,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -4875,7 +4875,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -4897,7 +4897,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]

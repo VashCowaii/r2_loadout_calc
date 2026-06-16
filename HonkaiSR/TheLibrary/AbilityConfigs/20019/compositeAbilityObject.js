@@ -2102,7 +2102,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -2137,7 +2137,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Find New Target",

@@ -246,7 +246,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__16551050\">Enemy_W2_Beast02_RLElite_ActionCheck</a>",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "IF",

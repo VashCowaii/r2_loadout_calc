@@ -91,7 +91,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -101,7 +101,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Update Displayed Energy Bar",

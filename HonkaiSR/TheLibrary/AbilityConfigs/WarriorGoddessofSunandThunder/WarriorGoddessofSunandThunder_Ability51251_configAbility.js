@@ -227,7 +227,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__552195463\">Relic_125_Sub</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

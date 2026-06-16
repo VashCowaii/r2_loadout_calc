@@ -936,7 +936,7 @@ const configAbility = {
       "statusName": "HP Count",
       "execute": [
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -3378,7 +3378,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -3669,7 +3669,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "IF",

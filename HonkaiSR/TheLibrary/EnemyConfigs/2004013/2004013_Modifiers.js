@@ -754,7 +754,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Find New Target",
@@ -1820,7 +1820,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Find New Target",
@@ -2619,7 +2619,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1519530085\">Monster_W2_Kafka_IF02_BattleEventSummon</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -2930,7 +2930,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "UI Display Event (On Entity)",

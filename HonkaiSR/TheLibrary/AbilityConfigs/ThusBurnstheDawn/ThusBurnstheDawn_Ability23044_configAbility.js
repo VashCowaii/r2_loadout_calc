@@ -48,7 +48,7 @@ const configAbility = {
       "statusName": "Blazing Sun",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ],

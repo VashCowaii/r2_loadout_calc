@@ -20,7 +20,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1175664068\">MStrongChallengeEX_Talent_StageAbility_PLY_024</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

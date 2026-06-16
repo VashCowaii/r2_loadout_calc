@@ -13,7 +13,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-934258987\">TrialPlayer_DanHengIL_20231052_Modifier</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Adjust Variable Value",

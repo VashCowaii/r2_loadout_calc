@@ -14,7 +14,7 @@ const configAbility = {
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -208,7 +208,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",
@@ -368,7 +368,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

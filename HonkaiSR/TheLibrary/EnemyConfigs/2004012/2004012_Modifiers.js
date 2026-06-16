@@ -754,7 +754,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Find New Target",
@@ -1197,7 +1197,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "UI Display Event (On Entity)",

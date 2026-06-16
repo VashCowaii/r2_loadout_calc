@@ -610,7 +610,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "ATK Scaling DMG",
@@ -1659,7 +1659,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -1801,7 +1801,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__651799441\">Enemy_AML_Boss_ListenPartDie</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -2449,7 +2449,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -2543,7 +2543,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2081849040\">Enemy_AML_Boss_IF_Part_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",

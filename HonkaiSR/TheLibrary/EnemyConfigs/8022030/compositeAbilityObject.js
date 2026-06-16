@@ -25,7 +25,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-670541105\">Monster_SW_Minion01_02_Ability01Target</a>",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 "Modifier Deletes Itself"
               ]

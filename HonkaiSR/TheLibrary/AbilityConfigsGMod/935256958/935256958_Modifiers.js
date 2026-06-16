@@ -507,7 +507,7 @@ const configAbility = {
       "useEntitySnapshot": true,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -601,7 +601,7 @@ const configAbility = {
       "useEntitySnapshot": true,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -694,7 +694,7 @@ const configAbility = {
       "useEntitySnapshot": true,
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "ATK Scaling DMG",

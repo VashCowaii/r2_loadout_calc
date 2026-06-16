@@ -804,7 +804,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1850,7 +1850,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1977361532\">Monster_W2_Kafka_IF03_Summon</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2237,7 +2237,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -4388,7 +4388,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -5195,7 +5195,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1519530085\">Monster_W2_Kafka_IF02_BattleEventSummon</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -5506,7 +5506,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier"
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "UI Display Event (On Entity)",
@@ -6334,7 +6334,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -7476,7 +7476,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable",

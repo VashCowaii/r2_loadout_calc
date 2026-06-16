@@ -16,7 +16,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         },
         {
           "eventTrigger": "Take Damage End [Owner]: Hit",
@@ -559,7 +559,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -620,7 +620,7 @@ const configAbility = {
       "statusName": "Grievous",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "ATK Scaling DMG",
@@ -761,7 +761,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

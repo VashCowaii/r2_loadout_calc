@@ -56,7 +56,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__401641453\">Modifier_BattleEventAbility_Challenge_Xianzhou_02</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Trigger Ability",

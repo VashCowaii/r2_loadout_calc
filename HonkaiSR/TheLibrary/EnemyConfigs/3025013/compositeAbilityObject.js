@@ -2125,7 +2125,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2242,7 +2242,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1704895932\">Enemy_W3_Sunday_IF_EX03_Insert</a>",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -3068,7 +3068,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__118438066\">Enemy_W3_Sunday_P2BEBanUltra</a>",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -4124,7 +4124,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",

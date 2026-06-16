@@ -184,7 +184,7 @@ const compositeAbilityObject = {
           "stackLimit": 99999,
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -486,7 +486,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2315,7 +2315,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
@@ -2334,7 +2334,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
@@ -2540,7 +2540,7 @@ const compositeAbilityObject = {
           "stackType": "RetainGlobalLatest",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -2585,7 +2585,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "IF",

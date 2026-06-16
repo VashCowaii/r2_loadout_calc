@@ -1171,7 +1171,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -1762,7 +1762,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -3378,7 +3378,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__458513520\">Enemy_W4_IronTombCore_BreakState</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         }
       ]
     }

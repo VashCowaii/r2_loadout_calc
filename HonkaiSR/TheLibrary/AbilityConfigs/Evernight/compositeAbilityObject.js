@@ -213,7 +213,7 @@ const compositeAbilityObject = {
           "statusName": "Darkest Riddle",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -1176,7 +1176,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -5482,7 +5482,7 @@ const compositeAbilityObject = {
           "statusName": "Darkest Riddle",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -6445,7 +6445,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -7437,7 +7437,7 @@ const compositeAbilityObject = {
           "statusName": "You, Parting, Beyond Reach",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -8726,7 +8726,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "IF",

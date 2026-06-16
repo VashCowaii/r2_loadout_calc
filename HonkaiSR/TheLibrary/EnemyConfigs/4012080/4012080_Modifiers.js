@@ -13,7 +13,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__791776772\">Enemy_W4_DawnsEye_WeatherWeakMessage</a>",
       "execute": [
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             "Modifier Deletes Itself"
           ]

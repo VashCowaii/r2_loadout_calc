@@ -411,7 +411,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-9889952\">Enemy_W5_Vtuber_CountDown01</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Inject Ability Use",

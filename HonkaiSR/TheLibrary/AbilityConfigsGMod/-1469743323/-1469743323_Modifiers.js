@@ -44,7 +44,7 @@ const configAbility = {
       "stackType": "Multiple",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Heal",
@@ -815,7 +815,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1257288835\">MLevel_WB_AddDamagePerTurn</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -834,7 +834,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-130963537\">MLevel_WB_BlockDamagePerTurn</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

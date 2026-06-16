@@ -186,7 +186,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -897,7 +897,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase] [Anyone]"
+          "eventTrigger": "Turn [Anyone]: Start Pre-action Phase"
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -2010,7 +2010,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__464716604\">Enemy_W4_IronTombCore_Main_P2PhaseDamageReduceController</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",
@@ -2231,7 +2231,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1092187046\">Enemy_W4_IronTombCore_Main_ShowBattleCondition</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -2263,7 +2263,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1190345807\">Enemy_W4_IronTombCore_MainP3_ShowBattleCondition</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -3463,7 +3463,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -4071,7 +4071,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -5687,7 +5687,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__458513520\">Enemy_W4_IronTombCore_BreakState</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         }
       ]
     }

@@ -72,7 +72,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-620579539\">TrialPlayer_1021212_Jingliu_AddDisableAction_Modifier</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",

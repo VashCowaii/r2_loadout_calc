@@ -280,9 +280,11 @@ const customHTML = {
 
 
         const mainBox = readSelection("mainConditionsBoxHolderOverview");
+        mainBox.innerHTML = "";
         const missingBox = readSelection("mainConditionsBoxHolderOverviewMissingWarning");
 
         const mainBoxTarget = readSelection("mainConditionsTargetBoxHolderOverview");
+        mainBoxTarget.innerHTML = "";
         const missingBoxTarget = readSelection("mainConditionsTargetBoxHolderOverviewMissingWarning");
 
         if (!conditionsRef) {

@@ -6,6 +6,148 @@
     </ul>
 </div> -->
 <div>
+    <h1>June 16th, 2026</h1>
+    <ul>
+        <h3>NEW PAGE: Character Progress</h3>
+        <li>This can be accessed either through the "Build Tools" dropdown same the calculator, or inside the calculator's character search menu at the top.</li>
+        <li>This page will display character progress, as well as characters I can't add at the moment and for why.</li>
+        <li>I'll update this page as progress is made, and as new characters are obtained through new releases or through reruns.</li>
+
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the following new characters:
+            <ul>
+                <li>Himeko</li>
+                <li>Clara</li>
+            </ul>
+        </li>
+        <li>Added the following new lightcones:
+            <ul>
+                <li>Something Irreplaceable</li>
+                <li>Moment of Victory</li>
+            </ul>
+        </li>
+        <li>Added the ability to restrict DEF values for LvL 100+ enemies in case you are trying to simulate against Plight enemies(they have unique scaling that limits their DEF value to a LvL 100 value despite being LvL 120)
+            <ul>
+                <li>This option can be found in any enemy customization menu, as a toggle next to other stat entry fields.</li>
+            </ul>
+        </li>
+        <li>Reworked how abilities recognize target lists in the context of abilities starting and ending, which allows us to do a lot of new things internally.</li>
+        <li>Due to the changes mentioned above, the following actions/triggers have been changed to be more accurate. Many of these are being changed because the correct way just wasn't possible before but is now:
+            <ul>
+                <li>Anaxa's ability duplication is now triggered at the start of an ability action rather than closer to the end after the attack</li>
+            </ul>
+        </li>
+        <li>Reworked how DoT detonations are handled, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked how turn-start DoT are handled, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked the timing on Additional DMG instances across every possible instance in the calculator, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked the timing on Super Break DMG instances across every possible instance in the calculator, making them considerably more accurate and in-line with the game.</li>
+        <li>Reworked the entirety of enemy targeting across every character, which allows us to do a lot of new things internally.</li>
+        <li>Greatly reworked attack handling as a whole, to allow for a lot of new things interally.</li>
+        <li>Reworked how Joint-Attacks are handled for the sake of accuracy.</li>
+        <li>Due to the targeting changes that took place, we were able to make changes to the following abilities to ensure they now function as they should. These are not bugs, nor are they really fixes, these were just things I was aware of but couldn't do anything about YET:
+            <ul>
+                <li>Seele's sub50% HP skill trigger will now properly locate the enemy with sub50%HP to target, and if that target dies before the extra turn is launched, then it will retarged based on remaining enemy HP.</li>
+                <li>Archer's FUA queue should be done at the perfectly accurate time now.</li>
+                <li>Bronya's FUA queue should be done at the perfectly accurate time now.</li>
+            </ul>
+        </li>
+        <li>Made a visual change so chained-attacks that have multiple segments inside the same action, will now display within the same attack expand rather than needing to click to expand each segment one at a time.
+            <ul>
+                <li>The catch here is now each segment inside an attack expand, will have its own expand that will be open by default, but can be quickly collapsed to condense hit-heavy log types.</li>
+                <li>Most notably will impact SW999 EBAs, rather than seeing each segment isolated, you can now expand it all as one.</li>
+            </ul>
+        </li>
+        <li>Changed the visual display for attack expands to display the hit count and AVG total at the top of the expand rather than the bottom.</li>
+        <li>Reworked how enemies are constructed at the start of a battle, allowing us to do a few new things internally. This will not impact your enemy save files, this only changes how enemies are made, not read.</li>
+        <li>Updated the following characters with turn-start healing of any kind, to make them more accurate:
+            <ul>
+                <li>Huohuo</li>
+                <li>Natasha</li>
+                <li>Lynx</li>
+            </ul>
+        </li>
+        <li>Updated all characters that have turn-start energy gain effects, of which there were a few.</li>
+        <li>Added a visual separation for batches of DOT damage caused by detonations.</li>
+
+        <h4>Fixes</h4>
+        <li>Fixed an issue where Why Does the Ocean Sing wasn't renewing the Enthrallment duration when the target was at max stacks already.</li>
+        <li>Fixed an issue where Black Swan's turn-start special dot function was applying one extra stack of arcana to the blast targets when it shouldn't have been.</li>
+        <li>Fixed an issue where Lynx's turn-start healing could improperly factor for Survival Response after it had expired.</li>
+        <li>Fixed an issue where Bronya's E4 reset was triggering at the start of her turn instead of the end.
+            <ul>
+                <li>NOTE: the game shows it reset at the start, visually, but it doesn't actually reset until the end. You can confirm this using Rappa's ult which gives her an extra-turn to use a basic attack in.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Flowing Nightglow would break when the Harmony unit used their ultimate, due to a recent change.</li>
+        <li>Fixed a timing issue created from a recent change where Meshing Cogs/Memories of the Past didn't properly reset the regen flag on lightcone owners in some cases.
+            <ul>
+                <li>Also removed a testing console.log() I had left in this lightcone on accident. Wouldn't have mattered unless you used it in the optimizer, but it would have caused a crash if you did.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Sparkle's reserve Skill Points could start to trigger too early, in most cases this was irrelevant.</li>
+        <li>Fixed a visual issue where enemy actions in the log would specify their target as "[object Object]" instead of trying to parse the targets name.</li>
+        <li>Fixed an issue where Castorice's E2 newbud gain on the Enhanced Skill could proc more than once if you keep Netherwing alive with the new conditions added with the Castorice update.
+            <ul>
+                <li>We never had to care about this before since Netherwing was always forced to die no matter what, leaving no chance of multiple procs.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Hero of Triumphant Song wouldn't proc properly if the attack causing it to trigger from a memosprite was part of a Joint-Attack.</li>
+        <li>Fixed an issue where RMC's EBA was giving him his energy twice for the attack.</li>
+        <li>Fixed an issue where Aglaea's technique wasn't giving the 30 energy regen it should have.</li>
+        <li>Fixed an issue where Sparxie's ultimate was only doing Single Target dmg instances instead of AOE.</li>
+        <li>Fixed an issue where Aggro updates via buffs/states wouldn't trigger enemy retargeting logic, so if Blade got 1000% more aggro it wasn't making enemies more likely to attack him.</li>
+        <li>Fixed an issue where Numby could self-advance after a recent change.</li>
+        <li>Fixed an issue where Pela's E6 additional dmg could additional proc against the wrong target in some circumstances.</li>
+        <li>Fixed an issue where Welt's trace additional dmg could additionally proc against the wrong target in some circumstances.</li>
+        <li>Fixed an issue that prevented Welt's Ultimate from activating the talent additional dmg procs when the targets were already slowed.</li>
+        <li>Fixed an issue where, if switching characters in the same slot: if the character you were switching to had default conditions that had the same type of condition at the same spot, it could break the condition that should have been brought over by default.
+            <ul>
+                <li>This was actually a bug I created recently with the Castorice update, just a UI handling problem I didn't think about</li>
+            </ul>
+        </li>
+        <li>Fixed a visual issue where the following ability instances weren't displaying as enhanced if they were, in the action order:
+            <ul>
+                <li>RMC Basic</li>
+                <li>Saber Basic</li>
+            </ul>
+        </li>
+        <li>Did a pass on inserted abilities/extra-turns and added in abort-checks where applicable, if they were missing:
+            <ul>
+                <li>Mortenax Blade's FUA skill could queue when HP was high enough, but wasn't getting canceled if too low when activated.</li>
+                <li>Seele's sub 50% extra turn queue will now retarget properly based on enemy HP% if the queued target is dead when activating.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Netherwing's HP-drain-induced death could break the sim due to mistakenly getting queued as an extra-turn instead of an insert.</li>
+        <li>Fixed an issue where DHPT's technique skill extra-turn wasn't counting as targeting an ally for the sake of anything that might have cared.</li>
+
+        <h4>Optimization</h4>
+        <li>Updated handling for Hysilens lightcone, giving a slight optimizer speed boost for dot teams.
+            <ul>
+                <li>NOTE: I fucking hate this lightcone, dude. Unending hatred, this thing can eat my ass. Of all the lightcones to lightcone in this game, this lightcone lightcones the worst.</li>
+                <li>ALSO NOTE: however much you think I hate this lightcone, it's still not enough.</li>
+            </ul>
+        </li>
+        <li>Added tweaks to how Hysilens monitored her proc count for enemies in the zone, which should be a slight performance boost to DoT teams that use her.</li>
+
+        <h3>Library</h3>
+        <h4>Additions</h4>
+        <li>When on an enemy's page, SPD values will now display up to 7 decimals. Very few enemies need that much, but some can.</li>
+        <li>Renamed the following events for format consistency or accuracy:
+            <ul>
+                <li>Turn Start [Anyone] -> Turn [Anyone]: Start</li>
+                <li>Turn End [Anyone] -> Turn [Anyone]: End</li>
+                <li>Turn [Action-End Phase] -> Turn [Owner]: Action-End Phase</li>
+                <li>Turn [Action-End Phase] [Anyone] -> Turn [Anyone]: Start Action-End Phase</li>
+                <li>Turn [Pre-action END Phase] [Anyone] -> Turn [Anyone]: End Pre-action Phase</li>
+                <li>Turn [Pre-action Phase] [Anyone] -> Turn [Anyone]: Start Pre-action Phase</li>
+                <li>Turn [Pre-action Phase] -> Turn [Owner]: Pre-action Phase</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
     <h1>June 9th, 2026</h1>
     <ul>
         <h3>Calculator</h3>

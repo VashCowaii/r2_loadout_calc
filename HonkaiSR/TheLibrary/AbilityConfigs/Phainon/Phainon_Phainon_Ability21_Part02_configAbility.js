@@ -143,7 +143,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -319,7 +319,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",

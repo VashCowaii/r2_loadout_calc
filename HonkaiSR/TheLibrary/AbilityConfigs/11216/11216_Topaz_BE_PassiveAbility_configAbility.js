@@ -62,7 +62,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "IF",
@@ -167,7 +167,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn End [Anyone]"
+          "eventTrigger": "Turn [Anyone]: End"
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

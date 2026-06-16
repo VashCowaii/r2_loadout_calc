@@ -151,7 +151,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1181889244\">Yunli_Passive</a>",
       "execute": [
         {
-          "eventTrigger": "Turn Start [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start",
           "execute": [
             {
               "name": "IF",
@@ -180,7 +180,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]"
+          "eventTrigger": "Turn [Owner]: Pre-action Phase"
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

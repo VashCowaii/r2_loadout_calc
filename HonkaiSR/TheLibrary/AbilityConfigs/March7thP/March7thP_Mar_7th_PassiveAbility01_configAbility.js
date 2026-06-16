@@ -300,7 +300,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__189697089\">March7th_Passive</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

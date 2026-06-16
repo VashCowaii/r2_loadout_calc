@@ -371,7 +371,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-676400883\">Monster_W2_Huanlong_Part3EndForcePerform</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Dispel Debuffs",
@@ -563,7 +563,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-192345709\">Monster_W2_Huanlong_Part2_BattlePerform</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",
@@ -2124,7 +2124,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]

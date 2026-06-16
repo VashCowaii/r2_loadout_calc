@@ -355,7 +355,7 @@ const configAbility = {
       "statusName": "Blade Dances on Waves' Fight",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             "Modifier Deletes Itself"
           ]

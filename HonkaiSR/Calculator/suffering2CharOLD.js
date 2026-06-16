@@ -3799,3 +3799,1808 @@ const turnLogic = {
     
 //     return (table[base]) * (1 + table[perc]) + table[flat];
 // },
+
+
+// attackWrapperJoint(battleData,ATKPath,sourceTurn,sourceTurn2,ATKObject,ATKObject2) {
+//     let logging = battleData.isLoggyLogger;
+//     if (logging) {logToBattle(battleData,{logType: "AttackStart"});}
+    
+//     battleData.attackIsActive = true;
+//     battleData.addedDMGTallyAttack = 0;
+//     let dmgSlot = ATKPath.slot;
+//     let hitSplits = ATKPath.hitSplits;
+//     let element = ATKPath.element;
+
+//     let totalHits = 0;
+//     const totals = {
+//         totalAVGDMG: 0,
+//         totalBreakDMG: 0,
+//         totalBreakSuperDMG: 0,
+//         totalOverkill: 0
+//     }
+//     const totals2 = {
+//         totalAVGDMG: 0,
+//         totalBreakDMG: 0,
+//         totalBreakSuperDMG: 0,
+//         totalOverkill: 0
+//     }
+//     const targetsGotHit = {};
+//     const overBreakTotals = {};
+//     const overKillTotals = {};
+//     let enemiesThatBroke = [];
+
+//     let isEnemy = sourceTurn.isEnemy;
+
+//     const multiRef = ATKObject.multipliers;
+//     const isAll = multiRef.all;
+//     const isPrimary = multiRef.primary;
+//     const isBlast = multiRef.blast;
+    
+//     const enemyPrimary = battleData.primaryTarget ?? null;
+//     const enemyBlastTargets = battleData.blastTargets ?? null;
+
+//     let hitWrap = battleActions.hitWrapper;
+//     const enemyPositions = battleData.allEnemyTargets;
+//     const allyPositions = battleData.allyPositions;
+//     const allTargetArray = !isEnemy ? enemyPositions : allyPositions;
+//     //rn this assumes that no attack can ever have varying targeting in the hitsplits, which might not hold true later
+//     // poke("AttackStart",battleData,{sourceTurn,dmgSlot});
+    
+//     let hitTypePrimary = "primary";
+//     let hitTypeBlast = "blast";
+//     let hitTypeAll = "all";
+
+//     const isJointAttack = true;
+//     const generalInfo = {sourceTurn,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,isJointAttack};
+//     const generalInfo2 = {sourceTurn:sourceTurn2,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject:ATKObject2,element,totals:totals2,overBreakTotals,overKillTotals,isJointAttack};
+//     poke("AttackStart",battleData,generalInfo,sourceTurn);
+//     //TODO: joints alternate sources between memo and owner, unify a param to check whether the atkEntry is memo or not rather than checking on each eventpoke like a tard
+//     const allLength = allTargetArray.length;
+//     const blastLength = enemyBlastTargets.length;
+
+//     const hitsLengthTotal = hitSplits.length;
+//     let isLastHit = false;
+
+
+//     // lastHit.isPrimaryLastHit = true;
+//     // hitsRef.push(
+//     //     {
+//     //         "primary": {
+//     //             "hitRatio": 1,
+//     //             "energyRatio": 1,
+//     //             "toughness": 10
+//     //         },
+//     //         "blast": {
+//     //             "hitRatio": 1,
+//     //             "toughness": 5
+//     //         },
+//     //         "all": null,
+//     //         "allEnemiesHit": null,
+//     //         "unknownTypers": false,
+//     //         "isSecondarySource": true,
+//     //         "isSecondaryLastHit": true
+//     //     }
+//     // )
+
+//     if (isAll) {
+//         totalHits += allLength * hitsLengthTotal;
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             let infoRef = atkEntry.isMemo ? generalInfo2 : generalInfo;
+
+//             let atkEntryRef = atkEntry[hitTypeAll];
+//             const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//             if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+
+//             for (let currentTarget of allTargetArray) {
+//                 // if (currentTarget.isDead) {continue;}
+//                 // console.log("attack start, enemies: ",newAll.length,allTargetArray.length)
+//                 // console.log(sourceTurn2.activeFinalMultipliers)
+//                 hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,infoRef,isLastHit,false,allLength,true);
+//             }
+//             if (atkEntry.isSourceLastHit) {
+//                 poke("AttackDMGEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//                 poke("AdditionalTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//                 poke("TrueTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//             }
+//             // for (let ee=0;ee<allLength;ee++) {hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo2,isLastHit,false);}
+//         }
+//     }
+//     else if (isBlast && blastLength) {//in practice blast should never proc without a primary target also
+//         totalHits += hitsLengthTotal * (1 + blastLength);
+        
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             let infoRef = atkEntry.isMemo ? generalInfo2 : generalInfo;
+//             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,infoRef,isLastHit,false,blastLength+1);
+//             if (atkEntry.blast) {for (let enemyEntry of enemyBlastTargets) {hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,infoRef,isLastHit,false,blastLength+1);}}
+//             if (atkEntry.isSourceLastHit) {
+//                 poke("AttackDMGEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//                 poke("AdditionalTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//                 // for (let addedDMG of battleData.addedDMGTallyAttack) {
+//                 //     addedDMGTally += addedDMG.DMGTotalAVG;
+//                 //     // {hitData,DMGTotalAVG,DMGOverkill,enemyIsDead}
+//                 // }
+//                 battleData.addedDMGTallyAttack = [];
+//             }
+//             // if (isLastHit) {poke("AttackEndJointSection",battleData,generalInfo);}
+
+//             // hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo2,isLastHit,false);
+//             // if (atkEntry.blast) {for (let enemyEntry of enemyBlastTargets) {hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo2,isLastHit,false);}}
+//             // if (isLastHit) {poke("AttackEndJointSection",battleData,generalInfo2);}
+            
+//         }
+//     }
+//     else if (isPrimary) {//if blast is ever true but there are no blast targets, primary will still be true so it will default to this instead
+//         totalHits += hitsLengthTotal;
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             let infoRef = atkEntry.isMemo ? generalInfo2 : generalInfo;
+//             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,infoRef,isLastHit,false);
+//             if (atkEntry.isSourceLastHit) {
+//                 poke("AttackDMGEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//                 poke("AdditionalTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//                 poke("TrueTriggerAttackEnd",battleData,infoRef,atkEntry.isMemo ? sourceTurn2 : sourceTurn);
+//             }
+//             // hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo2,isLastHit,false);
+//         }
+//     }
+//     //problem is this way while faster, does allow for dynamic hit types in hitsplits, so if hit1 in an attack is blast but hit2 is all and hit3 is primary, then this doesn't work for that
+//     //however I think every character that does something like that(acheron) breaks them into separate attacks, rather than diff hits in the same attack
+//     //so we leave this be for now and look at attackWrapFullHandling() laster if we end up needing it, bc I left a comment in there for how I was doing it before and it would work with that
+//     //so we could if needed just have everyone with standard attacks call this one, and people with dynamic hitsplits use the other one, but I leave it for now.
+
+//     const bounceRef = ATKObject.bounceData;
+//     if (bounceRef) {
+//         const bounceOrder = battleData.bounceOrder;
+//         const bounceCount = bounceRef.bounceCount
+//         // battleData.bounceOrder = bounceOrder
+//         const atkEntry = bounceRef.hitSplit;
+//         const isLastHit = true;
+//         const bounceLength = bounceOrder.length;
+//         let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
+//         const isBounce = true;
+
+//         if (atkEntry.all) {
+//             totalHits += allTargetArray.length * bounceCount * 2;
+//             for (let i=0;i<bounceCount;i++) {
+//                 // totalHits += allTargetArray.length;
+
+//                 if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+//                 let atkEntryRef = atkEntry[hitTypeAll];
+//                 const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+
+//                 for (let enemyTarget of allTargetArray) {
+//                     if (enemyTarget.isDead) {continue;}
+//                     hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,isBounce,null,true);
+//                     hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo2,isLastHit,isBounce,null,true);
+//                 }
+//             }
+//         }
+//         else if (atkEntry.blast) {
+//             //TODO: bounce logic on a blast type bounce, that could be weird
+//         }
+//         else {
+//             for (let i=0;i<bounceCount;i++) {
+//                 if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
+//                 const currentEnemy = bounceOrder[currentEnemyIndex];
+//                 currentEnemyIndex++;
+//                 if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+//                 if (currentEnemy.isDead) {
+//                     i--;
+//                     continue;
+//                 }//skip dead bois
+//                 hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+//                 hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo2,isLastHit,isBounce);
+//                 totalHits += 2;//since we skip dead guys, gotta increments hits inside the loop
+//             }
+//         }
+//     }
+
+//     poke("AttackEnd",battleData,generalInfo,sourceTurn);
+//     ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
+//     // if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:(totals.totalAVGDMG + totals.totalBreakDMG + totals.totalBreakSuperDMG), isEnemy});}
+
+
+//     if (!isEnemy) {battleData.battleDamageSUM += totals.totalAVGDMG + totals2.totalAVGDMG;}
+
+//     // if (enemiesThatBroke.length) {
+//     //     for (let brokenEnemy of enemiesThatBroke) {
+//     //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+//     //     }
+//     // }
+
+//     battleData.attackIsActive = false;
+//     battleData.addedDMGTallyAttack = 0;
+//     // poke("AttackEnd",battleData,generalInfo);
+//     if (logging) {
+//         let totalsRef = battleData.battleTotal;
+//         let characterName = sourceTurn.properName;
+//         let sumSlotRef = totalsRef.DMG[characterName] ??= {};
+//         sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + totals.totalAVGDMG;
+//         // let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+//         // sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+//         let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
+//         sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + totals.totalOverkill;
+
+//         let characterName2 = sourceTurn2.properName;
+//         let _2sumSlotRef = totalsRef.DMG[characterName2] ??= {};
+//         _2sumSlotRef[dmgSlot] = (_2sumSlotRef[dmgSlot] ?? 0) + totals2.totalAVGDMG;
+//         // let _2sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+//         // _2sumSlotRef2[dmgSlot] = (_2sumSlotRef2[dmgSlot] ?? 0) + 1;
+//         let _2sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
+//         _2sumSlotRef3[dmgSlot] = (_2sumSlotRef3[dmgSlot] ?? 0) + totals2.totalOverkill;
+        
+//         logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:totals.totalAVGDMG + totals2.totalAVGDMG, isEnemy});
+//     }
+
+//     return {targetsGotHit}
+// },
+
+
+
+
+
+
+
+
+// attackWrapperChained(battleData,ATKPath,sourceTurn,ATKObject,attackState,chainedAttackRef) {
+//     let logging = battleData.isLoggyLogger;
+//     if (logging) {logToBattle(battleData,{logType: "AttackStart"});}
+    
+//     battleData.attackIsActive = true;
+//     battleData.addedDMGTallyAttack = 0;
+//     let dmgSlot = ATKPath.slot;
+//     let hitSplits = ATKPath.hitSplits;
+//     let element = ATKPath.element;
+
+//     let totalHits = 0;
+//     const totals = {
+//         totalAVGDMG: 0,
+//         totalBreakDMG: 0,
+//         totalBreakSuperDMG: 0,
+//         totalOverkill: 0,
+//         totalHits: 0,
+//     }
+
+//     if (chainedAttackRef) {
+//         chainedAttackRef.enemiesThatBroke = [];
+//     }
+//     const targetsGotHit = chainedAttackRef ? chainedAttackRef.targetsGotHit : {};
+//     const overBreakTotals = chainedAttackRef ? chainedAttackRef.overBreakTotals : {};
+//     const overKillTotals = chainedAttackRef ? chainedAttackRef.overKillTotals : {};
+//     // const overKillTotals = {};
+//     let enemiesThatBroke = chainedAttackRef ? chainedAttackRef.enemiesThatBroke : [];
+
+    
+
+//     let isEnemy = sourceTurn.isEnemy;
+
+//     const multiRef = ATKObject.multipliers;
+//     const isAll = multiRef.all;
+//     const isPrimary = multiRef.primary;
+//     const isBlast = multiRef.blast;
+//     // const isBounce = multiRef.bounce;
+    
+//     const enemyPrimary = battleData.primaryTarget ?? null;
+//     const enemyBlastTargets = battleData.blastTargets ?? null;
+
+//     const isElation = ATKObject.isElation;
+//     let hitWrap = isElation ? battleActions.elationHitWrapper : battleActions.hitWrapper;
+//     // let hitWrap = battleActions.hitWrapper;
+//     const enemyPositions = battleData.allEnemyTargets;
+//     const allyPositions = battleData.allyPositions;
+//     const allTargetArray = !isEnemy ? enemyPositions : allyPositions;
+//     // poke("AttackStart",battleData,{sourceTurn,dmgSlot});
+    
+//     let hitTypePrimary = "primary";
+//     let hitTypeBlast = "blast";
+//     let hitTypeAll = "all";
+
+//     const generalInfo = chainedAttackRef ?? {sourceTurn,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
+//     generalInfo.ATKObject = ATKObject;
+//     if (!attackState || attackState === "Start") {poke("AttackStart",battleData,generalInfo,sourceTurn);}
+    
+//     const allLength = allTargetArray.length;
+//     const blastLength = enemyBlastTargets.length;
+
+//     const hitsLengthTotal = hitSplits.length;
+//     let isLastHit = false;
+//     if (isAll) {
+//         totalHits += allLength * hitsLengthTotal;
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+
+//             let atkEntryRef = atkEntry[hitTypeAll];
+//             const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//             if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+
+//             for (let ee=0;ee<allLength;ee++) {hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);}
+//         }
+//     }
+//     else if (isBlast && blastLength) {//in practice blast should never proc without a primary target also
+//         totalHits += hitsLengthTotal * (1 + blastLength);
+        
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false,blastLength+1);
+
+//             if (!atkEntry.blast) {continue;}
+//             for (let enemyEntry of enemyBlastTargets) {hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo,isLastHit,false,blastLength+1);}
+//         }
+//     }
+//     else if (isPrimary) {//if blast is ever true but there are no blast targets, primary will still be true so it will default to this instead (jk pure bounce attacks for instance can skip all 3)
+//         totalHits += hitsLengthTotal;
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false);
+//         }
+//     }
+
+//     const bounceRef = ATKObject.bounceData;
+//     if (bounceRef) {
+//         const bounceOrder = battleData.bounceOrder;
+//         const bounceCount = bounceRef.bounceCount
+//         // battleData.bounceOrder = bounceOrder
+//         const atkEntry = bounceRef.hitSplit;
+//         const isLastHit = true;
+//         const bounceLength = bounceOrder.length;
+//         let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
+//         const isBounce = true;
+
+//         if (atkEntry.all) {
+//             totalHits += allTargetArray.length * bounceCount;
+//             for (let i=0;i<bounceCount;i++) {
+//                 // totalHits += allTargetArray.length;
+//                 if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+//                 let atkEntryRef = atkEntry[hitTypeAll];
+//                 const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+
+//                 for (let enemyTarget of allTargetArray) {
+//                     if (enemyTarget.isDead) {continue;}
+//                     hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,isBounce,null,true);
+//                 }
+//             }
+//         }
+//         else if (atkEntry.blast) {
+//             //TODO: bounce logic on a blast type bounce, that could be weird
+//         }
+//         else {
+//             for (let i=0;i<bounceCount;i++) {
+//                 if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
+//                 const currentEnemy = bounceOrder[currentEnemyIndex];
+//                 currentEnemyIndex++;
+//                 if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+//                 if (currentEnemy.isDead) {
+//                     i--;
+//                     continue;
+//                 }//skip dead bois
+//                 hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+//                 totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+//             }
+//         }
+
+//         // for (let i=0;i<hitsLengthTotal;i++) {
+//         //     isLastHit = i === hitsLengthTotal-1 ? true : false;
+//         //     const atkEntry = hitSplits[i];
+//         //     hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+//         // }
+
+//         // bounceData: {
+//         //     primary: values[1],
+//         //     bounceCount: 10,
+//         //     hitSplit: {
+//         //         "primary": {
+//         //             "hitRatio": 1,
+//         //             "energyRatio": 1,
+//         //             "toughness": 20
+//         //           },
+//         //         "blast": null,
+//         //         "all": null,
+//         //         "allEnemiesHit": null,
+//         //         "unknownTypers": false
+//         //     },
+//         // }
+//     }
+
+//     // let addedDMGTally = 0;
+//     const newTotals = generalInfo.totals;
+//     if (!attackState || attackState === "End" || battleData.battleIsOver) {
+//         poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
+
+//         // // kafkaUltimateDOT(battleData,sourceTurn,targetTurn,usableHits)
+//         // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT
+//         ATKObject.dotApplyFunction?.(battleData,sourceTurn,generalInfo);
+//         // if (ATKObject.dotApplyFunction)
+
+//         poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
+        
+//         // poke("DetonateDOTTriggerAttackEnd",battleData,generalInfo);
+
+//         // const possibleDotMulti = ATKObject.detonateDotsByMulti;
+//         ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
+//         poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
+//         poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
+
+
+//         poke("AttackEnd",battleData,generalInfo,sourceTurn);
+
+//         ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
+
+
+        
+//         if (battleData.isLoggyLogger) {
+//             let totalsRef = battleData.battleTotal;
+//             let characterName = sourceTurn.properName;
+//             let sumSlotRef = totalsRef.DMG[characterName] ??= {};
+//             sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + newTotals.totalAVGDMG;
+//             // let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+//             // sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+//             let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
+//             sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + newTotals.totalOverkill;
+//         }
+        
+
+//         if (!isEnemy) {battleData.battleDamageSUM += newTotals.totalAVGDMG;}
+//     }
+    
+
+    
+    
+//     // if (possibleDotMulti) {battleActions.dotDetonateWrapper(battleData,sourceTurn,possibleDotMulti,targetTurn);}
+//     // battleActions.dotDetonateWrapper(battleData,sourceTurn,detonateDotsByMulti,targetTurn,"Kafka Talent Detonate");
+
+//     // if (!attackState || attackState === "End") {poke("AttackEnd",battleData,generalInfo);}
+//     // poke("AttackEnd",battleData,generalInfo);
+//     // if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:(totals.totalAVGDMG + totals.totalBreakDMG + totals.totalBreakSuperDMG), isEnemy});}
+
+
+    
+
+    
+
+//     // if (enemiesThatBroke.length) {
+//     //     for (let brokenEnemy of enemiesThatBroke) {
+//     //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+//     //     }
+//     // }
+
+//     battleData.attackIsActive = false;
+    
+//     // poke("AttackEnd",battleData,generalInfo);
+//     if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:battleData.addedDMGTallyAttack, isEnemy});}
+//     battleData.addedDMGTallyAttack = 0;
+
+//     return generalInfo
+//     // return {generalInfo.targetsGotHit}
+// },
+
+
+// attackWrapFullHandling() {
+//     // for (let i=0;i<hitSplits.length;i++) {
+//     //     const atkEntry = hitSplits[i];
+//     //     if (isAll && atkEntry.all) {
+//     //         totalHits += allLength;
+//     //         for (let ee=0;ee<allLength;ee++) {hitWrap(battleData,allTargetArray[ee],atkEntry,hitTypeAll,generalInfo);}
+//     //     }
+//     //     else if (isPrimary && atkEntry.primary && enemyPrimary) {
+//     //         totalHits ++;
+//     //         hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo);
+
+//     //         if (isBlast && atkEntry.blast && blastLength) {//in practice blast should never proc without a primary target also
+//     //             totalHits += blastLength;
+//     //             for (let enemyEntry of enemyBlastTargets) {hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo);}
+//     //         }
+//     //     }
+//     // }
+// },
+
+
+
+// attackWrapper(battleData,ATKPath,sourceTurn,ATKObject,targetTurnSuggestion) {
+//     let logging = battleData.isLoggyLogger;
+//     if (logging) {logToBattle(battleData,{logType: "AttackStart"});}
+    
+//     battleData.attackIsActive = true;
+//     battleData.addedDMGTallyAttack = 0;
+//     let dmgSlot = ATKPath.slot;
+//     let hitSplits = ATKPath.hitSplits;
+//     let element = ATKPath.element;
+
+//     let totalHits = 0;
+//     const totals = {totalAVGDMG: 0,totalBreakDMG: 0,totalBreakSuperDMG: 0,totalOverkill: 0};
+//     const targetsGotHit = {};
+//     const overBreakTotals = {};
+//     const overKillTotals = {};
+//     let enemiesThatBroke = [];
+
+//     let isEnemy = sourceTurn.isEnemy;
+
+//     const isElation = ATKObject.isElation;
+//     const multiRef = ATKObject.multipliers;
+//     const {all,primary,blast,blastAOE} = multiRef;
+    
+//     const enemyPrimary = (!isEnemy ? (targetTurnSuggestion ?? battleData.primaryTarget) : battleData.primaryTargetEnemy) ?? null;
+//     const enemyBlastTargets = (!isEnemy ? battleData.blastTargets : battleData.blastTargetsEnemy) ?? null;
+//     const enemyBlastAOETargets = (!isEnemy ? battleData.blastAOETargets : battleData.blastAOETargetsEnemy) ?? null;
+
+//     let hitWrap = isElation ? battleActions.elationHitWrapper : battleActions.hitWrapper;
+//     const enemyPositions = battleData.allEnemyTargets;
+//     // const allyPositions = battleData.allyPositions;
+//     const allTargetArray = !isEnemy ? enemyPositions : battleData.AOETargetsEnemy;
+//     // poke("AttackStart",battleData,{sourceTurn,dmgSlot});
+    
+//     let hitTypePrimary = "primary";
+//     let hitTypeBlast = "blast";
+//     let hitTypeBlastAOE = "blastAOE";
+//     let hitTypeAll = "all";
+
+//     const generalInfo = {sourceTurn,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals};
+//     poke("AttackStart",battleData,generalInfo,sourceTurn);
+
+//     const allLength = allTargetArray.length;
+//     const blastLength = enemyBlastTargets.length;
+//     const blastAOELength = enemyBlastAOETargets.length;
+
+//     const hitsLengthTotal = hitSplits.length;
+//     let isLastHit = false;
+//     if (all && !primary) {
+//         totalHits += allLength * hitsLengthTotal;
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+
+//             let atkEntryRef = atkEntry[hitTypeAll];
+//             const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//             if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+
+//             for (let ee=0;ee<allLength;ee++) {
+//                 const currentTarget = allTargetArray[ee];
+//                 if (currentTarget.isUnselectable) {continue;}
+//                 hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);
+//             }
+//         }
+//     }
+//     else if (blast && blastLength) {//in practice blast should never proc without a primary target also
+//         totalHits += hitsLengthTotal * (1 + blastLength);
+        
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false,blastLength+1);
+            
+//             if (!atkEntry.blast) {continue;}
+//             for (let enemyEntry of enemyBlastTargets) {
+//                 hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo,isLastHit,false,blastLength+1);
+//             }
+//         }
+//     }
+//     else if (blastAOE && blastAOELength) {//in practice blast should never proc without a primary target also
+//         // totalHits += hitsLengthTotal * (1 + blastLength);
+        
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             isLastHit = i === hitsLengthTotal-1 ? true : false;
+//             const atkEntry = hitSplits[i];
+//             if (atkEntry.blastAOE) {
+//                 for (let enemyEntry of enemyBlastAOETargets) {
+//                     hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlastAOE,generalInfo,isLastHit,false,blastAOELength+1);
+//                 }
+//                 totalHits += enemyBlastAOETargets.length;
+//             }
+//             if (atkEntry.primary) {
+//                 hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false,blastAOELength+1);
+//                 totalHits += 1;
+//             }
+//         }
+//     }
+//     else {//if blast is ever true but there are no blast targets, primary will still be true so it will default to this instead (jk pure bounce attacks for instance can skip all 3)
+//         totalHits += hitsLengthTotal;
+//         for (let i=0;i<hitsLengthTotal;i++) {
+//             const atkEntry = hitSplits[i];
+//             if (atkEntry.primary) {
+//                 isLastHit = i === hitsLengthTotal-1 ? true : false;
+//                 hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,false);
+//             }
+//             else if (atkEntry.all) {
+//                 isLastHit = i === hitsLengthTotal-1 ? true : false;
+
+//                 let atkEntryRef = atkEntry[hitTypeAll];
+//                 const energyGain = (ATKObject.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+                
+//                 for (let ee=0;ee<allLength;ee++) {
+//                     const currentTarget = allTargetArray[ee];
+//                     if (currentTarget.isUnselectable) {continue;}
+//                     hitWrap(battleData,currentTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,false,allLength,true);
+//                 }
+//             }
+//         }
+//     }
+
+//     const bounceRef = ATKObject.bounceData;
+//     if (bounceRef) {
+//         const bounceOrder = battleData.bounceOrder;
+//         const bounceCount = bounceRef.bounceCount
+//         // battleData.bounceOrder = bounceOrder
+//         const atkEntry = bounceRef.hitSplit;
+//         const isLastHit = true;
+//         const bounceLength = bounceOrder.length;
+//         let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
+//         const isBounce = true;
+
+//         if (atkEntry.all) {
+//             totalHits += allLength * bounceCount;
+//             for (let i=0;i<bounceCount;i++) {
+//                 // totalHits += allTargetArray.length;
+//                 if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+//                 let atkEntryRef = atkEntry[hitTypeAll];
+//                 const energyGain = (bounceRef.energy ?? 0) * (atkEntryRef.energyRatio ?? 0);
+//                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split");}
+
+//                 for (let enemyTarget of allTargetArray) {
+//                     hitWrap(battleData,enemyTarget,atkEntry,hitTypeAll,generalInfo,isLastHit,isBounce,null,true);
+//                 }
+//             }
+//         }
+//         else if (atkEntry.blast) {
+//             //TODO: bounce logic on a blast type bounce, that could be weird
+
+//             const enemyPositions = battleData.enemyPositions;
+//             for (let i=0;i<bounceCount;i++) {
+//                 if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
+//                 const currentEnemy = bounceOrder[currentEnemyIndex];
+//                 currentEnemyIndex++;
+//                 if (!enemyPositions.length || battleData.battleIsOver) {break;}
+//                 if (currentEnemy === undefined) {continue;}
+
+//                 if (currentEnemy.isDead) {
+//                     i--;
+//                     continue;
+//                 }//skip dead bois
+
+//                 hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+//                 totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+
+
+//                 if (!atkEntry.blast) {continue;}
+                
+
+//                 let blastTargetArray = [];
+//                 const primaryTargetIndex = enemyPositions.indexOf(currentEnemy);
+
+//                 const blast1 = enemyPositions[primaryTargetIndex-1];
+//                 if (blast1) {blastTargetArray.push(blast1)}
+//                 const blast2 = enemyPositions[primaryTargetIndex+1];
+//                 if (blast2) {blastTargetArray.push(blast2)}
+
+//                 if (blastTargetArray.length) {
+//                     totalHits += blastTargetArray.length;
+//                     for (let enemyEntry of blastTargetArray) {
+//                         hitWrap(battleData,enemyEntry,atkEntry,hitTypeBlast,generalInfo,isLastHit,isBounce,blastLength+1);
+//                     }
+//                 }
+//             }
+//         }
+//         else {
+//             for (let i=0;i<bounceCount;i++) {
+//                 if (currentEnemyIndex === bounceLength) {currentEnemyIndex = 0;}
+//                 const currentEnemy = bounceOrder[currentEnemyIndex];
+//                 currentEnemyIndex++;
+//                 if (!battleData.enemyPositions.length || battleData.battleIsOver) {break;}
+//                 if (currentEnemy === undefined) {continue;}
+
+//                 if (currentEnemy.isDead) {
+//                     i--;
+//                     continue;
+//                 }//skip dead bois
+//                 hitWrap(battleData,currentEnemy,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+//                 totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+//             }
+//         }
+
+//         // for (let i=0;i<hitsLengthTotal;i++) {
+//         //     isLastHit = i === hitsLengthTotal-1 ? true : false;
+//         //     const atkEntry = hitSplits[i];
+//         //     hitWrap(battleData,enemyPrimary,atkEntry,hitTypePrimary,generalInfo,isLastHit,isBounce);
+//         // }
+
+//         // bounceData: {
+//         //     primary: values[1],
+//         //     bounceCount: 10,
+//         //     hitSplit: {
+//         //         "primary": {
+//         //             "hitRatio": 1,
+//         //             "energyRatio": 1,
+//         //             "toughness": 20
+//         //           },
+//         //         "blast": null,
+//         //         "all": null,
+//         //         "allEnemiesHit": null,
+//         //         "unknownTypers": false
+//         //     },
+//         // }
+//     }
+
+
+//     poke("AttackDMGEnd",battleData,generalInfo,sourceTurn);
+//     // // kafkaUltimateDOT(battleData,sourceTurn,targetTurn,usableHits)
+//     // dotApplyFunction: logicRef.skillFunctions.kafkaUltimateDOT
+//     ATKObject.dotApplyFunction?.(battleData,sourceTurn,generalInfo);
+//     // if (ATKObject.dotApplyFunction)
+
+//     poke("AdditionalTriggerAttackEnd",battleData,generalInfo,sourceTurn);
+    
+
+
+
+//     // poke("DetonateDOTTriggerAttackEnd",battleData,generalInfo);
+
+//     // const possibleDotMulti = ATKObject.detonateDotsByMulti;
+//     ATKObject.dotDetonateFunction?.(battleData,sourceTurn,generalInfo);
+//     poke("AttackDMGDetonateEnd",battleData,generalInfo,sourceTurn);
+
+//     poke("TrueTriggerAttackEnd",battleData,generalInfo,sourceTurn);
+//     // if (possibleDotMulti) {battleActions.dotDetonateWrapper(battleData,sourceTurn,possibleDotMulti,targetTurn);}
+//     // battleActions.dotDetonateWrapper(battleData,sourceTurn,detonateDotsByMulti,targetTurn,"Kafka Talent Detonate");
+
+//     poke("AttackEnd",battleData,generalInfo,sourceTurn);
+
+//     ATKObject.dotApplyFunctionPost?.(battleData,sourceTurn,generalInfo);
+
+
+    
+//     if (!isEnemy) {
+//         if (logging) {
+//             let totalsRef = battleData.battleTotal;
+//             let characterName = sourceTurn.properName;
+//             let sumSlotRef = totalsRef.DMG[characterName] ??= {};
+//             sumSlotRef[dmgSlot] = (sumSlotRef[dmgSlot] ?? 0) + totals.totalAVGDMG;
+//             // let sumSlotRef2 = totalsRef.Actions[characterName] ??= {};
+//             // sumSlotRef2[dmgSlot] = (sumSlotRef2[dmgSlot] ?? 0) + 1;
+//             let sumSlotRef3 = totalsRef.DMGOverkill[characterName] ??= {};
+//             sumSlotRef3[dmgSlot] = (sumSlotRef3[dmgSlot] ?? 0) + totals.totalOverkill;
+//         }
+//         battleData.battleDamageSUM += totals.totalAVGDMG;
+//     }
+//     // totals.totalAVGDMG += addedDMGTally;//don't wanna include the additional dmg in the attack total for tracking, but do want it in the total atk dmg for logging/graphing, additional dmg adds to its own tracking
+//     // if (totals.totalBreakDMG>0) {sumSlotRef.Break = (sumSlotRef.Break ?? 0) + totals.totalBreakDMG;}
+
+//     // if (enemiesThatBroke.length) {
+//     //     for (let brokenEnemy of enemiesThatBroke) {
+//     //         if (!brokenEnemy.isDead) {actionAdvance(-0.25,brokenEnemy,battleData,"Break: Action Delay",true);}
+//     //     }
+//     // }
+
+//     battleData.attackIsActive = false;
+//     // poke("AttackEnd",battleData,generalInfo);
+//     if (logging) {logToBattle(battleData,{logType: "AttackEnd", totalHits, totalAVGDMG:battleData.addedDMGTallyAttack, isEnemy});}
+//     battleData.addedDMGTallyAttack = 0;
+
+//     if (isEnemy) {
+//         const hitEnergyGain = sourceTurn.energyGain;
+//         const namedTurns = battleData.nameBasedTurns;
+//         for (let targetHit in targetsGotHit) {
+//             // eventOwner: ownerTurn.name
+//             let currentTurn = namedTurns[targetHit];
+//             const hitCount = targetsGotHit[targetHit];
+
+//             const sumEnergyGain = hitEnergyGain * hitCount;
+//             // console.log(currentTurn)
+//             if (currentTurn.isMemosprite) {currentTurn = namedTurns[currentTurn.eventOwner];}
+//             updateEnergy(battleData,sumEnergyGain,currentTurn,false,"Hit(s) Received");
+//         }
+//     }
+
+//     return {targetsGotHit,generalInfo}
+// },
+
+
+
+
+
+// hitWrapper(battleData,targetTurn,atkEntry,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
+//     const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
+//     const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
+//         instanceTag
+//     } = ATKObject;
+//     const realCacheTag = compositeCacheTag + targetTurn.properName;
+//     const {statTable,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
+//     // const {statTable:enemyStats,
+//     //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
+//     //     properName: targetName,
+//     //     cacheTagValues: targetCache,
+//     //     name: targetSlot,
+//     //     tagSpecific: actionTablesTarget,
+//     // } = targetTurn;
+
+//     const enemyStats = targetTurn.statTable;
+//     const targetName = targetTurn.properName;
+//     const targetCache = targetTurn.cacheTagValues;
+//     const targetSlot = targetTurn.name;
+//     const actionTablesTarget = targetTurn.tagSpecific;
+//     const isDistributed = ATKObject.isDistributed;
+//     totals.totalHits += 1;
+
+
+//     const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
+//     targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
+
+//     // ElationPercentOverride
+    
+    
+//     const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag,hitType};
+    
+//     poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
+//     poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+
+//     const targetStatsSourceBased = targetTurn[properName];
+//     const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
+//     let atkEntryRef = atkEntry[hitType];
+
+//     let currentSplit = atkEntryRef.hitRatio / (isDistributed ? distributedTargetCount : 1);//the hit split of the current attack
+//     let currentMulti = (customMulti ? customMulti(sourceTurn,targetTurn,dmgNeedsElationComposite,statTable,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
+        
+
+//     let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
+//     if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
+//     let scalarToUse = atkEntry.scalarOverride ?? scalar;
+
+//     let multiOf = scalarAmountOverride ?? pullScalar(scalarToUse,cacheTagValues,targetCache,realCacheTag,scalarSourceStats,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//the stat that this attacks scales off of, so ATK or HP etc
+
+    
+//     // console.log(multiOf)
+//     // bonusScalar: {
+//     //     primary: values[4],
+//     //     blast: values[5],
+//     //     all: null,
+//     //     // refName: "bladeHPTally",
+//     //     isDynamicValue: false,
+//     //     refValue: 0,
+//     //     bonusValue: rank >=1 ? {
+//     //         primary: 0,
+//     //         blast: null,
+//     //         all: null,
+//     //     } : null,
+//     // },
+//     let bonusDMGCustom = 0;
+//     let bonusDMGScalar = 0;
+//     let bonusDMGMulti = 0;
+//     let bonudDMGCustomRefName = null;
+
+//     if (bonusScalar && !scalarAmountOverride) {
+//         const hasBonusValue = bonusScalar.bonusValue;
+//         bonusDMGMulti = bonusScalar[hitType] ?? 0;
+//         bonusDMGScalar = (bonusScalar.isDynamicValue ? sourceTurn[bonusScalar.refName] : bonusScalar.refValue) + (hasBonusValue ? hasBonusValue[hitType] ?? 0 : 0);
+//         bonusDMGCustom += bonusDMGMulti * bonusDMGScalar;
+//         bonudDMGCustomRefName = bonusScalar.isDynamicValue ? bonusScalar.refName : null;
+//     }
+//     //in the case of someone like Blade, blade's HP tally can change dynamically from hit to hit in the same attack, depending on allies in the team, lc equipped, so on and so forth
+//     //so in that case, we assign what the bonus multiplier is if it exists through the hitType parameter, and then assign the actual ref value that would be 
+//     //attached to the turn object, again in blade's case that would be "bladeHPTally", and since I can't directly assign the tally without it being a snapshot
+//     //I instead need to assign the name of the parameter instead, so we can pull it each time for accurate values
+//     //TODO: I'm pretty sure a scalar override will never, EVER happen if there is a bonus scalar, but if it does, you can more or less handle it within the override instead
+
+
+//     let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
+//     // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
+
+//     let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+    
+//     const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,targetStatsSourceBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+//     const totalMulti = pulledComposite.totalMulti;
+//     const totalCritDMG = pulledComposite.totalCritDMG;
+//     const totalCritRate = pulledComposite.totalCritRate;
+    
+//     // console.log(totalCritDMG,totalCritRate)
+//     //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
+//     let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
+    
+    
+//     let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
+    
+//     let DMGTotalEnd = preDMG * sumDMG * totalMulti * isBroken * finalMulti;
+//     // console.log(preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
+
+//     let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
+//     let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
+
+//     let shieldOverflow = 0;
+//     let shieldsWereBroken = false;
+//     const logger = battleData.isLoggyLogger;
+//     // if (isEnemy) {console.log(DMGTotalAVG)}
+
+
+//     if (targetTurn.shieldCounter) {
+//         const shieldsRef = targetTurn.activeShields;
+//         let smallestOverflow = 0;
+//         let shieldsBroken = 0;
+
+//         for (let shieldName in shieldsRef) {
+//             const currentShield = shieldsRef[shieldName];
+//             if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
+
+//             currentShield.shieldRemaining -= DMGTotalAVG;
+//             if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
+//             if (currentShield.shieldRemaining < 0) {
+//                 shieldsWereBroken = true;
+//                 shieldsBroken += 1;
+//                 const overkillShield = currentShield.shieldRemaining * -1;
+
+//                 //so if this is the very first shield we broke, store the overflow for comparison
+//                 if (shieldsBroken === 1) {
+//                     smallestOverflow = overkillShield;
+//                 }
+//                 //THEN, after that, check shields to see what the smallest overflow is, then store that instead
+//                 else if (overkillShield < smallestOverflow) {
+//                     smallestOverflow = overkillShield;
+//                 }
+//                 //this is bc shields don't stack from diff sources. Some shields can build value like aven Fortified Wager, but that's only building value on the same shield
+//                 //with this in mind, the dmg applies to ALL shields at once, meaning it can break any or all of them together
+//                 //however HP is only damaged if there are no shields remaining, but HP would only be hurt after the strongest shield is broken, hence: the smallest overflow is stored to dmg HP
+
+//                 removeBuff(battleData,targetTurn,currentShield);
+//                 //for all intents and purposes in the calc, shields are just really fancy buffs lmfao, gotta remove them if they break
+//             }
+//             else {continue;}//if we didn't break the shield, move on to the next
+//             // currentReference.shieldRemaining = finalShield;
+//             // currentReference.shieldCap = totalShieldCap;
+//         }
+//         shieldOverflow = smallestOverflow;
+//         if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
+//     }
+//     else {shieldOverflow = DMGTotalAVG;}
+
+//     // targetTurn.currentHP -= (DMGTotalAVG + breakerDMG + breakerDMGSuper);
+//     let DMGOverkill = 0;
+//     let enemyIsDead = false;
+//     if (shieldOverflow) {
+
+//         // battleData.backupHPObject["Netherwing: Pollux"] = ActionEntry;
+//         // backupHPOnField: 0,
+//         // backupHPObject: {},
+        
+//         // targetTurn.currentHP -= shieldOverflow;
+//         if (isEnemy) {
+//             const proposedDrain = targetTurn.currentHP - shieldOverflow;
+//             if (battleData.backupHPOnField && proposedDrain < 1) {
+//                 const distanceTo1 = Math.max(1,targetTurn.currentHP - 1);
+//                 let dmgToDeal = shieldOverflow - distanceTo1;
+//                 const backupRefs = battleData.backupHPObject;
+//                 for (let backup in backupRefs) {
+//                     const currentBackup = backupRefs[backup];
+//                     leftoverDMG = currentBackup.backupHPFunction(battleData,currentBackup,dmgToDeal);
+//                     //if there is a backupHP source like netherwing, then call the backup function defined on its turn object
+//                     //which will return the amount of dmg it could not consume
+
+//                     //in this case, if the dmg returned is 0 that means all dmg was consumed, and we can break
+//                     if (leftoverDMG === 0) {
+//                         dmgToDeal = 0;
+//                         break;
+//                     }
+//                     else {
+//                         dmgToDeal = leftoverDMG
+//                     }
+//                 }
+//                 //if the leftover dmg is 0 then the amount of dmg that would breach shields and go beyond 1hp is obv 0
+//                 shieldOverflow = (dmgToDeal === 0 ? 0 : dmgToDeal) + distanceTo1;
+//                 //otherwise, we need to assign the dmgs that backups couldn't eat, to the target to still deal it
+//             }
+//             targetTurn.currentHP -= shieldOverflow;
+//             poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true},targetTurn);
+//         }
+//         else {targetTurn.currentHP -= shieldOverflow;}
+        
+//         let enemyHasNoHP = targetTurn.currentHP <= 0;
+//         if (enemyHasNoHP && !targetTurn.isDead) {
+//             enemyIsDead = true;
+//             targetTurn.isDead = true;
+//         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
+//         else {
+//             const enemyName = targetTurn.properName;
+//             overKillTotals[enemyName] = (overKillTotals[enemyName] ?? 0) + shieldOverflow;
+//         }
+//         // let oldHPRemaining = targetTurn.currentHP;
+//         // let oldHPMax = targetTurn.maxHP;
+//         if (!isEnemy && enemyHasNoHP) {
+//             //only gauge overkill dmg when it would be on an enemy
+//             DMGOverkill = targetTurn.currentHP * -1;
+//             //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
+//             targetTurn.currentHP = 0;
+//         }
+//     }
+
+
+//     //TOUGHNESS MATH
+//     let enemyIsBroken = false;
+//     let targetWasAlreadyBroken = false;
+//     let toughnessBase = 0;
+//     let rawReduction = 0
+//     let overBreak = 0;
+    
+//     overBreakTotals[targetName] ??= 0;
+//     if (!isEnemy) {
+//         rawReduction = currentSplit * getToughnessSum(battleData,atkEntryRef.toughness ?? 0,sourceTurn,targetTurn);
+//         // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
+//         toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
+
+//         targetWasAlreadyBroken = targetTurn.isBroken;
+//         // toughnessBase = currentSplit * rawReduction;
+
+//         let enemyWeakness = enemyStats[weaknessKeys[element]];
+//         // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
+//         if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
+            
+//             if (!targetTurn.isBroken) {
+//                 targetTurn.currentToughness -= toughnessBase;
+//                 let enemyHasNoToughness = targetTurn.currentToughness <= 0;
+//                 // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
+//                 if (enemyHasNoToughness) {
+//                     enemyIsBroken = true;
+//                     targetTurn.isBroken = true;
+//                     overBreak = targetTurn.currentToughness * -1;
+//                     // overBreakRef[targetName] += overBreak;
+//                     // overBreakRef[targetName] += toughnessBase;
+//                 }
+//                 if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
+//             }
+//             else {//if the target IS broken already
+//                 overBreakTotals[targetName] += rawReduction;
+//             }
+//         }
+//         else if (targetTurn.isBroken) {
+//             overBreakTotals[targetName] += rawReduction;
+//         }
+//         else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
+//     }
+
+
+//     if (logger) {
+//         const hitDisplay = {
+//             "primary": "Single Target",
+//             "blast": "Blast",
+//             "blastAOE": "Blast AOE",
+//             "all": "AoE"
+//         };
+        
+//         const hitData = {
+//             scalar: scalarToUse,
+//             bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
+//             currentSplit,currentMulti,multiOf,
+//             tags:[...DMGTags],
+//             actionTags: [...actionTags],
+//             element,finalMulti,
+//             DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
+
+//             sumDMG,
+//             ...pulledComposite,
+
+//             isBroken,
+//             rawReduction,toughnessBase,targetWasAlreadyBroken,
+//             // breakerDMG,
+//             overBreak,
+//             enemyIsDead,enemyIsBroken,
+//             playerData: JSON.stringify(sourceTurn),
+//             enemyData: JSON.stringify(targetTurn),
+//             AV:battleData.sumAV
+//         };
+//         logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+//     }
+
+//     if (enemyIsDead) {
+//         if (targetTurn.isEnemy) {
+//             killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+//         }
+//         else {
+//             battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
+//         }
+//     }
+
+//     if (!isEnemy) {
+//         if (enemyIsBroken) {
+//             let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
+//                 toughnessBase,
+//                 element,
+//                 rawReduction
+//             }
+//             // console.log(DMGTags)
+//             poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
+//             battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
+//             generalInfo.enemiesThatBroke.push(targetTurn);
+
+//             const isDOT = battleActions.breakDOTisDOT[element];
+//             if (isDOT) {
+//                 if (!sourceTurn.breakDOTSheet) {
+//                     const elemIsWind = element === "Wind";
+//                     const targetType = targetTurn.enemyType;
+//                     //we don't need to assign a sheet for each elem here as each character can only cause one kind of break
+//                     //FOR NOW AT LEAST, CHRIST
+//                     sourceTurn.breakDOTSheet = {
+//                         "stats": null,
+//                         "source": "Break",
+//                         "sourceOwner": sourceTurn.properName,
+//                         "buffName": battleActions.breakDOTNames[element],
+//                         "durationInTurn": battleActions.breakDOTDuration[element] + 1,
+//                         "duration": battleActions.breakDOTDuration[element],
+//                         "AVApplied": 0,
+//                         "maxStacks": elemIsWind ? 5 : 1,
+//                         "currentStacks": elemIsWind ? ((targetType === "boss" || targetType === "elite") ? 3 : 1) : 1,
+//                         "decay": false,
+//                         "expireType": "EndTurn",
+//                         "isDOT": isDOT,
+//                         "isDebuff": true,
+//                         "element": element,
+//                         isBreakDOT: true,
+//                         multiplier: battleActions.breakDOTElementMultipliers[element],
+//                         ...(elemIsWind ? {stackedmulti: battleActions.breakDOTElementMultipliers[element]} : {}),
+//                         ...(elemIsWind ? {multiStackCap: 5} : {}),
+//                         slot: "BreakDOT",
+//                         ownerIsAllied: true,
+//                         ownerSlot: sourceTurn.name,
+//                         avgChanceApplied: 1,
+//                         baseChance: 1.5,
+//                     }
+//                 }
+//                 const dotSheet = sourceTurn.breakDOTSheet;
+//                 updateBuff(battleData,targetTurn,dotSheet);
+//             }
+//             // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
+//             poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
+
+//             if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+//         }
+//         else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
+//             const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
+//             const superBreakage = battleActions.getSuperBreakDamage;
+//             const accumulatedToughness = overBreakTotals[targetName];
+//             for (let i = 0; i < triggerRef.length; i++) {
+//                 const superDetails = triggerRef[i].condition(battleData,turnMerge);
+//                 if (!superDetails) {continue;}
+//                 superBreakage(battleData,element,sourceTurn,targetTurn,DMGTags,superDetails[0],superDetails[1],accumulatedToughness,generalInfo);
+//                 // return [0.5,this.listenerName]
+//             }
+//         }
+//     }
+
+
+//     poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
+//     poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
+//     if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
+
+//     // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
+//     // totalsRef.totalAVGDMG += DMGTotalAVG;
+//     // totalsRef.totalOverkill += DMGOverkill;
+//     totals.totalAVGDMG += DMGTotalAVG;
+//     totals.totalOverkill += DMGOverkill;
+// },
+// elationHitWrapper(battleData,targetTurn,atkEntry,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
+//     const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
+//     const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,bonusScalar,DMGTags,realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,ElationPercentOverride,
+//         instanceTag
+//     } = ATKObject;
+//     const realCacheTag = compositeCacheTag + targetTurn.properName;
+//     const {statTable,properName,tagSpecific,isEnemy,cacheTagValues} = sourceTurn;
+//     // const {statTable:enemyStats,
+//     //     [properName]:targetStatsSourceBased = emptyTableNeverAdd,
+//     //     properName: targetName,
+//     //     cacheTagValues: targetCache,
+//     //     name: targetSlot,
+//     //     tagSpecific: actionTablesTarget,
+//     // } = targetTurn;
+
+//     const enemyStats = targetTurn.statTable;
+//     const targetName = targetTurn.properName;
+//     const targetCache = targetTurn.cacheTagValues;
+//     const targetSlot = targetTurn.name;
+//     const actionTablesTarget = targetTurn.tagSpecific;
+//     const isDistributed = ATKObject.isDistributed;
+//     totals.totalHits += 1;
+
+//     const scalarSourceStats = scalarSourceOverride ? battleData.nameBasedTurns[scalarSourceOverride].statTable : statTable;
+//     targetsGotHit[targetSlot] = (targetsGotHit[targetSlot] ?? 0 ) + 1;
+    
+//     const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
+    
+//     poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
+//     poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+//     const targetStatsSourceBased = targetTurn[properName];
+//     let atkEntryRef = atkEntry[hitType];
+
+//     let currentSplit = atkEntryRef.hitRatio / (isDistributed ? distributedTargetCount : 1);//the hit split of the current attack
+
+//     let currentMulti = (customMulti ? customMulti(sourceTurn,targetTurn,null,statTable,hitType,ATKObject,isBounce) : (isBounce ? ATKObject.bounceData.multi : ATKObject.multipliers[hitType])) + (ATKObject.bonusMultiplier ?? 0);//the %multi from the description of the current attack
+
+//     let perHitMultiOverride = atkEntry.perHitMultiOverride;//hit-specific scalar MV override, used in particular with saber EBA <2 enemies, extra hit that happens between hit1 and hit2
+//     if (perHitMultiOverride) {currentMulti = perHitMultiOverride;}
+
+
+//     const useCB = ATKObject.useCertifiedBanger;
+//     const punchline = useCB ? (ATKObject.BangerValueOverride || sourceTurn.certifiedBanger) : (battleData.punchlineForced || battleData.punchline);
+//     const banger = null;
+//     const elationValueToUse = punchline;
+//     const punchlineMulti = 1 + ((elationValueToUse*5)/(elationValueToUse+240));
+
+
+//     let multiOf = battleActions.elationLevelRef;
+
+    
+//     // console.log(multiOf)
+//     // bonusScalar: {
+//     //     primary: values[4],
+//     //     blast: values[5],
+//     //     all: null,
+//     //     // refName: "bladeHPTally",
+//     //     isDynamicValue: false,
+//     //     refValue: 0,
+//     //     bonusValue: rank >=1 ? {
+//     //         primary: 0,
+//     //         blast: null,
+//     //         all: null,
+//     //     } : null,
+//     // },
+//     let bonusDMGCustom = 0;
+//     let bonusDMGScalar = 0;
+//     let bonusDMGMulti = 0;
+//     let bonudDMGCustomRefName = null;
+
+//     if (bonusScalar && !scalarAmountOverride) {
+//         const hasBonusValue = bonusScalar.bonusValue;
+//         bonusDMGMulti = bonusScalar[hitType] ?? 0;
+//         bonusDMGScalar = (bonusScalar.isDynamicValue ? sourceTurn[bonusScalar.refName] : bonusScalar.refValue) + (hasBonusValue ? hasBonusValue[hitType] ?? 0 : 0);
+//         bonusDMGCustom += bonusDMGMulti * bonusDMGScalar;
+//         bonudDMGCustomRefName = bonusScalar.isDynamicValue ? bonusScalar.refName : null;
+//     }
+//     //in the case of someone like Blade, blade's HP tally can change dynamically from hit to hit in the same attack, depending on allies in the team, lc equipped, so on and so forth
+//     //so in that case, we assign what the bonus multiplier is if it exists through the hitType parameter, and then assign the actual ref value that would be 
+//     //attached to the turn object, again in blade's case that would be "bladeHPTally", and since I can't directly assign the tally without it being a snapshot
+//     //I instead need to assign the name of the parameter instead, so we can pull it each time for accurate values
+//     //TODO: I'm pretty sure a scalar override will never, EVER happen if there is a bonus scalar, but if it does, you can more or less handle it within the override instead
+
+
+//     let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
+//     // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
+
+//     let sumDMG = 1 + (ElationPercentOverride ?? pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget));//sum of all relevant dmg bonuses
+//     let sumMerry = 1 + pullMerryMake(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realMerryDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
+
+//     const pulledComposite = pullCompositeStatsWCrit(element,cacheTagValues,targetCache,realCacheTag,statTable,enemyStats,targetStatsSourceBased,realPENKeys,realShredKeys,realVulnKeys,tagSpecific,actionTags,actionTablesTarget);
+//     const totalMulti = pulledComposite.totalMulti;
+//     const totalCritDMG = pulledComposite.totalCritDMG;
+//     const totalCritRate = pulledComposite.totalCritRate;
+//     //broken multi, though I'm p fuckin sure this actually can be modified later, need to revisit down the road.
+//     let isBroken = targetTurn.currentToughness > 0 ? 0.9 : 1;
+    
+//     let finalMulti = sourceTurn.finalMultiCounter ? pullFinalMultiplier(sourceTurn,actionTags) : 1;//TODO: possibly do cachetags for final multis, we'll see though
+
+//     let DMGTotalEnd = preDMG * sumDMG * punchlineMulti * sumMerry * totalMulti * isBroken * finalMulti;
+//     // console.log(preDMG,sumDMG,sumRES,sumDEF,isBroken,sumVULN,sumDR,finalMulti)
+
+//     let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
+//     let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
+//     let shieldOverflow = 0;
+//     let shieldsWereBroken = false;
+//     const logger = battleData.isLoggyLogger;
+//     // if (isEnemy) {console.log(DMGTotalAVG)}
+
+
+//     if (targetTurn.shieldCounter) {
+//         const shieldsRef = targetTurn.activeShields;
+//         let smallestOverflow = 0;
+//         let shieldsBroken = 0;
+
+//         for (let shieldName in shieldsRef) {
+//             const currentShield = shieldsRef[shieldName];
+//             if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
+
+//             currentShield.shieldRemaining -= DMGTotalAVG;
+//             if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
+//             if (currentShield.shieldRemaining < 0) {
+//                 shieldsWereBroken = true;
+//                 shieldsBroken += 1;
+//                 const overkillShield = currentShield.shieldRemaining * -1;
+
+//                 //so if this is the very first shield we broke, store the overflow for comparison
+//                 if (shieldsBroken === 1) {
+//                     smallestOverflow = overkillShield;
+//                 }
+//                 //THEN, after that, check shields to see what the smallest overflow is, then store that instead
+//                 else if (overkillShield < smallestOverflow) {
+//                     smallestOverflow = overkillShield;
+//                 }
+//                 //this is bc shields don't stack from diff sources. Some shields can build value like aven Fortified Wager, but that's only building value on the same shield
+//                 //with this in mind, the dmg applies to ALL shields at once, meaning it can break any or all of them together
+//                 //however HP is only damaged if there are no shields remaining, but HP would only be hurt after the strongest shield is broken, hence: the smallest overflow is stored to dmg HP
+
+//                 removeBuff(battleData,targetTurn,currentShield);
+//                 //for all intents and purposes in the calc, shields are just really fancy buffs lmfao, gotta remove them if they break
+//             }
+//             else {continue;}//if we didn't break the shield, move on to the next
+//             // currentReference.shieldRemaining = finalShield;
+//             // currentReference.shieldCap = totalShieldCap;
+//         }
+//         shieldOverflow = smallestOverflow;
+//         if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
+//     }
+//     else {shieldOverflow = DMGTotalAVG;}
+
+//     // targetTurn.currentHP -= (DMGTotalAVG + breakerDMG + breakerDMGSuper);
+//     let DMGOverkill = 0;
+//     let enemyIsDead = false;
+//     if (shieldOverflow) {
+
+//         // battleData.backupHPObject["Netherwing: Pollux"] = ActionEntry;
+//         // backupHPOnField: 0,
+//         // backupHPObject: {},
+        
+//         // targetTurn.currentHP -= shieldOverflow;
+//         if (isEnemy) {
+//             const proposedDrain = targetTurn.currentHP - shieldOverflow;
+//             if (battleData.backupHPOnField && proposedDrain < 1) {
+//                 const distanceTo1 = Math.max(1,targetTurn.currentHP - 1);
+//                 let dmgToDeal = shieldOverflow - distanceTo1;
+//                 const backupRefs = battleData.backupHPObject;
+//                 for (let backup in backupRefs) {
+//                     const currentBackup = backupRefs[backup];
+//                     leftoverDMG = currentBackup.backupHPFunction(battleData,currentBackup,dmgToDeal);
+//                     //if there is a backupHP source like netherwing, then call the backup function defined on its turn object
+//                     //which will return the amount of dmg it could not consume
+
+//                     //in this case, if the dmg returned is 0 that means all dmg was consumed, and we can break
+//                     if (leftoverDMG === 0) {
+//                         dmgToDeal = 0;
+//                         break;
+//                     }
+//                     else {
+//                         dmgToDeal = leftoverDMG
+//                     }
+//                 }
+//                 //if the leftover dmg is 0 then the amount of dmg that would breach shields and go beyond 1hp is obv 0
+//                 shieldOverflow = (dmgToDeal === 0 ? 0 : dmgToDeal) + distanceTo1;
+//                 //otherwise, we need to assign the dmgs that backups couldn't eat, to the target to still deal it
+//             }
+//             targetTurn.currentHP -= shieldOverflow;
+//             poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true},targetTurn);
+//         }
+//         else {targetTurn.currentHP -= shieldOverflow;}
+        
+//         let enemyHasNoHP = targetTurn.currentHP <= 0;
+//         if (enemyHasNoHP && !targetTurn.isDead) {
+//             enemyIsDead = true;
+//             targetTurn.isDead = true;
+//         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
+//         else {
+//             const enemyName = targetTurn.properName;
+//             overKillTotals[enemyName] = (overKillTotals[enemyName] ?? 0) + shieldOverflow;
+//         }
+//         // let oldHPRemaining = targetTurn.currentHP;
+//         // let oldHPMax = targetTurn.maxHP;
+//         if (!isEnemy && enemyHasNoHP) {
+//             //only gauge overkill dmg when it would be on an enemy
+//             DMGOverkill = targetTurn.currentHP * -1;
+//             //and reset enemy HP after so that way we can see full overkill on the next in a multihit attack
+//             targetTurn.currentHP = 0;
+//         }
+//     }
+
+
+//     //TOUGHNESS MATH
+//     let enemyIsBroken = false;
+//     let targetWasAlreadyBroken = false;
+//     let toughnessBase = 0;
+//     let rawReduction = 0
+//     let overBreak = 0;
+    
+//     overBreakTotals[targetName] ??= 0;
+//     if (!isEnemy) {
+//         rawReduction = currentSplit * getToughnessSum(battleData,atkEntryRef.toughness ?? 0,sourceTurn,targetTurn);
+//         // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
+//         toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
+
+//         targetWasAlreadyBroken = targetTurn.isBroken;
+//         // toughnessBase = currentSplit * rawReduction;
+
+//         let enemyWeakness = enemyStats[weaknessKeys[element]];
+//         // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
+//         if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
+            
+//             if (!targetTurn.isBroken) {
+//                 targetTurn.currentToughness -= toughnessBase;
+//                 let enemyHasNoToughness = targetTurn.currentToughness <= 0;
+//                 // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
+//                 if (enemyHasNoToughness) {
+//                     enemyIsBroken = true;
+//                     targetTurn.isBroken = true;
+//                     overBreak = targetTurn.currentToughness * -1;
+//                     // overBreakRef[targetName] += overBreak;
+//                     // overBreakRef[targetName] += toughnessBase;
+//                 }
+//                 if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
+//             }
+//             else {//if the target IS broken already
+//                 overBreakTotals[targetName] += rawReduction;
+//             }
+//         }
+//         else if (targetTurn.isBroken) {
+//             overBreakTotals[targetName] += rawReduction;
+//         }
+//         else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
+//     }
+
+
+//     if (logger) {
+//         const hitDisplay = {
+//             "primary": "Single Target",
+//             "blast": "Blast",
+//             "blastAOE": "Blast AOE",
+//             "all": "AoE"
+//         };
+        
+//         const hitData = {
+//             scalar: banger ? "Certified Banger" : "Punchline",
+//             elationValueToUse,punchlineMulti,sumMerry,
+//             bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
+//             currentSplit,currentMulti,multiOf,
+//             tags: [...DMGTags],
+//             actionTags: [...actionTags],
+//             element,finalMulti,
+//             DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,DMGOverkill,shieldOverflow,
+
+//             sumDMG,
+//             ...pulledComposite,
+//             isBroken,
+//             rawReduction,toughnessBase,targetWasAlreadyBroken,
+//             // breakerDMG,
+//             overBreak,
+//             enemyIsDead,enemyIsBroken,
+//             playerData: JSON.stringify(sourceTurn),
+//             enemyData: JSON.stringify(targetTurn),
+//             AV:battleData.sumAV
+//         };
+//         logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+//     }
+
+//     if (enemyIsDead) {
+//         if (targetTurn.isEnemy) {
+//             killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
+//         }
+//         else {
+//             battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
+//         }
+//     }
+
+//     if (!isEnemy) {
+//         if (enemyIsBroken) {
+//             let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
+//                 toughnessBase,
+//                 element,
+//                 rawReduction
+//             }
+//             // console.log(DMGTags)
+//             poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
+//             battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
+//             generalInfo.enemiesThatBroke.push(targetTurn);
+
+//             const isDOT = battleActions.breakDOTisDOT[element];
+//             if (isDOT) {
+//                 if (!sourceTurn.breakDOTSheet) {
+//                     sourceTurn.breakDOTSheet = {
+//                         "stats": null,
+//                         "source": "Break",
+//                         "sourceOwner": sourceTurn.properName,
+//                         "buffName": battleActions.breakDOTNames[element],
+//                         "durationInTurn": battleActions.breakDOTDuration[element] + 1,
+//                         "duration": battleActions.breakDOTDuration[element],
+//                         "AVApplied": 0,
+//                         "maxStacks": element === "Wind" ? 5 : 1,
+//                         "currentStacks": 1,
+//                         "decay": false,
+//                         "expireType": "EndTurn",
+//                         "isDOT": isDOT,
+//                         "isDebuff": true,
+//                         "element": element,
+//                         isBreakDOT: true,
+//                         multiplier: battleActions.breakDOTElementMultipliers[element],
+//                         slot: "BreakDOT",
+//                         ownerIsAllied: true,
+//                         ownerSlot: sourceTurn.name,
+//                         avgChanceApplied: 1,
+//                         baseChance: 1.5,
+//                     }
+//                 }
+//                 const dotSheet = sourceTurn.breakDOTSheet;
+//                 updateBuff(battleData,targetTurn,dotSheet);
+//             }
+//             // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
+//             poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
+
+//             if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+//         }
+//         else if (isLastHit && targetTurn.isBroken && !targetTurn.isDead) {
+//             const triggerRef = battleData.battleListeners.hitWrapSuperBreakCall ??= [];
+//             const superBreakage = battleActions.getSuperBreakDamage;
+//             const accumulatedToughness = overBreakTotals[targetName];
+//             for (let i = 0; i < triggerRef.length; i++) {
+//                 const superDetails = triggerRef[i].condition(battleData,turnMerge);
+//                 if (!superDetails) {continue;}
+//                 superBreakage(battleData,element,sourceTurn,targetTurn,DMGTags,superDetails[0],superDetails[1],accumulatedToughness,generalInfo);
+//                 // return [0.5,this.listenerName]
+//             }
+//         }
+//     }
+
+
+//     poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
+//     poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
+//     if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
+
+//     // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
+//     // totalsRef.totalAVGDMG += DMGTotalAVG;
+//     // totalsRef.totalOverkill += DMGOverkill;
+//     totals.totalAVGDMG += DMGTotalAVG;
+//     totals.totalOverkill += DMGOverkill;
+// },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// getNextQueuedTurn(battleData,isConditionCheck,battleSettings) {
+    //     const nextTurnAV = battleData.nextTurnAV;
+    //     const nextAVLength = nextTurnAV.length;
+
+    //     let nextOrder = nextTurnAV[0];
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     for (let i=1;i<nextAVLength;i++) {
+    //         const currentTurn = nextTurnAV[i];
+
+    //         const currentCounter = currentTurn.actionCounter;
+    //         const nextCounter = nextOrder.actionCounter ?? 0;
+
+    //         const counterGreater = currentCounter > nextCounter;
+
+    //         if (currentTurn.isExtraTurn && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }
+
+    //         const currentAV = currentTurn.AV;
+    //         const nextAV = nextOrder.AV;
+
+    //         if (currentAV < nextAV) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }//look for lowest action value first
+
+    //         const AVEqual = currentAV === nextAV;
+    //         if (AVEqual && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     }
+
+
+    //     if (battleData.readyForNewWave) {
+
+    //         const waveID = battleData.wavesCompleted + 1;
+    //         const AVToRevertTo = battleData.currentCycle === 0 ? 150 : 100;
+    //         if (battleData.isLoggyLogger) {
+    //             logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: waveID});
+
+    //             logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `This cycle's remaining AV was reset from: ${+battleData.cycleAV.toFixed(7)}<br>To: ${+AVToRevertTo.toFixed(7)}<br>`});
+
+    //             logToBattle(battleData,{logType: "CycleAVReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
+    //             logToBattle(battleData,{logType: "TurnOrderReset",AV:battleData.sumAV,waveID: waveID,currentCycle: battleData.currentCycle});
+    //         }
+    //         poke("WaveStart",battleData,null,null);
+    //         battleData.readyForNewWave = false;
+
+    //         for (let battleEntity of nextTurnAV) {
+    //             if (battleEntity.blockWaveAVReset) {continue;}
+    //             logToBattle(battleData,{logType: "GenericAction", source:"Wave Cycle Reset", bodyText: `${battleEntity.properName} remaining AV was reset from: ${+battleEntity.AV.toFixed(7)}<br>To: ${+battleEntity.AVBase.toFixed(7)}<br>`});
+    //             battleEntity.AV = battleEntity.AVBase;//reset everyone's AV to base(or whatever their current base is)
+    //             // AV:SPDStats.SPDActionValue,
+    //             // AVBase:SPDStats.SPDActionValue,
+    //         }
+
+    //         const enemiesToMake = battleSettings["waveArray" + waveID];
+
+    //         if (!enemiesToMake.length) {//if users added a new wave, but didn't populate it yet, then end the battle
+    //             battleData.battleIsOver = true;
+    //             return null;
+    //         }
+
+    //         battleData.cycleAV = AVToRevertTo;
+
+    //         sim.createEnemyTargets(battleData,enemiesToMake);
+    //         poke("WaveStartFinished",battleData,null,null);
+    //         sim.clearUltimateQueue(battleData)
+
+    //         const nextWaveTurn = battleData.battleIsOver ? null : sim.getNextQueuedTurn(battleData,false,battleSettings);
+    //         // console.log(nextWaveTurn.properName)
+    //         return nextWaveTurn
+    //     }
+    //     else if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
+    //         //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
+    //         // console.log(`CYCLE --${battleData.currentCycle}-- END`);
+    //         battleData.currentCycle += 1;
+    //         // console.log(`CYCLE --${battleData.currentCycle}-- START`);
+
+    //         for (let AVentry of nextTurnAV) {
+    //             AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
+    //         }
+    //         battleData.sumAV += battleData.cycleAV;
+    //         battleData.cycleAV = 100;
+    //         battleData.cycleAVPassed = 0;
+    //         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
+            
+
+    //         return null;
+    //     }
+    //     return nextOrder;
+    // },
+    // getNextQueuedAllyTurn(battleData,isConditionCheck) {
+    //     const nextTurnAV = battleData.nextTurnAV;
+    //     const nextAVLength = nextTurnAV.length;
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     const objIsEvent = obj.isUniqueEvent && !obj.isMemosprite && !obj.isSummon;
+    //     //     const objIsEventOrEnemy = objIsEvent || obj.isEnemy;
+    //     //     if (!objIsEventOrEnemy && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (!objIsEventOrEnemy && obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (!objIsEventOrEnemy && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     let nextOrder = nextTurnAV[0];
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     for (let i=1;i<nextAVLength;i++) {
+    //         const currentTurn = nextTurnAV[i];
+
+    //         const objIsEvent = currentTurn.isUniqueEvent && !currentTurn.isMemosprite && !currentTurn.isSummon;
+    //         const objIsEventOrEnemy = objIsEvent || currentTurn.isEnemy;
+    //         if (objIsEventOrEnemy) {continue;}
+
+    //         const currentCounter = currentTurn.actionCounter;
+    //         const nextCounter = nextOrder.actionCounter ?? 0;
+
+    //         const counterGreater = currentCounter > nextCounter;
+
+    //         if (currentTurn.isExtraTurn && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }
+
+    //         const currentAV = currentTurn.AV;
+    //         const nextAV = nextOrder.AV;
+
+    //         if (currentAV < nextAV) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }//look for lowest action value first
+
+    //         const AVEqual = currentAV === nextAV;
+    //         if (AVEqual && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     }
+
+    //     return nextOrder;
+    // },
+    // getNextQueuedAllyTurnBuffableOnly(battleData,isConditionCheck) {
+    //     const nextTurnAV = battleData.nextTurnAV;
+    //     const nextAVLength = nextTurnAV.length;
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     const objIsSummon = obj.isUniqueEvent && !obj.isMemosprite;
+    //     //     const isEnemyOrSummon = objIsSummon || obj.isEnemy;
+    //     //     if (!isEnemyOrSummon && obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (!isEnemyOrSummon && obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (!isEnemyOrSummon && obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     let nextOrder = nextTurnAV[0];
+    //     // let nextOrder = nextTurnAV.reduce((min, obj) => {
+    //     //     //in the case of an extra turn like hyacine's Ica, ica takes immediate action after she does without allowing for ultimates
+    //     //     //in general but also between actions, unlike an extra turn like firefly e2, where the extra turn is queued, but ults can proc between it
+    //     //     // if (battleData.extraTurnPriority && (obj.hasPriority ?? 0) > (min.hasPriority ?? 0)) {return obj;}
+    //     //     if (obj.isExtraTurn && obj.actionCounter > (min.actionCounter ?? 0)) {return obj;}
+
+    //     //     if (obj.AV < min.AV) {return obj;}//look for lowest action value first
+    //     //     if (obj.AV === min.AV && obj.actionCounter > min.actionCounter) {return obj;}//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //     //     if (obj.AV === min.AV && obj.actionCounter === min.actionCounter && obj.SPD > min.SPD) {return obj;}//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     //     return min;
+    //     // });
+
+    //     for (let i=1;i<nextAVLength;i++) {
+    //         const currentTurn = nextTurnAV[i];
+
+    //         const objIsSummon = currentTurn.isUniqueEvent && !currentTurn.isMemosprite;
+    //         const isEnemyOrSummon = objIsSummon || currentTurn.isEnemy;
+    //         if (isEnemyOrSummon) {continue;}
+
+    //         const currentCounter = currentTurn.actionCounter;
+    //         const nextCounter = nextOrder.actionCounter ?? 0;
+
+    //         const counterGreater = currentCounter > nextCounter;
+
+    //         if (currentTurn.isExtraTurn && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }
+
+    //         const currentAV = currentTurn.AV;
+    //         const nextAV = nextOrder.AV;
+
+    //         if (currentAV < nextAV) {
+    //             nextOrder = currentTurn;
+    //             continue
+    //         }//look for lowest action value first
+
+    //         const AVEqual = currentAV === nextAV;
+    //         if (AVEqual && counterGreater) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//then if multiple people at 0AV, look at the placement order for who was placed at 0 most recently
+    //         if (AVEqual && currentCounter === nextCounter && currentTurn.SPD > nextOrder.SPD) {
+    //             nextOrder = currentTurn;
+    //             continue;
+    //         }//but if MULTIPLE people were moved to 0AV at the same time, then sort by spd instead, jesus this game
+    //     }
+    //     return nextOrder;
+    // },

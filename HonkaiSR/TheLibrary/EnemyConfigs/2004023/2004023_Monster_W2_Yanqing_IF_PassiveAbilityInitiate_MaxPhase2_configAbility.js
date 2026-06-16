@@ -150,7 +150,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__210061459\">Enemy_W2_Yanqing_IF_Part2_OneMoreController</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",

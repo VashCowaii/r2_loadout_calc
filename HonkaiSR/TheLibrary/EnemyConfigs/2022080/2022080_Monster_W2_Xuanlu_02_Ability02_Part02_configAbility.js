@@ -29,7 +29,7 @@ const configAbility = {
       "statusName": "Retaliation",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Declare Custom Variable",

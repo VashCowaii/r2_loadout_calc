@@ -1132,7 +1132,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "IF",
@@ -1361,7 +1361,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action END Phase] [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End Pre-action Phase",
           "execute": [
             {
               "name": "IF",

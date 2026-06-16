@@ -119,7 +119,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-621665594\">Monster_XP_Elite02_DebuffEnhance</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Define Custom Variable",

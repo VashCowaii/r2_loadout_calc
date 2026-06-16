@@ -510,7 +510,7 @@ const compositeAbilityObject = {
           "statusName": "Eagerness",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Heal",
@@ -4470,7 +4470,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",
@@ -4872,7 +4872,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",
@@ -5509,7 +5509,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-283400185\">Enemy_W4_DawnsEye_DisableLookAt</a>",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]"
+              "eventTrigger": "Turn [Anyone]: Start"
             }
           ]
         },

@@ -270,7 +270,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -390,7 +390,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -747,7 +747,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-60952050\">Memosprite_CastoriceServant_PlayCrossHairPreviewFadeIn</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase] [Anyone]",
+          "eventTrigger": "Turn [Anyone]: Start Pre-action Phase",
           "execute": [
             {
               "name": "IF",

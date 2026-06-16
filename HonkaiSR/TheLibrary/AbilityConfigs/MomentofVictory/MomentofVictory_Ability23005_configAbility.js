@@ -48,7 +48,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1011066549\">LC_23005_Main</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

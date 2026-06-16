@@ -50,7 +50,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__797664164\">Relic_318_Main</a>",
       "execute": [
         {
-          "eventTrigger": "Turn End [Anyone]",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "Use Custom Character Function",

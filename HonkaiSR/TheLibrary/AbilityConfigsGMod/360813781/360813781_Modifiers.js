@@ -16,10 +16,10 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Turn Start [Anyone]"
+          "eventTrigger": "Turn [Anyone]: Start"
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase] [Anyone]"
+          "eventTrigger": "Turn [Anyone]: Start Pre-action Phase"
         },
         {
           "eventTrigger": "Action Phase Start [Anyone][?]"
@@ -37,10 +37,10 @@ const configAbility = {
           "eventTrigger": "Action End [Anyone]"
         },
         {
-          "eventTrigger": "Turn End [Anyone]"
+          "eventTrigger": "Turn [Anyone]: End"
         },
         {
-          "eventTrigger": "Turn [Action-End Phase] [Anyone]"
+          "eventTrigger": "Turn [Anyone]: Start Action-End Phase"
         },
         {
           "eventTrigger": "Deal Damage End [Anyone]: Hit"

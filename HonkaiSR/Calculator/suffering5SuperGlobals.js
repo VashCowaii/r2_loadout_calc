@@ -145,6 +145,7 @@ const superGlobal = {
             action: "Ultimate",
             isContinuousTurn: false,
             isContinuousTurnBREAK: false,
+            abortCheck: null,
 
             points: 0,
             pointsOffset: 0,
@@ -152,7 +153,7 @@ const superGlobal = {
             //but will stop SP from being drained
 
             energyCost: null,
-            energyCostFunction: null,
+            // energyCostFunction: null,
             //for shit that involves determining which ult to use, like Argenti's, whether it's enhanced how much it drains etc
             //turnLogic[ownerTurn.properName].skillFunctions.randomBullshitHereLater,
             specialEnergyPoke: null,
@@ -175,12 +176,14 @@ const superGlobal = {
             isAbility: false,
             useAnyTriggers: false,
             eventTypeStartLOG: "UltimateStart",
+            hideStartEvent: false,
 
             properName: ownerTurn.properName,
             sourceTurn: null,
             eventOverrideImage: null,//"BEicons/BattleEvent_1506_Box.png"
 
-            target: null,
+            target: [],
+            subTarget: [],
             poolKey: null,
 
             elationForcedPunchline: null,
@@ -189,6 +192,73 @@ const superGlobal = {
         Object.assign(queueObject,overrideObject);
 
         return queueObject;
-    }
+    },
+    createATKBounceObject(overrideObject) {
+        const bounceData = {
+            multi: 1,
+            bounceCount: 1,
+            energy: 0,
+            target: {
+                "hitRatio": 1,
+                "energyRatio": 1,
+                "toughness": 10,
+            },
+            subTarget: null,
+            blast: null,
+            bounceSkipFirstTarget: false,
+            useStandardBounceOrder: true,
+        }
+
+        Object.assign(bounceData,overrideObject);
+
+        return bounceData;
+    },
+    createStandardElementDOTSHEET(ownerTurn,element,overrideObject) {
+        const tags = ["All",element];
+        const keyShortcut = basicShorthand.makeKeysArray;
+        const realDMGKeys = keyShortcut(dmgKeys,tags);
+        const realPENKeys = keyShortcut(resPENKeys,tags);
+        const realShredKeys = keyShortcut(defShredKeys,tags);
+        const realVulnKeys = keyShortcut(vulnKeys,tags);
+        //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+        const actionTags = ["All","DOT"];
+        const compositeCacheTag = tags + actionTags + ownerTurn.properName;
+
+        const baseObject = {
+            "stats": null,
+            "source": "Trace",
+            "sourceOwner": ownerTurn.properName,
+            "buffName": "UNNAMED DOT",
+            "durationInTurn": 3,
+            "duration": 2,
+            "AVApplied": 0,
+            "maxStacks": 1,
+            "currentStacks": 1,
+            "decay": false,
+            "expireType": "EndTurn",
+            "isDOT": true,
+            "isDebuff": true,
+            "element": element,
+            "multiplier": 0.30,
+            "scalar": "ATK",
+            "slot": "Trace",
+            "ownerSlot": ownerTurn.name,
+            "avgChanceApplied": 1,
+            "baseChance": 0.50,
+            tags,actionTags,compositeCacheTag,
+            realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+        }
+
+        Object.assign(baseObject,overrideObject)
+        return baseObject;
+    },
+    territoryActiveAbortUltimate(battleData,queueObject,sourceTurn) {
+        const alreadyActive = battleData.territoryActive;
+        if (alreadyActive) {
+            sourceTurn.ultyQueued = false;
+            return true;
+        }
+        else {return false;}
+    },
 }
 const createQueueObject = superGlobal.createQueueObject;

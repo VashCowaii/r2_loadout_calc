@@ -41,7 +41,7 @@ const customMenu = {
         readSelection("customMenuMainHolderBox").style.display = "flex";
         readSelection("customMenuSearchTitle").innerHTML = "Lightcones";
 
-        readSelection("customMenuSearchNote").innerHTML = "Search for a lightcone NAME, DESCRIPTION, or SIGNATURE CHARACTER.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.";
+        readSelection("customMenuSearchNote").innerHTML = `Search for a lightcone <span class="descriptionNumberColor">NAME</span>, <span class="descriptionNumberColor">DESCRIPTION</span>, or <span class="descriptionNumberColor">SIGNATURE CHARACTER</span>.<br>S1 values applied for descriptions in search.<br>You can also search by tags, but tag search must be the full tag.`;
 
     
 
@@ -65,7 +65,7 @@ const customMenu = {
             "3": "Relics 3-4",
         }
         readSelection("customMenuSearchTitle").innerHTML = searchRef[relicSet];
-        readSelection("customMenuSearchNote").innerHTML = "Search for a relic NAME or effect DESCRIPTION.";
+        readSelection("customMenuSearchNote").innerHTML = `Search for a relic <span class="descriptionNumberColor">NAME</span> or effect <span class="descriptionNumberColor">DESCRIPTION</span>.`;
 
         globalUI.currentSearchOpen = searchRef[relicSet];
         globalUI.currentSearchVolume = relicSets;
@@ -710,7 +710,15 @@ const customMenu = {
         readSelection("customMenuMainHolderBox").style.display = "flex";
         readSelection("customMenuSearchTitle").innerHTML = "Characters";
 
-        readSelection("customMenuSearchNote").innerHTML = "Search for character NAME, PATH, or ELEMENT.";
+        readSelection("customMenuSearchNote").innerHTML = `Search for character <span class="descriptionNumberColor">NAME</span>, <span class="descriptionNumberColor">PATH</span>, or <span class="descriptionNumberColor">ELEMENT</span>.
+        <br>
+            <div class="starAndSearchRow1">
+                <a class="characterSearchButton clickable" href="/HonkaiSR/Progress/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Progress List</a>
+            </div>
+        `;
+
+        // <a href="https://youtu.be/_4kk4EEHJKw" class="headerDropdownLink" target="_blank" rel="noopener noreferrer">Optimizer<br>Guide</a>
+        // <a href="/HonkaiSR/Progress/" rel="noopener noreferrer" class="headerDropdownLink">Char. Progress</a>
 
         globalUI.currentSearchOpen = "characters";
         globalUI.currentSearchVolume = characters;
@@ -1101,7 +1109,7 @@ const customMenu = {
         readSelection("customMenuSearchNote").innerHTML = `Construct a custom enemy, or select a preset to add an enemy to your selected wave.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
-        const waveRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        const waveRef = globalRecords.battleSettings.enemyFullWaveArray[waveID-1] ?? [];//[`waveArray${waveID}`];
         const slotRef = isEdit ? waveRef[index] : null;
         // customMenuSearchBody
 
@@ -1218,6 +1226,7 @@ const customMenu = {
                     <input type="range" id="addEnemyLevelSlider" name="slider" min="1" max="120" value="${isEdit ? slotRef.lvl : "95"}" step="1" list="tickmarks" onchange="userTriggers.updateEnemyAddedMenuUI()">
                 </div>
             </div>
+
             <div class="statisticSettingsRow">
                 <div class="statsRowName">HP Bars:&nbsp;<span id="addEnemyHPBarsDisplay">1</span></div>
                 <div class="statsRowToggle">
@@ -1258,7 +1267,14 @@ const customMenu = {
             </div>
 
             <div class="customMenuSearchNote">Enemy DEF is assigned automatically based on level selected</div>
-
+            <div class="statisticSettingsRow">
+                <div class="statsRowName">DEF CAP (LvL 100+ Only)&nbsp;</div>
+                <div class="statsRowToggle">
+                    <label class="toggleContainer">
+                        <input type="checkbox" class="toggleCheckbox" id="toggleEnemyDEFCap" onchange="userTriggers.updateEnemyAddedMenuUI()"><span class="toggleSlider"></span>
+                    </label>
+                </div>
+            </div>
             
             <div class="imageRowStatisticBox2">
                 <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage"/></div>
@@ -1495,9 +1511,6 @@ const customMenu = {
         readSelection("customMenuSearchNote").innerHTML = `<b style="color:white;">Export</b> will let you save a wave or all battle waves in a file.<br><b style="color:white;">Import</b> will let you select a file that matches the slot type you clicked(wave or battle) and assign it within battle simulation.<br><br>Files are JSON, with .waveHSR.json/.allWaveHSR.json extensions.`;
 
         const bodyElem = readSelection("customMenuSearchBody");
-        // const waveRef = globalRecords.battleSettings[`waveArray${waveID}`];
-        // const slotRef = isEdit ? waveRef[index] : null;
-        // customMenuSearchBody
 
         const battleSettings = globalRecords.battleSettings;
         const totalWaves = battleSettings.totalWaves;
@@ -4562,6 +4575,11 @@ const userTriggers = {
 
             // console.log(nameNumber,targetNumber,sourceNumber)
 
+            let isAttackStart = false;
+            let isAttackEnd = false;
+            let isSegmentStart = false;
+            let isSegmentEnd = false;
+
 
             switch (currentType) {
                 case "PassiveCalls": 
@@ -5267,15 +5285,24 @@ const userTriggers = {
                     // logToBattle(battleData,{logType: "HitEnemy", hitType: "Additional", target: enemyTurn.properName, source:charName, hitData,enemyIsDead,sourceString});
                     break;
                 case "AttackStart":
-                    returnString = `
-                        <div class="actionDetailBody">Attack started...</div>
-                        <details class="actionDetailBodyDetailExpand">
-                        <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle per-hit Details & Sub-Events</summary>`;
-                    // battleData.battleLog.push({logType: "AttackStart"});
+                    isAttackStart = true;
+                    break;
+                case "AttackStartSEGMENT":
+                    isSegmentStart = true;
                     break;
                 case "AttackEnd":
-                    returnString = `</details><div class="actionDetailBody">Attack finished, ${action.totalHits} hit${action.totalHits>1 ? "s" : ""} for ${action.totalAVGDMG.toLocaleString()} AVG Total DMG</div>`;
-                    // battleData.battleLog.push({logType: "AttackEnd", totalHits, totalAVGDMG});
+                    isAttackEnd = true;
+                    break;
+                case "AttackEndSEGMENT":
+                    isSegmentEnd = true;
+                    break;
+                case "DOTDetonateStart":
+                    returnString = `
+                        <details class="actionDetailBodyDetailExpand" open>
+                        <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle DOT Detonate Details</summary>`;
+                    break;
+                case "DOTDetonateEnd":
+                    returnString = `</details>`;
                     break;
                 case "HealAllyStart":
                     returnString = `
@@ -5389,16 +5416,21 @@ const userTriggers = {
             // </div>
             // </details>
 
-            return returnString;
+            return {returnString,isAttackStart,isAttackEnd,isSegmentStart,isSegmentEnd,action};
         }
 
         let finalDisplayString = "";
-        finalDisplayString += lineTypeDisplays(currentAction,logIndex);
+        finalDisplayString += lineTypeDisplays(currentAction,logIndex).returnString;
 
         let eventsString = ``;
         let eventOpen = `<div class="actionDetailBodyEvent">`;
         let eventClose = `</div>`;
         let skipEventBody = false;
+
+        let attacksString = "";
+        let segmentsString = "";
+        let attackCacheActive = false;
+        let segmentCacheActive = false;
 
         let awkwardLogTypes = userTriggers.awkwardLogTypes;
 
@@ -5411,7 +5443,53 @@ const userTriggers = {
                 if (actionHeadersSorta.has(newAction.logType)) {break;}
                 else {
                     if (awkwardLogTypes[newAction.logType]) {continue;}
-                    eventsString += lineTypeDisplays(newAction,i)
+
+                    const result = lineTypeDisplays(newAction,i);
+
+                    if (result.isAttackStart) {attackCacheActive = true;}
+                    if (result.isSegmentStart) {segmentCacheActive = true;}
+
+                    const action = result.action;
+                    if (result.isAttackEnd) {
+                        attackCacheActive = false;
+
+                        eventsString += `
+                            <details class="actionDetailBodyDetailExpand">
+                            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle data for ${action.totalHits} hit${action.totalHits>1 ? "s" : ""} (${action.totalAVGDMG.toLocaleString()} AVG Total)</summary>
+                                ${attacksString}
+                            </details>`;
+                        attacksString = "";
+                    }
+                    else if (result.isSegmentEnd) {
+                        segmentCacheActive = false;
+                        if (attackCacheActive) {
+                            attacksString += `
+                            <details class="actionDetailBodyDetailExpand" open>
+                            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle Segment (${action.totalHits} hit${action.totalHits>1 ? "s" : ""})</summary>
+                                ${segmentsString}
+                            </details>`;
+                            segmentsString = "";
+                        }
+                        else {
+                            eventsString += `
+                            <details class="actionDetailBodyDetailExpand" open>
+                            <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Toggle Segment (${action.totalHits} hit${action.totalHits>1 ? "s" : ""})</summary>
+                                ${segmentsString}
+                            </details>`;
+                            segmentsString = "";
+                        }
+                    }
+                    else if (segmentCacheActive) {
+                        segmentsString += result.returnString;
+                    }
+                    else if (attackCacheActive) {
+                        attacksString += result.returnString;
+                    }
+                    else {
+                        eventsString += result.returnString;
+                    }
+
+                    
                 }
             }
         }
@@ -5843,10 +5921,6 @@ const userTriggers = {
                 userTriggers.expandBattleLog(i);
                 return;
             }
-            // else {
-            //     if (awkwardLogTypes[newAction.logType]) {continue;}
-            //     eventsString += lineTypeDisplays(newAction,i)
-            // }
         }
     },
     forcePriorActionExpand() {
@@ -5865,10 +5939,6 @@ const userTriggers = {
                 userTriggers.expandBattleLog(i);
                 return;
             }
-            // else {
-            //     if (awkwardLogTypes[newAction.logType]) {continue;}
-            //     eventsString += lineTypeDisplays(newAction,i)
-            // }
         }
     },
 
@@ -5937,7 +6007,8 @@ const userTriggers = {
         if (waveSlot === "ALL") {
             let exportArray = [];
             for (let i=1;i<=battleSettings.totalWaves;i++) {
-                exportArray.push(battleSettings[`waveArray${i}`]);
+                // exportArray.push(battleSettings[`waveArray${i}`]);
+                exportArray.push(battleSettings.enemyFullWaveArray[i-1]);
             }
             //waveArray entries are each distinct keys within battleSettings, not an array of arrays, but for the sake of bundling an entire battle's waves into one export, we can just do this
             // userTriggers.copyToClipboard(exportArray);
@@ -5953,7 +6024,8 @@ const userTriggers = {
             saveJSON(`allEnemiesArray__${getDateForFilename()}.allWaveHSR.json`,exportArray,"allWaveHSR.json");
         }
         else {
-            const extractRef = battleSettings[`waveArray${waveSlot}`];
+            // const extractRef = battleSettings[`waveArray${waveSlot}`];
+            const extractRef = battleSettings.enemyFullWaveArray[waveSlot-1];
 
             let enemyNameString = "";
             for (let entry of extractRef) {
@@ -6001,7 +6073,8 @@ const userTriggers = {
                             if (isBeyondImportedLength) {break;}
 
                             const currentWaveArray = parsedData[i-1];
-                            battleSettings[`waveArray${i}`] = currentWaveArray;
+                            // battleSettings[`waveArray${i}`] = currentWaveArray;
+                            battleSettings.enemyFullWaveArray[i-1] = currentWaveArray;
                             addWave(i,null,true);
                         }
                     }
@@ -6010,7 +6083,8 @@ const userTriggers = {
                             alert("You can't import a battle array of waves into a single wave slot.\nSomehow you've manage to import a battle array of waves in a single wave slot.\n\nIf you ever see this message and you didn't intentionally brute-force file extensions to cause this, let Vash know in the discord.");
                             return
                         }
-                        battleSettings[`waveArray${waveSlot}`] = parsedData;
+                        // battleSettings[`waveArray${waveSlot}`] = parsedData;
+                        battleSettings.enemyFullWaveArray[waveSlot-1] = parsedData;
                         addWave(waveSlot,null,true);
                     }
                 }
@@ -6039,12 +6113,14 @@ const userTriggers = {
                     if (isBeyondImportedLength) {break;}
 
                     const currentWaveArray = parsedData[i-1];
-                    battleSettings[`waveArray${i}`] = currentWaveArray;
+                    // battleSettings[`waveArray${i}`] = currentWaveArray;
+                    battleSettings.enemyFullWaveArray[i-1] = currentWaveArray;
                     addWave(i,null,true);
                 }
             }
             else {
-                battleSettings[`waveArray${waveSlot}`] = parsedData;
+                // battleSettings[`waveArray${waveSlot}`] = parsedData;
+                battleSettings.enemyFullWaveArray[waveSlot-1] = parsedData;
                 addWave(waveSlot,null,true);
             }
             userTriggers.updateQuerySearchSettings(true);
@@ -6403,7 +6479,8 @@ const userTriggers = {
         // addEnemyStatsHP,addEnemyStatsToughness,addEnemyStatsEffectRES,addEnemyStatsSPD,addEnemyStatsATK,addEnemyStatsName
 
         // enemyWaveHolder1
-        const waveDeposit = globalRecords.battleSettings[`waveArray${waveID}`];
+        // const waveDeposit = globalRecords.battleSettings[`waveArray${waveID}`];
+        const waveDeposit = globalRecords.battleSettings.enemyFullWaveArray[waveID-1] ??= [];
         const elementDeposit = readSelection(`enemyWaveHolder${waveID}`);
 
         const importField = readSelection("importTextInputTeam");
@@ -6479,6 +6556,7 @@ const userTriggers = {
 
             const enemyLvL = +readSelection("addEnemyLevelSlider").value;
             const baseRes = 0.20;
+            const defCapped = readSelection("toggleEnemyDEFCap")?.checked ?? false;
             const enemyObject = {
                 version: globalEnemyVersion,//global can be found in statListData if I ever forget
                 image: null,
@@ -6493,6 +6571,7 @@ const userTriggers = {
                 energyGain: +readSelection("addEnemyEnergyGain").value,
                 weaknessOverrides,
                 resistantTo,
+                defCap: defCapped,
             }
             const enemyStats = enemyObject.stats;
 
@@ -6503,7 +6582,7 @@ const userTriggers = {
             enemyStats[Toughness] = enemyToughness;
             // console.log(enemyStats[Toughness])
             enemyStats[EffectRES] = enemyEffectRES;
-            enemyStats[DEFBase] = (enemyLvL*10) + 200;
+            enemyStats[DEFBase] = (Math.min((defCapped ? 100 : enemyLvL), enemyLvL)*10) + 200;
 
             enemyStats[ResistanceImaginary] = (weaknessOverrides.Imaginary ? 0 : (resistantTo.Imaginary ?? 0))/100;
             enemyStats[ResistanceQuantum] = (weaknessOverrides.Quantum ? 0 : (resistantTo.Quantum ?? 0))/100;
@@ -6735,7 +6814,8 @@ const userTriggers = {
         userTriggers.importWaveData("ALL");
     },
     deleteEnemyFromWave(waveID,waveIndex) {
-        const depositRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        // const depositRef = globalRecords.battleSettings[`waveArray${waveID}`];
+        const depositRef = globalRecords.battleSettings.enemyFullWaveArray[waveID-1]
         depositRef.splice(waveIndex,1);
 
         userTriggers.addEnemyToWave(waveID,null,true);

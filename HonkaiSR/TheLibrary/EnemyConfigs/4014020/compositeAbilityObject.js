@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1584202078\">Monster_W4_Hearse_Action</a>",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "Set Action-State",
@@ -1447,7 +1447,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Turn [Action-End Phase]",
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
               "execute": [
                 {
                   "name": "Set Action-State",
@@ -1458,7 +1458,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Action-End Phase",
               "execute": [
                 {
                   "name": "IF",

@@ -746,7 +746,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Define Modifier Variable",
@@ -2915,7 +2915,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase]"
+              "eventTrigger": "Turn [Owner]: Action-End Phase"
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3361,7 +3361,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__145969573\">M_PlayerBoyServant_30_BreakFlag</a>",
           "execute": [
             {
-              "eventTrigger": "Turn End [Anyone]",
+              "eventTrigger": "Turn [Anyone]: End",
               "execute": [
                 {
                   "name": "IF",

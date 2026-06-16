@@ -171,6 +171,26 @@ const customDisplayValuesLog = {
         //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
         // },
     ],
+    "Clara": [//tracker done
+        // valuesRef.prana;
+        // const maxValue = valuesRef.pranaMax;
+        {valueName: "Counter", refName: "counterCount", isBattleValue: true,summaryValue: "claraCounterCountSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: characters["Clara"].traces.Point04.icon
+        },
+        {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
+
+        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        
+
+        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
+        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
+        // },
+    ],
 
     //HUNT
     "Archer": [//tracker done
@@ -354,6 +374,26 @@ const customDisplayValuesLog = {
         //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
         // },
     ],
+    "Himeko": [//tracker done
+        // valuesRef.prana;
+        // const maxValue = valuesRef.pranaMax;
+        {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "himekoChargeSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: characters["Himeko"].traces.Point04.icon
+        },
+        {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+
+        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        
+
+        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
+        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
+        // },
+    ],
     
     //ABUNDANCE
     "Gallagher": [//prob no tracker needed
@@ -524,6 +564,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SPORFakeSP,permaConditionsTextLibrary.enhancementLimit3],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Clara": defaultStandardAbilityDisplayWarnings,
     
     //HARMONY
     "Sunday": defaultStandardAbilityDisplayWarnings,
@@ -630,6 +671,8 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalf]
     },
     "Anaxa": defaultStandardAbilityDisplayWarnings,
+    "Jing Yuan": defaultStandardAbilityDisplayWarnings,
+    "Himeko": defaultStandardAbilityDisplayWarnings,
 
     //ELATION
     "Evanescia": {
@@ -1708,6 +1751,17 @@ const defaultConditions = {
                     "state": false
                 }
             ]
+        }
+    },
+    "Clara": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
         }
     },
     "Hook": {
@@ -3406,6 +3460,17 @@ const defaultConditions = {
         },
     },
     "Jing Yuan": {
+        hasEnhancedState: false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
+    },
+    "Himeko": {
         hasEnhancedState: false,
         "Skill": {
             "type": "AND",

@@ -60,7 +60,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1429098384\">Modifier_ChallengePeakBattle_ExtremeAbility_0006_02</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Add Events/Bonuses",

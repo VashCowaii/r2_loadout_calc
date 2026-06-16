@@ -178,7 +178,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Action Choice Window [Anyone]"
             },
             {
-              "eventTrigger": "Turn [Action-End Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Action-End Phase",
               "execute": [
                 {
                   "name": "IF",
@@ -2530,7 +2530,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1181889244\">Yunli_Passive</a>",
           "execute": [
             {
-              "eventTrigger": "Turn Start [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -2559,7 +2559,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Pre-action Phase]"
+              "eventTrigger": "Turn [Owner]: Pre-action Phase"
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

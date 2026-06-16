@@ -131,7 +131,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Turn [Pre-action Phase]",
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -465,7 +465,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Turn [Action-End Phase] [Anyone]",
+              "eventTrigger": "Turn [Anyone]: Start Action-End Phase",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",

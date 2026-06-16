@@ -2026,7 +2026,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2038871933\">Enemy_W4_FireProwler_IF_RemoveOneMore</a>",
       "execute": [
         {
-          "eventTrigger": "Turn [Action-End Phase]",
+          "eventTrigger": "Turn [Owner]: Action-End Phase",
           "execute": [
             {
               "name": "IF",
@@ -3320,7 +3320,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Turn [Pre-action Phase]",
+          "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
               "name": "Define Custom Variable with Added Value",
