@@ -9939,6 +9939,8 @@ const turnLogicLightcones = {
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
                         addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                         addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
+                        //NOTE: strictly speaking the actual events are listening to turn starts from anyone to reset the tracker, but that's since SP
+                        //usage is only tracked from an owner, it is functionally equivalent to resetting the owner on start/end
                     }
                 },
                 "target": "self",
@@ -10020,7 +10022,7 @@ const turnLogicLightcones = {
                         "owners": []
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
         
@@ -16452,7 +16454,7 @@ const turnLogicRelics = {
                     "owners": [],
                     "subListeners": [
                         {
-                            "trigger": "StartTurn",
+                            "trigger": "PreActionPhase",
                             condition(battleData,generalInfo) {
                                 const sourceTurn = generalInfo.sourceTurn;
         
@@ -16473,7 +16475,7 @@ const turnLogicRelics = {
                             },
                             "target": "self",
                             "isPersonal": true,
-                            "listenerName": "Tengoku@Livestream turnend listener",
+                            "listenerName": "Tengoku@Livestream turnstart listener",
                         },
                         {
                             "trigger": "SPChange",
@@ -16523,7 +16525,6 @@ const turnLogicRelics = {
                         },
                     ]
                 },
-                
             ],
             "buffNames": {
                 "critDMG": "Tengoku@Livestream"
