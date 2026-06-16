@@ -881,7 +881,7 @@ const sim = {
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
             summaryTurns[turnName] += 1;
-            poke("StartTurnEnd", battleData, exoTurnRef,sourceTurn);
+            poke("PreActionPhaseEnd", battleData, exoTurnRef,sourceTurn);
 
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
@@ -910,13 +910,11 @@ const sim = {
                         }
                     }
                     if (!turnShouldEnd) {
-                        // poke("StartTurnEnd", battleData, exoTurnRef);
                         turnWrapperEnemy(turnName,sourceTurn.enemyTypeAttack,sourceTurn,battleData);
                     }
                 }
             }
             else if (turnLogic[turnName] && !sourceTurn.notPresentInActionOrder && !sourceTurn.turnShouldEnd) {
-                // poke("StartTurnEnd", battleData, exoTurnRef);
                 turnWrapper(turnName,sourceTurn,battleData);
             }
             poke("ActionEndPhase", battleData, exoTurnRef,sourceTurn);

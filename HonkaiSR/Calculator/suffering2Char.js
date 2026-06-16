@@ -36286,7 +36286,7 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "StartTurnEnd",
+                "trigger": "PreActionPhaseEnd",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
                     const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
@@ -36301,7 +36301,6 @@ const turnLogic = {
                 "listenerName": "Memo talent - ica passive healing (turn started phase ending)",
                 "ownerTurn": {},
             },
-
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
