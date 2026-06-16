@@ -312,8 +312,11 @@ const battleActions = {
                     sourceTurn.dots[element] += 1;
                     poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Apply",element},sourceTurn);
                 }
-                if (isSpecialDOTLast) {sourceTurn.specialDotsArray.push(currentReference);}
-                else {sourceTurn.currentDotsArray.push(currentReference);}
+
+                // PreActionPhase
+                addListenerWithPriorityDOT(battleData,currentReference,sourceTurn);
+                // if (isSpecialDOTLast) {sourceTurn.specialDotsArray.push(currentReference);}
+                // else {sourceTurn.currentDotsArray.push(currentReference);}
             }
 
             if (isAllDOTTypes) {
@@ -355,10 +358,15 @@ const battleActions = {
                 currentReference.avgChanceApplied = buffSheet.avgChanceApplied;
                 //if a dot is refreshed, then it is pushed to the end of the currentdots array to be called LAST
                 //rn this is the assumption bc with kafka + erode, if erode is added first, even as the oldest is triggered first when enemy turn starts
-                if (!currentReference.isSpecialDOTLast) {
-                    const currentDots = sourceTurn.currentDotsArray;
-                    currentDots.push(currentDots.splice(currentDots.indexOf(currentReference), 1)[0]);
-                }
+
+                // if (!currentReference.isSpecialDOTLast) {
+                //     const currentDots = sourceTurn.currentDotsArray;
+                //     currentDots.push(currentDots.splice(currentDots.indexOf(currentReference), 1)[0]);
+                // }
+                const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
+
+                currentDots.splice(currentDots.indexOf(currentReference), 1);
+                addListenerWithPriorityDOT(battleData,currentReference,sourceTurn);
             }
         }
         //inherit the avg'd chance to apply from the newest application, such that we can relfect changes in EHR or enemy effect RES
@@ -508,10 +516,13 @@ const battleActions = {
                     poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                 }
 
-                const currentDots = sourceTurn.currentDotsArray;
-                const currentSpecialDots = sourceTurn.specialDotsArray;
-                if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
-                else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
+                // const currentDots = sourceTurn.currentDotsArray;
+                // const currentSpecialDots = sourceTurn.specialDotsArray;
+                // if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
+                // else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
+
+                const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
+                currentDots.splice(currentDots.indexOf(currentReference), 1);
             }
             if (isAllDOTTypes) {
                 //in the case of something like black swan Epiphany debuff, it makes it so enemies are considered to be suffering from all types of dot, so we increment the elemental trackers on the target
@@ -596,10 +607,13 @@ const battleActions = {
                         sourceTurn.dots[element] -= 1;
                         poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                     }
-                    const currentDots = sourceTurn.currentDotsArray;
-                    const currentSpecialDots = sourceTurn.specialDotsArray;
-                    if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
-                    else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
+                    // const currentDots = sourceTurn.currentDotsArray;
+                    // const currentSpecialDots = sourceTurn.specialDotsArray;
+                    // if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
+                    // else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
+
+                    const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
+                    currentDots.splice(currentDots.indexOf(currentReference), 1);
                 }
                 if (isAllDOTTypes) {
                     //in the case of something like black swan Epiphany debuff, it makes it so enemies are considered to be suffering from all types of dot, so we increment the elemental trackers on the target
@@ -3106,108 +3120,64 @@ const battleActions = {
         const isTurnStartTrigger = detonateMulti ? false : true;
         detonateMulti = detonateMulti ?? 1;
         //TODO: use the above to swap between actual detonate triggers vs turn start dot triggers
-        let dmgSlot = "DOT";
-        const turnMerge = {sourceTurn,dmgSlot,targetTurn};
+        // let dmgSlot = "DOT";
+        // const turnMerge = {sourceTurn,dmgSlot,targetTurn};
         const isDetonated = !isTurnStartTrigger;
-        if (isDetonated) {
-            if (logging) {logToBattle(battleData,{logType: "DOTDetonateStart"});}
-            poke("DOTDetonateStart",battleData,turnMerge,sourceTurn);
-        }
+        if (logging) {logToBattle(battleData,{logType: "DOTDetonateStart"});}
+        // poke("DOTDetonateStart",battleData,turnMerge,sourceTurn);
 
 
         const alliedTurns = battleData.nameBasedTurns;
-        const currentDots = targetTurn.currentDotsArray;
-        const specialDots = targetTurn.specialDotsArray;
+        // const currentDots = targetTurn.currentDotsArray;
+        const currentDots = battleData.battleListenersPersonal[targetTurn.properName].PreActionPhase;
+        // const specialDots = targetTurn.specialDotsArray;
         
         let dotWrap = battleActions.dotDMGWrapper;
         // for (let dotRef of currentDots) {
-        for (let i=0;i<currentDots.length;i++) {
+        for (let i=currentDots.length-1;i>=0;i--) {
             if (targetTurn.isDead) {break;}
             const dotRef = currentDots[i];
+            if (!dotRef.isDOT) {continue;}
             // currentBuff = buffsRef[buffName];
             // if (!currentBuff || !currentBuff.isDOT) {continue;}
             const dotOwner = alliedTurns[dotRef.ownerSlot];
-            const turnStartFunction = dotRef.customTurnStartFunction;
-            if (isTurnStartTrigger && turnStartFunction) {
-                turnStartFunction(battleData,dotOwner,targetTurn);
-            }
-            else {
-                const element = dotRef.element;
-                const multi = dotRef.multiplier;
-                const scalar = dotRef.scalar;
-                const averaged = dotRef.avgChanceApplied;
+            const element = dotRef.element;
+            const multi = dotRef.multiplier;
+            const scalar = dotRef.scalar;
+            const averaged = dotRef.avgChanceApplied;
 
-                dotWrap(battleData,dotOwner,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,dotRef);
-                // sourceTurn.kafkaUltimateDOTSHEET = {
-                //     "stats": null,
-                //     "source": characterName,
-                //     "buffName": buffName,
-                //     "durationInTurn": 
-                // "duration": 3,
-                //     "AVApplied": 0,
-                //     "maxStacks": 1,
-                //     "currentStacks": 1,
-                //     "decay": false,
-                //     "expireType": "EndTurn",
-                //     "isDOT": true,
-                //     "isDebuff": true,
-                //     "element": sourceTurn.element,
-                //     multiplier: values[3],
-                //     scalar: "ATK",
-                //     slot: skillRef.slot,
-                //     ownerIsAllied: true,
-                //     ownerSlot: sourceTurn.name,
-                // }
-            }
-        }
-        for (let dotRef of specialDots) {
-            if (targetTurn.isDead) {break;}
-            // currentBuff = buffsRef[buffName];
-            // if (!currentBuff || !currentBuff.isDOT) {continue;}
-            const dotOwner = alliedTurns[dotRef.ownerSlot];
-            const turnStartFunction = dotRef.customTurnStartFunction;
-            if (isTurnStartTrigger && turnStartFunction) {
-                turnStartFunction(battleData,dotOwner,targetTurn);
-            }
-            else {
-                const element = dotRef.element;
-                const multi = dotRef.multiplier;
-                const scalar = dotRef.scalar;
-                const averaged = dotRef.avgChanceApplied;
+            dotWrap(battleData,dotOwner,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,dotRef);
 
-                dotWrap(battleData,dotOwner,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,dotRef);
-
-                const checkSoftCapDetonate = dotRef.softCapDetonate;
-                if (checkSoftCapDetonate && dotRef.currentStacks > checkSoftCapDetonate) {
-                    // dotRef.currentStacks = checkSoftCapDetonate;
-                    if (battleData.isLoggyLogger) {logToBattle(battleData,
-                        {logType: "GenericAction", source:"Detonate Softcap Handler", bodyText: `Detonate completed, ${dotRef.buffName} stacks(${dotRef.currentStacks}) exceeded specified softcap of ${checkSoftCapDetonate}, reduced to ${checkSoftCapDetonate} on ${targetTurn.properName}`});}
-                    dotRef.currentStacks = checkSoftCapDetonate;       
-                }
-                // sourceTurn.kafkaUltimateDOTSHEET = {
-                //     "stats": null,
-                //     "source": characterName,
-                //     "buffName": buffName,
-                //     "durationInTurn": 
-                // "duration": 3,
-                //     "AVApplied": 0,
-                //     "maxStacks": 1,
-                //     "currentStacks": 1,
-                //     "decay": false,
-                //     "expireType": "EndTurn",
-                //     "isDOT": true,
-                //     "isDebuff": true,
-                //     "element": sourceTurn.element,
-                //     multiplier: values[3],
-                //     scalar: "ATK",
-                //     slot: skillRef.slot,
-                //     ownerIsAllied: true,
-                //     ownerSlot: sourceTurn.name,
-                // }
+            const checkSoftCapDetonate = dotRef.softCapDetonate;
+            if (checkSoftCapDetonate && dotRef.currentStacks > checkSoftCapDetonate) {
+                // dotRef.currentStacks = checkSoftCapDetonate;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,
+                    {logType: "GenericAction", source:"Detonate Softcap Handler", bodyText: `Detonate completed, ${dotRef.buffName} stacks(${dotRef.currentStacks}) exceeded specified softcap of ${checkSoftCapDetonate}, reduced to ${checkSoftCapDetonate} on ${targetTurn.properName}`});}
+                dotRef.currentStacks = checkSoftCapDetonate;       
             }
+            // sourceTurn.kafkaUltimateDOTSHEET = {
+            //     "stats": null,
+            //     "source": characterName,
+            //     "buffName": buffName,
+            //     "durationInTurn": 
+            // "duration": 3,
+            //     "AVApplied": 0,
+            //     "maxStacks": 1,
+            //     "currentStacks": 1,
+            //     "decay": false,
+            //     "expireType": "EndTurn",
+            //     "isDOT": true,
+            //     "isDebuff": true,
+            //     "element": sourceTurn.element,
+            //     multiplier: values[3],
+            //     scalar: "ATK",
+            //     slot: skillRef.slot,
+            //     ownerIsAllied: true,
+            //     ownerSlot: sourceTurn.name,
+            // }
         }
 
-        if (isDetonated) {poke("DOTDetonateEnd",battleData,turnMerge,sourceTurn);}
+        // if (isDetonated) {poke("DOTDetonateEnd",battleData,turnMerge,sourceTurn);}
         if (logging) {logToBattle(battleData,{logType: "DOTDetonateEnd"});}
     },
     dotDMGWrapper(battleData,sourceTurn,targetTurn,element,multi,scalar,averaged,detonateMulti,isDetonated,currentBuff,sourceOverride) {
@@ -4536,6 +4506,38 @@ const battleActions = {
             }
         }
     },
+    addListenerWithPriorityDOT(battleData,listenerObject,assignOwnerTurn) {
+        // const isPersonal = listenerObject.isPersonal;
+        const personalRef = battleData.battleListenersPersonal[assignOwnerTurn.properName] ??= {};
+        let listenerRef = personalRef.PreActionPhase ??= [];
+
+        // if (assignOwnerTurn) {listenerObject.ownerTurn = assignOwnerTurn;}
+        // if (providerTurn) {listenerObject.providerTurn = providerTurn;}
+        // if (ownersSlots) {listenerObject.ownersSlots = ownersSlots;}
+
+        if (!listenerRef.length) {listenerRef.push(listenerObject);}
+        else {
+            const objectPriority = listenerObject.priority ??= 0;
+
+            const length = listenerRef.length;
+            let foundInsert = false;
+            for (let i=0;i<length;i++) {
+                const currentListener = listenerRef[i];
+                const currentPriority = currentListener.priority ??= 0;
+
+                if (currentPriority <= objectPriority) {
+                    // listenerRef.splice(i+1,0,listenerObject);
+                    listenerRef.splice(i,0,listenerObject);
+                    foundInsert = true;
+                    break;
+                }
+            }
+
+            if (!foundInsert) {
+                listenerRef.push(listenerObject)
+            }
+        }
+    },
     addListenerPREPPriority(battleData,listenerObject,trigger,assignOwnerTurn) {
         const isPersonal = listenerObject.isPersonal;
         const personalRef = isPersonal ? (battleData.battleListenersPersonal[assignOwnerTurn.properName] ??= {}) : null;
@@ -4701,6 +4703,7 @@ const queueExtraTurn = battleActions.queueInstantUltimateUse;
 const hurtEnemyHealth = battleActions.hurtEnemyHealth;
 const killDesignatedEnemies = battleActions.killDesignatedEnemies;
 const addListenerWithPriority = battleActions.addListenerWithPriority;
+const addListenerWithPriorityDOT = battleActions.addListenerWithPriorityDOT;
 const addListenerPREPPriority = battleActions.addListenerPREPPriority;
 const removeListener = battleActions.removeListenerInBattle;
 const getTechnique = battleActions.getTechnique;
@@ -12469,8 +12472,12 @@ const turnLogic = {
 
                     const allEnemiesArray = battleData.allEnemiesArray;
                     const listener5 = passiveListeners[4];
+                    const listener6 = passiveListeners[5];
+                    const listener7 = passiveListeners[6];
                     for (let enemy of allEnemiesArray) {
                         addListenerWithPriority(battleData,listener5,listener5.trigger,enemy,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,enemy,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,enemy,null,ownerTurn);
                     }
                     
 
@@ -12615,6 +12622,83 @@ const turnLogic = {
                         "listenerName": "Zone - dot dmg listener",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            // const ownerTurn = this.ownerTurn;
+                            const targetTurn = generalInfo.sourceTurn;
+                            if (!targetTurn.isEnemy) {return;}
+                            const procCount = targetTurn.hysilensFieldProcCounter;
+                            if (!procCount) {return;}
+        
+                            const logicRef = turnLogic[providerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+        
+                            const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET;
+                            const buffCheck = providerTurn.buffsObject[countdownSheet.buffName];
+                            if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
+        
+                            let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                            if (!this.ultyPhysicalRef) {
+                                const keyShortcut = basicShorthand.makeKeysArray;
+                                const tags = ["All","Physical"];
+                                const actionTags = ["All","DOT"];
+                                const compositeCacheTag = tags + actionTags + providerTurn.properName;
+                                this.ultyPhysicalRef = {
+                                    buffName: "Maelstrom Rhapsody",
+                                    tags, 
+                                    actionTags,compositeCacheTag,
+                                    realDMGKeys: keyShortcut(dmgKeys,tags),
+                                    realPENKeys: keyShortcut(resPENKeys,tags),
+                                    realShredKeys: keyShortcut(defShredKeys,tags),
+                                    realVulnKeys: keyShortcut(vulnKeys,tags),
+                                    actionNameOverride: "Zone DOT Proc",
+                                    "buffDisplayIcon": "misc/hysilens/Icon1410Dot_B.png"
+                                }
+                            }
+                            const ultyPhysicalRef = this.ultyPhysicalRef;
+        
+                            // const targetTurn = generalInfo.targetTurn;
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            // const enemyTurns = battleData.enemyBasedTurns;
+                            const procValue = providerTurn.hysilensFieldProcValue ??= values[3] + (providerTurn.rank >= 6 ? 0.20 : 0);
+        
+                            const dotDMG = battleActions.dotDMGWrapper;
+        
+                            // const targetTurn = generalInfo.sourceTurn;
+                            targetTurn.hysilensFieldProcCounter = 0;
+                            for (let i=1;i<=procCount;i++) {
+                                dotDMG(battleData,providerTurn,targetTurn,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
+                            }
+        
+                        },
+                        "priority": 91,
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Zone - dot dmg listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            // const ownerTurn = this.ownerTurn;
+                            // ownerTurn.hysilensFieldProcCounter = 0;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            sourceTurn.hysilensFieldProcCounter = 0;
+        
+                            // const enemyPositions = battleData.enemyPositions;
+                            // for (let enemy of enemyPositions) {
+                            //     enemy.hysilensFieldProcCounter = 0;
+                            // }
+                        },
+                        "priority": -11,
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Zone after-dot proc count reset (turn starts)",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
@@ -12648,76 +12732,6 @@ const turnLogic = {
                 },
                 "target": "enemy",
                 "listenerName": "Zone - dot dmg listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "TurnStartDotEnd",
-                condition(battleData,generalInfo) {
-                    // poke("TurnStartDotEnd", battleData, {sourceTurn});
-                    const ownerTurn = this.ownerTurn;
-                    const targetTurn = generalInfo.sourceTurn;
-                    if (!targetTurn.isEnemy) {return;}
-                    const procCount = targetTurn.hysilensFieldProcCounter;
-                    if (!procCount) {return;}
-
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    const countdownSheet = ATKObjects.hysilensFieldCountdownSHEET;
-                    const buffCheck = ownerTurn.buffsObject[countdownSheet.buffName];
-                    if (!buffCheck) {return;}//we only deal the extra physical dot from the ult assuming the field is actually active
-
-                    let values = ATKObjects.fishladyUltimateREFVALUES;// ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-                    if (!this.ultyPhysicalRef) {
-                        const keyShortcut = basicShorthand.makeKeysArray;
-                        const tags = ["All","Physical"];
-                        const actionTags = ["All","DOT"];
-                        const compositeCacheTag = tags + actionTags + ownerTurn.properName;
-                        this.ultyPhysicalRef = {
-                            buffName: "Maelstrom Rhapsody",
-                            tags, 
-                            actionTags,compositeCacheTag,
-                            realDMGKeys: keyShortcut(dmgKeys,tags),
-                            realPENKeys: keyShortcut(resPENKeys,tags),
-                            realShredKeys: keyShortcut(defShredKeys,tags),
-                            realVulnKeys: keyShortcut(vulnKeys,tags),
-                            actionNameOverride: "Zone DOT Proc",
-                            "buffDisplayIcon": "misc/hysilens/Icon1410Dot_B.png"
-                        }
-                    }
-                    const ultyPhysicalRef = this.ultyPhysicalRef;
-
-                    // const targetTurn = generalInfo.targetTurn;
-                    // const targetsGotHit = generalInfo.targetsGotHit;
-                    // const enemyTurns = battleData.enemyBasedTurns;
-                    const procValue = ownerTurn.hysilensFieldProcValue ??= values[3] + (ownerTurn.rank >= 6 ? 0.20 : 0);
-
-                    const dotDMG = battleActions.dotDMGWrapper;
-
-                    // const targetTurn = generalInfo.sourceTurn;
-                    targetTurn.hysilensFieldProcCounter = 0;
-                    for (let i=1;i<=procCount;i++) {
-                        dotDMG(battleData,ownerTurn,targetTurn,"Physical",procValue,"ATK",1,1,true,ultyPhysicalRef,true);
-                    }
-
-                },
-                "target": "enemy",
-                "listenerName": "Zone - dot dmg listener",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "StartTurn",
-                condition(battleData,generalInfo) {
-                    // const ownerTurn = this.ownerTurn;
-                    // ownerTurn.hysilensFieldProcCounter = 0;
-
-                    const enemyPositions = battleData.enemyPositions;
-                    for (let enemy of enemyPositions) {
-                        enemy.hysilensFieldProcCounter = 0;
-                    }
-                },
-                "target": "self",
-                "listenerName": "Zone after-dot proc count reset (turn starts)",
                 "ownerTurn": {},
             },
             {
@@ -13071,6 +13085,7 @@ const turnLogic = {
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
                     
                     ATKObjects.blackswanArcanaDOTSHEET = {
+                        priority: 90,
                         "stats": null,
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
@@ -13159,7 +13174,7 @@ const turnLogic = {
                 const currentSlot = enemyPositions.indexOf(targetTurn);
                 const blast1 = currentSlot != 0 ? enemyPositions[currentSlot - 1] : null;
                 const blast2 = currentSlot != enemyPositions.length-1 ? enemyPositions[currentSlot + 1] : null;
-                const dotFunction = ATKObjects.blackswanArcanaDOTFunction ??= logicRef.skillFunctions.blackswanArcanaDOT;
+                // const dotFunction = ATKObjects.blackswanArcanaDOTFunction ??= logicRef.skillFunctions.blackswanArcanaDOT;
 
                 if (!ATKObjects.talentBlastRef) {
                     const keyShortcut = basicShorthand.makeKeysArray;
@@ -13177,11 +13192,11 @@ const turnLogic = {
                 const talentBlastRef = ATKObjects.talentBlastRef;
 
                 if (blast1) {
-                    dotFunction(battleData,sourceTurn,blast1,null,1);
+                    // dotFunction(battleData,sourceTurn,blast1,null,1);
                     dotDMG(battleData,sourceTurn,blast1,"Wind",values[4],"ATK",1,1,false,talentBlastRef);
                 }
                 if (blast2) {
-                    dotFunction(battleData,sourceTurn,blast2,null,1);
+                    // dotFunction(battleData,sourceTurn,blast2,null,1);
                     dotDMG(battleData,sourceTurn,blast2,"Wind",values[4],"ATK",1,1,false,talentBlastRef);
                 }
 
@@ -13412,8 +13427,12 @@ const turnLogic = {
                     if (rank >= 4) {
                         const listener3 = passiveListeners[2];
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                        const allEnemiesArray = battleData.allEnemiesArray;
                         const listener4 = passiveListeners[3];
-                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                        }
                     }
 
                     //e1
@@ -13527,26 +13546,28 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "StartTurn",
+                        "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
     
-                            const logicRef = turnLogic[ownerTurn.properName];
+                            const logicRef = turnLogic[providerTurn.properName];
                             const ATKObjects = logicRef.ATKObjects;
     
                             const epiphanySheet = ATKObjects.blackswanUltimateDEBUFFSHEET;
-                            if (!sourceTurn.isEnemy || !epiphanySheet) {return;}
+                            if (!epiphanySheet) {return;}
                             //we're only looking for enemy turns that start, while we're ready for e4 regen, and the epiphany sheet has been constructed
     
                             const epiphanyName = epiphanySheet.buffName;
                             const buffCheck = sourceTurn.buffsObject[epiphanyName];
                             if (!buffCheck) {return;}
     
-                            updateEnergy(battleData,8,ownerTurn,false,"E4: energy regen");
+                            updateEnergy(battleData,8,providerTurn,false,"E4: energy regen");
                             // ownerTurn.isReadyForE4Regen = false;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Black Swan E4 enemy turn start listener",
                         "ownerTurn": {},
                     },

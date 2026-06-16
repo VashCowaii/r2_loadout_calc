@@ -800,7 +800,7 @@ const sim = {
         const getNext = sim.getNextQueuedTurn;
         const adjustAllAV = sim.pullToCurrentAV;
         const expireControl = battleActions.buffExpireController;
-        const triggerTurnDots = battleActions.dotDetonateWrapper
+        const triggerTurnDots = battleActions.dotDetonateWrapper;
         
 
         // if (targetTurn.DOTCounter) {
@@ -878,7 +878,13 @@ const sim = {
             }
             poke("StartTurn", battleData, exoTurnRef,sourceTurn);
 
-            poke("PreActionPhase", battleData, exoTurnRef,sourceTurn);
+            pokeWithDots("PreActionPhase", battleData, exoTurnRef,sourceTurn);
+
+            // if (sourceTurn.DOTCounter) {
+            //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
+            //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
+            // }
+
             
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
@@ -888,10 +894,10 @@ const sim = {
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
             if (sourceTurn.isEnemy) {
-                if (sourceTurn.DOTCounter) {
-                    triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-                    // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
-                }
+                // if (sourceTurn.DOTCounter) {
+                //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
+                //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
+                // }
                 if (!sourceTurn.isDead) {
                     let turnShouldEnd = false;
                     if (sourceTurn.currentToughness === 0) {
@@ -1078,6 +1084,87 @@ const sim = {
             if (listenerRef) {
                 for (let i = listenerRef.length-1; i>=0; i--) {
                     listenerRef[i].condition(battleData,generalInfo,personalOwner);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+                }
+            }
+            // const listenerRef = triggerRef[triggerName] ??= [];
+
+            // for (let i = listenerRef.length-1; i>=0; i--) {
+            //     listenerRef[i].condition(battleData,generalInfo);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+            // }
+        }
+
+        const triggerRef = battleData.battleListeners[triggerName] ??= [];
+        // console.count()
+        for (let i = triggerRef.length-1; i>=0; i--) {
+            triggerRef[i].condition(battleData,generalInfo);
+        }
+    },
+    pokeListenersOwnershipDOTS(triggerName,battleData,generalInfo,personalOwner) {
+        if (personalOwner) {
+            // const triggerRef = battleData.battleListenersPersonal[personalOwner.properName] ??= {};
+            // const triggerRef = battleData.battleListenersPersonal[personalOwner.properName];
+
+
+            const listenerRef = battleData.battleListenersPersonal[personalOwner.properName]?.[triggerName];
+            if (listenerRef) {
+                if (personalOwner.DOTCounter) {
+                    let logging = battleData.isLoggyLogger;
+                    // const isTurnStartTrigger = true;
+                    detonateMulti = 1;
+                    // let dmgSlot = "DOT";
+                    const alliedTurns = battleData.nameBasedTurns;
+                    // dotWrap
+
+                    for (let i = listenerRef.length-1; i>=0; i--) {
+                        const currentCondition = listenerRef[i];
+                        if (currentCondition.isDOT) {
+                            if (personalOwner.isDead) {continue;}
+                            const dotOwner = alliedTurns[currentCondition.ownerSlot];
+                            const turnStartFunction = currentCondition.customTurnStartFunction;
+                            if (turnStartFunction) {
+                                turnStartFunction(battleData,dotOwner,personalOwner);
+                            }
+                            else {
+                                const element = currentCondition.element;
+                                const multi = currentCondition.multiplier;
+                                const scalar = currentCondition.scalar;
+                                const averaged = currentCondition.avgChanceApplied;
+
+                                dotWrap(battleData,dotOwner,personalOwner,element,multi,scalar,averaged,detonateMulti,false,currentCondition);
+                                // sourceTurn.kafkaUltimateDOTSHEET = {
+                                //     "stats": null,
+                                //     "source": characterName,
+                                //     "buffName": buffName,
+                                //     "durationInTurn": 
+                                // "duration": 3,
+                                //     "AVApplied": 0,
+                                //     "maxStacks": 1,
+                                //     "currentStacks": 1,
+                                //     "decay": false,
+                                //     "expireType": "EndTurn",
+                                //     "isDOT": true,
+                                //     "isDebuff": true,
+                                //     "element": sourceTurn.element,
+                                //     multiplier: values[3],
+                                //     scalar: "ATK",
+                                //     slot: skillRef.slot,
+                                //     ownerIsAllied: true,
+                                //     ownerSlot: sourceTurn.name,
+                                // }
+                            }
+                            // triggerTurnDots(battleData,null,null,personalOwner,"Turn-Start DOTs");
+                        }
+                        else {
+                            currentCondition.condition(battleData,generalInfo,personalOwner);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+                        }
+                        
+                    }
+
+                }
+                else {
+                    for (let i = listenerRef.length-1; i>=0; i--) {
+                        listenerRef[i].condition(battleData,generalInfo,personalOwner);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
+                    }
                 }
             }
             // const listenerRef = triggerRef[triggerName] ??= [];
@@ -1390,5 +1477,8 @@ const sim = {
 }
 // const poke = sim.pokeListeners;
 const poke = sim.pokeListenersOwnership;
+const pokeWithDots = sim.pokeListenersOwnershipDOTS;
 const pokeArray = sim.pokeListenersArray;
 const pokeSet = sim.pokeListenersSet;
+const triggerTurnDots = battleActions.dotDetonateWrapper;
+const dotWrap = battleActions.dotDMGWrapper;
