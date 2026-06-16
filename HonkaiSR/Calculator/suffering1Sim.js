@@ -877,6 +877,8 @@ const sim = {
                 continue;
             }
             poke("StartTurn", battleData, exoTurnRef,sourceTurn);
+
+            poke("PreActionPhase", battleData, exoTurnRef,sourceTurn);
             
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
