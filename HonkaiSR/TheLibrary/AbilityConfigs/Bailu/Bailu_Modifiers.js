@@ -103,7 +103,7 @@ const configAbility = {
           "priorityLevel": -70
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: End"
         }
       ]
     },
@@ -542,7 +542,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -708,7 +708,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: End"
         }
       ]
     }

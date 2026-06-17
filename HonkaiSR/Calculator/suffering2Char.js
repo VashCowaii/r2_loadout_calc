@@ -7655,7 +7655,11 @@ const turnLogic = {
 
                     //talent invigoration ally hit listener
                     const listener2 = passiveListeners[1];
-                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ally,null,ownerTurn);
+                    }
+                    
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
@@ -7712,33 +7716,38 @@ const turnLogic = {
                         "listenerName": "Trace & E4 skill healing listener",
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            if (personalOwner.isDead) {return;}
         
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
-        
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const allyTurns = battleData.nameBasedTurns;
 
-                            const logicRef = turnLogic[ownerTurn.properName];
-                            const ATKObjects = logicRef.ATKObjects;
-                            const invigoration = this.invigoration ??= ATKObjects.bailuInvigorationSHEET;
-                            //normally don't EVER cache an ATKObjects sheet, but this sheet doesn't have stats so we don't actually care
+                            const currentAlly = personalOwner;
+
+                            const buffsObject = currentAlly.buffsObject;
+                            const invigoration = this.invigoration ??= turnLogic[providerTurn.properName].ATKObjects.bailuInvigorationSHEET;
                             const invigName = invigoration.buffName;
-                            const drName = this.drName ??= turnLogic[ownerTurn.properName].buffNames.traceDR;
-                            const rank = ownerTurn.rank;
+                            const buffCheck = buffsObject[invigName];
+                            if (!buffCheck) {return;}
+        
 
+                            const logicRef = turnLogic[providerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
                             
+                            //normally don't EVER cache an ATKObjects sheet, but this sheet doesn't have stats so we don't actually care
+
+                            const drName = this.drName ??= turnLogic[providerTurn.properName].buffNames.traceDR;
+                            const rank = providerTurn.rank;
 
 
                             if (!ATKObjects.bailuTalentHealHEALOBJECT) {
                                 let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
-                                let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                                let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,providerTurn);
             
                                 const actionTags = ["All","Heal","Talent"];
-                                const compositeCacheTag = actionTags + ownerTurn.properName;
+                                const compositeCacheTag = actionTags + providerTurn.properName;
                                 ATKObjects.bailuTalentHealHEALOBJECT = {
                                     multipliers: {
                                         primary: values[0],
@@ -7758,36 +7767,28 @@ const turnLogic = {
                                 }
                             }
                             let healObject = ATKObjects.bailuTalentHealHEALOBJECT;
-                            
-                            for (let allyHit in targetsGotHit) {
-                                const currentAlly = allyTurns[allyHit];
 
-                                const buffsObject = currentAlly.buffsObject;
-                                const buffCheck = buffsObject[invigName];
-                                if (buffCheck) {
+                            healAlly(battleData,healObject,currentAlly,providerTurn,"Talent",1,null);
 
-                                    healAlly(battleData,healObject,currentAlly,ownerTurn,"Talent",1,null);
+                            const currentStacks = buffCheck.currentStacks;
+                            if (currentStacks === 1) {
+                                removeBuff(battleData,currentAlly,buffCheck);
+                                removeBuff(battleData,currentAlly,buffsObject[drName]);
 
-                                    const currentStacks = buffCheck.currentStacks;
-                                    if (currentStacks === 1) {
-                                        removeBuff(battleData,currentAlly,buffCheck);
-                                        removeBuff(battleData,currentAlly,buffsObject[drName]);
-
-                                        if (rank >= 1) {
-                                            const hpMaxed = currentAlly.currentHP === currentAlly.maxHP;
-                                            if (hpMaxed) {
-                                                updateEnergy(battleData,8,currentAlly,true,"Bailu E1 Invigoration Ended")
-                                            }
-                                        }
-                                    }
-                                    else {
-                                        invigoration.currentStacks = -1;
-                                        updateBuff(battleData,currentAlly,invigoration);
+                                if (rank >= 1) {
+                                    const hpMaxed = currentAlly.currentHP === currentAlly.maxHP;
+                                    if (hpMaxed) {
+                                        updateEnergy(battleData,8,currentAlly,true,"Bailu E1 Invigoration Ended")
                                     }
                                 }
                             }
+                            else {
+                                invigoration.currentStacks = -1;
+                                updateBuff(battleData,currentAlly,invigoration);
+                            }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Attack end - allies with Invigoration hit/regen",
                         "owners": []
                     },
