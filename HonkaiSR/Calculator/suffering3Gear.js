@@ -9441,6 +9441,81 @@ const turnLogicLightcones = {
             "drAggro": "Landau's Choice [LC]"
         },
     },
+    "Trend of the Universal Market": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Trend of the Universal Market listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {//createStandardElementDOTSHEET 
+                            // let ownersSlots = this.ownersSlots;
+                            // let sourceTurn = generalInfo.sourceTurn;
+
+                            if (!personalOwner.lcTrendDotBURNSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+
+                                let lcNameRef = "Trend of the Universal Market";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+                                let buffName = buffNames.burn;
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,personalOwner,buffNames,buffName)
+
+                                personalOwner.lcTrendDotBURNSHEET ??= superGlobal.createStandardElementDOTSHEET(personalOwner,"Fire",{
+                                    "source": lcNameRef,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+            
+                                    "multiplier": rankParams[2],
+                                    "scalar": "DEF",
+                                    "slot": "Lightcone",
+                                    "baseChance": rankParams[1],
+                                });
+                            }
+                            const dotSheet = personalOwner.lcTrendDotBURNSHEET;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            generalApplyDOT(battleData,personalOwner,sourceTurn,dotSheet,null,null,false);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Trend of the Universal Market - attack received listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "burn": "Trend of the Universal Market [LC]"
+        },
+    },
         //3star
 
 

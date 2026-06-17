@@ -19,7 +19,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__882546269\">LC_21016_Main</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
