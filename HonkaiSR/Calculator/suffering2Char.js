@@ -13442,8 +13442,9 @@ const turnLogic = {
                     }
 
                     //e6
+                    const allEnemiesArray = battleData.allEnemiesArray;
                     if (rank >= 6) {
-                        const allEnemiesArray = battleData.allEnemiesArray;
+                        
                         const listener7 = passiveListeners[6];
                         for (let enemy of allEnemiesArray) {
                             addListenerWithPriority(battleData,listener7,listener7.trigger,enemy,null,ownerTurn);
@@ -13452,7 +13453,9 @@ const turnLogic = {
 
                     //trace viscera
                     const listener8 = passiveListeners[7];
-                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,enemy,null,ownerTurn);
+                    }
 
                     //trace goblet
                     const listener9 = passiveListeners[8];
@@ -13737,32 +13740,22 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackDMGEnd",
-                        condition(battleData,generalInfo) {//TODO: read note
-                            //right now I can't tell if this would ever at the start of an attack dmg or the end
-                            //technically it CANT matter yet bc BS has no detonate, and the only way it could actually impact anything is if
-                            //she had a detonate
-                            //it could technically matter for something like prisoner, but it's impossible to test bc arcana can't be removed so the stack will ALWAYS exist
-                            //so again, it could only ever matter if BS herself could ever be the provider of a detonate in that attack
-                            let ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
         
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            if (sourceTurn.properName != providerTurn.properName) {return;}
         
-                            const targetsGotHit = generalInfo.targetsGotHit;
-        
-                            const enemyPositions = battleData.enemyPositions;
                             const stacks = 5;
-                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[providerTurn.properName].skillFunctions.blackswanArcanaDOT;
         
-                            for (let enemy of enemyPositions) {
-                                if (!targetsGotHit[enemy.name]) {continue;}
-                                dotFunction(battleData,ownerTurn,enemy,generalInfo,stacks,false,true);
-                            }
+                            dotFunction(battleData,providerTurn,personalOwner,generalInfo,stacks,false,true);
                         },
                         "target": "enemy",
                         "isPersonal": true,
-                        "listenerName": "Viscera's Disquiet - attack dmg end listener",
+                        "listenerName": "Viscera's Disquiet - enemy attacked by Black Swan listener",
                         "ownerTurn": {},
                     },
                     {
