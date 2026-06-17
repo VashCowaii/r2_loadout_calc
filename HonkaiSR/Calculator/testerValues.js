@@ -268,6 +268,18 @@ const customDisplayValuesLog = {
         {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
         {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
     ], 
+    "March 7th - Preservation": [//tracker done
+        {valueName: "Counter", refName: "counterCount", isBattleValue: true,summaryValue: "march7pCounterCountSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: characters["March 7th - Preservation"].traces.Point04.icon
+        },
+        {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
+        // {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
 
     //REMEMBRANCE
     "Evernight": [
@@ -661,6 +673,7 @@ const conditionsCharacterDisplayWarning = {
     //PRESERVATION
     "Dan Heng • Permansor Terrae": defaultStandardAbilityDisplayWarnings,
     "Aventurine": defaultStandardAbilityDisplayWarnings,
+    "March 7th - Preservation": defaultStandardAbilityDisplayWarnings,
     
     //ERUDITION
     "Argenti": {
@@ -3434,6 +3447,82 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         }
+    },
+    "March 7th - Preservation": {
+        hasEnhancedState: false,
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "Sustain Checks",
+                    "sustainValue": "Any Ally: Has no Shield"
+                }
+            ]
+        },
+        "validTargetChecks": [
+            "Skill"
+        ],
+        "SkillTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
     },
 
     //ERUDITON

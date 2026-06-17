@@ -2122,12 +2122,20 @@ const customMenu = {
             // multiOf
 
             // bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
+
+
+            // secondaryScalar,secondaryScalarSum,secondaryScalarMulti,
             const standardString = standardCheck ? `
             <div class="totalHealingBoxBreakdownRows">
                 <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                     <div class="totalHealingHeader">${hitData.scalar}</div>
                     <div class="totalHealingValueBoss">${hitData.multiOf.toLocaleString()}</div>
                 </div>
+                ${hitData.secondaryScalar ? `
+                    <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">${hitData.secondaryScalar}</div>
+                    <div class="totalHealingValueBoss">${hitData.secondaryScalarSum.toLocaleString()}</div>
+                </div>` : ""}
                 ${hitData.bonusDMGCustom ? `
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">${hitData.bonudDMGCustomRefName ?? "No ref given"}</div>
@@ -2146,6 +2154,10 @@ const customMenu = {
                     <div class="totalHealingHeader">Multi</div>
                     <div class="totalHealingValueBoss">${(hitData.currentMulti * 100).toLocaleString()}%</div>
                 </div>
+                ${hitData.secondaryScalarMulti ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
+                    <div class="totalHealingHeader">Multi 2</div>
+                    <div class="totalHealingValueBoss">${(hitData.secondaryScalarMulti * 100).toLocaleString()}%</div>
+                </div>` : ""}
                 ${hitData.finalMulti > 1 ? `
                     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
                         <div class="totalHealingHeader">Final Multi</div>
@@ -2177,6 +2189,12 @@ const customMenu = {
             if (standardString != "") {
                 if (hitData.scalar) {bonusTotalArray.push({rowName: "Scalar",rowDisplayValue: hitData.scalar})}
                 if (hitData.multiOf) {bonusTotalArray.push({rowName: "Scalar SUM",rowDisplayValue: hitData.multiOf.toLocaleString()})}
+
+                if (hitData.secondaryScalar) {bonusTotalArray.push({rowName: "Scalar 2",rowDisplayValue: hitData.secondaryScalar})}
+                if (hitData.secondaryScalarSum) {bonusTotalArray.push({rowName: "Scalar 2 SUM",rowDisplayValue: hitData.secondaryScalarSum.toLocaleString()})}
+                
+
+
                 if (hitData.sumDMG) {bonusTotalArray.push({rowName: "DMG%",rowDisplayValue: `${((hitData.sumDMG - 1) * 100).toLocaleString()}%`})}
                 if (hitData.totalCritRate) {bonusTotalArray.push({rowName: "CRIT Rate",rowDisplayValue: `${(hitData.totalCritRate * 100).toLocaleString()}%`})}
                 if (hitData.totalCritDMG) {bonusTotalArray.push({rowName: "CRIT DMG",rowDisplayValue: `${(hitData.totalCritDMG * 100).toLocaleString()}%`})}
@@ -2220,6 +2238,10 @@ const customMenu = {
                     ${hitData.currentMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
                         <div class="totalHealingHeader">Multi</div>
                         <div class="totalHealingValueBoss">${(hitData.currentMulti).toLocaleString()}x</div>
+                    </div>` : ""}
+                    ${hitData.secondaryScalarMulti ? `<div class="totalHealingBoxHalfBreakdownRowsDETAILS hasHoverTooltip">
+                        <div class="totalHealingHeader">Multi 2</div>
+                        <div class="totalHealingValueBoss">${(hitData.secondaryScalarMulti).toLocaleString()}x</div>
                     </div>` : ""}
                     
                 </div>`;

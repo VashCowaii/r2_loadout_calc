@@ -3640,6 +3640,7 @@ details[open] > summary::before {
     box-sizing: border-box;
     padding-left: 2px;
     padding-right: 2px;
+    margin: 2px;
 }
 .totalHealingBoxHalfBreakdownRowsDETAILS {
     width: auto;

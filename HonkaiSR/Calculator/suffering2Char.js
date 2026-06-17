@@ -407,7 +407,7 @@ const battleActions = {
         // const regStats = currentReference.stats;
         // const actionTags = currentReference.actionTags;
 
-        if (actionTags !== undefined) {
+        if (actionTags !== undefined && !currentReference.isShield) {
             const characterActions = isSourceSpecific ? sourceTurn[sourceOwner] ??= {} : sourceTurn.tagSpecific;
             //action tags don't have onhit checks bc for all intents and purposes, action tags ARE onhit effects, just a matter of what actions
             const actionTagLength = actionTags.length;
@@ -2002,21 +2002,16 @@ const battleActions = {
 
         let multiOf = scalarAmountOverride ?? pullScalar(scalarToUse,cacheTagValues,targetCache,realCacheTag,scalarSourceStats,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//the stat that this attacks scales off of, so ATK or HP etc
 
+        let secondaryScalar = null
+        let secondaryScalarSum = 0;
+        let secondaryScalarMulti = 0;
+        if (ATKObject.secondaryScalar) {
+            secondaryScalar = ATKObject.secondaryScalar;
+            secondaryScalarMulti = ATKObject.multipliers2[hitType];
+            secondaryScalarSum = pullScalar(secondaryScalar,cacheTagValues,targetCache,realCacheTag,scalarSourceStats,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);
+        }
+
         
-        // console.log(multiOf)
-        // bonusScalar: {
-        //     primary: values[4],
-        //     blast: values[5],
-        //     all: null,
-        //     // refName: "bladeHPTally",
-        //     isDynamicValue: false,
-        //     refValue: 0,
-        //     bonusValue: rank >=1 ? {
-        //         primary: 0,
-        //         blast: null,
-        //         all: null,
-        //     } : null,
-        // },
         let bonusDMGCustom = 0;
         let bonusDMGScalar = 0;
         let bonusDMGMulti = 0;
@@ -2036,7 +2031,7 @@ const battleActions = {
         //TODO: I'm pretty sure a scalar override will never, EVER happen if there is a bonus scalar, but if it does, you can more or less handle it within the override instead
 
 
-        let preDMG = (multiOf * currentMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
+        let preDMG = (multiOf * currentMulti * currentSplit) + (secondaryScalarSum * secondaryScalarMulti * currentSplit) + (bonusDMGCustom * currentSplit);//sum amount of the scalar, before DMG bonuses come into play
         // console.log(multiOf,currentMulti,currentSplit,bonusDMGCustom)
 
         let sumDMG = 1 + pullDMG(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realDMGKeys,tagSpecific,actionTags,actionTablesTarget);//sum of all relevant dmg bonuses
@@ -2225,6 +2220,7 @@ const battleActions = {
                 scalar: scalarToUse,
                 bonusDMGCustom,bonudDMGCustomRefName,bonusDMGMulti,bonusDMGScalar,
                 currentSplit,currentMulti,multiOf,
+                secondaryScalar,secondaryScalarSum,secondaryScalarMulti,
                 tags:[...DMGTags],
                 actionTags: [...actionTags],
                 element,finalMulti,
@@ -39371,7 +39367,6 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    //START FROM HERE AFTER BASIC ATKS
     "Aventurine": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -39443,7 +39438,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     ATKObjects.aventurineBasicATKOBJECT = {
                         multipliers: {
-                            primary: values[0] * 0.7,
+                            primary: values[0],
                             blast: null,
                             all: null,
                         },
@@ -40284,6 +40279,670 @@ const turnLogic = {
             "basicE2RES": "Bounded Rationality",
             "e4DEFBuff": "Unexpected Hanging Paradox",
             "e6DMGBuff": "Stag Hunt Game",
+        },
+        "characterValuesBattle": {},
+    },
+    "March 7th - Preservation": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                return returnSkillCall;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.marchSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: false,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.marchBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Allies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            marchBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.marchBasicREF ??= ATKObjects["Basic ATK"]["Frigid Cold Arrow"].variant1;
+                if (!ATKObjects.marchBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.marchBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ice"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.marchBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.marchBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            marchSkill(battleData,actionObject,sourceTurn) {//TODO: cleanse later, right now enemies can't apply debuffs yet
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.marchSkillShieldREF ??= ATKObjects.Skill["The Power of Cuteness"].variant1;
+                let values = ATKObjects.marchSkillShieldREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.marchSkillShieldSHIELDSHEET) {
+                    
+
+                    const buffNames = logicRef.buffNames;
+
+                    const actionTags = ["All","Shield","Skill"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                    ATKObjects.marchSkillShieldSHIELDSHEET = {
+                        // "stats": null,
+                        "stats": [AggroP],
+                        [AggroP]: 0,
+                        // [CritDamageBase]: rank >= 1 ? 0.20 : 0,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.skillShield,
+                        "durationInTurn": 5,
+                        "duration": 4,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "isShield": true,
+                        multipliers: values[0],//to give to existing shield of the same name
+                        flatAmounts: values[3],//to give to existing shield of the same name
+                        multipliersCAP: values[0],//to limit by
+                        flatAmountsCAP: values[3],//to limit by
+                        scalar: "DEF",
+                        shieldRemaining: 0,
+                        shieldCap: 0,
+                        // shieldTags: ["All","Skill","Imaginary"],
+                        // shieldActionTags: ["Skill"],
+                        slot: skillRef.slot,
+                        // shieldCapFixed: null,
+                        // shieldCapPercent: 2,
+                        removeOnDeath: true,
+                        shieldClass: "March 7th Skill",
+                        actionTags,compositeCacheTag,
+                    }
+                    // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
+                }
+                const targetTurn = actionObject.target[0];
+
+                poke("TargetShield",battleData,{targetType:"Single", sourceTurn, targetTurn:targetTurn, targetSkill:skillRef.slot},sourceTurn);
+
+                const shieldBuffObject = ATKObjects.marchSkillShieldSHIELDSHEET;
+
+                const hpRatio = (targetTurn.currentHP / targetTurn.maxHP) >= 0.30;
+                if (hpRatio) {
+                    shieldBuffObject[AggroP] = values[4];
+                }
+                else {
+                    shieldBuffObject[AggroP] = 0;
+                }
+
+                updateBuff(battleData,targetTurn,shieldBuffObject,false,sourceTurn);
+
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+            },
+            marchFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.marchFUAREF ??= ATKObjects.Talent["Girl Power"].variant1;
+
+                if (!ATKObjects.marchFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    const rank = sourceTurn.rank;
+                    let values = ATKObjects.marchFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const scalar = "ATK";
+                    const tags = ["All","Ice"];
+                    const actionTags = ["All","FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.marchFUAATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        secondaryScalar: rank >= 4 ? "DEF" : null,
+                        multipliers2: rank >= 4 ? {
+                            primary: 0.30,
+                            blast: null,
+                            all: null,
+                        } : null,
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                const ATKObject = ATKObjects.marchFUAATKOBJECT;
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                poke("MarchGainCounterCount",battleData,{pointsGained: -1,sourceString:"March 7th Preservation Counter"});
+
+                sourceTurn.march7pFUAIsQueued = false;
+            },
+            marchUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.marchUltimateREF ??= ATKObjects.Ultimate["Glacial Cascade"].variant1;
+
+                if (!ATKObjects.marchUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    let values = ATKObjects.marchUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Ice"];
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.marchUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                const ATKObject = ATKObjects.marchUltimateATKOBJECT;
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                sourceTurn.ultyQueued = false;
+            },
+            //TODO: debate the merit of Freeze in the discord, if we ever bother with it, because I am conflicted
+            marchTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.marchTechniqueREF ??= ATKObjects.Technique["Freezing Beauty"].variant1;
+
+                // if (!ATKObjects.aventurineTechDEFSHEET) {
+                //     let values = ATKObjects.aventurineTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                //     let buffName = turnLogic[characterName].buffNames.technique;
+                //     ATKObjects.aventurineTechDEFSHEET = {
+                //         "stats": [DEFP],
+                //         [DEFP]: values[1],//we do assume the middle value for the def buff, but later we can look into specifying it based on technique uses
+                //         "source": "Technique",
+                //         "sourceOwner": sourceTurn.properName,
+                //         "buffName": buffName,
+                //         "durationInTurn": 4,
+                //         "duration": 3,
+                //         "AVApplied": 0,
+                //         "maxStacks": 1,
+                //         "currentStacks": 1,
+                //         "decay": false,
+                //         "expireType": "EndTurn"
+                //     }
+                // }
+                // const buffSheet = ATKObjects.aventurineTechDEFSHEET
+                //TODO: since this is like tingyun and can be stacked before going into battle, look at adding multiple use counters based on how many uses the rest of the team needs
+                //like obv if the other 3 used theirs and they are one time use, he can use his twice instead, or if there are 2 dmg techniques, he can use his 3 times
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                // const allies = battleData.allyPositions;
+                // for (let ally of allies) {
+                //     updateBuff(battleData,ally,buffSheet);
+                // }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    if (rank >= 2) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (rank >= 4) {
+                        battleValues.counterCount = 3;
+                        battleValues.counterCountMax = 3;
+                    }
+                    else {
+                        battleValues.counterCount = 2;
+                        battleValues.counterCountMax = 2;
+                    }
+
+                    //talent inherents
+                    //turn end counter reset
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener3 = passiveListeners[2];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
+                    }
+
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener4 = passiveListeners[3];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                    }
+
+                    if (rank >= 6) {
+                        const listener5 = passiveListeners[4];
+                        for (let ally of allAlliesArray) {
+                            addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
+                        }
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                },
+                "target": "self",
+                "listenerName": "March 7th Preservation Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+
+                            let lowestHPAlly = null;
+                            let lowestHP = Infinity;
+
+                            const allyPositions = battleData.allyPositions;
+                            for (let ally of allyPositions) {
+                                const hpRatio = ally.currentHP / ally.maxHP;
+                                if (hpRatio < lowestHP) {
+                                    lowestHP = hpRatio;
+                                    lowestHPAlly = ally;
+                                }
+                            }
+
+                            const ownerTurn = this.ownerTurn;
+
+                            if (!this.marchE2SHIELDSHEET) {
+                    
+                                const logicRef = turnLogic[ownerTurn.properName]
+                                const buffNames = logicRef.buffNames;
+
+                                const actionTags = ["All","Shield"];
+                                const compositeCacheTag = actionTags + ownerTurn.properName;
+
+                                this.marchE2SHIELDSHEET = {
+                                    "stats": null,
+                                    "source": "E2",
+                                    "sourceOwner": this.ownerTurn.properName,
+                                    "buffName": buffNames.e2Shield,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isShield": true,
+                                    multipliers: 0.24,//to give to existing shield of the same name
+                                    flatAmounts: 320,//to give to existing shield of the same name
+                                    multipliersCAP: 0.24,//to limit by
+                                    flatAmountsCAP: 320,//to limit by
+                                    scalar: "DEF",
+                                    shieldRemaining: 0,
+                                    shieldCap: 0,
+                                    // shieldTags: ["All","Skill","Imaginary"],
+                                    // shieldActionTags: ["Skill"],
+                                    slot: "E2",
+                                    // shieldCapFixed: null,
+                                    // shieldCapPercent: 2,
+                                    removeOnDeath: true,
+                                    shieldClass: "March 7th E2",
+                                    actionTags,compositeCacheTag,
+                                }
+                                // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
+                            }
+                            poke("TargetShield",battleData,{targetType:"Single", sourceTurn: ownerTurn, targetTurn:lowestHPAlly, targetSkill:"E2"},ownerTurn);
+
+                            const shieldBuffObject = this.marchE2SHIELDSHEET;
+                            updateBuff(battleData,lowestHPAlly,shieldBuffObject,false,ownerTurn);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "M7P E2 battlestart shield application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ActionEndPhase",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                            let ownerTurn = this.ownerTurn;
+
+                            const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Turn-End Counter resets"}
+                            exoObject.pointsGained = ownerTurn.battleValues.counterCountMax;
+                            poke("MarchGainCounterCount",battleData,exoObject,null);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "M7P turn ending counter count reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,targetTurn) {
+                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                            const providerTurn = this.providerTurn;
+                            const counterCount = providerTurn.battleValues.counterCount;
+                            if (!counterCount) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.isEnemy) {return;}
+
+                            const hasShields = targetTurn.shieldCounter;
+                            if (hasShields) {
+                                providerTurn.battleValues.counterTargetSlot = sourceTurn.name;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "M7P ally attacked start check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
+                            const providerTurn = this.providerTurn;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.name != providerTurn.battleValues.counterTargetSlot) {return;}
+
+                            providerTurn.battleValues.counterTargetSlot = null;
+                            poke("March7PQueueFUAAttack",battleData,{targetTurn: sourceTurn},null);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "M7P ally attacked Enemy finished attack",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            const shieldName = this.shieldName ??= turnLogic[providerTurn.properName].buffNames.skillShield;
+
+                            const hasShield = sourceTurn.buffsObject[shieldName];
+
+                            if (hasShield) {
+
+                                if (!this.marchE6HealSheet) {
+        
+                                    const actionTags = ["All","Heal"];
+                                    const compositeCacheTag = actionTags + providerTurn.properName;
+        
+                                    this.marchE6HealSheet = {
+                                        multipliers: {
+                                            primary: 0.04,
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        flatAmounts: {
+                                            primary: 106,
+                                            blast: null,
+                                            all: null,
+                                        },
+                                        scalar: null,//"HP",
+                                        DMGTags: [],
+                                        allToughness: false,
+                                        slot: "E6",
+                                        actionTags,compositeCacheTag
+                                    }
+                                }
+        
+                                let healObject = this.marchE6HealSheet;
+
+                                healAlly(battleData,healObject,sourceTurn,providerTurn,"E6",1,null);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "M7P E6 Ally with shield turn starting",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "March7PQueueFUAAttack",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const targetTurn = generalInfo.targetTurn;
+
+                    if (!ownerTurn.march7pFUAIsQueued) {
+                        ownerTurn.march7pFUAIsQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.marchFUA,
+                            action: "Insert",
+                            abortCheck(battleData,actionObject,ownerTurn) {
+                                const target = actionObject.target[0];
+                                if (target.isDead) {
+                                    sourceTurn.march7pFUAIsQueued = false;
+                                    return true;
+                                }
+                            },
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "GenericAbilityStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [targetTurn];
+                        queueInsertAbility(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "March 7th Preservation talent - Ally Attacked with Shield",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "MarchGainCounterCount",
+                condition(battleData,generalInfo) {
+                    // poke("MarchGainCounterCount",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.counterCount;
+                    const maxValue = valuesRef.counterCountMax;
+                    valuesRef.counterCount = Math.min(maxValue, oldValue + pointsGained);
+                    const newValue = valuesRef.counterCount;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Counter (March): ${oldValue} --> ${valuesRef.counterCount}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.march7pCounterCountSum ??= 0;
+                            ownerTurn.march7pCounterCountSum += valuesRef.counterCount - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "march7pCounterCountSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.counterCount,
+                            currentSumValue: ownerTurn.march7pCounterCountSum,
+                            currentAddedValue: valuesRef.counterCount - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "March Counter Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.marchUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.target = battleData.enemyPositions;
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "March 7th Preservation - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.marchTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "March 7th Preservation Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "counterCount": 0,
+            "counterCountMax": 2,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "skillShield": "The Power of Cuteness",
+            "e2Shield": "E2: Memory of It",
         },
         "characterValuesBattle": {},
     },
