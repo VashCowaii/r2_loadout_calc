@@ -1059,7 +1059,7 @@ const compositeAbilityObject = {
           "statusName": "Degraded Vessel",
           "execute": [
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Start",
               "execute": [
                 {
                   "name": "IF",

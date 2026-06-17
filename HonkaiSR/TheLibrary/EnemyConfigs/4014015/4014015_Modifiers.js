@@ -2190,7 +2190,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier"
         },
         {
-          "eventTrigger": "Being Attacked Start [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: Start"
         },
         {
           "eventTrigger": "Being Attacked End [Owner]",

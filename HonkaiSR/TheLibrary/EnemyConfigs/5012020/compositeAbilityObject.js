@@ -242,7 +242,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Start",
               "execute": [
                 {
                   "name": "IF",
@@ -536,7 +536,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Start",
               "execute": [
                 {
                   "name": "IF",
