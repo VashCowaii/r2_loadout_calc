@@ -9743,6 +9743,77 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
+    "Pioneering": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Pioneering listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcPioneerHEALSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Defense";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                const actionTags = ["All","Gear","Heal"];
+                                const compositeCacheTag = actionTags + sourceTurn.properName;
+        
+                                sourceTurn.lcPioneerHEALSHEET = {
+                                    multipliers: {
+                                        primary: rankParams[0],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            const healObject = sourceTurn.lcPioneerHEALSHEET;
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Pioneering - break listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
 
 
     //ERUDITON
