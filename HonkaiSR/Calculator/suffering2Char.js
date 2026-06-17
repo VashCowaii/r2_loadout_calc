@@ -40000,9 +40000,11 @@ const turnLogic = {
 
                     //talent inherent
                     const listener1 = passiveListeners[0];
+                    const listener9 = passiveListeners[8];
                     const allAlliesArray = battleData.allAlliesArray;
                     for (let ally of allAlliesArray) {
                         addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener9,listener9.trigger,ally,null,ownerTurn);
                     }
 
                     //trace hothand
@@ -40049,16 +40051,12 @@ const turnLogic = {
 
                             const shieldCheck = personalOwner.buffsObject[shieldName];
                             if (!shieldCheck) {return;}//if this isn't fortified wager getting hit, then abort
-        
-                            // const sourceTurn = generalInfo.sourceTurn;
-                            const stacksToGain = personalOwner.properName === providerTurn.properName ? 2 : 1;
-                            const exoObject = this.exoObject ??= {pointsGained: stacksToGain,sourceString:"Ally hit with shield"};
-                            exoObject.pointsGained = stacksToGain;
-                            poke("aventurineBetGained",battleData,exoObject,null);
+
+                            personalOwner.aventurineBetGainReady = true;
                         },
                         "target": "self",
                         "isPersonal": true,
-                        "listenerName": "Wager shield hit",
+                        "listenerName": "Wager shield hit start track",
                         "ownerTurn": {},
                     },
                     {
@@ -40239,6 +40237,24 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Stag Hunt Game shields listener (removal)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!personalOwner.aventurineBetGainReady) {return;}
+                            const providerTurn = this.providerTurn;
+                            personalOwner.aventurineBetGainReady = false;
+        
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            const stacksToGain = personalOwner.properName === providerTurn.properName ? 2 : 1;
+                            const exoObject = this.exoObject ??= {pointsGained: stacksToGain,sourceString:"Ally hit with shield"};
+                            exoObject.pointsGained = stacksToGain;
+                            poke("aventurineBetGained",battleData,exoObject,null);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Wager shield hit finish",
                         "ownerTurn": {},
                     },
                 ],
