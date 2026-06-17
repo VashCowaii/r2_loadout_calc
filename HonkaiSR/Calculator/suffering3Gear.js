@@ -4109,6 +4109,89 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,enemy,ownersSlots);
+                    }
+        
+                    // for (let owner of ownerRef) {
+                    //     let charSlot = owner.slot;
+                    //     let currentTurn = namedTurns[charSlot];
+        
+                    //     addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Why Does the Ocean Sing listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+        
+                            let buffNameVuln = this.buffName2 ??= turnLogicLightcones["Why Does the Ocean Sing"].buffNames.debuffStacks;
+                            
+                            let enthrallRef = null;
+                            const buffCheck = personalOwner.buffsObject[buffNameVuln];
+                            if (buffCheck) {
+                                enthrallRef = buffCheck;
+                            }
+        
+                            if (enthrallRef) {
+                                const sourceOwner = enthrallRef.sourceOwner;
+                                const ownerSlot = battleData.nameIndex[sourceOwner];
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+        
+                                if (!ownerTurn.oceanSingEnthrallmentSPEEDSHEET) {
+                                    let lcNameRef = "Why Does the Ocean Sing";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let rankParams = lcPathing[ownerRank-1];
+                                    let ownerName = ownerTurn.properName;
+
+                                    let buffName = this.buffName ??= turnLogicLightcones["Why Does the Ocean Sing"].buffNames.spdBuff;
+            
+                                    ownerTurn.oceanSingEnthrallmentSPEEDSHEET = {
+                                        "stats":[SPDP],
+                                        [SPDP]: rankParams[5],
+                                        "source": lcNameRef,
+                                        "sourceOwner": ownerName,
+                                        "buffName": buffName,
+                                        "durationInTurn": 4,
+                                        "duration": 3,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "isDebuff": false
+                                    }
+                                }
+        
+                                let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Why Does the Ocean Sing - SPD check",
+                        "owners": [],
+                    },
+                ]
+            },
+            {
                 "trigger": "DebuffApplied",
                 condition(battleData,generalInfo) {
                     // let ownerRef = this.owners;
@@ -4159,67 +4242,6 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "Why Does the Ocean Sing - debuffs owned check (removal)",
-                "owners": [],
-            },
-            {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    // let buffName = this.buffNames.debuffStacks;
-
-                    let lcNameRef = "Why Does the Ocean Sing";
-                    const buffNames = turnLogicLightcones[lcNameRef].buffNames;
-                    let buffName = buffNames.spdBuff;
-                    let buffNameVuln = buffNames.debuffStacks;
-                    
-                    const targetTurn = generalInfo.targetTurn;
-                    let enthrallRef = null;
-
-                    const buffCheck = targetTurn.buffsObject[buffNameVuln];
-                    if (buffCheck && targetsGotHit[targetTurn.name] === 1) {//ONLY EVALUATE FIRST HITS, ERGO THE START OF AN ATTACK
-                        enthrallRef = buffCheck;
-                    }
-
-                    if (enthrallRef) {
-                        const sourceOwner = enthrallRef.sourceOwner;
-                        const ownerSlot = battleData.nameIndex[sourceOwner];
-                        let ownersSlots = this.ownersSlots;
-                        const ownerRank = ownersSlots[ownerSlot];
-                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
-
-                        if (!ownerTurn.oceanSingEnthrallmentSPEEDSHEET) {
-                            let lcNameRef = "Why Does the Ocean Sing";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let rankParams = lcPathing[ownerRank-1];
-                            let ownerName = ownerTurn.properName;
-                            // let buffName = turnLogicLightcones[lcNameRef].buffNames.spdBuff;
-    
-                            ownerTurn.oceanSingEnthrallmentSPEEDSHEET = {
-                                "stats":[SPDP],
-                                [SPDP]: rankParams[5],
-                                "source": lcNameRef,
-                                "sourceOwner": ownerName,
-                                "buffName": buffName,
-                                "durationInTurn": 4,
-                                "duration": 3,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                                "isDebuff": false
-                            }
-                        }
-
-                        let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Why Does the Ocean Sing - SPD check",
                 "owners": [],
             },
         ],
