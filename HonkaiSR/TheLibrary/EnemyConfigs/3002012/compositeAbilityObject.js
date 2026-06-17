@@ -1619,7 +1619,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Take Damage End [Owner]: Hit"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -1882,7 +1882,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1938387265\">MModifier_Monster_W3_Theater_IF_FlopHandler_Clock</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -2151,7 +2151,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -2417,7 +2417,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -2891,7 +2891,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]"
+              "eventTrigger": "Being Attacked [Owner]: End"
             },
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2959,7 +2959,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -3315,7 +3315,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable",

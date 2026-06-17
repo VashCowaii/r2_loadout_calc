@@ -658,7 +658,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: End"
         },
         {
           "eventTrigger": "When Modifier is Added [Anyone]",

@@ -3381,7 +3381,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-463699187\">Monster_W2_Huanlong_EntangleEffectController</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

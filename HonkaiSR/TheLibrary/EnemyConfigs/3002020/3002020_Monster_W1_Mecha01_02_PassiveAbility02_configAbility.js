@@ -326,7 +326,7 @@ const configAbility = {
           "eventTrigger": "When Put in Deathstate Limbo"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

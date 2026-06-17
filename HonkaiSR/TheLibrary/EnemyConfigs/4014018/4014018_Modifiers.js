@@ -1289,7 +1289,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "Update Energy",
@@ -2193,7 +2193,7 @@ const configAbility = {
           "eventTrigger": "Being Attacked [Owner]: Start"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

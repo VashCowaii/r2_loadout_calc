@@ -686,7 +686,7 @@ const compositeAbilityObject = {
           "duration": 1,
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -1169,7 +1169,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -1343,7 +1343,7 @@ const compositeAbilityObject = {
           "duration": 1,
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -1736,7 +1736,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Define Custom Variable",

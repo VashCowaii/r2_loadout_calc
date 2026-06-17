@@ -4257,7 +4257,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Pre-Death [Owner]"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

@@ -1446,7 +1446,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1958190695\">Modifier_FantasticStory_BaseAbility_2010_Plus7_Sub_Enemy</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

@@ -2417,7 +2417,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -6406,7 +6406,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -6971,7 +6971,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -13843,7 +13843,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -14179,7 +14179,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -14317,7 +14317,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Consume",
@@ -14587,7 +14587,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Consume",
@@ -14857,7 +14857,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Consume",
@@ -15734,7 +15734,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -15929,7 +15929,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -16124,7 +16124,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -16547,7 +16547,7 @@ const compositeAbilityObject = {
           "statusName": "Inversion++",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Consume",
@@ -16650,7 +16650,7 @@ const compositeAbilityObject = {
           "statusName": "Inversion+",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Consume",
@@ -16753,7 +16753,7 @@ const compositeAbilityObject = {
           "statusName": "Inversion",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Consume",

@@ -1325,7 +1325,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Update Energy",
@@ -2229,7 +2229,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Being Attacked [Owner]: Start"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

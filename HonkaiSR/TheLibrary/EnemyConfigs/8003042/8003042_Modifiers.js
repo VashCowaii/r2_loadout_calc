@@ -241,7 +241,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1542768305\">Monster_XP_Elite02_01_Energy</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

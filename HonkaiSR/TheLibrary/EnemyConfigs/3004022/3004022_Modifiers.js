@@ -343,7 +343,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -652,7 +652,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: End"
         }
       ]
     },
@@ -2768,7 +2768,7 @@ const configAbility = {
           "eventTrigger": "Take Damage End [Owner]: Hit"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -3031,7 +3031,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1938387265\">MModifier_Monster_W3_Theater_IF_FlopHandler_Clock</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -3300,7 +3300,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -3566,7 +3566,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -4040,7 +4040,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: End"
         },
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -4108,7 +4108,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -4464,7 +4464,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "Define Custom Variable",
