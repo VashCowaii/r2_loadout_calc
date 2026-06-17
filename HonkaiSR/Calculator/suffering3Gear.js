@@ -12939,70 +12939,38 @@ const turnLogicRelics = {
             },
         }
     },
-    //TODO: distinguish listener used for being attacked
     "Longevous Disciple": {
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
-            "skillFunctions": {},
+            "skillFunctions": {
+                longevousStack(battleData,sourceTurn) {
+                    if (!sourceTurn.longevousDiscipleCRITSHEET) {
+                        let relicNameRef = "Longevous Disciple";
+                        let pcRef = "4pc";
+                        let relicPathing = relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                        let buffName = turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff;
+                        sourceTurn.longevousDiscipleCRITSHEET = {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: relicPathing[0],
+                            "source": relicNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    let buffSheet = sourceTurn.longevousDiscipleCRITSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                },
+            },
             "listeners": [
-                // {
-                //     "trigger": "PassiveCalls",
-                //     condition(battleData,generalInfo) {
-                //         let ownerRef = this.owners;
-
-                //         const namedTurns = battleData.nameBasedTurns;
-                //         const subListeners = this.subListeners;
-                //         for (let owner of ownerRef) {
-                //             let charSlot = owner.slot;
-                //             let currentTurn = namedTurns[charSlot];
-
-                //             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
-                //         }
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Hunter of Glacial Forest 4pc listener setup",
-                //     "owners": [],
-                //     "subListeners": [
-                //         {
-                //             "trigger": "AbilityStart",
-                //             condition(battleData,generalInfo) {
-                //                 const action = generalInfo.action;
-                //                 if (action != "Ultimate") {return;}
-        
-                //                 let sourceTurn = generalInfo.sourceTurn;
-        
-                //                 if (!this.glacialForestCRITDMGSHEET) {
-                //                     let relicNameRef = "Hunter of Glacial Forest";
-                //                     let pcRef = "4pc";
-                //                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                //                     let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.atkBuff;
-                //                     this.glacialForestCRITDMGSHEET = {
-                //                         "stats": [CritDamageBase],
-                //                         [CritDamageBase]: relicPathing[0],
-                //                         "source": relicNameRef,
-                //                         "sourceOwner": sourceTurn.properName,
-                //                         "buffName": buffName,
-                //                         "durationInTurn": 3,
-                //                         "duration": 2,
-                //                         "AVApplied": 0,
-                //                         "maxStacks": 1,
-                //                         "currentStacks": 1,
-                //                         "decay": false,
-                //                         "expireType": "EndTurn"
-                //                     }
-                //                 }
-        
-                //                 let buffSheet = this.glacialForestCRITDMGSHEET;
-                //                 buffSheet.sourceOwner = sourceTurn.properName;
-                //                 updateBuff(battleData,sourceTurn,buffSheet);
-                //             },
-                //             "target": "self",
-                //             "isPersonal": true,
-                //             "listenerName": "Hunter of Glacial Forest ult listener",
-                //         },
-                //     ]
-                // },
                 {
                     "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
@@ -13015,6 +12983,7 @@ const turnLogicRelics = {
                             let currentTurn = namedTurns[charSlot];
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -13025,67 +12994,31 @@ const turnLogicRelics = {
                             "trigger": "AllyLostHP",
                             condition(battleData,generalInfo) {
                                 let sourceTurn = generalInfo.sourceTurn; 
+                                if (generalInfo.wasAttack) {return;}
         
                                 const lossSource = generalInfo.lossSource;
-                                if (!generalInfo.wasAttack && lossSource && lossSource.isEnemy) {return;}
-                                //TODO: I have no clue if the desc is just flavor text and it really is an ally restriction on the consume source, but check that later if I can figure out a good test for it
+                                if (lossSource && lossSource.isEnemy) {return;}
         
-        
-                                if (!sourceTurn.longevousDiscipleCRITSHEET) {
-                                    let relicNameRef = "Longevous Disciple";
-                                    let pcRef = "4pc";
-                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff;
-                                    sourceTurn.longevousDiscipleCRITSHEET = {
-                                        "stats": [CritRateBase],
-                                        [CritRateBase]: relicPathing[0],
-                                        "source": relicNameRef,
-                                        "sourceOwner": sourceTurn.properName,
-                                        "buffName": buffName,
-                                        "durationInTurn": 3,
-                                        "duration": 2,
-                                        "AVApplied": 0,
-                                        "maxStacks": 2,
-                                        "currentStacks": 1,
-                                        "decay": false,
-                                        "expireType": "EndTurn"
-                                    }
-                                }
-        
-                                let buffSheet = sourceTurn.longevousDiscipleCRITSHEET;
-                                updateBuff(battleData,sourceTurn,buffSheet);
+                                const addStack = this.addStack ??= turnLogicRelics["Longevous Disciple"]["4pc"].skillFunctions.longevousStack;
+                                addStack(battleData,sourceTurn);
                             },
                             "target": "self",
                             "isPersonal": true,
                             "listenerName": "Longevous Disciple - owner lost hp listener",
                         },
+                        {
+                            "trigger": "WasAttackedEnd",
+                            condition(battleData,generalInfo,personalOwner) {
+                                const addStack = this.addStack ??= turnLogicRelics["Longevous Disciple"]["4pc"].skillFunctions.longevousStack;
+                                addStack(battleData,personalOwner);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Longevous Disciple - owner attacked listener",
+                            "owners": []
+                        },
                     ]
                 },
-                // {
-                //     "trigger": "AttackEnd",
-                //     condition(battleData,generalInfo) {
-                //         let ownersSlots = this.ownersSlots;
-                //         let sourceTurn = generalInfo.sourceTurn;
-                //         if (!sourceTurn.isEnemy) {return;}//this attack end trigger can only be used on enemy attacks, not allies
-
-                //         let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                //         const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
-                //         const namedTurns = battleData.nameBasedTurns;
-                //         for (let allyHit in targetsGotHit) {
-                //             if (ownersSlots[allyHit]) {streetwise(battleData,namedTurns[allyHit]);}
-                //         }
-
-                //         const tempLogic = battleData.battleLogicTemp;
-                //         const boxingRef = tempLogic.streetwiseBoxing;
-                //         if (boxingRef.completed === boxingRef.total) {
-                //             removeListener(battleData,this,sourceTurn);//TODO: we have sourceTurn in here for uniformity atm but when moved to personal listeners later
-                //             //we really need to redo that to instead check if the personal owner was in targetsGotHit and monitor for ownerTurn in that context
-                //         }
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Streetwise attack received check",
-                //     "owners": []
-                // },
             ],
             "buffNames": {
                 "critBuff": "Longevous Disciple [Relic]",
