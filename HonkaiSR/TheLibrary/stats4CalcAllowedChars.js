@@ -173,7 +173,7 @@ const vashCharProgressList = [
         completed: false, live: false, needs80OrTraces: true, owned: true},
     //4star
     {name: "March 7th - Preservation",
-        completed: false, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
 
     //REMEMBRANCE
     {name: "Aglaea",
