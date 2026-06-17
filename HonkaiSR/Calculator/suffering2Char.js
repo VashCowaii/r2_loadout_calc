@@ -15288,9 +15288,12 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-                    //blade attacked in zone
+                    //allies attacked enemies in zone
+                    const allAlliesArray = battleData.allAlliesArray;
                     const listener4 = passiveListeners[3];
-                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ally,null,ownerTurn);
+                    }
 
 
                     const fullCharacterArray = battleData.fullCharacterArray;
@@ -15340,7 +15343,6 @@ const turnLogic = {
                             "expireType": null,
                             "actionTags": ["FUA"],
                         }
-                        const allAlliesArray = battleData.allAlliesArray;
 
                         updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
                     }
@@ -15352,6 +15354,10 @@ const turnLogic = {
                         const listener11 = passiveListeners[10];
                         addListenerWithPriority(battleData,listener11,listener11.trigger,ownerTurn);
                     }
+
+                    //blade attacked in zone
+                    const listener12 = passiveListeners[11];
+                    addListenerWithPriority(battleData,listener12,listener12.trigger,ownerTurn);
 
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
@@ -15460,41 +15466,30 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackDMGEnd",
+                        "trigger": "AttackDMGEnd",//allies use this, blade uses WasAttackedEnd though
                         condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
                             const ownerTurn = this.ownerTurn;
-                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+                            if (!providerTurn.battleValues.bladeFuryActive) {return;}
 
-                            const sourceTurn = generalInfo.sourceTurn;
+                            // const sourceTurn = generalInfo.sourceTurn;
                             const targetsGotHit = generalInfo.targetsGotHit;
-                            if (sourceTurn.isEnemy) {
-                                const bladeWasHit = targetsGotHit[ownerTurn.name];
+                            const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
 
-                                if (!bladeWasHit) {return;}
-
-                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"Mortenax Blade was Attacked in Zone"};
-                                poke("mortenaxBladeGainCharge",battleData,preObject);
-
-                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
-                                updateBuff(battleData,sourceTurn,balefireSheet);
+                            let targetsHitArray = [];
+                            const enemyBasedTurns = battleData.enemyBasedTurns;
+                            for (let enemySlot in targetsGotHit) {
+                                const enemyTurn = enemyBasedTurns[enemySlot];
+                                targetsHitArray.push(enemyTurn);
                             }
-                            else {
-                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                            updateBuffBatchTargets(battleData,targetsHitArray,balefireSheet);
 
-                                let targetsHitArray = [];
-                                const enemyBasedTurns = battleData.enemyBasedTurns;
-                                for (let enemySlot in targetsGotHit) {
-                                    const enemyTurn = enemyBasedTurns[enemySlot];
-                                    targetsHitArray.push(enemyTurn);
-                                }
-                                updateBuffBatchTargets(battleData,targetsHitArray,balefireSheet);
-
-                                const preObject = this.preObject2 ??= {pointsGained: 1,sourceString:"Allied Entity attacked target in Zone"};
-                                poke("mortenaxBladeGainCharge",battleData,preObject);
-                            }
+                            const preObject = this.preObject2 ??= {pointsGained: 1,sourceString:"Allied Entity attacked target in Zone"};
+                            poke("mortenaxBladeGainCharge",battleData,preObject);
                         },
                         "target": "self",
-                        "listenerName": "Soul, Tempered ad Mortem/Talent - Attack DMG end listetner, both ally/enemy",
+                        "isPersonal": true,
+                        "listenerName": "Soul, Tempered ad Mortem/Talent - ally Attack DMG end listetner",
                         "ownerTurn": {},
                     },
                     {
@@ -15626,6 +15621,26 @@ const turnLogic = {
                         "target": "self",
                         "isPersonal": true,
                         "listenerName": "E6: blade lost hp charge gain check",
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",//allies use this, blade uses WasAttackedEnd though
+                        condition(battleData,generalInfo,personalOwner) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {
+                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"Mortenax Blade was Attacked in Zone"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+
+                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                                updateBuff(battleData,sourceTurn,balefireSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Soul, Tempered ad Mortem/Talent - Blade Attacked in zone",
+                        "ownerTurn": {},
                     },
                 ],
             },

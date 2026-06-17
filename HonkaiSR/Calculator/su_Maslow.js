@@ -1879,6 +1879,13 @@ const maslowLightconesNihility = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "Reforged in Hellfire": {
+        gives: ["HP","EnergyRegen"],
+        givesTeam: ["CritDMG"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     
 
     //4star

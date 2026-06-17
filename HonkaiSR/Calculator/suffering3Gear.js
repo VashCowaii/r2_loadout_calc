@@ -5394,7 +5394,7 @@ const turnLogicLightcones = {
             "breakDMG": "On the Fall of an Aeon (DMG)",
         },
     },
-    "The Unreachable Side": {//NO CHANGE YET
+    "The Unreachable Side": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             stackGain(battleData,sourceTurn,ownersSlots) {
