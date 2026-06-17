@@ -21940,9 +21940,12 @@ const turnLogic = {
                         actionTags,
                         compositeCacheTag
                     }
-                    
                 }
 
+                const fullCharacterArray = battleData.fullCharacterArray;
+                for (let character of fullCharacterArray) {
+                    character.usedTribbieFUA = false;
+                }
                 const countdownSheet = ATKObjects.tribbieUltimateZoneCountdownSHEET;
                 const buffCheck = sourceTurn.buffsObject[countdownSheet.buffName];
                 updateBuff(battleData,sourceTurn,countdownSheet);
