@@ -710,7 +710,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-783629950\">_M_Constance_ListenInsert_SubOnEnemy</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
