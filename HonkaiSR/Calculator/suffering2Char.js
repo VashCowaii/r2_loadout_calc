@@ -39966,7 +39966,10 @@ const turnLogic = {
 
                     //talent inherent
                     const listener1 = passiveListeners[0];
-                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                    }
 
                     //trace hothand
                     const listener2 = passiveListeners[1];
@@ -40003,19 +40006,25 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "ShieldWasHit",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
                             // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
-                            let ownerTurn = this.ownerTurn;
-                            const currentShield = generalInfo.currentShield;
+                            // let ownerTurn = this.ownerTurn;
+                            // const currentShield = generalInfo.currentShield;
+                            const shieldName = this.shieldName ??= turnLogic[providerTurn.properName].buffNames.wager;
+
+                            const shieldCheck = personalOwner.buffsObject[shieldName];
+                            if (!shieldCheck) {return;}//if this isn't fortified wager getting hit, then abort
         
-                            if (currentShield.shieldClass != "Fortified Wager") {return;}//if this isn't fortified wager getting hit, then abort
-        
-                            const sourceTurn = generalInfo.sourceTurn;
-                            const stacksToGain = sourceTurn.properName === ownerTurn.properName ? 2 : 1;
-                            poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"},null);
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            const stacksToGain = personalOwner.properName === providerTurn.properName ? 2 : 1;
+                            const exoObject = this.exoObject ??= {pointsGained: stacksToGain,sourceString:"Ally hit with shield"};
+                            exoObject.pointsGained = stacksToGain;
+                            poke("aventurineBetGained",battleData,exoObject,null);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Wager shield hit",
                         "ownerTurn": {},
                     },
