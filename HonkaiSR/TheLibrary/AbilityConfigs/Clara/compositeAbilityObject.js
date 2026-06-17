@@ -538,7 +538,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1780515596\">Klara_Eidolon4_ListenBeingAttack</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
