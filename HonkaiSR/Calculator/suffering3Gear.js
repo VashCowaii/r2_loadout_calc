@@ -9668,6 +9668,103 @@ const turnLogicLightcones = {
             "burn": "Trend of the Universal Market [LC]"
         },
     },
+    "We Are Wildfire": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcWeAreWildfireHEALSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "We Are Wildfire";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            const actionTags = ["All","Gear","Heal"];
+                            const compositeCacheTag = actionTags + currentOwner.properName;
+    
+                            currentOwner.lcWeAreWildfireHEALSHEET = {
+                                multipliers: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                specialMulti: rankParams[0],
+                                scalar: null,
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone",
+                                actionTags,compositeCacheTag
+                            }
+
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+                            let buffName = buffNames.dr;
+                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,buffNames,buffName)
+    
+                            currentOwner.lcWeAreWildfireDRSHEET = {
+                                "stats": [DamageReductionStandard],
+                                [DamageReductionStandard]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": uniqueName,
+                                "durationInTurn": 6,
+                                "duration": 5,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "removeOnDeath": true,
+                                "expireType": "EndTurn",
+                            }
+
+                        }
+                        const healObject = currentOwner.lcWeAreWildfireHEALSHEET;
+                        const specialMulti = healObject.specialMulti;
+                        const allyPositions = battleData.allyPositions;
+                        const flats = healObject.flatAmounts;
+
+                        for (let ally of allyPositions) {
+                            const allyMax = ally.maxHP;
+                            const hpRatio = ally.currentHP / allyMax;
+                            if (hpRatio === 1) {continue;}
+
+                            const healValue = specialMulti * (1 - hpRatio) * allyMax;
+                            flats.primary = healValue;
+
+                            healAlly(battleData,healObject,ally,currentOwner,"Lightcone",1);
+                        }
+
+                        const buffSheet = currentOwner.lcWeAreWildfireDRSHEET;
+                        updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "We Are Wildfire - wavestart ally healing/DR",
+            },
+        ],
+        "buffNames": {
+            "dr": "We Are Wildfire [LC]",
+        },
+    },
         //3star
     "Defense": {
         logic(thisTurn,battleData) {},
