@@ -2619,6 +2619,62 @@ const hitSplitters = {
       },
     ],
   },
+  "March 7th - Preservation": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "ult": [
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0.25,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0.25,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0.25,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.25,
+          "energyRatio": 0.25,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+    ],
+    "passive": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ]
+  },
 
   //NIHILITY
   "Kafka": {
