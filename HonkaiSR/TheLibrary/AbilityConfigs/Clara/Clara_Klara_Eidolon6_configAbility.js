@@ -29,7 +29,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1212753345\">Klara_Eidolon6_ListenBeHit</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked Start [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Start",
           "execute": [
             {
               "name": "Add Events/Bonuses",

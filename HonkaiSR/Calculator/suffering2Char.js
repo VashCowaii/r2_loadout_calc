@@ -30010,6 +30010,7 @@ const turnLogic = {
                                         break;
                                     }
                                 }
+                                if (!allyFound) {return;}
 
                                 if (ultimateActive) {
                                     poke("ClaraQueueFUAAttack",battleData,{targetTurn: sourceTurn});
