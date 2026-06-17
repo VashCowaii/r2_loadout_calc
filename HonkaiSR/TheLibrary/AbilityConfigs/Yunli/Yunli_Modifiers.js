@@ -1277,7 +1277,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-796081501\">Yunli_Trace01</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked Start [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: Start"
         }
       ]
     },

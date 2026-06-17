@@ -881,7 +881,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked Start [Owner]"
+          "eventTrigger": "Being Attacked [Owner]: Start"
         },
         {
           "eventTrigger": "Ability Use [Anyone]: Start",
