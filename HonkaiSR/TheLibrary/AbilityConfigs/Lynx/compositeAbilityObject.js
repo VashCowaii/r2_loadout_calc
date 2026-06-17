@@ -126,7 +126,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

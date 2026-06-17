@@ -8902,7 +8902,11 @@ const turnLogic = {
 
                     //trace advanced survey
                     const listener1 = passiveListeners[0];
-                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                    }
+
 
                     //trace exploration
                     let buffSheet = this.lynxCCRES ??= {
@@ -8927,7 +8931,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
 
-                    const allAlliesArray = battleData.allAlliesArray;
+                    
                     const listener3 = passiveListeners[2];
                     for (let ally of allAlliesArray) {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
@@ -8940,30 +8944,23 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
         
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
         
-                            const targetsGotHit = generalInfo.targetsGotHit;
-        
-                            const survivalName = turnLogic[ownerTurn.properName].buffNames.skillHOT;
-        
-                            const allyTurns = battleData.nameBasedTurns;
-                            let totalAlliesHit = 0;
-                            for (let allyHit in targetsGotHit) {
-                                const currentAlly = allyTurns[allyHit];
-                                const buffCheck = currentAlly.buffsObject[survivalName];
-                                if (buffCheck) {totalAlliesHit++;}
-                            }
-        
-                            if (totalAlliesHit) {
-                                updateEnergy(battleData,2 * totalAlliesHit,ownerTurn,false,"Trace: Advance Surveying - Allies hit with Survival Response");
+                            const survivalName = this.skillHOT ??= turnLogic[providerTurn.properName].buffNames.skillHOT;
+
+                            const hasBuff = personalOwner.buffsObject[survivalName];
+                            if (hasBuff) {
+                                updateEnergy(battleData,2,providerTurn,false,"Trace: Advance Surveying - Ally hit with Survival Response");
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Advance Surveying trace - allies hit with skill buff",
                         "owners": []
                     },
