@@ -14390,6 +14390,13 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener7 = passiveListeners[6];
+                    //enemy weightless delay listener
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,enemy,null,ownerTurn);
+                    }
+
                     // getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
@@ -14564,8 +14571,6 @@ const turnLogic = {
                                 };
                             
                                 updateBuff(battleData,sourceTurn,buffSheet);
-        
-                                actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
                             }
                         },
                         "target": "enemy",
@@ -14586,6 +14591,39 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Punishment EHR check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const targetTurn = personalOwner;
+                            if (!targetTurn.weltWeightlessCounter) {return;}
+
+
+                            const providerTurn = this.providerTurn;
+                            let ownerTurn = this.ownerTurn;
+        
+                            // ownerTurn.weightlessSheetName
+                            const sourceTurn = generalInfo.sourceTurn;
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            
+                            if (sourceTurn.isEnemy) {return;}//we only evaluate first hits, on allied attacks
+        
+                            const weightName = providerTurn.weightlessSheetName;
+                            if (!weightName) {return;}
+        
+                            const weightCheck = targetTurn.buffsObject[weightName];
+        
+                            if (weightCheck) {
+        
+                                actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
+
+                                targetTurn.weltWeightlessCounter -= 1;
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Ally hit weightless target buff application",
                         "ownerTurn": {},
                     },
                 ],
