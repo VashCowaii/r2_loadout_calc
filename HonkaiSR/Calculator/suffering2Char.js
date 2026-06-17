@@ -8307,83 +8307,64 @@ const turnLogic = {
                         "owners": []
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
                             let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
-                            let sourceTurn = generalInfo.sourceTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
                             // const targetTurn = generalInfo.targetTurn;
-                            if (!sourceTurn.isEnemy) {return;}
+                            // if (!sourceTurn.isEnemy) {return;}//does not care about source here
                             //only allow attacks from enemies, to natasha
         
         
-                            let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                            const namedTurns = battleData.nameBasedTurns;
-                            let tashaWasHit = false;
-                            for (let allyHit in targetsGotHit) {
-                                if (namedTurns[allyHit].properName === characterName) {
-                                    tashaWasHit = true;
-                                    break;
-                                }
-                            }
         
-                            if (tashaWasHit) {
-                                const hpRatio = ownerTurn.currentHP / ownerTurn.maxHP;
-        
-                                if (hpRatio <= 0.30) {
-                                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-                                        name: this.listenerName,
-                                        priority: priorityList.ability.CharacterHealSelf,
-                                        queueTag: "QueuedInsert",
-                
-                                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
-                                        action: "Insert",
-                
-                                        isInserted: true,
-                                        dontKeepNextWave: false,//ults always clear out
-                                        isAttack: false,
-                                        isAbility: true,
-                                        useAnyTriggers: true,
-                                        eventTypeStartLOG: "GenericAbilityStart",
-                
-                                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.E1,
-                                    })
+                            const hpRatio = ownerTurn.currentHP / ownerTurn.maxHP;
+    
+                            if (hpRatio <= 0.30) {
+                                const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterHealSelf,
+                                    queueTag: "QueuedInsert",
             
-                                    queueObject.sourceTurn = ownerTurn;
-                                    queueObject.target = [ownerTurn];
-                                    queueInsertAbility(battleData,queueObject);
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
+                                    action: "Insert",
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "GenericAbilityStart",
+            
+                                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.E1,
+                                })
         
-                                    removeListener(battleData,this,ownerTurn);
-                                    //remove listener as it an only happen once per fight.
-                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                queueObject.target = [ownerTurn];
+                                queueInsertAbility(battleData,queueObject);
+    
+                                removeListener(battleData,this,ownerTurn);
+                                //remove listener as it an only happen once per fight.
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Natasha E1 once-per-battle healing",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
                             let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
+                            // let characterName = ownerTurn.properName;
                             let sourceTurn = generalInfo.sourceTurn;
                             // const targetTurn = generalInfo.targetTurn;
-                            if (!sourceTurn.isEnemy) {return;}
+                            // if (!sourceTurn.isEnemy) {return;}//does not care about source here
                             //only allow attacks from enemies, to natasha
-    
-    
-                            let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                            // const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
-                            const namedTurns = battleData.nameBasedTurns;
-                            for (let allyHit in targetsGotHit) {
-                                if (namedTurns[allyHit].properName === characterName) {
-                                    updateEnergy(battleData,5,ownerTurn,false,"E4: Miracle Cure");
-                                    break;
-                                }
-                            }
+                            updateEnergy(battleData,5,ownerTurn,false,"E4: Miracle Cure");
                         },
                         "target": "allies",
+                        "isPersonal": true,
                         "listenerName": "Natasha E4 energy gain on attacked",
                         "ownerTurn": {},
                     },
