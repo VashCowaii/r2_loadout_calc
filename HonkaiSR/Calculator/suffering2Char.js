@@ -19424,6 +19424,12 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener4 = passiveListeners[2];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
@@ -19497,6 +19503,33 @@ const turnLogic = {
                         "listenerName": "Ratio E1 +4 summation battlestart",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName === providerTurn.properName) {return;}//can't be ratio himself
+        
+                            const targetTurn = personalOwner;
+        
+                            const wisemanNAme = this.wisemanNAme ??= turnLogic[providerTurn.properName].buffNames.wiseman;
+                            const buffCheck = targetTurn.buffsObject[wisemanNAme];
+                            if (!buffCheck) {return;}
+        
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
+                                battleValues.shouldQueueFUA = true;
+                                battleValues.shouldQueueFUATarget = targetTurn.name;
+                                battleValues.wisemanStackDebt += 1;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ratio - Wiseman FUA trigger attackedStart",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
@@ -19542,38 +19575,9 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
-                    let ownerTurn = this.ownerTurn;
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName === ownerTurn.properName) {return;}//can't be ratio himself
-
-                    const targetTurn = generalInfo.targetTurn;
-                    const targetHitCount = generalInfo.targetsGotHit[targetTurn.name];
-
-                    if (targetHitCount != 1) {return;}//only evaluate first hits, as that is when the enemy is considered being attacked, esp for bounce type stuff
-
-                    const wisemanNAme = this.wisemanNAme ??= turnLogic[ownerTurn.properName].buffNames.wiseman;
-                    const buffCheck = targetTurn.buffsObject[wisemanNAme];
-                    if (!buffCheck) {return;}
-
-                    const battleValues = ownerTurn.battleValues;
-                    if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
-                        battleValues.shouldQueueFUA = true;
-                        battleValues.shouldQueueFUATarget = targetTurn.name;
-                        battleValues.wisemanStackDebt += 1;
-                    }
-                },
-                "target": "self",
-                "listenerName": "Ratio - Wiseman FUA trigger",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
-                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                    //is global, not owner
                     let ownerTurn = this.ownerTurn;
 
                     const sourceTurn = generalInfo.sourceTurn;
@@ -19584,7 +19588,6 @@ const turnLogic = {
                         poke("RatioQueueFUA",battleData,{target: [battleData.enemyBasedTurns[battleValues.shouldQueueFUATarget]]},null);
                         battleValues.shouldQueueFUATarget = null;
                     }
-                    
                 },
                 "target": "self",
                 "listenerName": "Ratio - Wiseman FUA trigger",
