@@ -15451,12 +15451,12 @@ const turnLogic = {
                         "trigger": "AttackDMGEnd",//allies use this, blade uses WasAttackedEnd though
                         condition(battleData,generalInfo) {
                             const providerTurn = this.providerTurn;
-                            const ownerTurn = this.ownerTurn;
+                            // const ownerTurn = this.ownerTurn;
                             if (!providerTurn.battleValues.bladeFuryActive) {return;}
 
                             // const sourceTurn = generalInfo.sourceTurn;
                             const targetsGotHit = generalInfo.targetsGotHit;
-                            const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                            const balefireSheet = providerTurn.bladeMBalefireDEBUFFSHEET;
 
                             let targetsHitArray = [];
                             const enemyBasedTurns = battleData.enemyBasedTurns;
