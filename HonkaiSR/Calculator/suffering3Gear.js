@@ -7235,6 +7235,7 @@ const turnLogicLightcones = {
         
                             
                             if (!sourceTurn.lcMemoriesOfThePastCanRegen) {return;}//then abort non-owners
+                            sourceTurn.lcMemoriesOfThePastCanRegen = false;
         
                             let lcNameRef = "Memories of the Past";
                             const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
@@ -7298,6 +7299,7 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
         
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
@@ -7308,8 +7310,8 @@ const turnLogicLightcones = {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
-        
                             if (!sourceTurn.lcMeshingCogsCanRegen) {return;}//then abort non-owners
+                            sourceTurn.lcMeshingCogsCanRegen = false;
         
                             let lcNameRef = "Meshing Cogs";
                             const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
@@ -7326,40 +7328,29 @@ const turnLogicLightcones = {
                         "isPersonal": true,
                         "listenerName": "Meshing Cogs - owner attack listener",
                     },
-                ]
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (!sourceTurn.isEnemy) {return;}
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!personalOwner.lcMeshingCogsCanRegen) {return;}
+                            personalOwner.lcMeshingCogsCanRegen = false;
+        
+                            let ownersSlots = this.ownersSlots;
+                            let lcNameRef = "Meshing Cogs";
+                            const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+                            let lcPathing = lightcones[lcNameRef].params;
 
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-
-                    let ownersSlots = this.ownersSlots;
-
-                    let lcNameRef = "Meshing Cogs";
-                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
-                    let lcPathing = lightcones[lcNameRef].params;
-
-                    for (let allyHit in targetsGotHit) {
-                        
-                        const currentRank = ownersSlots[allyHit];
-                        const currentAlly = allyTurns[allyHit];
-                        if (!currentRank || !currentAlly.lcMeshingCogsCanRegen) {continue;}
-                        else {
+                            const currentRank = ownersSlots[allyHit];
                             const rankParams = lcPathing[currentRank-1];
                             const regenValue = rankParams[0];
-                            regenFunction(battleData,currentAlly,regenValue);
-                        }
-                    }
-                },
-                "target": "self",
-                "listenerName": "Meshing Cogs - owner was attacked listener",
-                "owners": [],
-                "ownersSlots": {}
+                            regenFunction(battleData,personalOwner,regenValue);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Meshing Cogs - owner was attacked listener",
+                        "owners": [],
+                        "ownersSlots": {}
+                    },
+                ]
             },
             {
                 "trigger": "EndTurn",
