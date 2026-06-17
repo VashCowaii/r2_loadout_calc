@@ -5396,68 +5396,114 @@ const turnLogicLightcones = {
     },
     "The Unreachable Side": {//NO CHANGE YET
         logic(thisTurn,battleData) {},
-        "skillFunctions": {},
+        "skillFunctions": {
+            stackGain(battleData,sourceTurn,ownersSlots) {
+                if (!sourceTurn.unreachableSideDMGSHEET) {
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    let lcNameRef = "The Unreachable Side";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    const logicRef = turnLogicLightcones[lcNameRef];
+
+                    sourceTurn.unreachableSideDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: rankParams[2],
+                        "source": lcNameRef,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.dmgBuff,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+
+                const buffSheet = sourceTurn.unreachableSideDMGSHEET;
+                
+                updateBuff(battleData,sourceTurn,buffSheet);
+            },
+        },
         "listeners": [
             {
-                "trigger": "AllyLostHP",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//if the one losing HP isn't the lc owner, then abort
-
-                    const causeTurn = generalInfo.lossSource;
-                    if (causeTurn && causeTurn.properName != sourceTurn.properName) {return;}//and if the cause of the HP loss in the case of a consume only, isn't the same as the one having their hp consumed, then abort
-
-                    if (!sourceTurn.unreachableSideDMGSHEET) {
-                        let lcNameRef = "The Unreachable Side";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        const logicRef = turnLogicLightcones[lcNameRef];
-
-                        sourceTurn.unreachableSideDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": logicRef.buffNames.dmgBuff,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
                     }
-
-                    const buffSheet = sourceTurn.unreachableSideDMGSHEET;
-                    
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "The Unreachable Side - hp lost listener",
+                "listenerName": "The Unreachable Side listener setup",
                 "owners": [],
-                "ownersSlots": {},
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                "subListeners": [
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            const wasAttack = generalInfo.wasAttack;
+                            if (wasAttack) {return;}
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const causeTurn = generalInfo.lossSource;
+                            if (causeTurn && causeTurn.properName != sourceTurn.properName) {return;}//and if the cause of the HP loss in the case of a consume only, isn't the same as the one having their hp consumed, then abort
+        
+                            let ownersSlots = this.ownersSlots;
+                            const stackGain = this.stackGain ??= turnLogicLightcones["The Unreachable Side"].skillFunctions.stackGain;
+                            stackGain(battleData,sourceTurn,ownersSlots);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Unreachable Side - hp lost listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // let ownersSlots = this.ownersSlots;
+                            let sourceTurn = generalInfo.sourceTurn;;
+        
+                            const buffSheet = sourceTurn.unreachableSideDMGSHEET;
+                            if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
+                            //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
+        
+                            removeBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Unreachable Side - attack end listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // let ownersSlots = this.ownersSlots;
+                            // let sourceTurn = generalInfo.sourceTurn;
 
-                    const buffSheet = sourceTurn.unreachableSideDMGSHEET;
-                    if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
-                    //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
-
-                    removeBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "The Unreachable Side - attack end listener",
-                "owners": [],
-                "ownersSlots": {},
+                            let ownersSlots = this.ownersSlots;
+                            const stackGain = this.stackGain ??= turnLogicLightcones["The Unreachable Side"].skillFunctions.stackGain;
+                            stackGain(battleData,personalOwner,ownersSlots);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Unreachable Side - attack received listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
             },
         ],
         "buffNames": {
