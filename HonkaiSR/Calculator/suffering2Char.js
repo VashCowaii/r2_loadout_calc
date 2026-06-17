@@ -16802,11 +16802,15 @@ const turnLogic = {
                     const listener1 = passiveListeners[0];
                     addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
 
-                    //e1
-                    if (rank >= 1) {
-                        const listener2 = passiveListeners[1];
-                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    //e1 and numby advancement
+                    const listener2 = passiveListeners[1];
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,enemy,null,ownerTurn);
                     }
+                    // if (rank >= 1) {
+                    //     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    // }
 
                     //e4
                     if (rank >= 4) {
@@ -16875,14 +16879,19 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "HitEnemyStart",
-                        condition(battleData,generalInfo) {
-                            const ownerTurn = this.ownerTurn;
-    
-                            const sourceTurn = generalInfo.sourceTurn;
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const targetTurn = generalInfo.targetTurn;
-                            if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // const ownerTurn = this.ownerTurn;
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = personalOwner;
+        
+                            // const characterName = ownerTurn.properName;
+                            // const logicRef = turnLogic[characterName];
+                            const battleValues = providerTurn.battleValues;
+                            const enemyWithDebt = battleValues.enemyWithDebt;
+                            if (enemyWithDebt.properName != targetTurn.properName) {return;}
 
                             let isFUA = false;
                             const actionTags = generalInfo.ATKObject.actionTags;
@@ -16892,50 +16901,60 @@ const turnLogic = {
                                     break;
                                 }
                             }
-                            if (!isFUA) {return;}
-    
-    
-                            const characterName = ownerTurn.properName;
-                            const logicRef = turnLogic[ownerTurn.properName];
-                            const ATKObjects = logicRef.ATKObjects;
-    
-                            const enemyWithDebt = logicRef.characterValuesBattle.enemyWithDebt;
-                            // if (targetTurn.properName != enemyWithDebt.properName) {return}//can only apply to those with proof of debt, aka the primary target
-                            //in theory this is a completely useless check as topaz will only ever do single target dmg, and bc of that only the primary target will be hit
-    
-    
-                            if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
-                            const buffName = logicRef.buffNames.e1Debtor;
-                            if (!ATKObjects.topazE1DebtorSTACKSHEET) {
         
-                                ATKObjects.topazE1DebtorSTACKSHEET = {
-                                    "stats": [CritDamageBase],
-                                    [CritDamageBase]: 0.25,
-                                    "source": characterName,
-                                    "sourceOwner": ownerTurn.properName,
-                                    "buffName": buffName,
-                                    "durationInTurn": null,
-                                    "duration": 1,
-                                    "AVApplied": 0,
-                                    "maxStacks": 2,
-                                    "currentStacks": 1,
-                                    "decay": false,
-                                    "expireType": null,
-                                    "isDebuff": true,
-                                    "actionTags": ["FUA"]
+                            const numbyTurn = providerTurn.topazNUMBYTURNEVENT;
+                            if (!numbyTurn.turnState) {//numby can't advance himself, but topaz can advance him
+                                
+                                if (isFUA) {
+                                    actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
+                                }
+                                if (battleValues.isBonanzaActive) {
+                                    const slot = generalInfo.dmgSlot;
+                                    const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
+                                    if (slotCheck) {
+                                        actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult Active");
+                                    }
+                                    //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
                                 }
                             }
-                            let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
-    
-    
-                            updateBuff(battleData,enemyWithDebt,buffSheet);
-                            const buffCheck = enemyWithDebt.buffsObject[buffName];
-                            if (buffCheck.currentStacks === 2) {
-                                enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                            if (isFUA) {
+                                if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
+
+                                const logicRef = turnLogic[providerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                const buffName = logicRef.buffNames.e1Debtor;
+                                if (!ATKObjects.topazE1DebtorSTACKSHEET) {
+            
+                                    ATKObjects.topazE1DebtorSTACKSHEET = {
+                                        "stats": [CritDamageBase],
+                                        [CritDamageBase]: 0.25,
+                                        "source": "E1",
+                                        "sourceOwner": providerTurn.properName,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 2,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "isDebuff": true,
+                                        "actionTags": ["FUA"]
+                                    }
+                                }
+                                let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
+        
+                                updateBuff(battleData,enemyWithDebt,buffSheet);
+                                const buffCheck = enemyWithDebt.buffsObject[buffName];
+                                if (buffCheck.currentStacks === 2) {
+                                    enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                                }
                             }
                         },
                         "target": "enemy",
-                        "listenerName": "Future Market Debtor controller",
+                        "isPersonal": true,
+                        "listenerName": "Numby's advancement controller/E1 Debtor controller",
                         "ownerTurn": {},
                     },
                     {
@@ -16952,7 +16971,6 @@ const turnLogic = {
                         "listenerName": "E4 Agile Operation",
                         "ownerTurn": {},
                     },
-
                 ],
             },
             {
@@ -16970,7 +16988,18 @@ const turnLogic = {
     
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttackAction,
                         action: "Insert",
-                        abortCheck: null,//(battleData,actionObject,sourceTurn)
+                        abortCheck(battleData,actionObject,sourceTurn) {
+                            const target = actionObject.target[0];
+                            if (target.isDead) {
+                                const newTarget = sourceTurn.battleValues.enemyWithDebt;
+                                if (newTarget) {
+                                    actionObject.target = [newTarget];
+                                }
+                                else {
+                                    return true;
+                                }
+                            }
+                        },
     
                         isInserted: true,
                         dontKeepNextWave: false,//ults always clear out
@@ -16986,7 +17015,7 @@ const turnLogic = {
 
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.isEnhanced = isEnhanced;
-                    queueObject.target = [battleData.primaryTarget];
+                    queueObject.target = [valuesRef.enemyWithDebt];
                     queueInsertAbility(battleData,queueObject);
                 },
                 "target": "enemy",
@@ -17159,50 +17188,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Topaz - Ultimate queued",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    const ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    // const targetsGotHit = generalInfo.targetsGotHit;
-                    const targetTurn = generalInfo.targetTurn;
-
-                    // const characterName = ownerTurn.properName;
-                    // const logicRef = turnLogic[characterName];
-                    const battleValues = ownerTurn.battleValues;
-                    const enemyWithDebt = battleValues.enemyWithDebt;
-                    if (enemyWithDebt.properName != targetTurn.properName) {return;}
-
-                    
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    if (targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
-
-                    const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
-                    if (numbyTurn.turnState) {return}//numby can't advance himself, but topaz can advance him
-
-                    let isFUA = false;
-                    const actionTags = generalInfo.ATKObject.actionTags;
-                    for (let tag of actionTags) {
-                        if (tag === "FUA") {
-                            isFUA = true;
-                            break;
-                        }
-                    }
-                    if (isFUA) {
-                        actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
-                    }
-
-                    const slot = generalInfo.slot;
-                    const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
-                    if (battleValues.isBonanzaActive && slotCheck) {
-                        actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
-                    }
-                    //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
-                },
-                "target": "enemy",
-                "listenerName": "Numby's advancement controller",
                 "ownerTurn": {},
             },
         ],
