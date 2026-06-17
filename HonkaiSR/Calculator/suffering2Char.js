@@ -6450,6 +6450,12 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener4 = passiveListeners[3];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
@@ -6517,49 +6523,38 @@ const turnLogic = {
                         "listenerName": "Novel Concoction B.E. check",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+
+                            let buffName = this.buffName ??= turnLogic[providerTurn.properName].buffNames.besotted;
+                            let besottedWasFound = personalOwner.buffsObject[buffName];
+                            if (!besottedWasFound) {return;}
+
+                            
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}//is the attack coming from an allied source
+                            
+        
+                            let healCall = this.healCall ??= turnLogic[providerTurn.properName].skillFunctions.gallagherTalentHeal;
+        
+                            let enhancedCheck = providerTurn.battleValues.nextBasicEnhanced;
+                            if (sourceTurn.properName === providerTurn.properName && generalInfo.dmgSlot === "Basic ATK" && enhancedCheck) {
+                                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Activated "Bottoms Up"`});}
+                                healCall(battleData,null,providerTurn,battleData.allyPositions,1);
+                            }
+                            else {
+                                healCall(battleData,sourceTurn,providerTurn,null,1);
+                            }
+                        },
+                        "target": "allies",
+                        "isPersonal": true,
+                        "listenerName": "Besotted Healing controller",
+                        "ownerTurn": {},
+                    },
                 ],
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}//is the attack coming from an allied source
-                    // let charSlot = sourceTurn.name;
-
-                    let logicRef = turnLogic[characterName];
-                    let buffName = this.buffName ??= logicRef.buffNames.besotted;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    //CONFIRMED USING ASTA BOUNCE: healing was evaluated after the attack completed and bounces were finished, thank GOD
-                    //this would have sucked major anus if we had to evaluate it on a hit-by-hit basis
-                    let besottedWasFound = false;
-
-                    let healCall = this.healCall ??= logicRef.skillFunctions.gallagherTalentHeal;
-                    let timesToHeal = 0;
-                    const enemyTurns = battleData.enemyBasedTurns;
-                    for (let targetHit in targetsGotHit) {
-                        const currentTarget = enemyTurns[targetHit];
-                        if (currentTarget.buffsObject[buffName]) {
-                            timesToHeal += 1;
-                            besottedWasFound = true;
-                        }
-                    } 
-
-                    if (besottedWasFound) {
-                        let enhancedCheck = logicRef.characterValuesBattle.nextBasicEnhanced;
-                        if (sourceTurn.properName === characterName && generalInfo.dmgSlot === "Basic ATK" && enhancedCheck) {
-                            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Activated "Bottoms Up"`});}
-                            healCall(battleData,null,ownerTurn,battleData.allyPositions,1);
-                        }
-                        else {
-                            healCall(battleData,sourceTurn,ownerTurn,null,timesToHeal);
-                        }
-                    }
-                },
-                "target": "allies",
-                "listenerName": "Besotted Healing controller",
-                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
