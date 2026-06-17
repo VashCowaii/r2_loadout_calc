@@ -26679,7 +26679,14 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                    //was attacked for charge set/reset
+                    const listener7 = passiveListeners[6];
+                    addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false);
                 },
                 "target": "self",
                 "listenerName": "Blade Passive",
@@ -26730,7 +26737,7 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
         
-                            const wasAttack = generalInfo.wasAttack;
+                            const wasAttack = ownerTurn.bladeGettingAttackedActive;
                             if (wasAttack && !ownerTurn.bladeReadyForAttackCharge) {return;}
                             ownerTurn.bladeReadyForAttackCharge = false;
                             //blade can only gain 1 charge from an attack, so we have to monitor and make sure that we don't do it every time he loses HP in a single attack
@@ -26790,15 +26797,17 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackStart",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}
                             
                             ownerTurn.bladeReadyForAttackCharge = true;
+                            ownerTurn.bladeGettingAttackedActive = true;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Blade talent - charge from being attacked reset",
                         "ownerTurn": {},
                     },
@@ -26867,7 +26876,29 @@ const turnLogic = {
                         "isPersonal": true,
                         "listenerName": "E4 hp lost listener - hp buff application",
                         "ownerTurn": {},
-                    }
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            let ownerTurn = this.ownerTurn;
+                            ownerTurn.bladeReadyForAttackCharge = false;
+                            ownerTurn.bladeGettingAttackedActive = false;
+                        },
+                        "target": "self",
+                        "listenerName": "Blade talent - charge from being attacked reset attack end",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "Endturn",
+                        condition(battleData,generalInfo,personalOwner) {
+                            let ownerTurn = this.ownerTurn;
+                            ownerTurn.bladeReadyForAttackCharge = false;
+                            ownerTurn.bladeGettingAttackedActive = false;
+                        },
+                        "target": "self",
+                        "listenerName": "Blade talent - charge from being attacked reset turn end",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
