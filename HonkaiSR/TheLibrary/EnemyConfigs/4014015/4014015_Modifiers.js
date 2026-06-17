@@ -1249,7 +1249,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1557319480\">Monster_W4_Nikadory_EnergyReady</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked Completed [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Completed",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -2108,7 +2108,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked Completed [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Completed",
           "execute": [
             {
               "name": "IF",
