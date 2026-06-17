@@ -11499,7 +11499,7 @@ const turnLogicRelics = {
             logic(thisTurn,battleData) {},
             "skillFunctions": {
                 streetwise(battleData,targetTurn) {
-                    if (targetTurn.streetwiseBoxingSTACKINGCOMPLETED) {return;}//abort finished users
+                    if (targetTurn.relicStreetwiseBoxingFinished) {return;}//abort finished users
 
                     if (!targetTurn.streetwiseBoxingATKSHEET) {
                         let relicNameRef = "Champion of Streetwise Boxing";
@@ -11527,76 +11527,70 @@ const turnLogicRelics = {
 
                     const stackCheck = targetTurn.buffsObject[buffName].currentStacks;
                     if (stackCheck === 5) {
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing;
-
-                        boxingRef.completed += 1;
-                        targetTurn.streetwiseBoxingSTACKINGCOMPLETED = true;
+                        targetTurn.relicStreetwiseBoxingFinished = true;
                     } 
                 }
             },
             "listeners": [
                 {
-                    "trigger": "AttackEnd",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let ownersSlots = this.ownersSlots;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownerRank = ownersSlots[sourceTurn.name];
-                        if (!ownerRank) {return;}//abort non-owners
+                        let ownerRef = this.owners;
 
-                        const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
-                        streetwise(battleData,sourceTurn);
-
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing;
-                        if (boxingRef.completed === boxingRef.total) {
-                            removeListener(battleData,this,sourceTurn);
-                            //kill the listeners so we don't keep popping them on every attack launched/received from everyone
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Streetwise attack launched check",
-                    "owners": []
-                },
-                {
-                    "trigger": "AttackEnd",
-                    condition(battleData,generalInfo) {
-                        let ownersSlots = this.ownersSlots;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (!sourceTurn.isEnemy) {return;}//this attack end trigger can only be used on enemy attacks, not allies
-
-                        let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                        const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
                         const namedTurns = battleData.nameBasedTurns;
-                        for (let allyHit in targetsGotHit) {
-                            if (ownersSlots[allyHit]) {streetwise(battleData,namedTurns[allyHit]);}
-                        }
+                        const subListeners = this.subListeners;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
 
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing;
-                        if (boxingRef.completed === boxingRef.total) {
-                            removeListener(battleData,this,sourceTurn);//TODO: we have sourceTurn in here for uniformity atm but when moved to personal listeners later
-                            //we really need to redo that to instead check if the personal owner was in targetsGotHit and monitor for ownerTurn in that context
+                            addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                         }
                     },
                     "target": "self",
-                    "listenerName": "Streetwise attack received check",
-                    "owners": []
+                    "listenerName": "Champion of Streetwise Boxing 4pc listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AttackDMGEnd",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                // let ownersSlots = this.ownersSlots;
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
+                                streetwise(battleData,sourceTurn);
+
+                                if (sourceTurn.relicStreetwiseBoxingFinished) {
+                                    removeListener(battleData,this,sourceTurn);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Streetwise attack launched check",
+                            "owners": []
+                        },
+                        {
+                            "trigger": "WasAttackedEnd",
+                            condition(battleData,generalInfo,personalOwner) {
+                                // let ownersSlots = this.ownersSlots;
+                                let sourceTurn = personalOwner;
+        
+                                const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
+                                streetwise(battleData,sourceTurn);
+        
+                                if (sourceTurn.relicStreetwiseBoxingFinished) {
+                                    removeListener(battleData,this,sourceTurn);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Streetwise attack received check",
+                            "owners": []
+                        },
+                    ]
                 },
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerRef = this.owners;//purely for setting up temp value tracking
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing ??= {};
-                        boxingRef.total = ownerRef.length;
-                        boxingRef.completed = 0;
-                    },
-                    "target": "self",
-                    "listenerName": "Streetwise owners check",
-                    "owners": []
-                },
+                
             ],
             "buffNames": {
                 "atkBuff": "Champion of Streetwise Boxing",

@@ -12,7 +12,7 @@
         <h3>Calculator</h3>
         <h4>Additions</h4>
         <li></li>
-        <li>Did a pass on the following characters/gear that utilize attack-start events, since changes made yesterday allow us to make these events more accurate:
+        <li>Did a pass on the following characters/gear that utilize attack-start adjacent events, since changes made yesterday allow us to make these events more accurate:
             <ul>
                 <li>Why Does the Ocean Sing - target attacked listener</li>
                 <li>Dr. Ratio - wiseman trigger handling</li>
@@ -23,20 +23,26 @@
                 <li>Aventurine - Blind Bet gain from shielded allies attacked.</li>
             </ul>
         </li>
+        <li>Did a pass on the following characters/gear that utilize attack-end adjacent events, since the changes made yesterday allow us to make these events more accurate:
+            <ul>
+                <li>Champion of Streetwise Boxing - while extremely close before, it should be fully accurate now.</li>
+            </ul>
+        </li>
 
         <!-- <h4>Fixes</h4>
         <li></li> -->
 
-        <!-- <h4>Optimization</h4>
-        <li>Added tweaks to how Hysilens monitored her proc count for enemies in the zone, which should be a slight performance boost to DoT teams that use her.</li> -->
+        <h4>Optimization</h4>
+        <li>Aventurine got tweaks to how he reads allies with Fortified Wager getting hit, which should be a slight optimizer speed boost for teams that used him.</li>
 
         <h3>Library</h3>
         <h4>Additions</h4>
         <li>Renamed the following events for format consistency or accuracy:
             <ul>
-                <li>Being Attacked End [Owner] [ADV?] -> Being Attacked [Owner]: End [OVERWORLD]</li>
+                <li>Being Attacked End [Owner] [ADV?] -> Being Attacked [Owner]: End [EVENT]</li>
                 <li>Being Attacked Completed [Owner] -> Being Attacked [Owner]: Completed</li>
                 <li>Being Attacked Start [Owner] -> Being Attacked [Owner]: Start</li>
+                <li>Being Attacked End [Owner] -> Being Attacked [Owner]: End</li>
             </ul>
         </li>
     </ul>
