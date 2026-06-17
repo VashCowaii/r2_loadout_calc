@@ -9388,6 +9388,158 @@ const turnLogicLightcones = {
             "aggroBuff": "Moment of Victory (Aggro) [LC]",
         },
     },
+    "She Already Shut Her Eyes": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+                        currentTurn.lcSheAlreadyClosedCooldownDone = true;
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "She Already Shut Her Eyes listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcSheAlreadyClosedCooldownDone) {return;}
+                            sourceTurn.lcSheAlreadyClosedCooldownDone = false;
+
+                            if (!sourceTurn.lcSheAlreadyClosedDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "She Already Shut Her Eyes";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+                                let buffName = buffNames.dmg;
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,buffNames,buffName)
+        
+                                sourceTurn.lcSheAlreadyClosedDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcSheAlreadyClosedDMGSHEET;
+                            const allyPositions = battleData.allyPositions;
+                            updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "She Already Shut Her Eyes - hp lost listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcSheAlreadyClosedHEALSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "She Already Shut Her Eyes";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            const actionTags = ["All","Gear","Heal"];
+                            const compositeCacheTag = actionTags + currentOwner.properName;
+    
+                            currentOwner.lcSheAlreadyClosedHEALSHEET = {
+                                multipliers: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                specialMulti: rankParams[2],
+                                scalar: null,
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone",
+                                actionTags,compositeCacheTag
+                            }
+                        }
+                        const healObject = currentOwner.lcSheAlreadyClosedHEALSHEET;
+                        const specialMulti = healObject.specialMulti;
+                        const allyPositions = battleData.allyPositions;
+                        const flats = healObject.flatAmounts;
+
+                        for (let ally of allyPositions) {
+                            const allyMax = ally.maxHP;
+                            const hpRatio = ally.currentHP / allyMax;
+                            if (hpRatio === 1) {continue;}
+
+                            const healValue = specialMulti * (1 - hpRatio) * allyMax;
+                            flats.primary = healValue;
+
+                            healAlly(battleData,healObject,ally,currentOwner,"Lightcone",1);
+                        }
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "She Already Shut Her Eyes - wavestart ally healing",
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        currentOwner.lcSheAlreadyClosedCooldownDone = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "She Already Shut Her Eyes - endturn reset flag",
+            },
+        ],
+        "buffNames": {
+            "dmg": "She Already Shut Her Eyes [LC]",
+        },
+    },
         //4star
     "Landau's Choice": {//REDONE
         logic(thisTurn,battleData) {},
