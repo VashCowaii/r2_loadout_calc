@@ -180,7 +180,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__944962578\">March7th_BPAbility_Shield_Counter</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Start",
               "execute": [
                 {
                   "name": "IF",
