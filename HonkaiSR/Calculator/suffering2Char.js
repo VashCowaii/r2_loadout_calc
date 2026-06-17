@@ -2070,7 +2070,6 @@ const battleActions = {
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
-                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
                 if (currentShield.shieldRemaining < 0) {
                     shieldsWereBroken = true;
                     shieldsBroken += 1;
@@ -2436,7 +2435,6 @@ const battleActions = {
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
-                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
                 if (currentShield.shieldRemaining < 0) {
                     shieldsWereBroken = true;
                     shieldsBroken += 1;
@@ -40009,7 +40007,6 @@ const turnLogic = {
                         "trigger": "WasAttackedStart",
                         condition(battleData,generalInfo,personalOwner) {
                             const providerTurn = this.providerTurn;
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             // let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const shieldName = this.shieldName ??= turnLogic[providerTurn.properName].buffNames.wager;
@@ -40047,7 +40044,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -40116,7 +40112,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackStart",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -40768,7 +40763,6 @@ const turnLogic = {
                     {
                         "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
 
                             const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Turn-End Counter resets"}
@@ -40783,7 +40777,6 @@ const turnLogic = {
                     {
                         "trigger": "WasAttackedStart",
                         condition(battleData,generalInfo,targetTurn) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             const providerTurn = this.providerTurn;
                             const counterCount = providerTurn.battleValues.counterCount;
                             if (!counterCount) {return;}
@@ -40804,7 +40797,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             const providerTurn = this.providerTurn;
 
                             const sourceTurn = generalInfo.sourceTurn;
