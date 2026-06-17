@@ -9388,7 +9388,7 @@ const turnLogicLightcones = {
             "aggroBuff": "Moment of Victory (Aggro) [LC]",
         },
     },
-    "She Already Shut Her Eyes": {//REDONE
+    "She Already Shut Her Eyes": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -9669,6 +9669,80 @@ const turnLogicLightcones = {
         },
     },
         //3star
+    "Defense": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Defense listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcDefenseHEALSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Defense";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                const actionTags = ["All","Gear","Heal"];
+                                const compositeCacheTag = actionTags + sourceTurn.properName;
+        
+                                sourceTurn.lcDefenseHEALSHEET = {
+                                    multipliers: {
+                                        primary: rankParams[0],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            const healObject = sourceTurn.lcDefenseHEALSHEET;
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Defense - ult start listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
 
 
     //ERUDITON
