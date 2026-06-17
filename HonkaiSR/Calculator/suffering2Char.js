@@ -18356,10 +18356,18 @@ const turnLogic = {
 
                     //e6
                     if (rank >= 6) {
+                        const allEnemiesArray = battleData.allEnemiesArray;
                         const listener4 = passiveListeners[3];
-                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                        }
+                        
                         const listener5 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
                     }
 
                     getTechnique(battleData,ownerTurn,logicRef,2,true,false)
@@ -18477,8 +18485,80 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",//Flitting Phantasm
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // poke("AttackEnd",battleData,generalInfo);
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+    
+                            // const instanceTag = generalInfo.ATKObject.instanceTag;
+                            // const validTag = generalInfo.ATKObject.instanceTag === "SeeleUltDMG";
+                            const buffName = providerTurn.e6FlurrySheetName;
+                            if (!buffName) {return;}
+                            //if we are neither on seele ult to start tracking, or if seele has never ulted yet to have allowed true dmg after, then abort
+    
+                            if (!this.E6FLURRYSHEET) {
+                                const logicRef = turnLogic[providerTurn.properName];
+    
+                                this.E6FLURRYSHEET = {
+                                    "stats": null,
+                                    "source": "E6",
+                                    "sourceOwner": providerTurn.properName,
+                                    "buffName": logicRef.buffNames.e6Flurry,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    // "removeOnDeath": true,
+                                }
+                            }
+                            
+                            const buffSheet = this.E6FLURRYSHEET;
+                            const currentEnemy = personalOwner;
+                            const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
+                            if (targetCheck) {
+                                const convertedDMG = providerTurn.battleValues.e6DMGTracked;
+                                battleActions.trueDMGHitWrapper(battleData,providerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E6: Butterfly Flurry true dmg handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",//Flitting Phantasm
                         condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.enemyKilled;
+    
+                            const flurryName = ownerTurn.e6FlurrySheetName;
+                            if (!targetTurn.isEnemy || !flurryName) {return;}
+    
+                            const flurryCheck = targetTurn.buffsObject[flurryName];
+    
+                            if (flurryCheck) {
+                                //E6 isn't looking for lineup with how resurgence gets queue normally, it only matters that an entity died and had butterly flurry debuff on them,
+                                //so that's the only check we need here.
+                                poke("SeeleEnterAmplification",battleData,null);
+                                poke("SeeleQueueResurgence",battleData,null);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E6: Butterfly Flurry - target died with flurry, queue resurgence",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // const providerTurn = this.providerTurn;
                             // poke("AttackEnd",battleData,generalInfo);
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -18511,79 +18591,54 @@ const turnLogic = {
                                 }
                             }
                             
-                            if (sourceTurn.name === ownerTurn.name) {
-                                
-                                if (validTag) {
-                                    ownerTurn.battleValues.e6DMGTracked = 0.30 * generalInfo.totals.totalAVGDMG;
-                                    ownerTurn.e6FlurrySheetName = this.E6FLURRYSHEET.buffName;
-                                }
-                                
-                                const buffSheet = this.E6FLURRYSHEET;
-    
-                                const enemyTurns = battleData.enemyBasedTurns;
-                                const targetsGotHit = generalInfo.targetsGotHit;
-                                for (let enemySlot in targetsGotHit) {
-                                    const currentEnemy = enemyTurns[enemySlot];
-    
-                                    const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
-    
-                                    if (targetCheck) {
-                                        const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
-                    
-                                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
-                                    }
-                                    if (validTag) {
-                                        updateBuff(battleData,currentEnemy,buffSheet);
-                                    }
-                                }
-                                
-                            }
-                            else {
-                                const buffSheet = this.E6FLURRYSHEET;
-    
-                                const enemyTurns = battleData.enemyBasedTurns;
-                                const targetsGotHit = generalInfo.targetsGotHit;
-                                for (let enemySlot in targetsGotHit) {
-                                    const currentEnemy = enemyTurns[enemySlot];
-    
-                                    const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
-    
-                                    if (targetCheck) {
-                                        const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
-                    
-                                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
-                                    }
-                                }
+                            if (validTag) {
+                                ownerTurn.battleValues.e6DMGTracked = 0.30 * generalInfo.totals.totalAVGDMG;
+                                ownerTurn.e6FlurrySheetName = this.E6FLURRYSHEET.buffName;
                             }
                         },
                         "target": "self",
-                        "listenerName": "E6: Butterfly Flurry true dmg track/handler",
+                        "isPersonal": true,
+                        "listenerName": "E6: Butterfly Flurry dmg track",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "EnemyDied",//Flitting Phantasm
-                        condition(battleData,generalInfo) {
-                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            // const providerTurn = this.providerTurn;
+                            // poke("AttackEnd",battleData,generalInfo);
                             let ownerTurn = this.ownerTurn;
-                            let targetTurn = generalInfo.enemyKilled;
+
+                            if (!this.E6FLURRYSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
     
-                            const flurryName = ownerTurn.e6FlurrySheetName;
-                            if (!targetTurn.isEnemy || !flurryName) {return;}
-    
-                            const flurryCheck = targetTurn.buffsObject[flurryName];
-    
-                            if (flurryCheck) {
-                                //E6 isn't looking for lineup with how resurgence gets queue normally, it only matters that an entity died and had butterly flurry debuff on them,
-                                //so that's the only check we need here.
-                                poke("SeeleEnterAmplification",battleData,null);
-                                poke("SeeleQueueResurgence",battleData,null);
+                                this.E6FLURRYSHEET = {
+                                    "stats": null,
+                                    "source": "E6",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": logicRef.buffNames.e6Flurry,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    // "removeOnDeath": true,
+                                }
                             }
+                            
+                            const buffSheet = this.E6FLURRYSHEET;
+                            const targets = generalInfo.target[0];
+                            updateBuff(battleData,targets,buffSheet);
                         },
                         "target": "self",
-                        "listenerName": "E6: Butterfly Flurry - target died with flurry, queue resurgence",
+                        "isPersonal": true,
+                        "listenerName": "E6: Butterfly Flurry application postult",
                         "ownerTurn": {},
                     },
-
                 ],
             },
             {
