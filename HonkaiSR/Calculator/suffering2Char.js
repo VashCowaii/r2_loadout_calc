@@ -13445,8 +13445,11 @@ const turnLogic = {
 
                     //e6
                     if (rank >= 6) {
+                        const allEnemiesArray = battleData.allEnemiesArray;
                         const listener7 = passiveListeners[6];
-                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listener7,listener7.trigger,enemy,null,ownerTurn);
+                        }
                     }
 
                     //trace viscera
@@ -13714,21 +13717,24 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
-                            const ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // const ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy) {return;}
     
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
-                            for (let enemy in targetsGotHit) {
-                                const enemyTurn = enemyTurns[enemy];
-                                dotFunction(battleData,ownerTurn,enemyTurn,null,1);
-                            }
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            // const enemyTurns = battleData.enemyBasedTurns;
+                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[providerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                            dotFunction(battleData,providerTurn,personalOwner,null,1);
+                            // for (let enemy in targetsGotHit) {
+                            //     const enemyTurn = enemyTurns[enemy];
+                            //     dotFunction(battleData,providerTurn,enemyTurn,null,1);
+                            // }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Black Swan E6 ally attacked listener",
                         "ownerTurn": {},
                     },
